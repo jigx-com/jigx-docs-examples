@@ -1,0 +1,221 @@
+---
+title: entity
+slug: SXzb-entity
+description: Learn how to use the entity component as a container for other components like field-row and entity-field. This document offers examples and code snippets, and discusses different combinations of components, including section alone, field-row alone, or ju
+createdAt: Thu Jun 09 2022 19:32:22 GMT+0000 (Coordinated Universal Time)
+updatedAt: Wed Jul 24 2024 09:25:26 GMT+0000 (Coordinated Universal Time)
+---
+
+The entity component is a container for the following components:
+
+- [entity-field](./entity/entity-field.md)
+- [entity-field](./entity/entity-field.md)
+- [section](./entity/section.md)
+
+## Considerations
+
+- The `component.entity` used with the above-mentioned components is configurable on a `jig.default`.
+- &#x20;[Section](./entity/section.md) and [field-row](./entity/field-row.md) are also available under the `component.form` as its container. Here the [entity-field](./entity/entity-field.md) is replaced by the [form's](./form.md) children field.&#x20;
+- When setting up a `component.entity`, either a [default jig](<./../Jig Types/jig_default.md>) or `component.form` can be used in the following combinations:
+
+1. An entity containing [section(s)](./entity/section.md) with [rows](./entity/field-row.md) and [entity-field](./entity/entity-field.md)
+2. An entity containing [section(s)](./entity/section.md) and [entity-field](./entity/entity-field.md)
+3. An entity containing [rows](./entity/field-row.md) and [entity-field](./entity/entity-field.md)
+4. An entity containing [entity fields](./entity/entity-field.md)
+
+## ****Configuration options
+
+Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+
+| ### Other options | ****                                                                                                                                                                                                                                                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `isCompact`       | When this property is set to `true` the entity-field will cover the entire row. This compact variant does not allow usage of field-row components. By default, a label is at the top and the value below. `isCompact` will place the label on the left and the value on the right. Columns are not supported. |
+
+## Examples and code snippets ****
+
+:::::ExpandableHeading
+### Entity example
+
+::::VerticalSplit{layout="middle"}
+:::VerticalSplitItem
+**Basic**
+
+![Entity with sections, row & field](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xQ6vW15SRw79rWRz5aMxz_img9802iphone13blueportrait.png "Entity with sections, row & field")
+:::
+
+:::VerticalSplitItem
+**Compact**
+
+![Entity with sections & field](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/P7cVpxb09Yx1ZnvKqqhc8_img9803iphone13blueportrait.png "Entity with sections & field")
+:::
+::::
+
+**Examples:
+Basic** - See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-row-entity-example-sd.jigx" target="_blank">GitHub</a>.
+**Compact** - See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd-compact.jigx" target="_blank">GitHub</a>.
+
+:::CodeblockTabs
+Basic-entity-section-row-entity-field
+
+```yaml
+children:
+  - type: component.entity
+    options:
+      children:
+        - type: component.section
+          options:
+            title: Biographical & Membership Details
+            children:
+              - type: component.field-row
+                options:
+                  children: 
+                    - type: component.entity-field
+                      options:
+                        label: First Name
+                        value: Samantha
+                        contentType: default
+                        rightIcon: person
+                    - type: component.entity-field
+                      options:
+                        label: Surname
+                        value: Jackson
+                        contentType: default
+                        rightIcon: person
+                    - type: component.entity-field
+                      options:
+                        label: Member
+                        value: true
+                        contentType: checkbox
+              - type: component.field-row
+                options:
+                  children:
+                    - type: component.entity-field
+                      options:
+                        label: Date of Birth
+                        value: 1988-01-19
+                        contentType: date
+                        rightIcon: calendar
+                    - type: component.entity-field
+                      options:
+                        label: Last Login Time
+                        value: =$now()
+                        contentType: time
+                        rightIcon: time-clock-circle
+        - type: component.section
+          options:
+            title: Contact & Other Details
+            children:
+            - type: component.entity-field
+              options:
+                label: Clipboard Info
+                value: Copy me!
+                contentType: copy
+            - type: component.entity-field
+              options:
+                label: Contact Number
+                value: +2776 123 4567
+                contentType: phone
+                rightIcon: phone
+            - type: component.entity-field
+              options:
+                label: Email Address
+                value: samjax@emailaddress.com
+                contentType: email
+                rightIcon: email
+            - type: component.entity-field
+              options:
+                label: Web Address
+                value: samjax@website.me
+                contentType: link
+                rightIcon: google
+            - type: component.entity-field
+              options:
+                label: About
+                value: Lorem ipsum dolor sit amet, putent viderer pericula per ex, cu ius sonet referrentur. Cu pri ubique mediocrem maluisset, eum ea assum vivendum constituto. Fierent accusata nec ut, ullum impetus omittam cu per. Perpetua consectetuer no ius. Nam error elitr no, ferri praesent te cum. An commodo aliquando dissentiet duo. Primis eripuit bonorum ius ei, usu cu posse mazim. Elitr alterum mentitum eos cu, sit te quodsi everti neglegentur. Est in diam causae, erat conceptam eum an. Sea ullum causae temporibus ex, libris delectus pro et.
+                isMultiline: true
+                contentType: default
+```
+
+Compact-entity-section-entity-field
+
+```yaml
+children:
+  - type: component.entity
+    options:
+      isCompact: true
+      children:
+        - type: component.section
+          options:
+            title: Cleaning Services
+            children:
+              - type: component.entity-field
+                options:
+                  label: Service
+                  value: =@ctx.datasources.cleaning-services[0].service
+              - type: component.entity-field
+                options:
+                  label: Area
+                  value: =@ctx.datasources.cleaning-services[0].area
+              - type: component.entity-field
+                options:
+                  label: Time
+                  value: =@ctx.datasources.cleaning-services[0].time & ' minutes'
+              - type: component.entity-field
+                options:
+                  label: Indoor
+                  value: =@ctx.datasources.cleaning-services[0].indoor
+                  contentType: checkbox
+              - type: component.entity-field
+                options:
+                  label: Description
+                  value: =@ctx.datasources.cleaning-services[0].description
+                  isMultiline: true
+        - type: component.section
+          options:
+            title: Rates
+            children:
+              - type: component.entity-field
+                options:
+                  label: Hourly Rate
+                  value: =@ctx.datasources.cleaning-services[0].hourlyrate != null ? @ctx.datasources.cleaning-services[0].hourlyrate :'N/A'
+              - type: component.entity-field
+                options:
+                  label: Once Off Rate
+                  value: =@ctx.datasources.cleaning-services[0].onceoffrate != null ? @ctx.datasources.cleaning-services[0].onceoffrate :'N/A'
+```
+
+Datasource (dynamic)
+
+```yaml
+datasources:
+  cleaning-services:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+  
+      entities:
+        - entity: default/cleaning-services
+  
+      query: |
+        SELECT 
+          id, 
+          '$.area', 
+          '$.description', 
+          '$.hourlyrate', 
+          '$.illustration', 
+          '$.image', 
+          '$.indoor', 
+          '$.onceoffrate', 
+          '$.service', 
+          '$.time' 
+        FROM [default/cleaning-services] ORDER BY '$.service' ASC
+```
+:::
+:::::
+
+## **See also**
+
+- [entity-field](./entity/entity-field.md)&#x20;
+- [field-row](./entity/field-row.md)&#x20;
+- <a href="https://docs.jigx.com/docs/jc-section" target="_blank"></a>&#x20;
+
