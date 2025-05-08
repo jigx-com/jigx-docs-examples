@@ -8,7 +8,7 @@ updatedAt: Mon Sep 30 2024 12:19:59 GMT+0000 (Coordinated Universal Time)
 
 `Reset-state` action is typically used to reset the state of the key inside the jig file and can be used further to reset the state of UI components and forms. To understand how to use states, see [State]().
 
-## ****Configuration options****
+## Configuration options
 
 There are multiple ways to set up a reset-state action within a jig:
 
@@ -17,19 +17,19 @@ There are multiple ways to set up a reset-state action within a jig:
 3. As the main action on the jig, and when you press the action, the `reset-state` action will be executed.
 4. The `onPress` and `onChange` actions will be executed when you trigger the `onPress` or `onChange` event.
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 ::::ExpandableHeading
 ### reset-state onFocus/onRefresh
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/me_Ah8R_TyYAScqJsBsn6_reset-state-onfocus.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/me_Ah8R_TyYAScqJsBsn6_reset-state-onfocus.PNG" size="80" width="2536" height="2500" position="center" caption="Reset-state onFocus/onRefresh" alt="Reset-state onFocus/onRefresh"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/me_Ah8R_TyYAScqJsBsn6_reset-state-onfocus.PNG" size="80" position="center" caption="Reset-state onFocus/onRefresh" alt="Reset-state onFocus/onRefresh"}
 
 1. Reset-state action is used when the onFocus/onRefresh event is triggered to reset the component's state or key.
-2. You can specify instanceId, this will be the name of the UI component.&#x20;
+2. You can specify instanceId, this will be the name of the UI component.
 3. And you need to specify the key, which will be the value of the UI component or the name of the key that you want to reset.
 
 **Example:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/reset-state/static-data/reset-state-focus-load-refresh.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/reset-state/static-data/reset-state-focus-load-refresh.jigx).
 
 :::CodeblockTabs
 onFocus.jigx
@@ -55,7 +55,7 @@ onRefresh:
 ::::ExpandableHeading
 ### reset-state as action
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/c43Ii0P7_-wNzHN8VeReE_reset-state-action.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/c43Ii0P7_-wNzHN8VeReE_reset-state-action.PNG" size="80" width="3840" height="2500" position="center" caption="Reset-state action" alt="Reset-state action"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/c43Ii0P7_-wNzHN8VeReE_reset-state-action.PNG" size="80" position="center" caption="Reset-state action" alt="Reset-state action"}
 
 1. Reset-state action is used as the primary action on the jig, to reset-state of the component in the jig and its value.
 2. You can specify **instanceId**, this will be the name of the UI component
@@ -63,7 +63,7 @@ onRefresh:
 
 **Example:**
 
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/reset-state/static-data/reset-state-action-form.jigx" target="_blank">GitHub</a>. &#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/reset-state/static-data/reset-state-action-form.jigx).
 
 :::CodeblockTabs
 action.jigx
@@ -82,15 +82,15 @@ actions:
 ::::ExpandableHeading
 ### reset-state onPress/onChange
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vrFGC9hXE3ufLaIzJ2c-m_reset-state-onpress.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vrFGC9hXE3ufLaIzJ2c-m_reset-state-onpress.PNG" size="80" width="3732" height="2518" position="center" caption="Reset-state onPress/onChange" alt="Reset-state onPress/onChange"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vrFGC9hXE3ufLaIzJ2c-m_reset-state-onpress.PNG" size="80" position="center" caption="Reset-state onPress/onChange" alt="Reset-state onPress/onChange"}
 
 1. Reset-state action used on the list as **onPress** or **onChange** action, to reset-state of the component.
-2. &#x20;You can specify instanceId, this will be the name of the UI component.
+2. You can specify instanceId, this will be the name of the UI component.
 3. And you need to specify the **state**, which will be the value of the UI component that you want to reset
 
 **Example:**
 
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/reset-state/static-data/reset-state-onpress-onchange.jigx" target="_blank">GitHub</a>. &#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/reset-state/static-data/reset-state-onpress-onchange.jigx).
 
 :::CodeblockTabs
 onPress.jigx

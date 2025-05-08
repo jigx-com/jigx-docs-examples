@@ -8,53 +8,37 @@ updatedAt: Wed Jul 24 2024 09:50:41 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-The component can display statistics related to data records (categorical variables) represented in a bar chart. This can show a single or multiple data series for comparative purposes and highlight specific regions or ranges on the chart to make it easier for users to interpret and analyze the data. This component is mostly used in [jig.default](<./../../Jig Types/jig_default.md>) or [jig.list](<./../../Jig Types/jig_list.md>).&#x20;
+The component can display statistics related to data records (categorical variables) represented in a bar chart. This can show a single or multiple data series for comparative purposes and highlight specific regions or ranges on the chart to make it easier for users to interpret and analyze the data. This component is mostly used in [jig.default](<./../../Jig Types/jig_default.md>) or [jig.list](<./../../Jig Types/jig_list.md>).
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Bar Chart Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNwqF58yNsXcKrMxDsANE_bar-chart.png" size="86" width="1125" height="850" caption="Bar Chart Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNwqF58yNsXcKrMxDsANE_bar-chart.png"}
+::Image[]{alt="Bar Chart Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNwqF58yNsXcKrMxDsANE_bar-chart.png" size="86" caption="Bar Chart Preview" position="center"}
 :::
 ::::
 
-## ****Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                                          |
+| **Core structure** |  |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `series`           | - `color` - defines the color of the bar used in the chart.
-- `data` - values to be used in the chart.                                                                        |
+- `data` - values to be used in the chart.  |
 | `yAxis`            | `min` and `max` values that display on the y-axis. The `max` property doesn't have to be defined, in this case, it will  automatically be calculated depending on your data.  |
-| `xAxis`            | `categories` to display on the x-axis                                                                                                                                         |
+| `xAxis`            | `categories` to display on the x-axis    |
 
-| ### Other options |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Other options** |                                                                                          |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `chart`           | - `title `and `subtitle` - Name and a short description of your chart.
-- `height` and `width` - The parameters of the graph displayed (in pixels).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `legend`          | `isHidden` -  The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `plotBands`       | Use `plotbands` to highlight specific regions or ranges on the chart, making it easier for users to interpret and analyze the data. &#xA;The `from` and `to` properties define the area to be filled with color. Specify the range using the from and to properties with numeric values.&#xA;`color` Sets the color of the band for the `y-axis`, choose a color from the provided color palette.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `plotOptions`     | `series` - Different properties available to manipulate the data shown in the bar such as width of columns, the interval between two points, option to hide markers.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `series`          | `name` - The naming of the actual series.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `xAxis`           | * `isFirstLabelHidden` value is either `true` to hide the first label or `false` to display the first label. The property doesn't have to be defined, by default the first label is shown.
-* `isFirstTickHidden` value is either true/false. Set to `true` hides the whole axis.
-* `isHidden` value is either true/false.
-* `isLastLabelHidden` value is either `true` to hide the last label or `false` to display the last label. The property doesn't have to be defined, by default the last label are shown.
-* `isLastTickHidden` value is either `true` to hide the last line and label or `false` to display the last line and label. The property doesn't have to be defined, by default the last label  and line are shown.
-* `labels` - Label of axis, a selection of different formats such as `dateFormat`, `currency`, `unit`, and `signDisplay` are available.&#x20;
-* `min` and `max` - Minimum and maximum values that should be displayed on the x-axis.
-* `minPadding` - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).
-* `tickAmount` - The number of ticks to display on the x-axis. The final amount doesn't have to be exactly the same number as you pass into it. Round up to 6 to give the chart a good set of numbers 0, 20, 40, 60, 80, 100. Set ticks to 3 will be honored and shows 0, 50, and 100.                                               |
-| `yAxis`           | - `isFirstLabelHidden` value is either true/false. Set to `true` hides the first label. The property doesn't have to be defined, by default the first label is shown.
-- `isFirstTickHidden` value is either true/false. Set to `true` hides the whole axis.
-- `isHidden` value is either true/false. Set to `true` the last label is hidden.
-- `isLastLabelHidden` value is either `true` to hide the last label and line or `false` to display the last label and line. The property doesn't have to be defined, by default the last label and line are shown.
-- `isLastTickHidden` value is either `true` to hide the last line and label or `false` to display the last line and label. The property doesn't have to be defined, by default the last label  and line are shown.
-- `labels` - Label of axis, a selection of different formats such as `currency`, `numberStyle`, `compactDisplay` and `notation` is available.
-- `minPadding` - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).
-- `min` and `max` - Minimum and maximum values that should be displayed on the y-axis.
-- `tickAmount` - The number of ticks to display on the x-axis. The final amount doesn't have to be exactly the same number as you pass into it. Round up to 6 to give the chart a good set of numbers 0, 20, 40, 60, 80, 100. Set ticks to 3 will be honored and shows 0, 50, and 100. |
+- `height` and `width` - The parameters of the graph displayed (in pixels).   |
+| `legend`          | `isHidden` -  The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.       |
+| `plotBands`       | Use `plotbands` to highlight specific regions or ranges on the chart, making it easier for users to interpret and analyze the data. &#xA;The `from` and `to` properties define the area to be filled with color. Specify the range using the from and to properties with numeric values.&#xA;`color` Sets the color of the band for the `y-axis`, choose a color from the provided color palette.     |
+| `plotOptions`     | `series` - Different properties available to manipulate the data shown in the bar such as width of columns, the interval between two points, option to hide markers.      |
+| `series`          | `name` - The naming of the actual series.    |
+| `xAxis`           | * `isFirstLabelHidden` value is either `true` to hide the first label or `false` to display the first label. The property doesn't have to be defined, by default the first label is shown.<br />* `isFirstTickHidden` value is either true/false. Set to `true` hides the whole axis.<br />* `isHidden` value is either true/false.<br />* `isLastLabelHidden` value is either `true` to hide the last label or `false` to display the last label. The property doesn't have to be defined, by default the last label are shown.<br />* `isLastTickHidden` value is either `true` to hide the last line and label or `false` to display the last line and label. The property doesn't have to be defined, by default the last label  and line are shown.<br />* `labels` - Label of axis, a selection of different formats such as `dateFormat`, `currency`, `unit`, and `signDisplay` are available.<br />* `min` and `max` - Minimum and maximum values that should be displayed on the x-axis.<br />* `minPadding` - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).<br />* `tickAmount` - The number of ticks to display on the x-axis. The final amount doesn't have to be exactly the same number as you pass into it. Round up to 6 to give the chart a good set of numbers 0, 20, 40, 60, 80, 100. Set ticks to 3 will be honored and shows 0, 50, and 100.                                               |
+| `yAxis`           | - `isFirstLabelHidden` value is either true/false. Set to `true` hides the first label. The property doesn't have to be defined, by default the first label is shown.<br />- `isFirstTickHidden` value is either true/false. Set to `true` hides the whole axis.<br />- `isHidden` value is either true/false. Set to `true` the last label is hidden.<br />- `isLastLabelHidden` value is either `true` to hide the last label and line or `false` to display the last label and line. The property doesn't have to be defined, by default the last label and line are shown.<br />- `isLastTickHidden` value is either `true` to hide the last line and label or `false` to display the last line and label. The property doesn't have to be defined, by default the last label  and line are shown.<br />- `labels` - Label of axis, a selection of different formats such as `currency`, `numberStyle`, `compactDisplay` and `notation` is available.<br />- `minPadding` - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).<br />- `min` and `max` - Minimum and maximum values that should be displayed on the y-axis.<br />- `tickAmount` - The number of ticks to display on the x-axis. The final amount doesn't have to be exactly the same number as you pass into it. Round up to 6 to give the chart a good set of numbers 0, 20, 40, 60, 80, 100. Set ticks to 3 will be honored and shows 0, 50, and 100. |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Bar-chart finance static
@@ -67,12 +51,12 @@ Some properties are common to all components, see [Common component properties](
 :::VerticalSplitItem
 The jig displays a bar chart with an annual overview of finances. The x-axis shows the months and the y-axis the monetary amount. Using number formatting, we can have any currency displayed.
 
-**Examples:
-**See the full code sample using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/static-data/bar-chart-finance-statistic/bar-chart-finance-statistic.jigx" target="_blank">GitHub</a>.&#x20;
-See the full code sample using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic/bar-chart-finance-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/static-data/bar-chart-finance-statistic/bar-chart-finance-statistic.jigx).
+See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic/bar-chart-finance-dynamic.jigx).
 
-**Datasources:
-**See the full datasource code sample for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic" target="_blank">GitHub</a>.&#x20;
+**Datasources:** 
+See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic).
 :::
 ::::
 
@@ -200,18 +184,18 @@ datasources:
 
 ::::VerticalSplit{layout}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y0mOpU1tdF-6Q5inYOHBx_c-barmultiseries.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y0mOpU1tdF-6Q5inYOHBx_c-barmultiseries.PNG" size="80" width="1240" height="2500" position="center" caption="Multiple series" alt="Multiple series"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y0mOpU1tdF-6Q5inYOHBx_c-barmultiseries.PNG" size="80" position="center" caption="Multiple series" alt="Multiple series"}
 :::
 
 :::VerticalSplitItem
 The jig displays a bar chart with four series that compares amounts for three years per quarter. In this example the `Legend` is shown.
 
-**Examples:
-**See the full code sample using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/static-data/bar-chart-multiple-series/bar-chart-multiple-series.jigx" target="_blank">GitHub</a>.&#x20;
-See the full code sample using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-multiple-series-dynamic/bar-chart-multiple-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/static-data/bar-chart-multiple-series/bar-chart-multiple-series.jigx).
+See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-multiple-series-dynamic/bar-chart-multiple-dynamic.jigx).
 
-**Datasources in order series1 and series2:
-**See the full datasource code sample for dynamic data <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx" target="_blank">series 1</a> and <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx" target="_blank">series 2</a> in GitHub.
+**Datasources in order series1 and series2:**
+See the full datasource code sample for dynamic data [series 1](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx)  and [series 2](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx) in GitHub.
 :::
 ::::
 
@@ -351,12 +335,12 @@ datasources:
 The jig displays a bar chart with an annual overview of finances. The x-axis shows the months and the y-axis the monetary amount. The data points are easy to see as we used the `plotBands `property to add color. In this example multiple bands are defined by adding the form, to and color properties.
 
 **Examples:
-**See the full code sample  in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic/bar-charts-plotBands.jigx" target="_blank">GitHub</a>.&#x20;
+**See the full code sample  in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic/bar-charts-plotBands.jigx).
 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EP5F4QeY_kyU4tfa_QRG-_charts-bar-plotbands.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EP5F4QeY_kyU4tfa_QRG-_charts-bar-plotbands.PNG" size="80" width="1240" height="2500" position="center" caption="Bar chart with plot bands" alt="Bar chart with plot bands"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EP5F4QeY_kyU4tfa_QRG-_charts-bar-plotbands.PNG" size="80" position="center" caption="Bar chart with plot bands" alt="Bar chart with plot bands"}
 :::
 ::::
 
@@ -448,17 +432,17 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QoIeM_NRC-TWN5R079CYy_cc-barchartexpression.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QoIeM_NRC-TWN5R079CYy_cc-barchartexpression.PNG" size="74" width="1240" height="2500" position="center" caption="Bar-chart using expressions" alt="Bar-chart using expressions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QoIeM_NRC-TWN5R079CYy_cc-barchartexpression.PNG" size="74" position="center" caption="Bar-chart using expressions" alt="Bar-chart using expressions"}
 :::
 
 :::VerticalSplitItem
-In this example expressions are used to dertermine the `series`, `categories`, `min`, `max`, and `tickAmount` of a bar chart . The x-axis shows the quarters and the y-axis the monetary amount using the `format` property to display the currency.&#x20;
+In this example expressions are used to dertermine the `series`, `categories`, `min`, `max`, and `tickAmount` of a bar chart . The x-axis shows the quarters and the y-axis the monetary amount using the `format` property to display the currency.
 
-**Examples:
-**See the full code sample  in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-multiple-series-dynamic/bar-chart-multiple-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full code sample  in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-multiple-series-dynamic/bar-chart-multiple-dynamic.jigx).
 
-**Datasources&#x20;
-**See the full datasource code sample for  <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx" target="_blank">series 1</a> and <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx" target="_blank">series 2</a> in GitHub.
+**Datasources**
+See the full datasource code sample for [series 1](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx) and [series 2](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx) in GitHub.
 :::
 ::::
 

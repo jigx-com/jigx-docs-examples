@@ -8,7 +8,7 @@ updatedAt: Wed Jul 24 2024 09:50:15 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-The component can be used to display statistics related to data records. Mostly used in [jig.default](<./../../Jig Types/jig_default.md>) or [jig.list](<./../../Jig Types/jig_list.md>).&#x20;
+The component can be used to display statistics related to data records. Mostly used in [jig.default](<./../../Jig Types/jig_default.md>) or [jig.list](<./../../Jig Types/jig_list.md>).
 :::
 
 :::VerticalSplitItem
@@ -20,26 +20,26 @@ The component can be used to display statistics related to data records. Mostly 
 We are currently experiencing issues with the legend of the Pie Chart component. We are working hard to fix this issue.
 :::
 
-## ****Configuration options****
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                         |
+| **Core structure** |                                                                                                    |
 | ------------------ | ------------------------------------------------------------------------------------------------------------ |
 | `chart`            | `title`- Its `text` and `verticalAlign`.                                                                     |
-| `series`           | `data` - values to be used in the chart.&#xA;`layout` -  `Pie` or `Arch`** **- the availabe types of chart.  |
+| `series`           | `data` - values to be used in the chart.&#xA;`layout` -  `Pie` or `Arch` - the availabe types of chart.  |
 
-| ### Other options |                                                                                                                                                    |
+|**Other options** |                                                                                         |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `chart`           | `title `and `subtitle` - Name and a short description of your chart.&#xA;`height` and `width` - The parameters of the chart displayed (in pixels). |
 | `legend`          | `isHidden` -  The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.                             |
 | `series`          | `name` - The naming of the actual series.&#xA;`color`- select a color from the color palette.                                                      |
 
-| ### Actions | ****                                                                                                                                             |
+| **Actions** |  |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `onPress`   | The ability to add any of the actions (please refer to the list of  Actions). This action(s) will be triggered as a reaction to the press event. |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Pie chart
@@ -52,12 +52,12 @@ Some properties are common to all components, see [Common component properties](
 :::VerticalSplitItem
 This jig displays a complete pie chart. In this example, these are issues where green shows resolved issues, yellow issues in progress, and red unresolved issues.
 
-**Examples:
-**See the full code sample using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/static-data/pie-chart/pie-chart.jigx" target="_blank">GitHub</a>.&#x20;
-See the full code sample using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/dynamic-data/pie-chart/pie-chart-dynamic.jigx" target="_blank">GitHub</a>.
+**Examples:**
+See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/static-data/pie-chart/pie-chart.jigx).
+See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/dynamic-data/pie-chart/pie-chart-dynamic.jigx).
 
-**Datasources:
-**See the full datasource code sample for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasources:**
+See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-dynamic.jigx).
 :::
 ::::
 
@@ -138,15 +138,14 @@ datasources:
 :::
 
 :::VerticalSplitItem
-This jig displays an arc pie chart. This example shows the occupancy in a  warehouse; the green color shows available space and the red color indicates occupied space.
+This jig displays an arc pie chart. This example shows the occupancy in a warehouse; the green color shows available space and the red color indicates occupied space.
 
-**Examples:
-**See the full code sample using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/static-data/pie-chart-arch/pie-chart-arch.jigx" target="_blank">GitHub</a>.&#x20;
-See the full code sample using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/dynamic-data/pie-chart-arch/pie-chart-arch-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/static-data/pie-chart-arch/pie-chart-arch.jigx).
+See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/dynamic-data/pie-chart-arch/pie-chart-arch-dynamic.jigx).
 
-**Datasources:
-**See the full datasource code sample for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-arch-chart-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
-:::
+**Datasources:**
+See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-arch-chart-dynamic.jigx).
 ::::
 
 :::CodeblockTabs

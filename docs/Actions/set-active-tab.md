@@ -11,15 +11,15 @@ Programmatically set the next active tab to display in the [jig.tabs](<./../Jig 
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure  | ****                                                                                                                    |
+| **Core structure**  |   |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `Action Identifier` | Give the action a unique name that will be used to reference the action in another jig's action. See the example below. |
-| `id`                | Provide the `jigId` for the jig that will be opened next.                                                               |
+| `id`                | Provide the `jigId` for the jig that will be opened next.   |
 
-| ### State configuration | ### Key         | ### Notes                                                             |
+| **State configuration** | **Key**         | **Notes**    |
 | ----------------------- | --------------- | --------------------------------------------------------------------- |
 | =@ctx.jig.state.        | `initialTabId`  | A state variable used to reference the tab designated as the default. |
-| =@ctx.jig.state.        | `activeTabId`   | A state variable that references the currently active tab.            |
+| =@ctx.jig.state.        | `activeTabId`   | A state variable that references the currently active tab.   |
 
 ## Considerations
 
@@ -28,8 +28,8 @@ Some properties are common to all components, see [Common component properties](
 
 ## How to configure the action
 
-1. The action is configured under the `jigId` in the `jig.tabs` file. Give the action a unique name (`action identifier`) that will be used to reference the action in the tab's corresponding jig.&#x20;
-2. In the corresponding jig configure the `action.execute-action` and specify the unique name (`action identifier`)  in the action property's value.&#x20;
+1. The action is configured under the `jigId` in the `jig.tabs` file. Give the action a unique name (`action identifier`) that will be used to reference the action in the tab's corresponding jig.
+2. In the corresponding jig configure the `action.execute-action` and specify the unique name (`action identifier`)  in the action property's value.
 
 ## Examples and code snippets 
 
@@ -37,11 +37,11 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-v9n12mYoxQdQcvO9V0ehS-20250212-115144.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-v9n12mYoxQdQcvO9V0ehS-20250212-115144.gif" size="70" width="1080" height="2162" position="center" caption="Set next active tab" alt="Set next active tab"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-v9n12mYoxQdQcvO9V0ehS-20250212-115144.gif" size="70" position="center" caption="Set next active tab" alt="Set next active tab"}
 :::
 
 :::VerticalSplitItem
-In this example, when you are on the third tab (timelogs), a `Next Appointment` button at the bottom of the screen will open the first tab (appointments).&#x20;
+In this example, when you are on the third tab (timelogs), a `Next Appointment` button at the bottom of the screen will open the first tab (appointments).
 **Note:** The `action.set-active-tab` works in conjunction with `action.execute-action` using an `action identifier`.
 :::
 ::::

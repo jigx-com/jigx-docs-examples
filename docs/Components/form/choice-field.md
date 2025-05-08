@@ -5,56 +5,56 @@ createdAt: Wed Aug 21 2024 06:41:27 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Apr 29 2025 05:34:02 GMT+0000 (Coordinated Universal Time)
 ---
 
-The choice-field component allows you to select one or more options from a predefined list. This enhances user experience by providing a straightforward way to make selections, such as choosing a setting, selecting a category, or picking an item from a list. Implementing a choice-field component involves defining the available options and efficiently handling the user's selection.&#x20;
+The choice-field component allows you to select one or more options from a predefined list. This enhances user experience by providing a straightforward way to make selections, such as choosing a setting, selecting a category, or picking an item from a list. Implementing a choice-field component involves defining the available options and efficiently handling the user's selection.
 
 **Benefit:** Using the choice-field component over the [checkbox](./checkbox.md) component eliminates the need to use numerous checkboxes and complex expressions to achieve the same outcome.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-bBqh_WETCy6CgvD8nBr8c-20240826-164834.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-bBqh_WETCy6CgvD8nBr8c-20240826-164834.png" size="80" width="4108" height="2558" position="center" caption="Choice-field" alt="Choice-field"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-bBqh_WETCy6CgvD8nBr8c-20240826-164834.png" size="80" position="center" caption="Choice-field" alt="Choice-field"}
 
 ## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure for choice-field | ****                                                                                               |
+| **Core structure for choice-field** |                                                     |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `instanceId`                        | The unique identifier for the choice-field component.                                              |
 | `label`                             | Provide a label/name for the choice-field.                                                         |
 | `data`                              |  Use an expression that evaluates to an array of options.                                          |
 | `item`                              | The `item` property uses the component of `choice-field-item` that includes: `title` and `value`.  |
 
-| ### Other options       | ****                                                                                                                                                                                                                                                                                                       |
+| **Other options**       |                                                                                             |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `errorText`             | Add text, string, or expressions to show text under the choice-field indicating an error/invalid value in the field. Text is shown in `isNegative` (red) styling.                                                                                                                                          |
-| `helperText`            | Add text, string, or expressions to guide users by showing text under the choice-field. Helper text is displayed only when there is no errorText.                                                                                                                                                          |
+| `helperText`            | Add text, string, or expressions to guide users by showing text under the choice-field. Helper text is displayed only when there is no errorText.       |
 | `initialValue`          | The `initialValue` is the value that will be displayed in the choice-field when the form is initially loaded. You can use this property to preset the choice-field with a default value so that you do not have to manually select it, for example, on a yes/no choice the initial value can be set to no. |
-| `isHidden`              | If `true` the choice-field will be hidden on the form. If set to `false` the field will be shown.                                                                                                                                                                                                          |
-| `isIgnored`             | When `true`, the field will be ignored when submitting the form and the content will not be stored.                                                                                                                                                                                                        |
-| `isMultiple`            | Set to `true` allows you to select multiple items inside the choice-field. Set to `false` only allows a single selection in the choice-field.                                                                                                                                                              |
-| `isOptionalLabelHidden` | If the field is optional you can turn off the "(optional)" label by setting this field to `true`. This property works in combination with `isRequired: false`.                                                                                                                                             |
-| `isRequired`            | Set to `true` when the field is required. Useful when you use it in form submission. Set to `false` the choice-field is optional and will have (optional) in the label.                                                                                                                                    |
-| `itemsPerRow`           | Number of choice boxes to show in each row. Supports multiline text.                                                                                                                                                                                                                                       |
-| `nextProperty`          | Name of the property you want to focus next in the form when you use return/next on a keyboard.                                                                                                                                                                                                            |
-| `style`                 | `isDisabled` - disables the choice-field preventing the selection of any of the choice-fields.                                                                                                                                                                                                             |
-| `value`                 | The value that the choice-field will output as its state.                                                                                                                                                                                                                                                  |
+| `isHidden`              | If `true` the choice-field will be hidden on the form. If set to `false` the field will be shown.   |
+| `isIgnored`             | When `true`, the field will be ignored when submitting the form and the content will not be stored.   |
+| `isMultiple`            | Set to `true` allows you to select multiple items inside the choice-field. Set to `false` only allows a single selection in the choice-field.       |
+| `isOptionalLabelHidden` | If the field is optional you can turn off the "(optional)" label by setting this field to `true`. This property works in combination with `isRequired: false`.     |
+| `isRequired`            | Set to `true` when the field is required. Useful when you use it in form submission. Set to `false` the choice-field is optional and will have (optional) in the label.    |
+| `itemsPerRow`           | Number of choice boxes to show in each row. Supports multiline text.     |
+| `nextProperty`          | Name of the property you want to focus next in the form when you use return/next on a keyboard.  |
+| `style`                 | `isDisabled` - disables the choice-field preventing the selection of any of the choice-fields.  |
+| `value`                 | The value that the choice-field will output as its state.   |
 
-| ### Other options for choice-field-item | ****                                                                                                                                                                                                                                                                                  |
+| **Other options for choice-field-item** |     |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `instanceId`                            | The unique identifier for the choice-field-item component.                                                                                                                                                                                                                            |
+| `instanceId`                            | The unique identifier for the choice-field-item component.  |
 | `title`                                 | Text displayed on the choice-field item. You can add text, expressions or Text with Format in the field. Text with format includes, currency, decimal, dateTime and more. In most instances an expression similar to `=@ctx.current.item.option` is used to reference the datasource. |
-| `value`                                 | The value of the item. It has to be unique for each item and is usually the ID of the record from the datasource.                                                                                                                                                                     |
+| `value`                                 | The value of the item. It has to be unique for each item and is usually the ID of the record from the datasource.   |
 
-| ### Actions | ****                                                                                                                                                 |
+| **Actions** |    |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onChange`  | The action is triggered when the content in the `choice-field-item` is changed. Use IntelliSense (ctrl+space) to see the list of available actions.  |
 
-| ### State Configuration  | **Key**              | **Notes**                                                         |
+| **State Configuration**  | **Key**              | **Notes**                                                         |
 | ------------------------ | -------------------- | ----------------------------------------------------------------- |
 | `=@ctx.component.state.` | selected&#xA;value   | - State is the variable of the component.                         |
 | `=@ctx.solution.state.`  | activeItemId&#xA;now | * Global state variable that can be used throughout the solution. |
 
 ## Considerations
 
-- The choice-field component can only be used in a form component on a default jig.&#x20;
+- The choice-field component can only be used in a form component on a default jig.
 - The choice-field is an input control.
 - Only text can be displayed in the `title` property.
 - Using `itemPerRow` for long text is not recommended due to the limited space available in each item and the need for visual consistency among the choices. The property supports up to two lines of text per item.
@@ -70,11 +70,11 @@ Some properties are common to all components, see [Common component properties](
 :::
 
 :::VerticalSplitItem
-In this example, a `choice-field` component is configured with basic Yes/No options.  If you a new customer and select *Yes*, then a `when` property is used with an expression to display additional form fields for the customer to complete.&#x20;
-If you an existing customer, select *No* and click the *Register & place* *order *button to `goTo` the product-item jig to place an order.&#x20;
+In this example, a `choice-field` component is configured with basic Yes/No options.  If you a new customer and select *Yes*, then a `when` property is used with an expression to display additional form fields for the customer to complete.
+If you an existing customer, select *No* and click the *Register & place* *order *button to `goTo` the product-item jig to place an order.
 
-**Examples:
-**See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/choice-field/choice-field-single.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/choice-field/choice-field-single.jigx).
 
 
 :::
@@ -199,10 +199,10 @@ actions:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-In this example, two `choice-field `components are used. The first is a single Yes/No selection to answer a question. The second choice-field is configured with a `when` property to only display is the Yes selection was made. The `isMultiple` property set to true  allows multiple options to be selected in the component. Selecting submit uses an `info-modal` to show the form was successfully submitted.&#x20;
+In this example, two `choice-field `components are used. The first is a single Yes/No selection to answer a question. The second choice-field is configured with a `when` property to only display is the Yes selection was made. The `isMultiple` property set to true  allows multiple options to be selected in the component. Selecting submit uses an `info-modal` to show the form was successfully submitted.
 
-**Examples:
-**See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/choice-field/choice-field-multiple.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/choice-field/choice-field-multiple.jigx).
 
 
 :::
@@ -348,9 +348,9 @@ actions:
 ::::ExpandableHeading
 ### Loading of multiple selected options
 
-In this example, we want to load the patient's form that they completed in the example above, and show their selected details and allergies. Each patient can have multiple allergies, and the data would be saved as an object in the database. To deserialize the object the `jsonProperties` property is configured with the column containing the object of multiple allergies. In the `choice-field` component the `intialValue` is then configured to return the selected allergies for the specific patient. The `execute-entity` action is configured to update the patient data.&#x20;
+In this example, we want to load the patient's form that they completed in the example above, and show their selected details and allergies. Each patient can have multiple allergies, and the data would be saved as an object in the database. To deserialize the object the `jsonProperties` property is configured with the column containing the object of multiple allergies. In the `choice-field` component the `intialValue` is then configured to return the selected allergies for the specific patient. The `execute-entity` action is configured to update the patient data.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-92ZKPcpsy9TZXXSufKGm--20250318-105534.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-92ZKPcpsy9TZXXSufKGm--20250318-105534.png" size="70" width="2496" height="2466" position="center" caption="Load multiple choices" alt="Load multiple choices"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-92ZKPcpsy9TZXXSufKGm--20250318-105534.png" size="70" position="center" caption="Load multiple choices" alt="Load multiple choices"}
 
 :::CodeblockTabs
 update-patient-details.jigx
@@ -590,14 +590,14 @@ item:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-24aUnSddX6OuZIUtlEQRX-20240827-101917.PNG" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-24aUnSddX6OuZIUtlEQRX-20240827-101917.PNG" size="70" width="1240" height="2500" position="center" caption="Items per row" alt="Items per row"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-24aUnSddX6OuZIUtlEQRX-20240827-101917.PNG" size="70" position="center" caption="Items per row" alt="Items per row"}
 :::
 
 :::VerticalSplitItem
-Using the `itemsPerRow` property in the choice-field component defines how many choice option items must be shown on each row. Keep in mind this is on a mobile device, having more than 3 could make the options hard to read.&#x20;
+Using the `itemsPerRow` property in the choice-field component defines how many choice option items must be shown on each row. Keep in mind this is on a mobile device, having more than 3 could make the options hard to read.
 
-**Examples:
-**See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/choice-field/choice-field-items-per-row.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/choice-field/choice-field-items-per-row.jigx).
 
 
 :::
@@ -682,14 +682,14 @@ actions:
 :::VerticalSplitItem
 In this example of the choice-field component the form opens with an option already selected. This is configured using an expression in the  `initialValue` property. You can change the property. Note that the `onRefresh` event used to reset the form, resets the `choice-field` back to it's orginial state with the `initialValue`selected.
 
-**Examples:
-**See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/choice-field/choice-field-initialvalue.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/choice-field/choice-field-initialvalue.jigx).
 
 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-GapegBAIHUNysuq5uSO2n-20240826-145351.PNG" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-GapegBAIHUNysuq5uSO2n-20240826-145351.PNG" size="70" width="1240" height="2500" position="center" caption="Choice-field" alt="Choice-field"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-GapegBAIHUNysuq5uSO2n-20240826-145351.PNG" size="70" position="center" caption="Choice-field" alt="Choice-field"}
 :::
 ::::
 
@@ -752,8 +752,7 @@ actions:
 :::::
 
 :::::ExpandableHeading
-### Choice-field with onChange&#x20;
-
+### Choice-field with onChange
 ::::VerticalSplit{layout="right"}
 :::VerticalSplitItem
 ![Choice-field onChange](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pBfq4DkE6NxBZKZSx-03t-20240826-145121.png "Choice-field onChange")
@@ -762,8 +761,8 @@ actions:
 :::VerticalSplitItem
 In this example, when the `choice-field-item` is selected and `onChange` event triggers a `open-url` action providing the information on the holiday packages.
 
-**Examples:
-**See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/choice-field/choice-field-onchange.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/choice-field/choice-field-onchange.jigx).
 
 
 :::

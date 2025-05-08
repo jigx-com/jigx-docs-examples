@@ -6,43 +6,33 @@ createdAt: Thu Jun 09 2022 19:30:50 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jul 24 2024 09:49:14 GMT+0000 (Coordinated Universal Time)
 ---
 
-Entity fields display data such as text, numbers, dates, and currency from a datasource to the user. These entity fields are found on a `jig.default` and can be nested under [field-row](./field-row.md) and/or [section](./section.md) components but not under `component.form` as it is used for display purposes only.&#x20;
+Entity fields display data such as text, numbers, dates, and currency from a datasource to the user. These entity fields are found on a `jig.default` and can be nested under [field-row](./field-row.md) and/or [section](./section.md) components but not under `component.form` as it is used for display purposes only.
 
-## ****Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                           |
+| **Core structure** |    |
 | ------------------ | ------------------------------------------------------------------------------ |
 | `label`            | Add a label for the entity-field, you can add text or an expression.           |
 | `value`            | Add a value to display in the entity-field, you can add text or an expression. |
 
-| ### Other options | ****                                                                                                                                                                                                                                                                                                             |
+| **Other options** |  |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `contentType`     | Various types of entity fields determine the visual display and behavior of the entity-field, including: <br />* `default `
-* `checkbox`&#x20;
-* `copy`
-* `date `
-* `email` - format: *email\@example.com*
-* `link`
-* `phone`- format: *1234567890* or *+001234567890* (no spaces)&#x20;
-* `signature `
-* `time` |
-| `instanceId`      | The unique identifier for the entity field.                                                                                                                                                                                                                                                                      |
-| `rightIcon`       | A list of icons is available. See [Jigx icons]() for more information.                                                                                                                                                                                                                                           |
-| `style`           | The following styling set is available and works in conjunction with `rightIcon` to determine the color of the icon and the enitity-field line separator:<br />* `isNegative`
-* `isPositive`
-* `isPrimary`
-* `isWarning`                                                                                         |
+| `contentType`     | Various types of entity fields determine the visual display and behavior of the entity-field, including: <br />* `default`<br />* `checkbox`<br />* `copy`<br />* `date `<br />* `email` - format: *email\@example.com*
+<br /> `link`<br />* `phone`- format: *1234567890* or *+001234567890* (no spaces)<br />* `signature `<br />* `time` |
+| `instanceId`      | The unique identifier for the entity field.     |
+| `rightIcon`       | A list of icons is available. See [Jigx icons]() for more information.   |
+| `style`           | The following styling set is available and works in conjunction with `rightIcon` to determine the color of the icon and the enitity-field line separator:<br />* `isNegative`<br />* `isPositive`<br />* `isPrimary`<br />*`isWarning`  |
 
 ## Consideration
 
-- There are two variants of entity fields available -  **Basic** and **Compact**.
-  - The Compact variant requires the property `isCompact` to be set to true.&#x20;
-  - ** **This is the entity component's property, not the entity-field.&#x20;
+- There are two variants of entity fields available - **Basic** and **Compact**.
+  - The Compact variant requires the property `isCompact` to be set to true.
+  - This is the entity component's property, not the entity-field.
 - When using the `contentType: phone`, ensure the phone number entered contains no spaces; this allows you to click on the field to initiate a call from your device.
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Different types of entity fields
@@ -65,11 +55,11 @@ Some properties are common to all components, see [Common component properties](
 :::
 ::::
 
-This example demonstrates the visual display and behavior of the entity-fields on this default jig.&#x20;
+This example demonstrates the visual display and behavior of the entity-fields on this default jig.
 
-**Examples:
-Basic** - See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-examples-static.jigx" target="_blank">GitHub</a>.&#x20;
-**Compact** - See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-sd-compact.jigx" target="_blank">GitHub</a>.
+**Examples:**
+**Basic** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-examples-static.jigx).
+**Compact** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-sd-compact.jigx).
 
 :::CodeblockTabs
 entity-fields-basic (static)
@@ -228,16 +218,16 @@ children:
 
 An example to show how entity fields display when linked to a datasource.
 
-**Examples:
-Basic** - See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-sd.jigx" target="_blank">GitHub</a>.&#x20;
-**Compact** - See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-sd-compact.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+**Basic** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-sd.jigx).
+**Compact** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-sd-compact.jigx).
 
-**Basic** - See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/dynamic-data/entity-field-dd.jigx" target="_blank">GitHub</a>.&#x20;
-**Compact** - See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/dynamic-data/entity-field-dd-compact.jigx" target="_blank">GitHub</a>.&#x20;
+**Basic** - See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/dynamic-data/entity-field-dd.jigx).
+**Compact** - See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/dynamic-data/entity-field-dd-compact.jigx)
 
-**Datasources:
-**See the full datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dd.jigx" target="_blank">GitHub</a>.
+**Datasources:**
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dd.jigx).
 
 :::CodeblockTabs
 entity-fields-basic (static)
@@ -489,15 +479,15 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-In this example, the `rightIcons` color is determined by adding a `style` property to each entity-field.&#x20;
+In this example, the `rightIcons` color is determined by adding a `style` property to each entity-field.
 
-**Examples:
-**See the full example using static values in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-icons-color.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example using static values in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-icons-color.jigx).
 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RtiAb3SAzNGz-QOMG3s8L_cc-entityfield-color.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RtiAb3SAzNGz-QOMG3s8L_cc-entityfield-color.PNG" size="80" width="1240" height="2500" position="center" caption="Right icons in color" alt="Right icons in color"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RtiAb3SAzNGz-QOMG3s8L_cc-entityfield-color.PNG" size="80" position="center" caption="Right icons in color" alt="Right icons in color"}
 :::
 ::::
 

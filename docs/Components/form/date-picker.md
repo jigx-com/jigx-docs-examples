@@ -8,7 +8,7 @@ updatedAt: Tue Mar 18 2025 11:22:55 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-The date-picker component provides the functionality to select specific dates, times, or a combination of both. Date/time must be ***input*** in <a href="https://www.iso.org/iso-8601-date-and-time-format.html#:~:text=Therefore%2C%20the%20order%20of%20the,27%2018%3A00%3A00.000." target="_blank">ISO format</a>. You can configure how the date/time is displayed in the form by formatting the ***output***.
+The date-picker component provides the functionality to select specific dates, times, or a combination of both. Date/time must be ***input*** in [ISO Format](https://www.iso.org/iso-8601-date-and-time-format.html#:~:text=Therefore%2C%20the%20order%20of%20the,27%2018%3A00%3A00.000.). You can configure how the date/time is displayed in the form by formatting the ***output***.
 :::
 
 :::VerticalSplitItem
@@ -20,46 +20,36 @@ The date-picker component provides the functionality to select specific dates, t
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                   |
+| **Core structure** |  |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
 | `instanceId`       | The unique identifier for the date-picker field that can be referenced elsewhere. This is useful when saving the date to a datasource. |
 | `label`            | Provide a label to guide people on the what they selecting, for example, date of birth or start date.                                  |
 
-| ### Other options       | ****                                                                                                                                                                                                                                                                                                                     |
+| **Other options**       |  |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `color`                 | Select a color from the [Jigx color palette]() to change the color of the field and label based on a `when` condition. First evaluated to `true` will be used.                                                                                                                                                           |
-| `errorText`             | Provide text message to display when field's value is not valid. The message is displayed in `isNegative` style (red). Use an expression to determine when to show the field.                                                                                                                                            |
-| `format`                | Select the format of the date/time:<br />* LT - 3:28 PM
-* LTS - 3:28:57 PM
-* LLLL - Thursday, March 3, 2024 3:28 PM
-* LLL - March 3, 2024 3:28 PM
-* LL - March 3, 2024 (default)
-* L - 03/03/2024
-* l - 3/3/2024
-* ll -  Mar 3, 2024
-* lll - Mar 3, 2024 3:28 PM
-* llll - Thu, Mar 3, 2024 3:28 PM
-* HH\:mm - 15:28      |
-| `helperText`            | `helperText` is displayed only when there is no `errorText` property configured as `errorText` takes priorty.                                                                                                                                                                                                            |
-| `icon`                  | Add an icon to the field. See [Jigx icons]() for more information on adding icons.                                                                                                                                                                                                                                       |
-| `isRequired`            | The default setting is `true` making the field required, useful when used in form submission. Set to `false` the field is not required and the field is marked (optional).                                                                                                                                               |
-| `isIgnored`             | Set to `true`, the field is ignored when submitting the form.                                                                                                                                                                                                                                                            |
-| `isHidden`              | Set to `true`, hides the field on the form. Use an expression to determine when to hide the field.                                                                                                                                                                                                                       |
+| `color`                 | Select a color from the [Jigx color palette]() to change the color of the field and label based on a `when` condition. First evaluated to `true` will be used.      |
+| `errorText`             | Provide text message to display when field's value is not valid. The message is displayed in `isNegative` style (red). Use an expression to determine when to show the field.    |
+| `format`                | Select the format of the date/time:<br />* LT - 3:28 PM<br />* LTS - 3:28:57 PM<br />* LLLL - Thursday, March 3, 2024 3:28 PM<br />* LLL - March 3, 2024 3:28 PM<br />* LL - March 3, 2024 (default)<br />* L - 03/03/2024<br />* l - 3/3/2024<br />* ll -  Mar 3, 2024<br />* lll - Mar 3, 2024 3:28 PM<br />* llll - Thu, Mar 3, 2024 3:28 PM<br />* HH\:mm - 15:28      |
+| `helperText`            | `helperText` is displayed only when there is no `errorText` property configured as `errorText` takes priorty.   |
+| `icon`                  | Add an icon to the field. See [Jigx icons]() for more information on adding icons.      |
+| `isRequired`            | The default setting is `true` making the field required, useful when used in form submission. Set to `false` the field is not required and the field is marked (optional).   |
+| `isIgnored`             | Set to `true`, the field is ignored when submitting the form.      |
+| `isHidden`              | Set to `true`, hides the field on the form. Use an expression to determine when to hide the field.      |
 | `initialValue`          | Initial value for the field. You can use this to preset the value, so user do not need to change the value and can use this as the default. Using the `reset-state` action with `initialValues` does not clear the field, it resets the date back to it's `initialValue`.                                                |
 | `isOptionalLabelHidden` | If the field is optional (by setting `isRequired` to `false`) , setting the `isOptionalLabelHidden` property to `true` turns off/removes the (optional) text in the label.This property works in combination with `isRequired: false`.                                                                                   |
-| `isAutoFocused`         | By default this field is set to `false`, use `true` to get focus immediately after it is displayed.                                                                                                                                                                                                                      |
+| `isAutoFocused`         | By default this field is set to `false`, use `true` to get focus immediately after it is displayed.   |
 | `maximum`               | Set a maximum time range f date/ time (UTC time). For example, "2022-04-22 14:00" or "2022-04-22" or "20:00" in case of type "time".&#xA;`Maximum` on Android only works with `date` mode because TimePicker does not support this option.                                                                               |
 | `minimum`               | Set a minimum time range for date/ time (UTC time). For example. "2022-04-22 05:00" or "2022-04-22" or "08:00" in case of type "time".&#xA;`Minimum` on Android  only works with `date` mode because  the TimePicker does not support this option.                                                                       |
-| `mode`                  | By default the mode is set to `date`.  &#xA;Use `dateTime `to show a date and time picker.&#xA;Use `time` to only show a time picker.                                                                                                                                                                                    |
-| `nextProperty`          | Name of the next property to receive focus in the form when using submit on a virtual keyboard.                                                                                                                                                                                                                          |
+| `mode`                  | By default the mode is set to `date`.  &#xA;Use `dateTime `to show a date and time picker.&#xA;Use `time` to only show a time picker.     |
+| `nextProperty`          | Name of the next property to receive focus in the form when using submit on a virtual keyboard.     |
 | `style`                 | `isPositive` - field shows a positive icon (green tick)&#xA;`isBusy` - Displays a spinner in the right hand side of the field to show that the field is busy. &#xA;`isDisabled` - Set to `true` disables the date-picker field, preventing the picker screen from popping up.&#xA;`flex` - adjust the size of the field. |
-| `value`                 | The value to display in the field. `Text` field is a controlled component, which means the internal value will be forced to match a UTC time, if it cannot an Invalid date error displays.                                                                                                                               |
+| `value`                 | The value to display in the field. `Text` field is a controlled component, which means the internal value will be forced to match a UTC time, if it cannot an Invalid date error displays.     |
 
-| ### Action | ****                                                                            |
+| **Action** |                                                                             |
 | ---------- | ------------------------------------------------------------------------------- |
 | `onChange` | Select an action to execute when the date-picker component's  value is changed. |
 
-| ### State Configuration  | **Key**              | **Notes**                                                         |
+| **State Configuration**  | **Key**              | **Notes**                                                         |
 | ------------------------ | -------------------- | ----------------------------------------------------------------- |
 | `=@ctx.component.state.` | value                | - State is the variable of the component.                         |
 | `=@ctx.solution.state.`  | activeItemId&#xA;now | * Global state variable that can be used throughout the solution. |
@@ -70,7 +60,7 @@ Some properties are common to all components, see [Common component properties](
 - The `format` property is set to show for the outputs of the field and are ready only.
 - For setting the date format taking into account time zones see [Expressions - cheatsheet]() for example expressions.
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Date picker for selecting a specific date
@@ -85,7 +75,7 @@ In this an example the date-picker allows you to select a specific date in ISO f
 
 **Example:**
 
-See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/date-picker/date-picker-date.jigx" target="_blank">GitHub</a>.
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/date-picker/date-picker-date.jigx).
 :::
 ::::
 
@@ -119,7 +109,7 @@ In is example, only time can be selected. This is accomplished by setting the `m
 
 **Example:**
 
-See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/date-picker/date-picker-time.jigx" target="_blank">GitHub</a>.
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/date-picker/date-picker-time.jigx).
 :::
 ::::
 
@@ -146,11 +136,11 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example shows how to set a specific date range using the `minimum` and `maximum` properties.&#x20;
+This example shows how to set a specific date range using the `minimum` and `maximum` properties.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EVYL9aHItYCcYfcSj2J1T_cc-date-min-max.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EVYL9aHItYCcYfcSj2J1T_cc-date-min-max.PNG" size="60" width="1240" height="2500" position="center" caption="Date range with minimum & maximum" alt="Date range with minimum & maximum"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EVYL9aHItYCcYfcSj2J1T_cc-date-min-max.PNG" size="60" position="center" caption="Date range with minimum & maximum" alt="Date range with minimum & maximum"}
 :::
 ::::
 

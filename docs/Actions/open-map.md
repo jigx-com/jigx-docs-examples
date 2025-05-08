@@ -11,7 +11,7 @@ The open map action lets you tap the on-screen button to open your device's defa
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR_gXAWqyOYxwwBly0Kx-20250217-110927.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR_gXAWqyOYxwwBly0Kx-20250217-110927.gif" size="66" width="1080" height="2167" position="center" caption="Open map action" alt="Open map action"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR_gXAWqyOYxwwBly0Kx-20250217-110927.gif" size="66"  position="center" caption="Open map action" alt="Open map action"}
 :::
 ::::
 
@@ -19,16 +19,16 @@ The open map action lets you tap the on-screen button to open your device's defa
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Core structure** |   |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`            | Provide the action with a title, for example, Navigate.                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `title`            | Provide the action with a title, for example, Navigate.    |
 | `address`          | Address of location - geocode string address to location.&#xA;Valid formats are: &#xA;- **address string - city, street**, e.g.&#xA; `address: 20 W 34th St., New York, NY 10001, USA
 `or in an expression calling a datasource `=@ctx.datasources.address`&#xA;&#xA;**- latitude and longitude**, e.g.&#xA;`address: 40.759412, -73.912306` &#xA;- DMS format<br />**- latitude and longitude**, e.g.&#xA;address: &#xA;     latitude: 40.74860&#xA;     longitude: "-73.98566" |
 
-| ### Other options |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Other options** |                                                                                            |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon]() to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                        |
-| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
+| `icon`            | Select an [icon]() to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).    |
+| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.   |
 | `styles`          | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
 
 ## Examples and code snippets 
@@ -37,7 +37,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR_gXAWqyOYxwwBly0Kx-20250217-110927.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR_gXAWqyOYxwwBly0Kx-20250217-110927.gif" size="66" width="1080" height="2165" position="center" caption="Open an address on a map" alt="Open an address on a map"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR_gXAWqyOYxwwBly0Kx-20250217-110927.gif" size="66" position="center" caption="Open an address on a map" alt="Open an address on a map"}
 :::
 
 :::VerticalSplitItem
@@ -92,7 +92,7 @@ This example includes a list of people and places in New York. Tapping the `righ
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BWuMO4jXKq6t1f05HH6E6-20250217-115630.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BWuMO4jXKq6t1f05HH6E6-20250217-115630.gif" size="66" width="1080" height="2165" position="center" caption="Open an address from a list" alt="Open an address from a list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BWuMO4jXKq6t1f05HH6E6-20250217-115630.gif" size="66"  position="center" caption="Open an address from a list" alt="Open an address from a list"}
 :::
 ::::
 
@@ -167,7 +167,7 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-I5St-RlrY0rIm7zN2AEvP-20250217-120353.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-I5St-RlrY0rIm7zN2AEvP-20250217-120353.gif" size="66" width="1080" height="2167" position="center" caption="Open - map as secondary action" alt="Open - map as secondary action"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-I5St-RlrY0rIm7zN2AEvP-20250217-120353.gif" size="66" width="1080" height="2167" position="center" caption="Open - map as secondary action" alt="Open - map as secondary action"}
 :::
 
 :::VerticalSplitItem
@@ -272,7 +272,7 @@ actions:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aOQBSERQ1zpZdhMkFOba3-20250217-132934.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aOQBSERQ1zpZdhMkFOba3-20250217-132934.gif" size="66" width="1080" height="2162" position="center" caption="Action in jig header" alt="Action in jig header"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aOQBSERQ1zpZdhMkFOba3-20250217-132934.gif" size="66" position="center" caption="Action in jig header" alt="Action in jig header"}
 :::
 
 :::VerticalSplitItem
@@ -327,6 +327,4 @@ children:
             and pedestrian-only Stone Street.
 ```
 :::
-
-###
 

@@ -8,7 +8,7 @@ updatedAt: Mon Nov 04 2024 09:47:02 GMT+0000 (Coordinated Universal Time)
 
 This action is used to return to the previous page. Most jigs include this action automatically as an arrow to the left of the title of the jig. This action can be used in a list of actions, such as swipeable and rightElement, or used together with another action, where go-back is called after the main action and returns the user to the previous page.
 
-## ****Configuration options****
+## Configuration options
 
 A go-back action can be set up in various ways:
 
@@ -21,14 +21,14 @@ A go-back action can be set up in various ways:
 A go-back action associated with another action under onSuccess can only be used with dynamic data.
 :::
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
-### go-back as an action&#x20;
+### go-back as an action
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1BxcmGrBKayAJDjL1mdFT_qfq8vyqssxkg7hk1329ugo-backiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1BxcmGrBKayAJDjL1mdFT_qfq8vyqssxkg7hk1329ugo-backiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="go-back as an action" alt="go-back as an action"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1BxcmGrBKayAJDjL1mdFT_qfq8vyqssxkg7hk1329ugo-backiphone13blueportrait.png" size="80"  position="center" caption="go-back as an action" alt="go-back as an action"}
 :::
 
 :::VerticalSplitItem
@@ -36,8 +36,8 @@ The simplest example of a go-back action is to use it as a separate action. When
 
 **Examples:**
 
-See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-action/go-back-action.jigx" target="_blank">GitHub</a>.
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-action/go-back-action-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-action/go-back-action.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-action/go-back-action-dynamic.jigx).
 :::
 ::::
 
@@ -59,19 +59,19 @@ actions:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wHC_QgeGKS4eLonetgUDH_c-t3oukoehdqalzuaazzcgo-back-swipeableiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wHC_QgeGKS4eLonetgUDH_c-t3oukoehdqalzuaazzcgo-back-swipeableiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="swipeable go-back " alt="swipeable go-back "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wHC_QgeGKS4eLonetgUDH_c-t3oukoehdqalzuaazzcgo-back-swipeableiphone13blueportrait.png" size="80"  position="center" caption="swipeable go-back " alt="swipeable go-back "}
 :::
 
 :::VerticalSplitItem
 This example uses the go-back action as a swipeable property. We can choose the swipe direction left or right. After pressing the button, we return to the previous page.
 
-**Examples left:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-swipeable/go-back-swipeable-left.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-swipeable/go-back-left-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples left:**
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-swipeable/go-back-swipeable-left.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-swipeable/go-back-left-dynamic.jigx).
 
-**Examples right:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-swipeable/go-back-swipeable-right.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-swipeable/go-back-right-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples right:**
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-swipeable/go-back-swipeable-right.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-swipeable/go-back-right-dynamic.jigx).
 :::
 ::::
 
@@ -106,15 +106,15 @@ swipeable:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/f59eQfajBmOoVwstlCTxe_8n2xgcq2o-rtnrp7hgdmwgo-back-rightelementiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/f59eQfajBmOoVwstlCTxe_8n2xgcq2o-rtnrp7hgdmwgo-back-rightelementiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="rightElement go-back " alt="rightElement go-back "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/f59eQfajBmOoVwstlCTxe_8n2xgcq2o-rtnrp7hgdmwgo-back-rightelementiphone13blueportrait.png"  size="80" position="center" caption="rightElement go-back " alt="rightElement go-back "}
 :::
 
 :::VerticalSplitItem
 In this example, we use the go-back action as the rightElement in the list-item component. There is a button for each item.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-right-element/go-back-right-element.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-right-element/go-back-right-element-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-right-element/go-back-right-element.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-right-element/go-back-right-element-dynamic.jigx)
 :::
 ::::
 
@@ -138,13 +138,13 @@ rightElement:
 :::VerticalSplitItem
 In this example, we use the `action.go-back` with `onSuccess` to take you back to the main list after signing a form.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-on-success/go-back-on-success.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-on-success/go-back-on-success.jigx).
 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IHyr3vBgqg8v34h9wMu2E_go-back-onsucces.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IHyr3vBgqg8v34h9wMu2E_go-back-onsucces.PNG" size="80" width="1240" height="2500" position="center" caption="go-back onSuccess" alt="go-back onSuccess"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IHyr3vBgqg8v34h9wMu2E_go-back-onsucces.PNG" size="80" position="center" caption="go-back onSuccess" alt="go-back onSuccess"}
 :::
 ::::
 

@@ -6,9 +6,9 @@ createdAt: Thu Jun 09 2022 18:19:16 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Feb 24 2025 09:57:20 GMT+0000 (Coordinated Universal Time)
 ---
 
-This action allows for multiple actions to be run while only requiring the user to press a single button. The actions can be set to run sequentially or executed as a bulk functionality.&#x20;
+This action allows for multiple actions to be run while only requiring the user to press a single button. The actions can be set to run sequentially or executed as a bulk functionality.
 
-## ****Configuration options****
+## Configuration options
 
 An `action list` can be set up in various ways:
 
@@ -16,23 +16,22 @@ An `action list` can be set up in various ways:
 2. In onPress/onChange events - usually triggered by [list](./../Widgets/list.md) or [jig.list](<./../Jig Types/jig_list.md>) related items.
 3. In onRefresh/onFocus events on any type of jig.
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Action-list as a primary action button
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9DlW77ErmICtx4FdonAhb_ou82sm6mjtwuv1o3jo2zonsubmitiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9DlW77ErmICtx4FdonAhb_ou82sm6mjtwuv1o3jo2zonsubmitiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Action List" alt="Action List"}
-
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9DlW77ErmICtx4FdonAhb_ou82sm6mjtwuv1o3jo2zonsubmitiphone13blueportrait.png" size="80" position="center" caption="Action List" alt="Action List"}
 
 :::
 
 :::VerticalSplitItem
-This example shows an action-list with two actions. The first action is <a href="https://docs.jigx.com/examples/submit-form" target="_blank">submit-form</a>, which will save the entered data, and the second action, <a href="https://docs.jigx.com/examples/go-back" target="_blank">go-back</a>, will redirect us back to the previous page.
+This example shows an action-list with two actions. The first action is [submit-form](https://docs.jigx.com/examples/submit-form), which will save the entered data, and the second action, [go-back](https://docs.jigx.com/examples/go-back), will redirect us back to the previous page.
 
-**Example:
-**See the full example of action-list in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-primary.jigx" target="_blank">GitHub</a>.&#x20;
+**Example:**
+See the full example of action-list in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-primary.jigx)
 :::
 ::::
 
@@ -87,14 +86,14 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_QIAeOQBiGMj4eE2lrAkM_dxwftvt0qk-ombng7ba1onrefreshiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_QIAeOQBiGMj4eE2lrAkM_dxwftvt0qk-ombng7ba1onrefreshiphone13blueportrait.png" size="78" width="1570" height="2932" position="center" caption="Action-list with onPress" alt="Action-list with onPress"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_QIAeOQBiGMj4eE2lrAkM_dxwftvt0qk-ombng7ba1onrefreshiphone13blueportrait.png" size="78"  position="center" caption="Action-list with onPress" alt="Action-list with onPress"}
 :::
 
 :::VerticalSplitItem
 In this example, we have an action list with the onPress function in the list-item. The first action will color the last chosen item and the second action will sync our entity with the database and we can use them for further actions.
 
-**Example:
-**See the full example of action-list in onPress in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onPress.jigx" target="_blank">GitHub</a>. See the full example of action-list in onChange in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onChange.jigx" target="_blank">GitHub</a>.&#x20;
+**Example:**
+See the full example of action-list in onPress in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onPress.jigx). See the full example of action-list in onChange in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onChange.jigx)
 :::
 ::::
 
@@ -162,9 +161,9 @@ item:
 
 In this example when we refresh the jig/jig is focused, we call set-state and sync-entities actions.
 
-**Example:
-**See the full example of the action list onRefresh in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onRefresh.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example of the action list onFocus in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onFocus.jigx" target="_blank">GitHub. </a>
+**Example:**
+See the full example of the action list onRefresh in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onRefresh.jigx).
+See the full example of the action list onFocus in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onFocus.jigx).
 
 :::CodeblockTabs
 action-list-onRefresh

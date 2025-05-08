@@ -6,16 +6,16 @@ createdAt: Thu Jun 09 2022 18:22:55 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Nov 04 2024 15:41:43 GMT+0000 (Coordinated Universal Time)
 ---
 
-Execute-entity can save, update, or delete data in a **single row** from a database, depending on the chosen method. Each datasource type (Dynamic / SQL / REST) will have a different syntax for updating, saving, and deleting data.&#x20;
+Execute-entity can save, update, or delete data in a **single row** from a database, depending on the chosen method. Each datasource type (Dynamic / SQL / REST) will have a different syntax for updating, saving, and deleting data.
 
 For the Dynamic datasource, values will be saved under the *data* option.
-For SQL/REST datasource, values will be saved under the *functionParameters *option.
+For SQL/REST datasource, values will be saved under the *functionParameters* option.
 
 :::hint{type="warning"}
-This action can't be used if you are using [Static Data]().&#x20;
+This action can't be used if you are using [Static Data]().
 :::
 
-## ****Configuration options****
+## Configuration options
 
 An `execute-entity` action can be used in multiple areas:
 
@@ -32,21 +32,21 @@ The execute-entity has a `go-back `option, which is set to on by default.  That 
 
 Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling]() explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities and provides examples and code samples.
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Execute-entity in action
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNJS6iz-l7FhJtP82_Kae_ex-actioniphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNJS6iz-l7FhJtP82_Kae_ex-actioniphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Execute enitity" alt="Execute entity"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNJS6iz-l7FhJtP82_Kae_ex-actioniphone13blueportrait.png" size="80" position="center" caption="Execute enitity" alt="Execute entity"}
 :::
 
 :::VerticalSplitItem
-In this example, execute entity is used in *action* with the *create* method. This example results in creating a new record with the First name, Last name, Email, and Phone number information. Execute entity is called by the press of the *Save details* button on the bottom.&#x20;
+In this example, execute entity is used in *action* with the *create* method. This example results in creating a new record with the First name, Last name, Email, and Phone number information. Execute entity is called by the press of the *Save details* button on the bottom.
 
-**Example:
-**See the full example of execute-entity in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-action.jigx" target="_blank">GitHub</a>.
+**Example:**
+See the full example of execute-entity in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-action.jigx).
 :::
 ::::
 
@@ -78,14 +78,14 @@ actions:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZEf_uXB3562SxaHxxh_ae_ex-a-listiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZEf_uXB3562SxaHxxh_ae_ex-a-listiphone13blueportrait.png" size="82" width="1570" height="2932" position="center" caption="Execute entity in action-list" alt="Execute entity in action-list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZEf_uXB3562SxaHxxh_ae_ex-a-listiphone13blueportrait.png" size="82" position="center" caption="Execute entity in action-list" alt="Execute entity in action-list"}
 :::
 
 :::VerticalSplitItem
-By pressing the* Save details* button the execute-entity action will be followed by the go-to action.
+By pressing the *Save details* button the execute-entity action will be followed by the go-to action.
 
-**Examples:
-**See the full example of execute-entity in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-actionlist.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example of execute-entity in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-actionlist.jigx).
 :::
 ::::
 
@@ -132,15 +132,15 @@ actions:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fHcCpIywUK-qDL8nRfoO3_tjvfgtwpkgot3fa73lrbex-onchangeiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fHcCpIywUK-qDL8nRfoO3_tjvfgtwpkgot3fa73lrbex-onchangeiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Execute-entity in onPress" alt}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fHcCpIywUK-qDL8nRfoO3_tjvfgtwpkgot3fa73lrbex-onchangeiphone13blueportrait.png" size="80" position="center" caption="Execute-entity in onPress" }
 :::
 
 :::VerticalSplitItem
 Here is the example of execute-entity in onPress/onChange event in list-item.
 
-**Examples:
-**See the full example using onChange in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onChange.jigx" target="_blank">GitHub</a>.
-See the full example using onPress you in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onPress.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example using onChange in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onChange.jigx).
+See the full example using onPress you in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onPress.jigx).
 :::
 ::::
 
@@ -201,12 +201,12 @@ item:
 ::::ExpandableHeading
 ### Execute-entity in onRefresh/onFocus
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ODgGFijGrBYtf6_qv57VK_actioneentityrefresh.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ODgGFijGrBYtf6_qv57VK_actioneentityrefresh.PNG" size="80" width="2540" height="2500" position="center" caption="Execute entity" alt="Execute entity"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ODgGFijGrBYtf6_qv57VK_actioneentityrefresh.PNG" size="80" position="center" caption="Execute entity" alt="Execute entity"}
 
-Here is the example of execute-entity in onRefresh/onFocus.&#x20;
+Here is the example of execute-entity in onRefresh/onFocus.
 
-See the full example using onRefresh in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onRefresh.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using onFocus in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onFocus.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example using onRefresh in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onRefresh.jigx).
+See the full example using onFocus in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onFocus.jigx)
 
 :::CodeblockTabs
 execute-entity-onRefresh
@@ -242,12 +242,12 @@ onFocus:
 ::::ExpandableHeading
 ### Deleting data using execute-entity
 
-Here is an example of deleting different data using execute-entity. There are always 2 options for how you can delete a record:&#x20;
+Here is an example of deleting different data using execute-entity. There are always 2 options for how you can delete a record:
 
 1. Using SQL Select
 2. Using JSONata function
 
-In the first two examples, you can see the same situation where you are deleting all the records where the name equals Jane.&#x20;
+In the first two examples, you can see the same situation where you are deleting all the records where the name equals Jane.
 
 The third example shows how to delete the first 3 records from your datasource.
 

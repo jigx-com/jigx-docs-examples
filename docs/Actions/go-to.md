@@ -8,7 +8,7 @@ updatedAt: Tue Feb 25 2025 08:38:01 GMT+0000 (Coordinated Universal Time)
 
 This action redirects you to another jig. The `go-to` action can be used with elements like `swipeable` and `rightElement` or combined with another action. When paired with another action, it is triggered after the main action to navigate to a specified screen, for example, saving a date in a form and then opening a list of customers. `go-to` helps configure navigation, ensuring a seamless app flow. See [Navigation]() for more information.
 
-## ****Configuration option
+## Configuration option
 
 A go-to action can be set up in various ways:
 
@@ -16,7 +16,7 @@ A go-to action can be set up in various ways:
 2. As an associated action in the action list.
 3. As a `swipeable` action in the left or right direction.
 4. As `rightElement` in the list.
-5. Use the `go-to` to open a jig as a modal using the `isModal` property set to `true`. Set to `false` opens navigates to the specified jig.&#x20;
+5. Use the `go-to` to open a jig as a modal using the `isModal` property set to `true`. Set to `false` opens navigates to the specified jig.
 6. Use the `behaviour` property to determine if you want to push the jig into the history of navigation, by using the `new` value, or reuse the one you already have in history by using the `existing` value.
 
 ## Considerations
@@ -27,24 +27,24 @@ A go-to action can be set up in various ways:
       - On any Android device (phones and tablets).
       - On an iPad in landscape mode:
         1. When the drawer is open, it will only open in the jig panel.
-        2. When the drawer is closed, it will cover the entire screen, but it will not display as a modal.&#x20;
+        2. When the drawer is closed, it will cover the entire screen, but it will not display as a modal.
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
-### go-to as an action&#x20;
+### go-to as an action
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MFStH4Yrw_PUJ4y5tc7Cj-20250225-070717.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MFStH4Yrw_PUJ4y5tc7Cj-20250225-070717.png" size="80" width="1224" height="2466" position="center" caption="go-to action" alt="go-to action"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MFStH4Yrw_PUJ4y5tc7Cj-20250225-070717.png" size="80" position="center" caption="go-to action" alt="go-to action"}
 :::
 
 :::VerticalSplitItem
-The simplest example of using a go-to action is to use it as a separate action. When configured, a button will appear at the bottom, redirecting us to the details page when pressed.&#x20;
+The simplest example of using a go-to action is to use it as a separate action. When configured, a button will appear at the bottom, redirecting us to the details page when pressed.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-action/go-to-action.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-action/go-to-action-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-action/go-to-action.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-action/go-to-action-dynamic.jigx).
 :::
 ::::
 
@@ -74,12 +74,12 @@ actions:
 This example uses the go-to action as a swipeable property. We can choose the swipe direction left or right. After pressing the button, it will redirect to the details of the person.
 
 **Examples left:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-swipeable/go-to-swipeable-left.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-swipeable/go-to-left-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-swipeable/go-to-swipeable-left.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-swipeable/go-to-left-dynamic.jigx).
 
-**Examples right:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-swipeable/go-to-swipeable-right.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-swipeable/go-to-right-dynamic.jigx" target="_blank">GitHub</a>.
+**Examples right:**
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-swipeable/go-to-swipeable-right.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-swipeable/go-to-right-dynamic.jigx).
 :::
 ::::
 
@@ -134,15 +134,15 @@ item:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TVkSZkXqMnIyfLztOYUmk-20250225-071246.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TVkSZkXqMnIyfLztOYUmk-20250225-071246.png" size="80" width="1224" height="2466" position="center" caption="go-to button" alt="go-to button"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TVkSZkXqMnIyfLztOYUmk-20250225-071246.png" size="80" position="center" caption="go-to button" alt="go-to button"}
 :::
 
 :::VerticalSplitItem
 In this example, we use the go-to action as the rightElement in the list-item component. There is a button for each item.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-right-element/go-to-right-element.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-right-element/go-to-right-element-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-right-element/go-to-right-element.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-right-element/go-to-right-element-dynamic.jigx).
 :::
 ::::
 
@@ -175,14 +175,14 @@ item:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-o3gCYRbZdD4iyLoJ-oCNJ-20250225-071422.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-o3gCYRbZdD4iyLoJ-oCNJ-20250225-071422.png" size="82" width="1224" height="2466" position="center" caption="Go to onSuccess" alt="go-to onSuccess"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-o3gCYRbZdD4iyLoJ-oCNJ-20250225-071422.png" size="82" position="center" caption="Go to onSuccess" alt="go-to onSuccess"}
 :::
 
 :::VerticalSplitItem
 In this example, the go-back action is associated with the submit-form action. After we enter the signature and press the "Sign" button, the submit-form action is performed and then the go-to action redirects us to the next page.
 
-**Examples
-**See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-on-success/go-to-on-success.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-on-success/go-to-on-success.jigx).
 :::
 ::::
 
@@ -221,10 +221,10 @@ actions:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-In this example, we use the `go-to` action as the `rightElement` in the `list-item` component. There is a button for each item. When tapped the `go-to` will open the jig as a modal when the `isModal` property is set to `true`.&#x20;
+In this example, we use the `go-to` action as the `rightElement` in the `list-item` component. There is a button for each item. When tapped the `go-to` will open the jig as a modal when the `isModal` property is set to `true`.
 
-**Examples
-**See the full example using dynamic data in GitHub.&#x20;
+**Examples:**
+See the full example using dynamic data in GitHub.
 :::
 
 :::VerticalSplitItem
@@ -427,11 +427,11 @@ In this example, three jigs are configured to create a stack of data for each gu
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07_99i4UGP-20250225-083249.gif" signedSrc size="60" width="681" height="1377" position="center" caption="Go-to new guest" alt="Go-to new guest "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07_99i4UGP-20250225-083249.gif" signedSrc size="60" position="center" caption="Go-to new guest" alt="Go-to new guest "}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc_azd0-20250225-083738.gif" signedSrc size="60" width="681" height="1377" position="center" caption="Review guests" alt="Review guests"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc_azd0-20250225-083738.gif" size="60" position="center" caption="Review guests" alt="Review guests"}
 :::
 ::::
 

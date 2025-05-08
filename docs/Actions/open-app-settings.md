@@ -13,14 +13,14 @@ The open-settings action makes this process easier and more intuitive. The actio
 
 Some properties are common to all actions, see [Common action properties](docId\:xwLai--R7dO1e7HzPY8xT)  for a list and their configuration options.
 
-| ### Core structure | ****                                                                 |
+| **Core structure** |                                                                  |
 | ------------------ | -------------------------------------------------------------------- |
 | `title`            | Provide the action button with a title, for example, Go to settings. |
 
-| ### Other options |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Other options** |                                                                                           |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon]() to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                        |
-| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
+| `icon`            | Select an [icon]() to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).     |
+| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.     |
 | `style`           | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
 
 ## Examples and code snippets ****
@@ -34,7 +34,7 @@ This example shows how to set up the `open-app-settings` action for cases where 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xQi39F4P1b8CRXDHmRtj_-20250415-085249.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xQi39F4P1b8CRXDHmRtj_-20250415-085249.gif" size="66" width="681" height="1377" position="center" caption="Open app settings" alt="Open app settings"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xQi39F4P1b8CRXDHmRtj_-20250415-085249.gif" size="66" position="center" caption="Open app settings" alt="Open app settings"}
 :::
 ::::
 :::::

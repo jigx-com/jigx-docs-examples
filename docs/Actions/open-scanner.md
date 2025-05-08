@@ -24,17 +24,17 @@ An `open-scanner` action can be set up in various ways:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v3Bc3PbWnemwhWHwoukqp_qriphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v3Bc3PbWnemwhWHwoukqp_qriphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Open scanner" alt="Open scanner"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v3Bc3PbWnemwhWHwoukqp_qriphone13blueportrait.png" size="80" position="center" caption="Open scanner" alt="Open scanner"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nhr5pFPGp-1uzLA36zhrQ_qr2iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nhr5pFPGp-1uzLA36zhrQ_qr2iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Open Scanner" alt="Open scanner"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nhr5pFPGp-1uzLA36zhrQ_qr2iphone13blueportrait.png" size="80" position="center" caption="Open Scanner" alt="Open scanner"}
 :::
 ::::
 
 This is an example of using the open-scanner as a stand-alone action. In this case, the button appears at the bottom, and when pressed, it accesses the camera and allows us to scan the QR code.
 **Examples**:
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-action.jigx" target="_blank">GitHub</a>. 
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-action.jigx). 
 
 :::CodeblockTabs
 open-scanner-action.jigx
@@ -69,14 +69,14 @@ actions:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S7_-YinLbOlXYVMqu2jN7_open-scanner-swipeableiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S7_-YinLbOlXYVMqu2jN7_open-scanner-swipeableiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Swipe to open scanner" alt="Swipe to open scanner"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S7_-YinLbOlXYVMqu2jN7_open-scanner-swipeableiphone13blueportrait.png" size="80" position="center" caption="Swipe to open scanner" alt="Swipe to open scanner"}
 :::
 
 :::VerticalSplitItem
 This example uses the open-scanner action as a swipeable property. We can choose the swipe direction left or right. After pressing the button, it accesses the camera and allows us to scan the QR code.
 
-**Examples:
-**See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-swipeable.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-swipeable.jigx).
 :::
 ::::
 
@@ -126,14 +126,14 @@ item:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rr130IXx_ih2HdFw_K3le_open-scanner-rightelementiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rr130IXx_ih2HdFw_K3le_open-scanner-rightelementiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Button to open scanner" alt="Button to open scanner"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rr130IXx_ih2HdFw_K3le_open-scanner-rightelementiphone13blueportrait.png" size="80"  position="center" caption="Button to open scanner" alt="Button to open scanner"}
 :::
 
 :::VerticalSplitItem
 In this example, we use the open-scanner action as the rightElement in the list-item component. There is a button for each item.
 
 **Examples:
-**See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-rightElement.jigx" target="_blank">GitHub</a>.&#x20;
+**See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-rightElement.jigx).
 :::
 ::::
 
@@ -171,14 +171,14 @@ item:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_srtmYTzi7GHJ9ectDHSA_open-scanner-onsuccer3iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_srtmYTzi7GHJ9ectDHSA_open-scanner-onsuccer3iphone13blueportrait.png" size="82" width="1570" height="2932" position="center" caption="Open scanner onSuccess" alt="Open scanner onSuccess"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_srtmYTzi7GHJ9ectDHSA_open-scanner-onsuccer3iphone13blueportrait.png" size="82"  position="center" caption="Open scanner onSuccess" alt="Open scanner onSuccess"}
 :::
 
 :::VerticalSplitItem
 In this example, the open-scanner action is associated with the submit-form action. After we enter the signature and press the "Sign" button, the submit-form action is performed and the action for open-scanner is shown. Access to the camera is not shown automatically. You have to click on "Scan QR code".
 
-**Examples:
-**See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-onSuccess.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-onSuccess.jigx).
 :::
 ::::
 

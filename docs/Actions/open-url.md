@@ -8,7 +8,7 @@ updatedAt: Mon Nov 04 2024 14:44:07 GMT+0000 (Coordinated Universal Time)
 
 This action opens a web page depending on the provided URL or [deep links]() to an external app. open-url can be used in a list of actions, such as `swipeable` and `rightElement`, or with another action; after the main action is executed, open-url is called and opens the configured URL.
 
-## ****Configuration options****
+## Configuration options
 
 An open-url action can be set up in various ways:
 
@@ -17,7 +17,7 @@ An open-url action can be set up in various ways:
 3. As `rightElement` in the list.
 4. As an associated action in the action list.
 
-| ### Core structure | ****                                                                                                                                                                                                   |
+| **Core structure** |                                                                                         |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `title`            | Provide a title for opening the URL, you can use expressions in the title field.                                                                                                                       |
 | `url`              | Specify the URL you want opened. The following formats are supported: &#xA;https\://&#xA;https\://www. &#xA;www.&#xA;sitename.com&#xA;external app link (See the deep link to an external app example) |
@@ -25,18 +25,18 @@ An open-url action can be set up in various ways:
 ## Examples and code snippets ****
 
 :::::ExpandableHeading
-### open-url as an action&#x20;
+### open-url as an action
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T3ZC0Rad-LbIo-TwkAz0n_gtzweo29zg0gybp4gfc9paiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T3ZC0Rad-LbIo-TwkAz0n_gtzweo29zg0gybp4gfc9paiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Open URL" alt="Open URL"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T3ZC0Rad-LbIo-TwkAz0n_gtzweo29zg0gybp4gfc9paiphone13blueportrait.png" size="80" position="center" caption="Open URL" alt="Open URL"}
 :::
 
 :::VerticalSplitItem
-The simplest example of using an open-url action is to use it as a separate action. Thanks to this, a button will appear at the bottom, which, when pressed, will open the specific URL that we set up.&#x20;
+The simplest example of using an open-url action is to use it as a separate action. Thanks to this, a button will appear at the bottom, which, when pressed, will open the specific URL that we set up.
 
-**Example:
-**See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-url/open-url-action.jigx" target="_blank">GitHub</a>. &#x20;
+**Example:**
+See the full example in <[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-url/open-url-action.jigx).
 :::
 ::::
 
@@ -55,14 +55,14 @@ actions:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/85MfW1I1rRzJZ2nViXGqn_lwkiwhqm9jefwzaddms2sopen-url-swipeableiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/85MfW1I1rRzJZ2nViXGqn_lwkiwhqm9jefwzaddms2sopen-url-swipeableiphone13blueportrait.png" size="78" width="1570" height="2932" position="center" caption="Swipe to open URL" alt="Swipe to open URL "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/85MfW1I1rRzJZ2nViXGqn_lwkiwhqm9jefwzaddms2sopen-url-swipeableiphone13blueportrait.png" size="78"  position="center" caption="Swipe to open URL" alt="Swipe to open URL "}
 :::
 
 :::VerticalSplitItem
 This example uses the open-url action as a swipeable property. We can choose the swipe direction left or right. After pressing the button, it will open the specific url that we set up.
 
-**Example:
-**See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-url/open-url-swipeable.jigx" target="_blank">GitHub</a>.&#x20;
+**Example:**
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-url/open-url-swipeable.jigx).
 :::
 ::::
 
@@ -97,14 +97,14 @@ item:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYadDhjMgTy2NrPEZyzmh_udarll0iezuhktkkwiufopen-url-rightiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYadDhjMgTy2NrPEZyzmh_udarll0iezuhktkkwiufopen-url-rightiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Button to open URL" alt="Button to open URL"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYadDhjMgTy2NrPEZyzmh_udarll0iezuhktkkwiufopen-url-rightiphone13blueportrait.png" size="80"  position="center" caption="Button to open URL" alt="Button to open URL"}
 :::
 
 :::VerticalSplitItem
 In this example, we use the open-url action as the rightElement in the list-item component. There is a button for each item.
 
-**Example:
-**See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-url/open-url-right-element.jigx" target="_blank">GitHub</a>.&#x20;
+**Example:**
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-url/open-url-right-element.jigx).
 :::
 ::::
 
@@ -133,14 +133,14 @@ item:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w6iMDziHnqSet6KtsHYWi_scmmooymdeswthvqltsmbopen-url-onsuccessiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w6iMDziHnqSet6KtsHYWi_scmmooymdeswthvqltsmbopen-url-onsuccessiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Open URL onSuccess" alt="Open URL onSuccess"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w6iMDziHnqSet6KtsHYWi_scmmooymdeswthvqltsmbopen-url-onsuccessiphone13blueportrait.png" size="80"  position="center" caption="Open URL onSuccess" alt="Open URL onSuccess"}
 :::
 
 :::VerticalSplitItem
 In this example, the open-url action is associated with the submit-form action. After we enter the signature and press the "Sign" button, the submit-form action is performed and the specific url will be opened.
 
-**Example:
-**See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-url/open-url-on-success.jigx" target="_blank">GitHub</a>.&#x20;
+**Example:**
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-url/open-url-on-success.jigx).
 :::
 ::::
 

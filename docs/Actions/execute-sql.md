@@ -5,23 +5,23 @@ createdAt: Fri Apr 25 2025 06:52:04 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Apr 30 2025 15:51:55 GMT+0000 (Coordinated Universal Time)
 ---
 
-This action allows the mobile app to execute a SQL statement on local execution of SQLite,  used in editing LOCAL tables or Dynamic Data tables. It’s useful for running custom queries or updates based on user interaction or app events.&#x20;
+This action allows the mobile app to execute a SQL statement on local execution of SQLite,  used in editing LOCAL tables or Dynamic Data tables. It’s useful for running custom queries or updates based on user interaction or app events.
 
 ## Configuration options
 
-| ### Core structure | ****                                                                                                                                                                                                                                                  |
+| **Core structure** |                                                                                                                                                                                                                                                 |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `entities`         | The entities/tables affected by the statements. Before executing the statements, a check ensures that the tables exist.&#xA;After execution any datasources that use these entities will be notified that the database was changed.                   |
 | `statements`       | List of statements to execute in sequence. Multiple statements can be configured to execute in sequence.&#xA;`statement` - the SQL statement to execute against the solution database.&#xA;`parameters` - The parameters used in the above statement. |
 | `title`            | Provide the action button with a title, for example, *Delete record*.                                                                                                                                                                                 |
 
-| ### Other options |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `icon`            | Select an [icon]() to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                        |
 | `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
 | `style`           | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 ### Execute SQL statements to update & delete
 

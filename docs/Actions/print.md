@@ -19,24 +19,23 @@ This feature enables you to generate hard copies of invoices, receipts, articles
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                                                                                                               |
+| **Core structure** |   |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`            | Provide the action button with a title, for example, Print.                                                                                                                                                                                        |
+| `title`            | Provide the action button with a title, for example, Print.    |
 | `html`             | Use standard HTML elements to ensure optimal formatting and compatibility when rendering content for printing, for example, \<html>\<body>Invoices are provided monthly.\</body\</html>.&#xA;The HTML can be built up using JSONata or JavaScript. |
 
-| ### Other options |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Other options** |                                                                                          |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon]() to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                        |
-| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
+| `icon`            | Select an [icon]() to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).   |
+| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.   |
 | `styles`          | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
 
 ## Considerations
 
-- The `action.print` requires raw HTML. This can be configured in the action, in an expression, or in JavaScript. &#x20;
-
+- The `action.print` requires raw HTML. This can be configured in the action, in an expression, or in JavaScript.
 ## Examples and code snippets 
 
-### Basic print action&#x20;
+### Basic print action
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -139,7 +138,7 @@ actions:
 
 ### Print with web-view component
 
-This example demonstrates configuring `action.print` to display a button for printing HTML content shown in the `component.web-view`. The `state` of the component is used to reference the raw HTML used in the component.&#x20;
+This example demonstrates configuring `action.print` to display a button for printing HTML content shown in the `component.web-view`. The `state` of the component is used to reference the raw HTML used in the component.
 
 :::CodeblockTabs
 action-print-web-view\.jigx

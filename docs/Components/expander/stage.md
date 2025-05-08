@@ -8,23 +8,23 @@ updatedAt: Thu Apr 24 2025 07:14:20 GMT+0000 (Coordinated Universal Time)
 
 In this component, you add left and right elements, typically showing a start-and-end concept, such as flight schedules.
 
-## ****Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                              |
+|**Core structure** |                                                              |
 | ------------------ | ----------------------------------------------------------------- |
 | `left`             | Add content to the `left` element as text, or use an expression.  |
 | `right`            | Add content to the `right` element as text, or use an expression. |
 | `title`            | Add `titles` for the text on the `left` and `right` elements.     |
 
-| ### Other options | ****                                                                                                                                                                 |
+|**Other options** |    |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `icon`            | Add an icon to show in the `centerElement`. A list of icons is available. See [Jigx icons]() for more information.                                                   |
 | `style`           | `isWaitingSync` - Will display a "Waiting sync" indicator (cloud with a line through it), a visual indicator showing that data has not been synced to the cloud yet. |
 | `subtitle`        | Add a `subtitle` to either the left or right element as text, or use an expression.                                                                                  |
 
-| ### Actions | ****                                                                                                                                     |
+|**Actions** |    |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | `onPress`   | The action is triggered while pressing on the content in the stage. Use IntelliSense (ctrl+space) to see the list of available actions.  |
 
@@ -32,7 +32,7 @@ Some properties are common to all components, see [Common component properties](
 
 - `component.stage` can only be used in the `component.expander` or a [list](./../list/stage.md).
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Stage in expander
@@ -45,8 +45,8 @@ Some properties are common to all components, see [Common component properties](
 :::VerticalSplitItem
 **Examples:**
 
-See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/static-data/stage.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/dynamic-data/stage-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/static-data/stage.jigx).
+See the full example using dynamic data [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/dynamic-data/stage-dynamic.jigx).
 :::
 ::::
 
@@ -139,13 +139,13 @@ datasources:
 :::VerticalSplitItem
 **Examples:**
 
-See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/static-data/stage-list.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/dynamic-data/stage-list-dynamic.jigx" target="_blank">GitHub</a>.
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/static-data/stage-list.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/dynamic-data/stage-list-dynamic.jigx).
 
 **Datasources:**
 
-See the full datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/trip-static.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource for dynamic data  in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/trip-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/trip-static.jigx).
+See the full datasource for dynamic data  in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/trip-dynamic.jigx).
 :::
 ::::
 

@@ -6,20 +6,20 @@ createdAt: Thu Jun 09 2022 18:18:56 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 17:44:28 GMT+0000 (Coordinated Universal Time)
 ---
 
-The confirm action creates a pop-up prior to an action being performed. This usually serves as a safety net for a user attempting either a destructive action or an action that could have other implications for the user, such as asking whether a user wishes to proceed with deleting a record.&#x20;
+The confirm action creates a pop-up prior to an action being performed. This usually serves as a safety net for a user attempting either a destructive action or an action that could have other implications for the user, such as asking whether a user wishes to proceed with deleting a record.
 
-This action can also be used as a confirmation to provide feedback after an action has been performed.&#x20;
+This action can also be used as a confirmation to provide feedback after an action has been performed.
 
-The action allows for customizable wording on the confirmation modal and can be set to take place automatically or not.&#x20;
+The action allows for customizable wording on the confirmation modal and can be set to take place automatically or not.
 
-## ****Configuration options****
+## Configuration options
 
 A `confirm` action can be set up in various ways:
 
 1. You can use it as a confirmation to request confirmation before performing an action
 2. You can use it as a confirmation after an action has successfully been performed
 
-## Examples and code snippets ****
+## Examples and code snippets 
 
 :::::ExpandableHeading
 ### Confirm action with modal
@@ -30,7 +30,6 @@ A `confirm` action can be set up in various ways:
 :::VerticalSplitItem
 ![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QCU14bRGTq8hi9CRQMjJC_con-hiphone13blueportrait.png)
 
-&#x20;
 :::
 
 :::VerticalSplitItem
@@ -38,7 +37,7 @@ This example has a c`onfirm `action with a nested `execute-entity` action. After
 
 **Example:**
 
-See the full example of confirm with modal in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/actions/confirm/confirm-with-modal.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example of confirm with modal in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/actions/confirm/confirm-with-modal.jigx).
 :::
 ::::
 
@@ -79,7 +78,7 @@ actions:
 :::::
 
 :::::ExpandableHeading
-### Confirm action&#x20;
+### Confirm action
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
@@ -93,9 +92,9 @@ This example has a confirm action nested inside an `execute-entity` action. When
 
 **Example:**
 
-See the full example of confirm in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/confirm/confirm.jigx" target="_blank">GitHub</a>. &#x20;
+See the full example of confirm in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/confirm/confirm.jigx).
 
-See the helper file <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/confirm/confirmation.jigx" target="_blank">here</a>.
+See the helper file [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/confirm/confirmation.jigx).
 :::
 ::::
 

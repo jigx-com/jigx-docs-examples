@@ -6,9 +6,9 @@ createdAt: Mon Jul 04 2022 09:02:26 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Apr 30 2025 11:02:40 GMT+0000 (Coordinated Universal Time)
 ---
 
-This component uploads files, images, videos, or a combination of them. You can use saved files from your device or your camera to take pictures and videos.&#x20;
+This component uploads files, images, videos, or a combination of them. You can use saved files from your device or your camera to take pictures and videos.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9lqiAt-zCd9uHw6kf7fYT_cc-media-intro.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9lqiAt-zCd9uHw6kf7fYT_cc-media-intro.png" size="90" width="5098" height="2554" position="center" caption="Media Field Preview" alt="Media Field Preview"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9lqiAt-zCd9uHw6kf7fYT_cc-media-intro.png" size="90" position="center" caption="Media Field Preview" alt="Media Field Preview"}
 
 :::hint{type="warning"}
 - `media-field` can only be used in [jig.default](<./../../Jig Types/jig_default.md>) or inside a [form](./../form.md) component.
@@ -21,51 +21,41 @@ This component uploads files, images, videos, or a combination of them. You can 
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Core structure** |      |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `instanceId`       | Provide an id for the media-field component.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `label`            | Label is displayed as a placeholder if there is no value provided. Use this property to provide a value that will guide the user to identify what must be uploaded, such as `Upload file` or `Upload a video`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `mediaType`        | By default the value is set to `image`. The following options are available for selection:<br />1) `any` is for files of any extension such as pdf, jpeg, png, mpeg, txt, or docx. Set to `any` allows you to take a picture, record a video, select an image or video from the library, or select a document. Using `mediaType: any` is recommended when uploading multiple media files as it caters for any file type.
-2) `csv` - select CSV files.
-3) `doc` - select DOC or DOCX files.
-4) `image` - used to take a picture or select from the image library.
-5) `imageAndVideo` - take a picture, record a video or select an  image or video from the library.
-6) `pdf` - select PDF files.
-7) `plainText` - select plain text files.
-8) `ppt` - select PPT or PPTX files.
-9) `video` - record a video or upload one from the library.
-10) `xls` -  select XLS or XLSX files.<br />Configure filters to restrict media types based on your app’s requirements, for example, only allow document files DOC, PDF or plain text. See the *Restrict or filter the upload of media file types* code example below.  |
+| `instanceId`       | Provide an id for the media-field component.    |
+| `label`            | Label is displayed as a placeholder if there is no value provided. Use this property to provide a value that will guide the user to identify what must be uploaded, such as `Upload file` or `Upload a video`.    |
+| `mediaType`        | By default the value is set to `image`. The following options are available for selection:<br />1) `any` is for files of any extension such as pdf, jpeg, png, mpeg, txt, or docx. Set to `any` allows you to take a picture, record a video, select an image or video from the library, or select a document. Using `mediaType: any` is recommended when uploading multiple media files as it caters for any file type.<br />2) `csv` - select CSV files.<br />3) `doc` - select DOC or DOCX files.<br />4) `image` - used to take a picture or select from the image library.<br />5) `imageAndVideo` - take a picture, record a video or select an  image or video from the library.<br />6) `pdf` - select PDF files.<br />7) `plainText` - select plain text files.<br />8) `ppt` - select PPT or PPTX files.<br />9) `video` - record a video or upload one from the library.<br />10) `xls` -  select XLS or XLSX files.<br />Configure filters to restrict media types based on your app’s requirements, for example, only allow document files DOC, PDF or plain text. See the *Restrict or filter the upload of media file types* code example below.  |
 
-| ### Other options |                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Other options** |                                                                                              |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `intialValue`     | The `initialValue` loads and displays the configured media in the media-field when the form is initially loaded. You can use this property to preset the field with default media so that you do not have to manually select it. To change the intialValue simply tap the media-field and upload a new set of media. Using the `reset-state` action with `initialValues` does not clear the media-field, it resets the field back to it's `initialValue`.  |
-| `imageCropping`   | You can set any of the following with `imageCropping` :&#xA;`isEnabled` - allows you to crop an image.&#xA;`height` - maximum allowed is 5000px.&#xA;`width`- maximum allowed is 5000px.&#xA;`isFreeStyleCropEnabled` - when set to `true` it supports custom cropping to change the size or aspect ratio of an image.                                                                                                                                     |
-| `imageQuality`    | Image quality after compression (from 0 to 100, where 100 is the best quality). On iOS, values larger than 80 don't produce a noticeable quality increase in most images, while a value of 80 will reduce the file size by about half or less compared to a value of 100. Default: 100 (Android)/ 80 (iOS).                                                                                                                                                |
-| `isMultiple`      | Set to `true` allows for multiple file to be added. Set to `false` allows for a single file.                                                                                                                                                                                                                                                                                                                                                               |
-| `maximumFileSize` | `maximumFileSize =6 * 1024 * 1024` by default. Set the value to `none` if no size evaluations must be performed. File size format is in bytes. Applies to images and videos.                                                                                                                                                                                                                                                                               |
+| `imageCropping`   | You can set any of the following with `imageCropping` :&#xA;`isEnabled` - allows you to crop an image.&#xA;`height` - maximum allowed is 5000px.&#xA;`width`- maximum allowed is 5000px.&#xA;`isFreeStyleCropEnabled` - when set to `true` it supports custom cropping to change the size or aspect ratio of an image.      |
+| `imageQuality`    | Image quality after compression (from 0 to 100, where 100 is the best quality). On iOS, values larger than 80 don't produce a noticeable quality increase in most images, while a value of 80 will reduce the file size by about half or less compared to a value of 100. Default: 100 (Android)/ 80 (iOS).     |
+| `isMultiple`      | Set to `true` allows for multiple file to be added. Set to `false` allows for a single file.     |
+| `maximumFileSize` | `maximumFileSize =6 * 1024 * 1024` by default. Set the value to `none` if no size evaluations must be performed. File size format is in bytes. Applies to images and videos.            |
 
-| ### Actions                | ****                                                                                                                                                                                                                                                                         |
+|**Actions**                |             |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `action.open-media-picker` | Configure the [open-media-picker](./../../Actions/open-media-picker.md) action that either immediately opens the device camera, allowing you to tap the action button on the screen to take an image or video, or allow you to select media files and output selected paths. |
 
 ## Considerations
 
-- To delete a media file, click on the trash icon shown on the media thumbnail at the bottom of the selection screen.&#x20;
+- To delete a media file, click on the trash icon shown on the media thumbnail at the bottom of the selection screen.
 - When multiple files are selected the first thumbnail displays the trash icon. Tap on the image thumbnail you want to delete, the trash icon will display, tap on the icon, the image is deleted.
 - An image, video, or file can be reference for upload from a data source.
 - When using the `intialValue` property to display a media file be aware that uploading media from Android and trying to read it in iOS and vice versus is not possible as it cannot display the image due to the local-uri path. When a media-file cannot be viewed an icon with the file's title is displayed. Use [conversions ]() to base64 to store files.
-- When uploading multiple files, by default only three files are displayed in the media-field. If there are more than three files for upload the third file is overlayed with a + and the number of files, e.g. +2 and the number of items displays in the top right-hand corner of the media-field.&#x20;
+- When uploading multiple files, by default only three files are displayed in the media-field. If there are more than three files for upload the third file is overlayed with a + and the number of files, e.g. +2 and the number of items displays in the top right-hand corner of the media-field.
 
-## Examples and code snippets ****
-
+## Examples and code snippets 
 ### Upload image & use freestyle cropping
 
-This component *uploads* an image using the `mediaType: image` property. Clicking on the paperclip icon will display a menu where you can choose to upload an existing file from your device or use the camera to take a new image. After selecting the file, or loading and cropping the image to the specified size, the file is first validated, then the upload button becomes enabled.  Press the *Upload file *button at the bottom, which will trigger an action to *create* the file.&#x20;
+This component *uploads* an image using the `mediaType: image` property. Clicking on the paperclip icon will display a menu where you can choose to upload an existing file from your device or use the camera to take a new image. After selecting the file, or loading and cropping the image to the specified size, the file is first validated, then the upload button becomes enabled.  Press the *Upload file *button at the bottom, which will trigger an action to *create* the file.
 
-**Examples:
-**See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/media-field/media-field-image.jigx" target="_blank">GitHub</a>.
+**Examples:**
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/media-field/media-field-image.jigx).
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/u4A9URQ_qy9wPyxCLyr8E_cc-media-image-dd.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/u4A9URQ_qy9wPyxCLyr8E_cc-media-image-dd.png" size="90" width="3812" height="2524" position="center" caption="Image upload" alt="Image upload"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/u4A9URQ_qy9wPyxCLyr8E_cc-media-image-dd.png" size="90" position="center" caption="Image upload" alt="Image upload"}
 
 :::CodeblockTabs
 media-field (dynamic)
@@ -112,7 +102,7 @@ actions:
 
 ### Upload multiple files
 
-In this example we set the `isMultiple` property to `true` which allows for the selection of multiple files to be uploaded and `MediaType` to `any` which caters for images, videos and documents. The selected images display thumbnails at the bottom of the screen. Delete an image by pressing on the thumbnail until the trash icon appears then tap the icon and the image is deleted.&#x20;
+In this example we set the `isMultiple` property to `true` which allows for the selection of multiple files to be uploaded and `MediaType` to `any` which caters for images, videos and documents. The selected images display thumbnails at the bottom of the screen. Delete an image by pressing on the thumbnail until the trash icon appears then tap the icon and the image is deleted.
 
 ![Upload multiple images](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oaYhaIJ5ncX7ExpSidTus_cc-media-intro.png "Upload multiple images")
 
@@ -178,10 +168,10 @@ actions:
 
 In this example multiple videos are uploaded, using the `mediaType: video` and `isMultiple: true` properties.  Select videos from the library or record videos to be uploaded. Tap the + icon in the bottom left corner to add multiple videos. The `execute-enitity` action uploads the videos and the metadata configured under `data` to the required data source.
 
-**Example:
-**See the example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/media-field/media-field-video.jigx" target="_blank">GitHub</a>.
+**Example:**
+See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/media-field/media-field-video.jigx).
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LqyGHS5xG4-ZTQdtlHy6z_cc-media-field-video.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LqyGHS5xG4-ZTQdtlHy6z_cc-media-field-video.PNG" size="80" width="3822" height="2544" position="center" caption="Media-field upload videos" alt="Media-field upload videos"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LqyGHS5xG4-ZTQdtlHy6z_cc-media-field-video.PNG" size="80" position="center" caption="Media-field upload videos" alt="Media-field upload videos"}
 
 :::CodeblockTabs
 media-field-video.jigx
@@ -239,10 +229,10 @@ actions:
 
 In this example multiple images and videos are uploaded, using the `mediaType: imageAndVideo` and `isMultiple: true` properties.  Select images and videos from the library, take a picture or record videos to be uploaded. Tap the + icon in the bottom left corner to add multiple images and videos. The `execute-enitity` action uploads the videos and metadata to the required data source.
 
-**Example:
-**See the example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/media-field/media-field-image-video.jigx" target="_blank">GitHub</a>.
+**Example:**
+See the example in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/media-field/media-field-image-video.jigx).
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3eTgQfZQG7HF4PAfFPYL2_cc-media-field-imgvideo.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3eTgQfZQG7HF4PAfFPYL2_cc-media-field-imgvideo.PNG" size="66" width="2540" height="2500" position="center" caption="Media-field image and video" alt="Media-field image and video"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3eTgQfZQG7HF4PAfFPYL2_cc-media-field-imgvideo.PNG" size="66" position="center" caption="Media-field image and video" alt="Media-field image and video"}
 
 :::CodeblockTabs
 media-field-image-video.jigx
@@ -305,8 +295,8 @@ actions:
 
 In this example multiple files are uploaded for a claim, using the `mediaType: any` and `isMultiple: true` properties.  Select images, videos or documents from the library, take a picture or record videos related to the claim. Tap the + icon in the bottom left corner to add multiple files. The `execute-entity` action uploads the files and metadata to the required data source.
 
-**Example:
-**See the example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/media-field/media-field-any.jigx" target="_blank">GitHub</a>.
+**Example:**
+See the example in[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/media-field/media-field-any.jigx).
 
 ![Media-field upload any file](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jF5e6AKInY-z6OPDGebyh_cc-media-any.png "Media-field upload any file")
 
@@ -377,7 +367,7 @@ This example shows a form for a new employee, configured with a `media-field` co
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NX6I4Fub_rxtuUKR4UqHO-20250430-110158.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NX6I4Fub_rxtuUKR4UqHO-20250430-110158.gif" size="66" width="681" height="1377" position="center" caption="Filtered file types" alt="Filtered file types"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NX6I4Fub_rxtuUKR4UqHO-20250430-110158.gif" size="66" position="center" caption="Filtered file types" alt="Filtered file types"}
 :::
 ::::
 
@@ -475,7 +465,7 @@ actions:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-&#x20;In this example the REST APIs POST operator is used to store images. A Jigx function with an `inputTransform` is used to capture the image metadata. Configuring the `conversion` property ensures that the images are uploaded in the correct format to the REST service.&#x20;
+In this example the REST APIs POST operator is used to store images. A Jigx function with an `inputTransform` is used to capture the image metadata. Configuring the `conversion` property ensures that the images are uploaded in the correct format to the REST service.
 
 See the example in [Upload product images (POST)](<./../../Data Providers/REST/Create an app using REST APIs/Upload product images _POST_.md>) topic to understand how to upload files using the REST data provider.
 :::
@@ -633,7 +623,7 @@ This example shows how multiple images can be loaded in the media-field using th
 - The media-field requires images to be in local-uri format, a conversion is set in the REST GET function, converting the file from base64 to local-uri.&#x20;
 - When clicking on the `media-field` to add additional images the intial images are loaded in the field. Depending on the function used, for example POST,  if the images are not cleared or removed using the trash icon, the initial images will be uploaded as new images, creating duplicates. Using a PATCH or PUT function could avoid duplicates.
 
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uWAWLJveF_UZewQnWNtgV-20240821-135959.PNG" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uWAWLJveF_UZewQnWNtgV-20240821-135959.PNG" size="68" width="2537" height="2508" position="center" caption="Load with intial images" alt="Load with intial images"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uWAWLJveF_UZewQnWNtgV-20240821-135959.PNG" size="68" position="center" caption="Load with intial images" alt="Load with intial images"}
 
 :::CodeblockTabs
 add-customer-images.jigx
@@ -843,7 +833,7 @@ conversions:
 
 Jigx stores files as local files on the device and returns the file's URI as the default value. When saving these files to a data source, you must convert files from the local-uri to base64, data-uri, or buffer. The opposite is true when handling the files returned from the data source, you need to convert them from their saved state (base64, data-uri, or buffer) to a local-uri. In this example we upload a profile photo and convert from local-uri on the device to buffer for storage in SQL and then get the photo back from SQL and convert it from buffer to local-uri to display the photo as an avatar in a list. See [File handling]() for more information.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gAVxsX1KLX2lFjBhNFGKA_cc-hiking.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gAVxsX1KLX2lFjBhNFGKA_cc-hiking.PNG" size="80" width="2540" height="2500" position="center" caption="File conversion in SQL function" alt="File conversion in SQL function"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gAVxsX1KLX2lFjBhNFGKA_cc-hiking.PNG" size="80" position="center" caption="File conversion in SQL function" alt="File conversion in SQL function"}
 
 :::CodeblockTabs
 get-sql-function.jigx

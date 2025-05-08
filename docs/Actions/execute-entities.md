@@ -6,13 +6,13 @@ createdAt: Thu Jun 09 2022 18:22:56 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 17:44:49 GMT+0000 (Coordinated Universal Time)
 ---
 
-`Execute-entities` is used to modify, create, and delete **multiple rows** in a specific table in a database.&#x20;
+`Execute-entities` is used to modify, create, and delete **multiple rows** in a specific table in a database.
 
 :::hint{type="warning"}
-Execute-entities can't be used if you're using [Static Data]().&#x20;
+Execute-entities can't be used if you're using [Static Data]().
 :::
 
-## ****Configuration options****
+## Configuration options
 
 An `execute-entities` action can be used in multiple areas:
 
@@ -74,12 +74,12 @@ Dealing with offline remote data is fundamental to ensuring data synchronization
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZPfcvY8IXq38rfPeeZNGQ_action-exec-entitiesaction.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZPfcvY8IXq38rfPeeZNGQ_action-exec-entitiesaction.PNG" size="80" width="1240" height="2500" position="center" caption="Execute entities" alt="Execute entities"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZPfcvY8IXq38rfPeeZNGQ_action-exec-entitiesaction.PNG" size="80" position="center" caption="Execute entities" alt="Execute entities"}
 :::
 
 :::VerticalSplitItem
-**Example:
-**See the full example of execute-entities as an action in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-action.jigx" target="_blank">GitHub</a>.&#x20;
+**Example:**
+See the full example of execute-entities as an action in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-action.jigx).
 :::
 ::::
 
@@ -105,8 +105,8 @@ actions:
 ::::ExpandableHeading
 ## Execute-entities in action list
 
-**Example:
-**See the full example of execute-entities in an action list in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-actionlist.jigx" target="_blank">GitHub</a>.&#x20;
+**Example:**
+See the full example of execute-entities in an action list in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-actionlist.jigx).
 
 :::CodeblockTabs
 execute-entities-action-list
@@ -149,12 +149,12 @@ actions:
 
 Here is the example of execute-entities in onPress/onChange event in [list-item](./../Components/list/list-item.md).
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0N1UFXpdG5QljwfLgPb4P_action-eentitiespress.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0N1UFXpdG5QljwfLgPb4P_action-eentitiespress.PNG" size="80" width="2540" height="2500" position="center" caption="Execute-entities" alt="Execute-entities"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0N1UFXpdG5QljwfLgPb4P_action-eentitiespress.PNG" size="80" position="center" caption="Execute-entities" alt="Execute-entities"}
 
 **Example:**
 
-See the full example of execute-entities in action onPress in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-onPress.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example of execute-entities in action onChange in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-onChange.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example of execute-entities in action onPress in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-onPress.jigx)
+See the full example of execute-entities in action onChange in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-onChange.jigx)
 
 :::CodeblockTabs
 onPress
@@ -190,12 +190,12 @@ onChange:
 ::::ExpandableHeading
 ## Execute-entities in onRefresh/onFocus
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S3C6VXWWnlIVhWPXbXlXh_actioneenitiesonfocus.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S3C6VXWWnlIVhWPXbXlXh_actioneenitiesonfocus.PNG" size="80" width="2540" height="2500" position="center" caption="Execute-entites" alt="Execute-entites"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S3C6VXWWnlIVhWPXbXlXh_actioneenitiesonfocus.PNG" size="80" position="center" caption="Execute-entites" alt="Execute-entites"}
 
 **Example:**
 
-See the full example of execute-entities in onRefresh in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-onRefresh.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example of execute-entities in onFocus in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-onFocus.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example of execute-entities in onRefresh in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-onRefresh.jigx).
+See the full example of execute-entities in onFocus in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-onFocus.jigx).
 
 :::CodeblockTabs
 execute-entities-onRefresh
@@ -227,7 +227,7 @@ onFocus:
 ::::ExpandableHeading
 ## Deleting multiple data records using execute-entities
 
-&#x20;To delete multiple data records in a Dynamic data table use the execute entities action with an expression as shown below.
+To delete multiple data records in a Dynamic data table use the execute entities action with an expression as shown below.
 
 :::hint{type="info"}
 This code example is **not** in the jigx.samples solution in GitHub.
@@ -254,7 +254,7 @@ actions:
 
 ## Updating multiple data records using execute-entities
 
-&#x20;To update multiple data records in a Dynamic data table use the execute entities action with an expression as shown below.
+To update multiple data records in a Dynamic data table use the execute entities action with an expression as shown below.
 
 :::hint{type="info"}
 This code example is **not** in the jigx.samples solution in GitHub.

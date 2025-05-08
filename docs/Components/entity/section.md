@@ -18,7 +18,7 @@ A `component.section` can be set up with the following combinations:
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### The Entity with sections, rows, and entity fields (Display only)
@@ -31,13 +31,13 @@ Some properties are common to all components, see [Common component properties](
 :::VerticalSplitItem
 Using sections, rows, and entity fields to create relevant display sections for the information to be functional yet elegant and neatly organized.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-row-entity-field-sd.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-row-entity-field-dd.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-row-entity-field-sd)
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-row-entity-field-dd.jigx).
 
-**Datasources:
-**See the full datasource for static data in <a href="tps://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-row-entity-field-dd.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasources:**
+See the full datasource for static data in [GitHub](tps://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-row-entity-field-dd.jigx)
 :::
 ::::
 
@@ -277,13 +277,13 @@ datasources:
 :::
 
 :::VerticalSplitItem
-Similar to the above example, this has the same functionality, except that this is for adding or editing data too, and not just for display purposes.&#x20;
+Similar to the above example, this has the same functionality, except that this is for adding or editing data too, and not just for display purposes.
 
-**Examples:
-**See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-row-children-dd.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-row-children-dd.jigx).
 
-**Datasource:
-**See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasource:**
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
 :::
 ::::
 
@@ -403,15 +403,15 @@ datasources:
 :::
 ::::
 
-This is another example for display purposes only, but this time without the rows. Note the difference in the fields as they now display below each other instead of numerous entity-fields in a row.&#x20;
+This is another example for display purposes only, but this time without the rows. Note the difference in the fields as they now display below each other instead of numerous entity-fields in a row.
 
-**Examples:
-Basic **- See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd.jigx" target="_blank">GitHub</a>.&#x20;
-**Compact** - See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd-compact.jigx" target="_blank">GitHub</a>.
+**Examples:**
+**Basic**- See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd.jigx).
+**Compact** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd-compact.jigx).
 
-**Datasources:
-**See the full datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasources:**
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd.jigx).
 
 :::CodeblockTabs
 section-entity-field (static)
@@ -716,13 +716,13 @@ datasources:
 :::
 
 :::VerticalSplitItem
-This is the same as the above, again with the exception of being used in a form component and not just being for display purposes, but allowing input from the user.&#x20;
+This is the same as the above, again with the exception of being used in a form component and not just being for display purposes, but allowing input from the user.
 
-**Examples:
-**See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-children-dd.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-children-dd.jigx).
 
-**Datasources:
-**See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-children-dd.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasources:**
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-children-dd.jigx).
 :::
 ::::
 

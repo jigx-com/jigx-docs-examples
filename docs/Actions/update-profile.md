@@ -5,7 +5,7 @@ createdAt: Thu Jan 09 2025 07:34:07 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Apr 29 2025 12:52:46 GMT+0000 (Coordinated Universal Time)
 ---
 
-This action allows users to update specific information about themselves, which is displayed on the app's profile screen.&#x20;
+This action allows users to update specific information about themselves, which is displayed on the app's profile screen.
 
 This action can be configured within a jig in various ways, such as:
 &#x9;•	An action button
@@ -16,16 +16,16 @@ This action can be configured within a jig in various ways, such as:
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                     |
+|  **Core structure** |   |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `instanceId`       | Provide the action with an `instanceId`.                                                                                                 |
+| `instanceId`       | Provide the action with an `instanceId`.   |
 | `avatarUrl`        | Configure the property with an expression, datasource, or input to update the user's avatar.                                             |
 | `displayName`      | Configure the property with an expression, datasource, or input to update the user's preferred name, for example, Rob instead of Robert. |
 | `firstName`        | Configure the property with an expression, datasource, or input to update the user's last name (surname).                                |
 | `lastName`         | Configure the property with an expression, datasource or input to update the user's name.                                                |
 | `title`            | Defines the title** **for the action button, such as Update your details.                                                                |
 
-## Examples and code snippets ****
+## Examples and code snippets 
 
 :::::ExpandableHeading
 ### Update-profile button in a jig

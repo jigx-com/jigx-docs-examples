@@ -6,7 +6,7 @@ createdAt: Wed Jun 29 2022 14:06:21 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jul 24 2024 10:04:03 GMT+0000 (Coordinated Universal Time)
 ---
 
-The action can be used on a form to save data into any of the [data](https://docs.jigx.com/aI2F-data) types (check out [Forms]() to learn more about forms). `submit-form` has to be used on a <a href="https://docs.jigx.com/examples/jigdefault" target="_blank">default jig</a> with the [form](./../Components/form.md) component. A typical use case of submit-form is saving or updating the records in a table.&#x20;
+The action can be used on a form to save data into any of the [data](https://docs.jigx.com/aI2F-data) types (check out [Forms]() to learn more about forms). `submit-form` has to be used on a <a href="https://docs.jigx.com/examples/jigdefault" target="_blank">default jig</a> with the [form](./../Components/form.md) component. A typical use case of submit-form is saving or updating the records in a table.
 
 The `submit-form` action can be set up as a primary action on default jig with a form component
 
@@ -28,7 +28,7 @@ Example of submit-form to save a new employee into the dynamic-data table. The f
 
 **Example:**
 
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/submit-form/dynamic-data/submit-form.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/submit-form/dynamic-data/submit-form.jigx)
 
 :::CodeblockTabs
 submit-form.jigx
