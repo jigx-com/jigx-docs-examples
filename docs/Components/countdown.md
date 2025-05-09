@@ -12,25 +12,25 @@ The countdown component functionality counts down from a date, date/time, and ti
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" size="80" width="1240" height="2500" position="center" caption="Countdown" alt="Countdown"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown"}
 :::
 ::::
 
-## ****Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                                                                                                                                               |
+| ### Core structure |                                                             |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `expiresAt`        | Add a date, date/time or time when the countdown must expire/stop, either using:&#xA;- datasource, e.g. `=@ctx.datasources.events.date`&#xA;- expression, e.g. `=$fromMillis($toMillis($now()) + 50000)`&#xA;- string, e.g. `"2023-09-20 18:00"`, or `"2023-07-25T17:30:00+02:00"` |
 
-| ### Other options |                                                                                                                                                                                                                                              |
+| ### Other options |                                    |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `align`           | `center`, `left`, `right`, and `stretch`, with `center` as the default if the property is not specified in the YAML.                                                                                                                         |
+| `align`           | `center`, `left`, `right`, and `stretch`, with `center` as the default if the property is not specified in the YAML.                      |
 | `labels`          | `isVisible` - `true` or `false` with `true` as the default. Setting `false` will hide the countdown component.&#xA;`position` - The countdown labels of Days : Hours : Minutes: Seconds are shown at the `bottom` or `top` of the countdown. |
-| `size`            | Choose from `extra-large`, `large`, `medium`, `small`, with `large` being the default if the property is not specified in the YAML.                                                                                                          |
+| `size`            | Choose from `extra-large`, `large`, `medium`, `small`, with `large` being the default if the property is not specified in the YAML.       |
 
-| ### Actions | ****                                                                                                             |
+| ### Actions |       |
 | ----------- | ---------------------------------------------------------------------------------------------------------------- |
 | `onPress`   | Choose from the provided list of available actions, for example, use the `go-to` action to open a different jig. |
 | `onFinish`  | Choose from the provided list of available actions. For example, `go-back` action.                               |
@@ -41,7 +41,7 @@ Some properties are common to all components, see [Common component properties](
 - The `component.countdown` can only be used in a `jig.default`.
 - The countdown's separator is by default shown as a colon `:`.
 - The countdown starts when you navigate to the jig containing the `component.countdown`.
-- &#x20;Use any inputs for the countdown configuration, for example, different types of datasources, states and inputs.&#x20;
+- Use any inputs for the countdown configuration, for example, different types of datasources, states and inputs.
 - Use the `set-state` and `reset-state` actions to set and reset the countdown.
 
 ## Examples and code snippets ****
@@ -51,14 +51,14 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" size="80" width="1240" height="2500" position="center" caption="Countdown" alt="Countdown"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown"}
 :::
 
 :::VerticalSplitItem
 This example shows the `expiresAt` property value set using a static value, an expression, a static datasource, and a dynamic datasource.
 
 **Example:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-input.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-input.jigx").
 :::
 ::::
 
@@ -143,11 +143,11 @@ datasources:
 You can choose to `align` the `component.countdown` to the `left`, `right`, `center` and `stretch` it across the screen.
 
 **Example:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-align.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-align.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6_cd-alignl.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6_cd-alignl.PNG" size="80" width="1240" height="2500" position="center" caption="Aligning countdown" alt="Aligning countdown"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6_cd-alignl.PNG" size="80" position="center" caption="Aligning countdown" alt="Aligning countdown"}
 :::
 ::::
 
@@ -200,14 +200,14 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp_cd-sizel.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp_cd-sizel.PNG" size="80" width="1240" height="2500" position="center" caption="Size variations" alt="Size variations"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp_cd-sizel.PNG" size="80" position="center" caption="Size variations" alt="Size variations"}
 :::
 
 :::VerticalSplitItem
 Use the `size` property in the `component.countdown` to change the size from `extra-large` to `small`.
 
 **Example:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-sizes.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-sizes.jigx).
 :::
 ::::
 
@@ -266,10 +266,10 @@ children:
 :::
 
 :::VerticalSplitItem
-This example shows two scenarios, the first opens a different jig when the component is pressed and the second opens a URL when pressed. Use the `onPress` property to set up an action when pressing on the component.&#x20;
+This example shows two scenarios, the first opens a different jig when the component is pressed and the second opens a URL when pressed. Use the `onPress` property to set up an action when pressing on the component.
 
 **Example:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-onpress.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-onpress.jigx).
 :::
 ::::
 
@@ -372,7 +372,7 @@ children:
 In this example the `onFinish` property is used to show a modal when the `component.countdown` `expiresAt` property reaches zero.
 
 **Example:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-onfinish.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-onfinish.jigx).
 :::
 
 :::VerticalSplitItem
@@ -399,7 +399,7 @@ count-down-onFinish.jigx
 :::::
 
 :::::ExpandableHeading
-### Countdown started from another jig&#x20;
+### Countdown started from another jig
 
 ::::VerticalSplit{layout="right"}
 :::VerticalSplitItem
@@ -410,9 +410,9 @@ count-down-onFinish.jigx
 Add inputs from another jig to set the `expiresAl` property for the countdown to start.
 
 **Example:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-jig-input.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-jig-input.jigx).
 
-Supporting example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/start-countdown-support.jigx" target="_blank">GitHub</a>.
+Supporting example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/start-countdown-support.jigx).
 :::
 ::::
 

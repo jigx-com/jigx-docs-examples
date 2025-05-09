@@ -8,7 +8,7 @@ updatedAt: Wed Jul 24 2024 09:58:36 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This component displays the progress status of a task. Useful when tracking deliveries or claims. This component can only be used in a [jig.default](<./../Jig Types/jig_default.md>).&#x20;
+This component displays the progress status of a task. Useful when tracking deliveries or claims. This component can only be used in a [jig.default](<./../Jig Types/jig_default.md>).
 :::
 
 :::VerticalSplitItem
@@ -20,41 +20,39 @@ This component displays the progress status of a task. Useful when tracking deli
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure    | ****                                                                                                                                                                                                                                                                                |
+| ### Core structure    |                                                                  |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`                | Define the data to be used in the step items, you can use expressions to reference a datasource.                                                                                                                                                                                    |
+| `data`                | Define the data to be used in the step items, you can use expressions to reference a datasource.                                                                           |
 | `item`                | There is only one available option, which is [step](./stepper/step.md). The `item` property is core for the stepper component, so even if you are creating a non-expandable stepper you must configure the step component's `title` and `value` properties with an empty string: "" |
-| `completedPercentage` | Define the percentage to be displayed on the chart. Example "0.24" => 24 %. 1 represents 100% complete.                                                                                                                                                                             |
+| `completedPercentage` | Define the percentage to be displayed on the chart. Example "0.24" => 24 %. 1 represents 100% complete.                                                                       |
 
-| ### Other options |                                                                                                                                                                                                                                                                                                                     |
+| ### Other options |           |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `isExpandable`    | Set to `true` the stepper will be expandable into steps. Set to `false` the stepper is not expandable.                                                                                                                                                                                                              |
-| `style`           | The styling determines the color of the chart. There are three colors options. For example if the status is complete use `isPositive` to show the chart in green. If no style is specified the chart shows in blue.&#xA; are styling sets:<br />* `isNegative` - red
-* `isPositive` -  green
-* `isWarning` - orange |
-| `subtitle`        | The subtitle/short description of the stepper to display under the title. You can use an expression to set the subtitle.                                                                                                                                                                                            |
-| `title`           | The title for the stepper, you can use an expression to set the title.                                                                                                                                                                                                                                              |
+| `isExpandable`    | Set to `true` the stepper will be expandable into steps. Set to `false` the stepper is not expandable.        |
+| `style`           | The styling determines the color of the chart. There are three colors options. For example if the status is complete use `isPositive` to show the chart in green. If no style is specified the chart shows in blue.&#xA; are styling sets:<br />* `isNegative` - red<br /* `isPositive` -  green<br />* `isWarning` - orange |
+| `subtitle`        | The subtitle/short description of the stepper to display under the title. You can use an expression to set the subtitle.                                                                                       |
+| `title`           | The title for the stepper, you can use an expression to set the title.  |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Stepper example
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3q5XYI9fcgYMnxTTSMBaa_xqldilpo0dsaonqcdwm8ostepperiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3q5XYI9fcgYMnxTTSMBaa_xqldilpo0dsaonqcdwm8ostepperiphone13blueportrait.png" size="88" width="1570" height="2932" position="center" caption="Stepper for shipment status" alt="Stepper for shipment status"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3q5XYI9fcgYMnxTTSMBaa_xqldilpo0dsaonqcdwm8ostepperiphone13blueportrait.png" size="88" position="center" caption="Stepper for shipment status" alt="Stepper for shipment status"}
 :::
 
 :::VerticalSplitItem
 In this example, a stepper component shows that the task is half done. For completeness, use it together with the step component. After expanding the stepper, the individual steps will be shown.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stepper/static-data/stepper-example/stepper-example.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stepper/dynamic-data/stepper-example/stepper-example-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stepper/static-data/stepper-example/stepper-example.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stepper/dynamic-data/stepper-example/stepper-example-dynamic.jigx).
 
-**Datasource:
-**See the full datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/steps.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/steps-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasource**:
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/steps.jigx).
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/steps-dynamic.jigx).
 :::
 ::::
 

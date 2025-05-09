@@ -8,33 +8,29 @@ updatedAt: Wed Jul 24 2024 09:51:10 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-Using the avatar component, display a profile photo, company logo, initials, or flags as unique visual identifiers.&#x20;
+Using the avatar component, display a profile photo, company logo, initials, or flags as unique visual identifiers.
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Avatar preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jzGEzQeNzQZUvB-bk3iM__avatar.png" size="64" width="912" height="256" caption="Avatar preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jzGEzQeNzQZUvB-bk3iM__avatar.png"}
+::Image[]{alt="Avatar preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jzGEzQeNzQZUvB-bk3iM__avatar.png" size="64" caption="Avatar preview" position="center" }
 :::
 ::::
 
-## ****Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                                                                                                                               |
+| ### Core structure |                               |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `title`            | Add a title for the avatar, this is text displayed when the `uri` is empty. In the visual presentation, the `title` can be substituted by an image using the `uri` property. But the content of the text property has to be kept at least to the empty string: "") |
 
-| ### Other options | ****                                                                                              |
+| ### Other options |                                                                                |
 | ----------------- | ------------------------------------------------------------------------------------------------- |
-| `align`           | By default the avatar is aligned `left` but can be changed to:<br />* `center`
-* `left`
-* `right` |
-| `size`            | The size of the avatar can be set to:<br />* `small`
-* `regular`
-* `large`                        |
+| `align`           | By default the avatar is aligned `left` but can be changed to:<br />* `center`<br />* `left`<br />* `right` |
+| `size`            | The size of the avatar can be set to:<br />* `small`<br />* `regular`<br />* `large`                        |
 | `uri`             | Source of the image to display as the avatar.                                                     |
 
-## Examples and code snippets ****
+## Examples and code snippets 
 
 :::::ExpandableHeading
 ### Avatar as children of jig (profile picture)
@@ -47,13 +43,13 @@ Some properties are common to all components, see [Common component properties](
 :::VerticalSplitItem
 This example shows the avatar component in a jig. It can be used for employee headshots, company logos, or flags.
 
-**Examples:
-**See the full code sample using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/static-data/avatar-as-children-of-jig/avatar-picture.jigx" target="_blank">GitHub</a>.&#x20;
-See the full code sample using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/dynamic-data/avatar-as-children-of-jig/avatar-picture-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/static-data/avatar-as-children-of-jig/avatar-picture.jigx).
+See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/dynamic-data/avatar-as-children-of-jig/avatar-picture-dynamic.jigx).
 
-**Datasources:
-**See the full datasource code sample for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource code sample for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/dynamic-global.jigx" target="_blank">GitHub</a>. 
+**Datasources:**
+See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global.jigx).
+See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/dynamic-global.jigx).. 
 :::
 ::::
 
@@ -156,12 +152,13 @@ datasources:
 :::VerticalSplitItem
 As in the previous example, we use the avatar component for detail. In this case, we use the initials of the user or employee. It's useful if you don't have a picture of them.
 
-**Examples:
-**See the full code sample using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/static-data/avatar-as-children-of-jig/avatar-initials.jigx" target="_blank">GitHub</a>. See the full code sample using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/dynamic-data/avatar-as-children-of-jig/avatar-initials-dynamic.jigx" target="_blank">GitHub</a>.
+**Examples:**
+See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/static-data/avatar-as-children-of-jig/avatar-initials.jigx). 
+See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/dynamic-data/avatar-as-children-of-jig/avatar-initials-dynamic.jigx).
 
-**Datasources:
-**See the full datasource code sample for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource code sample for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/dynamic-global.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasources:**
+See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global.jigx).
+See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/dynamic-global.jigx).
 :::
 ::::
 

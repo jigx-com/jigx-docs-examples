@@ -5,7 +5,7 @@ createdAt: Wed Jan 29 2025 09:42:16 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu May 01 2025 11:33:25 GMT+0000 (Coordinated Universal Time)
 ---
 
-The segmented-control is a horizontal control consisting of segments that allows you to** **toggle between multiple options in a compact, efficient way. It is commonly used for filtering content, switching views, or selecting categories within an app.
+The segmented-control is a horizontal control consisting of segments that allows you to toggle between multiple options in a compact, efficient way. It is commonly used for filtering content, switching views, or selecting categories within an app.
 
 This component enhances user experience by providing a quick and intuitive way to navigate without needing drop-downs or separate screens. When designing a segmented control, consider:
 
@@ -16,13 +16,13 @@ This component enhances user experience by providing a quick and intuitive way t
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                           |
+| ### Core structure |                                                    |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `data`             | Specify the `title` to display in each segment and a data `value`. Repeat the `title` and `value` properties to create the number of segments in the control.  |
 |                    | `title` -  The label for the segment. You can use [Localization]() in the title.                                                                               |
 |                    | `value` - The data value for the segment that is used to display content when toggled. Can be used in an expression or to set the `initialValue`.              |
 
-| ### Other options |                                                                                                                                           |
+| ### Other options |                                       |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | `initialValue`    | Configure which segment to display as active when the jig opens. By default there are no active segments. Tap the segment to activate it. |
 | `isDisabled`      | Set to `true` disables the segmented-control (ready only mode). By default the property's value is `false`.                               |
@@ -32,14 +32,14 @@ Some properties are common to all components, see [Common component properties](
 | `=@ctx.component.state.` | value                | - State is the variable of the component.                         |
 | `=@ctx.solution.state.`  | activeItemId&#xA;now | * Global state variable that can be used throughout the solution. |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Basic segmented-control
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pHtkDiH6Gt4WbxB3RqjTn-20250210-123111.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pHtkDiH6Gt4WbxB3RqjTn-20250210-123111.gif" size="70" width="957" height="1920" position="center" caption="Segmented-controls" alt="Segmented-controls"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pHtkDiH6Gt4WbxB3RqjTn-20250210-123111.gif" size="70" position="center" caption="Segmented-controls" alt="Segmented-controls"}
 :::
 
 :::VerticalSplitItem
@@ -91,7 +91,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iP2xku1EYLHyeMpFIT6kY-20250210-123945.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iP2xku1EYLHyeMpFIT6kY-20250210-123945.gif" size="70" width="957" height="1920" position="center" caption="Segment-control with a datasource" alt="Segment-control with a datasource"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iP2xku1EYLHyeMpFIT6kY-20250210-123945.gif" size="70" position="center" caption="Segment-control with a datasource" alt="Segment-control with a datasource"}
 :::
 
 :::VerticalSplitItem
@@ -157,11 +157,11 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-tKWjaJY0548jX_q1W9VxD-20250210-124219.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-tKWjaJY0548jX_q1W9VxD-20250210-124219.png" size="70" width="1224" height="2466" position="center" caption="Disabled segmented-controls" alt="Disabled segmented-controls"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-tKWjaJY0548jX_q1W9VxD-20250210-124219.png" size="70" position="center" caption="Disabled segmented-controls" alt="Disabled segmented-controls"}
 :::
 
 :::VerticalSplitItem
-This examples displays a disabled segmented-control* - *A `segmented-control` with three segments that is set to a disabled state, preventing user interaction.
+This examples displays a disabled segmented-control - A `segmented-control` with three segments that is set to a disabled state, preventing user interaction.
 :::
 ::::
 
@@ -199,11 +199,11 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MCjH8aCTNSekHLyZVyObM-20250210-124737.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MCjH8aCTNSekHLyZVyObM-20250210-124737.gif" size="70" width="957" height="1920" position="center" caption="Segmented-controls" alt="Segmented-controls"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MCjH8aCTNSekHLyZVyObM-20250210-124737.gif" size="70" position="center" caption="Segmented-controls" alt="Segmented-controls"}
 :::
 
 :::VerticalSplitItem
-This examples displays a preselected segmented-control *- *A `segmented-control` with three segments, where the second segment is set as active by default when the jig opens. When a segment is tapped, its `value` is displayed in an `entity-field`.
+This examples displays a preselected segmented-control - A `segmented-control` with three segments, where the second segment is set as active by default when the jig opens. When a segment is tapped, its `value` is displayed in an `entity-field`.
 :::
 ::::
 
@@ -246,15 +246,15 @@ children:
 :::::
 
 :::::ExpandableHeading
-### Segmented-control using state&#x20;
+### Segmented-control using state
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example demonstrates how to configure the `entity-field` and `form` component state to display the relevant content based on the segment tapped. The value entered in the `form` when the *Email*** **segment is displayed is used to generate a PDF and share it via email.
+This example demonstrates how to configure the `entity-field` and `form` component state to display the relevant content based on the segment tapped. The value entered in the `form` when the *Email* segment is displayed is used to generate a PDF and share it via email.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bh2ApSeAzFg1cn7wN_ef4-20250331-134936.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bh2ApSeAzFg1cn7wN_ef4-20250331-134936.gif" size="66" width="536" height="1080" position="center" caption="Segmented-control using state" alt="Segmented-control using state"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bh2ApSeAzFg1cn7wN_ef4-20250331-134936.gif" size="66" position="center" caption="Segmented-control using state" alt="Segmented-control using state"}
 :::
 ::::
 

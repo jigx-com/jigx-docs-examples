@@ -26,7 +26,7 @@ The bottomSheet element slides up from the bottom of the screen to present addit
 
 By default, the home button is visible on all jigs except the Home Hub. You can hide the home button on a jig if needed by setting the `isHomeButtonVisible` property to `false`.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-eVBUFqWc5w04-omC0WlT2-20250429-101344.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-eVBUFqWc5w04-omC0WlT2-20250429-101344.png" size="66" width="2505" height="2466" position="center" caption="Visible & hidden home button" alt="Visible & hidden home button"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-eVBUFqWc5w04-omC0WlT2-20250429-101344.png" size="66" position="center" caption="Visible & hidden home button" alt="Visible & hidden home button"}
 
 :::CodeblockTabs
 YAML

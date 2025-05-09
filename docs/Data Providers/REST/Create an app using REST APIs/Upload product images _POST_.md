@@ -9,8 +9,7 @@ updatedAt: Wed Feb 12 2025 13:26:20 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-From the [view customer ](<./List _ View customers _GET_.md>) On the screen, tap the *Add Images* button, which will direct you to a screen that allows you to upload multiple images of products for each customer.&#x20;
-
+From the [view customer ](<./List _ View customers _GET_.md>) On the screen, tap the *Add Images* button, which will direct you to a screen that allows you to upload multiple images of products for each customer.
 
 :::
 
@@ -36,7 +35,7 @@ This code sample builds upon the previous [List customers (GET)](<./List custome
 
 ## Function
 
-The REST APIs POST operator is used in a Jigx function with body parameters to specify the exact columns to be created for the image record. The `inputTransform` specifies the image metadata that is sent to the REST service. This transformation process ensures that the data adheres to the expected schema or format required by the REST service for processing the request. In the `outputTransform` the id is configured to ensure that the properties are automatically returned once the image is created and the local provider's temp\_id is updated with the actual id. The customer images are stored in the REST service in base64, Jigx stores the iamges in local-uri format for display. A `conversion` is configured in the function to change the images from local-uri to base64. &#x20;
+The REST APIs POST operator is used in a Jigx function with body parameters to specify the exact columns to be created for the image record. The `inputTransform` specifies the image metadata that is sent to the REST service. This transformation process ensures that the data adheres to the expected schema or format required by the REST service for processing the request. In the `outputTransform` the id is configured to ensure that the properties are automatically returned once the image is created and the local provider's temp\_id is updated with the actual id. The customer images are stored in the REST service in base64, Jigx stores the iamges in local-uri format for display. A `conversion` is configured in the function to change the images from local-uri to base64.
 
 :::CodeblockTabs
 rest-upload-customer-images.jigx

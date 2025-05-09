@@ -11,35 +11,35 @@ The grid-item component serves as the child component whenever any grid componen
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                                                       |
+|**Core structure** |                                                                |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `size`             | Select the size that the grid-item will be displayed in, the options are `1x1`,`2x2`, `2x4`, `4x2`, `4x4`.                                                                                 |
-| `children`         | The following components can be used in the grid-item:<br />* [Custom components (Alpha)](<./../../Custom components _Alpha_.md>)&#x20;
-* [image](./../image.md)&#x20;
-* [widgets]()&#x20; |
+| `children`         | The following components can be used in the grid-item:<br />* [Custom components (Alpha)](<./../../Custom components _Alpha_.md>)
+* [image](./../image.md)
+* [widgets]() |
 
 ## Considerations
 
 - When using the `grid-item` with a `component.jig-widget`, note of the following:
-  - A `widgetId` is required if the referenced jig includes a widget configuration. This value should match the `Widget Name` specified in the referenced jig.&#x20;
+  - A `widgetId` is required if the referenced jig includes a widget configuration. This value should match the `Widget Name` specified in the referenced jig.
   - If no widget configuration exists, the widget's icon is derived from the jig's `icon` value. If none is specified, a default icon is assigned.
 
 ## Examples and code snippets 
 
 :::::ExpandableHeading
-### Grid-item with image and widget&#x20;
+### Grid-item with image and widget
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-swPsNWBEeUaZR5ulp043w-20250203-103644.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-swPsNWBEeUaZR5ulp043w-20250203-103644.png" size="66" width="1224" height="2466" position="center" caption="Grid-items" alt="Grid-items"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-swPsNWBEeUaZR5ulp043w-20250203-103644.png" size="66" position="center" caption="Grid-items" alt="Grid-items"}
 :::
 
 :::VerticalSplitItem
-In this example, three grid items are configured, each with a different size and type.&#x20;
+In this example, three grid items are configured, each with a different size and type.
 
-1. Grid-item using an image component with a size specified of 4x2. &#x20;
+1. Grid-item using an image component with a size specified of 4x2.
 2. Grid-item using a list component with a size specified as 2x2. The grid-item automatically shows the list.
-3. Grid-item using a chart widget with a size of 2x2.&#x20;
+3. Grid-item using a chart widget with a size of 2x2.
 :::
 ::::
 

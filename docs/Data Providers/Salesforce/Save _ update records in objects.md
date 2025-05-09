@@ -6,21 +6,21 @@ createdAt: Wed Jul 19 2023 12:41:59 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 15:04:19 GMT+0000 (Coordinated Universal Time)
 ---
 
-There is always a need to ensure records are kept up to date and have the latest contact details, sales figures, or case details. The Salesforce *Save* or *Update* methods allow you to update records in Salesforce directly from your mobile device.&#x20;
+There is always a need to ensure records are kept up to date and have the latest contact details, sales figures, or case details. The Salesforce *Save* or *Update* methods allow you to update records in Salesforce directly from your mobile device.
 
 ## Examples and code snippets
 
 :::hint{type="warning"}
-Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.&#x20;
+Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.
 :::
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hgBabHVNXORk0caznrtB5_sf-oppsave.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hgBabHVNXORk0caznrtB5_sf-oppsave.PNG" size="70" width="1240" height="2500" position="center" caption="Update opportunity amount" alt="Update opportunity amount"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hgBabHVNXORk0caznrtB5_sf-oppsave.PNG" size="70" position="center" caption="Update opportunity amount" alt="Update opportunity amount"}
 :::
 
 :::VerticalSplitItem
-This example shows how to update a Salesforce Opportunity record. From the list of opportunities using the `onPress` action the jig opens a form showing the opportunity name and amount. Edit the amount field. Using the Salesforce Providers `save` method the opportunity is updated.&#x20;
+This example shows how to update a Salesforce Opportunity record. From the list of opportunities using the `onPress` action the jig opens a form showing the opportunity name and amount. Edit the amount field. Using the Salesforce Providers `save` method the opportunity is updated.
 
 
 :::

@@ -8,46 +8,40 @@ updatedAt: Mon Nov 04 2024 15:07:24 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-The product item component is suitable for a list of products and should be used with the [list components](./../list.md) or the [list jig](<./../../Jig Types/jig_list.md>).&#x20;
+The product item component is suitable for a list of products and should be used with the [list components](./../list.md) or the [list jig](<./../../Jig Types/jig_list.md>).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ydImhfWqF3Ei8FmcgBdc6_product-item.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ydImhfWqF3Ei8FmcgBdc6_product-item.png" size="78" width="1125" height="754" position="center" caption="Product Item Preview" alt="Product Item Preview"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ydImhfWqF3Ei8FmcgBdc6_product-item.png" size="78" position="center" caption="Product Item Preview" alt="Product Item Preview"}
 :::
 ::::
 
-## ****Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                   |
+| **Core structure** |                                                                                              |
 | ------------------ | ------------------------------------------------------------------------------------------------------ |
 | `title`            | Add a `title` for the for the product-item. You can use an expression and datasource to set the title. |
 
-| ### Other options | ****                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|**Other options** |                |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `amountControl`   | This property has several setup options:<br />* `initialValue`
-* `minimum` - Set a minimum limit to the number that can be selected. Default is 0.
-* `maximum` - Set a maximum limit to the number that can be selected.
-* `step` - Set the increments/decrement. Default is 1.
-* `value` - Value of amount control.
-* `onChange` action - will be triggered when value is changed.
-* `onDelete` action - A trash symbol is displayed when the value is 1 or (min + 1). |
-| `discount`        | This allows you to display the discount price including the currency. Set the discount in the range 0 - 1 (1 = 100%). Discount is set in float format e.g. 0.12.                                                                                                                                                                                                                                                                                                        |
-| `image`           |  The option to add an image of your product by providing the `uri`                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `price`           | This allows you to display the base price of the product  including the currency.                                                                                                                                                                                                                                                                                                                                                                                       |
-| `style`           | `isWaitingSync` - Displays a Waiting sync indicator.                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `tag`             | The option to add a tag to your item. Add a tag title for example max amount, the tag can be configured with an expression to determine when it should be displayed.&#xA;`tag: =@ctx.current.state.amount =10 ? 'max amount':''`                                                                                                                                                                                                                                        |
+| `amountControl`   | This property has several setup options:<br />* `initialValue`<br />* `minimum` - Set a minimum limit to the number that can be selected. Default is 0.<br />* `maximum` - Set a maximum limit to the number that can be selected.<br />* `step` - Set the increments/decrement. Default is 1.<br />* `value` - Value of amount control.<br />* `onChange` action - will be triggered when value is changed.<br />* `onDelete` action - A trash symbol is displayed when the value is 1 or (min + 1). |
+| `discount`        | This allows you to display the discount price including the currency. Set the discount in the range 0 - 1 (1 = 100%). Discount is set in float format e.g. 0.12.                                                                                          |
+| `image`           |  The option to add an image of your product by providing the `uri`                                |
+| `price`           | This allows you to display the base price of the product  including the currency.                                               |
+| `style`           | `isWaitingSync` - Displays a Waiting sync indicator.    |
+| `tag`             | The option to add a tag to your item. Add a tag title for example max amount, the tag can be configured with an expression to determine when it should be displayed.&#xA;`tag: =@ctx.current.state.amount =10 ? 'max amount':''`           |
 
-| ### Actions | ****                                                                                                                                       |
+| **Actions** |                     |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `onPress`   | The action is triggered while pressing on a product item in the list. Use IntelliSense (ctrl+space) to see the list of available actions.  |
 
-| ### State Configuration  | **Key**              | **Notes**                                                                                                                                                                                 |
+|**State Configuration**  | **Key**              | **Notes**                                                                                                                                                                                 |
 | ------------------------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `=@ctx.current.state.`   | amount&#xA;          | - Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array. &#x20; |
 | `=@ctx.component.state.` | amount&#xA;          | * State is the variable of the component.                                                                                                                                                 |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now | - Global state variable that can be used throughout the solution.                                                                                                                         |
+| `=@ctx.solution.state.`  | activeItemId&#xA;now | - Global state variable that can be used throughout the solution.         |
 
 ## Examples and code snippets 
 
@@ -58,12 +52,12 @@ Some properties are common to all components, see [Common component properties](
 :::VerticalSplitItem
 In this example, a simple list containing a product-item component is shown. Each product contains a title, tag, image, and price.  The discount property calculates the price after the discount.
 
-**Examples:
-**See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/dynamic-data/product-item-tags-dynamic.jigx" target="_blank">GitHub</a>.
+**Examples:**
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/dynamic-data/product-item-tags-dynamic.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/didhCaT9vWYQmsSdxiZXT_cc-product-item-simple.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/didhCaT9vWYQmsSdxiZXT_cc-product-item-simple.PNG" size="80" width="1240" height="2500" position="center" caption="Product-item with tags" alt="Product-item with tags"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/didhCaT9vWYQmsSdxiZXT_cc-product-item-simple.PNG" size="80" position="center" caption="Product-item with tags" alt="Product-item with tags"}
 :::
 ::::
 
@@ -140,11 +134,11 @@ datasources:
 :::VerticalSplitItem
 In this example, a simple list containing a product-item component is shown. Each product contains a title, tag, image, amountControl, and price. The added advantage is that you can search the list making it suitable for a larger number of products. The discount property calculates the price after the discount.
 
-**Examples:
-**See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/dynamic-data/product-item-example/product-item-example-dynamic.jigx" target="_blank">GitHub</a>.
+**Examples:**
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/dynamic-data/product-item-example/product-item-example-dynamic.jigx).
 
-**Datasource:
-**See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/dynamic-data/product-item-example/product-item-example-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasource:**
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/dynamic-data/product-item-example/product-item-example-dynamic.jigx).
 :::
 ::::
 
@@ -216,12 +210,12 @@ datasources:
 :::VerticalSplitItem
 In this example, a list containing a product-item component is shown. Each product contains a title, image, and price. The discount property calculates the price after the discount. The summary component at the bottom shows the total of items selected in the amountControl.
 
-**Examples:
-**See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/static-data/product-item-summary-static.jigx" target="_blank">GitHub</a>.
+**Examples:**
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/static-data/product-item-summary-static.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/V6T6Og9SB2WN43MPrH8Dw_cc-productitemsummary.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/V6T6Og9SB2WN43MPrH8Dw_cc-productitemsummary.PNG" size="80" width="1240" height="2500" position="center" caption="Product-item with summary" alt="Product-item with summary"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/V6T6Og9SB2WN43MPrH8Dw_cc-productitemsummary.PNG" size="80" position="center" caption="Product-item with summary" alt="Product-item with summary"}
 :::
 ::::
 

@@ -15,7 +15,7 @@ The entity component is a container for the following components:
 ## Considerations
 
 - The `component.entity` used with the above-mentioned components is configurable on a `jig.default`.
-- &#x20;[Section](./entity/section.md) and [field-row](./entity/field-row.md) are also available under the `component.form` as its container. Here the [entity-field](./entity/entity-field.md) is replaced by the [form's](./form.md) children field.&#x20;
+- [Section](./entity/section.md) and [field-row](./entity/field-row.md) are also available under the `component.form` as its container. Here the [entity-field](./entity/entity-field.md) is replaced by the [form's](./form.md) children field.
 - When setting up a `component.entity`, either a [default jig](<./../Jig Types/jig_default.md>) or `component.form` can be used in the following combinations:
 
 1. An entity containing [section(s)](./entity/section.md) with [rows](./entity/field-row.md) and [entity-field](./entity/entity-field.md)
@@ -23,15 +23,15 @@ The entity component is a container for the following components:
 3. An entity containing [rows](./entity/field-row.md) and [entity-field](./entity/entity-field.md)
 4. An entity containing [entity fields](./entity/entity-field.md)
 
-## ****Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Other options | ****                                                                                                                                                                                                                                                                                                          |
+| ### Other options |   |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `isCompact`       | When this property is set to `true` the entity-field will cover the entire row. This compact variant does not allow usage of field-row components. By default, a label is at the top and the value below. `isCompact` will place the label on the left and the value on the right. Columns are not supported. |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Entity example
@@ -50,9 +50,9 @@ Some properties are common to all components, see [Common component properties](
 :::
 ::::
 
-**Examples:
-Basic** - See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-row-entity-example-sd.jigx" target="_blank">GitHub</a>.
-**Compact** - See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd-compact.jigx" target="_blank">GitHub</a>.
+**Examples**:
+**Basic** - See the full example using static data in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-row-entity-example-sd.jigx).
+**Compact** - See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd-compact.jigx).
 
 :::CodeblockTabs
 Basic-entity-section-row-entity-field
@@ -213,9 +213,9 @@ datasources:
 :::
 :::::
 
-## **See also**
+## See also
 
-- [entity-field](./entity/entity-field.md)&#x20;
-- [field-row](./entity/field-row.md)&#x20;
-- <a href="https://docs.jigx.com/docs/jc-section" target="_blank"></a>&#x20;
+- [entity-field](./entity/entity-field.md)
+- [field-row](./entity/field-row.md)
+- [section](https://docs.jigx.com/docs/jc-section")
 

@@ -9,4 +9,4 @@ This section provides code samples for interacting with insights specific to tre
 
 - [Get item trending](<./Graph Insights/Get item trending.md>)
 
-The entire MS Graph solution is available on <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator" target="_blank">GitHub</a>.
+The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).

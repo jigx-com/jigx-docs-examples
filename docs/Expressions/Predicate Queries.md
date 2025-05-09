@@ -6,7 +6,7 @@ createdAt: Thu Jul 27 2023 13:16:54 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jul 31 2023 09:13:59 GMT+0000 (Coordinated Universal Time)
 ---
 
-Use <a href="https://docs.jsonata.org/predicate" target="_blank">JSONata Predicate Queries</a> at any location path; the selected items can be filtered using a predicate - **\<expr>** where expr evaluates to a Boolean value. With that, you can select values from the array based on the specific type set as the predicate expression.
+Use [JSONata Predicate Queries](https://docs.jsonata.org/predicate) at any location path; the selected items can be filtered using a predicate - **\<expr>** where expr evaluates to a Boolean value. With that, you can select values from the array based on the specific type set as the predicate expression.
 
 ## Configuration
 
@@ -28,9 +28,9 @@ Be careful when using complex expressions, such as expressions that iterate one 
 :::
 
 ::::VerticalSplitItem
-In this example the expression is used to show the name of the nurse whose color is blue.&#x20;
+In this example the expression is used to show the name of the nurse whose color is blue.
 
-See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx" target="_blank">GitHub</a>.&#x20;
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx).
 
 :::CodeblockTabs
 expression.jigx

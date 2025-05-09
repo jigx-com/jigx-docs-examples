@@ -7,17 +7,17 @@ updatedAt: Wed Mar 05 2025 18:00:49 GMT+0000 (Coordinated Universal Time)
 
 ## Scenario
 
-Get a list of emails for a user in Microsoft Graph using a GET REST function and displaying the emails in a list jig. Press on an email to view the content of the email.&#x20;
+Get a list of emails for a user in Microsoft Graph using a GET REST function and displaying the emails in a list jig. Press on an email to view the content of the email.
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-**Resource links:**&#x20;
+**Resource links:**
 
-- <a href="https://learn.microsoft.com/en-us/graph/api/user-list-messages?view=graph-rest-1.0&tabs=http#http-request" target="_blank">List messages</a> - MS Graph documentation&#x20;
-- <a href="https://developer.microsoft.com/en-us/graph/graph-explorer" target="_blank">Graph Explorer</a>
-- [Configuring OAuth for MS Graph]()&#x20;
+- [List messages](https://learn.microsoft.com/en-us/graph/api/user-list-messages?view=graph-rest-1.0&tabs=http#http-request) - MS Graph documentation
+- [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
+- [Configuring OAuth for MS Graph]()
 
-**Required OAuth scope **(least to most privilege):
+**Required OAuth scope** (least to most privilege):
 
 Mail.ReadBasic
 Mail.ReadWrite
@@ -32,7 +32,7 @@ Mail.Read
 ## Examples and code snippets
 
 :::hint{type="success"}
-When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator" target="_blank">GitHub</a>.
+When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
 :::
 
 ## General
@@ -65,7 +65,7 @@ tabs:
 
 ## Functions
 
-MS Graph list messages function in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/functions/mail/get-email-messages.jigx" target="_blank">GitHub</a>.&#x20;
+MS Graph list messages function in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/functions/mail/get-email-messages.jigx).
 
 :::CodeblockTabs
 get-email-messages.jigx
@@ -106,7 +106,7 @@ continuation:
 
 ## Jigs
 
-MS Graph messages jig in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/jigs/mail" target="_blank">GitHub</a>.
+MS Graph messages jig in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/jigs/mail).
 
 :::CodeblockTabs
 list-email-messages.jigx

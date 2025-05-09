@@ -9,11 +9,11 @@ updatedAt: Wed Feb 12 2025 12:57:20 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-Add the ability to update a customer's details by pressing on the customer in the [list of customers](<./List customers _GET_.md>) which loads that specific customer's details in a form. You can edit the fields and press the *Update Customer* button.&#x20;
+Add the ability to update a customer's details by pressing on the customer in the [list of customers](<./List customers _GET_.md>) which loads that specific customer's details in a form. You can edit the fields and press the *Update Customer* button.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ag9cStah_4Z8BJQELauFL_rest-update.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ag9cStah_4Z8BJQELauFL_rest-update.PNG" size="70" width="1240" height="2500" position="center" caption="Update customer" alt="Update customer"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ag9cStah_4Z8BJQELauFL_rest-update.PNG" size="70" position="center" caption="Update customer" alt="Update customer"}
 :::
 ::::
 
@@ -34,7 +34,7 @@ This code sample builds upon the previous [List customers (GET)](<./List custome
 
 ## Function
 
-The REST APIs PUT operator is used in a Jigx function with body parameters to specify the exact columns to be updated for the record. The `inputTransform` specifies how the data should be structured or formatted when being sent to the REST service. This transformation process ensures that the data adheres to the expected schema or format required by the REST service for processing the request.&#x20;
+The REST APIs PUT operator is used in a Jigx function with body parameters to specify the exact columns to be updated for the record. The `inputTransform` specifies how the data should be structured or formatted when being sent to the REST service. This transformation process ensures that the data adheres to the expected schema or format required by the REST service for processing the request.
 
 :::CodeblockTabs
 rest-update-customer.jigx
@@ -162,11 +162,11 @@ action:
 
 ## Jig (screen)
 
-- On the list of customers jig configure an `on-press` action in the `swipable: left` event that adds the *View* button to the list and links to the update-customer jig.&#x20;
+- On the list of customers jig configure an `on-press` action in the `swipable: left` event that adds the *View* button to the list and links to the update-customer jig.
 - Add a form component to load the customer details with each field's instanceId containing the same name as the body parameters in the function.
 - For the state field configure a dropdrown with an expression to get the list of states for selection.
 - Configure an `initialValue` property for each field in the form using an expression to return the customer data for that field.
-- Add an `execute-entity` action to call the function that will update the customer record in the local table (using `method: update`) and in the REST service (`function: rest-update-customer`). Use an expression to specify the value for each of the function's parameters. Note that the customer id already exists and the expression for `id:` uses the `inputs` again to specifiy the customer record that must be updated.&#x20;
+- Add an `execute-entity` action to call the function that will update the customer record in the local table (using `method: update`) and in the REST service (`function: rest-update-customer`). Use an expression to specify the value for each of the function's parameters. Note that the customer id already exists and the expression for `id:` uses the `inputs` again to specifiy the customer record that must be updated.
 
 :::CodeblockTabs
 update-customer.jigx

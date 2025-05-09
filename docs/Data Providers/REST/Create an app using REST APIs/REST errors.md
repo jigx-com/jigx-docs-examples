@@ -11,13 +11,13 @@ updatedAt: Wed Feb 12 2025 13:28:59 GMT+0000 (Coordinated Universal Time)
 :::VerticalSplitItem
 When trying to view a customer and their details or create a new customer in the app, the app can fail to retrieve or create the required data, and various errors are returned. In this example, we add error handling to the REST endpoint function to cater for the following errors:
 
-- 401 Unauthorized&#x20;
-- 403 Forbidden&#x20;
+- 401 Unauthorized
+- 403 Forbidden
 - Unexpected error
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif" size="80" width="652" height="1304" position="center" caption="REST Error handling" alt="REST Error handling"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif" size="80" position="center" caption="REST Error handling" alt="REST Error handling"}
 :::
 ::::
 
@@ -491,10 +491,10 @@ options:
 
 ## Jigs (screens)
 
-There are a number of options available to process items that are in an error state.&#x20;
+There are a number of options available to process items that are in an error state.
 
-1. *Use the ***commandQueue**. Items that return an error from the REST endpoint will remain on the commandQueue and are not automatically processed by the queue. You must configure an action to either retry the item or delete the item from the queue. The retry executes the REST call again.
-2. *Use the ***customer\_error*** table* configured in the function. Use the data from the table in a jig to allow app users to resolve the error or delete the item in error.
+1. Use the ***commandQueue**. Items that return an error from the REST endpoint will remain on the commandQueue and are not automatically processed by the queue. You must configure an action to either retry the item or delete the item from the queue. The retry executes the REST call again.
+2. Use the ***customer\_error*** table configured in the function. Use the data from the table in a jig to allow app users to resolve the error or delete the item in error.
 
 ### Use the commandQueue
 
@@ -672,7 +672,7 @@ actions:
 
 ### Use the customers\_error table
 
-Create a list jig to list the records in the customers\_error table. Provide detail of the error in the `title` and `subtitle` properties.&#x20;
+Create a list jig to list the records in the customers\_error table. Provide detail of the error in the `title` and `subtitle` properties.
 
 :::CodeblockTabs
 list-customer-errors.jigx

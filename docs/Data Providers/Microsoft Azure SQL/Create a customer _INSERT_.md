@@ -7,18 +7,18 @@ updatedAt: Tue Nov 05 2024 11:36:55 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="warning"}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information. &#x20;
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information.
 :::
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 ## Scenario
 
-This example uses a default jig with a form that executes an SQL command to create a new customer record.&#x20;
+This example uses a default jig with a form that executes an SQL command to create a new customer record.
 
 ## **Resources**
 
-- Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<./Database Scripts.md>).&#x20;
+- Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<./Database Scripts.md>).
 - [Configuring the SQL Connection]().
 - This sample depends on [List customers (SELECT)](<./List customers _SELECT_.md>).
 
@@ -34,7 +34,7 @@ The Azure SQL Docs solution is on <a href="https://github.com/jigx-com/jigx-samp
 
 ## How it works&#x20;
 
-- The `execute-entity` action allows you to specify the function parameters and their values, as well as the data properties for the SQLite table. You have more granular control over the values being saved and can include expressions.&#x20;
+- The `execute-entity` action allows you to specify the function parameters and their values, as well as the data properties for the SQLite table. You have more granular control over the values being saved and can include expressions.
 - The example below uses an `execute-entity` action and maps both the `parameters` of the jig function and the SQLite data in the action's configuration.
 - To improve the user experience, data displayed after it has been created or updated should be updated in the local SQLite database and the backend system in the same action.&#x20;
 - If the data is only submitted to the backend system, it must be synced back to the device before the local tables are updated, and the information can be displayed. This can cause a significant lag and latency in the user's experience. 
@@ -203,9 +203,9 @@ parameters:
 
 ### Modify the list customers jig
 
-- The listCustomers.jigx file must be modified to include a jig-level action, allowing a new customer to be added.&#x20;
+- The listCustomers.jigx file must be modified to include a jig-level action, allowing a new customer to be added.
 - When pressing the **Add customer** action button at the bottom of the list customers jig, Jigx will navigate to the newCustomer jig.
-- A new** customer id **is created and used as a parameter in the `GoTo` action. The `customerId` parameter is passed to the newCustomer jig. The generated id is used as the unique identifier when creating both the SQLite record and the new record in Azure SQL in the newCustomer jig .
+- A new** customer id **is created and used as a parameter in the `GoTo` action. The `customerId` parameter is passed to the newCustomer jig. The generated id is used as the unique identifier when creating both the SQLite record and the new record in Azure SQL in the newCustomer jig.
 - The id is used across the SQlite and Azure SQL tables to ensure that the record in the local SQLite customer table and Azure SQL customer table are in sync and have the same value. 
 
 :::CodeblockTabs
@@ -312,7 +312,7 @@ actions:
 ### The new customer jig
 
 - Use an `execute- entity` action to submit the values of the components to the SQL stored procedure and save the new customer to the local SQLite database.
-- To save the values of the components on a form, the form is unaware of the saved state, and **isDiscardChangesAlertEnabled** needs to be set to `false` to avoid seeing the dialog even when data has been saved.&#x20;
+- To save the values of the components on a form, the form is unaware of the saved state, and **isDiscardChangesAlertEnabled** needs to be set to `false` to avoid seeing the dialog even when data has been saved.
 
 :::CodeblockTabs
 newCustomer.jigx

@@ -5,9 +5,9 @@ createdAt: Thu Jun 13 2024 08:00:48 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jul 10 2024 08:58:09 GMT+0000 (Coordinated Universal Time)
 ---
 
-Use the JSONata map function to sync multiple entities dynamically. When building a solution, the number of entities to sync and the parameters for each are not always known; for example, when syncing the attachments, files, or documents for a message, there can be zero, one, or more. It is necessary to dynamically specify a list of the entities, functions, and function parameters to return from the database using an expression.&#x20;
+Use the JSONata map function to sync multiple entities dynamically. When building a solution, the number of entities to sync and the parameters for each are not always known; for example, when syncing the attachments, files, or documents for a message, there can be zero, one, or more. It is necessary to dynamically specify a list of the entities, functions, and function parameters to return from the database using an expression.
 
-- The **basic expression **structure is `=$.map(array, function)`.
+- The **basic expression** structure is `=$.map(array, function)`.
   - Specify the array you will consult, i.e., a datasource `@ctx.datasources.{datasourceName}`.
   - For the function, specify `($item)`.
   - Example of the basic structure `=$map(@ctx.datasources.{datasourceName}, function($item))`.

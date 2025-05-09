@@ -22,7 +22,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Wtp8QVXWi56sJFxTHuOb9_phone-valid.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Wtp8QVXWi56sJFxTHuOb9_phone-valid.PNG" size="84" width="1074" height="584" position="center" caption="Valid phone number" alt="Valid phone number"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Wtp8QVXWi56sJFxTHuOb9_phone-valid.PNG" size="84" position="center" caption="Valid phone number" alt="Valid phone number"}
 :::
 
 :::VerticalSplitItem
@@ -43,7 +43,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 :::::ExpandableHeading
 ### Email validation
 
-**Expected result: **name\@example.com
+**Expected result:** name\@example.com
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -93,7 +93,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 :::::ExpandableHeading
 ### ZIP/Postal code (US) validation
 
-**Expected result:** 5-digit codes, e.g. 10036.&#x20;
+**Expected result:** 5-digit codes, e.g. 10036.
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -466,7 +466,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 :::::
 
 :::::ExpandableHeading
-### validation of numbers and Spaces only&#x20;
+### validation of numbers and Spaces only
 
 **Expected result:** 56575 76 6
 

@@ -10,10 +10,10 @@ Using forms in mobile apps enables users to effortlessly input and submit inform
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This component contains the following components:&#x20;
+This component contains the following components:
 
 1. [avatar-field](./form/avatar-field.md)
-2. [choice-field](./form/choice-field.md)&#x20;
+2. [choice-field](./form/choice-field.md)
 3. [text-field](./form/text-field.md)
 4. [media-field](./form/media-field.md)
 5. [email-field](./form/email-field.md)
@@ -24,11 +24,11 @@ This component contains the following components:&#x20;
 10. [signature-field](./form/signature-field.md)
 11. [section](./entity/section.md)
 
-These extra components allow for the easy input and collection of data. Using forms, records in a database can be created, updated, or deleted based on user input information.&#x20;
+These extra components allow for the easy input and collection of data. Using forms, records in a database can be created, updated, or deleted based on user input information.
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Form Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CmFxqLjk6bGCPvquRfLsB_form.png" size="76" width="1570" height="1954" caption="Form Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CmFxqLjk6bGCPvquRfLsB_form.png"}
+::Image[]{alt="Form Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CmFxqLjk6bGCPvquRfLsB_form.png" size="76" caption="Form Preview" position="center" }
 :::
 ::::
 
@@ -36,14 +36,14 @@ These extra components allow for the easy input and collection of data. Using fo
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ### Core structure |                                                            |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `children`         | Define the content of the form. The following components can be used in the form:&#xA;- [avatar-field](./form/avatar-field.md)&#xA;- [choice-field](./form/choice-field.md) &#xA;- [checkbox](./form/checkbox.md)&#xA;- [date-picker](./form/date-picker.md)&#xA;- [dropdown](./form/dropdown.md)&#xA;- [email-field](./form/email-field.md)&#xA;- [field-row](./entity/field-row.md)&#xA;- [media-field](./form/media-field.md)&#xA;- [number-field](./form/number-field.md)&#xA;- [section](./entity/section.md)&#xA;- [signature-field](./form/signature-field.md)&#xA;- [text-field](./form/text-field.md) |
-| `instanceId`       | The unique identifier for the form.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `instanceId`       | The unique identifier for the form.                         |
 
-| ### Other options              | ****                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ### Other options              |    |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `isDiscardChangesAlertEnabled` | When set to `true` the modal window preventing accidental deletion of your data without saving will pop up. &#xA;                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `isDiscardChangesAlertEnabled` | When set to `true` the modal window preventing accidental deletion of your data without saving will pop up. &#xA;     |
 | `initialValues`                | Specify the data to be used as `initialValues` for fields in the form. Using the `reset-state` action with `initialValues` does not clear the form, it resets the form back to it's `initialValue`. &#xA;***Tip***: For `initialValues` on a [form]() to function&#xA; `isDocument: true` in the datasource, this way you don't have to set it up in the individual components. It is set up in one place and the form will match the components to the column names of the datasource. See the example below for Form with initialValue. |
 
 | ### State Configuration  | **Key**                                   | **Notes**                                                         |
@@ -51,7 +51,7 @@ Some properties are common to all components, see [Common component properties](
 | `=@ctx.component.state.` | data&#xA;isValid&#xA;isDirty&#xA;response | - State is the variable of the component.                         |
 | `=@ctx.solution.state.`  | activeItemId&#xA;now                      | * Global state variable that can be used throughout the solution. |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Form for creating a record
@@ -66,7 +66,7 @@ Here is an example of a form for creating records in the database. See [submit-f
 
 **Examples:**
 
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/form/simple-form-submit.jigx" target="_blank">GitHub</a>.
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/form/simple-form-submit.jigx).
 :::
 ::::
 
@@ -108,13 +108,13 @@ children:
 :::
 
 :::VerticalSplitItem
-This example shows how a form is used to update an existing records in the database. Notice that a new variable called **initialValue: **has been added, we load the data that we have stored in the database and then change it. See the [execute-entity](./../Actions/execute-entity.md) action for information on how to update a record.
+This example shows how a form is used to update an existing records in the database. Notice that a new variable called **initialValue:** has been added, we load the data that we have stored in the database and then change it. See the [execute-entity](./../Actions/execute-entity.md) action for information on how to update a record.
 
-**Examples:
-**See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/form/update-form-submit.jigx" target="_blank">GitHub</a>. 
+**Examples**:
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/form/update-form-submit.jigx). 
 
-**Datasource:
-**See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/form/update-form-submit.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasource**:
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/form/update-form-submit.jigx).
 :::
 ::::
 
@@ -206,7 +206,7 @@ This example shows how you can format your form with sections and field-rows to 
 
 **Examples:**
 
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/form/form-with-section.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/form/form-with-section.jigx).
 :::
 ::::
 
@@ -273,8 +273,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-In this example, you tap on a contact in the contact-list and the new-contact form opens with the contact's details loaded. For `initialValues` on a [form]() to function the
-&#x20;`isDocument: true` in the datasource is set, this way you don't have to set it up in the individual components. It is set up in one place under `InitialValue` and the form will match the components to the column names of the datasource.&#x20;
+In this example, you tap on a contact in the contact-list and the new-contact form opens with the contact's details loaded. For `initialValues` on a [form]() to function the `isDocument: true` in the datasource is set, this way you don't have to set it up in the individual components. It is set up in one place under `InitialValue` and the form will match the components to the column names of the datasource.
 :::
 
 :::VerticalSplitItem

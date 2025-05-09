@@ -14,15 +14,15 @@ You can create a file in OneDrive from a solution in the Jigx App. Use the [medi
 
 The following properties are required in the YAML:
 
-- `file` - reference the physical file&#x20;
-- `fileName` - add the file name with the extension, e.g. Invoice.pdf&#x20;
+- `file` - reference the physical file
+- `fileName` - add the file name with the extension, e.g. Invoice.pdf
 - `entity` - file path in OneDrive
 - `tokenType` - OAuth token credentials name
 - `method: create`
 
 ## Component
 
-To create a file use the `media-field` component to select the file. Use the `image`, or `any` property in the `media-field` component to specify the `mediaType`.&#x20;
+To create a file use the `media-field` component to select the file. Use the `image`, or `any` property in the `media-field` component to specify the `mediaType`.
 
 ## Considerations
 

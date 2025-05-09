@@ -6,9 +6,9 @@ createdAt: Thu Jun 09 2022 18:34:02 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 15:07:00 GMT+0000 (Coordinated Universal Time)
 ---
 
-Static lists are typically used when data needs to be accessed but hardly ever manipulated, handled, or updated. Within Jigx , we have ensured that static data is easily specified but also accessed with the same ease. Static data can be configured as a direct data source on a jig or as a global datasource that can be accessed or referenced across various jigs or components. This data source, whether configured locally or globally can be&#x20;
+Static lists are typically used when data needs to be accessed but hardly ever manipulated, handled, or updated. Within Jigx , we have ensured that static data is easily specified but also accessed with the same ease. Static data can be configured as a direct data source on a jig or as a global datasource that can be accessed or referenced across various jigs or components.
 
-## ****Configuration options****
+## Configuration options
 
 When setting up a `static datasource` component within a Jig you have the option to use them in various ways:
 
@@ -19,25 +19,25 @@ When setting up a `static datasource` component within a Jig you have the option
 You also have the option to set up static data directly in the relevant fields. This scenario is however not discussed here as this section focuses only on the application of the static data component itself. Please refer to the guide on working with [Static Data]() for more information on the alternative application.
 :::
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 View common uses for the static datasource below and how you can configure the same in your solution (links to examples are available in the relevant examples).
 
-We've gone ahead and expanded the first one for you. Feel free to view any others you'd like to inspect.&#x20;
+We've gone ahead and expanded the first one for you. Feel free to view any others you'd like to inspect.
 
 :::::ExpandableHeading
 ### Static datasource configured *locally* on a jig
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6d2E3jkkz-3oaCcClqGp7_xdair6ef8yljgyggr4vgnptpye1yvizw6xnzc8rdoimg1086iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6d2E3jkkz-3oaCcClqGp7_xdair6ef8yljgyggr4vgnptpye1yvizw6xnzc8rdoimg1086iphone13blueportrait.png" size="84" width="1570" height="2932" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6d2E3jkkz-3oaCcClqGp7_xdair6ef8yljgyggr4vgnptpye1yvizw6xnzc8rdoimg1086iphone13blueportrait.png" size="84"  position="center"}
 :::
 
 :::VerticalSplitItem
 Below is an example of static data that has been configured locally.
 
-**Examples:
-**See the full example using static data on <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-local.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the full example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-local.jigx")
 :::
 ::::
 
@@ -98,15 +98,15 @@ item:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pZ0rUZjo9pPWfByWfKXN9_skdjnmnz8jhe2zi98rf8orpbfc2v0eb20juoqcdpbhimg1087iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pZ0rUZjo9pPWfByWfKXN9_skdjnmnz8jhe2zi98rf8orpbfc2v0eb20juoqcdpbhimg1087iphone13blueportrait.png" size="82" width="1570" height="2932" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pZ0rUZjo9pPWfByWfKXN9_skdjnmnz8jhe2zi98rf8orpbfc2v0eb20juoqcdpbhimg1087iphone13blueportrait.png"  size="82" position="center"}
 :::
 
 :::VerticalSplitItem
 Below is an example of static data that has been configured globally along with the example of where this is being referenced.
 
-**Examples:
-**See the full example of static datasource in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example of the list using this global static datasource in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-global.jigx" target="_blank">GitHub</a>.
+**Examples**:
+See the full example of static datasource in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx)
+See the full example of the list using this global static datasource in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-global.jigx).
 
 
 :::
@@ -171,9 +171,8 @@ You can also create static data right inside your component or as an `initialVal
 :::
 
 ::::VerticalSplitItem
-In this example static data is used to create the data need for selection in the `component.dropdown`.&#x20;
-
-See the full code sample on <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-static-data/static-datasource/static-list.jigx" target="_blank">Github</a>.
+In this example static data is used to create the data need for selection in the `component.dropdown`.
+See the full code sample on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-static-data/static-datasource/static-list.jigx).
 
 :::CodeblockTabs
 dropdown.jigx
@@ -254,7 +253,7 @@ item:
 :::::
 ::::::
 
-## **See also**
+## See also
 
-- <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/datasources" target="_blank">Related examples (Github)</a>
+- [Related Items (GitHub)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/datasources)
 

@@ -11,9 +11,9 @@ Some properties are common to all Jigx components. See the details below:
 ::::ExpandableHeading
 ### When
 
-`when` - this property is used at two levels, in components to show/hide any component conditionally and in actions to execute/not execute an action.&#x20;
+`when` - this property is used at two levels, in components to show/hide any component conditionally and in actions to execute/not execute an action.
 
-Below are the settings to use with the `when` property:&#x20;
+Below are the settings to use with the `when` property:
 
 - `when: true`
 - `when: false`
@@ -21,9 +21,9 @@ Below are the settings to use with the `when` property:&#x20;
 
 **Example and code snippet**
 
-The example below demonstrates how the `when` property is used at a component level to display a `component.text-field` (Note requirements) only when the `component.checkbox` (Special Diet) is selected.&#x20;
+The example below demonstrates how the `when` property is used at a component level to display a `component.text-field` (Note requirements) only when the `component.checkbox` (Special Diet) is selected.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Xic9Zc-dcHhgZJ_-_qata-20250225-095457.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Xic9Zc-dcHhgZJ_-_qata-20250225-095457.png" size="62" width="2476" height="2466" position="center" caption="When-Display a field  " alt="When-Display a field  "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Xic9Zc-dcHhgZJ_-_qata-20250225-095457.png" size="62" position="center" caption="When-Display a field  " alt="When-Display a field  "}
 
 :::CodeblockTabs
 When.jigx
@@ -121,10 +121,10 @@ datasources:
 ::::ExpandableHeading
 ### Colors
 
-**Applying colors based on specific conditions: **Colors can be configured based on specific conditions. For example, a payment amount exceeding a certain threshold can be displayed in red. However, conditional color configurations are only available in areas that support conditions, such as list items. In contrast, direct color options are more widely supported, for example, `lists` allow both conditional and direct setups, whereas `interactive-images` only support direct options. Additionally, certain areas restrict the available color choices, while UI elements support the predefined set of fourteen colors.
+**Applying colors based on specific conditions**: Colors can be configured based on specific conditions. For example, a payment amount exceeding a certain threshold can be displayed in red. However, conditional color configurations are only available in areas that support conditions, such as list items. In contrast, direct color options are more widely supported, for example, `lists` allow both conditional and direct setups, whereas `interactive-images` only support direct options. Additionally, certain areas restrict the available color choices, while UI elements support the predefined set of fourteen colors.
 
-- When configuring the `color` property, select the `color condition`** **option.&#x20;
-- Under the `when`** **property, add an expression that defines the condition under which the specified color should be applied.
+- When configuring the `color` property, select the `color condition` option.
+- Under the `when` property, add an expression that defines the condition under which the specified color should be applied.
 
 :::CodeblockTabs
 color-condition

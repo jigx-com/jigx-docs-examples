@@ -9,7 +9,7 @@ updatedAt: Wed Oct 23 2024 11:46:08 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-From the list of customers, swipe left and select the *View* button. The customer's details are shown on a screen with the customer's location at the top, the contact person's details, and then a list of the customer's products with images.&#x20;
+From the list of customers, swipe left and select the *View* button. The customer's details are shown on a screen with the customer's location at the top, the contact person's details, and then a list of the customer's products with images.
 :::
 
 :::VerticalSplitItem
@@ -34,7 +34,7 @@ This code sample builds upon the previous [List customers (GET)](<./List custome
 
 ## Function
 
-Specify the REST API url and operation (method), parameters to include authentication in the header and in the `outputTransform` define the image metadata properties to be returned. The customer images are stored in the REST service in base64, Jigx requires the logo in local-uri format for display. A `conversion` is configured in the function to change the base64 to local-uri.  &#x20;
+Specify the REST API url and operation (method), parameters to include authentication in the header and in the `outputTransform` define the image metadata properties to be returned. The customer images are stored in the REST service in base64, Jigx requires the logo in local-uri format for display. A `conversion` is configured in the function to change the base64 to local-uri.
 
 :::CodeblockTabs
 rest-get-customer-images.jigx
@@ -104,12 +104,12 @@ action:
 
 ## Jig (screen)
 
-- Use a list jig type to configure a list of customers.&#x20;
+- Use a list jig type to configure a list of customers.
 - Use a list jig type to configure a list of customer product images.
 - Use a default jig type to configure the customer details view.
 - Since the data is already synced to the local Sqlite data provider, the jig's datasource is configured with a query to provide the data for use in the lists and view.
 - &#x20;Create a `composite` jig and combine the default and image list jigs. In the header use a `location` component and an expression that uses `inputs` from the default jig's `jsonProperties` to show the address, city, state, and zip code of the customer.
-- In the datasource query of the view-customer jig use `jsonProperties` to return the complex structure for address and phone.&#x20;
+- In the datasource query of the view-customer jig use `jsonProperties` to return the complex structure for address and phone.
 - Configure a `queryParameter` using `inputs` to return the customer details by id in the datasource for the view-customer jig.
 - Expressions are used to reference the exact data property required in each component of the view-customer jig.
 

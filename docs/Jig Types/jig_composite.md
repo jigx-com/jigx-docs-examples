@@ -8,15 +8,15 @@ updatedAt: Tue Apr 29 2025 10:38:35 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-The composite jig is a jig made up of several parts or elements. In this case, a jig is made up of several jigs. This jig allows you to display multiple jigs on one list where you would otherwise be unable to combine the functionality in the same way.&#x20;
+The composite jig is a jig made up of several parts or elements. In this case, a jig is made up of several jigs. This jig allows you to display multiple jigs on one list where you would otherwise be unable to combine the functionality in the same way.
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Jig Composite Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ_xkWBnn-yCDc_composite.png" size="90" width="1570" height="1954" caption="Jig Composite Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ_xkWBnn-yCDc_composite.png"}
+::Image[]{alt="Jig Composite Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ_xkWBnn-yCDc_composite.png" size="90" caption="Jig Composite Preview" position="center"}
 :::
 ::::
 
-## ****Configuration options
+## Configuration options
 
 Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
 
@@ -24,17 +24,17 @@ Some properties are common to all jig types, see [Common jig type properties](do
 | ------------------ | ---------------------------------------------------------------------------------------------- |
 | `jigId`            | The core structure includes: `jigId` 2x or more (depends on how many jigs you are connecting). |
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Other options** |                                                                                                                                                                                              |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | The icon will be displayed on the [widget]() of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See [Jigx icons]() for information on worknig with icons.                                                                                                                                                                                                 |
+| `icon`            | The icon will be displayed on the [widget]() of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See [Jigx icons]() for information on worknig with icons.                                                                                              |
 | `inputs`          | If you are setting up a `jig.composite` where jigs rely on input to display or otherwise interact with very specific data, you'll need to use `inputs`. Here you set the data you would like to transfer to the composite jig. There are 2 options to make data available for input:<br />1) Set them in `output` inside the jig .
 2) Set them as a `global` variable by using `set-state action`. |
-| `isTitleHidden`   | The boolean value allows you to hide the title of your jig in the composite jig. Even if the jig's title is set to `true` , because the title is a mandatory property.                                                                                                                                                                                                                             |
-| `when`            | The ability to include or exclude a jig for display on a composite jig. If set to `true` the jig is included, if set to `false` the jig will not appear on the composite jig. Dynamically set this property by using expressions.                                                                                                                                                                  |
+| `isTitleHidden`   | The boolean value allows you to hide the title of your jig in the composite jig. Even if the jig's title is set to `true` , because the title is a mandatory property.                      |
+| `when`            | The ability to include or exclude a jig for display on a composite jig. If set to `true` the jig is included, if set to `false` the jig will not appear on the composite jig. Dynamically set this property by using expressions.                                                               |
 
 ## Considerations
 
-- When calling a jig in a composite jig for example, `jigId: personal-details`, you can add an `instanceId` on the composite jig. This allows you to interact with the referenced jig, such as saving or calling a control on the referenced jig.   If no `instanceId` exists, IntelliSense cannot show it in the composite jig configuration.&#x20;
+- When calling a jig in a composite jig for example, `jigId: personal-details`, you can add an `instanceId` on the composite jig. This allows you to interact with the referenced jig, such as saving or calling a control on the referenced jig.   If no `instanceId` exists, IntelliSense cannot show it in the composite jig configuration.
 
 :::CodeblockTabs
 composite.jigx
@@ -95,7 +95,7 @@ actions:
 ## Examples and code snippets 
 
 :::hint{type="success"}
-The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples" target="_blank">GitHub,</a> and follow the instructions in [Setting up your solution](docId:1gfew7GRPvkfxon-TsymP).
+The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples) and follow the instructions in [Setting up your solution](docId:1gfew7GRPvkfxon-TsymP).
 :::
 
 :::::ExpandableHeading
@@ -107,7 +107,7 @@ The code below is an extract from the full *jigx-samples* solution. The code sni
 :::
 
 :::VerticalSplitItem
-This example shows the simplest way in which a `Composite Jig` can be set up - referencing two separate jigs and displaying them on one without having to filter the content.&#x20;
+This example shows the simplest way in which a `Composite Jig` can be set up - referencing two separate jigs and displaying them on one without having to filter the content.
 
 **Examples:**
 

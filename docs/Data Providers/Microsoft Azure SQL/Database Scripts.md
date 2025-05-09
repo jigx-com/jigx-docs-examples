@@ -7,7 +7,7 @@ updatedAt: Tue May 21 2024 10:42:03 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="warning"}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information. &#x20;
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information.
 :::
 
 The following Azure SQL scripts create the customer table and store the procedures used in the examples in this section. These scripts should be executed against an existing database in your Azure SQL environment.
@@ -70,7 +70,7 @@ VALUES
 
 ## Stored procedure for selecting a list of customers
 
-The following script creates a store procedure that will return all the customers in the customer table. &#x20;
+The following script creates a store procedure that will return all the customers in the customer table.
 
 :::CodeblockTabs
 sp\_GetAllCustomers.sql
@@ -99,7 +99,7 @@ END;
 
 ## Stored procedure for selecting one customer&#x20;
 
-The following script will create a store procedure to return a single customer record for the provided customer id.&#x20;
+The following script will create a store procedure to return a single customer record for the provided customer id.
 
 :::CodeblockTabs
 sp\_GetCustomerById.sql
@@ -131,7 +131,7 @@ END;
 
 ## Stored procedure for creating or updating a customer record&#x20;
 
-The following script creates a stored procedure that will add a new customer record if the customer id does not exist. It will update an existing customer if the id does exist.&#x20;
+The following script creates a stored procedure that will add a new customer record if the customer id does not exist. It will update an existing customer if the id does exist.
 
 :::CodeblockTabs
 sp\_InsertOrUpdateCustomer.sql

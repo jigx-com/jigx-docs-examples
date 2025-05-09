@@ -5,16 +5,16 @@ createdAt: Tue Dec 03 2024 11:44:14 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Mar 21 2025 09:20:11 GMT+0000 (Coordinated Universal Time)
 ---
 
-&#x20;The grid component enables you to create grid layouts in your app, organizing content into rows and columns for a visually consistent and flexible interface. It helps align elements proportionally, ensuring a structured design. The grid is ideal for creating galleries to display photos or product images, dashboards, menus, and product lists. This component is very similar to the [jig.grid](<./../Jig Types/jig_grid.md>)  the only exception is that this component can be used in a [jig.default](<./../Jig Types/jig_default.md>) with other components.
+The grid component enables you to create grid layouts in your app, organizing content into rows and columns for a visually consistent and flexible interface. It helps align elements proportionally, ensuring a structured design. The grid is ideal for creating galleries to display photos or product images, dashboards, menus, and product lists. This component is very similar to the [jig.grid](<./../Jig Types/jig_grid.md>)  the only exception is that this component can be used in a [jig.default](<./../Jig Types/jig_default.md>) with other components.
 
-## Configuration options****
+## Configuration options
 
 The grid component has two available configuration options:
 
 1. **Auto Grid** - used to create a grid layout from a datasource. This is similar in configuration to a [jig.list](<./../Jig Types/jig_list.md>) where a single `grid-item` is configured and iterates through the datasource.
-2. **Custom Grid** - used to create a custom grid layout using widgets, images, or custom components in various sizes. &#x20;
+2. **Custom Grid** - used to create a custom grid layout using widgets, images, or custom components in various sizes.
 
-| ### Core structure | ****                                                                                                                                                                                                      |
+| ### Core structure |  |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`             | Within a grid component, the [grid-item](./grid/grid-item.md) component is used to define each of the elements in the grid layout. Within the `grid-item` a select set of components can be configured.   |
 | `data`             | Configure a datasource to call the data in the grid layout. The data property is required for the Auto Grid, but is optional for the Custom Grid selection.                                               |
@@ -26,7 +26,7 @@ The grid component has two available configuration options:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fJilLcZQaseZ0gjR18gfb-20250107-084107.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fJilLcZQaseZ0gjR18gfb-20250107-084107.png" size="60" width="1224" height="2466" position="center" caption="Auto grid" alt="Auto grid"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fJilLcZQaseZ0gjR18gfb-20250107-084107.png" size="60" position="center" caption="Auto grid" alt="Auto grid"}
 :::
 
 :::VerticalSplitItem
@@ -97,11 +97,11 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example demonstrates combining the grid component with other components (entity and form) in a default jig. The grid is customized to show an image component (4x2), a list widget (2x2) and chart widget (2x2).&#x20;
+This example demonstrates combining the grid component with other components (entity and form) in a default jig. The grid is customized to show an image component (4x2), a list widget (2x2) and chart widget (2x2).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" size="66" width="1224" height="2466" position="center" caption="Custom grid " alt="Custom grid "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" size="66" position="center" caption="Custom grid " alt="Custom grid "}
 :::
 ::::
 

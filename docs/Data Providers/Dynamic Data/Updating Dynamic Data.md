@@ -13,7 +13,7 @@ The employee's details are updated using the Dynamic Data provider's **update** 
 1. **default.jigx** is the database where the Dynamic Data table is defined.
 2. [sqlite](./../../Datasource/sqlite.md) datasource calls the Dynamic Data provider, using an SQL query to return the data.
 3. [jig.list](<./../../Jig Types/jig_list.md>) is the type of jig used to list the data in an [expander](./../../Components/expander.md) component with an `onContentPress` action with `parameters` to transfer the selected employee's details to the form.
-4. [form](./../../Components/form.md) is the component used with `initialValue` properties to populate the employee data into the form fields.&#x20;
+4. [form](./../../Components/form.md) is the component used with `initialValue` properties to populate the employee data into the form fields.
 5. [submit-form](./../../Actions/submit-form.md) is the action that executes the **update **method of the Dynamic Dataprovider with the `recordId `property configured to identify the record in the table that must be updated
 
 ## Examples and code snippets
@@ -139,7 +139,7 @@ tabs:
 ```
 :::
 
-In the pre-populate *Update Employee* form add the `action.submit-form` using theDynamic Data provider with the **update** method to update the data record.&#x20;
+In the pre-populate *Update Employee* form add the `action.submit-form` using theDynamic Data provider with the **update** method to update the data record.
 
 :::hint{type="info"}
 The record is updated intstantly and the new employee details are shown in the list
@@ -260,7 +260,7 @@ tabs:
 ```
 :::
 
-Navigate to the solution's Data option in Jigx Management and view the updated Dynamic Data employee table and record.&#x20;
+Navigate to the solution's Data option in Jigx Management and view the updated Dynamic Data employee table and record.
 
 ![Updated Dynamic Data record](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/V3ZS4IyJ8RJ78mKGJdRJ2_dd-update-mngt.png "Updated Dynamic Data record")
 

@@ -7,13 +7,13 @@ updatedAt: Wed Feb 12 2025 12:57:05 GMT+0000 (Coordinated Universal Time)
 
 ## Scenario
 
-Press the *Add Customer* button in the customer list to create a customer. Complete the new customer form and press the *Create* button.&#x20;
+Press the *Add Customer* button in the customer list to create a customer. Complete the new customer form and press the *Create* button.
 
 ![Add new customer](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xB26YdYV_JeG1GzllmXLh_rest-create.PNG "Add new customer")
 
 ### How does this work
 
-&#x20;A function to call the REST API's POST operation is configured, allowing the record to be created in the backend. The function is referenced in the `execute-entity` action on the form. The customer is created using the REST data provider with a create method (which creates the record in the local data provider with a temp\_id, calling the rest-create-customer function and providing the parameters for the data values to be created in the REST service. Specifying the id in the `ouputTransform` in the function enables the local data provider temp\_id to be automatically updated with the REST id once it is created in the datastore.&#x20;
+A function to call the REST API's POST operation is configured, allowing the record to be created in the backend. The function is referenced in the `execute-entity` action on the form. The customer is created using the REST data provider with a create method which creates the record in the local data provider with a temp\_id, calling the rest-create-customer function and providing the parameters for the data values to be created in the REST service. Specifying the id in the `ouputTransform` in the function enables the local data provider temp\_id to be automatically updated with the REST id once it is created in the datastore.
 
 :::hint{type="info"}
 This code sample builds upon the previous [List customers (GET)](<./List customers _GET_.md>) step, to develop a complete and functional solution.
@@ -206,11 +206,11 @@ options:
 
 ## Jig (screen)
 
-- On the list of customers jig configure an `go-to` action that adds the *Add Customer* button to the list and links to the create-customer jig.&#x20;
-- In a default jig add a local data provider datasource with a query to get the us\_states data. Add a query parameter to set the state of the region field once the state field is selected.&#x20;
+- On the list of customers jig configure an `go-to` action that adds the *Add Customer* button to the list and links to the create-customer jig.
+- In a default jig add a local data provider datasource with a query to get the us\_states data. Add a query parameter to set the state of the region field once the state field is selected.
 - Add a form component to capture the customer details with each field's instanceId containing the same name as the body parameters in the function.
 - For the state field configure a dropdrown with an expression to get the list of states for selection.
-- For the region use an expression that uses the datasource `queryParameters` value. This allows the region to auto populate on the form on the state is selected in the dropdown. &#x20;
+- For the region use an expression that uses the datasource `queryParameters` value. This allows the region to auto populate on the form on the state is selected in the dropdown.
 - Add an `execute-entity` action to call the function that will create the customer record in the local table (using `method: create`) and in the REST service (`function: rest-create-customer`). Use an expression to specify the value for each of the function's parameters.
 
 :::CodeblockTabs

@@ -13,7 +13,7 @@ Add the ability to delete a customer from the list of customers by swiping left 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1_rest-delete.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1_rest-delete.PNG" size="70" width="1240" height="2500" position="center" caption="Delete customer" alt="Delete customer"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1_rest-delete.PNG" size="70" position="center" caption="Delete customer" alt="Delete customer"}
 :::
 ::::
 
@@ -34,7 +34,7 @@ This code sample builds upon the previous [List customers (GET)](<./List custome
 
 ## Function
 
-Specify the REST API url and operation (method), parameters to include authentication in the header and the customer id (custId) to use as the identification of the record to delete.  &#x20;
+Specify the REST API url and operation (method), parameters to include authentication in the header and the customer id (custId) to use as the identification of the record to delete.
 
 :::CodeblockTabs
 rest-delete-customer.jigx
@@ -62,7 +62,7 @@ parameters:
 
 ## Action (global)
 
-Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or  is in focus on the device.
+Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or is in focus on the device.
 
 :::CodeblockTabs
 load-data.jigx
@@ -83,9 +83,9 @@ action:
 
 ## Jig (screen)
 
-- Use a list jig type to configure a list of customers.&#x20;
-- Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured using the local provider with a query to provide the data for use in the list.&#x20;
-- Expressions are used to reference the exact data property required in each component.&#x20;
+- Use a list jig type to configure a list of customers.
+- Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured using the local provider with a query to provide the data for use in the list.
+- Expressions are used to reference the exact data property required in each component.
 - A `swipeable: left` event is configured for the delete with an `execute-entity` action that calls the delete function and uses the custId to identify the record to delete.
 
 :::CodeblockTabs

@@ -12,14 +12,14 @@ Gets a user's profile and photo in Microsoft Graph using Jigx functions, and dis
 
 ::::VerticalSplit{layout="right"}
 :::VerticalSplitItem
-**Resource links:**&#x20;
+**Resource links:**
 
-1. <a href="https://learn.microsoft.com/en-us/graph/api/resources/profilephoto?view=graph-rest-1.0" target="_blank">Profile Photo Graph</a> documentation
-2. <a href="https://learn.microsoft.com/en-us/graph/api/user-get?view=graph-rest-1.0&tabs=http" target="_blank">Graph Get a User</a> documentation
-3. <a href="https://developer.microsoft.com/en-us/graph/graph-explorer" target="_blank">Graph explorer</a>&#x20;
-4. [Configuring OAuth for MS Graph]()&#x20;
+1. [Profile Photo Graph](https://learn.microsoft.com/en-us/graph/api/resources/profilephoto?view=graph-rest-1.0) documentation
+2. [Graph Get a User](https://learn.microsoft.com/en-us/graph/api/user-get?view=graph-rest-1.0&tabs=http) documentation
+3. [Graph explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
+4. [Configuring OAuth for MS Graph]()
 
-**Required OAuth scope **(least to most privilege)**:**
+**Required OAuth scope** (least to most privilege):
 
 User.Read
 User.ReadWrite
@@ -38,7 +38,7 @@ Directory.ReadWrite.All
 ## Examples and code snippets
 
 :::hint{type="success"}
-When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator" target="_blank">GitHub</a>.
+When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
 :::
 
 ## General
@@ -85,7 +85,7 @@ onFocus:
 
 ## Functions
 
-MS Graph User functions in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/functions/User" target="_blank">GitHub</a>.
+MS Graph User functions in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/functions/User).
 
 :::CodeblockTabs
 get-user-profile.jigx
@@ -133,7 +133,7 @@ conversions:
 
 ## Jigs
 
-MS Graph User jig in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/user/view-user-jigx.jigx" target="_blank">GitHub</a>.
+MS Graph User jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/user/view-user-jigx.jigx).
 
 :::CodeblockTabs
 view-user-jigx.jigx

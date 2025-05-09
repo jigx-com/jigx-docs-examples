@@ -65,13 +65,13 @@ Be careful when using complex expressions, such as expressions that iterate one 
 :::VerticalSplitItem
 
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rLyfpAJd6UWubCCOtnOx8_img6600iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rLyfpAJd6UWubCCOtnOx8_img6600iphone13blueportrait.png" size="72" width="1570" height="2932" position="center" caption="Date & time expressions" alt="Date & time expressions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rLyfpAJd6UWubCCOtnOx8_img6600iphone13blueportrait.png" size="72" position="center" caption="Date & time expressions" alt="Date & time expressions"}
 :::
 
 :::VerticalSplitItem
-This example uses a component.enitity to show the results of various date/time functions&#x20;
+This example uses a component.enitity to show the results of various date/time functions
 
-See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx" target="_blank">GitHub</a>.&#x20;
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx).
 :::
 ::::
 

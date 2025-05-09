@@ -15,24 +15,12 @@ The expander component** **is a collapsible element that initially displays a sm
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ### Core structure |                                               |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`         | Define the content of the expander. The following components can be used in the expander:<br />* [avatar](./avatar.md)
-* [bar-chart](./charts/bar-chart.md)
-* [entity](./entity.md)
-* [form](./form.md)
-* [interactive-image](./interactive-image.md)
-* [line-chart](./charts/line-chart.md)
-* [list](./list.md)
-* [location](./location.md)
-* [pie-chart](./charts/pie-chart.md)
-* [stepper](./stepper.md)
-* [video-player](./video-player.md)
-* [web-view](./web-view.md) |
-| `header`           | `centerElement` - what is initially visible in your jig. &#xA;The following options are available in `header`:<br />* component <a href="https://docs.jigx.com/examples/stage" target="_blank">stage</a>
-* component <a href="https://docs.jigx.com/examples/h1bm-titles" target="_blank">titles</a>                                                                                                                                                                        |
+| `children`         | Define the content of the expander. The following components can be used in the expander:<br />* [avatar](./avatar.md)<br />* [bar-chart](./charts/bar-chart.md)<br />* [entity](./entity.md)<br />* [form](./form.md)<br />* [interactive-image](./interactive-image.md)<br />* [line-chart](./charts/line-chart.md)<br />* [list](./list.md)<br />* [location](./location.md)<br />* [pie-chart](./charts/pie-chart.md)<br />* [stepper](./stepper.md)<br />* [video-player](./video-player.md)<br />* [web-view](./web-view.md) |
+| `header`           | `centerElement` - what is initially visible in your jig. &#xA;The following options are available in `header`:<br />* component [stage](https://docs.jigx.com/examples/stage)<br />* component [titles](https://docs.jigx.com/examples/h1bm-titles).                                                                                                                                                                        |
 
-| ### Other options      | ****                                                                                                                                                     |
+| ### Other options      |              |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `divider`              | Added the ability to add a solid or transparent `divider`. Default setting is `none`.                                                                    |
 | `expandIcon`           | Allows the ability to customize the alignment of the expander button. Default setting is `right`.                                                        |
@@ -40,31 +28,31 @@ Some properties are common to all components, see [Common component properties](
 | `leftElement`          | Add a left element, for example, an ordering number or avatar.                                                                                           |
 | `variant`              | Determine the background color for header versus body using the `variant` property with `plain` or `emphasized` values. Default setting is `emphasized`. |
 
-| ### Actions      | ****                                                                                                                                 |
+| ### Actions      |        |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `onContentPress` | Action triggered while pressing on the content in the expander. Use IntelliSense (ctrl+space) to see the available list of actions.  |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Expander with titles in a header, entity-fields and bar-chart
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XKqP3rQXzqg4vzPaen2DY_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XKqP3rQXzqg4vzPaen2DY_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Expander with titles" alt="Expander with titles"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XKqP3rQXzqg4vzPaen2DY_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png" size="80" position="center" caption="Expander with titles" alt="Expander with titles"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A-syqy6kp5jw7sh9vGb1t_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A-syqy6kp5jw7sh9vGb1t_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Expander with bar-chart & entity-fields" alt="Expander with bar-chart & entity-fields"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A-syqy6kp5jw7sh9vGb1t_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png" size="80" position="center" caption="Expander with bar-chart & entity-fields" alt="Expander with bar-chart & entity-fields"}
 :::
 ::::
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/static-data/expander.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/dynamic-data/expander-dynamic-data.jigx" target="_blank">GitHub</a>.
+**Examples**:
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/static-data/expander.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/dynamic-data/expander-dynamic-data.jigx).
 
-**Datasource:
-**See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/expander-dynamic.jigx" target="_blank">GitHub</a>.
+**Datasource**:
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/expander-dynamic.jigx).
 
 :::CodeblockTabs
 expander (static)
@@ -188,20 +176,20 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BCWgmHKWYvB2jD2gt9jHK_hs8ymbcaghjk2zqrbi6daexpander-with-stageiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BCWgmHKWYvB2jD2gt9jHK_hs8ymbcaghjk2zqrbi6daexpander-with-stageiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Expander with stage" alt="Expander with stage"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BCWgmHKWYvB2jD2gt9jHK_hs8ymbcaghjk2zqrbi6daexpander-with-stageiphone13blueportrait.png" size="80"  position="center" caption="Expander with stage" alt="Expander with stage"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ANaskxsOt0saAl1DqnWtu_rsfux7yzcblgkgbnpyu-expander-stage2.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ANaskxsOt0saAl1DqnWtu_rsfux7yzcblgkgbnpyu-expander-stage2.png" size="80" width="1570" height="2932" position="center" caption="Expander with stage & entity" alt="Expander with stage & entity"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ANaskxsOt0saAl1DqnWtu_rsfux7yzcblgkgbnpyu-expander-stage2.png" size="80"  position="center" caption="Expander with stage & entity" alt="Expander with stage & entity"}
 :::
 ::::
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/static-data/expander-trip.jigx" target="_blank">GitHub</a>.
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/dynamic-data/expander-trip-dynamic-data.jigx" target="_blank">GitHub</a>
+**Examples**:
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/static-data/expander-trip.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/dynamic-data/expander-trip-dynamic-data.jigx).
 
-**Datasource:
-**See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/trip-dynamic.jigx" target="_blank">GitHub</a>.
+**Datasource**:
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/trip-dynamic.jigx).
 
 :::CodeblockTabs
 expander-trip (static)
@@ -379,7 +367,7 @@ This example includes four expander components, each configured with different o
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-LLslE6fh7WCJh3cp8G37g-20250424-093658.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-LLslE6fh7WCJh3cp8G37g-20250424-093658.gif" size="66" width="681" height="1377" position="center" caption="Expander options" alt="Expander options"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-LLslE6fh7WCJh3cp8G37g-20250424-093658.gif" size="66" position="center" caption="Expander options" alt="Expander options"}
 :::
 ::::
 

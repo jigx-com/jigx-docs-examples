@@ -9,4 +9,4 @@ This section provides code samples for interacting with To-do tasks using Micros
 
 - [Get To-do lists & tasks](<./Graph tasks/Get To-do lists _ tasks.md>)
 
-The entire MS Graph solution is available on <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator" target="_blank">GitHub</a>.
+The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).

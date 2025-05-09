@@ -5,15 +5,15 @@ createdAt: Thu Jun 06 2024 13:21:20 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Mar 04 2025 06:43:54 GMT+0000 (Coordinated Universal Time)
 ---
 
-The card is a versatile and visually appealing UI element that encapsulates and presents information or interactive content in a structured, consistent, and user-friendly manner. It enhances the app's usability by organizing content into manageable, self-contained units that are easy to navigate and interact with. Each card typically includes a mix of text, images, and interactive elements, creating a self-contained unit of content.&#x20;
+The card is a versatile and visually appealing UI element that encapsulates and presents information or interactive content in a structured, consistent, and user-friendly manner. It enhances the app's usability by organizing content into manageable, self-contained units that are easy to navigate and interact with. Each card typically includes a mix of text, images, and interactive elements, creating a self-contained unit of content.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LFWTucW7Hd-Gh2mU4HA29_cc-card-overview.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LFWTucW7Hd-Gh2mU4HA29_cc-card-overview.png" size="80" width="1180" height="744" position="center" caption="Cards" alt="Cards"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LFWTucW7Hd-Gh2mU4HA29_cc-card-overview.png" size="80" position="center" caption="Cards" alt="Cards"}
 
-## ****Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                              |
+| ### Core structure |          |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | `children`         | Configure a component or multiple components in a card. See [Components](./../Components.md) for a list of available components.  |
 | `instanceId`       | Give the card component a unique id that can be referenced throughout the jig.                                                    |
@@ -32,21 +32,21 @@ Some properties are common to all components, see [Common component properties](
 - *Jig-level:* The card component is only available for use in a [default](<./../Jig Types/jig_default.md>) jig.
 - *Component-level: *The [carousel](./carousel.md) component has the option to use the card component within the carousel to create a visually appealing carousel.
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Card containing a form
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AGHA6ALv3_4Jlm-EYHqE4_cc-card.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AGHA6ALv3_4Jlm-EYHqE4_cc-card.PNG" size="80" width="1240" height="2500" position="center" caption="Card containing a form" alt="Card containing a form"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AGHA6ALv3_4Jlm-EYHqE4_cc-card.PNG" size="80" position="center" caption="Card containing a form" alt="Card containing a form"}
 :::
 
 :::VerticalSplitItem
-In this example the card component wraps the form component to create a visual container around the form.&#x20;
+In this example the card component wraps the form component to create a visual container around the form.
 
 **Example:**
-See the example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-basic.jigx" target="_blank">GitHub</a>.
+See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-basic.jigx).
 :::
 ::::
 
@@ -123,14 +123,14 @@ actions:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif" size="80" width="288" height="574" position="center" caption="Carousel with card" alt="Carousel with card"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif" size="80" position="center" caption="Carousel with card" alt="Carousel with card"}
 :::
 
 :::VerticalSplitItem
 In this example the carousel uses a `card` component with a color property, within the card, there is an `image` component used to display the images, an `entity-field` component to describe the product. The card component creates a visually appealing container for the images.  The `pagination` is configured `outside` of the carousel.
 
 **Example:**
-See the example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/carousel/carousel-card.jigx" target="_blank">GitHub</a>.
+See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/carousel/carousel-card.jigx).
 :::
 ::::
 
@@ -184,7 +184,7 @@ This example shows three cards.
 3. The third card contains an `image` and `entity-field` components with the `color: color6` property set.
 
 **Example:**
-See the example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-color.jigx" target="_blank">GitHub</a>.
+See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-color.jigx).
 :::
 
 :::VerticalSplitItem
@@ -349,14 +349,14 @@ options:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/St6oYKOw2poUb2nO16RLi_cc-card-disabled.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/St6oYKOw2poUb2nO16RLi_cc-card-disabled.PNG" size="80" width="1240" height="2500" position="center" caption="Card with style" alt="Card with style"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/St6oYKOw2poUb2nO16RLi_cc-card-disabled.PNG" size="80" position="center" caption="Card with style" alt="Card with style"}
 :::
 
 :::VerticalSplitItem
 This jig contains two cards, the first appears disabled using the `isDisabled: true` property and the second card the `isDisabled` property is set to `false`.
 
 **Example:**
-See the example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-style.jigx" target="_blank">GitHub</a>.
+See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-style.jigx).
 :::
 ::::
 
@@ -413,10 +413,10 @@ children:
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-The card component can be configured with an `onPress` event. In this example when the card is pressed a `go-to` component is configured to take you to the product list jig with items on sale. &#x20;
+The card component can be configured with an `onPress` event. In this example when the card is pressed a `go-to` component is configured to take you to the product list jig with items on sale.
 
 **Example:**
-See the example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-onPress.jigx" target="_blank">GitHub</a>.
+See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-onPress.jigx).
 :::
 
 :::VerticalSplitItem

@@ -8,7 +8,7 @@ updatedAt: Mon Jul 31 2023 09:15:04 GMT+0000 (Coordinated Universal Time)
 
 In <a href="https://docs.jsonata.org/string-functions" target="_blank">JSONata String Functions,</a> you can concat two strings to display multiple data records in one row or write numbers as strings, or select only a few characters from the whole string, for example, to display a person's initials.
 
-## String functions&#x20;
+## String functions
 
 The string functions include:
 
@@ -62,7 +62,7 @@ Be careful when using complex expressions, such as expressions that iterate one 
 :::
 
 ::::VerticalSplitItem
-This example shows how you can use various string functions to return data.See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx" target="_blank">GitHub</a>.&#x20;
+This example shows how you can use various string functions to return data.See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx" target="_blank">GitHub</a>.
 
 :::CodeblockTabs
 expression.jigx
@@ -118,5 +118,4 @@ children:
 ::::
 :::::
 
-###
 

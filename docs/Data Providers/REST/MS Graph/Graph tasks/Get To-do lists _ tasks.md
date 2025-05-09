@@ -11,27 +11,27 @@ Get a list of To-do tasks for a user in Microsoft Graph using a GET REST functio
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-**Resource links:**&#x20;
+**Resource links:**
 
-- <a href="https://learn.microsoft.com/en-us/graph/api/todotasklist-list-tasks?view=graph-rest-1.0&tabs=http" target="_blank">List tasks</a> - MS Graph documentation&#x20;
-- <a href="https://developer.microsoft.com/en-us/graph/graph-explorer" target="_blank">Graph Explorer</a>
-- [Configuring OAuth for MS Graph]()&#x20;
+- [List tasks](https://learn.microsoft.com/en-us/graph/api/todotasklist-list-tasks?view=graph-rest-1.0&tabs=http) - MS Graph documentation&#x20;
+- [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
+- [Configuring OAuth for MS Graph]()
 
-**Required OAuth scope **(least to most privilege):
+**Required OAuth scope** (least to most privilege):
 
 Tasks.Read
 Tasks.ReadWrite
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UXO3cJBGL2oEzsbc3jTlu_graph-tasks.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UXO3cJBGL2oEzsbc3jTlu_graph-tasks.png" size="70" width="1240" height="2500" position="center" caption="Task list" alt="Task list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UXO3cJBGL2oEzsbc3jTlu_graph-tasks.png" size="70" position="center" caption="Task list" alt="Task list"}
 :::
 ::::
 
 ## Examples and code snippets
 
 :::hint{type="success"}
-When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator" target="_blank">GitHub</a>.
+When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
 :::
 
 ## General
@@ -164,7 +164,7 @@ onRefresh:
 
 ## Functions
 
-MS Graph list To-do tasks function in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/functions/tasks" target="_blank">GitHub</a>.
+MS Graph list To-do tasks function in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/functions/tasks)
 
 :::CodeblockTabs
 get-all-todo-tasks.jigx
@@ -236,7 +236,7 @@ errorTransform: |
 
 ## Jigs
 
-MS Graph list To-do tasks jig in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/tasks/list-task-lists.jigx" target="_blank">GitHub</a>.
+MS Graph list To-do tasks jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/tasks/list-task-lists.jigx).
 
 :::CodeblockTabs
 list-task-lists.jigx
@@ -321,5 +321,4 @@ widgets:
 ```
 :::
 
-##
 

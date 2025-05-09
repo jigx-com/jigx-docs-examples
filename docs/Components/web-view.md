@@ -20,39 +20,39 @@ Some properties are common to all components, see [Common component properties](
 | ------------------ | --------------------------------------------------------------- |
 | `uri`              | The source to be displayed in the web-view, for example, a URL. |
 
-| ### Other options                | ****                                                                                                                                                                                                                                                                      |
+| ### Other options                | ****                                                              |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `content`                        | HTML to render in the web-view.                                                                                                                                                                                                                                           |
-| `height`                         | The height of the web-view.                                                                                                                                                                                                                                               |
+| `content`                        | HTML to render in the web-view.                               |
+| `height`                         | The height of the web-view.                                  |
 | `isEditable`                     | A very basic implementation, if set to `true`, the web-view `content` becomes editable. This works only with `content`, not with a `uri`. The `isEditable` property is only available when using the web-view in a [jig.fullscreen](<./../Jig Types/jig_fullscreen.md>).  |
-| `isTrackingTransparencyRequired` | If set to `true` tracking transparency permission modal is shown before opening the URL. The default setting is `true`.                                                                                                                                                   |
+| `isTrackingTransparencyRequired` | If set to `true` tracking transparency permission modal is shown before opening the URL. The default setting is `true`.           |
 
 ## Consideration
 
-- &#x20;The `component.web-view` can be used in [jig.fullscreen](<./../Jig Types/jig_fullscreen.md>), if the content needs to fill the screen.
+- The `component.web-view` can be used in [jig.fullscreen](<./../Jig Types/jig_fullscreen.md>), if the content needs to fill the screen.
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Web-view example (URL)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE_SLn_img9582iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE_SLn_img9582iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Web-view with URL " alt="Web-view with URL "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE_SLn_img9582iphone13blueportrait.png" size="80" position="center" caption="Web-view with URL " alt="Web-view with URL "}
 :::
 
 :::VerticalSplitItem
-In this example, we open a target URL in the web-view component.&#x20;
+In this example, we open a target URL in the web-view component.
 
 If the target URL is tracking data (e.g., cookies etc.), you are required by Apple to ask for user consent using the `isTrackingTransparencyRequired` option. It will ask for user consent the first time any web view in your solution tries to open a target URL.
 
-**Examples:
-**See the full example using static data on <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/web-view/static-data/web-view-example/web-view-example.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/web-view/dynamic-data/web-view-example-dynamic/web-view-example-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the full example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/web-view/static-data/web-view-example/web-view-example.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/web-view/dynamic-data/web-view-example-dynamic/web-view-example-dynamic.jigx).
 
-**Datasource:
-**See the full datasource for static data on <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/web-view.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/web-view-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasource**:
+See the full datasource for static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/web-view.jigx).
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/web-view-dynamic.jigx).
 :::
 ::::
 
@@ -120,12 +120,12 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv_img9581iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv_img9581iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Web-view with HTML content" alt="Web-view with HTML content"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv_img9581iphone13blueportrait.png" size="80" position="center" caption="Web-view with HTML content" alt="Web-view with HTML content"}
 :::
 
 :::VerticalSplitItem
 In this example, we are passing raw HTML content to the web-view component. This can either be inline content (see example below) or content from a datasource.
-&#x20;If your HTML content does not render as expected (e.g. font too small etc.) embed the meta HTML tag used in the example below in your HTML content.
+If your HTML content does not render as expected (e.g. font too small etc.) embed the meta HTML tag used in the example below in your HTML content.
 :::
 ::::
 
@@ -161,7 +161,7 @@ In this example, the web-view component is used to make notes on a job. It is co
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Q9G5hA0487h_W4-I4mfAZ-20250422-104224.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Q9G5hA0487h_W4-I4mfAZ-20250422-104224.gif" size="66" width="681" height="1377" position="center" caption="Editable web-view" alt="Editable web-view"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Q9G5hA0487h_W4-I4mfAZ-20250422-104224.gif" size="66" position="center" caption="Editable web-view" alt="Editable web-view"}
 :::
 ::::
 

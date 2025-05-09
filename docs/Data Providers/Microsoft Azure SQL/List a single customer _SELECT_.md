@@ -7,24 +7,24 @@ updatedAt: Wed Feb 12 2025 12:50:56 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="warning"}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information. &#x20;
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information.
 :::
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 # **Scenario**
 
-View the customer's details by pressing on the customer in the list, which opens the customer's details in a default jig.&#x20;
+View the customer's details by pressing on the customer in the list, which opens the customer's details in a default jig.
 
 ## **Resources**
 
-- Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<./Database Scripts.md>).&#x20;
-- [Configuring the SQL Connection]().&#x20;
+- Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<./Database Scripts.md>).
+- [Configuring the SQL Connection]().
 - This sample depends on [List customers (SELECT)](<./List customers _SELECT_.md>).
 
 ## Jigx Code
 
-The Azure SQL Docs solution is on <a href="https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs" target="_blank">GitHub.</a>
+The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs)
 :::
 
 :::VerticalSplitItem
@@ -34,7 +34,7 @@ The Azure SQL Docs solution is on <a href="https://github.com/jigx-com/jigx-samp
 
 ## How it works
 
-This example selects a customer from the list and uses the CustomerId to return the customer's details to the default jig on the device, using the SQL data provider's function, where it is stored in the SQLite database. In the default jig the data is selected from the SQLite database using a SQL query in a data source which in turn is used by the  jig to render the details in entity fields.&#x20;
+This example selects a customer from the list and uses the CustomerId to return the customer's details to the default jig on the device, using the SQL data provider's function, where it is stored in the SQLite database. In the default jig the data is selected from the SQLite database using a SQL query in a data source which in turn is used by the  jig to render the details in entity fields.
 The functions used to return a single record use **forRowsWithMatchingIds: true. **Only records in the SQLite table with a matching id will be updated. When forRowsWithMatchingIds is false or omitted, all records in the SQLite table will be deleted, and only the records returned by the stored procedure, or query statement will be inserted.
 
 ## Functions

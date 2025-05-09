@@ -6,21 +6,20 @@ createdAt: Thu Jun 09 2022 18:34:04 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 15:06:18 GMT+0000 (Coordinated Universal Time)
 ---
 
-With SQLite, you can write your datasources as SQL queries. You can use the queries in datasources to create a select statement and get the data from the tables you need to use in your jig file. You can use it directly in the jig file, where the UI component configuration is or you can use it as a global datasource.&#x20;
+With SQLite, you can write your datasources as SQL queries. You can use the queries in datasources to create a select statement and get the data from the tables you need to use in your jig file. You can use it directly in the jig file, where the UI component configuration is or you can use it as a global datasource.
 
 :::hint{type="info"}
 If you are not familiar with datasources yet, see the [data](https://docs.jigx.com/aI2F-data) section.
 :::
 
-## ****Configuration options****
+## Configuration options
 
-When setting up a SQLite datasource, you use the datasource in the following ways:&#x20;
+When setting up a SQLite datasource, you use the datasource in the following ways:
 
 1. In your jig file as a locally configured datasource under the `datasource` section.
 2. In the global datasource file, that will allow you to use it across all the jig files. The global datasource files are located under the datasources folder in Jigx Builder.
 
-## Examples and code snippets ****
-
+## Examples and code snippets 
 View common examples of using SQLite below,  you can use these as a guideline to configure the same in your solutions.
 
 :::::ExpandableHeading
@@ -28,14 +27,14 @@ View common examples of using SQLite below,  you can use these as a guideline to
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xDYOh1UAllO9EKKsEwuTi_xjvmxdpuzf6r1ehwbzfseim8-5d0t6e1xgmxstbrrimg1083iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xDYOh1UAllO9EKKsEwuTi_xjvmxdpuzf6r1ehwbzfseim8-5d0t6e1xgmxstbrrimg1083iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Locally configured datasource" alt="Locally configured datasource"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xDYOh1UAllO9EKKsEwuTi_xjvmxdpuzf6r1ehwbzfseim8-5d0t6e1xgmxstbrrimg1083iphone13blueportrait.png"  size="80" position="center" caption="Locally configured datasource" alt="Locally configured datasource"}
 :::
 
 :::VerticalSplitItem
 Datasource with type `sqlite` to select name, and email from the employee's table and to display the list of employees.
 
-**Example:
-**See the full example on <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/dynamic-data/employees-list.jigx" target="_blank">GitHub</a>.&#x20;
+**Example**:
+See the full example on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/dynamic-data/employees-list.jigx)
 :::
 ::::
 
@@ -66,14 +65,14 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yh7PKs_rB9kz4BOnOu5EU_k4oyl6hsldw50bdrzkk1aim8-5d0t6e1xgmxstbrrimg1083iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yh7PKs_rB9kz4BOnOu5EU_k4oyl6hsldw50bdrzkk1aim8-5d0t6e1xgmxstbrrimg1083iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Global configured datasource" alt="Global configured datasource"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yh7PKs_rB9kz4BOnOu5EU_k4oyl6hsldw50bdrzkk1aim8-5d0t6e1xgmxstbrrimg1083iphone13blueportrait.png"  size="80" position="center" caption="Global configured datasource" alt="Global configured datasource"}
 :::
 
 :::VerticalSplitItem
 Datasource with type `sqlite` as global datasource to select name, and email from the employee's table and to display the list of employees.
 
 **Example:
-**See the full example on <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/dynamic-data/employees-list.jigx" target="_blank">Github</a>.&#x20;
+**See the full example on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/dynamic-data/employees-list.jigx)
 
 
 :::
@@ -115,11 +114,11 @@ item:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-&#x20;In this example a SQLite query is used to  count the rows in the **avatar** table.&#x20;
+In this example a SQLite query is used to  count the rows in the **avatar** table.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HWIyEBofvpCdzrMXZJS3c_sqlite-countrow.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HWIyEBofvpCdzrMXZJS3c_sqlite-countrow.PNG" size="80" width="1240" height="2500" position="center" caption="Count rows" alt="Count rows"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HWIyEBofvpCdzrMXZJS3c_sqlite-countrow.PNG" size="80" position="center" caption="Count rows" alt="Count rows"}
 :::
 ::::
 
@@ -183,7 +182,7 @@ children:
 ```
 :::
 
-### Converting dates&#x20;
+### Converting dates
 
 Here is an example of using a SQLite query to convert dates in a dynamic data table.
 
@@ -259,10 +258,10 @@ datasources
 
 ### Joining tables
 
-Often you want to use data in your solution but the data is stored in different tables. Use a SQLite query to join the data from tables and extract the exact information you want to use.  When joining two tables there must be the same identifier in both tables. In the example below both tables has a `$.date` column.&#x20;
+Often you want to use data in your solution but the data is stored in different tables. Use a SQLite query to join the data from tables and extract the exact information you want to use.  When joining two tables there must be the same identifier in both tables. In the example below both tables has a `$.date` column.
 ***Result***: The  result of the example below is 
 date: 5
-finished\_date: 5.11&#x20;
+finished\_date: 5.11
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem

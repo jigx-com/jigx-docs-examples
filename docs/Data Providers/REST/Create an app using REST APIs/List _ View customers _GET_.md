@@ -7,13 +7,13 @@ updatedAt: Wed Oct 23 2024 11:45:46 GMT+0000 (Coordinated Universal Time)
 
 ## Scenario
 
-In this scenario, records are limited to return only fifty from the REST service. Continuation is used to ensure all customer records are returned. By pressing on the customer in the [list of customers](<./List customers _GET_.md>) loads that specific customer's details in a form.&#x20;
+In this scenario, records are limited to return only fifty from the REST service. Continuation is used to ensure all customer records are returned. By pressing on the customer in the [list of customers](<./List customers _GET_.md>) loads that specific customer's details in a form.
 
 ### How does this work
 
-The REST APIs GET operator is used in a Jigx function with an `outputTransform` to specify the exact data to be returned. A `continuation` is added to return all records; the records property specifies all records in the customer's table. A global action is configured to sync the data in the app with the REST data provider calling the function. In turn, the global action is called in the index.jigx file to load the data when the app is opened. In the list jig the local data provider is used to configure the list-item component. In the view-customer jig `jsonProperties` are used for address and phone to return the nested object.&#x20;
+The REST APIs GET operator is used in a Jigx function with an `outputTransform` to specify the exact data to be returned. A `continuation` is added to return all records; the records property specifies all records in the customer's table. A global action is configured to sync the data in the app with the REST data provider calling the function. In turn, the global action is called in the index.jigx file to load the data when the app is opened. In the list jig the local data provider is used to configure the list-item component. In the view-customer jig `jsonProperties` are used for address and phone to return the nested object.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9_rest-listview.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9_rest-listview.PNG" size="76" width="2498" height="2496" position="center" caption="List & view customer details" alt="List & view customer details"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9_rest-listview.PNG" size="76" position="center" caption="List & view customer details" alt="List & view customer details"}
 
 :::hint{type="info"}
 This code sample builds upon the previous [List customers (GET)](<./List customers _GET_.md>) step, to develop a complete and functional solution.
@@ -81,7 +81,7 @@ outputTransform: |
 ```
 :::
 
-## Action (global)&#x20;
+## Action (global)
 
 Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or  is in focus on the device.
 
@@ -107,10 +107,10 @@ action:
 
 ## Jig (screen)
 
-- Use a list jig type to configure a list of customers.&#x20;
-- Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured with a query to provide the data for use in the list.&#x20;
+- Use a list jig type to configure a list of customers.
+- Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured with a query to provide the data for use in the list.
 - Add an `onPress` to link to the view-customer jig.
-- In the datasource query of the view-customer jig use `jsonProperties` to return the complex structure for address and phone.&#x20;
+- In the datasource query of the view-customer jig use `jsonProperties` to return the complex structure for address and phone.
 - configure a `queryParameter` using `inputs` to return the customer details by id.
 - Expressions are used to reference the exact data property required in each component.
 

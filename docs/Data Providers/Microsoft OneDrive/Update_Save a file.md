@@ -6,7 +6,7 @@ createdAt: Mon May 29 2023 08:24:46 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 13:47:19 GMT+0000 (Coordinated Universal Time)
 ---
 
-Files often change and need to be edited or updated with additional information; for example, team members can collaborate and edit and update a contract proposal. You can update an existing file in OneDrive from a solution in the Jigx App. Use the [media-field](./../../Components/form/media-field.md) component in a form to upload the updated file or image, then use the OneDrive Data Provider, its update or save method, and required properties. The existing file in OneDrive will be updated. &#x20;
+Files often change and need to be edited or updated with additional information; for example, team members can collaborate and edit and update a contract proposal. You can update an existing file in OneDrive from a solution in the Jigx App. Use the [media-field](./../../Components/form/media-field.md) component in a form to upload the updated file or image, then use the OneDrive Data Provider, its update or save method, and required properties. The existing file in OneDrive will be updated.
 
 ![Updating a file on OneDrive](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sB7j0dnUHnFgwToSWpikS-20250305-134712.png "Updating a file on OneDrive")
 
@@ -14,21 +14,21 @@ Files often change and need to be edited or updated with additional information;
 
 The following properties are required in the YAML:
 
-- `file` - reference the physical file&#x20;
-- `fileName` - add the file name with the extension, e.g. Invoice.pdf&#x20;
+- `file` - reference the physical file
+- `fileName` - add the file name with the extension, e.g. Invoice.pdf
 - `entity`- file path in OneDrive
 - `tokenType` - OAuth token credentials name
 - `method: update`
 
 ## Component
 
-To upload a file use the `media-field` component to select the file. Use the `image`, or `any` property in the `media-field` component to specify the `mediaType`.&#x20;
+To upload a file use the `media-field` component to select the file. Use the `image`, or `any` property in the `media-field` component to specify the `mediaType`.
 
 ## Considerations
 
 - When no `id` is provided, a new record is created if it is not a duplicate filename
 - **Important:** When updating a file and changing the filename, if the new name is the same as an existing file name, the amended file is saved to the existing file with no warning that the file will be overwritten
-- The filename is crucial in determining if the item must be saved/updated or whether a new file should be created&#x20;
+- The filename is crucial in determining if the item must be saved/updated or whether a new file should be created
 - When only updating the file, it uses the `id` and the `file` and then saves/updates as requested
 - Any change to the filename executes a create method, even if the `id` is specified and a new file is added to OneDrive
 - Updating/saving an existing file by only changing the file, saves the file against the original record

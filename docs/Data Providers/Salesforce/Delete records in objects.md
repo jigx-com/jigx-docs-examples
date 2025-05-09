@@ -11,18 +11,18 @@ Using the Salesforce provider's Delete method, you can delete records in a Sales
 ## Examples and code snippets
 
 :::hint{type="warning"}
-Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.&#x20;
+Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.
 :::
 
 ### Delete a Salesforce Account record
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K-RyjjKQLQvbYp16EUENW_salesforcedelete.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K-RyjjKQLQvbYp16EUENW_salesforcedelete.PNG" size="70" width="1240" height="2500" position="center" caption="Deleting records " alt="Deleting records "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K-RyjjKQLQvbYp16EUENW_salesforcedelete.PNG" size="70" position="center" caption="Deleting records " alt="Deleting records "}
 :::
 
 :::VerticalSplitItem
-This example uses a list jig type with a `component.list-item` with a `rightElement: button` to execute the Salesforce provider's `method: delete`.&#x20;
+This example uses a list jig type with a `component.list-item` with a `rightElement: button` to execute the Salesforce provider's `method: delete`.
 :::
 ::::
 

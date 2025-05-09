@@ -6,18 +6,18 @@ createdAt: Wed Jul 19 2023 12:39:56 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 15:03:54 GMT+0000 (Coordinated Universal Time)
 ---
 
-Reading data from Salesforce using the Salesforce provider is easy. The provider is intuitive, and once you have synced the data from the Salesforce provider to the local data provider, you can design lists, charts, and widgets to show your organization's Salesforce metrics, accounts, opportunities, and more.&#x20;
+Reading data from Salesforce using the Salesforce provider is easy. The provider is intuitive, and once you have synced the data from the Salesforce provider to the local data provider, you can design lists, charts, and widgets to show your organization's Salesforce metrics, accounts, opportunities, and more.
 
 ## Examples and code snippets
 
 :::hint{type="warning"}
-Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.&#x20;
+Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.
 :::
 
 ::::ExpandableHeading
-### List of accounts&#x20;
+### List of accounts
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A8Tn9KF-RKvhmVl9o_CxX_salesforce-list.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A8Tn9KF-RKvhmVl9o_CxX_salesforce-list.PNG" size="70" width="2540" height="2497" position="center" caption="Search and filtering a list" alt="Search and filtering a list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A8Tn9KF-RKvhmVl9o_CxX_salesforce-list.PNG" size="70" position="center" caption="Search and filtering a list" alt="Search and filtering a list"}
 
 The code below shows a simple example of a list of accounts in Salesforce. Adding `search` and `filter` properties allows you to easily find the accounts you looking for.
 
@@ -99,7 +99,7 @@ The code below shows a basic example of a list of opportunites in Salesforce wit
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/i3TJ4x_PLLgmihe9nnqgS_sf-opplist.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/i3TJ4x_PLLgmihe9nnqgS_sf-opplist.PNG" size="70" width="1240" height="2500" position="center" caption="Basic List" alt="Basic List"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/i3TJ4x_PLLgmihe9nnqgS_sf-opplist.PNG" size="70" position="center" caption="Basic List" alt="Basic List"}
 :::
 ::::
 
@@ -171,11 +171,11 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FGcAzSsO51PuV3Di4atbl_stagedetail.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FGcAzSsO51PuV3Di4atbl_stagedetail.PNG" size="70" width="1240" height="2500" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FGcAzSsO51PuV3Di4atbl_stagedetail.PNG" size="70"  position="center"}
 :::
 
 :::VerticalSplitItem
-Below is an example of reading data from the *Account*, *Opportunity*, and *OpportunityStage *objects in Salesforce. Combining the data, using a `jig.list` with `component.list-item` and `component.summary` to create the Stage Detail jig.
+Below is an example of reading data from the *Account*, *Opportunity*, and *OpportunityStage* objects in Salesforce. Combining the data, using a `jig.list` with `component.list-item` and `component.summary` to create the Stage Detail jig.
 :::
 ::::
 

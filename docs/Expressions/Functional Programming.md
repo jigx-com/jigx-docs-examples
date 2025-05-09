@@ -6,7 +6,7 @@ createdAt: Thu Jul 27 2023 13:15:54 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Sep 18 2023 13:18:44 GMT+0000 (Coordinated Universal Time)
 ---
 
-You can use <a href="https://docs.jsonata.org/programming" target="_blank">JSONata Functional programming </a>to compare values or display data based on certain conditions. You can quickly make any logical statements, and based on the result, you can perform different actions.
+You can use [JSONata Functional programming](https://docs.jsonata.org/programming) to compare values or display data based on certain conditions. You can quickly make any logical statements, and based on the result, you can perform different actions.
 
 ## Configuration
 
@@ -33,7 +33,7 @@ Be careful when using complex expressions, such as expressions that iterate one 
 ::::VerticalSplitItem
 In this example we determine if the value for `entity.field` is bigger or smaller that 10.
 
-See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx" target="_blank">GitHub</a>.&#x20;
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx)
 
 :::CodeblockTabs
 expression.jigx
@@ -77,7 +77,7 @@ children:
 ::::VerticalSplitItem
 This example shows how to write variables in HTML content.
 
-See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/variablesInContent.jigx" target="_blank">GitHub</a>.
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/variablesInContent.jigx).
 
 :::CodeblockTabs
 variablesInContent.jigx
@@ -109,7 +109,7 @@ source:
 ::::VerticalSplitItem
 In this example, we use the notation in which we select the instanceId of our component from the components, and extract the selected from the state of the component, then choose the required value. For example id, name,...
 
-See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/multipleSelect.jigx" target="_blank">GitHub</a>.
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/multipleSelect.jigx).
 
 :::CodeblockTabs
 multipleSelect.jigx

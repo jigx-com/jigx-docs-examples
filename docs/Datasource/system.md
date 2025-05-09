@@ -8,7 +8,7 @@ updatedAt: Tue Feb 25 2025 10:32:26 GMT+0000 (Coordinated Universal Time)
 
 The system datasource is usually used to get the list of country flag icons that can be used in a jig's components.
 
-## ****Configuration options****
+## Configuration options
 
 When setting up a system datasource within a jig you can use it:
 
@@ -47,7 +47,7 @@ options:
 
 - For the flag to show you need to use a component or action that has an `icon` property, for example, `leftElement` or `rightElement`.
 
-## **See also**
+## See also
 
-- <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/system.jigx" target="_blank">Related examples (Github)</a>
+- [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/system.jigx)
 

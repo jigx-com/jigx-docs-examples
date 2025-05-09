@@ -6,7 +6,7 @@ createdAt: Wed Oct 12 2022 08:42:41 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jan 17 2024 10:18:12 GMT+0000 (Coordinated Universal Time)
 ---
 
-The component can display statistics related to data records (categorical variables). This can be used to show a single series or multiple series of data for comparative purposes and highlight specific regions or ranges on the chart to make it easier for users to interpret and analyze the data.This component is mostly used in [jig.default](<./../Jig Types/jig_default.md>) or [jig.list](<./../Jig Types/jig_list.md>).&#x20;
+The component can display statistics related to data records (categorical variables). This can be used to show a single series or multiple series of data for comparative purposes and highlight specific regions or ranges on the chart to make it easier for users to interpret and analyze the data.This component is mostly used in [jig.default](<./../Jig Types/jig_default.md>) or [jig.list](<./../Jig Types/jig_list.md>).
 
 ::::LinkArray
 :::LinkArrayItem{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mYNg-6TNdRQaZMKGrcqsN_bar-chart.png"}
@@ -18,13 +18,13 @@ Bar chart
 :::LinkArrayItem{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3vTze_ECdOVAFIFGq1LIq_pie-chart.png"}
 Pie Chart
 
-[Show more](./charts/pie-chart.md)&#x20;
+[Show more](./charts/pie-chart.md)
 :::
 
 :::LinkArrayItem{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fAmrDPB1PsqwCbgVNS2Ab_line-chart.png"}
 Line chart
 
-[Show more](./charts/line-chart.md)&#x20;
+[Show more](./charts/line-chart.md)
 :::
 
 :::LinkArrayItem{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/urCrWekO3-jrmGSAbGo2L_charts-bar-plotbands-s.png"}
@@ -40,25 +40,25 @@ Line chart
 
 Chart data is structured in a way that makes it easy to display. To understand how to create the YAML for a chart in Jigx Builder let's look at the data in various formats and how you can use the data in Jigx.
 
-- Let's start with the financial data per quarter for three years from a **Microsoft Excel **table, as shown below:&#x20;
+- Let's start with the financial data per quarter for three years from a **Microsoft Excel** table, as shown below:
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UcOTckXGJkUjlVRuGnuFp_c-exceldata.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UcOTckXGJkUjlVRuGnuFp_c-exceldata.png" size="80" width="1126" height="342" position="center" caption="Excel data table" alt="Excel data table"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UcOTckXGJkUjlVRuGnuFp_c-exceldata.png" size="80" position="center" caption="Excel data table" alt="Excel data table"}
 
-- Next we map out the same data in Jigx [Dynamic Data]() in[ Jigx Management](https://docs.jigx.com/data). Notice that the data is exactly the same as the Excel data.&#x20;
+- Next we map out the same data in Jigx [Dynamic Data]() in[ Jigx Management](https://docs.jigx.com/data). Notice that the data is exactly the same as the Excel data.
 
 ![Dynamic Data table](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jZg3JrV65OcMvWRhadDqA_c-dd-data.png "Dynamic Data table")
 
 - The same data can also exist in a **JSON** file. Using the *Download* button at the top-right of the Data-finance-data table shown above will download the data into a JSON file. The JSON is shown below.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dz517cISeRt0lkq-Y5v7y_c-json.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dz517cISeRt0lkq-Y5v7y_c-json.png" size="80" width="710" height="886" position="center" caption="JSON data" alt="JSON data"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dz517cISeRt0lkq-Y5v7y_c-json.png" size="80" position="center" caption="JSON data" alt="JSON data"}
 
 ## Using the data in YAML
 
-Now that you have your data you can convert it into the YAML needed for the charts. The data can be used as a static datasource or a dynamic datasource.&#x20;
+Now that you have your data you can convert it into the YAML needed for the charts. The data can be used as a static datasource or a dynamic datasource.
 
 ### YAML - Static data
 
-Using the *finance-data.json* it was easy to convert the data into YAML as shown below.&#x20;
+Using the *finance-data.json* it was easy to convert the data into YAML as shown below.
 
 :::CodeblockTabs
 static-data
@@ -89,7 +89,7 @@ datasources:
 
 ### YAML - Dynamic Data
 
-In Jigx you can use the data from the dynamic data table, in this instance *data-Finance-data*, then create a file under datasource folder. Use the Dynamic data provider that references the finance-data table with a query selecting the data you want to use, quarters and year in this example.&#x20;
+In Jigx you can use the data from the dynamic data table, in this instance *data-Finance-data*, then create a file under datasource folder. Use the Dynamic data provider that references the finance-data table with a query selecting the data you want to use, quarters and year in this example.
 
 :::CodeblockTabs
 dynamic-data
@@ -124,7 +124,7 @@ In the YAML for charts the following keys are used:
 
 In this example the *finance-data* would show as follows for each key.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O3Z8Q9pXGBC1kbaz-qH9s_c-yamlkey.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O3Z8Q9pXGBC1kbaz-qH9s_c-yamlkey.png" size="54" width="676" height="740" position="center" caption="Chart YAML data described" alt="Chart YAML data described"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O3Z8Q9pXGBC1kbaz-qH9s_c-yamlkey.png" size="54" position="center" caption="Chart YAML data described" alt="Chart YAML data described"}
 
 Now it is possible to create charts in YAML with the exact same data, for example a bar and line chart with the finance-data in the above YAML keys is shown below. Notice in the YAML below that the same YAML is used for both the bar and line chart.
 
@@ -220,9 +220,9 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-The `component.bar-chart` in the Jigx App using the finance- data.&#x20;
+The `component.bar-chart` in the Jigx App using the finance- data.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ssjfdQ_2eC20t8-KJZYKQ_c-barmultiexplained.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ssjfdQ_2eC20t8-KJZYKQ_c-barmultiexplained.png" size="74" width="1689" height="2500" position="center" caption="Bar chart in Jigx App" alt="Bar chart in Jigx App"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ssjfdQ_2eC20t8-KJZYKQ_c-barmultiexplained.png" size="74" position="center" caption="Bar chart in Jigx App" alt="Bar chart in Jigx App"}
 :::
 
 :::VerticalSplitItem

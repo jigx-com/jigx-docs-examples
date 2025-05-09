@@ -8,8 +8,8 @@ updatedAt: Mon Jul 31 2023 09:10:42 GMT+0000 (Coordinated Universal Time)
 
 Within JSONata there are two types of Boolean expressions used to find out whether the result is true or false, namely:
 
-1. <a href="https://docs.jsonata.org/boolean-operators" target="_blank">Boolean operators</a> that include `and`, `or`
-   <a href="https://docs.jsonata.org/boolean-functions" target="_blank">Boolean functions</a> that include:
+1. [Boolean operators](https://docs.jsonata.org/boolean-operators) that include `and`, `or`
+   [Boolean functions](https://docs.jsonata.org/boolean-functions) that include:
    - [$boolean()](https://docs.jsonata.org/boolean-functions#boolean)
    - [$not()](https://docs.jsonata.org/boolean-functions#not)
    - [$exists()](https://docs.jsonata.org/boolean-functions#exists)
@@ -40,7 +40,7 @@ Be careful when using complex expressions, such as expressions that iterate one 
 ::::VerticalSplitItem
 This example evaluates static data in a `component.enity` to show the results in the entity field as a `boolean`.
 
-See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/boolean.jigx" target="_blank">GitHub</a>.
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/boolean.jigx).
 
 :::CodeblockTabs
 boolean.jigx
@@ -79,11 +79,11 @@ children:
 
 :::::VerticalSplit{layout="right"}
 ::::VerticalSplitItem
-Example of writing a condition for a placeholder. If the number of objects in the array is greater than zero, the placeholder is not displayed. If it isn't and the field is empty, a placeholder will appear with the icon and the specified text.&#x20;
+Example of writing a condition for a placeholder. If the number of objects in the array is greater than zero, the placeholder is not displayed. If it isn't and the field is empty, a placeholder will appear with the icon and the specified text.
 
-See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/placeholder.jigx" target="_blank">GitHub</a>.
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/placeholder.jigx).
 
-See <a href="https://community.jigx.com/t/tips-tricks-use-placeholders/78" target="_blank">tips and tricks when using placeholders</a> for additional information.
+See [tips and tricks when using placeholders](https://community.jigx.com/t/tips-tricks-use-placeholders/78) for additional information.
 
 :::CodeblockTabs
 placeholder.jigx

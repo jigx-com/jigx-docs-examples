@@ -12,13 +12,13 @@ Update a user's profile photo in Microsoft Graph using the `media-field` compone
 
 ::::VerticalSplit{layout="right"}
 :::VerticalSplitItem
-**Resource links:**&#x20;
+**Resource links:**
 
-- <a href="https://learn.microsoft.com/en-us/graph/api/profilephoto-update?view=graph-rest-1.0&tabs=http" target="_blank">Update profilePhoto Graph</a> documentation&#x20;
-- <a href="https://developer.microsoft.com/en-us/graph/graph-explorer" target="_blank">Graph explorer</a>
-- [Configuring OAuth for MS Graph]()&#x20;
+- [Update profilePhoto Graph](https://learn.microsoft.com/en-us/graph/api/profilephoto-update?view=graph-rest-1.0&tabs=http) documentation
+- [Graph explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
+- [Configuring OAuth for MS Graph]()
 
-**Required OAuth scope **(least to most privilege)**:**
+**Required OAuth scope** (least to most privilege):
 
 User.ReadWrite
 User.ReadWrite.All
@@ -32,7 +32,7 @@ User.ReadWrite.All
 ## Examples and code snippets
 
 :::hint{type="success"}
-When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator" target="_blank">GitHub</a>.
+When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
 :::
 
 ## General
@@ -74,7 +74,7 @@ onFocus:
 
 ## Functions
 
-MS Graph User function in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/functions/User/update-profile-picture.jigx" target="_blank">GitHub</a>.
+MS Graph User function in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/functions/User/update-profile-picture.jigx).
 
 :::CodeblockTabs
 update-profile-picture.jigx
@@ -109,7 +109,7 @@ conversions:
 
 ## Jigs
 
-MS Graph User jig in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/user/update-profile-picture.jigx" target="_blank">GitHub</a>.
+MS Graph User jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/user/update-profile-picture.jigx").
 
 :::CodeblockTabs
 update-profile-picture.jigx

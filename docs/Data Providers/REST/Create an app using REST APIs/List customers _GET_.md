@@ -9,11 +9,11 @@ updatedAt: Wed Feb 12 2025 12:54:55 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-Create a list of customers showing the company name, contact person's first and last name, status, and an avatar on the left displaying the US state.&#x20;
+Create a list of customers showing the company name, contact person's first and last name, status, and an avatar on the left displaying the US state.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DS3wYOeRqIAtsmqCP6op5_rest-list.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DS3wYOeRqIAtsmqCP6op5_rest-list.PNG" size="80" width="1240" height="2500" position="center" caption="Customer list" alt="Customer list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DS3wYOeRqIAtsmqCP6op5_rest-list.PNG" size="80" position="center" caption="Customer list" alt="Customer list"}
 :::
 ::::
 
@@ -30,7 +30,7 @@ The REST APIs GET operator is used in a Jigx function with an `outputTransform` 
 
 ## Function
 
-Specify the REST API url and operation (method), parameters to include authentication in the header and in the `outputTransform` define the data properties to be returned. The customer logo is stored in the REST service in base64, Jigx requires the logo in local-uri format for display. A `conversion` is configured in the function to change the base64 to local-uri.  &#x20;
+Specify the REST API url and operation (method), parameters to include authentication in the header and in the `outputTransform` define the data properties to be returned. The customer logo is stored in the REST service in base64, Jigx requires the logo in local-uri format for display. A `conversion` is configured in the function to change the base64 to local-uri.
 
 :::CodeblockTabs
 rest-get-customer.jigx

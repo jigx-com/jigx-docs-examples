@@ -6,9 +6,9 @@ createdAt: Mon May 29 2023 08:25:13 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 14:37:02 GMT+0000 (Coordinated Universal Time)
 ---
 
-Often there is a requirement to list files or get one specific file from OneDrive and then interact with that file(s), whether for viewing, updating, deleting, or even downloading. The file's details are pulled to the device using the local data provider, after which you can work with the file, showing it in a list.&#x20;
+Often there is a requirement to list files or get one specific file from OneDrive and then interact with that file(s), whether for viewing, updating, deleting, or even downloading. The file's details are pulled to the device using the local data provider, after which you can work with the file, showing it in a list.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fQMd2jWXuKDfELt-g5drO-20250305-143658.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fQMd2jWXuKDfELt-g5drO-20250305-143658.png" size="34" width="1224" height="2466" position="center" caption="List OneDrive files" alt="List OneDrive files"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fQMd2jWXuKDfELt-g5drO-20250305-143658.png" size="34" position="center" caption="List OneDrive files" alt="List OneDrive files"}
 
 ## Properties
 
@@ -19,7 +19,7 @@ The following properties are required in the YAML:
 
 ## Component
 
-There are a number of elements that can be used to display the file(s), for example, `component.list`, `component.form` with a dropdown, or `jig.list`.&#x20;
+There are a number of elements that can be used to display the file(s), for example, `component.list`, `component.form` with a dropdown, or `jig.list`.
 
 ## Considerations
 
@@ -29,7 +29,7 @@ There are a number of elements that can be used to display the file(s), for exam
 
 ## Code Example
 
-The code example below provides an example of a list of invoices in the `myfiles` directory of OneDrive.&#x20;
+The code example below provides an example of a list of invoices in the `myfiles` directory of OneDrive.
 
 :::CodeblockTabs
 list-files.jigx

@@ -6,9 +6,9 @@ createdAt: Thu Jul 27 2023 13:18:59 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Feb 22 2024 12:27:06 GMT+0000 (Coordinated Universal Time)
 ---
 
-JSONata path operators are used for navigating and accessing specific elements or properties within a data set.&#x20;
+JSONata path operators are used for navigating and accessing specific elements or properties within a data set.
 
-## Path operators&#x20;
+## Path operators
 
 The operators include:
 
@@ -42,8 +42,9 @@ Be careful when using complex expressions, such as expressions that iterate one 
 :::
 
 ::::VerticalSplitItem
-In this example** **the `Filter` path operator is used to create a filter for data records marked as Active or Inactive.**&#x20;
-**See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/filter.jigx" target="_blank">GitHub</a>.
+In this example the `Filter` path operator is used to create a filter for data records marked as Active or Inactive.
+**Example**:
+See the full code sample in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/filter.jigx).
 
 :::CodeblockTabs
 filter.jigx
@@ -119,15 +120,15 @@ item:
 
 Write an expression to add a search field when using **static data**. The character **\[]** at the end is very important.  Even one item only will be displayed.
 
-**Search:** See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/search.jigx" target="_blank">GitHub</a>.
+**Search:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/search.jigx).
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/j_q3THPfmpWfkzUBqoR4S_search1iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/j_q3THPfmpWfkzUBqoR4S_search1iphone13blueportrait.png" size="70" width="1570" height="2932" position="center" caption="Search static data" alt="Search static data"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/j_q3THPfmpWfkzUBqoR4S_search1iphone13blueportrait.png" size="70" position="center" caption="Search static data" alt="Search static data"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kxfQ-YPzrNiVWsXDgWXaf_search2iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kxfQ-YPzrNiVWsXDgWXaf_search2iphone13blueportrait.png" size="70" width="1570" height="2932" position="center" caption="Search static data" alt="Search static data"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kxfQ-YPzrNiVWsXDgWXaf_search2iphone13blueportrait.png" size="70" position="center" caption="Search static data" alt="Search static data"}
 :::
 ::::
 

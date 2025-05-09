@@ -8,17 +8,17 @@ updatedAt: Wed Feb 12 2025 13:47:07 GMT+0000 (Coordinated Universal Time)
 
 ## Scenario
 
-Creates a new calendar event item in a user's specified calendar using the Microsoft Graph POST REST function. A default jig uses a form component to capture the event details.&#x20;
+Creates a new calendar event item in a user's specified calendar using the Microsoft Graph POST REST function. A default jig uses a form component to capture the event details.
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-**Resource links:**&#x20;
+**Resource links:**
 
-- <a href="https://learn.microsoft.com/en-us/graph/api/user-post-events?view=graph-rest-1.0&tabs=http" target="_blank">Create event</a>  - MS Graph documentation
-- <a href="https://developer.microsoft.com/en-us/graph/graph-explorer" target="_blank">Graph Explorer</a>
-- [Configuring OAuth for MS Graph]()&#x20;
+- [Create event](https://learn.microsoft.com/en-us/graph/api/user-post-events?view=graph-rest-1.0&tabs=http) - MS Graph documentation
+- [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
+- [Configuring OAuth for MS Graph]()
 
-**Required OAuth scope **(least to most privilege):
+**Required OAuth scope** (least to most privilege):
 
 Calendars.ReadWrite
 
@@ -33,7 +33,7 @@ Calendars.ReadWrite
 ## Examples and code snippets
 
 :::hint{type="success"}
-When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator" target="_blank">GitHub</a>.
+When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
 :::
 
 ## General
@@ -118,7 +118,7 @@ onRefresh:
 
 ## Functions
 
-MS Graph Create Event function in <a href="https://github.com/jigx-com/jigx-samples/blob/main/guides/ms-graph-solution/functions/create-calendar-event.jigx" target="_blank">GitHub</a>.
+MS Graph Create Event function in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/guides/ms-graph-solution/functions/create-calendar-event.jigx).
 
 :::CodeblockTabs
 create-calendar-event
@@ -191,7 +191,7 @@ parameters:
 
 ## Jigs
 
-MS Graph Create Calendar Events jig in <a href="https://github.com/jigx-com/jigx-samples/blob/main/guides/ms-graph-solution/jigs/create-calendar-event.jigx" target="_blank">GitHub  </a>.
+MS Graph Create Calendar Events jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/guides/ms-graph-solution/jigs/create-calendar-event.jigx).
 
 :::CodeblockTabs
 create-calendar-event.jigx

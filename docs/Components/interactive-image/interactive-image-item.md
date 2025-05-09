@@ -8,26 +8,25 @@ updatedAt: Mon Aug 19 2024 10:13:17 GMT+0000 (Coordinated Universal Time)
 
 The interactive-image-item is used in the `item` property of the [interactive-image](./../interactive-image.md) component that servers as a container. The `interactive-image-item` can be set in various ways using the properties of the [interactive-image](./../interactive-image.md) as well as the properties described below.
 
-## ****Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure      | ****                                                                                                                        |
+| **Core structure**      |       |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | `id`                    | Provide an id for the item that is used for filtering and as a key                                                          |
 | `percentageCoordinates` | Percentage `x` and `y` coordinates are required.  Coordinates are represented as absolute percentage numbers between 0-100. |
 | `title`                 | Give a name/title for the point, for example, Table 1.                                                                      |
 
-| ### Other options | ****                                                                                                                                                                                                      |
+| **Other options** |    |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `color`           | This allows you to set a specific color for the active/selected point (e.g., when the point is selected or active).                                                                                       |
 | `icon`            | This allows you to set a specific icon for different states (e.g., when the point is selected active or inactive).                                                                                        |
 | `index`           | Index for the initial animation.                                                                                                                                                                          |
 | `groupId`         |  This property allows you to add the item to the group. The groups are created inside the [interactive-image](./../interactive-image.md) component. Effective only initial load.                          |
-| `style`           | The following style options are available:<br />* `isActive` - shows if the point is active or available for selection.
-* `isDisabled` - shows if the point is disabled and is unavailable for selection. |
+| `style`           | The following style options are available:<br />* `isActive` - shows if the point is active or available for selection.<br />* `isDisabled` - shows if the point is disabled and is unavailable for selection. |
 
-| ### Actions | ****                                                                                                                                            |
+| **Actions** |            |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onPress`   | The action is triggered when pressing the image's marked coordinate point. Use IntelliSense (ctrl+space) to see the list of available actions.  |
 
@@ -43,23 +42,23 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8_rest-1iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8_rest-1iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Table booking" alt="Table booking"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8_rest-1iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj_WAUzvJz1S_rest-2iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj_WAUzvJz1S_rest-2iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Table booking" alt="Table booking"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj_WAUzvJz1S_rest-2iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking"}
 :::
 ::::
 
-The example shows tables in a restaurant that are available for booking, the `pointColor` property is set to blue to show availabilty. Once a table is reserved the `icon` and `color` property are set to show that the tables are reserved and cannot be booked.&#x20;
+The example shows tables in a restaurant that are available for booking, the `pointColor` property is set to blue to show availabilty. Once a table is reserved the `icon` and `color` property are set to show that the tables are reserved and cannot be booked.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/static-data/interactive-image-rest-sd.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/dynamic-data/interactive-image-rest-dd.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples:**
+See the full example using static data in <[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/static-data/interactive-image-rest-sd.jigx)
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/dynamic-data/interactive-image-rest-dd.jigx)
 
-**Datasource:
-**See the full datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/interactive-image/floorplan-restaurant-static.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/interactive-image/floorplan-restaurant-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasource:**
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/interactive-image/floorplan-restaurant-static.jigx)
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/interactive-image/floorplan-restaurant-dynamic.jigx)
 
 :::CodeblockTabs
 interactive-image-rest (static)
@@ -283,19 +282,19 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ_interactive-image-1iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ_interactive-image-1iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Office desk booking" alt="Office desk booking"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ_interactive-image-1iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ_HVAl1AUyX_interactive-image-2iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ_HVAl1AUyX_interactive-image-2iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Office desk booking" alt="Office desk booking"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ_HVAl1AUyX_interactive-image-2iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking"}
 :::
 ::::
 
-The example shows how hot seats and meeting rooms at an office can be booked. The `groups` property is used to differentiate between the types of available bookings, namely, seats, meeting rooms and reserved seats. The `maximumPoints` property specifies how many of each type can be booked, for example, there are three hot desks for booking.  &#x20;
+The example shows how hot seats and meeting rooms at an office can be booked. The `groups` property is used to differentiate between the types of available bookings, namely, seats, meeting rooms and reserved seats. The `maximumPoints` property specifies how many of each type can be booked, for example, there are three hot desks for booking.
 
 **Examples:**
 
-See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/static-data/interactive-image-office-sd.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/static-data/interactive-image-office-sd.jigx)
 
 :::CodeblockTabs
 interactive-image (static)
@@ -394,7 +393,7 @@ datasources:
 :::
 :::::
 
-## **See also**
+## See also**
 
 - [State]()
 

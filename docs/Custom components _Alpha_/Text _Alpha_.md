@@ -7,17 +7,17 @@ updatedAt: Wed Mar 05 2025 20:08:42 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="danger"}
-This feature is currently in its **Alpha **stage of development.&#x20;
+This feature is currently in its **Alpha **stage of development.
 
-- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.&#x20;
-- In this phase, the feature may contain bugs or behave unpredictably.&#x20;
-- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.&#x20;
+- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
+- In this phase, the feature may contain bugs or behave unpredictably.
+- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
 :::
 
-The custom component *text* allows adding text inside custom components. For example, adding text inside a [Card (Alpha)](<./Card _Alpha_.md>) or [View (Alpha)](<./View _Alpha_.md>).&#x20;
+The custom component *text* allows adding text inside custom components. For example, adding text inside a [Card (Alpha)](<./Card _Alpha_.md>) or [View (Alpha)](<./View _Alpha_.md>).
 
-For steps on creating a custom component, see [How to create a custom component](<./../Custom components _Alpha_.md>).&#x20;
+For steps on creating a custom component, see [How to create a custom component](<./../Custom components _Alpha_.md>).
 
 ## Configuration options
 
@@ -37,29 +37,29 @@ You can use `when` and `instanceId` with `component.text`, add the properties be
 
 ## Examples and code snippets
 
-The examples use a set of custom components called *sections*. The sections are for titles, spacing, and context. The *sections* code is available on <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections" target="_blank">GitHub</a>.
+The examples use a set of custom components called *sections*. The sections are for titles, spacing, and context. The *sections* code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
 
 :::::ExpandableHeading
-### Text  font sizes
+### Text font sizes
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-dxYQtS-bNSkPWJeZxXb-h-20241113-113134.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-dxYQtS-bNSkPWJeZxXb-h-20241113-113134.png" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0RGu5cb9hQXReC40eVmz4_cc-text-sizeld.PNG" size="70" width="1224" height="2466" darkWidth="1240" darkHeight="2500" position="center" caption="Text font size" alt="Text font size"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-dxYQtS-bNSkPWJeZxXb-h-20241113-113134.png size="70" position="center" caption="Text font size" alt="Text font size"}
 :::
 
 :::VerticalSplitItem
-This example shows the use of `component.text` with various font sizes configured using the `size` property, all displayed within a [Card (Alpha)](<./Card _Alpha_.md>).&#x20;
+This example shows the use of `component.text` with various font sizes configured using the `size` property, all displayed within a [Card (Alpha)](<./Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *section* component example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx" target="_blank">GitHub</a>.
-2. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-1.jigx" target="_blank">GitHub</a>.
-3. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-font-sizes.jigx" target="_blank">GitHub</a>.
+1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-1.jigx).
+3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-font-sizes.jigx).
 :::
 ::::
 
 :::CodeblockTabs
-text-1.jigx&#x20;
+text-1.jigx
 
 ```yaml
 # components/text-1.jigx 
@@ -124,17 +124,17 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example shows how to apply strikethrough formatting to font of various sizes by using the `decoration: line-through` property of the `component.text`.&#x20;
+This example shows how to apply strikethrough formatting to font of various sizes by using the `decoration: line-through` property of the `component.text`.
 
 **Examples:**
 
-1. See the *section* component example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx" target="_blank">GitHub</a>.
-2. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-2.jigx" target="_blank">GitHub</a>.
-3. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-line-through.jigx" target="_blank">GitHub</a>.
+1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-2.jigx).
+3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-line-through.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qbyUXtdunBGIQRffCKP8C-20241113-113923.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qbyUXtdunBGIQRffCKP8C-20241113-113923.png" size="70" width="1224" height="2466" position="center" caption="Text with line through" alt="Text with line through"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qbyUXtdunBGIQRffCKP8C-20241113-113923.png" size="70" position="center" caption="Text with line through" alt="Text with line through"}
 :::
 ::::
 
@@ -211,17 +211,17 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Hw1klMA74o6_8I9xaduNU-20241113-114815.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Hw1klMA74o6_8I9xaduNU-20241113-114815.png" size="70" width="1224" height="2466" position="center" caption="Underlined text" alt="Underlined text"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Hw1klMA74o6_8I9xaduNU-20241113-114815.png" size="70" position="center" caption="Underlined text" alt="Underlined text"}
 :::
 
 :::VerticalSplitItem
-This example shows how to underline text  with various font sizes using the `decoration: underline` property. The text is contained in a yellow [Card (Alpha)](<./Card _Alpha_.md>).&#x20;
+This example shows how to underline text  with various font sizes using the `decoration: underline` property. The text is contained in a yellow [Card (Alpha)](<./Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-3.jigx" target="_blank">GitHub</a>.
-2. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-underline.jigx" target="_blank">GitHub</a>.
-3. See the *section* component example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx" target="_blank">GitHub</a>.
+1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-3.jigx).
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-underline.jigx).
+3. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 
 :::
 ::::
@@ -299,18 +299,18 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example shows the `component.text` with various font sizes and emphasis styles, configured using the `emphasis` property, all displayed in a [Card (Alpha)](<./Card _Alpha_.md>).&#x20;
+This example shows the `component.text` with various font sizes and emphasis styles, configured using the `emphasis` property, all displayed in a [Card (Alpha)](<./Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-4.jigx" target="_blank">GitHub</a>.
-2. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-emphasis.jigx" target="_blank">GitHub</a>.
-3. See the *section* component example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx" target="_blank">GitHub</a>.
+1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-4.jigx).
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-emphasis.jigx).
+3. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QEETvY3gSRqzzh4tSWD1V-20241113-115730.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QEETvY3gSRqzzh4tSWD1V-20241113-115730.png" size="70" width="1224" height="2466" position="center" caption="Text with emphasis" alt="Text with emphasis"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QEETvY3gSRqzzh4tSWD1V-20241113-115730.png" size="70" position="center" caption="Text with emphasis" alt="Text with emphasis"}
 :::
 ::::
 
@@ -381,17 +381,17 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-b39lj_DjMe63LB7r_FopZ-20241113-120533.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-b39lj_DjMe63LB7r_FopZ-20241113-120533.png" size="70" width="1224" height="2466" position="center" caption="Text alignment" alt="Text alignment"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-b39lj_DjMe63LB7r_FopZ-20241113-120533.png" size="70" position="center" caption="Text alignment" alt="Text alignment"}
 :::
 
 :::VerticalSplitItem
-This example demonstrates various text alignments with varying font sizes using the `align` property, all displayed in a [Card (Alpha)](<./Card _Alpha_.md>).&#x20;
+This example demonstrates various text alignments with varying font sizes using the `align` property, all displayed in a [Card (Alpha)](<./Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-5.jigx" target="_blank">GitHub</a>.
-2. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-alignment.jigx" target="_blank">GitHub</a>.
-3. See the *section* component example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx" target="_blank">GitHub</a>.
+1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-5.jigx).
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-alignment.jigx).
+3. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 
 :::
 ::::
@@ -468,18 +468,18 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example demonstrates how to control the number of text lines displayed in `component.text` using the `numberOfLines:` property, with the content displayed inside a [Card (Alpha)](<./Card _Alpha_.md>).&#x20;
+This example demonstrates how to control the number of text lines displayed in `component.text` using the `numberOfLines:` property, with the content displayed inside a [Card (Alpha)](<./Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-6.jigx" target="_blank">GitHub</a>.
-2. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-number-lines.jigx" target="_blank">GitHub</a>.
-3. See the *section* component example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx" target="_blank">GitHub</a>.
+1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-6.jigx).
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-number-lines.jigx).
+3. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MjqAbpfVvW0TjoP4M-L2z-20241113-121315.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MjqAbpfVvW0TjoP4M-L2z-20241113-121315.png" size="70" width="1224" height="2466" position="center" caption="Multiple lines of text" alt="Multiple lines of text"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MjqAbpfVvW0TjoP4M-L2z-20241113-121315.png" size="70" position="center" caption="Multiple lines of text" alt="Multiple lines of text"}
 :::
 ::::
 
@@ -557,17 +557,17 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NDvPVznGR9XU44dCTG1Mm-20241113-122018.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NDvPVznGR9XU44dCTG1Mm-20241113-122018.png" size="70" width="1224" height="2466" position="center" caption="Text with color" alt="Text with color"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NDvPVznGR9XU44dCTG1Mm-20241113-122018.png" size="70" position="center" caption="Text with color" alt="Text with color"}
 :::
 
 :::VerticalSplitItem
-This example shows how to set the color of text of varying font sizes, and spread over a  number of lines by using the `color:` property, with the content displayed in a [Card (Alpha)](<./Card _Alpha_.md>).&#x20;
+This example shows how to set the color of text of varying font sizes, and spread over a  number of lines by using the `color:` property, with the content displayed in a [Card (Alpha)](<./Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-7.jigx" target="_blank">GitHub</a>.
-2. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-colored.jigx" target="_blank">GitHub</a>.
-3. See the *section* component example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx" target="_blank">GitHub</a>.
+1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-7.jigx).
+2. See the *jig* example in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-colored.jigx).
+3. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 
 :::
 ::::
@@ -652,15 +652,15 @@ children:
 ::::ExpandableHeading
 ### Text  weights&#x20;
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ZloD22zynAUqeBo0e5---20241113-130811.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ZloD22zynAUqeBo0e5---20241113-130811.png" size="92" width="4965" height="2487" position="center" caption="text weights" alt="text weights"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ZloD22zynAUqeBo0e5---20241113-130811.png" size="92" position="center" caption="text weights" alt="text weights"}
 
 These examples demonstrate the various options for using text weights to ensure thickness and boldness of text combined with varying sizes, displayed in a [Card (Alpha)](<./Card _Alpha_.md>).  By combining the `size`, and `weight` properties, you can achieve the desired appearance.
 
 **Examples:**
 
-1. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-11.jigx" target="_blank">GitHub</a>.
-2. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-regular-weights.jigx" target="_blank">GitHub</a>.
-3. See the *section* component example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx" target="_blank">GitHub</a>.
+1. See the *custom component* example in <[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-11.jigx).
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-regular-weights.jigx).
+3. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 
 
 :::CodeblockTabs

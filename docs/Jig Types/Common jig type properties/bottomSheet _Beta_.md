@@ -12,45 +12,39 @@ This feature is currently in **beta**. Functionality and design may change as we
 
 The bottomSheet element slides up from the bottom of the screen to present additional content, actions, or contextual information. It enhances user interaction by providing a seamless display of information without navigating away from the current screen. Perfect for menus, filters, forms, or quick actions, the bottomSheet can be customized to suit various use cases while maintaining a smooth and intuitive user experience.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rbofFxJH56jChPg93JrhO-20250128-094353.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rbofFxJH56jChPg93JrhO-20250128-094353.png" size="80" width="3849" height="2488" position="center" caption="BottomSheets" alt="BottomSheets"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rbofFxJH56jChPg93JrhO-20250128-094353.png" size="80" position="center" caption="BottomSheets" alt="BottomSheets"}
 
-## ****Configuration options****
+## Configuration options
 
-| ### Core structure | ****                                                                                                                                                                                                                                                                             |
+| ### Core structure | ****                                                                                                                                                                          |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `jigId`            | Provide the `jigId` for the jigs that will be displayed when the bottomSheet is opened.<br />* `instanceId` - Give the bottomSheet jig a unique identifier allowing you to reference the jig in expressions.&#x20;
-* `inputs`- Specify the inputs related to the the jigs.&#x20; |
+| `jigId`            | Provide the `jigId` for the jigs that will be displayed when the bottomSheet is opened.<br />* `instanceId` - Give the bottomSheet jig a unique identifier allowing you to reference the jig in expressions.,br />* `inputs`- Specify the inputs related to the the jigs. |
 
-| ### Other options         | ****                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ### Other options         | ****                                                                                       |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `isPanDownToCloseEnabled` | Enable pan down gesture to close the sheet. Swiping or dragging downward while maintaining contact with the screen closes the sheet.&#xA;Setting this to `false` disables closing the sheet by dragging down; instead, tapping outside the sheet on the jig will close it.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `backDrop`                | The `backdrop` property controls the visibility of the jig** **content displayed beneath the bottomSheet.<br />* `appearsOnIndex` - Specifies the ID of the `snapPoint` at which the `backdrop` will appear. This value is a number starting from 0 and depends on the number of `snapPoints` configured. &#xA;*Example snapPoints configured: *&#xA;`snapPoints:`&#xA;`- 30%`&#xA;`- 50%`&#xA;*Example backdrop configuration:*&#xA;`backdrop:`&#xA;   ` appearsOnIndex: 0`&#xA;   ` disappearsOnIndex: 1`
-* `disappearsOnIndex` - Specifies the ID of the snapPoint at which the backdrop will disappear. Like `appearsOnIndex`, the value starts at 0 and corresponds to the configured snapPoints.
-* `isVisible` - Determines whether the backdrop is enabled.
-  - `true` - Enables the backdrop, adding a grey overlay to the parent jig.
-  - `false` - Disables the backdrop, rendering the parent jig without an overlay.&#xA;Default: `true`.
-* `opacity` - Sets the transparency level of the jig content under the bottomSheet. Acceptable values range from 0.1 (very transparent) to 1(fully opaque). |
-| `isDetached`              | When set to `true`, the modal detaches from the jig and slides up independently from the bottom of the screen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `initialValue`            | Setting the `initialValue` with the `jigId` ensures that the bottomSheet is open when the parent jig loads.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `position`                | Determine the open position of the bottomSheet. Options are `left`, `middle` or `right`. **Note: **This property is specific to tablets.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `snapIndex`               | Specifies the initial `snapPoint` to which the bottomSheet should open. The value is a number starting from 0 and corresponds to the configured `snapPoints`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `snapPoints`              | Defines the points where the bottomSheet will snap when opened. These points should be configured in ascending order, from the smallest to the largest, and are set as percentages&#xA;*Examples:&#xA;* The `bottomSheet` covers the entire jig:&#xA;`snapPoints:`&#xA;`- 100%` <br />The `bottomSheet` covers the 30% on first snap and 60% on the second snap&#xA;`snapPoints:`&#xA;`- 30%`&#xA;`- 60%`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `width`                   | Select the width of the bottomSheet from `small`, `medium`, or `large`. **Note: **This property is specific to tablets.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `isPanDownToCloseEnabled` | Enable pan down gesture to close the sheet. Swiping or dragging downward while maintaining contact with the screen closes the sheet.&#xA;Setting this to `false` disables closing the sheet by dragging down; instead, tapping outside the sheet on the jig will close it.                     |
+| `backDrop`                | The `backdrop` property controls the visibility of the jig** **content displayed beneath the bottomSheet.<br />* `appearsOnIndex` - Specifies the ID of the `snapPoint` at which the `backdrop` will appear. This value is a number starting from 0 and depends on the number of `snapPoints` configured. &#xA;*Example snapPoints configured: *&#xA;`snapPoints:`&#xA;`- 30%`&#xA;`- 50%`&#xA;*Example backdrop configuration:*&#xA;`backdrop:`&#xA;   ` appearsOnIndex: 0`&#xA;   ` disappearsOnIndex: 1`<br />* `disappearsOnIndex` - Specifies the ID of the snapPoint at which the backdrop will disappear. Like `appearsOnIndex`, the value starts at 0 and corresponds to the configured snapPoints. <br />* `isVisible` - Determines whether the backdrop is enabled.<br />- `true` - Enables the backdrop, adding a grey overlay to the parent jig.<br/>- `false` - Disables the backdrop, rendering the parent jig without an overlay.&#xA;Default: `true`.<br />* `opacity` - Sets the transparency level of the jig content under the bottomSheet. Acceptable values range from 0.1 (very transparent) to 1(fully opaque). |
+| `isDetached`              | When set to `true`, the modal detaches from the jig and slides up independently from the bottom of the screen.                                                                              |
+| `initialValue`            | Setting the `initialValue` with the `jigId` ensures that the bottomSheet is open when the parent jig loads.                                                                             |
+| `position`                | Determine the open position of the bottomSheet. Options are `left`, `middle` or `right`. **Note: **This property is specific to tablets.                                             |
+| `snapIndex`               | Specifies the initial `snapPoint` to which the bottomSheet should open. The value is a number starting from 0 and corresponds to the configured `snapPoints`.                            |
+| `snapPoints`              | Defines the points where the bottomSheet will snap when opened. These points should be configured in ascending order, from the smallest to the largest, and are set as percentages&#xA;*Examples:&#xA;* The `bottomSheet` covers the entire jig:&#xA;`snapPoints:`&#xA;`- 100%` <br />The `bottomSheet` covers the 30% on first snap and 60% on the second snap&#xA;`snapPoints:`&#xA;`- 30%`&#xA;`- 60%`                                                                                          |
+| `width`                   | Select the width of the bottomSheet from `small`, `medium`, or `large`. **Note: **This property is specific to tablets.                                                                    |
 
 ## Considerations
 
-- **Multiple bottomSheets:***
-  *Multiple `bottomSheets` can be configured. When doing so, the `action.go-to` for the second `bottomSheet` must be configured in the parent jig. Refer to the *Multiple BottomSheets *example below.
+- **Multiple bottomSheets:**
+  Multiple `bottomSheets` can be configured. When doing so, the `action.go-to` for the second `bottomSheet` must be configured in the parent jig. Refer to the *Multiple BottomSheets* example below.
 - **Order of actions:**
   When configuring multiple actions, carefully consider the order of the action list. Certain actions should be executed before the `action.go-to` that opens the bottomSheet. For instance, a `execute-entity` action to save data should be performed before opening the bottomSheet.
 - **Testing:**
-  Configuring the bottomSheet requires careful setup and testing to ensure the jig** **content displays correctly and the bottomSheet renders as expected. Test on multiple devices to confirm the bottomSheet functions properly across all supported devices.
+  Configuring the bottomSheet requires careful setup and testing to ensure the jig content displays correctly and the bottomSheet renders as expected. Test on multiple devices to confirm the bottomSheet functions properly across all supported devices.
 - **Global properties:**
-  BottomSheet properties can be set globally, applying the same settings to all jigs** **specified in the bottomSheet. These properties are configured directly under the bottomSheet property.
+  BottomSheet properties can be set globally, applying the same settings to all jigs specified in the bottomSheet. These properties are configured directly under the bottomSheet property.
 - **Local properties (per jig):**
   BottomSheet properties can also be set individually for each jig. For instance, when multiple bottomSheets are configured, each jig may require unique settings, such as different heights or content. These properties are configured directly under each `jigId` property.
 - **Navigating to jigs**:
-  To navigate to another screen from the bottomSheet specify `isModal: false` to explicitly open the jig outside of the bottomSheet.&#x20;
+  To navigate to another screen from the bottomSheet specify `isModal: false` to explicitly open the jig outside of the bottomSheet.
 
 ## Examples and code snippets 
 
@@ -59,11 +53,11 @@ The bottomSheet element slides up from the bottom of the screen to present addit
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fGGAq1TUWIESf1rpNc8sM-20250116-130051.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fGGAq1TUWIESf1rpNc8sM-20250116-130051.png" size="66" width="1224" height="2466" position="center" caption="Basic bottomSheet" alt="Basic bottomSheet"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fGGAq1TUWIESf1rpNc8sM-20250116-130051.png" size="66"  position="center" caption="Basic bottomSheet" alt="Basic bottomSheet"}
 :::
 
 :::VerticalSplitItem
-Here is a simple example of a menu that is configured to open a `bottomSheet` with options to order the food. The Options `jigId` is specified under the bottomSheet property. &#x20;
+Here is a simple example of a menu that is configured to open a `bottomSheet` with options to order the food. The Options `jigId` is specified under the bottomSheet property.
 :::
 ::::
 
@@ -229,12 +223,12 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example demonstrates how to disable the bottomSheet from being closed by swiping or dragging downward. To achieve this, set the `isPanDownToCloseEnabled `property to `false`. This property is configured at the global level under the `bottomSheet` property.&#x20;
+This example demonstrates how to disable the bottomSheet from being closed by swiping or dragging downward. To achieve this, set the `isPanDownToCloseEnabled `property to `false`. This property is configured at the global level under the `bottomSheet` property.
 In this example, the jig rendered in the bottomSheet includes an `info-modal` action, which is used to display information necessary for ordering food from the menu.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-s9BFz_kwCOvR6cW7HJGga-20250127-123727.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-s9BFz_kwCOvR6cW7HJGga-20250127-123727.gif" size="66" width="348" height="694" position="center" caption="Pan down disabled" alt="Pan down disabled"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-s9BFz_kwCOvR6cW7HJGga-20250127-123727.gif" size="66" position="center" caption="Pan down disabled" alt="Pan down disabled"}
 :::
 ::::
 
@@ -395,7 +389,7 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m5UYNy13CwVwOpMaWZ4kP-20250128-093229.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m5UYNy13CwVwOpMaWZ4kP-20250128-093229.png" size="66" width="1224" height="2466" position="center" caption="BottomSheet open by default" alt="BottomSheet open by default"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m5UYNy13CwVwOpMaWZ4kP-20250128-093229.png" size="66" position="center" caption="BottomSheet open by default" alt="BottomSheet open by default"}
 :::
 
 :::VerticalSplitItem
@@ -735,7 +729,7 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Wf2UuFKggYNJKqxyFOItK-20250127-144346.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Wf2UuFKggYNJKqxyFOItK-20250127-144346.gif" size="66" width="536" height="1080" position="center" caption="Backdrop set to disappear" alt="Backdrop set to disappear"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Wf2UuFKggYNJKqxyFOItK-20250127-144346.gif" size="66" position="center" caption="Backdrop set to disappear" alt="Backdrop set to disappear"}
 :::
 
 :::VerticalSplitItem
@@ -913,7 +907,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### Detached bottomSheet&#x20;
+### Detached bottomSheet
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -921,7 +915,7 @@ In this example the bottomSheet is detached from the main parent jig, giving it 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8UGDNAP_eYiJxHBOEFO3D-20250128-083124.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8UGDNAP_eYiJxHBOEFO3D-20250128-083124.png" size="66" width="1224" height="2466" position="center" caption="Detached bottomSheet" alt="Detached bottomSheet"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8UGDNAP_eYiJxHBOEFO3D-20250128-083124.png" size="66" position="center" caption="Detached bottomSheet" alt="Detached bottomSheet"}
 :::
 ::::
 
@@ -1073,7 +1067,7 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0ieXmLubj-yVwI-lM6d9-20250128-081012.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0ieXmLubj-yVwI-lM6d9-20250128-081012.gif" size="66" width="536" height="1080" position="center" caption="BottomSheet with snapPoints" alt="BottomSheet with snapPoints"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0ieXmLubj-yVwI-lM6d9-20250128-081012.gif"  size="66" position="center" caption="BottomSheet with snapPoints" alt="BottomSheet with snapPoints"}
 :::
 
 :::VerticalSplitItem
@@ -1247,13 +1241,13 @@ datasources:
 :::VerticalSplitItem
 This example demonstrates that two jigs can be opened sequentially in the bottomSheet. Each jig is configured with its own local properties to ensure the bottomSheet adjusts and renders the content correctly.
 
-**Note:** The `go-to` action for the second bottom sheet jig is configured within the YAML of the parent jig.&#x20;
+**Note:** The `go-to` action for the second bottom sheet jig is configured within the YAML of the parent jig.
 
 The first bottom sheet jig is set to open by default using the `initialValue` property.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9uVxy1VqUe8VoOwnQkCOO-20250430-074455.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9uVxy1VqUe8VoOwnQkCOO-20250430-074455.gif" size="66" width="681" height="1377" position="center" caption="Multiple bottomSheets" alt="Multiple bottomSheets"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9uVxy1VqUe8VoOwnQkCOO-20250430-074455.gif" size="66" position="center" caption="Multiple bottomSheets" alt="Multiple bottomSheets"}
 :::
 ::::
 

@@ -5,22 +5,22 @@ createdAt: Mon Dec 11 2023 08:57:02 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Dec 18 2023 10:35:24 GMT+0000 (Coordinated Universal Time)
 ---
 
-Handling arrays when saving data to SQL and Dynamic Data require JSONATA expressions to return the data as an array rather than a string.&#x20;
+Handling arrays when saving data to SQL and Dynamic Data require JSONATA expressions to return the data as an array rather than a string.
 
 The operators used for handling arrays are:
 
-- <a href="https://docs.jsonata.org/array-functions" target="_blank">array functions - count</a>
-- <a href="https://docs.jsonata.org/string-functions#split" target="_blank">string function - split</a>
-- <a href="https://docs.jsonata.org/string-functions#eval" target="_blank">string function- eval</a>
+- [array functions - count](https://docs.jsonata.org/array-functions)
+- [string function - split](https://docs.jsonata.org/string-functions#split)
+- [string function- eval](https://docs.jsonata.org/string-functions#eval)
 
-## Dynamic Data Configuration&#x20;
+## Dynamic Data Configuration
 
 Usually, data in  Dynamic Data is saved as an array, for example, `['value1', 'value2'],` but when Dynamic Data returns the data, it is stringified as
 `"['value1', 'value2']"`. If the data is used in components, for example, to show an `intialValue`, it is not seen as an array but rather as a string. Use the `=$eval` before the expression to return the data in an array.
 
 **Example**
 
-`=$eval(@ctx.datasources.profile.food)`&#x20;
+`=$eval(@ctx.datasources.profile.food)`
 
 :::CodeblockTabs
 dropdown-dd
@@ -49,12 +49,11 @@ children:
 
 ## SQL Configuration&#x20;
 
-Data is sent as an array, for example, \['value1', 'value2'], SQL then saves the data as
-&#x20;VARCHAR(MAX), for example, `'value1, value2'`. If the data is used in components, for example, to show an `intialValue`, it is not seen as an array but rather as a string. Use the `=$split` before the expression to return the data in an array.
+Data is sent as an array, for example, \['value1', 'value2'], SQL then saves the data as; VARCHAR(MAX), for example, `'value1, value2'`. If the data is used in components, for example, to show an `intialValue`, it is not seen as an array but rather as a string. Use the `=$split` before the expression to return the data in an array.
 
 **Example**
 
-`=$split(@ctx.datasources.profile.food, ',')`&#x20;
+`=$split(@ctx.datasources.profile.food, ',')`
 
 :::CodeblockTabs
 dropdown-sql
@@ -115,7 +114,7 @@ children:
 
 Filter an array of records to display specific data and perform expression transformations over the data.
 
-We will display a list of people from the array of records, then filter them and display those that have entered a name. We will display their initials as a left avatar and add a label to each list item to display whether they are registered.&#x20;
+We will display a list of people from the array of records, then filter them and display those that have entered a name. We will display their initials as a left avatar and add a label to each list item to display whether they are registered.
 
 :::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
@@ -125,7 +124,7 @@ We will display a list of people from the array of records, then filter them and
 :::
 
 ::::VerticalSplitItem
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/samples/jigx-samples/jigs/guide-advanced-expressions/static-data/advanced-expressions-list.jigx" target="_blank">GitHub.</a>
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/samples/jigx-samples/jigs/guide-advanced-expressions/static-data/advanced-expressions-list.jigx).>
 
 :::CodeblockTabs
 advanced-expression.jigx

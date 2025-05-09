@@ -6,11 +6,11 @@ createdAt: Mon May 29 2023 08:25:27 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 15:00:27 GMT+0000 (Coordinated Universal Time)
 ---
 
-In a Jigx you can download a file from a specific location in OneDrive to your mobile device. This is useful when your device is offline, and you want to view the document or file. Use the OneDrive Data Provider with the download method. The file is downloaded to the mobile device's storage.&#x20;
+In a Jigx you can download a file from a specific location in OneDrive to your mobile device. This is useful when your device is offline, and you want to view the document or file. Use the OneDrive Data Provider with the download method. The file is downloaded to the mobile device's storage.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ehxypx4yEeuHUfThDB-R-20250305-135933.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ehxypx4yEeuHUfThDB-R-20250305-135933.png" size="70" width="2515" height="2473" position="center" caption="Download a file from OneDrive" alt="Download a file from OneDrive"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ehxypx4yEeuHUfThDB-R-20250305-135933.png" size="70" position="center" caption="Download a file from OneDrive" alt="Download a file from OneDrive"}
 
-## &#x20;Device storage location
+## Device storage location
 
 OneDrive downloads are stored in the following location depending on the device's operating system.
 
@@ -21,7 +21,7 @@ OneDrive downloads are stored in the following location depending on the device'
 
 The following properties are required in the YAML to successfully download a file:
 
-- `fileName` - Add the file name with the extension, e.g. Invoice.pdf&#x20;
+- `fileName` - Add the file name with the extension, e.g. Invoice.pdf
 - `entity` - file path in OneDrive
 - `tokenType` - OAuth token credentials name
 - `method: download`

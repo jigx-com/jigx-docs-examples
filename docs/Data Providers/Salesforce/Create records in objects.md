@@ -6,28 +6,27 @@ createdAt: Wed Jul 19 2023 12:40:04 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 12:01:57 GMT+0000 (Coordinated Universal Time)
 ---
 
-Create records in Salesforce objects straight from your mobile device. If you at a customer and want to create a new account with the customer or capture a new opportunity while having coffee with a prospect, you can design a form and use the Salesforce provider's create method.&#x20;
+Create records in Salesforce objects straight from your mobile device. If you at a customer and want to create a new account with the customer or capture a new opportunity while having coffee with a prospect, you can design a form and use the Salesforce provider's create method.
 
-You can use the <a href="https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_concepts.htm" target="_blank">object reference for Salesforce, </a>[https://workbench.developerforce.com/login.php,](https://workbench.developerforce.com/login.php) or the Salesforce schema builder to check the objects, required fields, and relationships. The minimum needed to create a record is based on the required fields.
+You can use the [object reference for Salesforce](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_concepts.htm), [https://workbench.developerforce.com/login.php,](https://workbench.developerforce.com/login.php) or the Salesforce schema builder to check the objects, required fields, and relationships. The minimum needed to create a record is based on the required fields.
 
 ![Salesforce schema builder](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/r0ILhitTT-XYMa78Yytn5_salesforceschema.png "Salesforce schema builder")
 
 ## Examples and code snippets
 
 :::hint{type="warning"}
-Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.&#x20;
+Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.
 :::
 
 ### Create a Salesforce Account record
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FMWGP3yB9L754yL0vXfGA_createacc.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FMWGP3yB9L754yL0vXfGA_createacc.PNG" size="70" width="1240" height="2500" position="center" caption="Creat an Account object  " alt="Creat an Account object  "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FMWGP3yB9L754yL0vXfGA_createacc.PNG" size="70" position="center" caption="Creat an Account object  " alt="Creat an Account object  "}
 :::
 
 :::VerticalSplitItem
-This example uses a default jig type with a a `component.form`. Certain of the Salesforce's Account object's fields are used to create a basic account record. You can add any additional fields you require.&#x20;
-
+This example uses a default jig type with a a `component.form`. Certain of the Salesforce's Account object's fields are used to create a basic account record. You can add any additional fields you require.
 
 :::
 ::::
@@ -122,11 +121,10 @@ actions:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example uses a default jig type with  a `component.form`. Certain of the Salesforce's Opportunity object's fields are used to create a basic record. You can add any additional fields you require.&#x20;
-:::
+This example uses a default jig type with  a `component.form`. Certain of the Salesforce's Opportunity object's fields are used to create a basic record. You can add any additional fields you require.
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xRt75T6ECDiejwwmNLRR-_sf-newopp.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xRt75T6ECDiejwwmNLRR-_sf-newopp.PNG" size="70" width="1240" height="2500" position="center" caption="New opportunity" alt="New opportunity"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xRt75T6ECDiejwwmNLRR-_sf-newopp.PNG" size="70" position="center" caption="New opportunity" alt="New opportunity"}
 :::
 ::::
 

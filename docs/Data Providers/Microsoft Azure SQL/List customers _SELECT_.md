@@ -7,14 +7,14 @@ updatedAt: Wed Feb 12 2025 12:51:55 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="warning"}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information. &#x20;
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information.
 :::
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 ## Scenario
 
-Create a list of customers showing their names, email addresses, and locations. On the left is an avatar, and on the right is the country the customer resides in.&#x20;
+Create a list of customers showing their names, email addresses, and locations. On the left is an avatar, and on the right is the country the customer resides in.
 
 ## Resources
 
@@ -23,7 +23,7 @@ Create a list of customers showing their names, email addresses, and locations. 
 
 ## Jigx Code
 
-The Azure SQL Docs solution is on <a href="https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs" target="_blank">GitHub.</a>
+The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs)
 :::
 
 :::VerticalSplitItem
@@ -91,7 +91,7 @@ query: |
 ## jig (screen)
 
 - Use a list type to configure a list of customers.
-- Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured with a query to provide the data for use in the list.&#x20;
+- Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured with a query to provide the data for use in the list.
 - Expressions are used to reference the exact data property required in each component.
 
 :::CodeblockTabs

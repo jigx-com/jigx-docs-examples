@@ -5,7 +5,7 @@ createdAt: Wed Mar 12 2025 09:33:33 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Apr 23 2025 07:03:44 GMT+0000 (Coordinated Universal Time)
 ---
 
-## **W**hat it does
+## What it does
 
 This event enables a remote system like Acumatica to call into Jigx and trigger changes on a mobile device by monitoring data updates. It detects changes in specific data tables (entities) and executes the configured actions accordingly. A common use case is ensuring data consistency between the remote system and the app and keeping information updated across the system.
 
@@ -27,7 +27,7 @@ This event enables a remote system like Acumatica to call into Jigx and trigger 
 
 ## Where and how to configure it
 
-1. Configure [Acumatica Push Notifications](<./onTableChange/Acumatica Push Notifications.md>) to use the [Jigx API endpoint](<./onTableChange/Acumatica Push Notifications.md>).&#x20;
+1. Configure [Acumatica Push Notifications](<./onTableChange/Acumatica Push Notifications.md>) to use the [Jigx API endpoint](<./onTableChange/Acumatica Push Notifications.md>).
 2. In the Jigx API endpoint configuration, specify a name for the remote system's data table. This is the name given to the Dynamic Data table.
 3. In default.jigx, add the Dynamic Data table name.
 4. In index.jigx, add the `onTableChange` event property at the root level.
@@ -48,9 +48,9 @@ Key factors to keep in mind when using this event.
 - When the app is open and data changes are made, the event executes individually for each detected change.
 - Avoid creating a loop in `onTableChange` by checking a table for changes and then modifying the same table.
 
-## Examples and code snippets ****
+## Examples and code snippets 
 
-### Single data table&#x20;
+### Single data table
 
 This example demonstrates how to use the `onTableChange` event to monitor data changes in a single table from a remote data system. When a data change occurs on the remote system, the event executes and resets the solutions state.
 

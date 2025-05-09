@@ -11,26 +11,26 @@ The count-up component is a display-only component that continuously updates in 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" size="60" width="1224" height="2466" position="center" caption="Count-up" alt="Count-up"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" size="60" position="center" caption="Count-up" alt="Count-up"}
 
 
 :::
 ::::
 
-## ****Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                                                                                                                                                                                                                             |
+| ### Core structure |                                                                                                                                           |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `startTimestamp`   | Add a start date, date/time or time , either using:&#xA;- datasource, e.g. `=@ctx.datasources.events[1].date`&#xA;- expression, e.g. `=$fromMillis($toMillis($now()) + 50000)`&#xA;- string, e.g. `"2023-09-20 18:00"`, or `"2023-07-25T17:30:00+02:00"`<br />If `startTimestamp` is omitted or set to null, the component remains static and does not count up. |
 
-| ### Other options |                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ### Other options |                                             |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `labels`          | The count-up label** **displays time in the format Days: Hours: Minutes: Seconds. The Days** **section appears only when the timer exceeds 24 hours.&#xA;Configuration options are:&#xA;- `isVisible` (default: `true`)- Controls visibility of the count-up labels. Setting it to `false` hides the labels.&#xA;- `position` - Determines whether the count-up labels (Days: Hours: Minutes: Seconds) appear at the top or bottom of the count-up display. |
-| `size`            | Choose between `extra-large` and `medium` sizes, with `extra-large` as the default if the property is not specified in the YAML.                                                                                                                                                                                                                                                                                                                            |
+| `labels`          | The count-up label displays time in the format Days: Hours: Minutes: Seconds. The Days section appears only when the timer exceeds 24 hours.&#xA;Configuration options are:&#xA;- `isVisible` (default: `true`)- Controls visibility of the count-up labels. Setting it to `false` hides the labels.&#xA;- `position` - Determines whether the count-up labels (Days: Hours: Minutes: Seconds) appear at the top or bottom of the count-up display. |
+| `size`            | Choose between `extra-large` and `medium` sizes, with `extra-large` as the default if the property is not specified in the YAML.                |
 
-## Examples and code snippets ****
+## Examples and code snippets 
 
 :::::ExpandableHeading
 ### Count-up basic
@@ -41,7 +41,7 @@ This example shows how to set up a basic `count-up` component that starts counti
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" size="60" width="1224" height="2466" position="center" caption="Count-up" alt="Count-up"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" size="60" position="center" caption="Count-up" alt="Count-up"}
 :::
 ::::
 
@@ -83,7 +83,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png" size="60" width="1224" height="2466" position="center" caption="Count-up in varying sizes" alt="Count-up in varying sizes"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png" size="60" position="center" caption="Count-up in varying sizes" alt="Count-up in varying sizes"}
 :::
 
 :::VerticalSplitItem
@@ -152,7 +152,7 @@ This example showcases two `count-up` components using a datasource with timesta
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T_KydUti3vw3y1gc-20250319-110401.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T_KydUti3vw3y1gc-20250319-110401.png" size="60" width="1224" height="2466" position="center" caption="Start time defined in a datasource" alt="Start time defined in a datasource"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T_KydUti3vw3y1gc-20250319-110401.png" size="60" position="center" caption="Start time defined in a datasource" alt="Start time defined in a datasource"}
 :::
 ::::
 

@@ -12,12 +12,12 @@ Creating  Dynamic Data can be achieved in several ways, one of which is by using
 
 1. **default.jigx** is the database where the Dynamic Data table is defined.
 2. [jig.default](<./../../Jig Types/jig_default.md>) is the type of jig we will use to contain the form.
-3. [form](./../../Components/form.md) is the component used with text and date fields.&#x20;
+3. [form](./../../Components/form.md) is the component used with text and date fields.
 4. [submit-form](./../../Actions/submit-form.md) is the action that executes the create method of the Dynamic Dataprovider
 
 ## Examples and code snippets
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-i6ehWvPp7BFJyRJURpPe2-20250306-083004.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-i6ehWvPp7BFJyRJURpPe2-20250306-083004.png" size="66" width="2493" height="2466" position="center" caption="Form creating Dynamic Data" alt="Form creating Dynamic Data"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-i6ehWvPp7BFJyRJURpPe2-20250306-083004.png" size="66" position="center" caption="Form creating Dynamic Data" alt="Form creating Dynamic Data"}
 
 ![Dynamic data database ](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BBlDwFNCg9r4DSlmAFOO8_dd-employee-mngt.png "Dynamic data database ")
 
@@ -25,7 +25,7 @@ Creating  Dynamic Data can be achieved in several ways, one of which is by using
 
 :::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-In Jigx Builder under the databases folder in the **default.jigx** file the employee table is added. This will create the table in Dynamic Data.&#x20;
+In Jigx Builder under the databases folder in the **default.jigx** file the employee table is added. This will create the table in Dynamic Data.
 :::
 
 ::::VerticalSplitItem
@@ -152,6 +152,6 @@ tabs:
 ### View the Dynamic Data in Jigx Management
 
 1. Open [Management]() , navigate to your solution (employees).
-2. Navigate to **Data **option&#x20;
+2. Navigate to **Data** option
 3. Click on the **employee table** and view the **data record **you just created.
 

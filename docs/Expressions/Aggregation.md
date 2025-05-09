@@ -8,7 +8,7 @@ updatedAt: Fri Jul 28 2023 08:13:29 GMT+0000 (Coordinated Universal Time)
 
 Use JSONata aggregation to return the results of values to find a maximum, minimum, or average value in an array.
 
-## Configuration&#x20;
+## Configuration
 
 | **Result** | **Expression**                         |
 | ---------- | -------------------------------------- |
@@ -20,17 +20,17 @@ Use JSONata aggregation to return the results of values to find a maximum, minim
 Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.
 :::
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X11pn0BVv4LsvZydrxLVL_img6602iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X11pn0BVv4LsvZydrxLVL_img6602iphone13blueportrait.png" size="78" width="1570" height="2932" position="center" caption="Aggregated expression" alt="Aggregated expression"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X11pn0BVv4LsvZydrxLVL_img6602iphone13blueportrait.png" size="78" position="center" caption="Aggregated expression" alt="Aggregated expression"}
 :::
 
 ::::VerticalSplitItem
 In this example static data is agregated in a `component.enity` to show the result in the entity field.
 
-See the full example code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx" target="_blank">GitHub</a>.
+See the full example code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx).
 
 :::CodeblockTabs
 expression.jigx

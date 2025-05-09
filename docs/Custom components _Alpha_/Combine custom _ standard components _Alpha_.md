@@ -6,17 +6,17 @@ updatedAt: Thu Mar 06 2025 09:35:54 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="danger"}
-This feature is currently in its **Alpha **stage of development.&#x20;
+This feature is currently in its **Alpha **stage of development.
 
-- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.&#x20;
-- In this phase, the feature may contain bugs or behave unpredictably.&#x20;
-- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.&#x20;
+- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
+- In this phase, the feature may contain bugs or behave unpredictably.
+- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
 :::
 
 Combining [Custom components (Alpha)](<./../Custom components _Alpha_.md>) with [Standard components](./../Components.md) enables the creation of advanced functionality and rich user interfaces. Standard components, such as [stepper](./../Components/stepper.md) , [progress-bar](./../Components/progress-bar.md) , and [countdown](./../Components/countdown.md) , provide a reliable foundation for common interactions, ensuring consistency and usability. By integrating custom components and tailored elements designed to meet specific requirements, you can extend this functionality to create dynamic features like interactive menus, tabbed navigation, and toggles with unique behaviors. This blend allows for a balance between efficiency and creativity, enabling apps to stand out with innovative designs while maintaining intuitive user experiences.
 
-Additionally, you can take this further by **creating entirely new components** through the clever use of custom components or by combining standard and custom components. These new components can encapsulate specialized functionality, offer unique visual elements, or address specific user needs, opening up endless possibilities for tailored solutions. To ensure the reuse of custom components in the same jig or in different jigs, you can use [Inputs & outputs (Alpha)]().&#x20;
+Additionally, you can take this further by **creating entirely new components** through the clever use of custom components or by combining standard and custom components. These new components can encapsulate specialized functionality, offer unique visual elements, or address specific user needs, opening up endless possibilities for tailored solutions. To ensure the reuse of custom components in the same jig or in different jigs, you can use [Inputs & outputs (Alpha)]().
 
 This approach encourages modular development, fostering scalability and adaptability, whether for small projects or enterprise-grade applications.
 
@@ -55,24 +55,24 @@ Incorrect YAML
 
 ## Example and code samples
 
-The examples use a set of custom components called *sections*. The sections are for titles, spacing, and context. The *sections* code is available on <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections" target="_blank">GitHub</a>.
+The examples use a set of custom components called *sections*. The sections are for titles, spacing, and context. The *sections* code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
 
 :::::ExpandableHeading
 ### Countdown
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3qwiIlmNqKU__uU3e5yrB-20241114-092231.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3qwiIlmNqKU__uU3e5yrB-20241114-092231.png" size="48" width="1224" height="2466" position="center" caption="Countdown" alt="Countdown"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3qwiIlmNqKU__uU3e5yrB-20241114-092231.png" size="48" position="center" caption="Countdown" alt="Countdown"}
 :::
 
 :::VerticalSplitItem
-In this example, the first `component.countdown` is a standard component and the following four are custom components. Here, the `component.countdown` is configured in a `component.card` with color.&#x20;
+In this example, the first `component.countdown` is a standard component and the following four are custom components. Here, the `component.countdown` is configured in a `component.card` with color.
 
 **Example:**
 
-1. See the *section* component example in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections" target="_blank">GitHub</a>.
-2. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/countdown" target="_blank">GitHub</a>.
-3. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/countdown/countdown.jigx" target="_blank">GitHub</a>.
+1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/countdown).
+3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/countdown/countdown.jigx).
 :::
 ::::
 
@@ -225,13 +225,13 @@ In this example, the `component.progress-bar`, is customized by adding a `compon
 
 **Example:**
 
-1. See the *section* component example in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections" target="_blank">GitHub</a>.
-2. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/progressbar/progress-sample-1.jigx" target="_blank">GitHub</a>.
-3. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-basic.jigx" target="_blank">GitHub</a>.
+1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/progressbar/progress-sample-1.jigx).
+3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-basic.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k9S-WX-dQLP59hWunApnu-20241114-094230.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k9S-WX-dQLP59hWunApnu-20241114-094230.png" size="48" width="1224" height="2466" position="center" caption="Progress-bar" alt="Progress-bar"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k9S-WX-dQLP59hWunApnu-20241114-094230.png" size="48" position="center" caption="Progress-bar" alt="Progress-bar"}
 :::
 ::::
 
@@ -579,13 +579,13 @@ children:
 ```
 :::
 
-More examples of customized progress bars are available on <a href="https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar" target="_blank">GitHub</a>:
+More examples of customized progress bars are available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar):
 
-|                                                                                                                                                                                                                                                                 |                                                                                                                                                                                                                                                                    |
+|                 |                                                                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-details.jigx" target="_blank">Progress-bar with details</a>          | <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-top-labels.jigx" target="_blank">Progress-bar with top labels</a>       |
-| <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-sizes-dynamic.jigx" target="_blank">Progress-bar sizes</a> (Dynamic) | <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-bottom-labels.jigx" target="_blank">Progress-bar with bottom labels</a> |
-| <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-steps-dynamic.jigx" target="_blank">Progress-bar steps</a> (Dynamic) |                                                                                                                                                                                                                                                                    |
+| [Progress-bar with details](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-details.jigx)         | [Progress-bar with top labels](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-top-labels.jigx)      |
+| [Progress-bar sizes](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-sizes-dynamic.jigx) (Dynamic) | [Progress-bar with bottom labels](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-bottom-labels.jigx) |
+| [Progress-bar steps](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-steps-dynamic.jigx)(Dynamic) |                                                                                                                                                                                                                                                                    |
 :::::
 
 :::::ExpandableHeading
@@ -593,7 +593,7 @@ More examples of customized progress bars are available on <a href="https://gith
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Npl-iTbt3CbHZqYsyA1Xf-20241114-095208.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Npl-iTbt3CbHZqYsyA1Xf-20241114-095208.png" size="48" width="1224" height="2466" position="center" caption="Ratings " alt="Ratings"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Npl-iTbt3CbHZqYsyA1Xf-20241114-095208.png" size="48" position="center" caption="Ratings " alt="Ratings"}
 :::
 
 :::VerticalSplitItem
@@ -601,9 +601,9 @@ This example demonstrates how you can create your own component using the custom
 
 **Example:**
 
-1. See the *section* component example in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections" target="_blank">GitHub</a>.
-2. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/rating" target="_blank">GitHub</a>.
-3. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/rating/rating.jigx" target="_blank">GitHub</a>.
+1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/rating).
+3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/rating/rating.jigx).
 :::
 ::::
 
@@ -1102,12 +1102,12 @@ This example demonstrates how you can create one custom component and reuse it m
 
 **Example:**
 
-1. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections" target="_blank">GitHub</a>.
-2. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections" target="_blank">GitHub</a>.
+1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_czeKbMWCCPZwwMK3bo5k-20241114-102305.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_czeKbMWCCPZwwMK3bo5k-20241114-102305.png" size="48" width="1224" height="2466" position="center" caption="Sections" alt="Sections"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_czeKbMWCCPZwwMK3bo5k-20241114-102305.png" size="48" position="center" caption="Sections" alt="Sections"}
 :::
 ::::
 
@@ -1282,14 +1282,14 @@ children:
 ```
 :::
 
-More examples of customized sections are available on <a href="https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections" target="_blank">GitHub</a>:
+More examples of customized sections are available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections):
 
-|                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                                          |
+|                 |                                                                                                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-samples.jigx" target="_blank">Section header samples</a>        | <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-med-xbold.jigx" target="_blank">Section sizes - medium (extra-bold)</a> |
-| <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-reg.jigx" target="_blank">Section sizes - regular</a>     | <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-large.jigx" target="_blank">Section sizes - large</a>                   |
-| <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-med.jigx" target="_blank">Section sizes - medium</a>      | <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-extra-large.jigx" target="_blank">Section sizes - extra large</a>       |
-| <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-subtitle.jigx" target="_blank">Section header with subtitle</a> |                                                                                                                                                                                                                                                                          |
+| [Section header samples](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-samples.jigx)       | [Section sizes - medium (extra-bold)](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-med-xbold.jigx) |
+| [Section sizes - regular](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-reg.jigx)   | [Section sizes - large](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-large.jigx)                  |
+| [Section sizes - medium](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-med.jigx)     | [Section sizes - extra large](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-extra-large.jigx)      |
+| [Section header with subtitle](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-subtitle.jigx) |                                                                                                                                                                                                                                                                          |
 :::::
 
 :::::ExpandableHeading
@@ -1305,9 +1305,9 @@ This example demonstrates how you can create one custom component and reuse it m
 
 **Example:**
 
-1. See the *section* component example in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections" target="_blank">GitHub</a>.
-2. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/stepper/stepper1.jigx" target="_blank">GitHub</a>.
-3. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style1-variations.jigx" target="_blank">GitHub</a>.
+1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/stepper/stepper1.jigx).
+3. See the *jig* example in <[GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style1-variations.jigx).
 :::
 ::::
 
@@ -1655,12 +1655,12 @@ children:
 
 More examples of customized sections are available on <a href="https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper" target="_blank">GitHub</a>:
 
-|                                                                                                                                                                                                                                     |                                                                                                                                                                                                                                     |
+|                  |                                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style2.jigx" target="_blank">Stepper style 2</a> | <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style6.jigx" target="_blank">Stepper style 6</a> |
-| <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style3.jigx" target="_blank">Stepper style 3</a> | <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style7.jigx" target="_blank">Stepper style 7</a> |
-| <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style4.jigx" target="_blank">Stepper style 4</a> | <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style8.jigx" target="_blank">Stepper style 8</a> |
-| <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style5.jigx" target="_blank">Stepper style 5</a> |                                                                                                                                                                                                                                     |
+| [Stepper style 2](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style2.jigx)| [Stepper style 6](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style6.jigx)|
+| [Stepper style 3](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style3.jigx) | [Stepper style 7](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style7.jigx)|
+| [Stepper style 4]("https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style4.jigx) | [Stepper style 8](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style8.jigx) |
+| [Stepper style 5](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style5.jigx) |                               |
 :::::
 
 :::::ExpandableHeading
@@ -1668,17 +1668,17 @@ More examples of customized sections are available on <a href="https://github.co
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example demonstrates how you can create custom components and reuse them multiple times. We use `inputs` to show the tab value, name, indicator and alignment in each reuse of the custom component. Here tab components are created by configuring the `component.view`. Additionally, we show how to reference a custom component inside a standard `component.list-item`. &#x20;
+This example demonstrates how you can create custom components and reuse them multiple times. We use `inputs` to show the tab value, name, indicator and alignment in each reuse of the custom component. Here tab components are created by configuring the `component.view`. Additionally, we show how to reference a custom component inside a standard `component.list-item`.
 
 **Example:**
 
-1. See the *section* component example in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections" target="_blank">GitHub</a>.
-2. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/tabs" target="_blank">GitHub</a>.
-3. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/tabs/tabs.jigx" target="_blank">GitHub</a>.
+1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/tabs).
+3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/tabs/tabs.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a-MnTk6l7a1IoAevGnBKt-20241114-103014.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a-MnTk6l7a1IoAevGnBKt-20241114-103014.png" size="48" width="1224" height="2466" position="center" caption="Tabs" alt="Tabs"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a-MnTk6l7a1IoAevGnBKt-20241114-103014.png" size="48" position="center" caption="Tabs" alt="Tabs"}
 :::
 ::::
 
@@ -2551,7 +2551,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CUZSlXSPFZahDNId27IH7-20241114-103058.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CUZSlXSPFZahDNId27IH7-20241114-103058.png" size="50" width="1224" height="2466" position="center" caption="Tags" alt="Tags"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CUZSlXSPFZahDNId27IH7-20241114-103058.png" size="50" position="center" caption="Tags" alt="Tags"}
 :::
 
 :::VerticalSplitItem
@@ -2559,8 +2559,8 @@ This example demonstrates how you can create tags in a custom component. We use 
 
 **Example:**
 
-1. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/tags/tags.jigx" target="_blank">GitHub</a>.
-2. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/tags/tags.jigx" target="_blank">GitHub</a>.
+1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/tags/tags.jigx).
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/tags/tags.jigx).
 :::
 ::::
 
@@ -2713,13 +2713,13 @@ This example demonstrates how you can create a custom component providing the fu
 
 **Example:**
 
-1. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/toggles" target="_blank">GitHub</a>.
-2. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/toggles/toggles.jigx" target="_blank">GitHub</a>.
+1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/toggles).
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/toggles/toggles.jigx).
 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_frjcbq6BgaicVmNICaMG-20241114-103225.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_frjcbq6BgaicVmNICaMG-20241114-103225.png" size="48" width="1224" height="2466" position="center" caption="Toggles" alt="Toggles"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_frjcbq6BgaicVmNICaMG-20241114-103225.png" size="48" position="center" caption="Toggles" alt="Toggles"}
 :::
 ::::
 

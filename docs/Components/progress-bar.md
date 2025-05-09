@@ -22,22 +22,22 @@ Use the progress-bar component to visually represent a task or process's current
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ### Core structure |    |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `value`            | `current` - determines the current status to be shown in the bar. This can be dynamically set with an expression, e.g. `=$count(@ctx.components.packList.state.selected)`&#xA;`max` - numeric, set the maximum value of the progress bar, e.g., the sales target is 5 new customers a month, making the `max: 5` . You can set the maximum dynamically, e.g., using the datasource `=$count(@ctx.datasources.checkbox-list)` |
 
-| ### Other options |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ### Other options |                                                                                                 |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`           | Sets the color of the progress -bar, choose a color from the provided color palette. Default color is black if the property is not specified in the YAML.                                                                                                                                                                                                                                                                                                                                                     |
-| `errorText`       | Add text, string, or expressions to show in text under the progress bar. Text is shown in red to indicate an error with progress.                                                                                                                                                                                                                                                                                                                                                                             |
-| `helperText`      | Add text, string, or expressions to guide users by showing text under the progress bar, e.g, Monthly target is $4000.                                                                                                                                                                                                                                                                                                                                                                                         |
-| `size`            | Choose from `extra-large`, `large`, `medium`, `small`, `tiny`, with `large` being the default if property is not specified in the YAML.                                                                                                                                                                                                                                                                                                                                                                       |
-| `steps`           | Numeric with a maximum of 20. Use steps to divide up the bar. By default, the bar is continuous. For example, `steps:5` will break down the bar into five equal sections. The higher the number of steps the smaller each bar segment becomes.                                                                                                                                                                                                                                                                |
-| `style`           | `isDisabled` can be set to `true` or `false`. If `true` the progress-bar is disabled.                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `color`           | Sets the color of the progress -bar, choose a color from the provided color palette. Default color is black if the property is not specified in the YAML.                                        |
+| `errorText`       | Add text, string, or expressions to show in text under the progress bar. Text is shown in red to indicate an error with progress.                                                                  |
+| `helperText`      | Add text, string, or expressions to guide users by showing text under the progress bar, e.g, Monthly target is $4000.                                                                                |
+| `size`            | Choose from `extra-large`, `large`, `medium`, `small`, `tiny`, with `large` being the default if property is not specified in the YAML.                                                         |
+| `steps`           | Numeric with a maximum of 20. Use steps to divide up the bar. By default, the bar is continuous. For example, `steps:5` will break down the bar into five equal sections. The higher the number of steps the smaller each bar segment becomes.                                             |
+| `style`           | `isDisabled` can be set to `true` or `false`. If `true` the progress-bar is disabled.    |
 | `subtitle`        | `value` - can add text, string or an expression to show as the subtitle, which is visible under the progress-bar.&#xA;`align` - `center`, `left`, and `right` alignment with the default as `center` if the property is not specified in the YAML.&#xA;`color` - specify the color the subtitle text by choosing a color from the provided color palette. &#xA;`position` - place the subtitle at the `bottom` or `top`. The `top` is the default if the property is not specified in the YAML.               |
 | `title`           | `value` - can add text, string or an expression to show as the title, which is visible under the progress-bar.&#xA;`align` - `center`, `left` and `right` alignment with the default as `center` if the property is not specified in the YAML.&#xA;`color` - specify the color for the title text by choosing a color from the provided color palette. &#xA;`position` - place the title at the `bottom` or `top` of the progress-bar. The `top` is the default if the property is not specified in the YAML. |
 
-| ### Actions |                                                                                                                                                                                                           |
+| ### Actions |                                                                                                    |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onPress`   | Choose from the provided list of available actions, for example, use the `go-to` action to open a different jig. The action is triggered when the progress-bar is pressed; e.g., navigate to another jig. |
 
@@ -46,21 +46,21 @@ Some properties are common to all components, see [Common component properties](
 - The title, subtitle, and bar can use a `color` property. Ensure the property is added at the correct YAML level for each.
 - The `component.progress-bar` can only be used on a `jig.default`.
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Progress bar with title and subtitle
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eA95E59FNaw43UiZXEPXA_pbar-titlesubtitlel.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eA95E59FNaw43UiZXEPXA_pbar-titlesubtitlel.PNG" size="80" width="1240" height="2500" position="center" caption="Title & Subtitle configurations" alt="Title & Subtitle configurations"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eA95E59FNaw43UiZXEPXA_pbar-titlesubtitlel.PNG" size="80" position="center" caption="Title & Subtitle configurations" alt="Title & Subtitle configurations"}
 :::
 
 :::VerticalSplitItem
-This example shows the different ways the `title` and `subtitle` can be configured using `position`, `color` and `alignment`.&#x20;
+This example shows the different ways the `title` and `subtitle` can be configured using `position`, `color` and `alignment`.
 
 **Example:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar" target="_blank">GitHub</a>.&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar).
 
 
 :::
@@ -139,11 +139,11 @@ progress-bar-title-subtitle.jigx
 You can use the `helperText` property to provide a tip or hint to help users read the progress-bar. Use the `errorText` to show an error or negative text at the bottom of the progress-bar. In this example, the `errorText` is used to show that there has been no progress made.
 
 **Example:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-error-helper.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-error-helper.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5Z-7WeMNUx7rKF8-wPlIq_pbar-hetextl.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5Z-7WeMNUx7rKF8-wPlIq_pbar-hetextl.PNG" size="80" width="1240" height="2500" position="center" caption="Error and Helper text" alt="Error and Helper text"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5Z-7WeMNUx7rKF8-wPlIq_pbar-hetextl.PNG" size="80" position="center" caption="Error and Helper text" alt="Error and Helper text"}
 :::
 ::::
 
@@ -193,14 +193,14 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoNceOmjQ1FfCmWR2Wf3b_pbar-colorl.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoNceOmjQ1FfCmWR2Wf3b_pbar-colorl.PNG" size="80" width="1240" height="2500" position="center" caption="Progress bar colors" alt="Progress bar colors"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoNceOmjQ1FfCmWR2Wf3b_pbar-colorl.PNG" size="80" position="center" caption="Progress bar colors" alt="Progress bar colors"}
 :::
 
 :::VerticalSplitItem
 In this example we change the `color` of the bar, break the bar up by using `steps` and change the thickness of the bar using the `size` property.
 
 **Example:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-color.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-color.jigx).
 :::
 ::::
 
@@ -256,11 +256,11 @@ children:
 The progress-bar can be sized from a thin (`tiny`) to extra thick (`extra-large`) bar using the `size` property. No color is used in this example so the default color black is used.
 
 **Example:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-size.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-size.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mNOMbWsZNebw_4O9Ws--4_pb-sizel.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mNOMbWsZNebw_4O9Ws--4_pb-sizel.PNG" size="80" width="1240" height="2500" position="center" caption="Progess-bar sizes" alt="Progess-bar sizes"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mNOMbWsZNebw_4O9Ws--4_pb-sizel.PNG" size="80" position="center" caption="Progess-bar sizes" alt="Progess-bar sizes"}
 :::
 ::::
 
@@ -322,14 +322,14 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rW68pWlspMXujseDLvuO-_cc-progbar-steps.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rW68pWlspMXujseDLvuO-_cc-progbar-steps.PNG" size="80" width="1240" height="2500" position="center" caption="Progress-bar with various steps" alt="Progress-bar with various steps"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rW68pWlspMXujseDLvuO-_cc-progbar-steps.PNG" size="80" position="center" caption="Progress-bar with various steps" alt="Progress-bar with various steps"}
 :::
 
 :::VerticalSplitItem
 The progress-bar can be shown as a continous bar or broken up into  segments. Use the `step` property to determine the number of segments required. The larger the number of steps, the smaller the segments as shown in the bars on the left.
 
 **Example:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-steps.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-steps.jigx).
 :::
 ::::
 
@@ -389,10 +389,10 @@ children:
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-In this example the `onPress` property uses the `action.set-state` set to `true`. When the progress-bar is pressed the state is evaluated in the `when` property of the `component.image`, which then shows the image.&#x20;
+In this example the `onPress` property uses the `action.set-state` set to `true`. When the progress-bar is pressed the state is evaluated in the `when` property of the `component.image`, which then shows the image.
 
 **Example:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-onpress.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-onpress.jigx).
 :::
 
 :::VerticalSplitItem
@@ -437,7 +437,7 @@ onRefresh:
 :::::
 
 :::::ExpandableHeading
-### Dynamic Progress bar&#x20;
+### Dynamic Progress bar
 
 ::::VerticalSplit{layout="right"}
 :::VerticalSplitItem
@@ -448,7 +448,7 @@ onRefresh:
 This example shows how the `component.progress-bar `steps are dynamically updated when the list-item checkbox is selected. The `errorText` property and the `helperText` property are dynamically changed using an expression.
 
 **Example:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-dynamic.jigx).
 :::
 ::::
 

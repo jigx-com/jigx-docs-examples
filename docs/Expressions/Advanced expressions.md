@@ -11,7 +11,7 @@ Use [Advanced Expressions]() to filter an array of records to display specific d
 
 ### Create a filtered list from an array of records
 
-We will display a list of people from the array of records, then filter them and display those that have entered a name. We will display their initials as a left avatar and add a label to each list item to display whether they are registered.&#x20;
+We will display a list of people from the array of records, then filter them and display those that have entered a name. We will display their initials as a left avatar and add a label to each list item to display whether they are registered.
 
 :::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
@@ -21,7 +21,7 @@ We will display a list of people from the array of records, then filter them and
 :::
 
 ::::VerticalSplitItem
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/samples/jigx-samples/jigs/guide-advanced-expressions/static-data/advanced-expressions-list.jigx" target="_blank">GitHub.</a>
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/samples/jigx-samples/jigs/guide-advanced-expressions/static-data/advanced-expressions-list.jigx)
 
 :::CodeblockTabs
 advanced-expression.jigx
@@ -101,7 +101,7 @@ As part of advanced expressions, you can define functions that will run the expr
 ::::VerticalSplitItem
 This example shows a simple function that will divide the number from the datasource.
 
-See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-advanced-expressions/static-data/advanced-expressions-list.jigx" target="_blank">GitHub</a>.
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-advanced-expressions/static-data/advanced-expressions-list.jigx).
 
 :::CodeblockTabs
 advanced-expression.jigx

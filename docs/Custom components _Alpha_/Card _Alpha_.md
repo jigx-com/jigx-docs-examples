@@ -7,21 +7,21 @@ updatedAt: Wed Mar 05 2025 19:53:32 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="danger"}
-This feature is currently in its **Alpha **stage of development.&#x20;
+This feature is currently in its **Alpha **stage of development.
 
-- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.&#x20;
-- In this phase, the feature may contain bugs or behave unpredictably.&#x20;
-- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.&#x20;
+- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
+- In this phase, the feature may contain bugs or behave unpredictably.
+- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
 :::
 
-The *card* component adds context or highlights information in the jig. The card itself is a container with integrated padding, background, and row rules, meaning every component placed in the card will be represented as a separate row with spaces between the rows.&#x20;
+The *card* component adds context or highlights information in the jig. The card itself is a container with integrated padding, background, and row rules, meaning every component placed in the card will be represented as a separate row with spaces between the rows.
 
-For steps on creating a custom component, see [How to create a custom component](<./../Custom components _Alpha_.md>).&#x20;
+For steps on creating a custom component, see [How to create a custom component](<./../Custom components _Alpha_.md>).
 
 ## Configuration options
 
-You can use `when` and `instanceId` with `component.card`, add the properties before the `options` property. The available list of options is shown below. &#x20;
+You can use `when` and `instanceId` with `component.card`, add the properties before the `options` property. The available list of options is shown below.
 
 | **Options** | **Value**                                                                                                                           |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -33,30 +33,30 @@ You can use `when` and `instanceId` with `component.card`, add the properties be
 
 ## Considerations
 
-- The card component has predefined behavior for its children, ensuring the children's components, such as images, are flexible by default.&#x20;
+- The card component has predefined behavior for its children, ensuring the children's components, such as images, are flexible by default.
 - The [View (Alpha)](<./View _Alpha_.md>) component combined with the card enables the precision of the layout design. For example, the view can be used to create rows to contain cards and provide spacing between the cards.
-- When using `component.image` on custom components, the `isFlexible` property is available. If the property is set to `true` the image will take the parent's space. If the parent has zero height or zero width, the image will not render. It would be best if you decided either to set the `height` and `width` on the image or set `isFlexible` to `true`.&#x20;
+- When using `component.image` on custom components, the `isFlexible` property is available. If the property is set to `true` the image will take the parent's space. If the parent has zero height or zero width, the image will not render. It would be best if you decided either to set the `height` and `width` on the image or set `isFlexible` to `true`.
 - The recommended approach when using `component.image` is to use [component view](<./View _Alpha_.md>) as a wrapper component with a defined `height,` e.g., 100, and setting `isFlexible: true` for each image. This allows the images to grow into the parent component space.
 - By default, `children` components are stacked in a column.
 
 ## Example and code snippets
 
 :::::ExpandableHeading
-### Card&#x20;
+### Card
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 This example shows a basic `component.card` containing a `component.image`.  A `component.view` is used to create the layout of a row under the card containing the `icons`, and `text` components.
 
-**Examples: **
+**Examples:**
 
-1. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/components/templates/cards/card2.jigx" target="_blank">GitHub</a>.
-2. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-example2.jigx" target="_blank">GitHub</a>.
+1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/components/templates/cards/card2.jigx).
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-example2.jigx).
 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xu6plj0_UXQr2p6ZU0A9b-20241113-134242.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xu6plj0_UXQr2p6ZU0A9b-20241113-134242.png" size="70" width="1224" height="2466" position="center" caption="Card with icon & text" alt="Card with icon & text"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xu6plj0_UXQr2p6ZU0A9b-20241113-134242.png" size="70" position="center" caption="Card with icon & text" alt="Card with icon & text"}
 :::
 ::::
 
@@ -160,15 +160,15 @@ children:
 :::VerticalSplitItem
 This example shows creating a custom component using the `card` and `image` components. The `view` component creates the screen layout of columns and rows.
 
-**Examples:**&#x20;
+**Examples:**
 
-1. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cards-images.jigx" target="_blank">GitHub</a>.
-2. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/components/templates/cards/cards-images.jigx" target="_blank">GitHub</a>.
+1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cards-images.jigx).
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/components/templates/cards/cards-images.jigx).
 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-yVUEECMv8rR-zpnchQuul-20241113-134635.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-yVUEECMv8rR-zpnchQuul-20241113-134635.png" size="70" width="1224" height="2466" position="center" caption="Cards with images" alt="Cards with images"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-yVUEECMv8rR-zpnchQuul-20241113-134635.png" size="70" position="center" caption="Cards with images" alt="Cards with images"}
 :::
 ::::
 
@@ -472,14 +472,14 @@ children:
 :::VerticalSplitItem
 This example shows how to use the `component.card` in a `component.list`. In the card is an `image` and `view` component. the `view` is used to create the layout positions for the `icon`, `text,` and `button` components below the `image`.
 
-**Examples: **
+**Examples:**
 
-1. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cards-list.jigx" target="_blank">GitHub</a>.
-2. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-in-list.jigx" target="_blank">GitHub</a>.
+1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cards-list.jigx).
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-in-list.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Jpza9g4DzeGCJooR4iHUD-20241113-140257.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Jpza9g4DzeGCJooR4iHUD-20241113-140257.png" size="70" width="1224" height="2466" position="center" caption="List of cards" alt="List of cards"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Jpza9g4DzeGCJooR4iHUD-20241113-140257.png" size="70" position="center" caption="List of cards" alt="List of cards"}
 :::
 ::::
 
@@ -600,16 +600,16 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CBewb4RUcoflmgy-4DNmY-20241113-140607.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CBewb4RUcoflmgy-4DNmY-20241113-140607.png" size="70" width="1224" height="2466" position="center" caption="Chart in a card" alt="Chart in a card"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CBewb4RUcoflmgy-4DNmY-20241113-140607.png" size="70" position="center" caption="Chart in a card" alt="Chart in a card"}
 :::
 
 :::VerticalSplitItem
 This example demonstrates how to show a `line-chart` component in a `component.card`. Take note of how the layout configuration is created by using the `component.view` multiple times and even inside another `component.view`. In the jig configuration `inputs` are required for the chart in the custom component to reference the datasource.
 
-**Examples: **
+**Examples:**
 
-1. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cards-chart.jigx" target="_blank">GitHub</a>.
-2. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-example3.jigx" target="_blank">GitHub</a>.
+1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cards-chart.jigx)
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-example3.jigx).
 :::
 ::::
 
@@ -855,18 +855,18 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example demonstrates how to use the `view` component to create the row layout for multiple `card` components to create three cards displayed horizontally.&#x20;
+This example demonstrates how to use the `view` component to create the row layout for multiple `card` components to create three cards displayed horizontally.
 
-Take note of how the layout configuration is created by using the `view` component multiple times and even inside the `card` to create the correct layout for the `icon` and `text` components.&#x20;
+Take note of how the layout configuration is created by using the `view` component multiple times and even inside the `card` to create the correct layout for the `icon` and `text` components.
 
-**Examples: **
+**Examples:**
 
-1. See the *custom component* example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cards.jigx" target="_blank">GitHub</a>.
-2. See the *jig* example in <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards3.jigx" target="_blank">GitHub</a>.
+1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cards.jigx).
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards3.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-0BkXyptpToSajxceBFq8L-20241113-141922.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-0BkXyptpToSajxceBFq8L-20241113-141922.png" size="70" width="1224" height="2466" position="center" caption="Multiple cards shown horizontally" alt="Multiple cards shown horizontally"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-0BkXyptpToSajxceBFq8L-20241113-141922.png" size="70" position="center" caption="Multiple cards shown horizontally" alt="Multiple cards shown horizontally"}
 :::
 ::::
 
@@ -1013,15 +1013,15 @@ children:
 :::ExpandableHeading
 ### Other card examples
 
-Explore a variety of additional code examples demonstrating the use of the card component on <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/templates/cards" target="_blank">GitHub</a>. These examples showcase different configurations and use cases to help you get the most out of the card component.
+Explore a variety of additional code examples demonstrating the use of the card component on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/templates/cards). These examples showcase different configurations and use cases to help you get the most out of the card component.
 
-- <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-example1.jigx" target="_blank">Card Example 1</a>
-- <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/card-with-graph.jigx" target="_blank">Cards with graph</a>
-- <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/flip-cards.jigx" target="_blank">Cards-Flip</a>
-- <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-next-step.jigx" target="_blank">Cards Next Step</a>
-- <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards2.jigx" target="_blank">Cards (Two)</a>
-- <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-case-actions.jigx" target="_blank">Cards with Case Actions</a>
-- <a href="https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-case-actions1.jigx" target="_blank">Cards with Case Actions 1</a>
+- [Card Example 1](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-example1.jigx)
+- [Cards with graph](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/card-with-graph.jigx)
+- [Cards-Flip](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/flip-cards.jigx)
+- [Cards Next Step](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-next-step.jigx)
+- [Cards (Two)](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards2.jigx)
+- [Cards with Case Actions](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-case-actions.jigx)
+- [Cards with Case Actions 1](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-case-actions1.jigx)
 
 
 

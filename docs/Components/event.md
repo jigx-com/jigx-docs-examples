@@ -8,31 +8,31 @@ updatedAt: Mon Nov 04 2024 08:50:01 GMT+0000 (Coordinated Universal Time)
 
 The component can only be used in the [jig.calendar](<./../Jig Types/jig_calendar.md>) to display events related to data records. All events have a start and end date. Additional elements can be added, such as people attending the event or where the event will take place.
 
-## ****Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ### Core structure |                                                                                                                               |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `from`             | Configure the starting time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;For more information about the setting of the date format/ time zones, refer to [Expressions - cheatsheet](). |
 | `to`               | Configure the ending time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;For more information about the setting of the date format/ time zones, refer to [Expressions - cheatsheet]().   |
-| `title`            | Provide the name of the event.                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `title`            | Provide the name of the event.          |
 
-| ### Other options | ****                                                                                                                                                                                                                                                                                                                                              |
+| ### Other options |                    |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `description`     | The general description of the event.                                                                                                                                                                                                                                                                                                             |
-| `location`        | The event's location, for example, a meeting room or conference center.                                                                                                                                                                                                                                                                           |
-| `people`          | The list of invitees/attendees for the event. Use an expression to configure the property, for example, &#xA;`people: =@ctx.current.item.attendees.emailAddress`.                                                                                                                                                                                 |
+| `description`     | The general description of the event.    |
+| `location`        | The event's location, for example, a meeting room or conference center.              |
+| `people`          | The list of invitees/attendees for the event. Use an expression to configure the property, for example, &#xA;`people: =@ctx.current.item.attendees.emailAddress`.                          |
 | `tags`            | Displays a list of `tags` for the event, such as meeting, interview, or social. The `tags` array can contain the *color* and *title* for each tag. &#xA;`"=[{'title': @ctx.current.item.type, 'color': @ctx.current.item.color}]"`&#xA;or define the tag in a datasource whihc is referenced in the property.&#xA;`tags: =@ctx.current.item.tags` |
 
 Certain actions can be executed on the event; for example, when pressing on the event opens the URL of the advertised event.
 
-| ### Actions     | ****                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ### Actions     |                                                          |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onButtonPress` | You can set any action in this property just like in the `onPress` property. The difference is that if only `onButtonPress` is configured, after pressing on the event, a modal window with the event's details opens. The modal contains a button for the action configured in the `onButtonPress` property. When `isHidden` is used with `when:false` , the `isHidden` property is automatically overwritten on the mobile device and set to `isHidden:true` and the button automatically hides. |
-| `onPress`       | When pressing on the event an action executes. Use IntelliSense to select an action or refer to the list of available [Actions](./../Actions.md). When the `onPress` is configured, the `onButtonPress` configuration is ignored.                                                                                                                                                                                                                                                                  |
+| `onPress`       | When pressing on the event an action executes. Use IntelliSense to select an action or refer to the list of available [Actions](./../Actions.md). When the `onPress` is configured, the `onButtonPress` configuration is ignored.                                         |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Event of meeting
@@ -45,13 +45,13 @@ Certain actions can be executed on the event; for example, when pressing on the 
 :::VerticalSplitItem
 The jig displays the event on the calendar. We immediately see what time the meeting will take place, where it will take place and which people will attend.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/static-data/event-of-meeting/event-of-meeting.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-of-meeting/event-of-meeting-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/static-data/event-of-meeting/event-of-meeting.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-of-meeting/event-of-meeting-dynamic.jigx).
 
-**Datasources:
-**See the full datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-training.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-training-dynamic.jigx" target="_blank">GitHub</a>. &#x20;
+**Datasources**:
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-training.jigx)
+See the full datasource for dynamic data in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-training-dynamic.jigx)
 :::
 ::::
 
@@ -168,13 +168,13 @@ options:
 :::VerticalSplitItem
 The jig displays a multi-day event on the calendar
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/static-data/multi-day-event/multi-day-event.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/multi-day-event/multi-day-event-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/static-data/multi-day-event/multi-day-event.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/multi-day-event/multi-day-event-dynamic.jigx).
 
-**Datasources:
-**See the full datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-vacation.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-vacation-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasources**:
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-vacation.jigx).
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-vacation-dynamic.jigx).
 
 
 :::
@@ -263,12 +263,12 @@ options:
 
 The jig displays an event on the calendar with actions on the main screen or in the detail of the event.
 
-**Examples:
-**See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/event-with-action.jigx" target="_blank">GitHub</a>.&#x20;
-See also the supporting files <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/create-event.jigx" target="_blank">create event</a> and <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/add-event-user.jigx" target="_blank">add event users</a> in GitHub.
+**Examples**:
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/event-with-action.jigx).
+See also the supporting files [create event](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/create-event.jigx) and [add event users](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/add-event-user.jigx) in GitHub.
 
-**Datasource:
-**See the full datasource using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/calendar-data-dynamic.jigx" target="_blank">GitHub</a>.
+**Datasource**:
+See the full datasource using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/calendar-data-dynamic.jigx).
 
 :::CodeblockTabs
 event-with-action.jigx

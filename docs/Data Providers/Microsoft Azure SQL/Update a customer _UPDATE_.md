@@ -7,24 +7,24 @@ updatedAt: Tue Nov 05 2024 11:40:00 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="warning"}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information. &#x20;
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information.
 :::
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 ## **Scenario**
 
-This example uses a default jig with a form that executes an SQL command to update a customer record.&#x20;
+This example uses a default jig with a form that executes an SQL command to update a customer record.
 
 ## **Resources**
 
-- Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<./Database Scripts.md>).&#x20;
-- [Configuring the SQL Connection]() &#x20;
+- Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<./Database Scripts.md>).
+- [Configuring the SQL Connection]()
 - This sample depends on [List a single customer (SELECT)](<./List a single customer _SELECT_.md>).
 
 ## Jigx Code
 
-The Azure SQL Docs solution is on <a href="https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs" target="_blank">GitHub.</a>
+The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs)
 :::
 
 :::VerticalSplitItem
@@ -35,7 +35,7 @@ The Azure SQL Docs solution is on <a href="https://github.com/jigx-com/jigx-samp
 ## How it works
 
 - The `execute-entity` action allows you to specify the function parameters and their values, as well as the data properties for the SQLite table. You have more granular control over the values being saved and can include expressions. The example below uses an `execute- entity` action and maps both the parameters of the jig function and the SQLite data in the action's configuration.
-- To improve the user experience, data displayed after it has been created or updated should be updated in the local SQLite database and the backend SQL system at the same action.&#x20;
+- To improve the user experience, data displayed after it has been created or updated should be updated in the local SQLite database and the backend SQL system at the same action.
 - If the data is only submitted to the backend system, it must be synced back to the device before the local tables are updated, and the information can be displayed. This can cause a significant lag and latency in the user's experience. 
 - The example below updates the data in Azure SQL and the SQLite database on the device when the user presses the Save button. This is the best practice for building responsive user experiences when working with remote data. See the [Data lifecycles in Jigx]() section of the documentation for a detailed explanation.
 
@@ -186,7 +186,7 @@ parameters:
 ### Modify the view customer jig
 
 - The viewCustomers.jigx file must be modified to include a jig-level action, adding the **Edit a customer** button. When pressing the action button at the bottom of the viewCustomers jig, Jigx will navigate to the editCustomer jig.
-- The** **customer's id** **is used as a parameter in the `GoTo` action. The `custId `parameter is passed to the viewCustomer jig.&#x20;
+- The **customer's id** **is used as a parameter in the `GoTo` action. The `custId `parameter is passed to the viewCustomer jig.
 
 :::CodeblockTabs
 listCustomers.jigx
@@ -323,7 +323,7 @@ actions:
 ### The update customer jig
 
 - Use an `execute-entity` action to submit the values of the components to the function to update Azure SQL and to save the new customer to the local SQLite database.
-- When the `execute-entity` action type is used to save the values of the controls on a form, the form is unaware of the saved state, and **isDiscardChangesAlertEnabled** needs to be set to `false` to avoid seeing the dialog even when data has been saved.&#x20;
+- When the `execute-entity` action type is used to save the values of the controls on a form, the form is unaware of the saved state, and **isDiscardChangesAlertEnabled** needs to be set to `false` to avoid seeing the dialog even when data has been saved.
 - Set the components on the form's value properties to the values from the `mydata` data source to display the existing values of the customer.
 
 :::CodeblockTabs
