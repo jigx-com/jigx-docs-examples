@@ -33,14 +33,7 @@ Here is a list of all actions and the category type the action forms part of.
 |            |                                                                                                                                  | [reset-state](./Actions/reset-state.md)                                                                                                                                                       |
 | Grouping   | Multiple actions can be grouped to run with a single user interaction. The actions can be run sequentially or executed in bulk.  | [action-list](./Actions/action-list.md)                                                                                                                                                       |
 | Display    | Action used to display a modal or popup containing a message.                                                                    | [confirm](./Actions/confirm.md)&#xA;[info-modal](./Actions/info-modal.md)                                                                                                                     |
-| Events     | Actions that execute after a user or device performs a trigger.                                                                  | - onRefresh
-- onFocus
-- onPress
-- onLoad (only on index.jigx)
-- onChange
-- onDelete
-- onButtonPress (only on calendar jigs)
-- [onTableChange](./Events/onTableChange.md) (only on index.jigx) |
+| Events     | Actions that execute after a user or device performs a trigger.      | - onRefresh<br />- onFocus<br />- onPress<br />- onLoad (only on index.jigx)<br />- onChange<br />- onDelete<br />- onButtonPress (only on calendar jigs)<br />- [onTableChange](./Events/onTableChange.md) (only on index.jigx) |
 
 
 

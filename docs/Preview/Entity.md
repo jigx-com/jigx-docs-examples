@@ -6,23 +6,23 @@ createdAt: Tue Feb 14 2023 10:08:30 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Mar 04 2025 11:09:24 GMT+0000 (Coordinated Universal Time)
 ---
 
-The entity component allows the user to use entity (sections, field-rows and entity-fields) as the preview content.&#x20;
+The entity component allows the user to use entity (sections, field-rows and entity-fields) as the preview content.
 
 :::::ExpandableHeading
 ### Long-press on a widget
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pFMGQ2qp9ZXaJAlHKv_oa_img7944iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pFMGQ2qp9ZXaJAlHKv_oa_img7944iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pFMGQ2qp9ZXaJAlHKv_oa_img7944iphone13blueportrait.png" size="80" position="center" caption}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6cHqtuQMe8YvODmv628Rw_img7945iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6cHqtuQMe8YvODmv628Rw_img7945iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6cHqtuQMe8YvODmv628Rw_img7945iphone13blueportrait.png" size="80" position="center" caption}
 :::
 ::::
 
 This example displays a preview after long-pressing the widget
-See the full example on <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/entity/entity-longpress-widget.jigx" target="_blank">GitHub</a>.&#x20;
+See the full example on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/entity/entity-longpress-widget.jigx).
 
 :::CodeblockTabs
 entity-longpress-widget
@@ -95,11 +95,11 @@ preview:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pd2CYId_2vh5WW2Uk7OtI_img7947iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pd2CYId_2vh5WW2Uk7OtI_img7947iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Long-press onPress" alt="Long-press onPress"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pd2CYId_2vh5WW2Uk7OtI_img7947iphone13blueportrait.png" size="80" position="center" caption="Long-press onPress" alt="Long-press onPress"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g6YrQTptI9s81ccn4V5_D_img7948iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g6YrQTptI9s81ccn4V5_D_img7948iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Long-press onPress" alt}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g6YrQTptI9s81ccn4V5_D_img7948iphone13blueportrait.png" size="80" position="center" caption="Long-press onPress" alt}
 :::
 ::::
 
@@ -107,11 +107,11 @@ This example displays a preview after long-pressing the list-item on the widget
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SIUSRSP20autIJsntlFBk_img7949iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SIUSRSP20autIJsntlFBk_img7949iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption alt="Long-press onPress"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SIUSRSP20autIJsntlFBk_img7949iphone13blueportrait.png" size="80" position="center" caption alt="Long-press onPress"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O8Q4knLTs6Ph0-Jm4iYMC_img7950iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O8Q4knLTs6Ph0-Jm4iYMC_img7950iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption alt="Long-press onPress"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O8Q4knLTs6Ph0-Jm4iYMC_img7950iphone13blueportrait.png" size="80" position="center" caption alt="Long-press onPress"}
 :::
 ::::
 
@@ -119,7 +119,7 @@ This example displays a preview after long-pressing the list-item in the jig. It
 
 As you can see in the code snippet, the original list doesn't include the preview. Our onPress action allows us to use the preview that is included in the detail jig.
 
-See the full examples of <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/entity/entity-longpress-onPress.jigx" target="_blank">LongPress onPress</a> and <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/entity/entity-detail.jigx" target="_blank">entity-detail</a> in GitHub.
+See the full examples of [LongPress onPress](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/entity/entity-longpress-onPress.jigx) and [entity-detail](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/entity/entity-detail.jigx) in GitHub.
 
 :::CodeblockTabs
 entity-longpress-onPress
@@ -288,13 +288,13 @@ preview:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8AC46n2hv_cJz5EWmcOcz_img7957iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8AC46n2hv_cJz5EWmcOcz_img7957iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8AC46n2hv_cJz5EWmcOcz_img7957iphone13blueportrait.png" size="80" position="center" caption}
 
 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KHyBx7y0vC9qwqUWHfdDW_img7958iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KHyBx7y0vC9qwqUWHfdDW_img7958iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KHyBx7y0vC9qwqUWHfdDW_img7958iphone13blueportrait.png" size="80" position="center" caption}
 :::
 ::::
 
@@ -302,17 +302,17 @@ This example displays a preview after long-pressing the event in the Calendar ji
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xc032ktvr1DGe43CwA7Vz_img7959iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xc032ktvr1DGe43CwA7Vz_img7959iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xc032ktvr1DGe43CwA7Vz_img7959iphone13blueportrait.png" size="80" position="center" caption}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Uap-P2OR6R5O9qQIEC8E_img7960iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Uap-P2OR6R5O9qQIEC8E_img7960iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Uap-P2OR6R5O9qQIEC8E_img7960iphone13blueportrait.png" size="80" position="center" caption}
 :::
 ::::
 
 This example displays a preview after long-pressing the event in the Calendar jig (on the event)
 
-See the full example of <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/entity/entity-longpress-calendar.jigx" target="_blank">entity longpress</a> and <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/entity/entity-calendar-detail.jigx" target="_blank">entity-calendar-detail</a> in GitHub.
+See the full example of [entity longpress](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/entity/entity-longpress-calendar.jigx) and [entity-calendar-detail](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/entity/entity-calendar-detail.jigx) in GitHub.
 
 :::CodeblockTabs
 entity-longpress-on-calendar

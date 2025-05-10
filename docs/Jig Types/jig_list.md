@@ -19,82 +19,56 @@ Use the `jig.list` to create a list from a datasource and style that list to you
 ## Considerations
 
 - This jig type is similar to the component List, with the only exception that [list components](./../Widgets/list.md) is a component that you use on a [Default jig](./jig_default.md) with other items, whereas the [List jig]() is a jig dedicated to a list only.
-- Each item in a list can be called individually through indexing. Lists are a compound data type made up of smaller parts and are very flexible because they can have values added, removed, and changed.&#x20;
+- Each item in a list can be called individually through indexing. Lists are a compound data type made up of smaller parts and are very flexible because they can have values added, removed, and changed.
 - When you need to store a lot of values or iterate over values, and you want to be able to readily modify those values, you’ll likely want to work with list data types.
 - Each element or value inside a list is called an item.
-- A `jig.list` component allows for a few configuration options and is automatically added as a list on a widget if the sizing of the widget exceeds 1x1. See the [list](./../Components/list.md) for information on the list widget. This component can also be added to a `jig.default` where the [list](./../Widgets/list.md) component is configured along with other content or components.&#x20;
+- A `jig.list` component allows for a few configuration options and is automatically added as a list on a widget if the sizing of the widget exceeds 1x1. See the [list](./../Components/list.md) for information on the list widget. This component can also be added to a `jig.default` where the [list](./../Widgets/list.md) component is configured along with other content or components.
 
-## ****Configuration options****
+## Configuration options
 
 The `jig.list` can be configured in the following ways within the Jigx Builder:
 
 - As a normal list (this is the main type - refer to the [list-item](./../Components/list/list-item.md)  component section for unique formatting options)
-- As a list with [expanders](./../Components/expander.md)&#x20;
+- As a list with [expanders](./../Components/expander.md)
 - As a list with [stages](./../Components/expander/stage.md)
 - As a list of [product-items](./../Components/list/product-item.md)
 - As a list shown as a [bar-chart](./../Components/charts/bar-chart.md)
-- As a list shown as a [pie-chart](./../Components/charts/pie-chart.md)&#x20;
+- As a list shown as a [pie-chart](./../Components/charts/pie-chart.md)
 
 Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
 
-| ### Other options | ****                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ### Other options | ****                                                                                                                                                                           |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `badge`           | Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:&#xA;-  To display as a red dot using the `empty` value.&#xA;-  A red dot with a number using an expression to perform a count. &#xA;For example, counting the number of tasks in the list.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `filter`          | `initialValue` - Predefine the default selected tab for a filter on the list, when opening the jig the default filter tab is displayed.&#xA;`data` -  define the filter tabs using:&#xA;- `title` - give the filter a name. The text that will be displayed in the tab, for example, in-stock.&#xA;- `value` - The value that the list filter returns. Use the following expressions to return this value:<br />* `=@ctx.components.my-list.state.filter` (for a list in a default jig)
-* `=@ctx.jig.state.filter `(for a list jig)<br />For `true/false` values that are saved as **boolean** ensure the filter has a **boolean** value.<br />For `true/false` values that are saved as **string** ensure the filter has a **string** value.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `hasActiveItem`   | When set to `true` the list has an active item state.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `isHorizontal`    | Set to `true` displays the list horizontally, while `false` displays the list vertically. The default list is displayed vertically.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `isContained`     | Used to style the list item, `true` wraps the list item in a card, while `false` displays the item with no styling. This property can be used with vertical and horizontal lists and `component.list-item`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `isSearchable`    | Set to `true` adds a search field to the list. The default list is displayed without a search field.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `isSelectable`    | When set to `true` the ability to select individual and multiple items in the list is available. Click the *Select *link in the top right of the screen. The default list is displayed without selection options.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `leftElement`     | Set an element to the left of the list. The following elements are available:<br />* `avatar`
-* `checkbox`
-* `icon`
-* `image`
-* `progress`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `rating`          | Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the `ratingIcon`, `color`, and accompanying descriptive `text`. By default, the rating property has only one icon showing a rating-star in the primary color.<br />* `value`- Rating with numerical value.
-  -  The value of the rating, which can be a simple number.
-  - The number of icons is calculated based on this value unless overridden in the icon configuration.
-  - Configuring the `current` and `maximum` values, shows the value as a fraction, for example 7/10.
-* `percentage` - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%.
-* `ratingIcon` - By default the *rating-star* icon in the *primary* color is displayed.
-  - `icon` - Add an icon to represent the rating. A list of icons is available. See [Jigx icons]() for more information.
-  - `color`- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in [Jigx color palette]().
-  - `current` and `maximum` values - Where maximum is the number of icons to display and current the number of icons to color.&#x20;
-* `text` - add descriptive text that displays next to rating.<br />Ratings can set up in the following ways: <br />1) Example of `value` for a product rating:&#xA;`rating:
+| `badge`           | Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:&#xA;-  To display as a red dot using the `empty` value.&#xA;-  A red dot with a number using an expression to perform a count. &#xA;For example, counting the number of tasks in the list.                      |
+| `filter`          | `initialValue` - Predefine the default selected tab for a filter on the list, when opening the jig the default filter tab is displayed.&#xA;`data` -  define the filter tabs using:&#xA;- `title` - give the filter a name. The text that will be displayed in the tab, for example, in-stock.&#xA;- `value` - The value that the list filter returns. Use the following expressions to return this value:<br />* `=@ctx.components.my-list.state.filter` (for a list in a default jig)<br />* `=@ctx.jig.state.filter `(for a list jig)<br />For `true/false` values that are saved as **boolean** ensure the filter has a **boolean** value.<br />For `true/false` values that are saved as **string** ensure the filter has a **string** value.                                                 |
+| `hasActiveItem`   | When set to `true` the list has an active item state.                      |
+| `isHorizontal`    | Set to `true` displays the list horizontally, while `false` displays the list vertically. The default list is displayed vertically.                                            |
+| `isContained`     | Used to style the list item, `true` wraps the list item in a card, while `false` displays the item with no styling. This property can be used with vertical and horizontal lists and `component.list-item`.                                                                         |
+| `isSearchable`    | Set to `true` adds a search field to the list. The default list is displayed without a search field.                                                                              |
+| `isSelectable`    | When set to `true` the ability to select individual and multiple items in the list is available. Click the *Select *link in the top right of the screen. The default list is displayed without selection options.                                                                      |
+| `leftElement`     | Set an element to the left of the list. The following elements are available:<br />* `avatar`<br />* `checkbox`<br />* `icon`<br />* `image`<br />* `progress`                                        |
+| `rating`          | Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the `ratingIcon`, `color`, and accompanying descriptive `text`. By default, the rating property has only one icon showing a rating-star in the primary color.<br />* `value`- Rating with numerical value.<br />-  The value of the rating, which can be a simple number.<br />- The number of icons is calculated based on this value unless overridden in the icon configuration.<br />- Configuring the `current` and `maximum` values, shows the value as a fraction, for example 7/10.<br />* `percentage` - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%.<br />* `ratingIcon` - By default the *rating-star* icon in the *primary* color is displayed.<br />- `icon` - Add an icon to represent the rating. A list of icons is available. See [Jigx icons]() for more information.<br />- `color`- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in [Jigx color palette]().<br />- `current` and `maximum` values - Where maximum is the number of icons to display and current the number of icons to color.<br />* `text` - add descriptive text that displays next to rating.<br />Ratings can set up in the following ways: <br />1) Example of `value` for a product rating:&#xA;`rating:
       value: 4.5
-      text: based on 1,200 reviews`&#x20;
-2) Example of a user rating shown in a `percentage`:&#xA;`rating:
+      text: based on 1,200 reviews`<br />2) Example of a user rating shown in a `percentage`:&#xA;`rating:
       percentage: 0.75
-      text: expectations exceeded`
-3) Example of `value` rating showing 2.5/5 as a rating with single star icon: &#xA;`rating:
+      text: expectations exceeded`<br />3) Example of `value` rating showing 2.5/5 as a rating with single star icon: &#xA;`rating:
       value:
          current: 2.5 
          maximum: 5 
       ratingIcon:
          icon: rating-star` |
-| `rightElement`    | Set an element to the right of the list. The following elements are available:<br />* `amountControl`
-* `badge` - can be a solid colored badge or a badge with a number in it. Badges  always use the primary color.
-* `button`
-* `checkbox`
-* `icon`
-* `switch`
-* `value`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `sections`        | Used for styling a list, when set to `true` each item in the list displays in its own section, divided by a line. The default is `false`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `tags`            | A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.<br />* `text` -  The text content displayed within the tag.
-* `color` - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in [Jigx color palette]().&#x20;<br />Tags can be set up in three ways: <br />1) Using a dynamic expression from a datasource:&#xA;`tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}`
-2) Using a dynamic expression from a list item:&#xA;`tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}`
-3) Using static, predefined tags&#xA;`tags:        - text: =@ctx.current.item.rating > 0.75 ? 'Great'
+| `rightElement`    | Set an element to the right of the list. The following elements are available:<br />* `amountControl`<br />* `badge` - can be a solid colored badge or a badge with a number in it. Badges  always use the primary color.<br />* `button`<br />* `checkbox`<br />* `icon`<br />* `switch`<br />* `value`             |
+| `sections`        | Used for styling a list, when set to `true` each item in the list displays in its own section, divided by a line. The default is `false`.                                         |
+| `tags`            | A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.<br />* `text` -  The text content displayed within the tag.<br />* `color` - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in [Jigx color palette]().&#x20;<br />Tags can be set up in three ways: <br />1) Using a dynamic expression from a datasource:&#xA;`tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}`<br />2) Using a dynamic expression from a list item:&#xA;`tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}`<br />3) Using static, predefined tags&#xA;`tags:        - text: =@ctx.current.item.rating > 0.75 ? 'Great'
            color: positive       - text: =@ctx.current.item.rating >= 0.5 ? 'Good'
            color: warning       - text: =@ctx.current.item.rating < 0.5 ? 'Bad'
-           color: negative`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+           color: negative`                                      |
 
 | ### State configuration | **Key**                                                                                                                                                         | **Notes**                                                                                                                                                                                 |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `=@ctx.jig.state.`      | activeItem&#xA;activeItemId&#xA;amounts&#xA;filter&#xA;isHorizontal&#xA;isRefreshing&#xA;isSelectable&#xA;isSelectActive&#xA;searchText&#xA;selected&#xA;value  | - State is set by the creator in the YAML.&#x20;
-- State applies to the jig                                                                                                               |
-| `=@ctx.current.state.`  | amount&#xA;checked                                                                                                                                              | * Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array. &#x20; |
-| `=@ctx.solution.state.` | activeItemId&#xA;now                                                                                                                                            | - Global state variable that can be used throughout the solution.                                                                                                                         |
+| `=@ctx.jig.state.`      | activeItem&#xA;activeItemId&#xA;amounts&#xA;filter&#xA;isHorizontal&#xA;isRefreshing&#xA;isSelectable&#xA;isSelectActive&#xA;searchText&#xA;selected&#xA;value  | - State is set by the creator in the YAML.<br />- State applies to the jig              |
+| `=@ctx.current.state.`  | amount&#xA;checked                                             | * Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array.  |
+| `=@ctx.solution.state.` | activeItemId&#xA;now                                          | - Global state variable that can be used throughout the solution.                       |
 
 ## Examples and code snippets 
 
@@ -113,16 +87,16 @@ The code below is an extract from the full *jigx-samples* solution. The code sni
 ::::VerticalSplitItem
 This example displays the list in its most basic form without any additional properties or elements configured. Scroll down for more examples of how you can implement lists.
 
-**Examples:
-**See the full code sample using static data <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-local.jigx" target="_blank">local</a> and <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-global.jigx" target="_blank">global </a>in GitHub.
-See the full code sample using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/dynamic-data/simple-list-dd.jigx" target="_blank">GitHub</a>.
+**Examples**:
+See the full code sample using static data [local](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-local.jigx) and [global](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-global.jigx) in GitHub.
+See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/dynamic-data/simple-list-dd.jigx).
 
-**Datasources:
-**See the full datasource code sample for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource code sample for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasources**:
+See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
+See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -221,7 +195,7 @@ This is a very basic example to guide you on the various styles available to you
 
 **Examples:**
 
-See the full example using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/list-with-styles-sd.jigx" target="_blank">static data</a> in GitHub.
+See the full example using [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/list-with-styles-sd.jigx) in GitHub.
 :::
 ::::
 
@@ -396,30 +370,30 @@ tabs:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/euImeOtjJPJyRBl7vaWB2_cxm2r026lekr6luqt2yaexpander-list2iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/euImeOtjJPJyRBl7vaWB2_cxm2r026lekr6luqt2yaexpander-list2iphone13blueportrait.png" size="82" width="1570" height="2932" position="center" caption="List with expander" alt="List with expander"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/euImeOtjJPJyRBl7vaWB2_cxm2r026lekr6luqt2yaexpander-list2iphone13blueportrait.png" size="82"  position="center" caption="List with expander" alt="List with expander"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/y6ucddAuEX8iWobs7D0UP_ievh5q0gqyaymx-zhxfwzexpander-list1iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/y6ucddAuEX8iWobs7D0UP_ievh5q0gqyaymx-zhxfwzexpander-list1iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="List with expander" alt="List with expander"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/y6ucddAuEX8iWobs7D0UP_ievh5q0gqyaymx-zhxfwzexpander-list1iphone13blueportrait.png" size="80"  position="center" caption="List with expander" alt="List with expander"}
 :::
 ::::
 
-This example shows a list of Expanders that have used `titles` component as the header element.&#x20;
+This example shows a list of Expanders that have used `titles` component as the header element.
 
 Expanders are ideal for displaying additional information without having to navigate away to another page.
 
 **Examples:**
 
-See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-expander-title-sd.jigx" target="_blank">static data</a> in GitHub.
-See the full code sample  using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-expander-title-dd.jigx" target="_blank">dynamic data</a> in GitHub.&#x20;
+See the full code sample using [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-expander-title-sd.jigx) in GitHub.
+See the full code sample  using [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-expander-title-dd.jigx)
 
 **Datasources:**
 
-See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/expander-on-list.jigx" target="_blank">static data</a> in GitHub.&#x20;
-See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/expander-on-list-dynamic.jigx" target="_blank">dynamic data</a> in Github.&#x20;
+See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/expander-on-list.jigx).
+See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob0/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/expander-on-list-dynamic.jigx) in Github.
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for employees. You can use the employees.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/employees.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for employees. You can use the employees.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/employees.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 
 :::CodeblockTabs
@@ -537,16 +511,16 @@ This is very often used in the header component of the expander. See the list ex
 
 **Examples:**
 
-See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-stage-sd.jigx" target="_blank">static data </a>in GitHub.
-See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-stage-dd.jigx" target="_blank">dynamic data</a> in GitHub.&#x20;
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-stage-sd.jigx) in GitHub.
+See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-stage-dd.jigx) in GitHub.
 
 **Datasource:**
 
-See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-static.jigx" target="_blank">static data</a> in GitHub. &#x20;
-See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-dynamic.jigx" target="_blank">dynamic data</a> in GitHub.
+See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-static.jigx) in GitHub.
+See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-dynamic.jigx) in GitHub.
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for flight-schedule. You can use the flight-schedule.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/flight-schedule.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for flight-schedule. You can use the flight-schedule.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/flight-schedule.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -658,20 +632,20 @@ tabs:
 :::
 
 ::::VerticalSplitItem
-This example displays the built-in functionality of displaying product items in a way that allows for impact yet does not require intricate setups.&#x20;
+This example displays the built-in functionality of displaying product items in a way that allows for impact yet does not require intricate setups.
 
 **Examples:**
 
-See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-product-item-sd.jigx" target="_blank">static data</a> in GitHub.
-See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-product-item-dd.jigx" target="_blank">dynamic data</a> in GitHub.
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-product-item-sd.jigx) in GitHub.
+See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-product-item-dd.jigx) in GitHub.
 
 **Datasource:**
 
-See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products.jigx" target="_blank">static data</a> in GitHub.&#x20;
-See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products-dynamic.jigx" target="_blank">dynamic data</a> in GitHub.&#x20;
+See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products.jigx) in GitHub.
+See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products-dynamic.jigx) in GitHub.
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for products. You can use the products.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/products.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for products. You can use the products.csv file in <[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/products.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -762,7 +736,7 @@ tabs:
 
 :::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{alt="List with avatars" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bM2-7a1aTMnGq8rXZwkK0_listwithavatarsdd.PNG" size="78" width="1240" height="2500" caption="List with avatars" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YD9OGieshrDOYVQDGXtsz_listwithavatarsdd.PNG" position="center" darkWidth="1240" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bM2-7a1aTMnGq8rXZwkK0_listwithavatarsdd.PNG" darkHeight="2500"}
+::Image[]{alt="List with avatars" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bM2-7a1aTMnGq8rXZwkK0_listwithavatarsdd.PNG" size="78" width="1240" height="2500" caption="List with avatars" position="center"}
 
 
 :::
@@ -770,16 +744,15 @@ tabs:
 ::::VerticalSplitItem
 This example displays the list items in a way that allows for impact yet does not require intricate setups. Avatars are displayed for each list item.
 
-**Examples:
-**See the full code samples using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-avatars-sd.jigx" target="_blank">static data</a> in GitHub.&#x20;
-See the full code samples using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-avatars-dd.jigx" target="_blank">dynamic data</a> in GitHub.
+**Examples*See the full code samples using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-avatars-sd.jigx) in GitHub.
+See the full code samples using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-avatars-dd.jigx) in GitHub.
 
-**Datasource:
-**See the full datasource code samples for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-avatars-sd.jigx" target="_blank">static data</a> in GitHub. 
-See the full datasource code samples for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-avatars-dd.jigx" target="_blank">dynamic data</a> in GitHub. 
+**Datasource**:
+See the full datasource code samples for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-avatars-sd.jigx) in GitHub. 
+See the full datasource code samples for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-avatars-dd.jigx) in GitHub. 
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for avatars and employees. You can use the <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/avatar.csv" target="_blank">avatar.csv </a>and <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/employees.csv" target="_blank">employees.csv</a> files in GitHub and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for avatars and employees. You can use the [avatar.csv](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/avatar.csv) and [employees.csv](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/employees.csv) files in GitHub and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -876,11 +849,11 @@ tabs:
 This example displays a list of task priorities, with the number of tasks in each priority shown in a `badge` on the right. Badges always use the primary color. You cannot change the color of the badge.
 
 **Examples:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-right-numbered-badge.jigx" target="_blank">GitHub</a>.
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-right-numbered-badge.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VNwVsznKhmwyIFL593qRe-20241028-150758.PNG" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VNwVsznKhmwyIFL593qRe-20241028-150758.PNG" size="72" width="1240" height="2500" position="center" caption="List with numbered badge" alt="List with numbered badge"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VNwVsznKhmwyIFL593qRe-20241028-150758.PNG" size="72" position="center" caption="List with numbered badge" alt="List with numbered badge"}
 :::
 ::::
 
@@ -985,11 +958,11 @@ item:
 :::
 
 :::VerticalSplitItem
-This is a simple example of how pie charts can also be displayed on a list - this is great for visual representation of information.&#x20;
+This is a simple example of how pie charts can also be displayed on a list - this is great for visual representation of information.
 
 **Examples:**
 
-See full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-pie-charts-sd.jigx" target="_blank">static data</a> in GitHub.&#x20;
+See full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-pie-charts-sd.jigx) in GitHub.
 :::
 ::::
 
@@ -1067,31 +1040,31 @@ tabs:
 
 :::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{alt="Horizontal list" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iAXv2THQLhsn2rID-i7pl_horizontallistdd.PNG" size="90" width="1240" height="2500" caption="Horizontal list" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/PPVUkNZW1vwnoioyXx8EN_horizontallistdd.PNG" position="center" darkWidth="1240" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iAXv2THQLhsn2rID-i7pl_horizontallistdd.PNG" darkHeight="2500"}
+::Image[]{alt="Horizontal list" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iAXv2THQLhsn2rID-i7pl_horizontallistdd.PNG" size="90" caption="Horizontal list" position="center"}
 
 
 :::
 
 ::::VerticalSplitItem
-This provides an example of a horizontal list with some UI elements like an image and values configured. Horizontal lists are especially helpful when used on a Composite Jig with other Jigs.&#x20;
+This provides an example of a horizontal list with some UI elements like an image and values configured. Horizontal lists are especially helpful when used on a Composite Jig with other Jigs.
 
 **Examples:**
 
-See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/horizontal-lists/list-horizontal-sd.jigx" target="_blank">static data</a> in GitHub.&#x20;
-See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-horizontal-dd.jigx" target="_blank">dynamic data</a> in GitHub.&#x20;
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/horizontal-lists/list-horizontal-sd.jigx) in GitHub.
+See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-horizontal-dd.jigx) in GitHub.
 
 **Datasources:**
 
-See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx" target="_blank">static data</a> in GitHub.&#x20;
-See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx" target="_blank">dynamic data</a> in GitHub.
+See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx) in GitHub.
+See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx) in GitHub.
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 
 Other examples:
 
-See more code samples for <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/horizontal-lists" target="_blank">horizontal lists</a> in GitHub.
+See more code samples for [horizontal lists](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/horizontal-lists) in GitHub.
 ::::
 :::::
 
@@ -1204,11 +1177,11 @@ tabs:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DODQZ6_xGZsyfmm3cvsbr_oah4dtuwpgsjwjv-9jqrjlist-with-search-functionalityiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DODQZ6_xGZsyfmm3cvsbr_oah4dtuwpgsjwjv-9jqrjlist-with-search-functionalityiphone13blueportrait.png" size="82" width="1570" height="2932" position="center" caption="List with search" alt="List with search"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DODQZ6_xGZsyfmm3cvsbr_oah4dtuwpgsjwjv-9jqrjlist-with-search-functionalityiphone13blueportrait.png" size="82" position="center" caption="List with search" alt="List with search"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jBmxLNv17xsQjkcxrXG0p_iysinzse4zenpjavdfphzlist-with-search-fuctionalitz2iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jBmxLNv17xsQjkcxrXG0p_iysinzse4zenpjavdfphzlist-with-search-fuctionalitz2iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="List with search" alt="List with search"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jBmxLNv17xsQjkcxrXG0p_iysinzse4zenpjavdfphzlist-with-search-fuctionalitz2iphone13blueportrait.png" size="80"  position="center" caption="List with search" alt="List with search"}
 :::
 ::::
 
@@ -1220,15 +1193,15 @@ This example displays the search functionality of a basic List Jig that allows t
 :::
 
 ::::VerticalSplitItem
-**Examples:
-**See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-search-sd.jigx" target="_blank">static data </a>in GitHub. See the full code sample  using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-search-dd.jigx" target="_blank">dynamic data</a> in GitHub.&#x20;
+**Examples**:
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-search-sd.jigx) in GitHub. See the full code sample  using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-search-dd.jigx) in GitHub.
 
-**Datasources:
-**See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-search-sd.jigx" target="_blank">static data</a> in GitHub.&#x20;
-See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx" target="_blank">dynamic data</a> in GitHub.&#x20;
+**Datasources**:
+See the full datasource code sample for[static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-search-sd.jigx) in GitHub.
+See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx) in GitHub.
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -1330,29 +1303,28 @@ tabs:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dWqdS3roU3WdS_abP37U4_4nbi3jyotqnlueroigqvglist-with-filter-functionalityiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dWqdS3roU3WdS_abP37U4_4nbi3jyotqnlueroigqvglist-with-filter-functionalityiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="List with filter" alt="List with filter"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dWqdS3roU3WdS_abP37U4_4nbi3jyotqnlueroigqvglist-with-filter-functionalityiphone13blueportrait.png" size="80"  position="center" caption="List with filter" alt="List with filter"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OtOK_didUSXqSV7mc5L2t_7rotb-eqnt3niy1k-bnh3list-with-filter-functionalitz2iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OtOK_didUSXqSV7mc5L2t_7rotb-eqnt3niy1k-bnh3list-with-filter-functionalitz2iphone13blueportrait.png" size="78" width="1570" height="2932" position="center" caption="List with filter" alt="List with filter"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OtOK_didUSXqSV7mc5L2t_7rotb-eqnt3niy1k-bnh3list-with-filter-functionalitz2iphone13blueportrait.png" size="78" position="center" caption="List with filter" alt="List with filter"}
 :::
 ::::
 
 :::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-This example helps to categorically filter the data to create meaningful sections or split the data for ease of use for the users.&#x20;
-:::
+This example helps to categorically filter the data to create meaningful sections or split the data for ease of use for the users.
 
 ::::VerticalSplitItem
-**Examples:
-**See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-label-sd.jigx" target="_blank">static data</a> in GitHub. See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-label-dd.jigx" target="_blank">dynamic data</a> in GitHub.
+**Examples**:
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-label-sd.jigx) in GitHub. See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-label-dd.jigx) in GitHub.
 
-**Datasources:
-**See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-label-sd.jigx" target="_blank">static data</a> in GitHub.&#x20;
-See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-label-dd.jigx" target="_blank">dynamic data</a>
+**Datasources**:
+See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-label-sd.jigx) in GitHub.
+See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-label-dd.jigx).
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -1482,29 +1454,29 @@ tabs:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BH3AW-wsrBSLQtb66vQbq_v94toyltr0-k0a55pao-list-with-search-filteriphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BH3AW-wsrBSLQtb66vQbq_v94toyltr0-k0a55pao-list-with-search-filteriphone13blueportrait.png" size="82" width="1570" height="2932" position="center" caption="List search and filter" alt="List search and filter"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BH3AW-wsrBSLQtb66vQbq_v94toyltr0-k0a55pao-list-with-search-filteriphone13blueportrait.png" size="82"  position="center" caption="List search and filter" alt="List search and filter"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F_KnGZXdcC4IHTLPIrkkD_g8wxzvbcrv436umtcujzklist-with-search-filter2iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F_KnGZXdcC4IHTLPIrkkD_g8wxzvbcrv436umtcujzklist-with-search-filter2iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="List search and filter" alt="List search and filter"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F_KnGZXdcC4IHTLPIrkkD_g8wxzvbcrv436umtcujzklist-with-search-filter2iphone13blueportrait.png" size="80"  position="center" caption="List search and filter" alt="List search and filter"}
 :::
 ::::
 
 :::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-To further enhance the search and filter capabilities for the user, there is also an option to combine the search and filter functionality as can be seen in this example.&#x20;
+To further enhance the search and filter capabilities for the user, there is also an option to combine the search and filter functionality as can be seen in this example.
 :::
 
 ::::VerticalSplitItem
-**Examples:
-**See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-search-label-sd.jigx" target="_blank">static data</a> in GitHub. See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-search-label-dd.jigx" target="_blank">dynamic data</a> in GitHub.&#x20;
+**Examples**:
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-search-label-sd.jigx) in GitHub. See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-search-label-dd.jigx) in GitHub.
 
-**Datasources:
-**See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-search-label-sd.jigx" target="_blank">static data</a> in GitHub.&#x20;
-See the full datasource for code sample <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-search-label-dd.jigx" target="_blank">dynamic data</a> in GitHub.&#x20;
+**Datasources**:
+See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-search-label-sd.jigx) in GitHub.
+See the full datasource for code sample [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-search-label-dd.jigx) in GitHub.
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -1616,12 +1588,12 @@ tabs:
 :::VerticalSplitItem
 In this example, there are three tabs to filter on. By default we want the jig to open on the second tab (Team B). This is achieved by adding an `initialValue` property to the `filter` property.
 
-**Example:
-**See the example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-initialvalue.jigx" target="_blank">GitHub</a>.
+**Example**:
+See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-initialvalue.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-O9xu_TcOIeO0WfdknAWRe-20240913-143124.PNG" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-O9xu_TcOIeO0WfdknAWRe-20240913-143124.PNG" size="80" width="1240" height="2500" position="center" caption="List with default filter tab" alt="List with default filter tab"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-O9xu_TcOIeO0WfdknAWRe-20240913-143124.PNG" size="80" position="center" caption="List with default filter tab" alt="List with default filter tab"}
 :::
 ::::
 
@@ -1702,11 +1674,11 @@ item:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5UvBC2OTvvpRPUxgb6S7J_jjoyudbruwukeskhccb29list-selectableiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5UvBC2OTvvpRPUxgb6S7J_jjoyudbruwukeskhccb29list-selectableiphone13blueportrait.png" size="82" width="1570" height="2932" position="center" caption="Selectable list" alt="Selectable list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5UvBC2OTvvpRPUxgb6S7J_jjoyudbruwukeskhccb29list-selectableiphone13blueportrait.png" size="82"  position="center" caption="Selectable list" alt="Selectable list"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CC_ySWCN4silK9yP0ADIF_bghosvpxwt9dtdbfbyaxhlist-selectable2iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CC_ySWCN4silK9yP0ADIF_bghosvpxwt9dtdbfbyaxhlist-selectable2iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Selectable list" alt="Selectable list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CC_ySWCN4silK9yP0ADIF_bghosvpxwt9dtdbfbyaxhlist-selectable2iphone13blueportrait.png" size="80"  position="center" caption="Selectable list" alt="Selectable list"}
 :::
 ::::
 
@@ -1714,20 +1686,20 @@ item:
 
 :::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-This example shows functionality that allows users to select one or numerous list items for quick actioning, saving them the time and effort of having to perform numerous repetitive manual tasks.&#x20;
+This example shows functionality that allows users to select one or numerous list items for quick actioning, saving them the time and effort of having to perform numerous repetitive manual tasks.
 :::
 
 ::::VerticalSplitItem
-**Examples:
-**See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-selectable-sd.jigx" target="_blank">static data</a> in GitHub.&#x20;
-See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-selectable-dd.jigx" target="_blank">dynamic data </a>in GitHub.
+**Examples**:
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-selectable-sd.jigx) in GitHub.
+See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-selectable-dd.jigx) in GitHub.
 
-**Datasources:
-**See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx" target="_blank">static data</a> in GitHub.&#x20;
-See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx" target="_blank">dynamic data</a> in GitHub.&#x20;
+**Datasources**:
+See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx) in GitHub.
+See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx) in GitHub.
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -1821,11 +1793,11 @@ tabs:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N-ZQxHpkRPVK1l6HZZMph_listselected.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N-ZQxHpkRPVK1l6HZZMph_listselected.PNG" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/POYGXxql6v009tPhzEhys_listselected.PNG" size="78" width="1240" height="2500" darkWidth="1240" darkHeight="2500" position="center" caption="List with active items" alt="List with active items"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N-ZQxHpkRPVK1l6HZZMph_listselected.PNG" size="78" darkWidth="1240" darkHeight="2500" position="center" caption="List with active items" alt="List with active items"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/WKPazW_VhKEFlU1sLBrqw_kq-c9fqjsclvjwjm23okqlist-type-active-itemiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/WKPazW_VhKEFlU1sLBrqw_kq-c9fqjsclvjwjm23okqlist-type-active-itemiphone13blueportrait.png" size="88" width="1570" height="2932" position="flex-start" caption="List with active items" alt="List with active items"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/WKPazW_VhKEFlU1sLBrqw_kq-c9fqjsclvjwjm23okqlist-type-active-itemiphone13blueportrait.png" size="88" position="flex-start" caption="List with active items" alt="List with active items"}
 :::
 ::::
 
@@ -1835,16 +1807,16 @@ This allows the user to see when they are interacting with a specific list item.
 :::
 
 ::::VerticalSplitItem
-**Examples:
-**See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-active-item-sd.jigx" target="_blank">static data</a> in GitHub.
-See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-active-item-dd.jigx" target="_blank">dynamic data</a> in GitHub.&#x20;
+**Examples**:
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-active-item-sd.jigx) in GitHub.
+See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-active-item-dd.jigx) in GitHub.
 
-**Datasources:
-**See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx" target="_blank">static data</a> in GitHub.
-See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx" target="_blank">dynamic data</a> in GitHub.&#x20;
+**Datasources**:
+See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx) in GitHub.
+See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx) in GitHub.
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -1946,11 +1918,11 @@ tabs:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/u049kALYz_GNfmw0HxLgK_8d1mkmehpe7r4pjn43hl5list-with-sectionsiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/u049kALYz_GNfmw0HxLgK_8d1mkmehpe7r4pjn43hl5list-with-sectionsiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="List with sections" alt="List with sections"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/u049kALYz_GNfmw0HxLgK_8d1mkmehpe7r4pjn43hl5list-with-sectionsiphone13blueportrait.png" size="80" position="center" caption="List with sections" alt="List with sections"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kzX-FtVAoLn2X_22doCAi_96zn0hzblno8u6l6ybhlmlist-with-sections2iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kzX-FtVAoLn2X_22doCAi_96zn0hzblno8u6l6ybhlmlist-with-sections2iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="List with sections" alt="List with sections"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kzX-FtVAoLn2X_22doCAi_96zn0hzblno8u6l6ybhlmlist-with-sections2iphone13blueportrait.png" size="80" position="center" caption="List with sections" alt="List with sections"}
 :::
 ::::
 
@@ -1962,16 +1934,16 @@ This functionality allows you to split your lists into more meaningful sections.
 :::
 
 ::::VerticalSplitItem
-**Examples:
-**See the full code sample using <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-search-sd.jigx" target="_blank">static data</a> in GitHub.&#x20;
-See the full code sample using<a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-sections-dd.jigx" target="_blank"> dynamic data </a>in GitHub.
+**Examples**:
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-search-sd.jigx) in GitHub.
+See the full code sample using[dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-sections-dd.jigx)in GitHub.
 
-**Datasources:
-**See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx" target="_blank">static data</a> in GitHub.&#x20;
-See the full datasource code sample for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx" target="_blank">dynamic data</a> in GitHub.&#x20;
+**Datasources**:
+See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx) in GitHub.
+See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx) in GitHub.
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -2064,14 +2036,14 @@ tabs:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example use the `isContained` property set to `true` to style each item by wrapping it in a card. The code sample below is for a vertical list. You can also wrap list items in a card for a horizontal list.  &#x20;
+This example use the `isContained` property set to `true` to style each item by wrapping it in a card. The code sample below is for a vertical list. You can also wrap list items in a card for a horizontal list.
 
 **Examples:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-item-contained.jigx" target="_blank">GitHub</a>.
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-item-contained.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-5VXNElPVo6tg6sBSmihHT-20241025-144842.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-5VXNElPVo6tg6sBSmihHT-20241025-144842.png" size="80" width="2497" height="2500" position="center" caption="ist-item in a card" alt="List-item in a card"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-5VXNElPVo6tg6sBSmihHT-20241025-144842.png"  size="80" position="center" caption="ist-item in a card" alt="List-item in a card"}
 :::
 ::::
 
@@ -2127,7 +2099,7 @@ See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T-SdlGk8kb3cvZ8a-BXeM-20241030-064308.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T-SdlGk8kb3cvZ8a-BXeM-20241030-064308.png" size="70" width="1244" height="2500" position="center" caption="List with rating - value" alt="List with rating - value"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T-SdlGk8kb3cvZ8a-BXeM-20241030-064308.png"  size="70" position="center" caption="List with rating - value" alt="List with rating - value"}
 :::
 ::::
 
@@ -2285,14 +2257,14 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-Create a product review jig that provides a `rating` using a `value`, an `icon` representing the value, rating `icons` with `color`. The list is styled by wrapping the items in a card using the `isContained` property. A verified `label` is added to the right while the product image is added as an `avatar` to the left.&#x20;
+Create a product review jig that provides a `rating` using a `value`, an `icon` representing the value, rating `icons` with `color`. The list is styled by wrapping the items in a card using the `isContained` property. A verified `label` is added to the right while the product image is added as an `avatar` to the left.
 
 **Examples:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-rating-value-max.jigx" target="_blank">GitHub</a>.
+See the full example in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-rating-value-max.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cyxMwXJe2B-rFaKAPriVB-20241030-062312.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cyxMwXJe2B-rFaKAPriVB-20241030-062312.png" size="70" width="1240" height="2500" position="center" caption="List rating with value, icons, and color" alt="List rating with value, icons, and color"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cyxMwXJe2B-rFaKAPriVB-20241030-062312.png"  size="70" position="center" caption="List rating with value, icons, and color" alt="List rating with value, icons, and color"}
 :::
 ::::
 
@@ -2456,7 +2428,7 @@ See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HiL_AAasWXGM4iXpb76p7-20241030-073308.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HiL_AAasWXGM4iXpb76p7-20241030-073308.png" size="66" width="1240" height="2500" position="center" caption="List with percentage rating" alt="List with percentage rating"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HiL_AAasWXGM4iXpb76p7-20241030-073308.png"  size="66" position="center" caption="List with percentage rating" alt="List with percentage rating"}
 :::
 ::::
 
@@ -2549,7 +2521,7 @@ This example sets up a product review jig that displays:
 - A product image shown as an `avatar` on the left side.
 
 **Examples:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-rating-percentage-max.jigx" target="_blank">GitHub</a>.
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-rating-percentage-max.jigx).
 
 
 
@@ -2557,7 +2529,7 @@ See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-__u0Q3gtznpmndWy5Y1dU-20241030-101047.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-__u0Q3gtznpmndWy5Y1dU-20241030-101047.png" size="70" width="1240" height="2500" position="center" caption="List with customized percentage rating" alt="List with customized percentage rating"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-__u0Q3gtznpmndWy5Y1dU-20241030-101047.png" size="70" position="center" caption="List with customized percentage rating" alt="List with customized percentage rating"}
 :::
 ::::
 
@@ -2709,14 +2681,14 @@ options:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example creates a list with multiple `tags` shown on each list-item.&#x20;
+This example creates a list with multiple `tags` shown on each list-item.
 
 - A styled list where each item is displayed within a card format, achieved by enabling the `isContained` property.
 - The `tags` show the assigned team, priority, and status.
 - A product image shown as an `avatar` on the left side.
 
 **Examples:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-tags-multiple.jigx" target="_blank">GitHub</a>.
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-tags-multiple.jigx).
 
 
 
@@ -2724,7 +2696,7 @@ See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TUsCmx9L6lCnKth7jdpoI-20241030-101514.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TUsCmx9L6lCnKth7jdpoI-20241030-101514.png" size="70" width="1240" height="2500" position="center" caption="List with multiple tags" alt="List with multiple tags"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TUsCmx9L6lCnKth7jdpoI-20241030-101514.png"  size="70" position="center" caption="List with multiple tags" alt="List with multiple tags"}
 :::
 ::::
 
@@ -2806,7 +2778,7 @@ This example show a list of cleaning services that displays:
 - A numbered `badge` in the `rightElement` of the item shows the number of services available.
 
 **Examples:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-tags-rating.jigx" target="_blank">GitHub</a>.
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-tags-rating.jigx).
 
 
 
@@ -2814,7 +2786,7 @@ See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-t21E3-6z0TBitPqdGueGP-20241030-105810.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-t21E3-6z0TBitPqdGueGP-20241030-105810.png" size="70" width="1240" height="2500" position="center" caption="List with rating, tags & badges" alt="List with rating, tags & badges"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-t21E3-6z0TBitPqdGueGP-20241030-105810.png" size="70" position="center" caption="List with rating, tags & badges" alt="List with rating, tags & badges"}
 :::
 ::::
 
@@ -2908,10 +2880,10 @@ options:
 :::
 :::::
 
-## **See also**
+## See also
 
 - [Jigs (screens)]()
 - [list-item](./../Components/list/list-item.md)
-- <a href="https://github.com/jigx-com/jigx-samples/tree/main/samples/jigx-samples/jigs/jig-types/jig-list" target="_blank">R</a><a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-list" target="_blank">elated examples (Github)</a>
+- [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/samples/jigx-samples/jigs/jig-types/jig-list)
 - [State]()
 

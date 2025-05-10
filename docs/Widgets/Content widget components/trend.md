@@ -8,38 +8,38 @@ updatedAt: Fri Mar 07 2025 14:13:19 GMT+0000 (Coordinated Universal Time)
 
 The trend component displays an increase or decrease over a period. The increment or decrement number can be formatted as a percentage, currency, or plain value.
 
-Trend is available in the following content widgets:&#x20;
+Trend is available in the following content widgets:
 
 - <a href="https://docs.jigx.com/examples/chart" target="_blank">Chart widget</a>
 - <a href="https://docs.jigx.com/examples/list" target="_blank">List widget</a>
 - <a href="https://docs.jigx.com/examples/value" target="_blank">Value widget</a>
 
-## ****Configuration options
+## Configuration options
 
-| ### Core structure | ****                                                                                                                                                                                                                                                                                                                                 |
+| ### Core structure | ****                  |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `value`            | Positive or negative numeric value.                                                                                                                                                                                                                                                                                                  |
-| `format`           | A selection of formats is available for the main value of the widget, for example, currency.                                                                                                                                                                                                                                         |
-| `title`            | Display a `title` for the trend.                                                                                                                                                                                                                                                                                                     |
-| `subtitle`         | Add a subtitle under the title text. Note: this text won't be displayed if `isValueBottom` is set to `true`                                                                                                                                                                                                                          |
+| `value`            | Positive or negative numeric value.                                                                                           |
+| `format`           | A selection of formats is available for the main value of the widget, for example, currency.                                 |
+| `title`            | Display a `title` for the trend.                                                                                            |
+| `subtitle`         | Add a subtitle under the title text. Note: this text won't be displayed if `isValueBottom` is set to `true`                   |
 | `style`            | Properties used for component styling.&#xA;- `isValueBottom` - By default, the value is on the right of the text.  Set the property to `true` to move it underneath the text.&#xA;- `isValueHidden` - hides the number and only shows an icon indicating an up or down trend.&#xA;- `isAlignRight` - aligns everything to the right. |
 
-## Examples and code snippets ****
+## Examples and code snippets 
 
 :::::ExpandableHeading
 ### Trend on value widget
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YIaF_yhQk7REdnMJBJB10_trend-valueiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YIaF_yhQk7REdnMJBJB10_trend-valueiphone13blueportrait.png" size="76" width="1570" height="2932" position="center" caption="Upward trend" alt="Upward trend"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YIaF_yhQk7REdnMJBJB10_trend-valueiphone13blueportrait.png" size="76" position="center" caption="Upward trend" alt="Upward trend"}
 :::
 
 :::VerticalSplitItem
 This example shows an increase in company turnover. The company has a turnover of over 24K USD, and the trend component shows that the increase for the last week is 1250 USD.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/trend/static-data/trend-in-value-widget/trend-in-value-widget.jigx" target="_blank">GitHub</a>.
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/trend/dynamic-data/trend-in-value-widget/trend-in-value-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/trend/static-data/trend-in-value-widget/trend-in-value-widget.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/trend/dynamic-data/trend-in-value-widget/trend-in-value-dynamic.jigx).
 :::
 ::::
 
@@ -126,9 +126,9 @@ children:
 :::VerticalSplitItem
 This example shows finance statistics. The trend component, indicates an increase in percent. Exactly 21% in the last period.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/trend/static-data/trend-in-chart-widget/trend-in-chart-widget.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/trend/dynamic-data/trend-in-chart-widget/trend-in-chart-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/trend/static-data/trend-in-chart-widget/trend-in-chart-widget.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/trend/dynamic-data/trend-in-chart-widget/trend-in-chart-dynamic.jigx).
 
 
 :::
@@ -257,15 +257,15 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/D7VqLAmAop15HaURF_Dlk_trend-listiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/D7VqLAmAop15HaURF_Dlk_trend-listiphone13blueportrait.png" size="84" width="1570" height="2932" position="center" caption="Patient trend over a period" alt="Patient trend over a period"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/D7VqLAmAop15HaURF_Dlk_trend-listiphone13blueportrait.png" size="84" position="center" caption="Patient trend over a period" alt="Patient trend over a period"}
 :::
 
 :::VerticalSplitItem
 In this example, the widget-list shows a list of patients. There are a total of 569 patients and the trend component shows that 12 more patients were added in the last period.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/trend/static-data/trend-in-list-widget/trend-in-list-widget.jigx" target="_blank">GitHub</a>.
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/trend/dynamic-data/trend-in-list-widget/trend-in-list-dynamic.jigx" target="_blank">GitHub</a>.
+**Examples**:
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/trend/static-data/trend-in-list-widget/trend-in-list-widget.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/trend/dynamic-data/trend-in-list-widget/trend-in-list-dynamic.jigx).
 :::
 ::::
 

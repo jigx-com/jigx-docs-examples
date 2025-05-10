@@ -61,23 +61,22 @@ Replace \{\{baseUrl}} with the appropriate URL for your region.
 | baseURL        | Refer to the Base URL table above to find the URL for your region.                                                                                                                                                                                                  |
 | scope          | - **USR ** – Target specific individual users.
 - **SLN** – Notify all users within a particular solution.
-- **SLN\_GRP ** – Send messages to predefined groups within a solution.
-- **ORG ** – Broadcast notifications to all users across the entire organization. |
+- **SLN\_GRP** – Send messages to predefined groups within a solution.
+- **ORG** – Broadcast notifications to all users across the entire organization. |
 | jigId          | Target a specific jig with input parameters.When the user taps on the notification (either on the native push notification or the in-app notification), the app will navigate to the specific jig.                                                                  |
-| screen         | Default value = "jig"                                                                                                                                                                                                                                               |
-| title          | Title that shows in the notification message.                                                                                                                                                                                                                       |
-| text           | Subtitle text displays under the title in the notification message.                                                                                                                                                                                                 |
-| inputs         | Provide the input parameters to send into the jig specified in the jigId property.                                                                                                                                                                                  |
-| emails         | Specific the users' email addresses (array) to send the notification to.                                                                                                                                                                                            |
+| screen         | Default value = "jig"                                        |
+| title          | Title that shows in the notification message.                |
+| text           | Subtitle text displays under the title in the notification message.                                                                                              |
+| inputs         | Provide the input parameters to send into the jig specified in the jigId property.                                                                               |
+| emails         | Specific the users' email addresses (array) to send the notification to.                                                                                        |
 
 ## Examples and code snippets
 
-1. [Send notification to users (USR)](<./External push notifications _API_/Send notification to users _USR_.md>)&#x20;
-2. [Send notification to all solution users (SLN)](<./External push notifications _API_/Send notification to all solution users _SLN_.md>)&#x20;
-3. [Send notification to solution groups (SLN\_GRP)](<./External push notifications _API_/Send notification to solution groups _SLN_GRP_.md>)&#x20;
-4. [Send notification to the organization (ORG)](<./External push notifications _API_/Send notification to the organization _ORG_.md>)&#x20;
-5. [Target a specific jig with inputs](<./External push notifications _API_/Target a specific jig with inputs.md>)&#x20;
-
+1. [Send notification to users (USR)](<./External push notifications _API_/Send notification to users _USR_.md>)
+2. [Send notification to all solution users (SLN)](<./External push notifications _API_/Send notification to all solution users _SLN_.md>)
+3. [Send notification to solution groups (SLN\_GRP)](<./External push notifications _API_/Send notification to solution groups _SLN_GRP_.md>)
+4. [Send notification to the organization (ORG)](<./External push notifications _API_/Send notification to the organization _ORG_.md>)
+5. [Target a specific jig with inputs](<./External push notifications _API_/Target a specific jig with inputs.md>)
 
 
 

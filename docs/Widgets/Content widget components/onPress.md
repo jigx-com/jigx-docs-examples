@@ -21,12 +21,12 @@ Use the `onPress` event to add an action directly on the widget. This is particu
 :::VerticalSplitItem
 In this example, tapping on the widget opens the [info-modal](./../../Actions/info-modal.md) to display information regarding Jigx.
 
-**Examples:
-**See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/onpress_4x2.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/onpress_4x2.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZgGAqF9hDC6MTTMJC2h3i_jw-widget-onpress.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZgGAqF9hDC6MTTMJC2h3i_jw-widget-onpress.PNG" size="60" width="1240" height="2500" position="center" caption="Widget with onPress" alt="Widget with onPress"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZgGAqF9hDC6MTTMJC2h3i_jw-widget-onpress.PNG" size="60" position="center" caption="Widget with onPress" alt="Widget with onPress"}
 :::
 ::::
 

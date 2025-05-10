@@ -6,26 +6,26 @@ createdAt: Tue Feb 14 2023 10:08:21 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Mar 04 2025 11:24:36 GMT+0000 (Coordinated Universal Time)
 ---
 
-The web-view component allows the user to use an URL or pass raw HTML as the preview content.&#x20;
+The web-view component allows the user to use an URL or pass raw HTML as the preview content.
 
-## **Examples and code snippets **
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Long-press on a widget
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHs453JlvtMQiOY3CRkLE_img7936iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHs453JlvtMQiOY3CRkLE_img7936iphone13blueportrait.png" size="84" width="1570" height="2932" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHs453JlvtMQiOY3CRkLE_img7936iphone13blueportrait.png" size="84" position="center" caption}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ynxGJXjIvneugkfpDdqXU_img7937iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ynxGJXjIvneugkfpDdqXU_img7937iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ynxGJXjIvneugkfpDdqXU_img7937iphone13blueportrait.png" size="80" position="center" caption}
 :::
 ::::
 
-This example displays a preview after long-pressing the widget
+This example displays a preview after long-pressing the widget.
 
-See the full example on <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/web-view/web-longpress-widget.jigx" target="_blank">GitHub</a>.
+See the full example on [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/web-view/web-longpress-widget.jigx).
 
 :::CodeblockTabs
 long-press-on-widget
@@ -64,11 +64,11 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G9P-b_A0Yi8PEHnt4ro07_img7938iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G9P-b_A0Yi8PEHnt4ro07_img7938iphone13blueportrait.png" size="82" width="1570" height="2932" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G9P-b_A0Yi8PEHnt4ro07_img7938iphone13blueportrait.png" size="82" position="center" caption}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_ZljiqklB-58vf72TJihe_img7939iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_ZljiqklB-58vf72TJihe_img7939iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_ZljiqklB-58vf72TJihe_img7939iphone13blueportrait.png" size="80" position="center" caption}
 :::
 ::::
 
@@ -76,19 +76,19 @@ This example displays a preview after long-pressing the list-item on the widget.
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G-oCl4iVXRvDBU9n6IV0C_img7941iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G-oCl4iVXRvDBU9n6IV0C_img7941iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G-oCl4iVXRvDBU9n6IV0C_img7941iphone13blueportrait.png" size="80" position="center" caption}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DTcbLVw4GTnRwxMDKjM-e_img7942iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DTcbLVw4GTnRwxMDKjM-e_img7942iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DTcbLVw4GTnRwxMDKjM-e_img7942iphone13blueportrait.png" size="80" position="center" caption}
 :::
 ::::
 
-This example displays a preview after long-pressing the list-item in the jig. It includes the web-view component as well as the go-to actions.&#x20;
+This example displays a preview after long-pressing the list-item in the jig. It includes the web-view component as well as the go-to actions.
 
 As you can see in the code snippet, the original list doesn't include the preview. Our `onPress` action allows us to use the preview that is included in the detail jig.
 
-See the full example of <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/web-view/web-longpress-onPress.jigx" target="_blank">web-longpress-onpress</a> and <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/web-view/web-detail.jigx" target="_blank">web-detail </a>on GitHub.
+See the full example of [web-longpress-onpress](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/web-view/web-longpress-onPress.jigx) and [web-detail](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/web-view/web-detail.jigx) on GitHub.
 
 :::CodeblockTabs
 web-view-longpress-onPress

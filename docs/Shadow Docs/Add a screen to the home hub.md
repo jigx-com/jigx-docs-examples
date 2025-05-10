@@ -5,7 +5,7 @@ createdAt: Thu Jun 13 2024 09:57:57 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jul 10 2024 08:59:14 GMT+0000 (Coordinated Universal Time)
 ---
 
-Add the following YAML content to reference a screen or jig on the home hub or app home page.&#x20;
+Add the following YAML content to reference a screen or jig on the home hub or app home page.
 
 ```yaml
 name: simple-list

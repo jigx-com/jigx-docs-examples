@@ -5,25 +5,24 @@ createdAt: Tue Dec 03 2024 11:39:30 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu May 01 2025 10:33:53 GMT+0000 (Coordinated Universal Time)
 ---
 
-&#x20;The `jig.grid` enables you to create grid layouts in your app, organizing content into rows and columns for a visually consistent and flexible interface. It helps align elements proportionally, ensuring a structured design. The grid is ideal for creating galleries to display photos or product images, as well as dashboards, menus, and product lists.
+The `jig.grid` enables you to create grid layouts in your app, organizing content into rows and columns for a visually consistent and flexible interface. It helps align elements proportionally, ensuring a structured design. The grid is ideal for creating galleries to display photos or product images, as well as dashboards, menus, and product lists.
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-w5fDciaaOqvoKxuVxeQJQ-20250430-101252.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-w5fDciaaOqvoKxuVxeQJQ-20250430-101252.png" size="52" width="1224" height="2466" position="center" caption="Custom Grid " alt="Custom Grid "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-w5fDciaaOqvoKxuVxeQJQ-20250430-101252.png" size="52" position="center" caption="Custom Grid " alt="Custom Grid "}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" size="52" width="1224" height="2466" position="center" caption="Auto Grid " alt="Auto Grid "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" size="52" position="center" caption="Auto Grid " alt="Auto Grid "}
 :::
 ::::
 
-## ****Configuration options****
+## Configuration options
 
 The `jig.grid` has two available configuration options:
 
 1. **Auto Grid** - used to create a grid layout from a datasource. This is similar in configuration to a [jig.list](./jig_list.md) where a single `grid-item` is configured and iterates through the datasource.
-2. **Custom Grid** - used to create a custom grid layout using widgets, images, or custom components in various sizes. &#x20;
-
+2. **Custom Grid** - used to create a custom grid layout using widgets, images, or custom components in various sizes.
 Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
 
 | ### Core structure | ****                                                                                                                                                                                                                   |
@@ -33,25 +32,25 @@ Some properties are common to all jig types, see [Common jig type properties](do
 | `component`        | Within a grid jig type, the [grid-item](./../Components/grid/grid-item.md) component is used to define each of the elements in the grid layout. Within the `grid-item` a select set of components can be configured.   |
 | `datasources`      | Configure a datasource to call the data to display in the grid layout. The datasource property is required for the Auto Grid, but is optional for the Custom Grid selection.                                           |
 
-| ### Other options      | ****                                                                                                                                                                                                                                                                                                                                                     |
+| ### Other options      | ****                                          |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `actions`              | Choose from the provided list of available actions, for example, use the `go-to` action to open a different jig.                                                                                                                                                                                                                                         |
-| `badge`                | Enhance your tabs with a badge, for instance show the number of grid-items. Add the `badge` property to the jig YAML with an expression.                                                                                                                                                                                                                 |
-| `description`          | Give the jig a description that is displayed under the `title`.                                                                                                                                                                                                                                                                                          |
-| `data`                 | Reference a global datasource to use in the jig .                                                                                                                                                                                                                                                                                                        |
+| `actions`              | Choose from the provided list of available actions, for example, use the `go-to` action to open a different jig.                                  |
+| `badge`                | Enhance your tabs with a badge, for instance show the number of grid-items. Add the `badge` property to the jig YAML with an expression.           |
+| `description`          | Give the jig a description that is displayed under the `title`.                                                                                    |
+| `data`                 | Reference a global datasource to use in the jig .                                                                                                  |
 | `grid-item`            | `size` - Select either `1x1`,` 2x2`, `2x4`, `4x2`, `4x4`&#xA;`children` - Select a component from the predefined list to display in the grid. The components for selection are:&#xA;- [Custom components (Alpha)](<./../Custom components _Alpha_.md>) &#xA;- [image](./../Components/image.md)&#xA;- [widgets]()  &#xA;- Use Template - image templates |
-| `expressions`          | Use the `expressions` property to set [expressions](./../Expressions.md) that are reusable throughout the jig.                                                                                                                                                                                                                                           |
-| `header`               | Configure a [jig-header](./../Components/jig-header.md) that displays and image, location or video at the top of the jig.                                                                                                                                                                                                                                |
-| `icon`                 | The icon will be displayed on the [widget]() of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See [Jigx icons]() for information on working with icons.                                                                                                                                                       |
-| `inputs`               | Configure [inputs]()  that allow you to receive data from other jigs and use it in the current jig.                                                                                                                                                                                                                                                      |
+| `expressions`          | Use the `expressions` property to set [expressions](./../Expressions.md) that are reusable throughout the jig.                                    |
+| `header`               | Configure a [jig-header](./../Components/jig-header.md) that displays and image, location or video at the top of the jig.                          |
+| `icon`                 | The icon will be displayed on the [widget]() of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See [Jigx icons]() for information on working with icons.                                                    |
+| `inputs`               | Configure [inputs]()  that allow you to receive data from other jigs and use it in the current jig.                                                |
 | `isCollapsible`        | When the jig is used in a [jig.composite](./jig_composite.md) and this property is set to `true`, a collapse and expand icon is shown, allowing the jig to be collapsed. This is helpful if the composite jig has a number of jigs configured, making it easier to view and interact with the app.                                                       |
-| `isInitiallyCollapsed` | When the property is set to `true` and the jig is part of a composite jig, the jig will open in collapsed mode when the composite jig is launched.                                                                                                                                                                                                       |
-| `isWaitingSync`        | Displays a waiting sync indicator.                                                                                                                                                                                                                                                                                                                       |
-| `jigId`                | Give the jig a unique id that can be referenced outside the jig, for example in state expressions.                                                                                                                                                                                                                                                       |
-| `outputs`              | Configure [outputs]() that allow you to transfer data out of the current jig and use it in another jig.                                                                                                                                                                                                                                                  |
-| `placeholders`         | Create a placeholder to show when there is no data to use yet. See <a href="https://community.jigx.com/t/tips-tricks-use-placeholders/78" target="_blank">tips and tricks -use a placeholder</a> for a placeholder example.                                                                                                                              |
-| `preview`              | Configure the [Preview](./../Preview.md) which is triggered by *long-pressing* on the grid-item.                                                                                                                                                                                                                                                         |
-| `summary`              | Add a [summary](./../Components/summary.md) component that displays at the bottom of the jig.                                                                                                                                                                                                                                                            |
+| `isInitiallyCollapsed` | When the property is set to `true` and the jig is part of a composite jig, the jig will open in collapsed mode when the composite jig is launched.      |
+| `isWaitingSync`        | Displays a waiting sync indicator.             |
+| `jigId`                | Give the jig a unique id that can be referenced outside the jig, for example in state expressions.                                                |
+| `outputs`              | Configure [outputs]() that allow you to transfer data out of the current jig and use it in another jig.                                           |
+| `placeholders`         | Create a placeholder to show when there is no data to use yet. See <a href="https://community.jigx.com/t/tips-tricks-use-placeholders/78" target="_blank">tips and tricks -use a placeholder</a> for a placeholder example.                         |
+| `preview`              | Configure the [Preview](./../Preview.md) which is triggered by *long-pressing* on the grid-item.                                                   |
+| `summary`              | Add a [summary](./../Components/summary.md) component that displays at the bottom of the jig.                                                     |
 
 | ### Events  | ****                                                                                         |
 | ----------- | -------------------------------------------------------------------------------------------- |
@@ -61,25 +60,25 @@ Some properties are common to all jig types, see [Common jig type properties](do
 ## Considerations
 
 - When using the `grid-item` with a `component.jig-widget`, note of the following:
-  - A `widgetId` is required if the referenced jig includes a widget configuration. This value should match the `Widget Name` specified in the referenced jig.&#x20;
+  - A `widgetId` is required if the referenced jig includes a widget configuration. This value should match the `Widget Name` specified in the referenced jig.
   - If no widget configuration exists, the widget's icon is derived from the jig's `icon` value. If none is specified, a default icon is assigned.
 
 ## Examples and code snippets 
 
 :::::ExpandableHeading
-### &#x20;Custom grid jig&#x20;
+### Custom grid jig
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-w5fDciaaOqvoKxuVxeQJQ-20250430-101252.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-w5fDciaaOqvoKxuVxeQJQ-20250430-101252.png" size="60" width="1224" height="2466" position="center" caption="Custom Grid - Delivery " alt="Custom Grid - Delivery "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-w5fDciaaOqvoKxuVxeQJQ-20250430-101252.png" size="60" position="center" caption="Custom Grid - Delivery " alt="Custom Grid - Delivery "}
 :::
 
 :::VerticalSplitItem
 In this example, a delivery company uses a dashboard for drivers to display their daily deliveries, urgent tasks, inspection checklists, logs, and customer ratings or complaints. The `jig.grid` with the `custom grid` option is used, allowing multiple `grid-item` configurations. These items include widgets, images, and custom components in various sizes.
 
-**Examples:*****
-***See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-custom.jigx" target="_blank">GitHub</a>.
-Supporting jig samples in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-grid" target="_blank">GitHub</a>.
+**Examples:**
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-custom.jigx).
+Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-grid).
 :::
 ::::
 
@@ -431,18 +430,18 @@ children:
 :::::
 
 :::::ExpandableHeading
-### &#x20;Auto grid jig&#x20;
+### Auto grid jig
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" size="60" width="1224" height="2466" position="center" caption="Auto Grid -Image Gallery  " alt="Auto Grid -Image Gallery  "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" size="60"  position="center" caption="Auto Grid -Image Gallery  " alt="Auto Grid -Image Gallery  "}
 :::
 
 :::VerticalSplitItem
 In this example, a gallery of images is created to showcase the services a company offers. The `jig.grid` type is used with a datasource, enabling a simple configuration based on the records in the datasource. The `component.grid-item` only needs to be configured once using the expression `=@ctx.current.item.` followed by the desired data field. Using `current` loops through the datasource, creating a grid-item for each data record. Note that the specified `size` will apply to all returned records.
 
-**Examples:*****
-***See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-auto.jigx" target="_blank">GitHub</a>.
+**Examples:**
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-auto.jigx).
 
 :::
 ::::

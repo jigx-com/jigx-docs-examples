@@ -8,7 +8,7 @@ updatedAt: Fri Mar 07 2025 14:09:31 GMT+0000 (Coordinated Universal Time)
 
 This component displays a title, subtitle, comment, or any type of text content. As the titles component is always part of a widget, this text will be displayed on the widget.
 
-&#x20;Titles are available in the following content widgets:&#x20;
+Titles are available in the following content widgets:
 
 - <a href="https://docs.jigx.com/examples/I4a9-avatar" target="_blank">avatar</a>
 - <a href="https://docs.jigx.com/examples/chart" target="_blank">chart</a>
@@ -17,7 +17,7 @@ This component displays a title, subtitle, comment, or any type of text content.
 - <a href="https://docs.jigx.com/examples/status" target="_blank">status</a>
 - <a href="https://docs.jigx.com/examples/value" target="_blank">value</a>
 
-## ****Configuration options
+## Configuration options
 
 | ### Core structure | ****                                    |
 | ------------------ | --------------------------------------- |
@@ -31,14 +31,14 @@ This component displays a title, subtitle, comment, or any type of text content.
 | `iconColor`       | Sets the icon's color. Choose a color from the provided palette. If the property is not specified in the YAML, the default color is black. |
 | `style`           | Properties used for component styling.                                                                                                     |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Titles in the image widget
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qzUhfHOAIhwl4ruMOw20K_title-imgiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qzUhfHOAIhwl4ruMOw20K_title-imgiphone13blueportrait.png" size="78" width="1570" height="2932" position="center" caption="Image widget with titles" alt="Image widget with titles"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qzUhfHOAIhwl4ruMOw20K_title-imgiphone13blueportrait.png" size="78" position="center" caption="Image widget with titles" alt="Image widget with titles"}
 :::
 
 :::VerticalSplitItem
@@ -46,12 +46,12 @@ A descriptive title added to the image widget.
 
 **Examples:**
 
-See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/static-data/titles-widget-image/titles-widget-image.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/dynamic-data/titles-widget-image/titles-widget-image-dynamic.jigx" target="_blank">GitHub</a>.
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/static-data/titles-widget-image/titles-widget-image.jigx)
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/dynamic-data/titles-widget-image/titles-widget-image-dynamic.jigx).
 
-**Datasource:
-**See the full datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles-static.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles.jigx" target="_blank">GitHub</a>.
+**Datasource**:
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles-static.jigx)
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles.jigx).
 :::
 ::::
 
@@ -145,19 +145,19 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ShMgsX1bPDxAhXNfPFuo1_title-locationiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ShMgsX1bPDxAhXNfPFuo1_title-locationiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Location widget with titles" alt="Location widget with titles"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ShMgsX1bPDxAhXNfPFuo1_title-locationiphone13blueportrait.png" size="80" position="center" caption="Location widget with titles" alt="Location widget with titles"}
 :::
 
 :::VerticalSplitItem
 The title/description of the place displayed on the location widget.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/static-data/titles-widget-location/titles-widget-location.jigx" target="_blank">GitHub</a>.
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/dynamic-data/titles-widget-location/titles-widget-location-dynamic.jigx" target="_blank">GitHub</a>.
+**Examples**:
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/static-data/titles-widget-location/titles-widget-location.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/dynamic-data/titles-widget-location/titles-widget-location-dynamic.jigx).
 
-**Datasource:
-**See the full datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles-static.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles.jigx" target="_blank">GitHub</a>.
+**Datasource**:
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles-static.jigx).
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles.jigx).
 
 
 :::

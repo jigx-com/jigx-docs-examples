@@ -5,11 +5,11 @@ createdAt: Thu Jul 11 2024 14:47:20 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Feb 21 2025 14:10:18 GMT+0000 (Coordinated Universal Time)
 ---
 
-Integrating OpenAI into your Jigx App offers tremendous potential to enhance functionality, improve user experiences, and drive innovation. By leveraging the power of advanced AI models, you can create smarter, more responsive, and engaging apps that meet users' evolving needs. Whether building a new app or enhancing an existing one, OpenAI provides the tools and capabilities to transform your vision into reality.&#x20;
+Integrating OpenAI into your Jigx App offers tremendous potential to enhance functionality, improve user experiences, and drive innovation. By leveraging the power of advanced AI models, you can create smarter, more responsive, and engaging apps that meet users' evolving needs. Whether building a new app or enhancing an existing one, OpenAI provides the tools and capabilities to transform your vision into reality.
 
 ## What AI models do we support?
 
-&#x20;Jigx provides an integration layer allowing you to call any REST-based service. AI services such as ChatGPT provide a REST service. Jigx supports any AI service that is exposed to a REST service.
+Jigx provides an integration layer allowing you to call any REST-based service. AI services such as ChatGPT provide a REST service. Jigx supports any AI service that is exposed to a REST service.
 
 ## Considerations
 
@@ -19,7 +19,7 @@ Integrating OpenAI into your Jigx App offers tremendous potential to enhance fun
 
 ## Prompts
 
-A prompt is the input you provide the AI model to generate a response. This input can range from a simple question to a complex set of instructions. The effectiveness of the response largely depends on how well the prompt is crafted. &#x20;
+A prompt is the input you provide the AI model to generate a response. This input can range from a simple question to a complex set of instructions. The effectiveness of the response largely depends on how well the prompt is crafted.
 
 The ChatGPT REST API allows prompts in the JSON body parameter you send to the ChatGPT REST API. You can configure this in Jigx functions and the prompting tags are found within the JSON body under `messages` and `content`, as shown in the example below. Review the examples below and compare the bland and engaging prompt examples. Configuring these prompts correctly will significantly improve your outcomes.
 
@@ -88,26 +88,26 @@ engaging-prompts
 - Configure the [REST API](<./Data Providers/REST.md>) integration.
 - Show it in your Jigx mobile app.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W-o_ZWcHkRq83E4Yj4YA5_ai-diagram.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W-o_ZWcHkRq83E4Yj4YA5_ai-diagram.png" size="66" width="700" height="224" position="center" caption="OpenAI integration " alt="OpenAI integration "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W-o_ZWcHkRq83E4Yj4YA5_ai-diagram.png" size="66" position="center" caption="OpenAI integration " alt="OpenAI integration "}
 
 ### High-level steps
 
 1. Open Jigx Builder in VS Code and create a Jigx solution.
 2. Under the functions folder create a function.jigx file to configure the OpenAI [REST]() API. For more information on configuring a REST function see [REST Overview]().
 3. In the functions file configure the [REST Authentication]() required by the REST API.
-4. Configure the [prompts]() to tell AI what it should do and how it must act in the `messages` >`"content:"` property in the `inputTransform` in the functions file.&#x20;
-5. Create a [Jigs (screens)]() under the jigs folder.&#x20;
-6. Add [Components (controls)]() to the jig and configure accordingly.&#x20;
-7. Configure an [action]() to call the OpenAI function. In most instances a [sync-entities](./Actions/sync-entities.md) action is configured to return the reponse from the AI server.&#x20;
+4. Configure the [prompts]() to tell AI what it should do and how it must act in the `messages` >`"content:"` property in the `inputTransform` in the functions file.
+5. Create a [Jigs (screens)]() under the jigs folder.
+6. Add [Components (controls)]() to the jig and configure accordingly.
+7. Configure an [action]() to call the OpenAI function. In most instances a [sync-entities](./Actions/sync-entities.md) action is configured to return the reponse from the AI server.
 
 ### Function configuration
 
-Jigx functions are used to configure the REST integration with AI models such as ChatGPT. Once a Jigx function has been configured you can call it anywhere from your visual components. See the section on [REST](<./Data Providers/REST.md>) integration to understand how to use REST in Jigx. Below is an explanation describing how the parameters are configured to integrate Jigx and the AI model. It is important to refer to the AI model REST API you have selected to use, to ensure you have provided the required input and configured the output to return the correct response from the model.&#x20;
+Jigx functions are used to configure the REST integration with AI models such as ChatGPT. Once a Jigx function has been configured you can call it anywhere from your visual components. See the section on [REST](<./Data Providers/REST.md>) integration to understand how to use REST in Jigx. Below is an explanation describing how the parameters are configured to integrate Jigx and the AI model. It is important to refer to the AI model REST API you have selected to use, to ensure you have provided the required input and configured the output to return the correct response from the model.
 
-| **Parameter**     | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Parameter**     | **Description**                                                                                                                         |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `method`          | `POST` -The POST request can be used to send training data to the server where the AI model is hosted. The server can then use this data to train the model.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `url`             | Specify the URL for the AI model's REST API. For example, the URL for ChatGPT is: <a href="https://api.openai.com/v1/chat/completions" target="_blank">https\://api.openai.com/v1/chat/completions</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `method`          | `POST` -The POST request can be used to send training data to the server where the AI model is hosted. The server can then use this data to train the model.                                                                                |
+| `url`             | Specify the URL for the AI model's REST API. For example, the URL for ChatGPT is: <a href="https://api.openai.com/v1/chat/completions" target="_blank">https\://api.openai.com/v1/chat/completions</a>                                     |
 | `outputTransform` | The ouputTransform is where you configure the AI reponse. Check the AI API response to ensure you add the correct configuration. For example, &#xA;**OpenAPI response** shows the following code:<br />`{
 "id": "chatcmpl-123",
 "object": "chat.completion",
@@ -131,15 +131,15 @@ Jigx functions are used to configure the REST integration with AI models such as
 }`<br />In the Jigx** outputTransform** you configure the following:<br />`outputTransform: \| {
 "content": $.choices[0].message.content
 }` |
-| `inputTransform`  | Provide the AI with the information it requires to return the response/chat message.&#xA;`model` - is the name and version of the AI model.&#xA;`response_format` - the expected input type, for example, json\_object.&#xA;`message` - under this property configure the prompts to train the AI, by specifying the `role` and `content`. You can configure multiple sets.                                                                                                                                                                                                                                                                                                                                                                                |
-| `parameters`      | Configure authorization and authentication depending on the AI model you using. Configure the `type`, `required` and `location` of the parameters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `inputTransform`  | Provide the AI with the information it requires to return the response/chat message.&#xA;`model` - is the name and version of the AI model.&#xA;`response_format` - the expected input type, for example, json\_object.&#xA;`message` - under this property configure the prompts to train the AI, by specifying the `role` and `content`. You can configure multiple sets.                                                                       |
+| `parameters`      | Configure authorization and authentication depending on the AI model you using. Configure the `type`, `required` and `location` of the parameters.                                                                                                                                                                                               |
 
-## Examples and code samples &#x20;
+## Examples and code samples
 
 ::::ExpandableHeading
 ### Chatbot with OpenAI
 
-In this example, you set up an AI chat experience using the Jigx chatbot visual component configured to integrate with the OpenAI ChatGPT REST endpoint - [https://api.openai.com/v1/chat/completions](https://api.openai.com/v1/chat/completions). The REST API is configured in the ai-function.jigx and the chat component in the ai-chat.jigx file.&#x20;
+In this example, you set up an AI chat experience using the Jigx chatbot visual component configured to integrate with the OpenAI ChatGPT REST endpoint - [https://api.openai.com/v1/chat/completions](https://api.openai.com/v1/chat/completions). The REST API is configured in the ai-function.jigx and the chat component in the ai-chat.jigx file.
 
 The configuration for the function file called **ai-chat.jigx** contains:
 

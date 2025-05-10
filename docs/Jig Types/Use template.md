@@ -10,7 +10,7 @@ updatedAt: Fri Feb 16 2024 06:55:49 GMT+0000 (Coordinated Universal Time)
 
 Use the scenario templates to create a complete solution, for example, a contact management solution.
 
-&#x20;For steps on how to use jig templates see [Jig Templates]() .
+For steps on how to use jig templates see [Jig Templates]() .
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem

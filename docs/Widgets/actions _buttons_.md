@@ -8,14 +8,14 @@ updatedAt: Mon Mar 10 2025 08:28:52 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This widget allows you to add primary and/or secondary actions (buttons) to a widget. This is a quick way for users to perform actions without needing to access a jig through the widget first.&#x20;
+This widget allows you to add primary and/or secondary actions (buttons) to a widget. This is a quick way for users to perform actions without needing to access a jig through the widget first.
 
-- Any of the actions that are available in the [Actions](./../Actions.md)* *section can be configured on the widget.
-- This widget can be configured in a [group](<./Content widget components/group.md>) widget, which allows you to group the actions with other widget types.&#x20;
+- Any of the actions that are available in the [Actions](./../Actions.md) section can be configured on the widget.
+- This widget can be configured in a [group](<./Content widget components/group.md>) widget, which allows you to group the actions with other widget types.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bXQzrMgA9C2WU-VcYpOYU_wd-actions.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bXQzrMgA9C2WU-VcYpOYU_wd-actions.png" size="58" width="278" height="292" position="center" caption="Action widget" alt}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bXQzrMgA9C2WU-VcYpOYU_wd-actions.png" size="58" position="center" caption="Action widget"}
 :::
 ::::
 
@@ -34,21 +34,21 @@ This widget allows you to add primary and/or secondary actions (buttons) to a wi
 | `primary`         | Configure a `title` and onPress properties for a primary action button.                               |
 | `secondary`       | Configure a `title` and `onPress` properties for a secondary action button.                           |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Example of actions widget
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VtuoNb4XzobXvjv_YNiP9_actionsiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VtuoNb4XzobXvjv_YNiP9_actionsiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Actions widget" alt="Actions widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VtuoNb4XzobXvjv_YNiP9_actionsiphone13blueportrait.png" size="80" position="center" caption="Actions widget" alt="Actions widget"}
 :::
 
 :::VerticalSplitItem
 Here is an example of the actions button on the widget level. When the primary button is pressed, an avatar is shown, and when the secondary button (white with blue text) is pressed, the color palette is shown.
 
-**Examples:&#x20;
-**See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/action/actions.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/action/actions.jigx).
 :::
 ::::
 

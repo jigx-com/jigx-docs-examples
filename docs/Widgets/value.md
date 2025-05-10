@@ -12,11 +12,11 @@ Show values and amounts for a quick overview or visual representation on a widge
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OcTCGbkBbgy4XAiSLXL8F_img92bc27cc2344-1.jpeg" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OcTCGbkBbgy4XAiSLXL8F_img92bc27cc2344-1.jpeg" size="72" width="1125" height="2436" position="center" caption="Value widget" alt="Value widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OcTCGbkBbgy4XAiSLXL8F_img92bc27cc2344-1.jpeg" size="72" position="center" caption="Value widget" alt="Value widget"}
 :::
 ::::
 
-## ****Configuration options****
+## Configuration options
 
 | **Core options** |                                                                                                      |
 | ---------------- | ---------------------------------------------------------------------------------------------------- |
@@ -33,22 +33,22 @@ Show values and amounts for a quick overview or visual representation on a widge
 | `style`           | By default the value is positive. To show a negative value set the `style:` `isNegative` to `true`.                                 |
 | `top`             | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the top of the widget.    |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Value widget (2x2)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYzrsAD8f1eWOTTTZwaBG_img7893iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYzrsAD8f1eWOTTTZwaBG_img7893iphone13blueportrait.png" size="74" width="1570" height="2932" position="center" caption="Value widget with number" alt="Value widget with number"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYzrsAD8f1eWOTTTZwaBG_img7893iphone13blueportrait.png" size="74" position="center" caption="Value widget with number" alt="Value widget with number"}
 :::
 
 :::VerticalSplitItem
 This example shows a value widget configured with a number value, a `format` unit and `align` right. A `component.title` is added at the `top` and `component.trend` at the `bottom` to show additional information.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-2x2.jigx" target="_blank">GitHub</a>.&#x20;
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-2x2.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-2x2.jigx).
+See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-2x2.jigx).
 :::
 ::::
 
@@ -141,15 +141,15 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pXxBUeIjMcGUuZkQPjG9g_img7894iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pXxBUeIjMcGUuZkQPjG9g_img7894iphone13blueportrait.png" size="78" width="1570" height="2932" position="center" caption="Value widget with date and time" alt="Value widget with date and time"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pXxBUeIjMcGUuZkQPjG9g_img7894iphone13blueportrait.png" size="78" position="center" caption="Value widget with date and time" alt="Value widget with date and time"}
 :::
 
 :::VerticalSplitItem
 This example shows a value widget configured with a date and time value and a `dateFormat` to show HH\:mm and `align` center. A `component.title` is added at the `top` and at the `bottom` to provide additional information about the meeting.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-2x4.jigx" target="_blank">GitHub</a>.&#x20;
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-2x4.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-2x4.jigx).
+See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-2x4.jigx)
 :::
 ::::
 
@@ -246,15 +246,15 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mTH88SQVn-lvJEtmPiR5__img7895iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mTH88SQVn-lvJEtmPiR5__img7895iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Value widget with currency format" alt="Value widget with currency format"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mTH88SQVn-lvJEtmPiR5__img7895iphone13blueportrait.png" size="80" position="center" caption="Value widget with currency format" alt="Value widget with currency format"}
 :::
 
 :::VerticalSplitItem
 This example shows a value widget configured with an number value and a `Format` to show currency and `align` centre. A `component.title` is added at the `bottom` to provide additional information about the billing and quarter.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-4x2.jigx" target="_blank">GitHub</a>.&#x20;
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-4x2.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-4x2.jigx)
+See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-4x2.jigx).
 :::
 ::::
 

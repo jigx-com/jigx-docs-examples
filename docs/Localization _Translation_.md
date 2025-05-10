@@ -5,16 +5,16 @@ createdAt: Tue Nov 28 2023 12:15:16 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Nov 21 2024 10:19:50 GMT+0000 (Coordinated Universal Time)
 ---
 
-Solutions can easily be translated into any language by using the `Text Locale` property and creating a translation file with the translated text in Jigx Builder. On the device, use the *Profile>Settings>Language* option and select *Device (Respects device settings). *To understand how to configure localization in Jigx see [Localization]().&#x20;
+Solutions can easily be translated into any language by using the `Text Locale` property and creating a translation file with the translated text in Jigx Builder. On the device, use the *Profile>Settings>Language* option and select *Device (Respects device settings). *To understand how to configure localization in Jigx see [Localization]().
 
 :::hint{type="info"}
-Adding dynamic values in localized jigs use **ICU message** definitions.&#x20;
-Try it in the <a href="https://format-message.github.io/icu-message-format-for-translators/editor.html" target="_blank">Online ICU Message Editor </a> or see the <a href="https://unicode-org.github.io/icu/userguide/format_parse/messages/" target="_blank">ICU format messaging</a> documentation.
+Adding dynamic values in localized jigs use **ICU message** definitions.
+Try it in the [Online ICU Message Editor](https://format-message.github.io/icu-message-format-for-translators/editor.html) or see the [ICU format messaging](https://unicode-org.github.io/icu/userguide/format_parse/messages/) documentation.
 :::
 
 ## Configuration options
 
-| ### Core structure | ****                                                                                                                                                                                                                                                                                                                                                                                             |
+| ### Core structure | ****                                                                                    |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `text Locale`      | `id` - provide a unique identifier for the property to be translated. &#xA;`values` - create context variables with values to use in the translation file. This is useful when creating dynamic content. &#xA;`defaultMessage` - If no translation is found for the active device's language, it will either fallback to the specified `defaultMessage` or, if one is not specified, to English. |
 
@@ -25,8 +25,8 @@ Try it in the <a href="https://format-message.github.io/icu-message-format-for-t
 In this example, the new employee form is translated into German, French, and Czech. To see the form in each of the languages change your device language setting to one of the configured languages.
 
 **Examples**:
-See the jig example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-localization/localized-form-static.jigx" target="_blank">GitHub</a>.
-See the translation file examples in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/translations" target="_blank">GitHub</a>.
+See the jig example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-localization/localized-form-static.jigx).
+See the translation file examples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/translations).
 
 ![Chez, German, English](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2I1zBOgZCHFr3k64gXtrb_trans-form-static.PNG "Chez, German, English")
 
@@ -178,11 +178,11 @@ create: Vytvořit zaměstnance
 
 In this example, a jigwith today's activites is translated into German. The translation is configured dynamically agains the `Text Locale` values. To see the form in each of the languages change your device language setting to one of the configured languages.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoK-35uG5y6FomN9LyI0s_trans-dynamic.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoK-35uG5y6FomN9LyI0s_trans-dynamic.PNG" size="82" width="2540" height="2500" position="center" caption="One jig in two languages" alt="One jig in two languages"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoK-35uG5y6FomN9LyI0s_trans-dynamic.PNG" size="82" position="center" caption="One jig in two languages" alt="One jig in two languages"}
 
 **Examples**:
-See the jig example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-localization/localized-activities-dynamic.jigx" target="_blank">GitHub</a>.
-See the translation file examples in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/translations" target="_blank">GitHub</a>.
+See the jig example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-localization/localized-activities-dynamic.jigx).
+See the translation file examples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/translations).
 
 :::CodeblockTabs
 localized-activities-dynamic.jigx

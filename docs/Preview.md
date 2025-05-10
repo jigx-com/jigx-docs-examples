@@ -8,7 +8,7 @@ updatedAt: Thu Mar 07 2024 08:56:23 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-&#x20;Add a preview for the following [Components](./Components.md):
+Add a preview for the following [Components](./Components.md):
 \- [widgets]()
 \- [list-item](./Components/list/list-item.md)
 \- [event](./Components/event.md)&#x20;
@@ -20,13 +20,13 @@ The preview is triggered by *long-pressing* the widget or item. The *long-press*
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4T0YtpHHfAVeSh0QvkAni_microsoftteams-image-6.jpg" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4T0YtpHHfAVeSh0QvkAni_microsoftteams-image-6.jpg" size="84" width="1567" height="2367" position="center" caption="Preview " alt="Preview"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4T0YtpHHfAVeSh0QvkAni_microsoftteams-image-6.jpg" size="84" position="center" caption="Preview " alt="Preview"}
 :::
 ::::
 
 ### Configuration options
 
-| ### Core structure | ****                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ### Core structure | ****                                                           |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `actions`          | These [actions (buttons)](<./Widgets/actions _buttons_.md>) can be added to the preview :<br />* [action-list](./Actions/action-list.md)
 * [confirm](./Actions/confirm.md)
@@ -38,12 +38,12 @@ The preview is triggered by *long-pressing* the widget or item. The *long-press*
 * [set-state](./Actions/set-state.md)
 * [sync-entities](./Actions/sync-entities.md) |
 | `children`         | Two components available to use in a preview mode:<br />* [Entity](./Preview/Entity.md)
-* [Web-view](./Preview/Web-view.md)                                                                                                                                                                                                                                                                                                                                                    |
-| `header`           | The [jig-header](./Components/jig-header.md) is can be part of the displayed preview.                                                                                                                                                                                                                                                                                                                                                                                          |
-| `isCompact`        | When set to `true` the size of the preview will be adjusted to its content.                                                                                                                                                                                                                                                                                                                                                                                                    |
+* [Web-view](./Preview/Web-view.md)                                            |
+| `header`           | The [jig-header](./Components/jig-header.md) is can be part of the displayed preview.                                                                              |
+| `isCompact`        | When set to `true` the size of the preview will be adjusted to its content.                                                                                            |
 
 :::hint{type="warning"}
-1. &#x20;Currently issues could be experienced when displaying the header's `title` and `subtitle` in the preview.  &#x20;
-2. Using the `action.go-to` within an action [action-list](./Actions/action-list.md) does not trigger the preview popup.&#x20;
+1. Currently issues could be experienced when displaying the header's `title` and `subtitle` in the preview.
+2. Using the `action.go-to` within an action [action-list](./Actions/action-list.md) does not trigger the preview popup.
 :::
 

@@ -111,9 +111,9 @@ This example shows the simplest way in which a `Composite Jig` can be set up - r
 
 **Examples:**
 
-See the compsite jig code example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/jig-composite.jigx" target="_blank">GitHub</a>.
-See the <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/location/static-data/location-with-address.jigx" target="_blank">location</a> code and <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/country-list-sd.jigx" target="_blank">country list </a>code examples in GitHub.
-See the static country datasource code example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/country-data-static.jigx" target="_blank">GitHub</a>.
+See the compsite jig code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/jig-composite.jigx").
+See the [location](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/location/static-data/location-with-address.jigx) code and[country list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/country-list-sd.jigx) code examples in GitHub.
+See the static country datasource code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/country-data-static.jigx).
 See the index.jigx code below to add the jig to the Home Hub.
 
 
@@ -297,14 +297,14 @@ This example shows how a Composite jig can be used to only display certain data 
 ::::
 
 **Examples:**
-See the full composite jig input code example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/inputs/service-details-comp.jigx" target="_blank">GitHub</a>.
-See the folder with supporting files in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/inputs/supporting-files" target="_blank">GitHub</a>.
-See the datasource code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+See the full composite jig input code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/inputs/service-details-comp.jigx).
+See the folder with supporting files in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/inputs/supporting-files).
+See the datasource code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
 
 See the default.jigx code snippet with the database table defined below.
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 
 :::CodeblockTabs
@@ -538,8 +538,8 @@ tabs:
 :::
 :::::
 
-## See also** **
+## See also
 
 - [Jigs (screens)]()
-- <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-composite" target="_blank">Related examples (Github)</a>
+- [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-composite)
 

@@ -6,18 +6,18 @@ createdAt: Thu Jun 09 2022 20:14:58 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Mar 10 2025 09:54:31 GMT+0000 (Coordinated Universal Time)
 ---
 
-&#x20;Whenever a list jig is configured either in the <a href="" target="_blank">jig.list</a>, or <a href="https://docs.jigx.com/examples/list-item" target="_blank">list-item </a>component, the list is automatically populated on the surface of the widget without needing additional configuration.&#x20;
+Whenever a list jig is configured either in the <a href="" target="_blank">jig.list</a>, or <a href="https://docs.jigx.com/examples/list-item" target="_blank">list-item </a>component, the list is automatically populated on the surface of the widget without needing additional configuration.
 There is also the option to extend the list widget by using the `Extend List Widget` property, which reuses the list jig configuration and its data to extend or override some of the properties in the widget. The item data is called from `=@ctx.current.item.value`.
 
-There are, instances when you want to create a list widget on a jig that is not a list jig, such as a `jig.default`. This is primarily where the list widget is used.&#x20;
+There are, instances when you want to create a list widget on a jig that is not a list jig, such as a `jig.default`. This is primarily where the list widget is used.
 
 ::::VerticalSplit{layout}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x_tcUv7lpa0tsER9sVivd_img3900.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x_tcUv7lpa0tsER9sVivd_img3900.PNG" size="74" width="1125" height="2436" position="center" caption="List widgets" alt="List widgets"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x_tcUv7lpa0tsER9sVivd_img3900.PNG" size="74" position="center" caption="List widgets" alt="List widgets"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/U6BPOZ0OYlFedss3Z_mND_img3901.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/U6BPOZ0OYlFedss3Z_mND_img3901.PNG" size="74" width="1125" height="2436" position="center" caption="List widgets" alt="List widgets"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/U6BPOZ0OYlFedss3Z_mND_img3901.PNG" size="74" position="center" caption="List widgets" alt="List widgets"}
 :::
 ::::
 
@@ -25,42 +25,35 @@ There are, instances when you want to create a list widget on a jig that is not 
 
 A list widget can be used on any type of jig, i.e. list, default, composite, calendar and document.
 
-| **Core options** |                                                                                                                                                                                                                                                                                                                |
+| **Core options** |                                                                                                          |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `item`           | The `item` property includes the setup options of:<br />* <a href="https://docs.jigx.com/examples/stage" target="_blank">Stage</a>
-* <a href="https://docs.jigx.com/examples/product-item" target="_blank">Product-item</a>
-* <a href="https://docs.jigx.com/examples/list-item" target="_blank">List-item</a> |
+| `item`           | The `item` property includes the setup options of:<br />* [Stage](https://docs.jigx.com/examples/stage)<br />* [Product-item](https://docs.jigx.com/examples/product-item)<br />* [List-item](https://docs.jigx.com/examples/list-item) |
 
-| ### Other options | ****                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ### Other options | ****                        |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `badge`           | Add a badge to the list widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:&#xA;-  To display as a red dot using the `empty` value.&#xA;-  A red dot with a number using an expression to perform a count. &#xA;For example, counting the number of tasks in the list. |
-| `bottom`          | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the bottom of the widget.                                                                                                                                                                                                                                                                                                      |
-| `data`            | Provide the datasource for the list. For example:&#xA;`data: =@ctx.datasources.tasklist`                                                                                                                                                                                                                                                                                                                                                 |
-| `footer`          | Add text to the footer of the widget.                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                                                                                                                                                                                                                                                                                                                                                      |
-| `placeholders`    | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                                                                                                                                                                                                                                                                                                                                    |
-| `top`             | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the top of the widget.                                                                                                                                                                                                                                                                                                         |
+| `bottom`          | The [titles](https://docs.jigx.com/examples/titles) component will be added to the bottom of the widget.                                                                                                |
+| `data`            | Provide the datasource for the list. For example:&#xA;`data: =@ctx.datasources.tasklist`                                        |
+| `footer`          | Add text to the footer of the widget.                                                                                          |
+| `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                                             |
+| `placeholders`    | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                          |
+| `top`             | The [titles](https://docs.jigx.com/examples/titles) component will be added to the top of the widget.                                                                                                     |
 
 | ### State Configuration  | **Key**              | **Notes**                                                                                                                                                                                 |
 | ------------------------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `=@ctx.current.state.`   | amount&#xA;checked   | - Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array. &#x20; |
-| `=@ctx.component.state.` | amount&#xA;checked   | * State is the variable of the component.                                                                                                                                                 |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now | - Global state variable that can be used throughout the solution.                                                                                                                         |
+| `=@ctx.current.state.`   | amount&#xA;checked   | - Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array.|
+| `=@ctx.component.state.` | amount&#xA;checked   | * State is the variable of the component.                                               |
+| `=@ctx.solution.state.`  | activeItemId&#xA;now | - Global state variable that can be used throughout the solution.                      |
 
-## Configuration options **for extended list widget**
+## Configuration options **for extended list widget
 
 The `Extended List Widget` can only be used on a list jig . The purpose of using this widget is to customize what shows in the widget on the Home Hub rather than showing its automatic list display.  The `Extended List Widget` must be configured with a size 2x2 or greater. Reuse the data in the list jig , for example, `=@ctx.datasources.users.title` or `=@ctx.current.item.value`.
 
-| **Core options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Core options** |                                                                                                                                                       |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `item`           | The `item` property includes the setup options of:<br />* [bar-chart](./../Components/charts/bar-chart.md)
-* [expander](./../Components/expander.md)
-* <a href="https://docs.jigx.com/examples/stage" target="_blank">Stage</a>
-* <a href="https://docs.jigx.com/examples/product-item" target="_blank">Product-item</a>
-* <a href="https://docs.jigx.com/examples/list-item" target="_blank">List-item</a>
-* [pie-chart](./../Components/charts/pie-chart.md) |
+| `item`           | The `item` property includes the setup options of:<br />* [bar-chart](./../Components/charts/bar-chart.md)<br />* [expander](./../Components/expander.md)<br />* [Stage](https://docs.jigx.com/examples/stage)<br />* [Product-item](https://docs.jigx.com/examples/product-item)<br />* [List-item](https://docs.jigx.com/examples/list-item)<br />* [pie-chart](./../Components/charts/pie-chart.md) |
 
-## Examples and code snippets ****
+## Examples and code snippets 
 
 :::::ExpandableHeading
 ### Automatic widget display because of list jig type (Simple)
@@ -71,17 +64,17 @@ The `Extended List Widget` can only be used on a list jig . The purpose of using
 :::
 
 :::VerticalSplitItem
-When using a `jig.list` and any size widget larger than 1x1 the list will automatically be displayed without additional configurations. This is visible in this example.&#x20;
+When using a `jig.list` and any size widget larger than 1x1 the list will automatically be displayed without additional configurations. This is visible in this example.
 
-In this example,  the list on the widget is the same as the `jig.list` once the widget has been accessed.&#x20;
+In this example,  the list on the widget is the same as the `jig.list` once the widget has been accessed.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-left-elements/list-with-left-checkbox-sd.jigx" target="_blank">GitHub</a>.
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-left-elements/list-with-left-avatar-dd.jigx" target="_blank">GitHub</a>.
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-left-elements/list-with-left-checkbox-sd.jigx).
+See the complete example using dynamic data in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-left-elements/list-with-left-avatar-dd.jigx).
 
-**Datasources:
-**See the complete datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx" target="_blank">GitHub</a>.&#x20;
-See the complete datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasources**:
+See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
+See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx)
 :::
 ::::
 
@@ -133,17 +126,17 @@ children:
 :::
 
 :::VerticalSplitItem
-When using a `jig.list` and any size widget larger than 1x1 the list will automatically be displayed without additional configurations.&#x20;
+When using a `jig.list` and any size widget larger than 1x1 the list will automatically be displayed without additional configurations.
 
-In this example, the list on the widget is exactly the same as the `jig.list` once the widget has been accessed.&#x20;
+In this example, the list on the widget is exactly the same as the `jig.list` once the widget has been accessed.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/list-item/static-data/list-with-left-elements/list-with-left-checkbox-sd.jigx" target="_blank">GitHub</a>.&#x20;
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/list-item/dynamic-data/list-with-left-elements/list-with-left-avatar-dd.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/list-item/static-data/list-with-left-elements/list-with-left-checkbox-sd.jigx).
+See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/list-item/dynamic-data/list-with-left-elements/list-with-left-avatar-dd.jigx).
 
-**Datasources:
-**See the complete datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx" target="_blank">GitHub</a>.&#x20;
-See the complete datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx" target="_blank">GitHub</a>.
+**Datasources**:
+See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
+See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
 :::
 ::::
 
@@ -202,15 +195,15 @@ children:
 :::
 
 :::VerticalSplitItem
-This example is for list items that have a left and right element and shows a start-and-end. An example of this is flight schedules, however, this can be used for many different use cases as you can choose a different icon. Here a slightly different setup is used to that in the actual list to show you the widget configuration.&#x20;
+This example is for list items that have a left and right element and shows a start-and-end. An example of this is flight schedules, however, this can be used for many different use cases as you can choose a different icon. Here a slightly different setup is used to that in the actual list to show you the widget configuration.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/list/static-data/widget-list-stage-sd.jigx" target="_blank">GitHub</a>.
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/list/dynamic-data/widget-list-stage-dd.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/list/static-data/widget-list-stage-sd.jigx).
+See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/list/dynamic-data/widget-list-stage-dd.jigx).
 
-**Datasources:
-**See the complete datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-static.jigx" target="_blank">GitHub</a>.&#x20;
-See the complete datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasources**:
+See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-static.jigx).
+See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-dynamic.jigx).
 :::
 ::::
 
@@ -277,19 +270,19 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmVasJ9L4i3NPUtt8l722_listproductiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmVasJ9L4i3NPUtt8l722_listproductiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="2x2 product-item list widget" alt="2x2 product-item list widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmVasJ9L4i3NPUtt8l722_listproductiphone13blueportrait.png" size="80" position="center" caption="2x2 product-item list widget" alt="2x2 product-item list widget"}
 :::
 
 :::VerticalSplitItem
 This example shows product items with their images and respective prices.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/list/static-data/widget-list-product-item-sd.jigx" target="_blank">GitHub</a>.&#x20;
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/list/dynamic-data/widget-list-product-item-dd.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/list/static-data/widget-list-product-item-sd.jigx)
+See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/list/dynamic-data/widget-list-product-item-dd.jigx)
 
-**Datasources:
-**See the complete datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products.jigx" target="_blank">GitHub</a>.
-See the complete datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products-dynamic.jigx" target="_blank">GitHub</a>.
+**Datasources**:
+See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products.jigx).
+See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products-dynamic.jigx).
 :::
 ::::
 
@@ -356,19 +349,19 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rZCv7iRFImXiqOzMsjRK-_listsdiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rZCv7iRFImXiqOzMsjRK-_listsdiphone13blueportrait.png" size="76" width="1570" height="2932" position="center" caption="2x2 list-item basic widget" alt="2x2 list-item basic widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rZCv7iRFImXiqOzMsjRK-_listsdiphone13blueportrait.png" size="76" position="center" caption="2x2 list-item basic widget" alt="2x2 list-item basic widget"}
 :::
 
 :::VerticalSplitItem
-This example shows a basic `component.list-item` setup.&#x20;
+This example shows a basic `component.list-item` setup.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/list/static-data/widget-list-items-sd.jigx" target="_blank">GitHub</a>.&#x20;
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/list/dynamic-data/widget-list-items-dd.jigx" target="_blank">GitHub</a>.
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/list/static-data/widget-list-items-sd.jigx).
+See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/list/dynamic-data/widget-list-items-dd.jigx).
 
-**Datasources:
-**See the complete datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/calendar-data.jigx" target="_blank">GitHub</a>.
-See the complete datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/calendar-data-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasources**:
+See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/calendar-data.jigx).
+See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/calendar-data-dynamic.jigx")
 :::
 ::::
 
@@ -430,13 +423,13 @@ children:
 ::::ExpandableHeading
 ### Extended list widget 2x4, 4x2, 4x4
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/s4ML69T6TZa5bCeOaYjKr_widget-extend.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/s4ML69T6TZa5bCeOaYjKr_widget-extend.PNG" size="80" width="2546" height="2500" position="center" caption="Extended list widget" alt="Extended list widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/s4ML69T6TZa5bCeOaYjKr_widget-extend.PNG" size="80" position="center" caption="Extended list widget" alt="Extended list widget"}
 
 This example shows how the `Extend List Widget` reuses the data from a single `jig.list` to customize the widget's appearance.  In the image above:
 
-1. &#x20;The first widget is the default `2x2` widget that is automatically displayed.&#x20;
+1. The first widget is the default `2x2` widget that is automatically displayed.
 2. The second widget is a `2x4` using the `Extend List widget` to only show the `titles` in the list.
-3. The third widget is a `4x2` using the `Extend List Widget `with a `component.stage` configuration.&#x20;
+3. The third widget is a `4x2` using the `Extend List Widget `with a `component.stage` configuration.
 4. The fourth widget is a `4x4` using the `Extend List Widget` to show a customized `leftElement` and `RightElement`.
 
 :::CodeblockTabs
@@ -593,7 +586,7 @@ children:
 :::
 ::::
 
-### Group list widgets&#x20;
+### Group list widgets
 
 See the following examples under groups:
 
@@ -602,7 +595,7 @@ See the following examples under groups:
 - <a href="https://docs.jigx.com/examples/group#3Wi36" target="_blank">Group with avatar and list (size: 4x2)</a>
 - <a href="https://docs.jigx.com/examples/group#VWndb" target="_blank">Group with value and bar-chart (size: 2x4)</a>
 
-## **See also**
+## See also
 
 - [State]()
 

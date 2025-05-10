@@ -21,21 +21,21 @@ The `group widget` allows widgets to be combined to create a single widget. The 
 | `placeholders`    | Specify a placeholder text to display if there is no data, for example - `title: No data to display`    |
 | `split`           | The option to group the widgets vertically or horizontally. By default, widgets are grouped vertically. |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Group with chart and list (size: 4x4, split: horizontal)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vZSpwck06Npdts3BCYNB1_group-wiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vZSpwck06Npdts3BCYNB1_group-wiphone13blueportrait.png" size="82" width="1570" height="2932" position="center" caption="Horizontal split widget group " alt="Horizontal split widget group "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vZSpwck06Npdts3BCYNB1_group-wiphone13blueportrait.png" size="82" position="center" caption="Horizontal split widget group " alt="Horizontal split widget group "}
 :::
 
 :::VerticalSplitItem
 For the 4x4 widget, we have a split option. In this property, a vertical or horizontal layout is possible for the widget. In this example, a combination of a chart and a list are used in a **horizontal** split.
 
 **Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-chart-list-horizontal.jigx" target="_blank">GitHub</a>.&#x20;
+**See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-chart-list-horizontal.jigx).
 
 
 :::
@@ -138,14 +138,14 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vblqyuZ8bZ3CsaQOHpbU3_verticalgroupiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vblqyuZ8bZ3CsaQOHpbU3_verticalgroupiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Vertical split widget group " alt="Vertical split widget group "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vblqyuZ8bZ3CsaQOHpbU3_verticalgroupiphone13blueportrait.png" size="80" position="center" caption="Vertical split widget group " alt="Vertical split widget group "}
 :::
 
 :::VerticalSplitItem
 In this example, a combination of a chart and list was configured with a **vertical** split.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-chart-list-vertical.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-chart-list-vertical.jigx).
 :::
 ::::
 
@@ -230,19 +230,19 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ku31Kug--owZX3VQ_NC2G_4x2iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ku31Kug--owZX3VQ_NC2G_4x2iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Group widget with avatar and list" alt="Group widget with avatar and list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ku31Kug--owZX3VQ_NC2G_4x2iphone13blueportrait.png" size="80" position="center" caption="Group widget with avatar and list" alt="Group widget with avatar and list"}
 :::
 
 :::VerticalSplitItem
 This group widget represents a combination of the avatar with a list. After clicking on the widget, the list component is shown.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-avatar-list.jigx" target="_blank">GitHub</a>.
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/dynamic-data/group-avatar-list-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-avatar-list.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/dynamic-data/group-avatar-list-dynamic.jigx).
 
-**Datasources:
-**See the full datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-static.jigx" target="_blank">GitHub</a>.
-See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasources**:
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-static.jigx).
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-dynamic.jigx).
 :::
 ::::
 
@@ -320,19 +320,19 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_nW2If-8vWWmlEVdp0SmL_2x4iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_nW2If-8vWWmlEVdp0SmL_2x4iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Group with value and bar-chart" alt="Group with value and bar-chart"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_nW2If-8vWWmlEVdp0SmL_2x4iphone13blueportrait.png" size="80" position="center" caption="Group with value and bar-chart" alt="Group with value and bar-chart"}
 :::
 
 :::VerticalSplitItem
 This group widget represents a combination of the value and bar-chart. After clicking on the widget, the bar- chart is shown.
 
-**Examples:
-**See the full example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-value-chart.jigx" target="_blank">GitHub</a>.&#x20;
-See the full example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/dynamic-data/group-value-chart-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-value-chart.jigx).
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/dynamic-data/group-value-chart-dynamic.jigx).
 
-**Datasources:
-**See the full datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasources**:
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx).
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx).
 :::
 ::::
 

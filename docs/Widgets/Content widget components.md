@@ -8,7 +8,7 @@ updatedAt: Fri May 31 2024 06:52:59 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/o7ShYcfumRSpJdQIzJi-9_wd-widgetcompoment.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/o7ShYcfumRSpJdQIzJi-9_wd-widgetcompoment.png" size="80" width="1125" height="1824" position="center" caption="Content widgets components" alt="Content widgets components"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/o7ShYcfumRSpJdQIzJi-9_wd-widgetcompoment.png" size="80" position="center" caption="Content widgets components" alt="Content widgets components"}
 :::
 
 :::VerticalSplitItem

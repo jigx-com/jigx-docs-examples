@@ -12,7 +12,7 @@ The document jig type is used to display documents connected to your solution. T
 
 1. PDF file
 2. HTML page - set up using:
-   1. &#x20;A URL (website link)
+   1. A URL (website link)
    2. HTML
 :::
 
@@ -21,7 +21,7 @@ The document jig type is used to display documents connected to your solution. T
 :::
 ::::
 
-## **Configuration options**
+## Configuration options
 
 Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
 
@@ -52,14 +52,14 @@ The code below is an extract from the full *jigx-samples* solution. The code sni
 :::
 
 ::::VerticalSplitItem
-This example displays a `Document Jig` used to display a `PDF document`.&#x20;
+This example displays a `Document Jig` used to display a `PDF document`.
 
-**Examples:
-**See the full code sample using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-document/static-data/document-pdf-sd.jigx" target="_blank">GitHub</a>.&#x20;
-See the full code sample using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-document/dynamic-data/document-pdf-dd.jigx" target="_blank">GitHub</a>.
+**Examples**:
+See the full code sample using static data in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-document/static-data/document-pdf-sd.jigx)
+See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-document/dynamic-data/document-pdf-dd.jigx).
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for documents. You can use the documents.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/documents.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for documents. You can use the documents.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/documents.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -138,11 +138,11 @@ In this example a `jig.document` is used to display an `HTML` document.
 
 **Examples:**
 
-See the full code sample using static data in<a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-document/static-data/document-html-url-sd.jigx" target="_blank"> GitHub</a>.
-See the full code sample using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-document/dynamic-data/document-html-url-dd.jigx" target="_blank">GitHub</a>.
+See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-document/static-data/document-html-url-sd.jigx).
+See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-document/dynamic-data/document-html-url-dd.jigx).
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for documents. You can use the documents.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/documents.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for documents. You can use the documents.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/documents.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -231,7 +231,7 @@ In this example a `jig.document` is used to display raw HTML content.
 
 **Examples:**
 
-See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-document/static-data/document-html-content.jigx" target="_blank">GitHub</a>.
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-document/static-data/document-html-content.jigx).
 :::
 ::::
 
@@ -340,5 +340,5 @@ tabs:
 ## See Also
 
 - [Jigs (screens)]()
-- <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-composite" target="_blank">Related examples (Github)</a>
+- [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-composite)
 

@@ -11,7 +11,7 @@ By default, the user profile in Jigx includes various menu options, such as Pers
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0aw583ODqedI-VNze0iU-20250429-115921.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0aw583ODqedI-VNze0iU-20250429-115921.png" size="66" width="1224" height="2466" position="center" caption="Default Profile screen" alt="Default Profile screen"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0aw583ODqedI-VNze0iU-20250429-115921.png" size="66" position="center" caption="Default Profile screen" alt="Default Profile screen"}
 :::
 ::::
 
@@ -119,16 +119,16 @@ The Profile screen can be extended by adding [Components](./Components.md)  that
 2. Set the `jigId` in the `profile` property within the index.jigx file.
 
 :::hint{type="info"}
-You can create a jig as the first screen a new user sees when they log into the app to capture their details. This updates the Profile screen. Once updated, the screen can be configured with conditions to prevent it from appearing again.&#x20;
+You can create a jig as the first screen a new user sees when they log into the app to capture their details. This updates the Profile screen. Once updated, the screen can be configured with conditions to prevent it from appearing again.
 
 This is especially useful in scenarios where devices are shared among multiple employees, such as contractors or engineers.
 :::
 
-| **Properties**                  | **Description**                                                                                                                                                                                                                                                                                                                                                                    |
+| **Properties**                  | **Description**                                                           |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Profile`                       | Adding the property with it's values to the index.jigx file will insert the referenced jigs into the header section of the Profile screen.                                                                                                                                                                                                                                         |
+| `Profile`                       | Adding the property with it's values to the index.jigx file will insert the referenced jigs into the header section of the Profile screen.                                   |
 | `isPersonalInfoMenuItemVisible` | Determine whether the Personal Information menu should be hidden (`false`) or visible (`true`). The default setting is `true`. This menu opens a screen displaying the user's name, email, and avatar, and provides an option to delete the account.&#xA;Customizing the Profile screen allows this information to be integrated directly, eliminating the need for a menu option. |
-| `jigId`                         | Provide the `jigId` for the jigs that will be displayed in the Profile screen.                                                                                                                                                                                                                                                                                                     |
+| `jigId`                         | Provide the `jigId` for the jigs that will be displayed in the Profile screen.                                                                                                 |
 
 ### Considerations
 
@@ -141,7 +141,7 @@ This is especially useful in scenarios where devices are shared among multiple e
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wECb6jB_d0KV8RZks0JhF-20250429-115657.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wECb6jB_d0KV8RZks0JhF-20250429-115657.png" size="64" width="1224" height="2466" position="center" caption="Extended Profile " alt="Extended Profile"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wECb6jB_d0KV8RZks0JhF-20250429-115657.png" size="64" position="center" caption="Extended Profile " alt="Extended Profile"}
 :::
 
 :::VerticalSplitItem
@@ -232,11 +232,11 @@ profile:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example demonstrates how to add a `list` of emergency contacts to a jig, which is referenced in the index.jigx file to extend the Profile screen.&#x20;
+This example demonstrates how to add a `list` of emergency contacts to a jig, which is referenced in the index.jigx file to extend the Profile screen.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-H0Dgln2rHI2yHTQ3h6dN_-20250429-115802.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-H0Dgln2rHI2yHTQ3h6dN_-20250429-115802.png" size="66" width="1224" height="2466" position="center" caption="Profile extended with list" alt="Profile extended with list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-H0Dgln2rHI2yHTQ3h6dN_-20250429-115802.png" size="66" position="center" caption="Profile extended with list" alt="Profile extended with list"}
 :::
 ::::
 
@@ -325,7 +325,7 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FH4wEyKl1W6fCjOeD1Cbi-20250429-115844.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FH4wEyKl1W6fCjOeD1Cbi-20250429-115844.png" size="64" width="1224" height="2466" position="center" caption="Custom Profile" alt="Custom Profile"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FH4wEyKl1W6fCjOeD1Cbi-20250429-115844.png" size="64" position="center" caption="Custom Profile" alt="Custom Profile"}
 :::
 
 :::VerticalSplitItem

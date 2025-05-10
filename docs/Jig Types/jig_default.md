@@ -8,11 +8,11 @@ updatedAt: Tue Apr 29 2025 10:39:06 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="right"}
 :::VerticalSplitItem
-Type` jig.default` is the most versatile jig allowing you to create a jig with various setup options such as:&#x20;
+Type` jig.default` is the most versatile jig allowing you to create a jig with various setup options such as:
 
 - A [form](./../Components/form.md)
 - A [list](./../Widgets/list.md)
-- The jig which can be a part of the [jig.composite](./jig_composite.md)&#x20;
+- The jig which can be a part of the [jig.composite](./jig_composite.md)
 - Used with a combination of different components and actions.
 
 ##
@@ -23,11 +23,11 @@ Type` jig.default` is the most versatile jig allowing you to create a jig with v
 :::
 ::::
 
-## **Configuration options**
+## Configuration options
 
 Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                                                             |
+| ### Core structure | ****                                                                                          |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `children`         | Add the UI elements ([Components](./../Components.md)) under the children property, for example, `component.form`. Use Intellisense (ctrl+space) to select a component from the available list.  |
 | `title`            | Provide the name of the screen. If you do not want to show a title in a jig use `title: ' '` or add an expression.                                                                               |
@@ -39,7 +39,7 @@ The jig.default is the most versatile jigavailable allowing you to create a vari
 ## Examples and code snippets 
 
 :::hint{type="success"}
-The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples" target="_blank">GitHub,</a> and follow the instructions in [Setting up your solution](docId:1gfew7GRPvkfxon-TsymP).
+The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples), and follow the instructions in [Setting up your solution](docId:1gfew7GRPvkfxon-TsymP).
 :::
 
 :::::ExpandableHeading
@@ -52,12 +52,9 @@ The code below is an extract from the full *jigx-samples* solution. The code sni
 
 :::VerticalSplitItem
 **Examples:**
-
-See the full default-form.jigx code example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-form.jigx" target="_blank">GitHub</a>.&#x20;
-
+See the full default-form.jigx code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-form.jigx).
 **Datasource:**
-
-See the full datasource code example for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-form.jigx" target="_blank">GitHub</a>.
+See the full datasource code example for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-form.jigx).
 
 
 :::
@@ -190,22 +187,20 @@ tabs:
 ::::VerticalSplitItem
 **Examples:**
 
-See the full code sample with static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-list.jigx" target="_blank">GitHub</a>.
+See the full code sample with static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-list.jigx).
 
-See the full code sample with dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-list-dynamic.jigx" target="_blank">GitHub</a>.
-
-
+See the full code sample with dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-list-dynamic.jigx).
 
 **Datasource:**
 
-See the full code sample for datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-list.jigx" target="_blank">GitHub</a>.
+See the full code sample for datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-list.jigx).
 
-See the full datasource code samples for dynamic data for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/prods.jigx" target="_blank">product</a> and <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/sale.jigx" target="_blank">sales</a> in GitHub.
+See the full datasource code samples for dynamic data for [product](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/prods.jigx) and [sales](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/sale.jigx) in GitHub.
 
 
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for products. You can use the products.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/products.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for products. You can use the products.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/products.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -321,15 +316,15 @@ tables:
 ::::VerticalSplitItem
 **Examples:**
 
-See the full code sample with static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-employee-detail.jigx" target="_blank">GiltHub</a>. See the full code sample with dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/employee-detail-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+See the full code sample with static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-employee-detail.jigx). See the full code sample with dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/employee-detail-dynamic.jigx)
 
 **Datasource:**
 
-See the full datasource code sample for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products.jigx" target="_blank">GitHub</a>.&#x20;
-See the full datasource code samples for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products.jigx)
+See the full datasource code samples for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products-dynamic.jigx)
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for employees. You can use the employee.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/employees.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for employees. You can use the employee.csv file in[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/employees.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -512,16 +507,16 @@ tables:
 
 **Examples:**
 
-See full code sample with static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-product-detail.jigx" target="_blank">GitHub</a>.&#x20;
-See full code sample with dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-product-detail-dynamic.jigx" target="_blank">GitHub</a>.
+See full code sample with static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-product-detail.jigx)
+See full code sample with dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-product-detail-dynamic.jigx).
 
 **Datasource:**
 
-See the full datasource code sample for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/product-detail-static.jigx" target="_blank">GitHub</a>.
-See the full datasource code sample for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/product-detail-dynamic.jigx" target="_blank">GitHub</a>.
+See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/product-detail-static.jigx).
+See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/product-detail-dynamic.jigx).
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for products. You can use the products.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/products.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for products. You can use the products.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/products.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -733,5 +728,5 @@ tabs:
 ## See also
 
 - [Jigs (screens)]()
-- <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-default" target="_blank">Related examples (Github)</a>
+- [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-default)
 

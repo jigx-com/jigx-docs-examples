@@ -8,27 +8,27 @@ updatedAt: Mon Mar 10 2025 09:28:38 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-The chart widget is suitable for displaying the <a href="https://docs.jigx.com/examples/line-chart" target="_blank">line-chart</a>, <a href="https://docs.jigx.com/examples/bar-chart" target="_blank">bar-chart</a>, or <a href="https://docs.jigx.com/examples/pie-chart" target="_blank">pie-chart</a> on the Home Hub .
+The chart widget is suitable for displaying the <[line-chart](https://docs.jigx.com/examples/line-chart), [bar-chart](https://docs.jigx.com/examples/bar-chart), or [pie-chart](https://docs.jigx.com/examples/pie-chart) on the Home Hub .
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/adjbqUzKWPTPOznhe57WH_wd-charts.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/adjbqUzKWPTPOznhe57WH_wd-charts.PNG" size="64" width="1240" height="2500" position="center" caption="Chart widgets" alt="Chart widgets"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/adjbqUzKWPTPOznhe57WH_wd-charts.PNG" size="64" position="center" caption="Chart widgets" alt="Chart widgets"}
 :::
 ::::
 
-## ****Configuration options****
+## Configuration options
 
-| ### Core structure | ****                                                                                                                                                                                                                                                                                                                                        |
+| ### Core structure | ****                                  |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `chart`            | The configuration is the same as for the chart components, refer to the <a href="https://docs.jigx.com/examples/line-chart" target="_blank">line-chart</a>, <a href="https://docs.jigx.com/examples/bar-chart" target="_blank">bar-chart</a>, or <a href="https://docs.jigx.com/examples/pie-chart" target="_blank">pie-chart </a>examples. |
+| `chart`            | The configuration is the same as for the chart components, refer to the [line-chart](https://docs.jigx.com/examples/line-chart), [bar-chart](https://docs.jigx.com/examples/bar-chart), or [pie-chart](https://docs.jigx.com/examples/pie-chart) examples. |
 
 | ### Other options | ****                                                                                                                                |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `bottom`          | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the bottom of the widget. |
+| `bottom`          | The [titles](https://docs.jigx.com/examples/titles) component will be added to the bottom of the widget. |
 | `footer`          | Add text to the footer of the widget.                                                                                               |
 | `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                                                 |
 | `placeholders`    | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                               |
-| `top`             | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the top of the widget.    |
+| `top`             | The [titles](https://docs.jigx.com/examples/titles) component will be added to the top of the widget.    |
 
 ## Examples and code snippets 
 
@@ -37,14 +37,14 @@ The chart widget is suitable for displaying the <a href="https://docs.jigx.com/e
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/J6pNWuARKgPksDAqWwkzK_wd-chartline22.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/J6pNWuARKgPksDAqWwkzK_wd-chartline22.PNG" size="74" width="1240" height="2500" position="center" caption="Line-chart 2x2" alt="Line-chart 2x2"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/J6pNWuARKgPksDAqWwkzK_wd-chartline22.PNG" size="74" position="center" caption="Line-chart 2x2" alt="Line-chart 2x2"}
 :::
 
 :::VerticalSplitItem
 In this example select the `chart` widget and add a `component.line-chart` and add a `component.trend` at the `top` to show the positive percentage trend and a `component.titles` at the `bottom`.
 
 **Example:**
-See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/chart-line-1_2x2.jigx" target="_blank">GitHub</a>.
+See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/chart-line-1_2x2.jigx).
 :::
 ::::
 
@@ -145,11 +145,11 @@ children:
 In this example select the `chart` widget and add a `component.line-chart` and add a `component.title` at the `top`.
 
 **Example:**
-See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x4/chart-line-1_2x4.jigx" target="_blank">GitHub</a>.
+See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x4/chart-line-1_2x4.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[**Example:**&#xA;See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-widgets/jigs/widgets/2x2/chart-line-1_2x2.jigx" target="_blank">GitHub</a>.]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9x1YJjqI0mnBBDuf9rBh_wd-chartline24.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9x1YJjqI0mnBBDuf9rBh_wd-chartline24.PNG" size="84" width="1240" height="2500" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9x1YJjqI0mnBBDuf9rBh_wd-chartline24.PNG" size="84" position="center" caption}
 :::
 ::::
 
@@ -247,8 +247,8 @@ children:
 In this example select the `chart` widget and add a `component.line-chart` and add a `component.title` at the `top` and at the `bottom`.
 
 **Example:**
-See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x4/chart-line-2_4x4.jigx" target="_blank">GitHub</a> for the Sales performance line-chart widget.
-See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x4/chart-line-1_4x4.jigx" target="_blank">GitHub</a> for the Quarterly Company Progress.
+See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x4/chart-line-2_4x4.jigx) for the Sales performance line-chart widget.
+See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x4/chart-line-1_4x4.jigx) for the Quarterly Company Progress.
 :::
 ::::
 
@@ -438,19 +438,19 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mqh4r9GH4TOTnBy1_kXtQ_linechartiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mqh4r9GH4TOTnBy1_kXtQ_linechartiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="line-chart widget" alt="line-chart widget 4"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mqh4r9GH4TOTnBy1_kXtQ_linechartiphone13blueportrait.png" size="80" position="center" caption="line-chart widget" alt="line-chart widget 4"}
 :::
 
 :::VerticalSplitItem
 This example is configured using a line-chart to display in the chart widget.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/static-data/chart-widget-with-line-chart/chart-widget-line-chart.jigx" target="_blank">GitHub</a>.&#x20;
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/dynamic-data/chart-widget-with-line-chart/chart-widget-line-dynamic.jigx" target="_blank">GitHub</a>.
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/static-data/chart-widget-with-line-chart/chart-widget-line-chart.jigx).
+See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/dynamic-data/chart-widget-with-line-chart/chart-widget-line-dynamic.jigx).
 
-**Datasources:
-**See the complete datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx" target="_blank">GitHub</a>.&#x20;
-See the complete datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Datasources**:
+See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx).
+See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx)
 
 
 :::
@@ -561,14 +561,14 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/klbestBzZ9mIfpOu6q7D__wd-linegroup.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/klbestBzZ9mIfpOu6q7D__wd-linegroup.PNG" size="80" width="1240" height="2500" position="center" caption="Group widget with line-charts" alt="Group widget with line-charts"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/klbestBzZ9mIfpOu6q7D__wd-linegroup.PNG" size="80" position="center" caption="Group widget with line-charts" alt="Group widget with line-charts"}
 :::
 
 :::VerticalSplitItem
 In this example two line-chart widgets are combined in the `group` widget with the `component.titles` to add additional information.
 
 **Example:**
-See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/combined-chart-chart-1_4x2.jigx" target="_blank">GitHub</a>.
+See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/combined-chart-chart-1_4x2.jigx).
 :::
 ::::
 
@@ -805,11 +805,11 @@ children:
 In this example select the `chart` widget and add a `component.bar-chart` and add a `component.trend` at the `top`.
 
 **Example:**
-See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/chart-line-1_2x2.jigx" target="_blank">GitHub</a>.
+See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/chart-line-1_2x2.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fp7s1B__h9Bjo1bbuR9-k_wd-bar22.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fp7s1B__h9Bjo1bbuR9-k_wd-bar22.PNG" size="80" width="1240" height="2500" position="center" caption="Bar-chart widget 2x2" alt="Bar-chart widget 2x2"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fp7s1B__h9Bjo1bbuR9-k_wd-bar22.PNG" size="80" position="center" caption="Bar-chart widget 2x2" alt="Bar-chart widget 2x2"}
 :::
 ::::
 
@@ -907,14 +907,14 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y3CKSyi1KM2u5eeo3bFHz_wd-bar42.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y3CKSyi1KM2u5eeo3bFHz_wd-bar42.PNG" size="80" width="1240" height="2500" position="center" caption="Bar-chart widget 4x2" alt="Bar-chart widget 4x2"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y3CKSyi1KM2u5eeo3bFHz_wd-bar42.PNG" size="80" position="center" caption="Bar-chart widget 4x2" alt="Bar-chart widget 4x2"}
 :::
 
 :::VerticalSplitItem
 In this example a chart widget is used with the `component.bar-chart` and `component.titles` at the `top` to add a `title` and `subtitle`.
 
 **Example:**
-See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/chart-bar-1_4x2.jigx" target="_blank">GitHub</a>.
+See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/chart-bar-1_4x2.jigx).
 :::
 ::::
 
@@ -998,19 +998,19 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2aOyKeqQJOsjZiJRMpoIO_barchartiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2aOyKeqQJOsjZiJRMpoIO_barchartiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Bar-chart widget" alt="Bar-chart widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2aOyKeqQJOsjZiJRMpoIO_barchartiphone13blueportrait.png" size="80" position="center" caption="Bar-chart widget" alt="Bar-chart widget"}
 :::
 
 :::VerticalSplitItem
 This example is configured using a bar-chart to display in the chart widget.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/static-data/chart-widget-with-bar-chart/chart-widget-bar-chart.jigx" target="_blank">GitHub</a>.
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/dynamic-data/chart-widget-with-bar-chart/chart-widget-bar-dynamic.jigx" target="_blank">GitHub</a>.
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/static-data/chart-widget-with-bar-chart/chart-widget-bar-chart.jigx).
+See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/dynamic-data/chart-widget-with-bar-chart/chart-widget-bar-dynamic.jigx).
 
-**Datasources:
-**See the complete datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx" target="_blank">GitHub</a>.
-See the complete datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx" target="_blank">GitHub</a>.
+**Datasources**:
+See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx).
+See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx).
 
 
 :::
@@ -1115,19 +1115,19 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9aLZHIlMWl2SxoD9rn2V9_piechartiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9aLZHIlMWl2SxoD9rn2V9_piechartiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Pie-chart widget 2x" alt="Pie-chart widget 2x2"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9aLZHIlMWl2SxoD9rn2V9_piechartiphone13blueportrait.png" size="80" position="center" caption="Pie-chart widget 2x" alt="Pie-chart widget 2x2"}
 :::
 
 :::VerticalSplitItem
 This example is configured using a pie-chart to display in the chart widget.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/static-data/chart-widget-with-pie-chart/chart-widget-pie-chart.jigx" target="_blank">GitHub</a>.
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/dynamic-data/chart-widget-with-pie-chart/chart-widget-pie-dynamic.jigx" target="_blank">GitHub</a>.
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/static-data/chart-widget-with-pie-chart/chart-widget-pie-chart.jigx).
+See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/dynamic-data/chart-widget-with-pie-chart/chart-widget-pie-dynamic.jigx).
 
-**Datasources:
-**See the complete datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/pie-chart-data.jigx" target="_blank">GitHub</a>.
-See the complete datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-dynamic.jigx" target="_blank">GitHub</a>.
+**Datasources**:
+See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/pie-chart-data.jigx).
+See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-dynamic.jigx).
 
 
 :::
@@ -1209,11 +1209,11 @@ children:
 In this example a chart widget is used with the `component.pie-chart` and `component.titles` at the `top` and `bottom` to add additional information.
 
 **Example:**
-See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x4/chart-pie-1_2x4.jigx" target="_blank">GitHub</a>.
+See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x4/chart-pie-1_2x4.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FA-eiRkpMZ-BpHy1o-b6s_wd-pie2x4.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FA-eiRkpMZ-BpHy1o-b6s_wd-pie2x4.PNG" size="80" width="1240" height="2500" position="center" caption="Pie-chart widget 2x4" alt="Pie-chart widget 2x4"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FA-eiRkpMZ-BpHy1o-b6s_wd-pie2x4.PNG" size="80" position="center" caption="Pie-chart widget 2x4" alt="Pie-chart widget 2x4"}
 :::
 ::::
 
@@ -1296,11 +1296,11 @@ children:
 In this example a `group` widget is used to combine a `chart` and `list` widget  with `component.pie-chart` and  `component.titles` at the `top` to add additional information.
 
 **Example:**
-See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/combined-chart-list-1_4x2.jigx" target="_blank">GitHub</a>.
+See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/combined-chart-list-1_4x2.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zS66aUyNJyNwAzzhSZ1pP_wd-combinedpie.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zS66aUyNJyNwAzzhSZ1pP_wd-combinedpie.PNG" size="80" width="1240" height="2500" position="center" caption="Group widget 4x" alt}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zS66aUyNJyNwAzzhSZ1pP_wd-combinedpie.PNG" size="80" position="center" caption="Group widget 4x" alt}
 :::
 ::::
 

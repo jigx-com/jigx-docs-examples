@@ -8,22 +8,22 @@ updatedAt: Tue Mar 18 2025 18:19:09 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-The location widget displays a map or location on its surface. Configure it within a jig under the `widgets` property, then reference its name (`widgetId`) and define its `size` in a [grid-item](./../Components/grid/grid-item.md) component.&#x20;
+The location widget displays a map or location on its surface. Configure it within a jig under the `widgets` property, then reference its name (`widgetId`) and define its `size` in a [grid-item](./../Components/grid/grid-item.md) component.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-IHfRNYw2yKgG5R2FL99Mv-20240808-083715.PNG" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-IHfRNYw2yKgG5R2FL99Mv-20240808-083715.PNG" size="78" width="1240" height="2500" position="center" caption="Location widgets" alt="Location widgets"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-IHfRNYw2yKgG5R2FL99Mv-20240808-083715.PNG" size="78" position="center" caption="Location widgets" alt="Location widgets"}
 :::
 ::::
 
-## ****Configuration options****
+## Configuration options
 
-| ### Core options              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ### Core options              |                                                                                                                                                                                                                              |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `address`                     | The actual address of the location. Valid formats are: &#xA;&#xA;- **address string - city, street**, e.g.&#xA; `address: 20 W 34th St., New York, NY 10001, USA
-`or in an expression calling a datasource `=@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`&#xA;&#xA;**- latitude and longitude**, e.g.&#xA;`address: 40.759412, -73.912306`                                                                                                                                                                                                                            |
-| `is AnimationDisabled`        | `true` or `false` to determine if map animation is disabled.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `isFollowUserLocationEnabled` | When enabled, the `viewPoint` will be centred on the user’s real-time location.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+`or in an expression calling a datasource `=@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`&#xA;&#xA;**- latitude and longitude**, e.g.&#xA;`address: 40.759412, -73.912306`                     |
+| `is AnimationDisabled`        | `true` or `false` to determine if map animation is disabled.                                                              |
+| `isFollowUserLocationEnabled` | When enabled, the `viewPoint` will be centred on the user’s real-time location.                                          |
 | `markers`                     | Multiple markers can be configured to display on the map. There is a 10k limit for markers showing on the map.&#xA;For example:&#xA;`- type: component.location
     options:
       markers:
@@ -40,8 +40,8 @@ The location widget displays a map or location on its surface. Configure it with
           longitude: -73.912306         - latitude: 40.803495
           longitude: -73.950694
       address: =@ctx.datasources.location[0].address`                                                                                                                                                                                          |
-| `viewPoint`                   | Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation.&#xA;Options include:&#xA;`centerPosition:` `middle` or `top`                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `zoomLevel`                   | Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `viewPoint`                   | Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation.&#xA;Options include:&#xA;`centerPosition:` `middle` or `top`                                      |
+| `zoomLevel`                   | Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.                                                                      |
 
 | ### Other options | ****                                                                                                                                |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,25 +55,25 @@ The location widget displays a map or location on its surface. Configure it with
 - Widgets are displayed on jigs in the [grid](./../Components/grid.md) component or [jig.grid](<./../Jig Types/jig_grid.md>) by referencing the `widgetId` (Widget Name).
 - The location widget can only be used on [grid-items](./../Components/grid/grid-item.md) with widget sizes of 2x2, 2x4, 4x2, 4x4.
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### location widget using address (4x2)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ygetPIUnrxb2slx34WxQr-20250221-115406.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ygetPIUnrxb2slx34WxQr-20250221-115406.png" size="80" width="1224" height="2466" position="center" caption="Location widget with address" alt="Location widget with address"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ygetPIUnrxb2slx34WxQr-20250221-115406.png" size="80" position="center" caption="Location widget with address" alt="Location widget with address"}
 :::
 
 :::VerticalSplitItem
 This example demonstrates how to configure a `widget` within a `default` jig and display it on a `jig.grid` using a `4x2` layout. The widget focuses on showcasing a specific location based on the provided `address`.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/static-data/location-address/location-widget-address.jigx" target="_blank">GitHub</a>.
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/dynamic-data/location-address/location-widget-address-dd.jigx" target="_blank">GitHub</a>.
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/static-data/location-address/location-widget-address.jigx).
+See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/dynamic-data/location-address/location-widget-address-dd.jigx).
 
-**Datasources:
-**See the complete datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/location.jigx" target="_blank">GitHub</a>.
+**Datasources**:
+See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/location.jigx).
 :::
 ::::
 
@@ -201,7 +201,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iplr68BNQY9Z3L1UuqbYY-20250221-120651.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iplr68BNQY9Z3L1UuqbYY-20250221-120651.png" size="78" width="1224" height="2466" position="center" caption="Location widget with mutiple markers" alt="Location widget with mutiple markers"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iplr68BNQY9Z3L1UuqbYY-20250221-120651.png" size="78" position="center" caption="Location widget with mutiple markers" alt="Location widget with mutiple markers"}
 :::
 
 :::VerticalSplitItem
@@ -209,7 +209,7 @@ This example demonstrates how to configure a `widget` within a `default` jig and
 
 **Examples:**
 
-See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/static-data/location-multiple-markers/location-widget-multiple-markers.jigx" target="_blank">GitHub</a>.
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/static-data/location-multiple-markers/location-widget-multiple-markers.jigx).
 :::
 ::::
 
@@ -309,14 +309,14 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kUnaPExBNn5pQjxfochEc-20250221-122931.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kUnaPExBNn5pQjxfochEc-20250221-122931.png" size="80" width="1224" height="2466" position="center" caption="Location widget with path" alt="Location widget with path"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kUnaPExBNn5pQjxfochEc-20250221-122931.png" size="80" position="center" caption="Location widget with path" alt="Location widget with path"}
 :::
 
 :::VerticalSplitItem
 This example demonstrates how to configure a `widget` within a `default` jig and display it on a `jig.grid` using a `4x4` layout. The widget focuses on showcasing `paths` based on provided  points that use coordinates.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/static-data/location-path/location-widget-path.jigx" target="_blank">GitHub</a>.
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/static-data/location-path/location-widget-path.jigx).
 :::
 ::::
 
@@ -418,7 +418,7 @@ This example demonstrates how to configure a `widget` within a `default` jig and
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VBTTtn5XYrJZxvt2nsjtR-20250221-122800.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VBTTtn5XYrJZxvt2nsjtR-20250221-122800.png" size="80" width="1224" height="2466" position="center" caption="Location widget with coordinates" alt="Location widget with coordinates"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VBTTtn5XYrJZxvt2nsjtR-20250221-122800.png" size="80" position="center" caption="Location widget with coordinates" alt="Location widget with coordinates"}
 :::
 ::::
 

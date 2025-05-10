@@ -8,15 +8,15 @@ updatedAt: Mon Mar 10 2025 09:11:52 GMT+0000 (Coordinated Universal Time)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-The avatar widget can be used as a unique visual identifier, for example, to display a profile photo, company logo, initials, or flags. Additionally, text or a description can be added. The avatar can be used alone or combined with another widget inside a <a href="https://docs.jigx.com/examples/group" target="_blank">widget/group</a>.
+The avatar widget can be used as a unique visual identifier, for example, to display a profile photo, company logo, initials, or flags. Additionally, text or a description can be added. The avatar can be used alone or combined with another widget inside a [widget/group](https://docs.jigx.com/examples/group).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dfGetxkAlt3Vcv55GBnnm_wd-avatar.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dfGetxkAlt3Vcv55GBnnm_wd-avatar.PNG" size="70" width="1240" height="2500" position="center" caption="Avatar widgets" alt="Avatar widgets"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dfGetxkAlt3Vcv55GBnnm_wd-avatar.PNG" size="70" position="center" caption="Avatar widgets" alt="Avatar widgets"}
 :::
 ::::
 
-## ****Configuration options****
+## Configuration options
 
 | ### Core structure | ****                                                                                     |
 | ------------------ | ---------------------------------------------------------------------------------------- |
@@ -31,26 +31,26 @@ The avatar widget can be used as a unique visual identifier, for example, to dis
 | `top`             | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the top of the widget.                     |
 | `uri`             | Provide the `uri` for the image. The following can be used: &#xA;- https//: *imagesource*&#xA;- image from a datasource referenced in an expression  |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Avatar widget example
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2zMUlETjxsJBNeE0fHc0e_avatariphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2zMUlETjxsJBNeE0fHc0e_avatariphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Avatar widget" alt="Avatar widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2zMUlETjxsJBNeE0fHc0e_avatariphone13blueportrait.png" size="80" position="center" caption="Avatar widget" alt="Avatar widget"}
 :::
 
 :::VerticalSplitItem
 This is a simple example of using the avatar widget to show a quick overview of the next meeting.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/avatar/static-data/avatar-on-widget/avatar-on-widget.jigx" target="_blank">GitHub</a>.&#x20;
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/avatar/dynamic-data/avatar-on-widget/avatar-on-widget-dynamic.jigx" target="_blank">GitHub</a>.
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/avatar/static-data/avatar-on-widget/avatar-on-widget.jigx).
+See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/avatar/dynamic-data/avatar-on-widget/avatar-on-widget-dynamic.jigx).
 
-**Datasources:
-**See the complete datasource for static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global.jigx" target="_blank">GitHub</a>.
-See the complete datasource for dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/dynamic-global.jigx" target="_blank">GitHub</a>.
+**Datasources**:
+See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global.jigx).
+See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/dynamic-global.jigx).
 :::
 ::::
 
@@ -114,13 +114,13 @@ children:
 :::VerticalSplitItem
 This is example shows the avatar widget using the `component.title` to add a name and icon to the widget.
 
-**Examples:
-**See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/avatar-2_2x2.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/avatar-2_2x2.jigx).
 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_U1nDQMrehHQwSgcfmuRF_wd-avatartitle.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_U1nDQMrehHQwSgcfmuRF_wd-avatartitle.PNG" size="74" width="1240" height="2500" position="center" caption="Avatar widget with title" alt="Avatar widget with title"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_U1nDQMrehHQwSgcfmuRF_wd-avatartitle.PNG" size="74" position="center" caption="Avatar widget with title" alt="Avatar widget with title"}
 :::
 ::::
 
@@ -166,19 +166,19 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQMj-dwf5_KkhMH4AMvys_avatargroupiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQMj-dwf5_KkhMH4AMvys_avatargroupiphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Avatar in a group widget" alt="Avatar in a group widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQMj-dwf5_KkhMH4AMvys_avatargroupiphone13blueportrait.png" size="80" position="center" caption="Avatar in a group widget" alt="Avatar in a group widget"}
 :::
 
 :::VerticalSplitItem
 Here is the avatar widget associated with the list widget inside the group widget. The next patient is displayed as an avatar and the next three patients are on the list for a better overview.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/avatar/static-data/avatar-on-group-widget/avatar-on-group-widget.jigx" target="_blank">GitHub</a>.&#x20;
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/avatar/dynamic-data/avatar-on-group-widget/avatar-on-group-widget-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/avatar/static-data/avatar-on-group-widget/avatar-on-group-widget.jigx)
+See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/avatar/dynamic-data/avatar-on-group-widget/avatar-on-group-widget-dynamic.jigx)
 
-**Datasources:
-**Full datasource for static data for <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global.jigx" target="_blank">avatar widget</a> and for the <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global-multiple.jigx" target="_blank">list widget</a> in GitHub.
-Full datasource for dynamic data for avatar <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-dynamic.jigx" target="_blank">widget </a>and for the <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-dynamic.jigx" target="_blank">list widget </a>in GitHub.&#x20;
+**Datasources**:
+Full datasource for static data for [avatar widget](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global.jigx) and for the [list widget](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global-multiple.jigx) in GitHub.
+Full datasource for dynamic data for avatar [widget](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-dynamic.jigx) and for the [list widget](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-dynamic.jigx) in GitHub.
 :::
 ::::
 
@@ -259,12 +259,12 @@ children:
 :::VerticalSplitItem
 In this example the avatar widget is combined with the list widget inside the group widget. The avatar widget has a `component.title` configured at the `top` to show a time and `bottom` to add a `title` and `subtitle` to the avatar widget.
 
-**Examples:
-**See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x4/combined-avatar-list-1_4x4.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x4/combined-avatar-list-1_4x4.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-52t4bV7-5EmSZicDP_BNb-20240808-080947.PNG" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-52t4bV7-5EmSZicDP_BNb-20240808-080947.PNG" size="74" width="1240" height="2500" position="center" caption="Avatar widget in group widget" alt="Avatar widget in group widget"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-52t4bV7-5EmSZicDP_BNb-20240808-080947.PNG" size="74" position="center" caption="Avatar widget in group widget" alt="Avatar widget in group widget"}
 :::
 ::::
 

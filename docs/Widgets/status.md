@@ -10,15 +10,15 @@ updatedAt: Mon Mar 10 2025 10:03:14 GMT+0000 (Coordinated Universal Time)
 :::VerticalSplitItem
 This widget visually represents a status using a combination of icons and colors. The status widget can be used alone or combined with another widget inside a <a href="https://docs.jigx.com/examples/group" target="_blank">widget/group</a>.
 
-The status returned is based on a boolean condition.&#x20;
+The status returned is based on a boolean condition.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tXAcZO-9QGzYEwDiMbZNh_img3839.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tXAcZO-9QGzYEwDiMbZNh_img3839.PNG" size="74" width="1125" height="2436" position="center" caption="Status widget" alt="Status widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tXAcZO-9QGzYEwDiMbZNh_img3839.PNG" size="74" position="center" caption="Status widget" alt="Status widget"}
 :::
 ::::
 
-## ****Configuration options****
+## Configuration options
 
 | **Core options** |                                                                                                                                                                                                                                              |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -35,22 +35,22 @@ The status returned is based on a boolean condition.&#x20;
 | `placeholder`     | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                                     |
 | `top`             | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the top of the widget.          |
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
-### &#x20;Status widget (2x2)
+### Status widget (2x2)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tnCD7-eQIE_OqJABIWIRi_statusiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tnCD7-eQIE_OqJABIWIRi_statusiphone13blueportrait.png" size="74" width="1570" height="2932" position="center" caption="Status widget" alt="Status widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tnCD7-eQIE_OqJABIWIRi_statusiphone13blueportrait.png" size="74" position="center" caption="Status widget" alt="Status widget"}
 :::
 
 :::VerticalSplitItem
 In this example the status widget is configured to show a positive icon for the `when: true` property.
 
-**Examples:
-**See the complete example using static data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/status/static-data/status-static.jigx" target="_blank">GitHub</a>.&#x20;
-See the complete example using dynamic data in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/status/dynamic-data/status-dynamic.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/status/static-data/status-static.jigx).
+See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/status/dynamic-data/status-dynamic.jigx).
 :::
 ::::
 
@@ -150,13 +150,13 @@ children:
 :::VerticalSplitItem
 In this example the `status` widget is configured to show different `icons` and details depending on the status of a mobile device's battery.  The `when:` property is used three times to detemine the status and depending if the `when` evaluates to `true` then the details for that `when` property is shown.
 
-**Examples:
-**See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x4/status-1_2x4.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x4/status-1_2x4.jigx).
 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WTumYhYzqm5kEe-lKlCCK-20240808-084743.PNG" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WTumYhYzqm5kEe-lKlCCK-20240808-084743.PNG" size="74" width="1240" height="2500" position="center" caption="Status widget 2x4" alt="Status widget 2x4"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WTumYhYzqm5kEe-lKlCCK-20240808-084743.PNG" size="74" position="center" caption="Status widget 2x4" alt="Status widget 2x4"}
 :::
 ::::
 
@@ -266,14 +266,14 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7VYbPDMKaVncUxzZOFVTz_wd-status4x2.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7VYbPDMKaVncUxzZOFVTz_wd-status4x2.PNG" size="74" width="1240" height="2500" position="center" caption="Status Widget 4x2" alt="Status Widget 4x2"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7VYbPDMKaVncUxzZOFVTz_wd-status4x2.PNG" size="74" position="center" caption="Status Widget 4x2" alt="Status Widget 4x2"}
 :::
 
 :::VerticalSplitItem
 In this example the status widget shows that 4 tests failed with `component.titles `to provide more information.
 
-**Examples:
-**See the complete example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/status-1_4x2.jigx" target="_blank">GitHub</a>.&#x20;
+**Examples**:
+See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/status-1_4x2.jigx).
 :::
 ::::
 
