@@ -54,7 +54,7 @@ Replace \{\{baseUrl}} with the appropriate URL for your region.
 
 ## JSON elements
 
-| **Element**    | **Where to find it **                                                                                                                                                                                                                                               |
+| **Element**    | **Where to find it**                                        |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | organizationId | In Jigx Management under [Organization details]().                                                                                                                                                                                                                  |
 | solutionId     | In Jigx Management under [Solution Details]().                                                                                                                                                                                                                      |
