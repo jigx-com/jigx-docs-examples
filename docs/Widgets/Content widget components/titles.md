@@ -19,12 +19,12 @@ Titles are available in the following content widgets:
 
 ## Configuration options
 
-| ### Core structure | ****                                    |
+| **Core structure** |                                    |
 | ------------------ | --------------------------------------- |
 | `title`            | Display the text content for the title. |
 | `subtitle`         | Add a subtitle under the title text.    |
 
-| ### Other options |                                                                                                                                            |
+| **Other options** |                                                                                                                                            |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `align`           | `center`, `left`, `right`                                                                                                                  |
 | `icon`            | icon used in the widget.                                                                                                                   |

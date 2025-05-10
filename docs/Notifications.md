@@ -17,7 +17,7 @@ You can send Notifications using Jigx Management or programmatically in your sol
 
 ## Configuration options
 
-| ### Core structure | ****                                                                                                                                                                                                                             |
+| **Core structure** |                     |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | function           | Define a function in the *Functions* folder of your solution. The function has input parameters such as the notification `title`, the notification `text` and requires a Jigx `accessToken` or [personal access token (PAT)]() . |
 | jig                | jigs will invoke the function for sending notifications either via submitting form values to the function or by using an [execute-entity](./Actions/execute-entity.md) action for invoking the function.                         |

@@ -18,11 +18,11 @@ The chart widget is suitable for displaying the <[line-chart](https://docs.jigx.
 
 ## Configuration options
 
-| ### Core structure | ****                                  |
+| **Core structure** |                                   |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `chart`            | The configuration is the same as for the chart components, refer to the [line-chart](https://docs.jigx.com/examples/line-chart), [bar-chart](https://docs.jigx.com/examples/bar-chart), or [pie-chart](https://docs.jigx.com/examples/pie-chart) examples. |
 
-| ### Other options | ****                                                                                                                                |
+| **Other options** |                               |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | `bottom`          | The [titles](https://docs.jigx.com/examples/titles) component will be added to the bottom of the widget. |
 | `footer`          | Add text to the footer of the widget.                                                                                               |

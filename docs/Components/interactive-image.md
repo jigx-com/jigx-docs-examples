@@ -14,7 +14,7 @@ An interactive image has clickable links that can be used in various ways. For i
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure |                                                       |
+| **Core structure** |                                                       |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `source`           | The image source can be a remote URL or a local file resource. This property can also contain several remote URLs, specified with their width and height and potentially with scale/other URI arguments. The native side will then choose the best uri to display based on the measured size of the image container. &#xA;The currently supported formats are png, jpg, jpeg, bmp, gif, webp (Android only), psd (iOS only).                                                                 |
 | `body`             | The HTTP body to send with the request. This must be a valid UTF-8 string, and will be sent exactly as specified, with no additional encoding (e.g. URL-escaping or base64) applied.      |
@@ -27,7 +27,7 @@ Some properties are common to all components, see [Common component properties](
 | `uri`              | Uri for the image, can be string or Jigx expression.                       |
 | `width`            | The `width` and `height` can be specified if known at build time, in which case these will be used to set the default image component dimensions.                                    |
 
-| ### Other options |    |
+| **Other options** |    |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `data`            | Provide the x and y coordinates to be placed on the image.                                       |
 | `groups`          | This property includes `title` and `id`, with the additional option of adding a `color` for your group and `maximumPoints`, which defines the maximum possible number of selected points. The `groups` property is used to specify certain groups to distinguish between selected/unselected and otherwise specified areas. |

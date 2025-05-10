@@ -21,12 +21,12 @@ This widget allows you to add primary and/or secondary actions (buttons) to a wi
 
 ## ****Configuration options
 
-| ### Core structure | ****                                                                   |
+| **Core structure** |                                                                        |
 | ------------------ | ---------------------------------------------------------------------- |
 | `onPress`          | Configure the action to be executed when the action button is pressed. |
 | `title`            | Display the text content for the title.                                |
 
-| ### Other options |                                                                                                       |
+| **Other options** |                                                                                                       |
 | ----------------- | ----------------------------------------------------------------------------------------------------- |
 | `footer`          | Add text to the footer of the widget.                                                                 |
 | `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                   |

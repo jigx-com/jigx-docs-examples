@@ -12,13 +12,13 @@ The component can only be used in the [jig.calendar](<./../Jig Types/jig_calenda
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure |                                                                                                                               |
+| **Core structure** |                                                                                                                               |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `from`             | Configure the starting time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;For more information about the setting of the date format/ time zones, refer to [Expressions - cheatsheet](). |
 | `to`               | Configure the ending time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;For more information about the setting of the date format/ time zones, refer to [Expressions - cheatsheet]().   |
 | `title`            | Provide the name of the event.          |
 
-| ### Other options |                    |
+| **Other options** |                    |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `description`     | The general description of the event.    |
 | `location`        | The event's location, for example, a meeting room or conference center.              |

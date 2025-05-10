@@ -27,7 +27,7 @@ Type` jig.default` is the most versatile jig allowing you to create a jig with v
 
 Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                          |
+| **Core structure** |                                                                                          |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `children`         | Add the UI elements ([Components](./../Components.md)) under the children property, for example, `component.form`. Use Intellisense (ctrl+space) to select a component from the available list.  |
 | `title`            | Provide the name of the screen. If you do not want to show a title in a jig use `title: ' '` or add an expression.                                                                               |

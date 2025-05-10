@@ -18,11 +18,11 @@ The avatar widget can be used as a unique visual identifier, for example, to dis
 
 ## Configuration options
 
-| ### Core structure | ****                                                                                     |
+| **Core structure** |                                                                                     |
 | ------------------ | ---------------------------------------------------------------------------------------- |
 | `text`             | Display text content on the widget surface when the URI is empty, for example, initials. |
 
-| ### Other options | ****                                                                                                                                                 |
+| **Other options** |                                                                                                                                            |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `bottom`          | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the bottom of the widget.                  |
 | `footer`          | Add text to the footer of the widget.                                                                                                                |

@@ -16,7 +16,7 @@ Trend is available in the following content widgets:
 
 ## Configuration options
 
-| ### Core structure | ****                  |
+| **Core structure** |                 |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `value`            | Positive or negative numeric value.                                                                                           |
 | `format`           | A selection of formats is available for the main value of the widget, for example, currency.                                 |

@@ -25,14 +25,14 @@ The `jig.grid` has two available configuration options:
 2. **Custom Grid** - used to create a custom grid layout using widgets, images, or custom components in various sizes.
 Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                                                                                                                                   |
+| **Core structure** |                                                                                                                                                                                                                   |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `title`            | Give the jig a title that is displayed at the top of the screen. If you do not want to show a title in a jig use `title: ' '`.                                                                                         |
 | `type`             | Select `jig.grid` for a grid layout configuration.                                                                                                                                                                     |
 | `component`        | Within a grid jig type, the [grid-item](./../Components/grid/grid-item.md) component is used to define each of the elements in the grid layout. Within the `grid-item` a select set of components can be configured.   |
 | `datasources`      | Configure a datasource to call the data to display in the grid layout. The datasource property is required for the Auto Grid, but is optional for the Custom Grid selection.                                           |
 
-| ### Other options      | ****                                          |
+| **Other options**      |                                          |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `actions`              | Choose from the provided list of available actions, for example, use the `go-to` action to open a different jig.                                  |
 | `badge`                | Enhance your tabs with a badge, for instance show the number of grid-items. Add the `badge` property to the jig YAML with an expression.           |

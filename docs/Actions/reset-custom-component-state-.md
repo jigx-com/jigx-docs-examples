@@ -13,14 +13,14 @@ INTRO
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | **** |
+| **Core structure** |      |
 | ------------------ | ---- |
 |                    |      |
 |                    |      |
 |                    |      |
 |                    |      |
 
-| ### Other options |   |
+| **Other options** |   |
 | ----------------- | - |
 |                   |   |
 |                   |   |

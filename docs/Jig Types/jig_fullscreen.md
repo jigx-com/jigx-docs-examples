@@ -30,7 +30,7 @@ Some properties are common to all jig types, see [Common jig type properties](do
 
 The `jig.full-screen` can be configured in the following way in Jigx Builder.
 
-| ### Core structure | ****                                                                                                                                                                                  |
+| **Core structure** |                                                                                                                                                                                  |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `component`        |  Select the component to display as a full-screen, the available components are:<br />* `component.chat`<br />* `component.custom-component`<br />* `component.location`<br />* `component.web-view` |
 | `title`            | Give the jig a title that is displayed at the top of the screen. If you do not want to show a title in a jig use `title: ' '`.                                                        |

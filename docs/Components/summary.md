@@ -24,12 +24,12 @@ The summary is fixed and displays even when the screen is scrolled. Make the sum
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure |                               |
+| **Core structure** |                               |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `layout`           | There are three types to choose from:<br />1) `default` - used to display information. This is the default layout, allowing you to specify what must be shown.<be />2) `cart` - useful for an online shopping app to show the number of items in a cart. The `value` is shown to the right of the `title`.<br />3) `counter` - useful for showing a count, for example, the number of sales made in a month. The `value` is shown to the left of the `title`. |
 | `title`            | The main text to display on the component       |
 
-| ### Other options |                |
+| **Other options** |                |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `color`           | Changing color of `title` and `leftIcon` based on `when` conditions. First condition evaluated to `true` will be used. If the condition evaluates to `false` the default color (black) is used.&#xA;Choose a color from the provided color palette as well as the status colors, e.g. `isWarning`. Default color is black if the property is not specified in the YAML. See the list of available colors in [Jigx color palette]().   |
 | `description`     | Provide third level of supporting text to be displayed. The position of the text is under the `subtitle` property. This property is only available with `layout` type `cart`.                                 |

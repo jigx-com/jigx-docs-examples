@@ -27,7 +27,7 @@ The entity component is a container for the following components:
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Other options |   |
+| **Other options** |   |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `isCompact`       | When this property is set to `true` the entity-field will cover the entire row. This compact variant does not allow usage of field-row components. By default, a label is at the top and the value below. `isCompact` will place the label on the left and the value on the right. Columns are not supported. |
 

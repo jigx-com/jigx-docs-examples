@@ -21,13 +21,13 @@ The carousel is an interactive component that enables you to browse through a se
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure |                                   |
+| **Core structure** |                                   |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `data`             | The carousel requires a data source that will be used in the component to return the content, for, example, images or avatars. Any of the [Data Providers](<./../Data Providers.md>) can be referenced to return the data.                                                         |
 | `instanceId`       | The unique identifier for the carousel.                       |
 | `type`             | The following components can be added in a carousel:<br />* [image](./image.md) component can be define with `title` and `subtitle` that overlays the image.<br />* [card](./card.md) component allows you to add other components in a card layout in the carousel. For example, |
 
-| ### Other options |                                                                                                                               |
+| **Other options** |                                                                                                                               |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `counter`         | Set to `true` addes a counter to the top right corner of the carousel in the style similiar to 1/4 to indicate the number of images or cards in the carousel. set to `false` hides the counter. The counter and pagination can be used together or individually depending on the requirement.                                                           |
 | `isContained`     | Set to `true` places the content (type) in a container which creates a visually appealing frame around the content. Set to `false` the content fills the entire carousel.                                                                                                                                                                               |

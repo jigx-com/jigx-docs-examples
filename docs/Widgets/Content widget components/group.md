@@ -10,11 +10,11 @@ The `group widget` allows widgets to be combined to create a single widget. The 
 
 ## Configuration options
 
-| ### Core structure | ****                                                                                                        |
+| **Core structure** |                                                                                                        |
 | ------------------ | ----------------------------------------------------------------------------------------------------------- |
 | `children`         | The `children` property includes all available widgets- combining two widgets is typical for group widgets. |
 
-| ### Other options |                                                                                                         |
+| **Other options** |                                                                                                         |
 | ----------------- | ------------------------------------------------------------------------------------------------------- |
 | `footer`          | Add text to the footer of the widget                                                                    |
 | `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                     |

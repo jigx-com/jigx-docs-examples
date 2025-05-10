@@ -22,7 +22,7 @@ Show values and amounts for a quick overview or visual representation on a widge
 | ---------------- | ---------------------------------------------------------------------------------------------------- |
 | `value`          | Provide the value to be shown on the widget surface. You can use a string, expression or datasource. |
 
-| ### Other options | ****                                                                                                                                |
+| **Other options** |                              |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | `align`           | Align the value either `left`, `right` or `center`.                                                                                 |
 | `bottom`          | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the bottom of the widget. |

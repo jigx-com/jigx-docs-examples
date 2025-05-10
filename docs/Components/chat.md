@@ -28,7 +28,7 @@ Some properties are common to all components, see [Common component properties](
 | `sentAt`           | Provides the date and time the message was sent at in the format defined by your datasource configuration. For example,&#xA; 2024-01-08T06:01:29.863Z. If the `sentAt` property is not configured no date and time shown in the chat bubbles.                |
 | `onSend`           | Configure the actions to execute when the send button is tapped in the chat text-editor. The action to send the message data to the database table must be included under `onSend`; usually, the `action: execute-entity` with the `create` method is used.  |
 
-| ### Other options |                               |
+| **Other options** |                               |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `isAuthor`        | Used to visually distinguish between the chat participants. When set to `true`, the chat bubble is blue, when set to `false` the bubble is set to white.                                                                                    |
 | `onPress`         | Configure an action that executes when you press on one of the chat bubbles, for example, `action.go-to`           |

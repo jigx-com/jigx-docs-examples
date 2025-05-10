@@ -20,13 +20,13 @@ The calendar jig displays an agenda calendar view. `jig.calendar` contains data 
 
 Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
 
-| ### Core structure | ****                                  |
+| **Core structure** |                                  |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `from`             | Configure the starting time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;Expressions for modifying the date and time format can be found in the [Expressions - cheatsheet]().  |
 | `title`            | Provide the name of the event. If you do not want to show a title in a jig use `title: ' '` or add an expression.                          |
 | `to`               | Configure the ending time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;Expressions for modifying the date and time format can be found in the [Expressions - cheatsheet]().    |
 
-| ### Other options | ****                                   |
+| **Other options** |                                   |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `description`     | The general description of the event.        |
 | `icon`            | The icon will be displayed on the [widget]() of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See [Jigx icons]() for information on worknig with icons.                                             |

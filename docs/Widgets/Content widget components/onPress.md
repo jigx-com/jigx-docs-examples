@@ -9,7 +9,7 @@ Use the `onPress` event to add an action directly on the widget. This is particu
 
 ## Configuration options
 
-| ### Core structure | ****                                                                                                               |
+| **Core structure** |                                                                                                               |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | `onPress`          | Choose from the provided list of available actions, for example, use the `open-url` action to open a specific URL. |
 

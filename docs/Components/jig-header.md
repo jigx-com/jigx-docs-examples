@@ -16,7 +16,7 @@ The images can be preloaded and cached using the asset folder's images file. The
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure |                         |
+| **Core structure** |                         |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `children`         | Specifies which component will be used inside the jig-header. There are three options:<br />* [component.image](./image.md)<br />* [component.location](./location.md)<br />* [component.video player](./video-player.md)          |
 | `height`           | Specifies the height of the header.<br />* `small`<br />* `medium`                                                                           |

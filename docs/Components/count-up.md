@@ -21,11 +21,11 @@ The count-up component is a display-only component that continuously updates in 
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure |                                                                                                                                           |
+| **Core structure**|                                                                                                                                           |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `startTimestamp`   | Add a start date, date/time or time , either using:&#xA;- datasource, e.g. `=@ctx.datasources.events[1].date`&#xA;- expression, e.g. `=$fromMillis($toMillis($now()) + 50000)`&#xA;- string, e.g. `"2023-09-20 18:00"`, or `"2023-07-25T17:30:00+02:00"`<br />If `startTimestamp` is omitted or set to null, the component remains static and does not count up. |
 
-| ### Other options |                                             |
+| **Other options** |                                             |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `labels`          | The count-up label displays time in the format Days: Hours: Minutes: Seconds. The Days section appears only when the timer exceeds 24 hours.&#xA;Configuration options are:&#xA;- `isVisible` (default: `true`)- Controls visibility of the count-up labels. Setting it to `false` hides the labels.&#xA;- `position` - Determines whether the count-up labels (Days: Hours: Minutes: Seconds) appear at the top or bottom of the count-up display. |
 | `size`            | Choose between `extra-large` and `medium` sizes, with `extra-large` as the default if the property is not specified in the YAML.                |

@@ -16,11 +16,11 @@ You can also use the [jig.document](<./../Jig Types/jig_document.md>) type to di
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure | ****                                                            |
+| **Core structure** |                                                           |
 | ------------------ | --------------------------------------------------------------- |
 | `uri`              | The source to be displayed in the web-view, for example, a URL. |
 
-| ### Other options                | ****                                                              |
+| **Other options**                |                                                    |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `content`                        | HTML to render in the web-view.                               |
 | `height`                         | The height of the web-view.                                  |

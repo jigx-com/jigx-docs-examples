@@ -19,7 +19,7 @@ Some properties are common to all components, see [Common component properties](
 | `title`            | Provide a title for the step item. You can use an expression to set the title.                                            |
 | `value`            | The value of the step item. The value is exposed in the jig's state, making it available for use anywhere inside the jig. |
 
-| ### Other options |                                                                                        |
+| **Other options**|                                                                                        |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `description`     | Describe the step item that is displayed as the subtitle.                 |
 | `leftElement`     | The only available element for the step is an `icon` displayed on the left of the value. A list of icons is available. See [Jigx icons]() for more information. If no icon is specified a checkbox is used on the left.                                           |

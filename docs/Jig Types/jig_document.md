@@ -25,12 +25,12 @@ The document jig type is used to display documents connected to your solution. T
 
 Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
 
-| ### Core structure | ****                                                                                                               |
+| **Core structure** |                                                                                                               |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | `title`            | Provide the name of the screen. If you do not want to show a title in a jig use `title: ' '` or add an expression. |
 | `source`           | Select from `PDF` or `HTML` content.                                                                               |
 
-| ### Other options | ****                                                                                                                                                                                                                        |
+| **Other options** |                                                                                                                                                                                                                        |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `description`     | The general description of the document.                                                                                                                                                                                    |
 | `badge`           | Enhance your widget with a customizable badges, for instance show the number of documents. Add the `badge` property to the jig YAML with an expression.                                                                     |

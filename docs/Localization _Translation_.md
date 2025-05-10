@@ -14,7 +14,7 @@ Try it in the [Online ICU Message Editor](https://format-message.github.io/icu-m
 
 ## Configuration options
 
-| ### Core structure | ****                                                                                    |
+| **Core structure** |                                                                                    |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `text Locale`      | `id` - provide a unique identifier for the property to be translated. &#xA;`values` - create context variables with values to use in the translation file. This is useful when creating dynamic content. &#xA;`defaultMessage` - If no translation is found for the active device's language, it will either fallback to the specified `defaultMessage` or, if one is not specified, to English. |
 

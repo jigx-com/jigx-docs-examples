@@ -20,11 +20,11 @@ Using the avatar component, display a profile photo, company logo, initials, or 
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure |                               |
+| **Core structure** |                               |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `title`            | Add a title for the avatar, this is text displayed when the `uri` is empty. In the visual presentation, the `title` can be substituted by an image using the `uri` property. But the content of the text property has to be kept at least to the empty string: "") |
 
-| ### Other options |                                                                                |
+| **Other options** |                                                                                |
 | ----------------- | ------------------------------------------------------------------------------------------------- |
 | `align`           | By default the avatar is aligned `left` but can be changed to:<br />* `center`<br />* `left`<br />* `right` |
 | `size`            | The size of the avatar can be set to:<br />* `small`<br />* `regular`<br />* `large`                        |

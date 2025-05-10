@@ -20,11 +20,11 @@ The countdown component functionality counts down from a date, date/time, and ti
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure |                                                             |
+| **Core structure** |                                                             |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `expiresAt`        | Add a date, date/time or time when the countdown must expire/stop, either using:&#xA;- datasource, e.g. `=@ctx.datasources.events.date`&#xA;- expression, e.g. `=$fromMillis($toMillis($now()) + 50000)`&#xA;- string, e.g. `"2023-09-20 18:00"`, or `"2023-07-25T17:30:00+02:00"` |
 
-| ### Other options |                                    |
+| **Other options** |                                    |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `align`           | `center`, `left`, `right`, and `stretch`, with `center` as the default if the property is not specified in the YAML.                      |
 | `labels`          | `isVisible` - `true` or `false` with `true` as the default. Setting `false` will hide the countdown component.&#xA;`position` - The countdown labels of Days : Hours : Minutes: Seconds are shown at the `bottom` or `top` of the countdown. |

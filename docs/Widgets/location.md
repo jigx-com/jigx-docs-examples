@@ -18,7 +18,7 @@ The location widget displays a map or location on its surface. Configure it with
 
 ## Configuration options
 
-| ### Core options              |                                                                                                                                                                                                                              |
+| **Core structure**             |                                                                                                                                                                                                                              |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `address`                     | The actual address of the location. Valid formats are: &#xA;&#xA;- **address string - city, street**, e.g.&#xA; `address: 20 W 34th St., New York, NY 10001, USA
 `or in an expression calling a datasource `=@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`&#xA;&#xA;**- latitude and longitude**, e.g.&#xA;`address: 40.759412, -73.912306`                     |
@@ -43,7 +43,7 @@ The location widget displays a map or location on its surface. Configure it with
 | `viewPoint`                   | Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation.&#xA;Options include:&#xA;`centerPosition:` `middle` or `top`                                      |
 | `zoomLevel`                   | Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.                                                                      |
 
-| ### Other options | ****                                                                                                                                |
+| **Other options** |                            |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | `bottom`          | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the bottom of the widget. |
 | `footer`          | Add text to the footer of the widget.                                                                                               |

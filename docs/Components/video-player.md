@@ -12,11 +12,11 @@ This component is used to play a video in [headers](./jig-header.md), or as comp
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure |                                                                                        |
+| **Core structure** |                                                                                        |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `URL`              | Specify the URL for the video. The URL format can be:<br />* A direct URL, for example, [https://player.vimeo.com/video/76979871](https://player.vimeo.com/video/76979871)<br />* An embeded URL, for example,&#xA;`<iframe src="https://player.vimeo.com/video/76979871?quality=720p"></iframe>`<br />* A URL referenced in a datasource, for example, &#xA;`url: =@ctx.datasources.video-player-dynamic.uri` |
 
-| ### Other options |                        |
+| **Other options** |                        |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `autoplay`        | Set to `true` will automatically start playing the video. Set to `false` requires you to press the play button. Default setting is `false`.                                                                                                       |
 | `loop`            |  For continuous looping of the video set the property to `true`. Default setting is `false`.                                   |

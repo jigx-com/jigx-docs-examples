@@ -20,13 +20,13 @@ This component displays the progress status of a task. Useful when tracking deli
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure    |                                                                  |
+| **Core structure**    |                                                                  |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `data`                | Define the data to be used in the step items, you can use expressions to reference a datasource.                                                                           |
 | `item`                | There is only one available option, which is [step](./stepper/step.md). The `item` property is core for the stepper component, so even if you are creating a non-expandable stepper you must configure the step component's `title` and `value` properties with an empty string: "" |
 | `completedPercentage` | Define the percentage to be displayed on the chart. Example "0.24" => 24 %. 1 represents 100% complete.                                                                       |
 
-| ### Other options |           |
+| **Other options** |           |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `isExpandable`    | Set to `true` the stepper will be expandable into steps. Set to `false` the stepper is not expandable.        |
 | `style`           | The styling determines the color of the chart. There are three colors options. For example if the status is complete use `isPositive` to show the chart in green. If no style is specified the chart shows in blue.&#xA; are styling sets:<br />* `isNegative` - red<br /* `isPositive` -  green<br />* `isWarning` - orange |

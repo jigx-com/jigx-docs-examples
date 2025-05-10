@@ -22,11 +22,11 @@ The `image` component can be part of the [header](./jig-header.md)and as a child
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure |                                                   |
+| **Core structure** |                                                   |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `uri`              | The image source (either a remote URL or a local file resource). The currently supported formats are png, jpg, jpeg, bmp, gif, webp (Android only), psd (iOS only). |
 
-| ### Other options |   |
+| **Other options** |   |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `height`          | Change the height of the image in pixels. Ensure a proper `resizeMode` is used to achieve the best results on different device resolutions. The default is set at 196 pixels.        |
 | `resizeMode`      | Resize the image when the frame doesn't match the raw image dimensions.&#xA;The following options are available:<br />* `center` - If the image is bigger than the area it is scaled down making it completely visible. The image is not scaled up.<br />* `contain` - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or less than the corresponding dimension of the view (minus padding).<br />* `cover` - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or larger than the corresponding dimension of the view (minus padding).<br />* `stretch` - Scales the width and height of the image independently, This may change the aspect ratio of the `source`. |

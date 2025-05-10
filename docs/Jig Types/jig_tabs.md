@@ -21,7 +21,7 @@ Some properties are common to all jig types, see [Common jig type properties](do
 
 The `jig.tabs` can be configured in the following way in Jigx Builder.
 
-| ### Core structure | ****                       |
+| **Core structure** |                        |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `title`            | Give the jig a title that is displayed at the top of the screen.                                                               |
 | `type`             | Select `jig.tabs`.        |
@@ -31,7 +31,7 @@ The `jig.tabs` can be configured in the following way in Jigx Builder.
 - `icon` - Add an icon to display in the tab. A list of available icons can be found in  [Jigx icons](). The `title` appears below the `icon` in the tab.&#x20;
 - `badge` - Add a badge to display on the tab to highlight critical information. The badge can be configured at the root level of the jig file. The badge can be configured with an `icon`, `color`, and a `value`. |
 
-| ### Other options   | ****                                                           |
+| **Other options**   |                                                            |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `areTabsScrollable` | When there are many tabs that exceed the width of the screen, set the property to `true` to scroll and view the additional obscured tabs by swiping left. Setting the property to `false` will only display the tabs that fit on the width of the screen, additional tabs will be hidden. The property is accessible using IntelliSense at the root level in the YAML. By default tabs are scrollable.&#xA;Tip: Using areTabsScrollable: false will align the tabs in the center. |
 | `inputs`            | Used to pass data between the jigs in the tabs to provide context and data. See [Passing data using inputs]() for more information.                                   |

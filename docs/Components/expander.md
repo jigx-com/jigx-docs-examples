@@ -15,12 +15,12 @@ The expander component** **is a collapsible element that initially displays a sm
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure |                                               |
+| **Core structure** |                                               |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `children`         | Define the content of the expander. The following components can be used in the expander:<br />* [avatar](./avatar.md)<br />* [bar-chart](./charts/bar-chart.md)<br />* [entity](./entity.md)<br />* [form](./form.md)<br />* [interactive-image](./interactive-image.md)<br />* [line-chart](./charts/line-chart.md)<br />* [list](./list.md)<br />* [location](./location.md)<br />* [pie-chart](./charts/pie-chart.md)<br />* [stepper](./stepper.md)<br />* [video-player](./video-player.md)<br />* [web-view](./web-view.md) |
 | `header`           | `centerElement` - what is initially visible in your jig. &#xA;The following options are available in `header`:<br />* component [stage](https://docs.jigx.com/examples/stage)<br />* component [titles](https://docs.jigx.com/examples/h1bm-titles).                                                                                                                                                                        |
 
-| ### Other options      |              |
+| **Other options**      |              |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `divider`              | Added the ability to add a solid or transparent `divider`. Default setting is `none`.                                                                    |
 | `expandIcon`           | Allows the ability to customize the alignment of the expander button. Default setting is `right`.                                                        |

@@ -16,13 +16,13 @@ This component enhances user experience by providing a quick and intuitive way t
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure |                                                    |
+| **Core structure** |                                                    |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `data`             | Specify the `title` to display in each segment and a data `value`. Repeat the `title` and `value` properties to create the number of segments in the control.  |
 |                    | `title` -  The label for the segment. You can use [Localization]() in the title.                                                                               |
 |                    | `value` - The data value for the segment that is used to display content when toggled. Can be used in an expression or to set the `initialValue`.              |
 
-| ### Other options |                                       |
+| **Other options** |                                       |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | `initialValue`    | Configure which segment to display as active when the jig opens. By default there are no active segments. Tap the segment to activate it. |
 | `isDisabled`      | Set to `true` disables the segmented-control (ready only mode). By default the property's value is `false`.                               |

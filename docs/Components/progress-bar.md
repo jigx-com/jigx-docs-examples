@@ -22,11 +22,11 @@ Use the progress-bar component to visually represent a task or process's current
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure |    |
+| **Core structure** |    |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `value`            | `current` - determines the current status to be shown in the bar. This can be dynamically set with an expression, e.g. `=$count(@ctx.components.packList.state.selected)`&#xA;`max` - numeric, set the maximum value of the progress bar, e.g., the sales target is 5 new customers a month, making the `max: 5` . You can set the maximum dynamically, e.g., using the datasource `=$count(@ctx.datasources.checkbox-list)` |
 
-| ### Other options |                                                                                                 |
+| **Other options** |                                                                                                 |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `color`           | Sets the color of the progress -bar, choose a color from the provided color palette. Default color is black if the property is not specified in the YAML.                                        |
 | `errorText`       | Add text, string, or expressions to show in text under the progress bar. Text is shown in red to indicate an error with progress.                                                                  |

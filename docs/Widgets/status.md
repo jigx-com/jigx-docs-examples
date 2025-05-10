@@ -25,7 +25,7 @@ The status returned is based on a boolean condition.
 | `statuses`       | Define at least one or more statuses based on conditions. First evaluated to true will be used.&#xA;The `statuses` property includes:<br />* `when` - the condition when the status should be shown
 * `icon` - the icon that should be shown |
 
-| ### Other options | ****                                                                                                                                      |
+| **Other options** |                                   |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | `top`             |                                                                                                                                           |
 | `bottom`          | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the bottom of the widget.       |

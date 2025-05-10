@@ -13,12 +13,12 @@ The card is a versatile and visually appealing UI element that encapsulates and 
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Core structure |          |
+| **Core structure** |          |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | `children`         | Configure a component or multiple components in a card. See [Components](./../Components.md) for a list of available components.  |
 | `instanceId`       | Give the card component a unique id that can be referenced throughout the jig.                                                    |
 
-| ### Other options |                                                                                                                                                            |
+| **Other options** |                                                                                                                                                            |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `color`           | Sets the color of the card. Choose a color from the provided [Jigx color palette](). Default color is white if the property is not specified in the YAML.  |
 | `style`           | When `isDisabled` is set to `true`, the card appears opaque, indicating that it is unavailable for selection. By default `isDisabled` is set to `false`.   |
