@@ -19,7 +19,7 @@ This widget allows you to add primary and/or secondary actions (buttons) to a wi
 :::
 ::::
 
-## ****Configuration options
+## Configuration options
 
 | **Core structure** |                                                                        |
 | ------------------ | ---------------------------------------------------------------------- |

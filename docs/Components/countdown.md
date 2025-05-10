@@ -30,7 +30,7 @@ Some properties are common to all components, see [Common component properties](
 | `labels`          | `isVisible` - `true` or `false` with `true` as the default. Setting `false` will hide the countdown component.&#xA;`position` - The countdown labels of Days : Hours : Minutes: Seconds are shown at the `bottom` or `top` of the countdown. |
 | `size`            | Choose from `extra-large`, `large`, `medium`, `small`, with `large` being the default if the property is not specified in the YAML.       |
 
-| ### Actions |       |
+| **Actions** |       |
 | ----------- | ---------------------------------------------------------------------------------------------------------------- |
 | `onPress`   | Choose from the provided list of available actions, for example, use the `go-to` action to open a different jig. |
 | `onFinish`  | Choose from the provided list of available actions. For example, `go-back` action.                               |

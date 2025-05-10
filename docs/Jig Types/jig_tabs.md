@@ -41,11 +41,11 @@ The `jig.tabs` can be configured in the following way in Jigx Builder.
 | `isSwipeable`       | Set to `true` allows you to navigate between tabs by swiping left and right anywhere on the jig. By default tabs are not swipeable and require you to press on the tab title for navigation.                                                                             |
 | `when`              | This property is used to show/hide any tab based on conditions, such as true, false, or conditions set using an expression.                                           |
 
-| ### Actions | ****                  |
+| **Actions**|                  |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `actions`   | The `actions` property is a local action applicable to the specific tab. Once the tab is tapped the action will execute.<br />* `Action Identifier` - Provide a unique name that is used to identify the action.* `Action Identifier` - Provide a unique name that is used to identify the action.* `type` - Select the [action](./../Actions.md)  that is triggered in the specific tab. Use IntelliSense to see the available list of actions.<br />See the [Tabs with actions]() code example below.  |
 
-| ### State Configuration | **Key**     | Notes                                                   |
+| **State Configuration** | **Key**     | **Notes**                                              |
 | ----------------------- | ----------- | ------------------------------------------------------- |
 | `=@ctx.jig.state.`      | activeTabId | Applies to the active tab in the `jig.tab` type.        |
 | `=@ctx.solution.state.` | tab         | Global variable for the tab used throughout a solution. |

@@ -48,7 +48,7 @@ Some properties are common to all components, see [Common component properties](
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onChange`  | The action is triggered when the content in the avatar-field is changed. Use IntelliSense (ctrl+space) to see the list of available actions.  |
 
-| ### State Configuration  | **Key**              | **Notes**                                                         |
+| **State Configuration**  | **Key**              | **Notes**                                                         |
 | ------------------------ | -------------------- | ----------------------------------------------------------------- |
 | `=@ctx.component.state.` | value                | - State is the variable of the component.                         |
 | `=@ctx.solution.state.`  | activeItemId&#xA;now | * Global state variable that can be used throughout the solution. |

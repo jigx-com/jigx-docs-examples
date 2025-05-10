@@ -27,7 +27,7 @@ Some properties are common to all components, see [Common component properties](
 | `initialValue`    | Configure which segment to display as active when the jig opens. By default there are no active segments. Tap the segment to activate it. |
 | `isDisabled`      | Set to `true` disables the segmented-control (ready only mode). By default the property's value is `false`.                               |
 
-| ### State Configuration  | **Key**              | **Notes**                                                         |
+| **State Configuration**  | **Key**              | **Notes**                                                         |
 | ------------------------ | -------------------- | ----------------------------------------------------------------- |
 | `=@ctx.component.state.` | value                | - State is the variable of the component.                         |
 | `=@ctx.solution.state.`  | activeItemId&#xA;now | * Global state variable that can be used throughout the solution. |

@@ -37,7 +37,7 @@ Some properties are common to all components, see [Common component properties](
 | `subtitle`        | Provide supporting text to be displayed as a `subtitle`. The position of the subtitle text depends on the selected `layout` property.                                                                                       |
 | `value`           | The actual value in your summary configured by a string or an expression that must equal a number. This property is only available for `layout` types `cart` and `counter`.                                                  |
 
-| ### Actions                |          |
+| **Actions**               |          |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `OnPress`                  | The action is triggered while pressing on the `LeftIcon` in the summary. Use IntelliSense (ctrl+space) to see the available list of actions.                                                                                                                                                                                |
 | [Actions](./../Actions.md) | By using the summary component along with actions, you can unlock a powerful feature that enables you to take necessary actions based on the information available from the summary. For instance, adding a sales opportunity. This feature can significantly enhance the usability of your jig and make it more efficient. |

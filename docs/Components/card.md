@@ -23,7 +23,7 @@ Some properties are common to all components, see [Common component properties](
 | `color`           | Sets the color of the card. Choose a color from the provided [Jigx color palette](). Default color is white if the property is not specified in the YAML.  |
 | `style`           | When `isDisabled` is set to `true`, the card appears opaque, indicating that it is unavailable for selection. By default `isDisabled` is set to `false`.   |
 
-| ### Actions |                                                                                                                  |
+|   **Actions** |                                                                                                                  |
 | ----------- | ---------------------------------------------------------------------------------------------------------------- |
 | `onPress`   | Choose from the provided list of available actions, for example, use the `go-to` action to open a different jig. |
 

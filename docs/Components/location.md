@@ -12,22 +12,22 @@ The location component enables users to display a location on a map within a jig
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ### Options                   |                                                                                                              |
+| **Options**                   |                                                                                                              |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `address`                     | The actual address of the location.&#xA;Valid formats are: &#xA;- **address string - city, street**, e.g.&#xA; `address: 20 W 34th St., New York, NY 10001, USA
 `or in an expression calling a datasource `=@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`&#xA;&#xA;**- latitude and longitude**, e.g.&#xA;`address: 40.759412, -73.912306`                       |
 | `is AnimationDisabled`        | `true` or `false` to determine if map animation is disabled.                                                            |
 | `isFollowUserLocationEnabled` | When enabled, the `viewPoint` will be centred on the user’s real-time location.                                        |
-| `markers`                     | Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map.&#xA;For example:&#xA;`- type: component.location
-    options:
-      markers:
-        data:         - latitude: 40.759412
-          longitude: -73.912306         - latitude: 40.745368
-          longitude: -74.057189         - latitude: 40.76479429122513
-          longitude: -73.97429291692742 `<br />You can use an expression to provide the latitude and longitude points from a datasource, for example:&#xA;`markers:
+| `markers`                     | Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map.&#xA;For example:&#xA;<br />`- type: component.location<br /> 
+    options:<br />
+      markers:<br />
+        data: <br />        - latitude: 40.759412<br />
+          longitude: -73.912306<br />         - latitude: 40.745368<br />
+          longitude: -74.057189<br />         - latitude: 40.76479429122513<br />
+          longitude: -73.97429291692742`<br />You can use an expression to provide the latitude and longitude points from a datasource, for example:&#xA;`markers:
    data: \|       =@ctx.datasources.jobs.{"lng": $number($.lng), "lat": $number($.lat)}` |
 | `marker-item`                 | `anchorTo:` - Anchor the marker to a specific point, either `bottom-center` or `center`<br />`radius` - Display a circle around the marker. In the radius you can configure the `color`, `unit` (Default is kilometres)<br />`icon` - Choose an icon for the markers. You can style the icon `color`, `emphasis`, `type`, `shape` and `size`.                                                                                    |
-| `paths`                       | Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map.&#xA;for example:&#xA;` - type: component.location
+| `paths`                       | Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map.&#xA;for example:&#xA;`- type: component.location
     options:
       paths:
         data:         - latitude: 40.759412
@@ -37,16 +37,16 @@ Some properties are common to all components, see [Common component properties](
 | `viewPoint`                   | Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation.&#xA;Options include:&#xA;`centerPosition:` `middle` or `top`                             |
 | `zoomLevel`                   | Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.                                       |
 
-| ### Action                                             |                                                                                                                     |
+**Action**         |                  |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [open-map](./../Actions/open-map.md)                    | The `action.open-map` lets you open your device's default map app (e.g., Google Maps, Apple Maps, or Waze) with the provided destination address. If multiple map apps are available, they will be listed for you to select one. |
 | [open-app-settings](./../Actions/open-app-settings.md)  | The `action.open-app-settings` can be configured to show when location tracking permission is not granted. Tapping the action opens the device’s settings screen.                                                                |
 
-| ### State Configuration  | **Key**  | **Notes**                               |
+|**State Configuration**   | **Key**  | **Notes**                               |
 | ------------------------ | -------- | --------------------------------------- |
 | `=@ctx.component.state.` | location | State is the variable of the component. |
 
-| ### System variable Configuration            | **Key**              | **Notes**                                                                                                                                                          |
+| **System variable Configuration**            | **Key**              | **Notes**                                                                                                                                                          |
 | -------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `=@ctx.system.locationPermisions.foreground` | isGranted&#xA;status | Determines the status of the permissions and evaluates if permissions are granted. See [System locationPermissions](<./../Expressions/Jigx Variables.md>) example. |
 | `=@ctx.system.geolocation.`                  | coords&#xA;timestamp | See [System geolocation](<./../Expressions/Jigx Variables.md>) example.                                                                          |

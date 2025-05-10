@@ -39,7 +39,7 @@ A list widget can be used on any type of jig, i.e. list, default, composite, cal
 | `placeholders`    | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                          |
 | `top`             | The [titles](https://docs.jigx.com/examples/titles) component will be added to the top of the widget.                                                                                                     |
 
-| ### State Configuration  | **Key**              | **Notes**                                                                                                                                                                                 |
+| **State Configuration**  | **Key**              | **Notes**                                                                                                                                                                                 |
 | ------------------------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `=@ctx.current.state.`   | amount&#xA;checked   | - Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array.|
 | `=@ctx.component.state.` | amount&#xA;checked   | * State is the variable of the component.                                               |

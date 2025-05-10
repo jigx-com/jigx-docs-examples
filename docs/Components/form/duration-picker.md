@@ -47,7 +47,7 @@ Some properties are common to all components, see [Common component properties](
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onChange`  | The action is triggered when the time in the duration-picker is changed. Use IntelliSense (ctrl+space) to see the list of available actions.  |
 
-| ### State Configuration  | **Key**              | **Notes**                                                                                                                                                         |
+| **State Configuration**  | **Key**              | **Notes**                                                                                                                                                         |
 | ------------------------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `=@ctx.component.state.` | value                | - State is the variable of the component.<br />- When used in the `initialValue`, its set as a string.<br />- When the value of the component changes, its set as a number. |
 | `=@ctx.solution.state.`  | activeItemId&#xA;now | * Global state variable that can be used throughout the solution.     |

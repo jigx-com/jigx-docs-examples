@@ -46,7 +46,7 @@ Some properties are common to all components, see [Common component properties](
 | `isDiscardChangesAlertEnabled` | When set to `true` the modal window preventing accidental deletion of your data without saving will pop up. &#xA;     |
 | `initialValues`                | Specify the data to be used as `initialValues` for fields in the form. Using the `reset-state` action with `initialValues` does not clear the form, it resets the form back to it's `initialValue`. &#xA;***Tip***: For `initialValues` on a [form]() to function&#xA; `isDocument: true` in the datasource, this way you don't have to set it up in the individual components. It is set up in one place and the form will match the components to the column names of the datasource. See the example below for Form with initialValue. |
 
-| ### State Configuration  | **Key**                                   | **Notes**                                                         |
+| **State Configuration**  | **Key**                                   | **Notes**                                                         |
 | ------------------------ | ----------------------------------------- | ----------------------------------------------------------------- |
 | `=@ctx.component.state.` | data&#xA;isValid&#xA;isDirty&#xA;response | - State is the variable of the component.                         |
 | `=@ctx.solution.state.`  | activeItemId&#xA;now                      | * Global state variable that can be used throughout the solution. |

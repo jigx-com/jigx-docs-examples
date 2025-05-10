@@ -12,7 +12,7 @@ Refer to the [Expressions - cheatsheet]() for code snippets that can help you ac
 
 In this section, examples with code snippets are provided for working with data using JSONata; these are:
 
-| **JSONata **                                                        | **Example of use**                                                                                                                                                                                      |
+| **JSONata**                                                        | **Example of use**                                                                                                                                                                                      |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Arrays](./Expressions/Arrays.md)                                   | Create filtered lists from arrays and handling arrays with SQL and Dynamic Data                                                                                                                         |
 | [Aggregation](./Expressions/Aggregation.md)                         | To return the minimum, maximum, or average value in an array.                                                                                                                                           |

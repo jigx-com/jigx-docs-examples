@@ -22,8 +22,7 @@ The status returned is based on a boolean condition.
 
 | **Core options** |                                                                                                                                                                                                                                              |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `statuses`       | Define at least one or more statuses based on conditions. First evaluated to true will be used.&#xA;The `statuses` property includes:<br />* `when` - the condition when the status should be shown
-* `icon` - the icon that should be shown |
+| `statuses`       | Define at least one or more statuses based on conditions. First evaluated to true will be used.&#xA;The `statuses` property includes:<br />* `when` - the condition when the status should be shown<br />* `icon` - the icon that should be shown |
 
 | **Other options** |                                   |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |

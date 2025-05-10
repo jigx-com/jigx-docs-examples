@@ -28,7 +28,7 @@ Some properties are common to all components, see [Common component properties](
 | `leftElement`          | Add a left element, for example, an ordering number or avatar.                                                                                           |
 | `variant`              | Determine the background color for header versus body using the `variant` property with `plain` or `emphasized` values. Default setting is `emphasized`. |
 
-| ### Actions      |        |
+| **Actions**    |        |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `onContentPress` | Action triggered while pressing on the content in the expander. Use IntelliSense (ctrl+space) to see the available list of actions.  |
 

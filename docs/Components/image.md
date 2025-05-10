@@ -34,7 +34,7 @@ Some properties are common to all components, see [Common component properties](
 | `title`           | Display the text content for the title that can be displayed on or next to the image based on the image context.    |
 | `width`           | Change the width of the image in pixels. Ensure a proper `resizeMode` is used to achieve the best results on different device resolutions.                                                         |
 
-| ### Actions |        |
+| **Actions** |        |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `onPress`   | The action is triggered when pressing on the image. Use IntelliSense (ctrl+space) to see the list of available actions.  |
 

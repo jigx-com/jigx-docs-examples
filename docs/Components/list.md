@@ -35,7 +35,7 @@ Some properties are common to all components, see [Common component properties](
 | `isSearchable`        | The boolean value which allows you to add a search bar on the top of your list.                                 |
 | `onShowMorePress`     | Action to be performed when you press on the *show more* button. This is `type: action.go-to` with a `linkTo:` option.    |
 
-| ### State Configuration  | **Key**              | **Notes**                                                                                                                                                                                 |
+| **State Configuration**  | **Key**              | **Notes**                                                                                                                                                                                 |
 | ------------------------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `=@ctx.current.state.`   | amount&#xA;checked   | - Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array. &#x20; |
 | `=@ctx.component.state.` | amount&#xA;checked   | * State is the variable of the component.                                                                                                                                                 |

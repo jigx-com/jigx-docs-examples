@@ -12,10 +12,8 @@ You can use [JSONata Functional programming](https://docs.jsonata.org/programmin
 
 | **Result**                                                         | **Expression**                                                                                                                                        |
 | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Determine if the value is bigger or smaller than a certain number  | `"=@ctx.datasources.mydata.number2 > 10 
-      ? 'Number is bigger':'Number is lower'"`                                                               |
-| Variables                                                          | `="<div style='font-size: 40px'>Welcome on board      <b>" & @ctx.datasources.html.name & "</b>      - " & @ctx.datasources.html.email &
-    "</div>` |
+| Determine if the value is bigger or smaller than a certain number  | `"=@ctx.datasources.mydata.number2 > 10 ? 'Number is bigger':'Number is lower'"`                                                               |
+| Variables                                                          | `="<div style='font-size: 40px'>Welcome on board <b>" & @ctx.datasources.html.name & "</b> - " & @ctx.datasources.html.email & "</div>` |
 
 :::hint{type="warning"}
 Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.

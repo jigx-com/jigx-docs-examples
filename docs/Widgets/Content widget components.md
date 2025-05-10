@@ -16,7 +16,7 @@ Extend the content surfaced on widgets further by using content widget component
 :::
 ::::
 
-| ** Properties**                                   | **Description**                                                                                                                         |
+| **Properties**                                   | **Description**                                                                                                                         |
 | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | [group](<./Content widget components/group.md>)   | Combine widgets to display as one widget.                                                                                               |
 | [titles](<./Content widget components/titles.md>) | Displays a title, subtitle, comment, or any type of text content on the surface of the widget.                                          |

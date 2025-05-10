@@ -25,7 +25,7 @@ The table Jigx type includes multiple child components, each of which can be con
 
 `component.table-row`- The table jig is configured with a datasource, and a single `component.table-row` is configured and iterates through the datasource to display each row. This is a required component.
 
-| **Structure**         | ****        |
+| **Structure**         |       |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `component.table-row` | This is similar in configuration to a [jig.list](./jig_list.md) where a single `table-row` is configured and iterates through the datasource.&#xA;- `instanceId` - Unique identifier of the table-row component. When defined its possible to address its state. `InstanceId:` Expects a string.&#xA;- `when` - used to determine under which conditions the table will display. If the property is set to `false`, the component won't be displayed. Default is `true`. An expression can be configured in this property. |
 | `color`               | Highlight the row(s) with a distinct background color for emphasis or status. &#xA;For example, &#xA;`color:`&#xA;`when: =@ctx.current.item.age > 60` &#xA;`color: warning`                                     |
@@ -103,7 +103,7 @@ This component is part of the `columnDefinition` setup, allowing reusable config
 | `tableFooter`      | Define the appearance and behavior of all table footers, including `color` or `onPress` actions.                                                                                                                                       |
 | `toolbar`          | The `toolbar` appears at the top of the table as a buttons. The toolbar is configured with actions, such as `got-to` or `execute-entity` to create a new row.                                                                                                                                                                             |
 
-| ### State configuration | **Key** | **Notes**                                        |
+| **State Configuration** | **Key** | **Notes**                                        |
 | ----------------------- | ------- | ------------------------------------------------ |
 | `=@ctx.jig.state.`      | sort    | - Used to access the sorting state in the table. |
 

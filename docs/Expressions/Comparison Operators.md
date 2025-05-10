@@ -24,8 +24,7 @@ The operators used for comparing data are:
 
 | **Result**        | **Expression**                                                                                                                            |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Statement is true | `value: "=@ctx.datasources.mydata.color = 'blue' and @ctx.datasources.mydata.number2 != 0 
-  ? 'Statement is true':'Statement is false'"` |
+| Statement is true | `value: "=@ctx.datasources.mydata.color = 'blue' and @ctx.datasources.mydata.number2 != 0 ? 'Statement is true':'Statement is false'"` |
 
 :::hint{type="warning"}
 Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.

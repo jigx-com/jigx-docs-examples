@@ -27,7 +27,7 @@ Some properties are common to all components, see [Common component properties](
 
 Certain actions can be executed on the event; for example, when pressing on the event opens the URL of the advertised event.
 
-| ### Actions     |                                                          |
+| **Actions**     |                                                          |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onButtonPress` | You can set any action in this property just like in the `onPress` property. The difference is that if only `onButtonPress` is configured, after pressing on the event, a modal window with the event's details opens. The modal contains a button for the action configured in the `onButtonPress` property. When `isHidden` is used with `when:false` , the `isHidden` property is automatically overwritten on the mobile device and set to `isHidden:true` and the button automatically hides. |
 | `onPress`       | When pressing on the event an action executes. Use IntelliSense to select an action or refer to the list of available [Actions](./../Actions.md). When the `onPress` is configured, the `onButtonPress` configuration is ignored.                                         |

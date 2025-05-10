@@ -30,7 +30,7 @@ Some properties are common to all components, see [Common component properties](
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onPress`   | The action is triggered when pressing the image's marked coordinate point. Use IntelliSense (ctrl+space) to see the list of available actions.  |
 
-| ### State Configuration  | **Key**              | **Notes**                                                         |
+| **State Configuration**  | **Key**              | **Notes**                                                         |
 | ------------------------ | -------------------- | ----------------------------------------------------------------- |
 | `=@ctx.component.state.` | selected             | - State is the variable of the component.                         |
 | `=@ctx.solution.state.`  | activeItemId&#xA;now | * Global state variable that can be used throughout the solution. |

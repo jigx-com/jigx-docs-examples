@@ -25,7 +25,7 @@ Some properties are common to all components, see [Common component properties](
 | `leftElement`     | The only available element for the step is an `icon` displayed on the left of the value. A list of icons is available. See [Jigx icons]() for more information. If no icon is specified a checkbox is used on the left.                                           |
 | `style`           |  The following styling options are available:<br />* `isActive` - Shows the step as active.<br />* `isDisabled` - Shows the step `value`, `description`, and `icon` as disabled (greyed out).<br />* `isNegative` - The step `description` and `icon` are shown in red.<br />* `isPositive` - The `description` and `icon` are shown in green.<br />* `isStrikeThrough` - The step's `value` and `description` are shown with a line through it.<br />* `isWarning` - The `description` and `icon` are shown in orange. |
 
-| ### Actions |    |
+| **Actions**|    |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | `onPress`   | The action is triggered when pressing on the step item. Use IntelliSense (ctrl+space) to see the list of available actions.  |
 
