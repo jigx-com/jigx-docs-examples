@@ -44,12 +44,12 @@ Replace \{\{baseUrl}} with the appropriate URL for your region.
 
 ## Authentication
 
-- A **Personal Access Token (PAT)** is required. Get your PAT from [My profile](docId\:PCpYqHu9kr0rFKl8V-kTw) in Jigx <a href="https://manage.jigx.com" target="_blank">Management</a>.&#x20;
+- A **Personal Access Token (PAT)** is required. Get your PAT from [My profile](docId\:PCpYqHu9kr0rFKl8V-kTw) in Jigx <a href="https://manage.jigx.com" target="_blank">Management</a>.
 - Enter the PAT as an API key with the prefix BEARER, for example, BEARER XXXXXXXXXX.
 
 ## Responses
 
-201 Created&#x20;
+201 Created
 401 Unauthorized
 
 ## JSON elements
@@ -59,10 +59,7 @@ Replace \{\{baseUrl}} with the appropriate URL for your region.
 | organizationId | In Jigx Management under [Organization details]().                                                                                                                                                                                                                  |
 | solutionId     | In Jigx Management under [Solution Details]().                                                                                                                                                                                                                      |
 | baseURL        | Refer to the Base URL table above to find the URL for your region.                                                                                                                                                                                                  |
-| scope          | - **USR ** – Target specific individual users.
-- **SLN** – Notify all users within a particular solution.
-- **SLN\_GRP** – Send messages to predefined groups within a solution.
-- **ORG** – Broadcast notifications to all users across the entire organization. |
+| scope          | - **USR** – Target specific individual users.<br />- **SLN** – Notify all users within a particular solution.<br />- **SLN\_GRP** – Send messages to predefined groups within a solution.<br />- **ORG** – Broadcast notifications to all users across the entire organization. |
 | jigId          | Target a specific jig with input parameters.When the user taps on the notification (either on the native push notification or the in-app notification), the app will navigate to the specific jig.                                                                  |
 | screen         | Default value = "jig"                                        |
 | title          | Title that shows in the notification message.                |
