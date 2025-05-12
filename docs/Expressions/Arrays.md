@@ -1,9 +1,4 @@
----
-title: Arrays
-slug: 53aV-arrays
-createdAt: Mon Dec 11 2023 08:57:02 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Dec 18 2023 10:35:24 GMT+0000 (Coordinated Universal Time)
----
+# Arrays
 
 Handling arrays when saving data to SQL and Dynamic Data require JSONATA expressions to return the data as an array rather than a string.
 
@@ -112,19 +107,19 @@ children:
 
 ## Create a filtered list from an array of records
 
-Filter an array of records to display specific data and perform expression transformations over the data.
-
-We will display a list of people from the array of records, then filter them and display those that have entered a name. We will display their initials as a left avatar and add a label to each list item to display whether they are registered.
-
-:::::VerticalSplit{layout="left"}
+::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
 ![Result with Advanced Expressions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LGvYapk-Ctp7XNjyF1AhK_ldcfoljjvzbydshpyny6img1005iphone13blueportrait.png "Result with Advanced Expressions")
-
-
 :::
 
-::::VerticalSplitItem
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/samples/jigx-samples/jigs/guide-advanced-expressions/static-data/advanced-expressions-list.jigx).>
+:::VerticalSplitItem
+We will display a list of people from the array of records, then filter them and display those that have entered a name. We will display their initials as a left avatar and add a label to each list item to display whether they are registered.
+
+Filter an array of records to display specific data and perform expression transformations over the data.
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/samples/jigx-samples/jigs/guide-advanced-expressions/static-data/advanced-expressions-list.jigx).
+:::
+::::
 
 :::CodeblockTabs
 advanced-expression.jigx
@@ -189,6 +184,4 @@ item:
             & $substring(@ctx.current.item.lastname,0,1)"
 ```
 :::
-::::
-:::::
 

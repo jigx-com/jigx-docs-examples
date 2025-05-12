@@ -1,37 +1,33 @@
----
-title: Functional Programming
-slug: jSzt-functional
-description: Learn how to use JSONata functional programming to compare values, display data, and more with this informative document. Explore code snippets, examples, and step-by-step guidance on comparing values, using variables in content, and implementing multiple
-createdAt: Thu Jul 27 2023 13:15:54 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Sep 18 2023 13:18:44 GMT+0000 (Coordinated Universal Time)
----
+# Functional Programming
 
 You can use [JSONata Functional programming](https://docs.jsonata.org/programming) to compare values or display data based on certain conditions. You can quickly make any logical statements, and based on the result, you can perform different actions.
 
 ## Configuration
 
-| **Result**                                                         | **Expression**                                                                                                                                        |
-| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Determine if the value is bigger or smaller than a certain number  | `"=@ctx.datasources.mydata.number2 > 10 ? 'Number is bigger':'Number is lower'"`                                                               |
-| Variables                                                          | `="<div style='font-size: 40px'>Welcome on board <b>" & @ctx.datasources.html.name & "</b> - " & @ctx.datasources.html.email & "</div>` |
+| **Result**                                                        | **Expression**                                                                                                                          |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Determine if the value is bigger or smaller than a certain number | `"=@ctx.datasources.mydata.number2 > 10 ? 'Number is bigger':'Number is lower'"`                                                        |
+| Variables                                                         | `="<div style='font-size: 40px'>Welcome on board <b>" & @ctx.datasources.html.name & "</b> - " & @ctx.datasources.html.email & "</div>` |
 
 :::hint{type="warning"}
 Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.
 :::
 
-## Examples and code snippets 
+## Examples and code snippets
 
 ### Compare values
 
-:::::VerticalSplit{layout="left"}
+::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
 ![Functional expressions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0uqaFEwFcsgWqmsxHy1uN_mk6aixjb8o06to7dpzsifimg0979iphone13blueportrait.png "Functional expressions")
 :::
 
-::::VerticalSplitItem
+:::VerticalSplitItem
 In this example we determine if the value for `entity.field` is bigger or smaller that 10.
 
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx)
+:::
+::::
 
 :::CodeblockTabs
 expression.jigx
@@ -62,20 +58,20 @@ children:
                     ? 'Number is bigger':'Number is lower'"
 ```
 :::
-::::
-:::::
 
 ### Variables in content
 
-:::::VerticalSplit{layout="left"}
+::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
 ![Content](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VAw06TIFPwJhNmAezMiwA_contentiphone13blueportrait.png "Content")
 :::
 
-::::VerticalSplitItem
+:::VerticalSplitItem
 This example shows how to write variables in HTML content.
 
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/variablesInContent.jigx).
+:::
+::::
 
 :::CodeblockTabs
 variablesInContent.jigx
@@ -94,20 +90,20 @@ source:
     <br />"  & @ctx.datasources.html.itemId
 ```
 :::
-::::
-:::::
 
 ### Multiple select in a dropdown
 
-:::::VerticalSplit{layout="left"}
+::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
 ![Multiple selector expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9ObXqaGM9y4_deRVoVdX_multipleselectiphone13blueportrait.png "Multiple selector expression")
 :::
 
-::::VerticalSplitItem
+:::VerticalSplitItem
 In this example, we use the notation in which we select the instanceId of our component from the components, and extract the selected from the state of the component, then choose the required value. For example id, name,...
 
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/multipleSelect.jigx).
+:::
+::::
 
 :::CodeblockTabs
 multipleSelect.jigx
@@ -135,6 +131,4 @@ children:
                   uri: =@ctx.current.item.img
 ```
 :::
-::::
-:::::
 
