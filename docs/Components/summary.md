@@ -1,22 +1,14 @@
----
-title: summary
-slug: Vx_4-summary
-description: Learn about the different types of summaries that can be displayed on a user's screen, such as Default, Cart, and Counter. This comprehensive document provides YAML configurations and code snippets for flight schedule and product data, along with examples
-createdAt: Thu Jun 09 2022 19:48:28 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Mar 04 2025 08:56:33 GMT+0000 (Coordinated Universal Time)
----
+# summary
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 Summarize the information in the jig at the bottom of the screen using the summary component. For example, a count of the number orders, or the number of items in a cart for an online shopping app.
 
 The summary is fixed and displays even when the screen is scrolled. Make the summary actionable by combining it with an [action](./../Actions.md).
-
-
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Af4rdF6CCq-kFe9fSSFFg_summary.png" size="88" position="center" caption="Summary Preview" alt="Summary Preview"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Af4rdF6CCq-kFe9fSSFFg_summary.png" size="88" position="center" caption="Summary Preview" alt="Summary Preview" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Af4rdF6CCq-kFe9fSSFFg_summary.png"}
 :::
 ::::
 
@@ -24,20 +16,26 @@ The summary is fixed and displays even when the screen is scrolled. Make the sum
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                               |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `layout`           | There are three types to choose from:<br />1) `default` - used to display information. This is the default layout, allowing you to specify what must be shown.<be />2) `cart` - useful for an online shopping app to show the number of items in a cart. The `value` is shown to the right of the `title`.<br />3) `counter` - useful for showing a count, for example, the number of sales made in a month. The `value` is shown to the left of the `title`. |
-| `title`            | The main text to display on the component       |
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `layout`           | There are three types to choose from:<br />1) `default` - used to display information. This is the default layout, allowing you to specify what must be shown.
+2) `cart` - useful for an online shopping app to show the number of items in a cart. The `value` is shown to the right of the `title`.
+3) `counter` - useful for showing a count, for example, the number of sales made in a month. The `value` is shown to the left of the `title`. |
+| `title`            | The main text to display on the component.                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-| **Other options** |                |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`           | Changing color of `title` and `leftIcon` based on `when` conditions. First condition evaluated to `true` will be used. If the condition evaluates to `false` the default color (black) is used.&#xA;Choose a color from the provided color palette as well as the status colors, e.g. `isWarning`. Default color is black if the property is not specified in the YAML. See the list of available colors in [Jigx color palette]().   |
-| `description`     | Provide third level of supporting text to be displayed. The position of the text is under the `subtitle` property. This property is only available with `layout` type `cart`.                                 |
-| `leftIcon`        | Add an icon to show on the left before the `title`. A list of icons is available. See [Jigx icons]() for more information.&#xA;`leftIcon` is only available with the `default` layout.                                    |
-| `subtitle`        | Provide supporting text to be displayed as a `subtitle`. The position of the subtitle text depends on the selected `layout` property.                                                                                       |
-| `value`           | The actual value in your summary configured by a string or an expression that must equal a number. This property is only available for `layout` types `cart` and `counter`.                                                  |
+:::Iframe{code="<be />"}
 
-| **Actions**               |          |
+:::
+
+| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `color`           | Changing color of `title` and `leftIcon` based on `when` conditions. First condition evaluated to `true` will be used. If the condition evaluates to `false` the default color (black) is used.&#xA;Choose a color from the provided color palette as well as the status colors, e.g. `isWarning`. Default color is black if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](#). |
+| `description`     | Provide third level of supporting text to be displayed. The position of the text is under the `subtitle` property. This property is only available with `layout` type `cart`.                                                                                                                                                                                                                                                        |
+| `leftIcon`        | Add an icon to show on the left before the `title`. A list of icons is available. See [Jigx icons](#) for more information.&#xA;`leftIcon` is only available with the `default` layout.                                                                                                                                                                                                                                              |
+| `subtitle`        | Provide supporting text to be displayed as a `subtitle`. The position of the subtitle text depends on the selected `layout` property.                                                                                                                                                                                                                                                                                                |
+| `value`           | The actual value in your summary configured by a string or an expression that must equal a number. This property is only available for `layout` types `cart` and `counter`.                                                                                                                                                                                                                                                          |
+
+| **Actions**                |                                                                                                                                                                                                                                                                                                                             |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `OnPress`                  | The action is triggered while pressing on the `LeftIcon` in the summary. Use IntelliSense (ctrl+space) to see the available list of actions.                                                                                                                                                                                |
 | [Actions](./../Actions.md) | By using the summary component along with actions, you can unlock a powerful feature that enables you to take necessary actions based on the information available from the summary. For instance, adding a sales opportunity. This feature can significantly enhance the usability of your jig and make it more efficient. |
@@ -58,7 +56,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9WcZVQ8jyZMEf7vU267Qn_ucardmuoo9uetnzfhtbhosummary-defaultiphone13blueportrait.png" size="80"  position="center" caption="Default layout" alt="Default layout"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9WcZVQ8jyZMEf7vU267Qn_ucardmuoo9uetnzfhtbhosummary-defaultiphone13blueportrait.png" size="80" position="center" caption="Default layout" alt="Default layout" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9WcZVQ8jyZMEf7vU267Qn_ucardmuoo9uetnzfhtbhosummary-defaultiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -98,7 +96,7 @@ The full example of the summary type: cart using expander is on [GitHub](https:/
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DfxfVkL_Zvqbx_OiYwBDW_r7zsureyfsbt92t6oyubcsummary-cartiphone13blueportrait.png" size="80"  position="center" caption="Cart layout" alt="Cart layout"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DfxfVkL_Zvqbx_OiYwBDW_r7zsureyfsbt92t6oyubcsummary-cartiphone13blueportrait.png" size="80" position="center" caption="Cart layout" alt="Cart layout" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DfxfVkL_Zvqbx_OiYwBDW_r7zsureyfsbt92t6oyubcsummary-cartiphone13blueportrait.png"}
 :::
 ::::
 
@@ -300,7 +298,7 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-K57_A1BTQ_pjvlgZHHx4_6dfg0efdsgk3eipf4w5wsummary-counteriphone13blueportrait.png" size="80"  position="center" caption="Counter layout" alt="Counter layout"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-K57_A1BTQ_pjvlgZHHx4_6dfg0efdsgk3eipf4w5wsummary-counteriphone13blueportrait.png" size="80" position="center" caption="Counter layout" alt="Counter layout" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-K57_A1BTQ_pjvlgZHHx4_6dfg0efdsgk3eipf4w5wsummary-counteriphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -513,11 +511,10 @@ In this example the `cart` layout property is used in a `jig.list` with the `exp
 
 **Example**:
 The full example is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-cart-action.jigx).
-
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HNRpSmoGvbB6WvjojCsVL_cc-summaryaction.PNG" size="70" position="center" caption="Summary with action" alt="Summary with action"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HNRpSmoGvbB6WvjojCsVL_cc-summaryaction.PNG" size="70" position="center" caption="Summary with action" alt="Summary with action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HNRpSmoGvbB6WvjojCsVL_cc-summaryaction.PNG"}
 :::
 ::::
 

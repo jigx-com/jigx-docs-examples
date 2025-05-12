@@ -1,12 +1,6 @@
----
-title: set-state
-slug: XgCi-set-state
-description: Learn how to use the "set-state" action in UI components with this comprehensive document. Explore multiple ways to set up this action, including onFocus, onRefresh, onPress, and onChange events. Find examples and code snippets for each setup, enabling yo
-createdAt: Tue Jun 14 2022 13:37:28 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Oct 01 2024 13:19:01 GMT+0000 (Coordinated Universal Time)
----
+# set-state
 
-The `set-state` action sets the global state (also called the solution state). Multiple components and jigs can access the state's value across the solution. Effectively managing the global state ensures that all parts of the app that depend on this data are updated consistently. To understand how to use states, see [State]().
+The `set-state` action sets the global state (also called the solution state). Multiple components and jigs can access the state's value across the solution. Effectively managing the global state ensures that all parts of the app that depend on this data are updated consistently. To understand how to use states, see [State](#).
 
 ## Configuration options
 
@@ -17,12 +11,12 @@ A `set-state` action can be set up in various ways:
 3. As the main action on the jig, and when you press the action, the `set-state` action will be executed.
 4. The `onPress` and `onChange` actions will be executed when you trigger these events.
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 ::::ExpandableHeading
 ### set-state as onFocus/onRefresh
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/biw9t9RyNz-0XOfnu92pv_set-state-onfocus.PNG" size="80" position="center" caption="Count triggers with set-sate" alt="Count triggers with set-sate"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/biw9t9RyNz-0XOfnu92pv_set-state-onfocus.PNG" size="80" position="center" caption="Count triggers with set-sate" alt="Count triggers with set-sate" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/biw9t9RyNz-0XOfnu92pv_set-state-onfocus.PNG"}
 
 Set state action is used when the onFocus/onRefresh event is triggered and a count is shown of the number of triggers.
 
@@ -54,7 +48,7 @@ onRefresh:
 ::::ExpandableHeading
 ### set-state as action
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_gb30xllbsbqiIK8YENCT_set-state-action.PNG" size="80" position="center" caption="Set-state action" alt="Set-state action"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_gb30xllbsbqiIK8YENCT_set-state-action.PNG" size="80" position="center" caption="Set-state action" alt="Set-state action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_gb30xllbsbqiIK8YENCT_set-state-action.PNG"}
 
 Set-state action is used as the primary action on the jig, to set the value of the action-key to +1.
 
@@ -78,7 +72,7 @@ actions:
 ::::ExpandableHeading
 ### set-state as onPress/onChange
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qSwlxC1hjffY06BLuvK7u_set-state-onpress.PNG" size="78" position="center" caption="Set-state onPress/onChange" alt="Set-state onPress/onChange"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qSwlxC1hjffY06BLuvK7u_set-state-onpress.PNG" size="78" position="center" caption="Set-state onPress/onChange" alt="Set-state onPress/onChange" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qSwlxC1hjffY06BLuvK7u_set-state-onpress.PNG"}
 
 Set-state action used on the list as onPress/onChange action, to set the value of the key to +1.
 

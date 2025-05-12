@@ -1,10 +1,4 @@
----
-title: value
-slug: VEDJ-value
-description: Learn how to use the versatile widget described in this document to quickly display values or amounts with customizable configurations. With options to add titles, trend components, and additional text, this widget allows for a tailored overview. Explore 
-createdAt: Thu Jun 09 2022 20:16:23 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Mar 10 2025 10:05:42 GMT+0000 (Coordinated Universal Time)
----
+# value
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -12,7 +6,7 @@ Show values and amounts for a quick overview or visual representation on a widge
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OcTCGbkBbgy4XAiSLXL8F_img92bc27cc2344-1.jpeg" size="72" position="center" caption="Value widget" alt="Value widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OcTCGbkBbgy4XAiSLXL8F_img92bc27cc2344-1.jpeg" size="72" position="center" caption="Value widget" alt="Value widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OcTCGbkBbgy4XAiSLXL8F_img92bc27cc2344-1.jpeg"}
 :::
 ::::
 
@@ -22,16 +16,16 @@ Show values and amounts for a quick overview or visual representation on a widge
 | ---------------- | ---------------------------------------------------------------------------------------------------- |
 | `value`          | Provide the value to be shown on the widget surface. You can use a string, expression or datasource. |
 
-| **Other options** |                              |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `align`           | Align the value either `left`, `right` or `center`.                                                                                 |
-| `bottom`          | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the bottom of the widget. |
-| `footer`          | Add text to the footer of the widget.                                                                                               |
-| `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                                                 |
-| `format`          | Various formats available for the value which is of type date and number, for example, currency.                                    |
-| `placeholder`     | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                               |
-| `style`           | By default the value is positive. To show a negative value set the `style:` `isNegative` to `true`.                                 |
-| `top`             | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the top of the widget.    |
+| **Other options** |                                                                                                          |
+| ----------------- | -------------------------------------------------------------------------------------------------------- |
+| `align`           | Align the value either `left`, `right` or `center`.                                                      |
+| `bottom`          | The [titles](https://docs.jigx.com/examples/titles) component will be added to the bottom of the widget. |
+| `footer`          | Add text to the footer of the widget.                                                                    |
+| `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                      |
+| `format`          | Various formats available for the value which is of type date and number, for example, currency.         |
+| `placeholder`     | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.    |
+| `style`           | By default the value is positive. To show a negative value set the `style:` `isNegative` to `true`.      |
+| `top`             | The [titles](https://docs.jigx.com/examples/titles) component will be added to the top of the widget.    |
 
 ## Examples and code snippets
 
@@ -40,7 +34,7 @@ Show values and amounts for a quick overview or visual representation on a widge
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYzrsAD8f1eWOTTTZwaBG_img7893iphone13blueportrait.png" size="74" position="center" caption="Value widget with number" alt="Value widget with number"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYzrsAD8f1eWOTTTZwaBG_img7893iphone13blueportrait.png" size="74" position="center" caption="Value widget with number" alt="Value widget with number" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYzrsAD8f1eWOTTTZwaBG_img7893iphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -141,7 +135,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pXxBUeIjMcGUuZkQPjG9g_img7894iphone13blueportrait.png" size="78" position="center" caption="Value widget with date and time" alt="Value widget with date and time"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pXxBUeIjMcGUuZkQPjG9g_img7894iphone13blueportrait.png" size="78" position="center" caption="Value widget with date and time" alt="Value widget with date and time" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pXxBUeIjMcGUuZkQPjG9g_img7894iphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -246,7 +240,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mTH88SQVn-lvJEtmPiR5__img7895iphone13blueportrait.png" size="80" position="center" caption="Value widget with currency format" alt="Value widget with currency format"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mTH88SQVn-lvJEtmPiR5__img7895iphone13blueportrait.png" size="80" position="center" caption="Value widget with currency format" alt="Value widget with currency format" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mTH88SQVn-lvJEtmPiR5__img7895iphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem

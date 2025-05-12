@@ -1,10 +1,4 @@
----
-title: stepper
-slug: RNdr-stepper
-description: Learn how to use the versatile "Stepper" component to visually demonstrate the progress of tasks on your website. This document showcases various configuration options such as data, item, completedPercentage, and more. It also includes examples and code s
-createdAt: Thu Jun 09 2022 19:48:29 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Jul 24 2024 09:58:36 GMT+0000 (Coordinated Universal Time)
----
+# stepper
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -16,22 +10,24 @@ This component displays the progress status of a task. Useful when tracking deli
 :::
 ::::
 
-## ****Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure**    |                                                                  |
+| **Core structure**    |                                                                                                                                                                                                                                                                                     |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`                | Define the data to be used in the step items, you can use expressions to reference a datasource.                                                                           |
+| `data`                | Define the data to be used in the step items, you can use expressions to reference a datasource.                                                                                                                                                                                    |
 | `item`                | There is only one available option, which is [step](./stepper/step.md). The `item` property is core for the stepper component, so even if you are creating a non-expandable stepper you must configure the step component's `title` and `value` properties with an empty string: "" |
-| `completedPercentage` | Define the percentage to be displayed on the chart. Example "0.24" => 24 %. 1 represents 100% complete.                                                                       |
+| `completedPercentage` | Define the percentage to be displayed on the chart. Example "0.24" => 24 %. 1 represents 100% complete.                                                                                                                                                                             |
 
-| **Other options** |           |
+| **Other options** |                                                                                                                                                                                                                                                                                                                     |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `isExpandable`    | Set to `true` the stepper will be expandable into steps. Set to `false` the stepper is not expandable.        |
-| `style`           | The styling determines the color of the chart. There are three colors options. For example if the status is complete use `isPositive` to show the chart in green. If no style is specified the chart shows in blue.&#xA; are styling sets:<br />* `isNegative` - red<br /* `isPositive` -  green<br />* `isWarning` - orange |
-| `subtitle`        | The subtitle/short description of the stepper to display under the title. You can use an expression to set the subtitle.                                                                                       |
-| `title`           | The title for the stepper, you can use an expression to set the title.  |
+| `isExpandable`    | Set to `true` the stepper will be expandable into steps. Set to `false` the stepper is not expandable.                                                                                                                                                                                                              |
+| `style`           | The styling determines the color of the chart. There are three colors options. For example if the status is complete use `isPositive` to show the chart in green. If no style is specified the chart shows in blue.&#xA; are styling sets:<br />* `isNegative` - red
+* `isPositive` -  green
+* `isWarning` - orange |
+| `subtitle`        | The subtitle/short description of the stepper to display under the title. You can use an expression to set the subtitle.                                                                                                                                                                                            |
+| `title`           | The title for the stepper, you can use an expression to set the title.                                                                                                                                                                                                                                              |
 
 ## Examples and code snippets
 
@@ -40,7 +36,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3q5XYI9fcgYMnxTTSMBaa_xqldilpo0dsaonqcdwm8ostepperiphone13blueportrait.png" size="88" position="center" caption="Stepper for shipment status" alt="Stepper for shipment status"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3q5XYI9fcgYMnxTTSMBaa_xqldilpo0dsaonqcdwm8ostepperiphone13blueportrait.png" size="88" position="center" caption="Stepper for shipment status" alt="Stepper for shipment status" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3q5XYI9fcgYMnxTTSMBaa_xqldilpo0dsaonqcdwm8ostepperiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem

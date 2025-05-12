@@ -1,16 +1,10 @@
----
-title: group
-slug: dhrB-group
-description: Learn about the usage and capabilities of the group widget in this document. Discover how this widget allows you to combine other widgets into specific sizes, like 2x4, 4x2, and 4x4. Explore the core structure of the group widget, including the "children"
-createdAt: Thu Jun 09 2022 20:15:02 GMT+0000 (Coordinated Universal Time)
-updatedAt: Fri Mar 07 2025 14:03:49 GMT+0000 (Coordinated Universal Time)
----
+# group
 
 The `group widget` allows widgets to be combined to create a single widget. The `group widget` can be used only on `sizes:` 2x4, 4x2, and 4x4.
 
 ## Configuration options
 
-| **Core structure** |                                                                                                        |
+| **Core structure** |                                                                                                             |
 | ------------------ | ----------------------------------------------------------------------------------------------------------- |
 | `children`         | The `children` property includes all available widgets- combining two widgets is typical for group widgets. |
 
@@ -28,16 +22,14 @@ The `group widget` allows widgets to be combined to create a single widget. The 
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vZSpwck06Npdts3BCYNB1_group-wiphone13blueportrait.png" size="82" position="center" caption="Horizontal split widget group " alt="Horizontal split widget group "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vZSpwck06Npdts3BCYNB1_group-wiphone13blueportrait.png" size="82" position="center" caption="Horizontal split widget group " alt="Horizontal split widget group " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vZSpwck06Npdts3BCYNB1_group-wiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
 For the 4x4 widget, we have a split option. In this property, a vertical or horizontal layout is possible for the widget. In this example, a combination of a chart and a list are used in a **horizontal** split.
 
-**Examples:
-**See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-chart-list-horizontal.jigx).
-
-
+**Examples**:
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-chart-list-horizontal.jigx).
 :::
 ::::
 
@@ -138,7 +130,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vblqyuZ8bZ3CsaQOHpbU3_verticalgroupiphone13blueportrait.png" size="80" position="center" caption="Vertical split widget group " alt="Vertical split widget group "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vblqyuZ8bZ3CsaQOHpbU3_verticalgroupiphone13blueportrait.png" size="80" position="center" caption="Vertical split widget group " alt="Vertical split widget group " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vblqyuZ8bZ3CsaQOHpbU3_verticalgroupiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -230,7 +222,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ku31Kug--owZX3VQ_NC2G_4x2iphone13blueportrait.png" size="80" position="center" caption="Group widget with avatar and list" alt="Group widget with avatar and list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ku31Kug--owZX3VQ_NC2G_4x2iphone13blueportrait.png" size="80" position="center" caption="Group widget with avatar and list" alt="Group widget with avatar and list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ku31Kug--owZX3VQ_NC2G_4x2iphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -320,7 +312,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_nW2If-8vWWmlEVdp0SmL_2x4iphone13blueportrait.png" size="80" position="center" caption="Group with value and bar-chart" alt="Group with value and bar-chart"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_nW2If-8vWWmlEVdp0SmL_2x4iphone13blueportrait.png" size="80" position="center" caption="Group with value and bar-chart" alt="Group with value and bar-chart" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_nW2If-8vWWmlEVdp0SmL_2x4iphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem

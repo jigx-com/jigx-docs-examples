@@ -1,33 +1,32 @@
----
-title: step
-slug: Hvn9-step
-description: Learn how to display consecutive steps within a stepper component using this comprehensive document. Discover the core structure of the step component, including its title, value, description, styling options, and left element (icon). This essential resou
-createdAt: Thu Jun 09 2022 19:48:26 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Jul 24 2024 09:58:56 GMT+0000 (Coordinated Universal Time)
----
+# step
 
 This component displays consecutive steps in a stepper component. You can divide the task into steps, mark them as completed, and gradually get closer to completing the entire task.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pHqn9aSU9OrBRvwBxvDw1_cc-step.png" size="66" position="center" caption="Step component" alt="Step component"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pHqn9aSU9OrBRvwBxvDw1_cc-step.png" size="66" position="center" caption="Step component" alt="Step component" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pHqn9aSU9OrBRvwBxvDw1_cc-step.png"}
 
 ## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-|## Core structure |         |
+| **Core structure** |                                                                                                                           |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------- |
 | `title`            | Provide a title for the step item. You can use an expression to set the title.                                            |
 | `value`            | The value of the step item. The value is exposed in the jig's state, making it available for use anywhere inside the jig. |
 
-| **Other options**|                                                                                        |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `description`     | Describe the step item that is displayed as the subtitle.                 |
-| `leftElement`     | The only available element for the step is an `icon` displayed on the left of the value. A list of icons is available. See [Jigx icons]() for more information. If no icon is specified a checkbox is used on the left.                                           |
-| `style`           |  The following styling options are available:<br />* `isActive` - Shows the step as active.<br />* `isDisabled` - Shows the step `value`, `description`, and `icon` as disabled (greyed out).<br />* `isNegative` - The step `description` and `icon` are shown in red.<br />* `isPositive` - The `description` and `icon` are shown in green.<br />* `isStrikeThrough` - The step's `value` and `description` are shown with a line through it.<br />* `isWarning` - The `description` and `icon` are shown in orange. |
+| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `description`     | Describe the step item that is displayed as the subtitle.                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `leftElement`     | The only available element for the step is an `icon` displayed on the left of the value. A list of icons is available. See [Jigx icons](#) for more information. If no icon is specified a checkbox is used on the left.                                                                                                                                                                                                                                                                      |
+| `style`           | The following styling options are available:<br />* `isActive` - Shows the step as active.
+* `isDisabled` - Shows the step `value`, `description`, and `icon` as disabled (greyed out).
+* `isNegative` - The step `description` and `icon` are shown in red.
+* `isPositive` - The `description` and `icon` are shown in green.
+* `isStrikeThrough` - The step's `value` and `description` are shown with a line through it.
+* `isWarning` - The `description` and `icon` are shown in orange. |
 
-| **Actions**|    |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `onPress`   | The action is triggered when pressing on the step item. Use IntelliSense (ctrl+space) to see the list of available actions.  |
+| **Actions** |                                                                                                                             |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `onPress`   | The action is triggered when pressing on the step item. Use IntelliSense (ctrl+space) to see the list of available actions. |
 
 ## Consideration
 
@@ -40,7 +39,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hSkErBLejyQpuODS8-_4p_xukzynxiz0pfnomjm8eyostepiphone13blueportrait.png" size="80" "position="center" caption="Step inside a stepper component" alt="Step inside a stepper component"}
+\::Image\[]\{src="[https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hSkErBLejyQpuODS8-\_4p\_xukzynxiz0pfnomjm8eyostepiphone13blueportrait.png](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hSkErBLejyQpuODS8-_4p_xukzynxiz0pfnomjm8eyostepiphone13blueportrait.png)" size="80" "position="center" caption="Step inside a stepper component" alt="Step inside a stepper component"}
 :::
 
 :::VerticalSplitItem

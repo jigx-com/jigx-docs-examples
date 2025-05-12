@@ -1,10 +1,4 @@
----
-title: location
-slug: IVHb-location
-description: Learn how to customize the location component in a Jig with this comprehensive document. Discover various options for displaying the location on a map, including the standard component layout, the Jig header, or in fullscreen mode. Explore configuration o
-createdAt: Thu Jun 09 2022 19:42:51 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Apr 15 2025 09:26:57 GMT+0000 (Coordinated Universal Time)
----
+# location
 
 The location component enables users to display a location on a map within a jig. It can be configured to appear in different formats, including the standard component layout, the jig header, or fullscreen mode. Additionally, display options can be set up to show the current location with markers or paths.
 
@@ -12,44 +6,43 @@ The location component enables users to display a location on a map within a jig
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Options**                   |                                                                                                              |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `address`                     | The actual address of the location.&#xA;Valid formats are: &#xA;- **address string - city, street**, e.g.&#xA; `address: 20 W 34th St., New York, NY 10001, USA
-`or in an expression calling a datasource `=@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`&#xA;&#xA;**- latitude and longitude**, e.g.&#xA;`address: 40.759412, -73.912306`                       |
-| `is AnimationDisabled`        | `true` or `false` to determine if map animation is disabled.                                                            |
-| `isFollowUserLocationEnabled` | When enabled, the `viewPoint` will be centred on the user’s real-time location.                                        |
-| `markers`                     | Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map.&#xA;For example:&#xA;<br />`- type: component.location<br /> 
-    options:<br />
-      markers:<br />
-        data: <br />        - latitude: 40.759412<br />
-          longitude: -73.912306<br />         - latitude: 40.745368<br />
-          longitude: -74.057189<br />         - latitude: 40.76479429122513<br />
-          longitude: -73.97429291692742`<br />You can use an expression to provide the latitude and longitude points from a datasource, for example:&#xA;`markers:
+| **Options**                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `address`                     | The actual address of the location.&#xA;Valid formats are: &#xA;- **address string - city, street**, e.g.&#xA; `address: 20 W 34th St., New York, NY 10001, USA`<br />or in an expression calling a datasource `=@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`<br />- **latitude and longitude**, e.g. &#xA;`address: 40.759412, -73.912306`                                                                                                                                                                                                                          |
+| `is AnimationDisabled`        | `true` or `false` to determine if map animation is disabled.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `isFollowUserLocationEnabled` | When enabled, the `viewPoint` will be centred on the user’s real-time location.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `markers`                     | Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map.&#xA;For example:&#xA;`- type: component.location
+    options:
+      markers:
+        data:         - latitude: 40.759412
+          longitude: -73.912306         - latitude: 40.745368
+          longitude: -74.057189         - latitude: 40.76479429122513
+          longitude: -73.97429291692742 `&#xA;You can use an expression to provide the latitude and longitude points from a datasource, for example:&#xA;`markers:
    data: \|       =@ctx.datasources.jobs.{"lng": $number($.lng), "lat": $number($.lat)}` |
-| `marker-item`                 | `anchorTo:` - Anchor the marker to a specific point, either `bottom-center` or `center`<br />`radius` - Display a circle around the marker. In the radius you can configure the `color`, `unit` (Default is kilometres)<br />`icon` - Choose an icon for the markers. You can style the icon `color`, `emphasis`, `type`, `shape` and `size`.                                                                                    |
-| `paths`                       | Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map.&#xA;for example:&#xA;`- type: component.location
+| `marker-item`                 | `anchorTo:` - Anchor the marker to a specific point, either `bottom-center` or `center`<br />`radius` - Display a circle around the marker. In the radius you can configure the `color`, `unit` (Default is kilometres)<br />`icon` - Choose an icon for the markers. You can style the icon `color`, `emphasis`, `type`, `shape` and `size`.                                                                                                                                                                                                                                                                                           |
+| `paths`                       | Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map.&#xA;for example:&#xA;` - type: component.location
     options:
       paths:
         data:         - latitude: 40.759412
           longitude: -73.912306         - latitude: 40.803495
           longitude: -73.950694
-      address: =@ctx.datasources.location[0].address`                                                                                                                                                                                          |
-| `viewPoint`                   | Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation.&#xA;Options include:&#xA;`centerPosition:` `middle` or `top`                             |
-| `zoomLevel`                   | Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.                                       |
+      address: =@ctx.datasources.location[0].address`                                                                                                                                                                                         |
+| `viewPoint`                   | Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation.&#xA;Options include:&#xA;`centerPosition:` `middle` or `top`                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `zoomLevel`                   | Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-**Action**         |                  |
-| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [open-map](./../Actions/open-map.md)                    | The `action.open-map` lets you open your device's default map app (e.g., Google Maps, Apple Maps, or Waze) with the provided destination address. If multiple map apps are available, they will be listed for you to select one. |
-| [open-app-settings](./../Actions/open-app-settings.md)  | The `action.open-app-settings` can be configured to show when location tracking permission is not granted. Tapping the action opens the device’s settings screen.                                                                |
+| **Action**                                             |                                                                                                                                                                                                                                  |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [open-map](./../Actions/open-map.md)                   | The `action.open-map` lets you open your device's default map app (e.g., Google Maps, Apple Maps, or Waze) with the provided destination address. If multiple map apps are available, they will be listed for you to select one. |
+| [open-app-settings](./../Actions/open-app-settings.md) | The `action.open-app-settings` can be configured to show when location tracking permission is not granted. Tapping the action opens the device’s settings screen.                                                                |
 
-|**State Configuration**   | **Key**  | **Notes**                               |
+| **State Configuration**  | **Key**  | **Notes**                               |
 | ------------------------ | -------- | --------------------------------------- |
 | `=@ctx.component.state.` | location | State is the variable of the component. |
 
 | **System variable Configuration**            | **Key**              | **Notes**                                                                                                                                                          |
 | -------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `=@ctx.system.locationPermisions.foreground` | isGranted&#xA;status | Determines the status of the permissions and evaluates if permissions are granted. See [System locationPermissions](<./../Expressions/Jigx Variables.md>) example. |
-| `=@ctx.system.geolocation.`                  | coords&#xA;timestamp | See [System geolocation](<./../Expressions/Jigx Variables.md>) example.                                                                          |
+| `=@ctx.system.geolocation.`                  | coords&#xA;timestamp | See [System geolocation](<./../Expressions/Jigx Variables.md>) example.                                                                                            |
 
 ## Considerations
 
@@ -63,7 +56,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UFZdb7OyH1n4qiLOUrfKR-20250221-065903.png" size="80" position="center" caption="Location from address" alt="Location from address"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UFZdb7OyH1n4qiLOUrfKR-20250221-065903.png" size="80" position="center" caption="Location from address" alt="Location from address" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UFZdb7OyH1n4qiLOUrfKR-20250221-065903.png"}
 :::
 
 :::VerticalSplitItem
@@ -167,12 +160,11 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SNmxyLzQ0Z2t6OnyCEYDv-20250221-075843.png" size="80" position="center" caption="Address - Latitude & Longitude" alt="Address - Latitude & Longitude"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SNmxyLzQ0Z2t6OnyCEYDv-20250221-075843.png" size="80" position="center" caption="Address - Latitude & Longitude" alt="Address - Latitude & Longitude" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SNmxyLzQ0Z2t6OnyCEYDv-20250221-075843.png"}
 :::
 
 :::VerticalSplitItem
 In this example a location is shown using the `latitude` and `longitude` coordinates in the address property.
-
 :::
 ::::
 
@@ -233,7 +225,7 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_G08LkK_JYJE7lY18vhAQ-20250221-073344.png" size="80" position="center" caption="Multiple markers" alt="Multiple markers"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_G08LkK_JYJE7lY18vhAQ-20250221-073344.png" size="80" position="center" caption="Multiple markers" alt="Multiple markers" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_G08LkK_JYJE7lY18vhAQ-20250221-073344.png"}
 :::
 
 :::VerticalSplitItem
@@ -297,7 +289,7 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HyprtOZYo43vA857u8iYz-20250221-074256.png" size="80" position="center" caption="Location paths" alt="Location paths"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HyprtOZYo43vA857u8iYz-20250221-074256.png" size="80" position="center" caption="Location paths" alt="Location paths" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HyprtOZYo43vA857u8iYz-20250221-074256.png"}
 :::
 
 :::VerticalSplitItem
@@ -398,7 +390,7 @@ This example demonstrates how to add a circular `radius` around the specified lo
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cDA1fuYtVPJqgPh81VW6l-20250226-085626.png" size="66"  position="center" caption="Location with a radius" alt="Location with a radius"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cDA1fuYtVPJqgPh81VW6l-20250226-085626.png" size="66" position="center" caption="Location with a radius" alt="Location with a radius" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cDA1fuYtVPJqgPh81VW6l-20250226-085626.png"}
 :::
 ::::
 
@@ -467,12 +459,12 @@ See the example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/location.jigx).
 
 :::hint{type="success"}
-Using the code below requires data in the database, the *jigx.sample* solution has the data provided for location. You can use the location.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/location.csv" target="_blank">GitHub</a> and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the *jigx.sample* solution has the data provided for location. You can use the location.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/location.csv" target="_blank">GitHub</a> and upload it via the [Data](#) configuration in Jigx Management.
 :::
 ::::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RV6o93L_kcfzE1pfggkwo-20250221-082705.png" size="68" position="center" caption="Fullscreen location" alt="Fullscreen location"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RV6o93L_kcfzE1pfggkwo-20250221-082705.png" size="68" position="center" caption="Fullscreen location" alt="Fullscreen location" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RV6o93L_kcfzE1pfggkwo-20250221-082705.png"}
 :::
 :::::
 
@@ -534,7 +526,7 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cQZEvoQcr1J_SDuWosHd7-20250221-091813.png" size="98" position="center" caption="Location in header" alt="Location in header"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cQZEvoQcr1J_SDuWosHd7-20250221-091813.png" size="98" position="center" caption="Location in header" alt="Location in header" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cQZEvoQcr1J_SDuWosHd7-20250221-091813.png"}
 :::
 
 :::VerticalSplitItem
@@ -638,5 +630,5 @@ datasources:
 
 ## See also
 
-- [State]()
+- [State](#)
 

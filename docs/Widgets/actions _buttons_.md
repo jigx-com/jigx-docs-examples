@@ -1,10 +1,4 @@
----
-title: actions (buttons)
-slug: NnWj-actions
-description: Learn how to enhance your widget by adding primary and secondary actions without the need to access the widget first. This document covers configuration options and examples for our versatile actions widget, which can be configured both within the widget 
-createdAt: Thu Jun 09 2022 20:13:44 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Mar 10 2025 08:28:52 GMT+0000 (Coordinated Universal Time)
----
+# actions (buttons)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -15,7 +9,7 @@ This widget allows you to add primary and/or secondary actions (buttons) to a wi
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bXQzrMgA9C2WU-VcYpOYU_wd-actions.png" size="58" position="center" caption="Action widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bXQzrMgA9C2WU-VcYpOYU_wd-actions.png" size="58" position="center" caption="Action widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bXQzrMgA9C2WU-VcYpOYU_wd-actions.png"}
 :::
 ::::
 
@@ -41,7 +35,7 @@ This widget allows you to add primary and/or secondary actions (buttons) to a wi
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VtuoNb4XzobXvjv_YNiP9_actionsiphone13blueportrait.png" size="80" position="center" caption="Actions widget" alt="Actions widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VtuoNb4XzobXvjv_YNiP9_actionsiphone13blueportrait.png" size="80" position="center" caption="Actions widget" alt="Actions widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VtuoNb4XzobXvjv_YNiP9_actionsiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem

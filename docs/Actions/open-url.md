@@ -1,12 +1,6 @@
----
-title: open-url
-slug: bscW-open-url
-description: Learn how to effectively employ the open-url action through separate actions, swipeable actions, rightElements in lists, or associated actions. Discover code snippets and real-life examples for each use case, accompanied by GitHub links and related docume
-createdAt: Thu Jun 09 2022 18:22:50 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Nov 04 2024 14:44:07 GMT+0000 (Coordinated Universal Time)
----
+# open-url
 
-This action opens a web page depending on the provided URL or [deep links]() to an external app. open-url can be used in a list of actions, such as `swipeable` and `rightElement`, or with another action; after the main action is executed, open-url is called and opens the configured URL.
+This action opens a web page depending on the provided URL or [deep links](#) to an external app. open-url can be used in a list of actions, such as `swipeable` and `rightElement`, or with another action; after the main action is executed, open-url is called and opens the configured URL.
 
 ## Configuration options
 
@@ -17,26 +11,26 @@ An open-url action can be set up in various ways:
 3. As `rightElement` in the list.
 4. As an associated action in the action list.
 
-| **Core structure** |                                                                                         |
+| **Core structure** |                                                                                                                                                                                                        |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `title`            | Provide a title for opening the URL, you can use expressions in the title field.                                                                                                                       |
 | `url`              | Specify the URL you want opened. The following formats are supported: &#xA;https\://&#xA;https\://www. &#xA;www.&#xA;sitename.com&#xA;external app link (See the deep link to an external app example) |
 
-## Examples and code snippets ****
+## Examples and code snippets&#x20;
 
 :::::ExpandableHeading
 ### open-url as an action
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T3ZC0Rad-LbIo-TwkAz0n_gtzweo29zg0gybp4gfc9paiphone13blueportrait.png" size="80" position="center" caption="Open URL" alt="Open URL"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T3ZC0Rad-LbIo-TwkAz0n_gtzweo29zg0gybp4gfc9paiphone13blueportrait.png" size="80" position="center" caption="Open URL" alt="Open URL" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T3ZC0Rad-LbIo-TwkAz0n_gtzweo29zg0gybp4gfc9paiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
 The simplest example of using an open-url action is to use it as a separate action. Thanks to this, a button will appear at the bottom, which, when pressed, will open the specific URL that we set up.
 
 **Example:**
-See the full example in <[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-url/open-url-action.jigx).
+See the full example in \<[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-url/open-url-action.jigx).
 :::
 ::::
 
@@ -55,7 +49,7 @@ actions:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/85MfW1I1rRzJZ2nViXGqn_lwkiwhqm9jefwzaddms2sopen-url-swipeableiphone13blueportrait.png" size="78"  position="center" caption="Swipe to open URL" alt="Swipe to open URL "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/85MfW1I1rRzJZ2nViXGqn_lwkiwhqm9jefwzaddms2sopen-url-swipeableiphone13blueportrait.png" size="78" position="center" caption="Swipe to open URL" alt="Swipe to open URL " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/85MfW1I1rRzJZ2nViXGqn_lwkiwhqm9jefwzaddms2sopen-url-swipeableiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -97,7 +91,7 @@ item:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYadDhjMgTy2NrPEZyzmh_udarll0iezuhktkkwiufopen-url-rightiphone13blueportrait.png" size="80"  position="center" caption="Button to open URL" alt="Button to open URL"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYadDhjMgTy2NrPEZyzmh_udarll0iezuhktkkwiufopen-url-rightiphone13blueportrait.png" size="80" position="center" caption="Button to open URL" alt="Button to open URL" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYadDhjMgTy2NrPEZyzmh_udarll0iezuhktkkwiufopen-url-rightiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -133,7 +127,7 @@ item:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w6iMDziHnqSet6KtsHYWi_scmmooymdeswthvqltsmbopen-url-onsuccessiphone13blueportrait.png" size="80"  position="center" caption="Open URL onSuccess" alt="Open URL onSuccess"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w6iMDziHnqSet6KtsHYWi_scmmooymdeswthvqltsmbopen-url-onsuccessiphone13blueportrait.png" size="80" position="center" caption="Open URL onSuccess" alt="Open URL onSuccess" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w6iMDziHnqSet6KtsHYWi_scmmooymdeswthvqltsmbopen-url-onsuccessiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
