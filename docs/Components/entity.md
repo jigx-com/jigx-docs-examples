@@ -1,10 +1,4 @@
----
-title: entity
-slug: SXzb-entity
-description: Learn how to use the entity component as a container for other components like field-row and entity-field. This document offers examples and code snippets, and discusses different combinations of components, including section alone, field-row alone, or ju
-createdAt: Thu Jun 09 2022 19:32:22 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Jul 24 2024 09:25:26 GMT+0000 (Coordinated Universal Time)
----
+# entity
 
 The entity component is a container for the following components:
 
@@ -17,17 +11,15 @@ The entity component is a container for the following components:
 - The `component.entity` used with the above-mentioned components is configurable on a `jig.default`.
 - [Section](./entity/section.md) and [field-row](./entity/field-row.md) are also available under the `component.form` as its container. Here the [entity-field](./entity/entity-field.md) is replaced by the [form's](./form.md) children field.
 - When setting up a `component.entity`, either a [default jig](<./../Jig Types/jig_default.md>) or `component.form` can be used in the following combinations:
-
-1. An entity containing [section(s)](./entity/section.md) with [rows](./entity/field-row.md) and [entity-field](./entity/entity-field.md)
-2. An entity containing [section(s)](./entity/section.md) and [entity-field](./entity/entity-field.md)
-3. An entity containing [rows](./entity/field-row.md) and [entity-field](./entity/entity-field.md)
-4. An entity containing [entity fields](./entity/entity-field.md)
+  - An entity containing [section(s)](./entity/section.md) with [rows](./entity/field-row.md) and [entity-field](./entity/entity-field.md)
+  - An entity containing [section(s)](./entity/section.md) and [entity-field](./entity/entity-field.md)An entity containing [rows](./entity/field-row.md) and [entity-field](./entity/entity-field.md)
+  - An entity containing [entity fields](./entity/entity-field.md)
 
 ## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Other options** |   |
+| **Other options** |                                                                                                                                                                                                                                                                                                               |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `isCompact`       | When this property is set to `true` the entity-field will cover the entire row. This compact variant does not allow usage of field-row components. By default, a label is at the top and the value below. `isCompact` will place the label on the left and the value on the right. Columns are not supported. |
 

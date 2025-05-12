@@ -1,59 +1,55 @@
----
-title: dropdown
-slug: aawa-dropdown
-description: Learn about various configuration options for a dropdown component and explore additional choices for the dropdown-item component. This comprehensive document offers step-by-step examples and code snippets for designing default, multiple select, search, a
-createdAt: Thu Jun 09 2022 09:19:59 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Apr 29 2025 05:37:28 GMT+0000 (Coordinated Universal Time)
----
+# dropdown
 
 Dropdown fields in forms streamline the user experience by offering a compact, scrollable list of options, saving space and reducing clutter. They help guide users through data selections while minimizing input errors and enhancing form navigation.
 
-::Image[]{alt="Dropdown preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Opq5FI49WK91cD2RFcpO_dropdown.png" size="90" caption="Dropdown preview" position="center" }
+::Image[]{alt="Dropdown preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Opq5FI49WK91cD2RFcpO_dropdown.png" size="90" caption="Dropdown preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Opq5FI49WK91cD2RFcpO_dropdown.png"}
 
 ## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure for dropdown** |  |
+| **Core structure for dropdown** |                                                                                                          |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | `instanceId`                    | The unique identifier for the dropdown component.                                                        |
 | `label`                         | Provide a label/name for the dropdown. 'Label' is displayed as a placeholder when no value is specified. |
-| `data`                          |  Use an expression that evaluates to either an array of options or sections.                             |
+| `data`                          | Use an expression that evaluates to either an array of options or sections.                              |
 | `item`                          | The `item` property use component of **dropdown-item** that includes: `title` and `value`.               |
 
-| **Other options**       |    |
+| **Other options**       |                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`                 | Sets the color of the dropdown property based on conditions by using the `when` property. First evaluated to `true` will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette]().     |
-| `errorText`             | Add text, string, or expressions to show text under the dropdown indicating an error/invalid value in the field. Text is shown in `isNegative` (red) styling with a red exclamation icon on the right.      |
-| `helperText`            | Add text, string, or expressions to guide users by showing text under the dropdown. Helper text is displayed only when there is no errorText.    |
-| `icon`                  | Add an icon to the title. A list of icons is available. See [Jigx icons]() for more information.     |
+| `color`                 | Sets the color of the dropdown property based on conditions by using the `when` property. First evaluated to `true` will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](#).                                                                                                                                   |
+| `errorText`             | Add text, string, or expressions to show text under the dropdown indicating an error/invalid value in the field. Text is shown in `isNegative` (red) styling with a red exclamation icon on the right.                                                                                                                                                                                                                                               |
+| `helperText`            | Add text, string, or expressions to guide users by showing text under the dropdown. Helper text is displayed only when there is no errorText.                                                                                                                                                                                                                                                                                                        |
+| `icon`                  | Add an icon to the title. A list of icons is available. See [Jigx icons](#) for more information.                                                                                                                                                                                                                                                                                                                                                    |
 | `initialValue`          | The `initialValue` is the value that will be displayed in the dropdown when the form is initially loaded. You can use this property to preset the dropdown with a default value so that you do not have to manually select it. Using the `reset-state` action with `initialValues` does not clear the dropdown field, it resets the field back to it's `initialValue`.                                                                               |
-| `isAutoFocused`         | If `true` the dropdown will get focus immediately after the form is displayed.     |
-| `isHidden`              | If `true` the dropdown will be hidden on the form. If set to `false` the field will be shown.  |
-| `isIgnored`             | When `true`, the field will be ignored when submitting the form and the content will not be stored.     |
-| `isMultiple`            | Set to `true` allows you to select multiple items inside the dropdown. Set to `false` only allows a single selection in the dropdown.   |
-| `isOptionalLabelHidden` | If the field is optional you can turn off the "(optional)" label by setting this field to `true`. This property works in combination with `isRequired: false`.   |
-| `isRequired`            | Set to `true` when the field is required. Useful when you use it in form submission. Set to `false` the dropdown is optional and will have (optional) in the label.     |
+| `isAutoFocused`         | If `true` the dropdown will get focus immediately after the form is displayed.                                                                                                                                                                                                                                                                                                                                                                       |
+| `isHidden`              | If `true` the dropdown will be hidden on the form. If set to `false` the field will be shown.                                                                                                                                                                                                                                                                                                                                                        |
+| `isIgnored`             | When `true`, the field will be ignored when submitting the form and the content will not be stored.                                                                                                                                                                                                                                                                                                                                                  |
+| `isMultiple`            | Set to `true` allows you to select multiple items inside the dropdown. Set to `false` only allows a single selection in the dropdown.                                                                                                                                                                                                                                                                                                                |
+| `isOptionalLabelHidden` | If the field is optional you can turn off the "(optional)" label by setting this field to `true`. This property works in combination with `isRequired: false`.                                                                                                                                                                                                                                                                                       |
+| `isRequired`            | Set to `true` when the field is required. Useful when you use it in form submission. Set to `false` the dropdown is optional and will have (optional) in the label.                                                                                                                                                                                                                                                                                  |
 | `isSearchable`          | Set to `true` allows the items in the dropdown to be searchable. A search bar is added to the top of the dropdown list. For the search field to function the `data` property should be configured with a filter expression, e.g. `=$filter(@ctx.datasources.employees-static, function($v){$contains($string($v.firstname),$string(@ctx.components.dropdown-in.state.searchText != null ? @ctx.components.dropdown-in.state.searchText:''))})[]`     |
-| `isSearchAutoFocused`   | If set to `true` the searchable input will get focus immediately when opened.   |
-| `nextProperty`          | Name of the property you want to focus next in the form when you use return/next on a keyboard.   |
+| `isSearchAutoFocused`   | If set to `true` the searchable input will get focus immediately when opened.                                                                                                                                                                                                                                                                                                                                                                        |
+| `nextProperty`          | Name of the property you want to focus next in the form when you use return/next on a keyboard.                                                                                                                                                                                                                                                                                                                                                      |
 | `style`                 | The following property settings are available:&#xA;- `flex` - Flex property if rendered inside row.&#xA;- `isBusy` - Displays spinner on right side of field. It removes any  configured icon.&#xA;- `isDisabled` - disables the dropdown preventing the dropdown-items popup from displaying.&#xA;- `isPositive` - a green icon displays on the right of the dropdown field.&#xA;More than one can be true. It will be evaluated based on priority. |
-| `value`                 | The value to show in the dropdown, e.g. you can configure the first dropdown-item for be selected by default when the form loads. For example, `value: =@ctx.datasources.employees-static[0].firstName `   |
+| `value`                 | The value to show in the dropdown, e.g. you can configure the first dropdown-item for be selected by default when the form loads. For example, `value: =@ctx.datasources.employees-static[0].firstName `                                                                                                                                                                                                                                             |
 
-| **Other options for dropdown-item** |                                                                                          |
+| **Other options for dropdown-item** |                                                                                                                                                                |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `description`                       | Description of steps displayed on list items as subtitles.                                                                                                     |
 | `instanceId`                        | The unique identifier for the dropdown-item component.                                                                                                         |
-| `leftElement`                       | The following elements can be added in the dropdown component, which will display on the left of the dropdown-item `title`:<br />* `avatar`<br />* `icon`<br />* `image` |
-| `subtitle`                          | The subtitle for the dropdown item.        |
+| `leftElement`                       | The following elements can be added in the dropdown component, which will display on the left of the dropdown-item `title`:<br />* `avatar`
+* `icon`
+* `image` |
+| `subtitle`                          | The subtitle for the dropdown item.                                                                                                                            |
 | `title`                             | Title displayed on list item. You can add text, expressions or Text with Format in the field. Text with format includes, currency, decimal, dateTime and more. |
-| `value`                             | The value of the item. It has to be unique for each item and is usually the ID of the record from the datasource.   |
+| `value`                             | The value of the item. It has to be unique for each item and is usually the ID of the record from the datasource.                                              |
 
-| **Actions** |  |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onChange`  | The action is triggered when the content in the `dropdown` is changed. Use IntelliSense (ctrl+space) to see the list of available actions.  |
+| **Actions** |                                                                                                                                            |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `onChange`  | The action is triggered when the content in the `dropdown` is changed. Use IntelliSense (ctrl+space) to see the list of available actions. |
 
-| **State Configuration** | **Key**                           | **Notes**                                                         |
+| **State Configuration**  | **Key**                           | **Notes**                                                         |
 | ------------------------ | --------------------------------- | ----------------------------------------------------------------- |
 | `=@ctx.component.state.` | searchText&#xA;selected&#xA;value | - State is the variable of the component.                         |
 | `=@ctx.solution.state.`  | activeItemId&#xA;now              | * Global state variable that can be used throughout the solution. |
@@ -197,11 +193,11 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A8sWkbH9ukD4sFkCujOot_ngcd8fozzsjh6nz3j0ogdropdown-multipleiphone13blueportrait.png" size="80"  position="center" caption="Multiple dropdown-items " alt="Multiple dropdown-items "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A8sWkbH9ukD4sFkCujOot_ngcd8fozzsjh6nz3j0ogdropdown-multipleiphone13blueportrait.png" size="80" position="center" caption="Multiple dropdown-items " alt="Multiple dropdown-items " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A8sWkbH9ukD4sFkCujOot_ngcd8fozzsjh6nz3j0ogdropdown-multipleiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Cky4zkcmv7RgRSRqw_SoP_06x339zv728sfuekadodropdown-multiple2iphone13blueportrait.png" size="78"  position="center" caption="Dropdown with multiple selected" alt="Dropdown with multiple selected"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Cky4zkcmv7RgRSRqw_SoP_06x339zv728sfuekadodropdown-multiple2iphone13blueportrait.png" size="78" position="center" caption="Dropdown with multiple selected" alt="Dropdown with multiple selected" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Cky4zkcmv7RgRSRqw_SoP_06x339zv728sfuekadodropdown-multiple2iphone13blueportrait.png"}
 :::
 ::::
 
@@ -209,7 +205,7 @@ In this example, we will show you how you can set up your dropdown for multiple 
 
 **Examples:**
 
-See the full example using static data in <[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/static-data/dropdown-multiple-select.jigx).
+See the full example using static data in \<[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/static-data/dropdown-multiple-select.jigx).
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/dynamic-data/multiple-select-dynamic.jigx).
 
 **Datasources:**
@@ -335,11 +331,11 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UjhHKuhR5Xnqy4qpWZY1y_hwnkejspnia9o0tkhs3tudropdown-searchiphone13blueportrait.png" size="78"  position="center" caption="Dropdown with search" alt="Dropdown with search"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UjhHKuhR5Xnqy4qpWZY1y_hwnkejspnia9o0tkhs3tudropdown-searchiphone13blueportrait.png" size="78" position="center" caption="Dropdown with search" alt="Dropdown with search" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UjhHKuhR5Xnqy4qpWZY1y_hwnkejspnia9o0tkhs3tudropdown-searchiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F67oAjjxBTXdDph_dp5dC_mcvfx2gwtac4mfepaabx6dropdown-search-2iphone13blueportrait.png" size="80"  position="center" caption alt="Dropdown with search"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F67oAjjxBTXdDph_dp5dC_mcvfx2gwtac4mfepaabx6dropdown-search-2iphone13blueportrait.png" size="80" position="center" caption alt="Dropdown with search" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F67oAjjxBTXdDph_dp5dC_mcvfx2gwtac4mfepaabx6dropdown-search-2iphone13blueportrait.png"}
 :::
 ::::
 
@@ -474,7 +470,7 @@ datasources:
 ::::ExpandableHeading
 ### Dropdown with a default value
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZLtcAYaEPxEK7rdQiwCCd_ddown-default-value.png" size="80" position="center" caption="Dropdown with default value" alt="dropdown with default value"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZLtcAYaEPxEK7rdQiwCCd_ddown-default-value.png" size="80" position="center" caption="Dropdown with default value" alt="dropdown with default value" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZLtcAYaEPxEK7rdQiwCCd_ddown-default-value.png"}
 
 In this example, we populate the first employee's name as the default value to show in the dropdown by using the `initialValue` property with an expression to return the first value from the datasource. Opening the dropdown shows the first checkbox selected.
 
@@ -547,5 +543,5 @@ datasources:
 
 ## See also
 
-- [State]()
+- [State](#)
 

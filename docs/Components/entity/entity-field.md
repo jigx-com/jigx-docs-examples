@@ -1,10 +1,4 @@
----
-title: entity-field
-slug: _8nm-entity-field
-description: Learn about entity fields and their configuration options in this comprehensive YAML file. Discover examples of entity fields on GitHub and how they can be used with connected datasources. Explore entity fields for cleaning and repair services, including 
-createdAt: Thu Jun 09 2022 19:30:50 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Jul 24 2024 09:49:14 GMT+0000 (Coordinated Universal Time)
----
+# entity-field
 
 Entity fields display data such as text, numbers, dates, and currency from a datasource to the user. These entity fields are found on a `jig.default` and can be nested under [field-row](./field-row.md) and/or [section](./section.md) components but not under `component.form` as it is used for display purposes only.
 
@@ -12,18 +6,28 @@ Entity fields display data such as text, numbers, dates, and currency from a dat
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |    |
+| **Core structure** |                                                                                |
 | ------------------ | ------------------------------------------------------------------------------ |
 | `label`            | Add a label for the entity-field, you can add text or an expression.           |
 | `value`            | Add a value to display in the entity-field, you can add text or an expression. |
 
-| **Other options** |  |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `contentType`     | Various types of entity fields determine the visual display and behavior of the entity-field, including: <br />* `default`<br />* `checkbox`<br />* `copy`<br />* `date `<br />* `email` - format: *email\@example.com*
-<br /> `link`<br />* `phone`- format: *1234567890* or *+001234567890* (no spaces)<br />* `signature `<br />* `time` |
-| `instanceId`      | The unique identifier for the entity field.     |
-| `rightIcon`       | A list of icons is available. See [Jigx icons]() for more information.   |
-| `style`           | The following styling set is available and works in conjunction with `rightIcon` to determine the color of the icon and the enitity-field line separator:<br />* `isNegative`<br />* `isPositive`<br />* `isPrimary`<br />*`isWarning`  |
+| **Other options** |                                                                                                                                                                                                                                                                                                                                |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `contentType`     | Various types of entity fields determine the visual display and behavior of the entity-field, including: <br />* `default`
+* `checkbox`
+* `copy`
+* `date`
+* `email` - format: [*email@example.com*](mailto\:email@example.com)
+* `link`
+* `phone`- format: *1234567890* or *+001234567890* (no spaces)
+* `signature `
+* `time` |
+| `instanceId`      | The unique identifier for the entity field.                                                                                                                                                                                                                                                                                    |
+| `rightIcon`       | A list of icons is available. See [Jigx icons](#) for more information.                                                                                                                                                                                                                                                        |
+| `style`           | The following styling set is available and works in conjunction with `rightIcon` to determine the color of the icon and the enitity-field line separator:<br />* `isNegative`
+* `isPositive`
+* `isPrimary`
+* `isWarning`                                                                                                       |
 
 ## Consideration
 
@@ -42,16 +46,12 @@ Some properties are common to all components, see [Common component properties](
 **Basic**
 
 ![Entity fields](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/u1TWldxzruaOe5VzA2yum_en1iphone13blueportrait.png "Entity fields")
-
-
 :::
 
 :::VerticalSplitItem
 **Compact **
 
 ![Entity fields compact](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/MBzXs2Ep3g7RSPFz0SD-5_en11iphone13blueportrait.png "Entity fields compact")
-
-
 :::
 ::::
 
@@ -202,7 +202,7 @@ children:
 :::::ExpandableHeading
 ### Entity fields with a connected datasource
 
-::::VerticalSplit{layout}
+::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 **Basic**
 
@@ -483,11 +483,10 @@ In this example, the `rightIcons` color is determined by adding a `style` proper
 
 **Examples:**
 See the full example using static values in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-icons-color.jigx).
-
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RtiAb3SAzNGz-QOMG3s8L_cc-entityfield-color.PNG" size="80" position="center" caption="Right icons in color" alt="Right icons in color"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RtiAb3SAzNGz-QOMG3s8L_cc-entityfield-color.PNG" size="80" position="center" caption="Right icons in color" alt="Right icons in color" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RtiAb3SAzNGz-QOMG3s8L_cc-entityfield-color.PNG"}
 :::
 ::::
 

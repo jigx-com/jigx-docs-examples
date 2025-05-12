@@ -1,10 +1,4 @@
----
-title: checkbox
-slug: NI_e-checkbox
-description: Learn how to effectively use the versatile checkbox component in your forms with this comprehensive document. Discover how to enable users to make binary choices and select single or multiple options. Explore options for configuring initial checked or unc
-createdAt: Thu Jun 09 2022 19:27:06 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Oct 21 2024 12:43:07 GMT+0000 (Coordinated Universal Time)
----
+# checkbox
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -14,7 +8,7 @@ The component is used in a [jig.default](<./../../Jig Types/jig_default.md>) ins
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Checkbox preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/C108AXi_xo5aRgmBnjo_9_checkboxes.png" size="90" caption="Checkbox preview" position="center" }
+::Image[]{alt="Checkbox preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/C108AXi_xo5aRgmBnjo_9_checkboxes.png" size="90" caption="Checkbox preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/C108AXi_xo5aRgmBnjo_9_checkboxes.png"}
 :::
 ::::
 
@@ -22,31 +16,31 @@ The component is used in a [jig.default](<./../../Jig Types/jig_default.md>) ins
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-|**Core structure** |                                                                                                    |
+| **Core structure** |                                                                                                          |
 | ------------------ | -------------------------------------------------------------------------------------------------------- |
 | `instanceId`       | The unique identifier for the checkbox component.                                                        |
 | `label`            | Provide a label/name for the checkbox. 'Label' is displayed as a placeholder when no value is specified. |
 
-| **Other options**       |   |
+| **Other options**       |                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`                 | Sets the color of the checkbox based on conditions by using the when property. First evaluated to true will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette]().  |
-| `errorText`             | Add text, string, or expressions to show text under the checkbox indicating an error/invalid value in the field. Text is shown in `isNegative` (red) styling. |
-| `helperText`            | Add text, string, or expressions to guide users by showing text under the checkbox. Helper text is displayed only when there is no errorText.   |
-| `icon`                  | Add an icon to the title. A list of icons is available. See [Jigx icons]() for more information.     |
+| `color`                 | Sets the color of the checkbox based on conditions by using the when property. First evaluated to true will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](#).                                                                                                                                                         |
+| `errorText`             | Add text, string, or expressions to show text under the checkbox indicating an error/invalid value in the field. Text is shown in `isNegative` (red) styling.                                                                                                                                                                                                                                                                                                 |
+| `helperText`            | Add text, string, or expressions to guide users by showing text under the checkbox. Helper text is displayed only when there is no errorText.                                                                                                                                                                                                                                                                                                                 |
+| `icon`                  | Add an icon to the title. A list of icons is available. See [Jigx icons](#) for more information.                                                                                                                                                                                                                                                                                                                                                             |
 | `initialValue`          | The `initialValue` is the value that the checkbox will load with when the form is initially loaded. You can use this property to preset the checkbox value so that the user doesn't have to manually select it. Set to `true` loads the checkbox as selected, `false` loads the checkbox as unselected. Using the `reset-state` action with `initialValues` does not clear the checkbox, it resets the field back to it's `initialValue`.                     |
-| `isAutoFocused`         | If `true` it will get focus immediately after the jig is displayed.     |
-| `isHidden`              | If `true` the checkbox will be hidden on the form. If set to `false` the field will be shown.     |
-| `isIgnored`             | When `true`, the field will be ignored when submitting the form and the content will not be stored.      |
-| `isOptionalLabelHidden` | If the field is optional you can turn off the "(optional)" label by setting this field to `true`. This property works in combination with `isRequired: false`.      |
-| `isRequired`            | Set to `true` when the field is required. Useful when you use it in form submission. Set to `false` the checkbox is optional and will have an (optional) in the label.  |
-| `nextProperty`          | Name of the property you want to focus next in the form when you use return/next on a keyboard.    |
+| `isAutoFocused`         | If `true` it will get focus immediately after the jig is displayed.                                                                                                                                                                                                                                                                                                                                                                                           |
+| `isHidden`              | If `true` the checkbox will be hidden on the form. If set to `false` the field will be shown.                                                                                                                                                                                                                                                                                                                                                                 |
+| `isIgnored`             | When `true`, the field will be ignored when submitting the form and the content will not be stored.                                                                                                                                                                                                                                                                                                                                                           |
+| `isOptionalLabelHidden` | If the field is optional you can turn off the "(optional)" label by setting this field to `true`. This property works in combination with `isRequired: false`.                                                                                                                                                                                                                                                                                                |
+| `isRequired`            | Set to `true` when the field is required. Useful when you use it in form submission. Set to `false` the checkbox is optional and will have an (optional) in the label.                                                                                                                                                                                                                                                                                        |
+| `nextProperty`          | Name of the property you want to focus next in the form when you use return/next on a keyboard.                                                                                                                                                                                                                                                                                                                                                               |
 | `style`                 | The following property settings are available:&#xA;- `flex` - Flex property if rendered inside row.&#xA;- `isDanger` - when the checkbox is selected the component displays in red.&#xA;- `isDisabled` - makes the checkbox  field un-selectable.&#xA;- `isPositive` when the checkbox is selected the component displays in green.&#xA;- `isWarning` - displays the component in red.&#xA;More than one can be true. It will be evaluated based on priority. |
-| `value`                 | The value to show for the checkbox. Setting up a checkbox with a `value` property of `true` will display the checkbox as selected when the form loads, setting the property to `false` will display the checkbox as unselected when the form loads.   |
+| `value`                 | The value to show for the checkbox. Setting up a checkbox with a `value` property of `true` will display the checkbox as selected when the form loads, setting the property to `false` will display the checkbox as unselected when the form loads.                                                                                                                                                                                                           |
 
-| **Actions** |   |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onChange`  | The action is triggered when the content in the `checkbox` is changed. Use IntelliSense (ctrl+space) to see the list of available actions.  |
-| `onPress`   | `OnPress` action overwrites the main check / uncheck functionality.  |
+| **Actions** |                                                                                                                                            |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `onChange`  | The action is triggered when the content in the `checkbox` is changed. Use IntelliSense (ctrl+space) to see the list of available actions. |
+| `onPress`   | `OnPress` action overwrites the main check / uncheck functionality.                                                                        |
 
 | **State Configuration**  | **Key**              | **Notes**                                                         |
 | ------------------------ | -------------------- | ----------------------------------------------------------------- |
@@ -270,7 +264,7 @@ datasources:
 :::
 :::::
 
-## **See also**
+## See also
 
-- [State]()
+- [State](#)
 

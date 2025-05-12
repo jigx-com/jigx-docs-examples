@@ -1,10 +1,4 @@
----
-title: titles
-slug: h1bm-titles
-description: Learn how to use a versatile text display component with optional icons, titles, subtitles, and customizable styles. This document offers examples and code snippets for implementing the component with both static and dynamic data, including provided datas
-createdAt: Thu Jun 09 2022 19:55:14 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Jul 24 2024 09:32:28 GMT+0000 (Coordinated Universal Time)
----
+# titles
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -12,7 +6,7 @@ The titles component displays a title, subtitle, comment, or any type of text co
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Titles Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/URj78rz7Ik4FkLEZN1I8u_titles.png" size="86" caption="Titles Preview" position="center" }
+::Image[]{alt="Titles Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/URj78rz7Ik4FkLEZN1I8u_titles.png" size="86" caption="Titles Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/URj78rz7Ik4FkLEZN1I8u_titles.png"}
 :::
 ::::
 
@@ -20,34 +14,38 @@ The titles component displays a title, subtitle, comment, or any type of text co
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                                                            |
+| **Core structure** |                                                                                                                                                                                                |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `title`            | Add text on the `centerElements` of the `component.expander`. You can add text, expressions or Text with Format in the field. Text with format includes, currency, decimal, dateTime and more. |
 
-| **Other options** |  |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `align`           | The alignment of the content inside of your component. Where the container and text should be aligned, the options are:<br />* `left`<br />* `right`<br />* `center`                                                   |
-| `icon`            | Add an icon to the title. A list of icons is available. See [Jigx icons]() for more information.        |
-| `iconColor`       | Sets the color of the icon, choose a color from the provided color palette. Default color is black if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](). |
-| `style`           | The following styling sets are available:<br />* `isNegative`<br />* `isPositive`<br />* `isWarning`   |
-| `subtitle`        | Add a  `subtitle`/ short description of the component.                                                                                                                                                       |
+| **Other options** |                                                                                                                                                                                                               |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `align`           | The alignment of the content inside of your component. Where the container and text should be aligned, the options are:<br />* `left`
+* `right`
+* `center`                                                    |
+| `icon`            | Add an icon to the title. A list of icons is available. See [Jigx icons](#) for more information.                                                                                                             |
+| `iconColor`       | Sets the color of the icon, choose a color from the provided color palette. Default color is black if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](#). |
+| `style`           | The following styling sets are available:<br />* `isNegative`
+* `isPositive`
+* `isWarning`                                                                                                                    |
+| `subtitle`        | Add a  `subtitle`/ short description of the component.                                                                                                                                                        |
 
 ## Consideration
 
 - `component.titles` can only be used in the `centerElement` of the  `component.expander`
 
-## Examples and code snippets 
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Expander with titles in a header
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/evtS4oSL4t4yGt7Gcg4AV_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png" size="80" position="center" caption="Expander with titles" alt="Expander with titles"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/evtS4oSL4t4yGt7Gcg4AV_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png" size="80" position="center" caption="Expander with titles" alt="Expander with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/evtS4oSL4t4yGt7Gcg4AV_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2gXn9HMZZgzoE38Wt91ZE_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png" size="80" position="center" caption alt="Expander with titles"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2gXn9HMZZgzoE38Wt91ZE_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png" size="80" position="center" caption alt="Expander with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2gXn9HMZZgzoE38Wt91ZE_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png"}
 :::
 ::::
 

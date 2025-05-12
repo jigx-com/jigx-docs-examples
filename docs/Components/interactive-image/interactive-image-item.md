@@ -1,10 +1,4 @@
----
-title: interactive-image-item
-slug: 5KZ9-interactive-image-item
-description: Learn how to create interactive images with this comprehensive guide. Discover how to set up coordinates, group points, and personalize them with icons or colors. Explore configuration options like ID, title, percentage coordinates, color, icon, style, an
-createdAt: Thu Jun 09 2022 19:36:13 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Aug 19 2024 10:13:17 GMT+0000 (Coordinated Universal Time)
----
+# interactive-image-item
 
 The interactive-image-item is used in the `item` property of the [interactive-image](./../interactive-image.md) component that servers as a container. The `interactive-image-item` can be set in various ways using the properties of the [interactive-image](./../interactive-image.md) as well as the properties described below.
 
@@ -12,48 +6,49 @@ The interactive-image-item is used in the `item` property of the [interactive-im
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure**      |       |
+| **Core structure**      |                                                                                                                             |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | `id`                    | Provide an id for the item that is used for filtering and as a key                                                          |
 | `percentageCoordinates` | Percentage `x` and `y` coordinates are required.  Coordinates are represented as absolute percentage numbers between 0-100. |
 | `title`                 | Give a name/title for the point, for example, Table 1.                                                                      |
 
-| **Other options** |    |
+| **Other options** |                                                                                                                                                                                                           |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `color`           | This allows you to set a specific color for the active/selected point (e.g., when the point is selected or active).                                                                                       |
 | `icon`            | This allows you to set a specific icon for different states (e.g., when the point is selected active or inactive).                                                                                        |
 | `index`           | Index for the initial animation.                                                                                                                                                                          |
-| `groupId`         |  This property allows you to add the item to the group. The groups are created inside the [interactive-image](./../interactive-image.md) component. Effective only initial load.                          |
-| `style`           | The following style options are available:<br />* `isActive` - shows if the point is active or available for selection.<br />* `isDisabled` - shows if the point is disabled and is unavailable for selection. |
+| `groupId`         | This property allows you to add the item to the group. The groups are created inside the [interactive-image](./../interactive-image.md) component. Effective only initial load.                           |
+| `style`           | The following style options are available:<br />* `isActive` - shows if the point is active or available for selection.
+* `isDisabled` - shows if the point is disabled and is unavailable for selection. |
 
-| **Actions** |            |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onPress`   | The action is triggered when pressing the image's marked coordinate point. Use IntelliSense (ctrl+space) to see the list of available actions.  |
+| **Actions** |                                                                                                                                                |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onPress`   | The action is triggered when pressing the image's marked coordinate point. Use IntelliSense (ctrl+space) to see the list of available actions. |
 
-| **State Configuration**  | **Key**              | **Notes**                                                         |
-| ------------------------ | -------------------- | ----------------------------------------------------------------- |
-| `=@ctx.component.state.` | selected             | - State is the variable of the component.                         |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now | * Global state variable that can be used throughout the solution. |
+| **State Configuration**  | **Key**              | **Notes**                                                       |
+| ------------------------ | -------------------- | --------------------------------------------------------------- |
+| `=@ctx.component.state.` | selected             | State is the variable of the component.                         |
+| `=@ctx.solution.state.`  | activeItemId&#xA;now | Global state variable that can be used throughout the solution. |
 
-## Examples and code snippets ****
+## Examples and code snippets&#x20;
 
 :::::ExpandableHeading
 ### Restaurant table booking example
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8_rest-1iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8_rest-1iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8_rest-1iphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj_WAUzvJz1S_rest-2iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj_WAUzvJz1S_rest-2iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj_WAUzvJz1S_rest-2iphone13blueportrait.png"}
 :::
 ::::
 
 The example shows tables in a restaurant that are available for booking, the `pointColor` property is set to blue to show availabilty. Once a table is reserved the `icon` and `color` property are set to show that the tables are reserved and cannot be booked.
 
 **Examples:**
-See the full example using static data in <[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/static-data/interactive-image-rest-sd.jigx)
+See the full example using static data in \<[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/static-data/interactive-image-rest-sd.jigx)
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/dynamic-data/interactive-image-rest-dd.jigx)
 
 **Datasource:**
@@ -282,11 +277,11 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ_interactive-image-1iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ_interactive-image-1iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ_interactive-image-1iphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ_HVAl1AUyX_interactive-image-2iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ_HVAl1AUyX_interactive-image-2iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ_HVAl1AUyX_interactive-image-2iphone13blueportrait.png"}
 :::
 ::::
 
@@ -393,7 +388,7 @@ datasources:
 :::
 :::::
 
-## See also**
+## See also
 
-- [State]()
+- [State](#)
 
