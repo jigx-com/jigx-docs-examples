@@ -1,10 +1,4 @@
----
-title: List a single customer (SELECT)
-slug: 3dNS-selecting-a-single-record
-description: Learn how to execute a SQL command to fetch a specific customer and display it in a default jig with this example document. It covers both stored procedure-based and query-based versions of retrieving the customer, along with code samples. Discover how to
-createdAt: Wed Mar 15 2023 12:44:17 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Feb 12 2025 12:50:56 GMT+0000 (Coordinated Universal Time)
----
+# List a single customer (SELECT)
 
 :::hint{type="warning"}
 Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information.
@@ -12,14 +6,14 @@ Best practice for production apps is to use REST as the data layer to access dat
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-# **Scenario**
+# Scenario
 
 View the customer's details by pressing on the customer in the list, which opens the customer's details in a default jig.
 
-## **Resources**
+## Resources
 
 - Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<./Database Scripts.md>).
-- [Configuring the SQL Connection]().
+- [Configuring the SQL Connection](#).
 - This sample depends on [List customers (SELECT)](<./List customers _SELECT_.md>).
 
 ## Jigx Code
@@ -346,4 +340,3 @@ tabs:
     icon: home-apps-logo
 ```
 :::
-

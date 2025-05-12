@@ -1,10 +1,4 @@
----
-title: static
-slug: 0kRw-static
-description: Learn how to utilize static data within the {{Jigx}} platform with this comprehensive document. Discover how static data can be configured as either a local or global data source within a Jig, and explore the advantages and limitations of each. This docum
-createdAt: Thu Jun 09 2022 18:34:02 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Mar 05 2025 15:07:00 GMT+0000 (Coordinated Universal Time)
----
+# static
 
 Static lists are typically used when data needs to be accessed but hardly ever manipulated, handled, or updated. Within Jigx , we have ensured that static data is easily specified but also accessed with the same ease. Static data can be configured as a direct data source on a jig or as a global datasource that can be accessed or referenced across various jigs or components.
 
@@ -16,7 +10,7 @@ When setting up a `static datasource` component within a Jig you have the option
 2. As a global data source that allows easy access and reusability to the data across various jigs and components
 
 :::hint{type="info"}
-You also have the option to set up static data directly in the relevant fields. This scenario is however not discussed here as this section focuses only on the application of the static data component itself. Please refer to the guide on working with [Static Data]() for more information on the alternative application.
+You also have the option to set up static data directly in the relevant fields. This scenario is however not discussed here as this section focuses only on the application of the static data component itself. Please refer to the guide on working with [Static Data](#) for more information on the alternative application.
 :::
 
 ## Examples and code snippets
@@ -26,11 +20,11 @@ View common uses for the static datasource below and how you can configure the s
 We've gone ahead and expanded the first one for you. Feel free to view any others you'd like to inspect.
 
 :::::ExpandableHeading
-### Static datasource configured *locally* on a jig
+### Static datasource configured locally on a jig
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6d2E3jkkz-3oaCcClqGp7_xdair6ef8yljgyggr4vgnptpye1yvizw6xnzc8rdoimg1086iphone13blueportrait.png" size="84"  position="center"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6d2E3jkkz-3oaCcClqGp7_xdair6ef8yljgyggr4vgnptpye1yvizw6xnzc8rdoimg1086iphone13blueportrait.png" size="84" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6d2E3jkkz-3oaCcClqGp7_xdair6ef8yljgyggr4vgnptpye1yvizw6xnzc8rdoimg1086iphone13blueportrait.png" caption}
 :::
 
 :::VerticalSplitItem
@@ -94,11 +88,11 @@ item:
 :::::
 
 :::::ExpandableHeading
-### Static datasource configured *globally* on a jig
+### Static datasource configured globally on a jig
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pZ0rUZjo9pPWfByWfKXN9_skdjnmnz8jhe2zi98rf8orpbfc2v0eb20juoqcdpbhimg1087iphone13blueportrait.png"  size="82" position="center"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pZ0rUZjo9pPWfByWfKXN9_skdjnmnz8jhe2zi98rf8orpbfc2v0eb20juoqcdpbhimg1087iphone13blueportrait.png" size="82" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pZ0rUZjo9pPWfByWfKXN9_skdjnmnz8jhe2zi98rf8orpbfc2v0eb20juoqcdpbhimg1087iphone13blueportrait.png" caption}
 :::
 
 :::VerticalSplitItem
@@ -107,8 +101,6 @@ Below is an example of static data that has been configured globally along with 
 **Examples**:
 See the full example of static datasource in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx)
 See the full example of the list using this global static datasource in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-global.jigx).
-
-
 :::
 ::::
 
@@ -159,15 +151,13 @@ item:
 :::::
 
 ::::::ExpandableHeading
-### Static datasource configured *inside a component*
+### Static datasource configured inside a component
 
 You can also create static data right inside your component or as an `initialValue`, without a need to specify the datasource.
 
 :::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
 ![Dropdown with static data](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HTm0zWy8oZflxCPJEVsL4_gv7ncdv0kooclr35hxm9img1018iphone13blueportrait.png "Dropdown with static data")
-
-
 :::
 
 ::::VerticalSplitItem
@@ -216,7 +206,7 @@ children:
 ::::::
 
 ::::::ExpandableHeading
-### Static datasource configured *inside a dropdown component*
+### Static datasource configured inside a dropdown component
 
 :::::VerticalSplit{layout="left"}
 :::VerticalSplitItem

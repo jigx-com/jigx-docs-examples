@@ -1,10 +1,4 @@
----
-title: jig.calendar
-slug: hy1q-jigcalendar
-description: Learn how to implement a calendar view jig in JigxManagement with this document. Discover step-by-step instructions, useful code snippets, and configuration tips for the calendar component and data source setup. Explore the usage of SQL statements to calc
-createdAt: Wed Jun 08 2022 06:27:29 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Apr 29 2025 10:37:31 GMT+0000 (Coordinated Universal Time)
----
+# jig.calendar
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -12,7 +6,7 @@ The calendar jig displays an agenda calendar view. `jig.calendar` contains data 
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Jig Calendar Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/soEBniAbtE5Ia__YoZDrw_calendarmain.png" size="80" caption="Jig Calendar Preview"  position="center"}
+::Image[]{alt="Jig Calendar Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/soEBniAbtE5Ia__YoZDrw_calendarmain.png" size="80" caption="Jig Calendar Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/soEBniAbtE5Ia__YoZDrw_calendarmain.png"}
 :::
 ::::
 
@@ -20,28 +14,28 @@ The calendar jig displays an agenda calendar view. `jig.calendar` contains data 
 
 Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
 
-| **Core structure** |                                  |
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `from`             | Configure the starting time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;Expressions for modifying the date and time format can be found in the [Expressions - cheatsheet]().  |
-| `title`            | Provide the name of the event. If you do not want to show a title in a jig use `title: ' '` or add an expression.                          |
-| `to`               | Configure the ending time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;Expressions for modifying the date and time format can be found in the [Expressions - cheatsheet]().    |
+| `from`             | Configure the starting time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;Expressions for modifying the date and time format can be found in the [Expressions - cheatsheet](#). |
+| `title`            | Provide the name of the event. If you do not want to show a title in a jig use `title: ' '` or add an expression.                                                                                                                                                                                                                                                                                                                                   |
+| `to`               | Configure the ending time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;Expressions for modifying the date and time format can be found in the [Expressions - cheatsheet](#).   |
 
-| **Other options** |                                   |
+| **Other options** |                                                                                                                                                                                                                                                                                                                                                   |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `description`     | The general description of the event.        |
-| `icon`            | The icon will be displayed on the [widget]() of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See [Jigx icons]() for information on worknig with icons.                                             |
-| `people`          | The list of invitees/attendees for the event. Use an expression to configure the property, for example, &#xA;`people: =@ctx.current.item.attendees.emailAddress`.                                                                              |
-| `location`        | The event's location, for example, a meeting room or conference center.                                                                     |
+| `description`     | The general description of the event.                                                                                                                                                                                                                                                                                                             |
+| `icon`            | The icon will be displayed on the [widget](#) of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See [Jigx icons](#) for information on worknig with icons.                                                                                                                                              |
+| `people`          | The list of invitees/attendees for the event. Use an expression to configure the property, for example, &#xA;`people: =@ctx.current.item.attendees.emailAddress`.                                                                                                                                                                                 |
+| `location`        | The event's location, for example, a meeting room or conference center.                                                                                                                                                                                                                                                                           |
 | `tags`            | Displays a list of `tags` for the event, such as meeting, interview, or social. The `tags` array can contain the *color* and *title* for each tag. &#xA;`"=[{'title': @ctx.current.item.type, 'color': @ctx.current.item.color}]"`&#xA;or define the tag in a datasource whihc is referenced in the property.&#xA;`tags: =@ctx.current.item.tags` |
 
 Certain actions can be executed on the event; for example, when pressing on the event opens the URL of the advertised event.
 
-| **Actions**    |                                                                           |
+| **Actions**     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onButtonPress` | You can set any action in this property just like in the `onPress` property. The difference is that if only `onButtonPress` is configured, after pressing on the event, a modal window with the event's details opens. The modal contains a button for the action configured in the `onButtonPress` property. When `isHidden` is used with `when:false` , the `isHidden` property is automatically overwritten on the mobile device and set to `isHidden:true` and the button automatically hides. |
-| `onPress`       | When pressing on the event an action executes. Use IntelliSense to select an action or refer to the list of available [Actions](./../Actions.md). When the `onPress` is configured, the `onButtonPress` configuration is ignored.                                                            |
+| `onPress`       | When pressing on the event an action executes. Use IntelliSense to select an action or refer to the list of available [Actions](./../Actions.md). When the `onPress` is configured, the `onButtonPress` configuration is ignored.                                                                                                                                                                                                                                                                  |
 
-## Examples and code snippets 
+## Examples and code snippets
 
 :::hint{type="success"}
 The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples" target="_blank">GitHub,</a> and follow the instructions in [Setting up your solution](docId:1gfew7GRPvkfxon-TsymP).
@@ -53,21 +47,21 @@ In this example, we show the daily agenda, by tapping we can get the details abo
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{alt="Calendar jig events" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/leFvY-3-iDe8str7O0H6d_calendarmain.png" size="86" caption="Calendar jig events" position="center"}
+::Image[]{alt="Calendar jig events" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/leFvY-3-iDe8str7O0H6d_calendarmain.png" size="86" caption="Calendar jig events" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/leFvY-3-iDe8str7O0H6d_calendarmain.png"}
 :::
 
 :::VerticalSplitItem
-::Image[]{alt=" Event details" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SplwcoBsb4CiF3nXDBm9r_calendareventdetail.png" size="86" caption=" Event details" position="center"}
+::Image[]{alt=" Event details" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SplwcoBsb4CiF3nXDBm9r_calendareventdetail.png" size="86" caption=" Event details" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SplwcoBsb4CiF3nXDBm9r_calendareventdetail.png"}
 :::
 ::::
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{alt="Meeting details & link" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IqXVVr7I3J7naESvgjZWZ_calendareventdetail2.png" size="86" caption="Meeting details & link" position="center"}
+::Image[]{alt="Meeting details & link" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IqXVVr7I3J7naESvgjZWZ_calendareventdetail2.png" size="86" caption="Meeting details & link" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IqXVVr7I3J7naESvgjZWZ_calendareventdetail2.png"}
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Month with event markers" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g4RQkjSGj73R4dM3uJ5i8_calendarfull.PNG" size="86" caption="Month with event markers" position="center"}
+::Image[]{alt="Month with event markers" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g4RQkjSGj73R4dM3uJ5i8_calendarfull.PNG" size="86" caption="Month with event markers" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g4RQkjSGj73R4dM3uJ5i8_calendarfull.PNG"}
 :::
 ::::
 
@@ -79,7 +73,7 @@ See the full code sample for datasources for static data in [GitHub](https://git
 See the full code sample for datasources for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/calendar-data-dynamic.jigx).
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.:Comment[sample]{resolved="true" docCommentId="8ysxgrBnh1CFlCx6O3e74"} solution has the data provided for calendar-sample. You can use the calendar-sample.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/calendar-sample.csv) and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.:Comment[sample]{resolved="true" docCommentId="8ysxgrBnh1CFlCx6O3e74"} solution has the data provided for calendar-sample. You can use the calendar-sample.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/calendar-sample.csv) and upload it via the [Data](#) configuration in Jigx Management.
 :::
 
 :::CodeblockTabs
@@ -196,8 +190,6 @@ This example displays a preview after long-pressing the event in the Calendar ji
 :::hint{type="info"}
 Only [Entity](./../Preview/Entity.md) and [Web-view](./../Preview/Web-view.md) are available as child components for preview.
 :::
-
-
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -385,6 +377,6 @@ preview:
 
 ## See also
 
-- [Jigs (screens)]()
+- [Jigs (screens)](#)
 - [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-calendar)
 

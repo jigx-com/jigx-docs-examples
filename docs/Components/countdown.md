@@ -1,10 +1,4 @@
----
-title: countdown
-slug: HclW-count-do
-description: Learn how to effectively configure and utilize the countdown component in a Jig with this comprehensive document. Discover how to customize the expiration time, alignment, and visibility of labels, as well as the actions to be performed on finish or press
-createdAt: Mon Sep 25 2023 17:53:59 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Mar 04 2025 07:06:08 GMT+0000 (Coordinated Universal Time)
----
+# countdown
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -12,7 +6,7 @@ The countdown component functionality counts down from a date, date/time, and ti
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG"}
 :::
 ::::
 
@@ -20,17 +14,17 @@ The countdown component functionality counts down from a date, date/time, and ti
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                             |
+| **Core structure** |                                                                                                                                                                                                                                                                                    |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `expiresAt`        | Add a date, date/time or time when the countdown must expire/stop, either using:&#xA;- datasource, e.g. `=@ctx.datasources.events.date`&#xA;- expression, e.g. `=$fromMillis($toMillis($now()) + 50000)`&#xA;- string, e.g. `"2023-09-20 18:00"`, or `"2023-07-25T17:30:00+02:00"` |
 
-| **Other options** |                                    |
+| **Other options** |                                                                                                                                                                                                                                              |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `align`           | `center`, `left`, `right`, and `stretch`, with `center` as the default if the property is not specified in the YAML.                      |
+| `align`           | `center`, `left`, `right`, and `stretch`, with `center` as the default if the property is not specified in the YAML.                                                                                                                         |
 | `labels`          | `isVisible` - `true` or `false` with `true` as the default. Setting `false` will hide the countdown component.&#xA;`position` - The countdown labels of Days : Hours : Minutes: Seconds are shown at the `bottom` or `top` of the countdown. |
-| `size`            | Choose from `extra-large`, `large`, `medium`, `small`, with `large` being the default if the property is not specified in the YAML.       |
+| `size`            | Choose from `extra-large`, `large`, `medium`, `small`, with `large` being the default if the property is not specified in the YAML.                                                                                                          |
 
-| **Actions** |       |
+| **Actions** |                                                                                                                  |
 | ----------- | ---------------------------------------------------------------------------------------------------------------- |
 | `onPress`   | Choose from the provided list of available actions, for example, use the `go-to` action to open a different jig. |
 | `onFinish`  | Choose from the provided list of available actions. For example, `go-back` action.                               |
@@ -44,14 +38,14 @@ Some properties are common to all components, see [Common component properties](
 - Use any inputs for the countdown configuration, for example, different types of datasources, states and inputs.
 - Use the `set-state` and `reset-state` actions to set and reset the countdown.
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Countdown with inputs (static, dynamic, expression, & datasource)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG"}
 :::
 
 :::VerticalSplitItem
@@ -147,7 +141,7 @@ See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6_cd-alignl.PNG" size="80" position="center" caption="Aligning countdown" alt="Aligning countdown"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6_cd-alignl.PNG" size="80" position="center" caption="Aligning countdown" alt="Aligning countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6_cd-alignl.PNG"}
 :::
 ::::
 
@@ -200,7 +194,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp_cd-sizel.PNG" size="80" position="center" caption="Size variations" alt="Size variations"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp_cd-sizel.PNG" size="80" position="center" caption="Size variations" alt="Size variations" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp_cd-sizel.PNG"}
 :::
 
 :::VerticalSplitItem
@@ -210,8 +204,6 @@ Use the `size` property in the `component.countdown` to change the size from `ex
 See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-sizes.jigx).
 :::
 ::::
-
-
 
 :::CodeblockTabs
 count-down-sizes.jigx

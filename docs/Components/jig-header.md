@@ -1,26 +1,26 @@
----
-title: jig-header
-slug: u-1_-jig-header
-description: Learn how to use the `jig-header` component in your jigs with this comprehensive document. Find examples and code snippets for incorporating images, location information, and video players into your headers. Whether you need a small or medium-sized header
-createdAt: Thu Jan 26 2023 11:02:20 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Apr 07 2025 07:52:07 GMT+0000 (Coordinated Universal Time)
----
+# jig-header
 
 The `jig-header` component can be used in any type of jig. It serves as a container for specifying headers. It cannot be used without a component [image](./../Widgets/image.md), [location](./location.md), or [video-player](./video-player.md) inside the component.
 
 :::hint{type="info"}
-The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline.  For more details, refer to [Assets]().
+The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline.  For more details, refer to [Assets](#).
 :::
 
 ## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                         |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`         | Specifies which component will be used inside the jig-header. There are three options:<br />* [component.image](./image.md)<br />* [component.location](./location.md)<br />* [component.video player](./video-player.md)          |
-| `height`           | Specifies the height of the header.<br />* `small`<br />* `medium`                                                                           |
-| `actions`          | Choose an action from the available list, such as `go-to` to open a different jig or `open-url` to navigate to a website. The selected action appears as a link in the top right corner of the header.<br />* Set the `icon` property in the action to display the action link as an icon instead of text.<br />* Styles of actions are inherited, for example, disabling the link.<br />* You can add multiple action links in the header, but ensure they accommodate the jig title and overall screen design.<br />* To prevent the jig `title` and header action links from overlapping while scrolling, use either one text action or up to three icon actions.|
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `children`         | Specifies which component will be used inside the jig-header. There are three options:<br />* [component.image](./image.md)
+* [component.location](./location.md)
+* [component.video player](./video-player.md)                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `height`           | Specifies the height of the header.<br />* `small`
+* `medium`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `actions`          | Choose an action from the available list, such as `go-to` to open a different jig or `open-url` to navigate to a website. The selected action appears as a link in the top right corner of the header.<br />* Set the `icon` property in the action to display the action link as an icon instead of text.
+* Styles of actions are inherited, for example, disabling the link.
+* You can add multiple action links in the header, but ensure they accommodate the jig title and overall screen design.
+* To prevent the jig `title` and header action links from overlapping while scrolling, use either one text action or up to three icon actions. |
 
 :::hint{type="warning"}
 Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K.
@@ -33,11 +33,11 @@ Jigx does not recommend storing images in Dynamic Data (via any conversion), as 
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RQPQfkwE0vOo6no2yvRYW_header-image-smalliphone13blueportrait.png" size="76" position="center" caption="Header with image" alt="Header with image"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RQPQfkwE0vOo6no2yvRYW_header-image-smalliphone13blueportrait.png" size="76" position="center" caption="Header with image" alt="Header with image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RQPQfkwE0vOo6no2yvRYW_header-image-smalliphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TtPV4N7FAxx1F2vm-lvSH_header-image-mediumiphone13blueportrait.png" size="74" position="center" caption="Header with image" alt="Header with image"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TtPV4N7FAxx1F2vm-lvSH_header-image-mediumiphone13blueportrait.png" size="74" position="center" caption="Header with image" alt="Header with image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TtPV4N7FAxx1F2vm-lvSH_header-image-mediumiphone13blueportrait.png"}
 :::
 ::::
 
@@ -91,7 +91,6 @@ Refer to the [location](./location.md) component for additional location setup o
 
 **Examples**:
 See the code samples using static data in GitHub for [small](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/jig-header/static-data/jig-header-location/jig-header-location-small.jigx) and [medium](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-medium.jigx) headers.
-
 :::
 ::::
 
@@ -191,11 +190,11 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/I2ErZFzeEDrRwupEWmysV_cc-header-small.PNG" size="76" position="center" caption="Small - header with video player" alt="Header with video player"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/I2ErZFzeEDrRwupEWmysV_cc-header-small.PNG" size="76" position="center" caption="Small - header with video player" alt="Header with video player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/I2ErZFzeEDrRwupEWmysV_cc-header-small.PNG"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N468nPuSNoW9OEiZaf_EW_cc-header-medium.PNG" size="74" position="center" caption="Medium - header with video player" alt="Header with video player"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N468nPuSNoW9OEiZaf_EW_cc-header-medium.PNG" size="74" position="center" caption="Medium - header with video player" alt="Header with video player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N468nPuSNoW9OEiZaf_EW_cc-header-medium.PNG"}
 :::
 ::::
 
@@ -242,7 +241,7 @@ header:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ffdFGQ8eLAPkrZ5vRK48-20250224-072301.png" size="70" position="center" caption="Jig header with an action" alt="Jig header with an action"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ffdFGQ8eLAPkrZ5vRK48-20250224-072301.png" size="70" position="center" caption="Jig header with an action" alt="Jig header with an action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ffdFGQ8eLAPkrZ5vRK48-20250224-072301.png"}
 :::
 
 :::VerticalSplitItem
@@ -304,13 +303,13 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m2qCNX2Ka63cThTwIfJDO-20250210-134415.png" size="70" position="center" caption="Jig header with icon actions" alt="Jig header with icon actions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m2qCNX2Ka63cThTwIfJDO-20250210-134415.png" size="70" position="center" caption="Jig header with icon actions" alt="Jig header with icon actions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m2qCNX2Ka63cThTwIfJDO-20250210-134415.png"}
 :::
 
 :::VerticalSplitItem
 This example demonstrates a `component.jig-header` configured with three `open-url` actions, displayed as icons in the top right corner of the header. Styling is applied to two of the icons to ensure visibility. Make sure the actions are not obscured by the header image/video or the jig `title` when scrolling. The `open-url` actions open various Jigx websites.
 
-****
+***
 :::
 ::::
 

@@ -1,10 +1,4 @@
----
-title: jig.document
-slug: OLLv-jigdocument
-description: Learn how to use the Document Jig type effectively with this comprehensive document. Get code snippets and examples for displaying PDF and HTML documents, including static and dynamic data. Configure the Jig type, set up data sources, and discover how to 
-createdAt: Wed Jun 08 2022 06:31:19 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Apr 29 2025 10:39:16 GMT+0000 (Coordinated Universal Time)
----
+# jig.document
 
 ::::VerticalSplit{layout="right"}
 :::VerticalSplitItem
@@ -25,19 +19,19 @@ The document jig type is used to display documents connected to your solution. T
 
 Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
 
-| **Core structure** |                                                                                                               |
+| **Core structure** |                                                                                                                    |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | `title`            | Provide the name of the screen. If you do not want to show a title in a jig use `title: ' '` or add an expression. |
 | `source`           | Select from `PDF` or `HTML` content.                                                                               |
 
-| **Other options** |                                                                                                                                                                                                                        |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `description`     | The general description of the document.                                                                                                                                                                                    |
-| `badge`           | Enhance your widget with a customizable badges, for instance show the number of documents. Add the `badge` property to the jig YAML with an expression.                                                                     |
-| `icon`            | The icon will be displayed on the [widget]() of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See [Jigx icons]() for information on worknig with icons.                          |
-| `placeholders`    | Create a placeholder to show when there is no data to use yet. See <a href="https://community.jigx.com/t/tips-tricks-use-placeholders/78" target="_blank">tips and tricks -use a placeholder</a> for a placeholder example. |
+| **Other options** |                                                                                                                                                                                                                              |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `description`     | The general description of the document.                                                                                                                                                                                     |
+| `badge`           | Enhance your widget with a customizable badges, for instance show the number of documents. Add the `badge` property to the jig YAML with an expression.                                                                      |
+| `icon`            | The icon will be displayed on the [widget](#) of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See [Jigx icons](#) for information on worknig with icons.                         |
+| `placeholders`    | Create a placeholder to show when there is no data to use yet. See <a href="https://community.jigx.com/t/tips-tricks-use-placeholders/78" target="_blank">tips and tricks -use a placeholder</a>  for a placeholder example. |
 
-## Examples and code snippets 
+## Examples and code snippets
 
 :::hint{type="success"}
 The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples" target="_blank">GitHub,</a> and follow the instructions in [Setting up your solution](docId:1gfew7GRPvkfxon-TsymP).
@@ -59,7 +53,7 @@ See the full code sample using static data in [GitHub]("https://github.com/jigx-
 See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-document/dynamic-data/document-pdf-dd.jigx).
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for documents. You can use the documents.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/documents.csv) and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for documents. You can use the documents.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/documents.csv) and upload it via the [Data](#) configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -142,7 +136,7 @@ See the full code sample using static data in [GitHub](https://github.com/jigx-c
 See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-document/dynamic-data/document-html-url-dd.jigx).
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for documents. You can use the documents.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/documents.csv) and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for documents. You can use the documents.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/documents.csv) and upload it via the [Data](#) configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -286,8 +280,6 @@ When the jig gets focus, the state is reset in this example.
 :::hint{type="info"}
 This code example is **not** in the jigx.samples solution in GitHub.
 :::
-
-
 ::::
 :::::
 
@@ -339,6 +331,6 @@ tabs:
 
 ## See Also
 
-- [Jigs (screens)]()
+- [Jigs (screens)](#)
 - [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-composite)
 
