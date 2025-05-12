@@ -1,36 +1,31 @@
----
-title: card
-slug: JFrM-ca
-createdAt: Thu Jun 06 2024 13:21:20 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Mar 04 2025 06:43:54 GMT+0000 (Coordinated Universal Time)
----
+# card
 
 The card is a versatile and visually appealing UI element that encapsulates and presents information or interactive content in a structured, consistent, and user-friendly manner. It enhances the app's usability by organizing content into manageable, self-contained units that are easy to navigate and interact with. Each card typically includes a mix of text, images, and interactive elements, creating a self-contained unit of content.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LFWTucW7Hd-Gh2mU4HA29_cc-card-overview.png" size="80" position="center" caption="Cards" alt="Cards"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LFWTucW7Hd-Gh2mU4HA29_cc-card-overview.png" size="80" position="center" caption="Cards" alt="Cards" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LFWTucW7Hd-Gh2mU4HA29_cc-card-overview.png"}
 
 ## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |          |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| `children`         | Configure a component or multiple components in a card. See [Components](./../Components.md) for a list of available components.  |
-| `instanceId`       | Give the card component a unique id that can be referenced throughout the jig.                                                    |
+| **Core structure** |                                                                                                                                  |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| `children`         | Configure a component or multiple components in a card. See [Components](./../Components.md) for a list of available components. |
+| `instanceId`       | Give the card component a unique id that can be referenced throughout the jig.                                                   |
 
 | **Other options** |                                                                                                                                                            |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`           | Sets the color of the card. Choose a color from the provided [Jigx color palette](). Default color is white if the property is not specified in the YAML.  |
+| `color`           | Sets the color of the card. Choose a color from the provided [Jigx color palette](#). Default color is white if the property is not specified in the YAML. |
 | `style`           | When `isDisabled` is set to `true`, the card appears opaque, indicating that it is unavailable for selection. By default `isDisabled` is set to `false`.   |
 
-|   **Actions** |                                                                                                                  |
+| **Actions** |                                                                                                                  |
 | ----------- | ---------------------------------------------------------------------------------------------------------------- |
 | `onPress`   | Choose from the provided list of available actions, for example, use the `go-to` action to open a different jig. |
 
 ## Considerations
 
 - *Jig-level:* The card component is only available for use in a [default](<./../Jig Types/jig_default.md>) jig.
-- *Component-level: *The [carousel](./carousel.md) component has the option to use the card component within the carousel to create a visually appealing carousel.
+- *Component-level*: The [carousel](./carousel.md) component has the option to use the card component within the carousel to create a visually appealing carousel.
 
 ## Examples and code snippets
 
@@ -39,7 +34,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AGHA6ALv3_4Jlm-EYHqE4_cc-card.PNG" size="80" position="center" caption="Card containing a form" alt="Card containing a form"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AGHA6ALv3_4Jlm-EYHqE4_cc-card.PNG" size="80" position="center" caption="Card containing a form" alt="Card containing a form" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AGHA6ALv3_4Jlm-EYHqE4_cc-card.PNG"}
 :::
 
 :::VerticalSplitItem
@@ -123,7 +118,7 @@ actions:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif" size="80" position="center" caption="Carousel with card" alt="Carousel with card"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif" size="80" position="center" caption="Carousel with card" alt="Carousel with card" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif"}
 :::
 
 :::VerticalSplitItem
@@ -349,7 +344,7 @@ options:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/St6oYKOw2poUb2nO16RLi_cc-card-disabled.PNG" size="80" position="center" caption="Card with style" alt="Card with style"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/St6oYKOw2poUb2nO16RLi_cc-card-disabled.PNG" size="80" position="center" caption="Card with style" alt="Card with style" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/St6oYKOw2poUb2nO16RLi_cc-card-disabled.PNG"}
 :::
 
 :::VerticalSplitItem

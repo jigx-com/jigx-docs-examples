@@ -1,10 +1,4 @@
----
-title: jig.composite
-slug: MPHU-jigcomposite
-description: This document provides detailed information on configuring and using a composite jig, which is a combination of multiple jigs. It includes examples and code snippets for setting up a composite jig without any input and demonstrates the use of a YAML code 
-createdAt: Wed Jun 08 2022 06:31:09 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Apr 29 2025 10:38:35 GMT+0000 (Coordinated Universal Time)
----
+# jig.composite
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -12,7 +6,7 @@ The composite jig is a jig made up of several parts or elements. In this case, a
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Jig Composite Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ_xkWBnn-yCDc_composite.png" size="90" caption="Jig Composite Preview" position="center"}
+::Image[]{alt="Jig Composite Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ_xkWBnn-yCDc_composite.png" size="90" caption="Jig Composite Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ_xkWBnn-yCDc_composite.png"}
 :::
 ::::
 
@@ -24,13 +18,15 @@ Some properties are common to all jig types, see [Common jig type properties](do
 | ------------------ | ---------------------------------------------------------------------------------------------- |
 | `jigId`            | The core structure includes: `jigId` 2x or more (depends on how many jigs you are connecting). |
 
-| **Other options** |                                                                                                                                                                                              |
+| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | The icon will be displayed on the [widget]() of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See [Jigx icons]() for information on worknig with icons.                                                                                              |
+| `icon`            | The icon will be displayed on the [widget](#) of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See [Jigx icons](#) for information on worknig with icons.                                                                                                                                                                                               |
 | `inputs`          | If you are setting up a `jig.composite` where jigs rely on input to display or otherwise interact with very specific data, you'll need to use `inputs`. Here you set the data you would like to transfer to the composite jig. There are 2 options to make data available for input:<br />1) Set them in `output` inside the jig .
 2) Set them as a `global` variable by using `set-state action`. |
-| `isTitleHidden`   | The boolean value allows you to hide the title of your jig in the composite jig. Even if the jig's title is set to `true` , because the title is a mandatory property.                      |
-| `when`            | The ability to include or exclude a jig for display on a composite jig. If set to `true` the jig is included, if set to `false` the jig will not appear on the composite jig. Dynamically set this property by using expressions.                                                               |
+| `isTitleHidden`   | The boolean value allows you to hide the title of your jig in the composite jig. Even if the jig's title is set to `true` , because the title is a mandatory property.                                                                                                                                                                                                                             |
+| `when`            | The ability to include or exclude a jig for display on a composite jig. If set to `true` the jig is included, if set to `false` the jig will not appear on the composite jig. Dynamically set this property by using expressions.                                                                                                                                                                  |
+
+
 
 ## Considerations
 
@@ -92,7 +88,7 @@ actions:
 ```
 :::
 
-## Examples and code snippets 
+## Examples and code snippets
 
 :::hint{type="success"}
 The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples) and follow the instructions in [Setting up your solution](docId:1gfew7GRPvkfxon-TsymP).
@@ -115,8 +111,6 @@ See the compsite jig code example in [GitHub](https://github.com/jigx-com/jigx-s
 See the [location](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/location/static-data/location-with-address.jigx) code and[country list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/country-list-sd.jigx) code examples in GitHub.
 See the static country datasource code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/country-data-static.jigx).
 See the index.jigx code below to add the jig to the Home Hub.
-
-
 :::
 ::::
 
@@ -286,7 +280,7 @@ tabs:
 
 This example shows how a Composite jig can be used to only display certain data based on the input received.
 
-::::VerticalSplit{layout}
+::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 ![Composite jig with input](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/11o2jArG-3bPKeQT7w0pi_comiphone13blueportrait.png "Composite jig with input")
 :::
@@ -304,7 +298,7 @@ See the datasource code sample in [GitHub](https://github.com/jigx-com/jigx-samp
 See the default.jigx code snippet with the database table defined below.
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](#) configuration in Jigx Management.
 :::
 
 :::CodeblockTabs
@@ -540,6 +534,6 @@ tabs:
 
 ## See also
 
-- [Jigs (screens)]()
+- [Jigs (screens)](#)
 - [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-composite)
 

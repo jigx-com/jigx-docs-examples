@@ -1,11 +1,6 @@
----
-title: Datasource
-slug: QJn3-data
-createdAt: Wed Jan 17 2024 12:09:34 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Jan 17 2024 12:19:18 GMT+0000 (Coordinated Universal Time)
----
+# Datasource
 
-Use [Datasources]() to access and reference data surfaced in [Data Providers](<./Data Providers.md>). This section provides examples of code snippets for working with datasources.
+Use [Datasources](#) to access and reference data surfaced in [Data Providers](<./Data Providers.md>). This section provides examples of code snippets for working with datasources.
 
 | **Datasource**                   |                                                                                                                 |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------- |

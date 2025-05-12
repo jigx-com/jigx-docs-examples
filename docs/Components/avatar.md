@@ -1,10 +1,4 @@
----
-title: avatar
-slug: 6a14-avatar
-description: Learn how to use the versatile "Avatar" component to beautifully display visual identifiers like profile photos, company logos, and more. This document includes configuration options, code snippets, and examples for static and dynamic data. Discover addit
-createdAt: Mon Jun 20 2022 07:49:36 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Jul 24 2024 09:51:10 GMT+0000 (Coordinated Universal Time)
----
+# avatar
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -12,7 +6,7 @@ Using the avatar component, display a profile photo, company logo, initials, or 
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Avatar preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jzGEzQeNzQZUvB-bk3iM__avatar.png" size="64" caption="Avatar preview" position="center" }
+::Image[]{alt="Avatar preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jzGEzQeNzQZUvB-bk3iM__avatar.png" size="64" caption="Avatar preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jzGEzQeNzQZUvB-bk3iM__avatar.png"}
 :::
 ::::
 
@@ -20,17 +14,21 @@ Using the avatar component, display a profile photo, company logo, initials, or 
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                               |
+| **Core structure** |                                                                                                                                                                                                                                                                    |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `title`            | Add a title for the avatar, this is text displayed when the `uri` is empty. In the visual presentation, the `title` can be substituted by an image using the `uri` property. But the content of the text property has to be kept at least to the empty string: "") |
 
-| **Other options** |                                                                                |
+| **Other options** |                                                                                                   |
 | ----------------- | ------------------------------------------------------------------------------------------------- |
-| `align`           | By default the avatar is aligned `left` but can be changed to:<br />* `center`<br />* `left`<br />* `right` |
-| `size`            | The size of the avatar can be set to:<br />* `small`<br />* `regular`<br />* `large`                        |
+| `align`           | By default the avatar is aligned `left` but can be changed to:<br />* `center`
+* `left`
+* `right` |
+| `size`            | The size of the avatar can be set to:<br />* `small`
+* `regular`
+* `large`                        |
 | `uri`             | Source of the image to display as the avatar.                                                     |
 
-## Examples and code snippets 
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Avatar as children of jig (profile picture)
@@ -153,7 +151,7 @@ datasources:
 As in the previous example, we use the avatar component for detail. In this case, we use the initials of the user or employee. It's useful if you don't have a picture of them.
 
 **Examples:**
-See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/static-data/avatar-as-children-of-jig/avatar-initials.jigx). 
+See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/static-data/avatar-as-children-of-jig/avatar-initials.jigx).
 See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/dynamic-data/avatar-as-children-of-jig/avatar-initials-dynamic.jigx).
 
 **Datasources:**

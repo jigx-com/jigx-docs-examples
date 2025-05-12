@@ -1,9 +1,4 @@
----
-title: chat
-slug: d9Q7-chat
-createdAt: Wed Dec 20 2023 10:06:28 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Mar 05 2025 06:45:45 GMT+0000 (Coordinated Universal Time)
----
+# chat
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -11,7 +6,7 @@ Experience seamless communication on the go with our chat-message component, kee
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WqoBhXkDyLGY8so3dYBHO-20240806-111124.png" size="78" position="center" caption="Chat" alt="Chat"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WqoBhXkDyLGY8so3dYBHO-20240806-111124.png" size="78" position="center" caption="Chat" alt="Chat" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WqoBhXkDyLGY8so3dYBHO-20240806-111124.png"}
 :::
 ::::
 
@@ -19,20 +14,20 @@ Experience seamless communication on the go with our chat-message component, kee
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| ## Core Structure |                                                                                                                                  |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `instanceId`       |  Used to reference the message data in the action's expression, for example, `=@ctx.components.instanceId.state.message`.                                                                                                                                    |
-| `data`             | The array of items you want to display in the chat component.                                                                                                                                                                                                |
-| `message`          | The field property used to add the text message in. Referenced for example, `=@ctx.current.item.message`                                                                                                                                                     |
-| `sender`           | The `name` property requires the name of the person sending the message and displays at the top of the chat bubble. Expressions can be used to determine the sender, e.g., `=@ctx.current.item.senderName`                                                   |
-| `sentAt`           | Provides the date and time the message was sent at in the format defined by your datasource configuration. For example,&#xA; 2024-01-08T06:01:29.863Z. If the `sentAt` property is not configured no date and time shown in the chat bubbles.                |
-| `onSend`           | Configure the actions to execute when the send button is tapped in the chat text-editor. The action to send the message data to the database table must be included under `onSend`; usually, the `action: execute-entity` with the `create` method is used.  |
+| **Core Structure** |                                                                                                                                                                                                                                                             |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `instanceId`       | Used to reference the message data in the action's expression, for example, `=@ctx.components.instanceId.state.message`.                                                                                                                                    |
+| `data`             | The array of items you want to display in the chat component.                                                                                                                                                                                               |
+| `message`          | The field property used to add the text message in. Referenced for example, `=@ctx.current.item.message`                                                                                                                                                    |
+| `sender`           | The `name` property requires the name of the person sending the message and displays at the top of the chat bubble. Expressions can be used to determine the sender, e.g., `=@ctx.current.item.senderName`                                                  |
+| `sentAt`           | Provides the date and time the message was sent at in the format defined by your datasource configuration. For example,&#xA; 2024-01-08T06:01:29.863Z. If the `sentAt` property is not configured no date and time shown in the chat bubbles.               |
+| `onSend`           | Configure the actions to execute when the send button is tapped in the chat text-editor. The action to send the message data to the database table must be included under `onSend`; usually, the `action: execute-entity` with the `create` method is used. |
 
-| **Other options** |                               |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `isAuthor`        | Used to visually distinguish between the chat participants. When set to `true`, the chat bubble is blue, when set to `false` the bubble is set to white.                                                                                    |
-| `onPress`         | Configure an action that executes when you press on one of the chat bubbles, for example, `action.go-to`           |
-| `onRefresh`       | Use the `onRefresh` to sync new chat messages to the mobile device by swiping **up (**⬆️**)** on the screen as new messages load at the bottom of the screen. The `onRefresh` is a jig configuration and is not part of the chat component. |
+| **Other options** |                                                                                                                                                                                                                                         |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `isAuthor`        | Used to visually distinguish between the chat participants. When set to `true`, the chat bubble is blue, when set to `false` the bubble is set to white.                                                                                |
+| `onPress`         | Configure an action that executes when you press on one of the chat bubbles, for example, `action.go-to`                                                                                                                                |
+| `onRefresh`       | Use the `onRefresh` to sync new chat messages to the mobile device by swiping **up (**⬆️) on the screen as new messages load at the bottom of the screen. The `onRefresh` is a jig configuration and is not part of the chat component. |
 
 ## Considerations
 

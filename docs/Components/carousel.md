@@ -1,9 +1,4 @@
----
-title: carousel
-slug: g75_-cara
-createdAt: Mon Sep 25 2023 17:49:02 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Jun 24 2024 08:34:04 GMT+0000 (Coordinated Universal Time)
----
+# carousel
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -11,9 +6,7 @@ The carousel is an interactive component that enables you to browse through a se
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pLg81p_Qw_0sw3Cpl7fOT_cc-carousel-image.gif" size="68" position="center" caption="Carousel" alt="Carousel"}
-
-
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pLg81p_Qw_0sw3Cpl7fOT_cc-carousel-image.gif" size="68" position="center" caption="Carousel" alt="Carousel" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pLg81p_Qw_0sw3Cpl7fOT_cc-carousel-image.gif"}
 :::
 ::::
 
@@ -21,17 +14,20 @@ The carousel is an interactive component that enables you to browse through a se
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                   |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`             | The carousel requires a data source that will be used in the component to return the content, for, example, images or avatars. Any of the [Data Providers](<./../Data Providers.md>) can be referenced to return the data.                                                         |
-| `instanceId`       | The unique identifier for the carousel.                       |
-| `type`             | The following components can be added in a carousel:<br />* [image](./image.md) component can be define with `title` and `subtitle` that overlays the image.<br />* [card](./card.md) component allows you to add other components in a card layout in the carousel. For example, |
+| **Core structure** |                                                                                                                                                                                                                                                                 |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data`             | The carousel requires a data source that will be used in the component to return the content, for, example, images or avatars. Any of the [Data Providers](<./../Data Providers.md>) can be referenced to return the data.                                      |
+| `instanceId`       | The unique identifier for the carousel.                                                                                                                                                                                                                         |
+| `type`             | The following components can be added in a carousel:<br />* [image](./image.md) component can be define with `title` and `subtitle` that overlays the image.
+* [card](./card.md) component allows you to add other components in a card layout in the carousel. |
 
-| **Other options** |                                                                                                                               |
+| **Other options** |                                                                                                                                                                                                                                                                                                                                                         |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `counter`         | Set to `true` addes a counter to the top right corner of the carousel in the style similiar to 1/4 to indicate the number of images or cards in the carousel. set to `false` hides the counter. The counter and pagination can be used together or individually depending on the requirement.                                                           |
 | `isContained`     | Set to `true` places the content (type) in a container which creates a visually appealing frame around the content. Set to `false` the content fills the entire carousel.                                                                                                                                                                               |
-| `pagination`      | Pagination is shown as dots at the bottom of the carousel. The following options exist:<br />* `isContained` - created a grey container around the pagination dots improving visibility.<br />* `isHidden` - `false` hides the pagination, `true` shows the pagination.<br />* `position` - The pagination dots can be places `inside` or `outside` the carousel. |
+| `pagination`      | Pagination is shown as dots at the bottom of the carousel. The following options exist:<br />* `isContained` - created a grey container around the pagination dots improving visibility.
+* `isHidden` - `false` hides the pagination, `true` shows the pagination.
+* `position` - The pagination dots can be places `inside` or `outside` the carousel. |
 
 ## Considerations
 
@@ -40,7 +36,7 @@ Some properties are common to all components, see [Common component properties](
 - The carousel uses the same approach as the list component when working with data, making it easy to configure using the `=@ctx.current.item.value` expression.
 - Planning the layout of the carousel before you configure the component will save time, and ensure the correct component `type` is used.
 - Consider limiting the number of images used for the carousel to have maximum effect.
-- The card component is versatile, allowing you to combine multiple components into the carousel. For an example, see the [carousel with card containing avatars, expander & location](). 
+- The card component is versatile, allowing you to combine multiple components into the carousel. For an example, see the [carousel with card containing avatars, expander & location](#). 
 
 ## Examples and code snippets
 
@@ -49,7 +45,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/j-Pmuzvmaecc7tfl8Yz8q_cc-carousel-image.gif" size="80" position="center" caption="Carousel with image" alt="Carousel with image"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/j-Pmuzvmaecc7tfl8Yz8q_cc-carousel-image.gif" size="80" position="center" caption="Carousel with image" alt="Carousel with image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/j-Pmuzvmaecc7tfl8Yz8q_cc-carousel-image.gif"}
 :::
 
 :::VerticalSplitItem
@@ -153,7 +149,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif" size="80" position="center" caption="Carousel with card" alt="Carousel with card"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif" size="80" position="center" caption="Carousel with card" alt="Carousel with card" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif"}
 :::
 
 :::VerticalSplitItem
@@ -217,7 +213,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9gbNHXGLefsRDubTljt7l_cc-carousel-contained.gif" size="80" position="center" caption="Carousel contained" alt="Carousel contained"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9gbNHXGLefsRDubTljt7l_cc-carousel-contained.gif" size="80" position="center" caption="Carousel contained" alt="Carousel contained" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9gbNHXGLefsRDubTljt7l_cc-carousel-contained.gif"}
 :::
 ::::
 
@@ -290,7 +286,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lZduG0Ik22bypmuuyutye_cc-carousel-pagination.gif" size="80" position="center" caption="Carousel with pagination" alt="Carousel with pagination"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lZduG0Ik22bypmuuyutye_cc-carousel-pagination.gif" size="80" position="center" caption="Carousel with pagination" alt="Carousel with pagination" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lZduG0Ik22bypmuuyutye_cc-carousel-pagination.gif"}
 :::
 
 :::VerticalSplitItem
@@ -382,7 +378,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ypD9O_llX4-cvZGwXkM1L_cc-carousel-counter.gif" size="80" position="center" caption="Carousel with counter" alt="Carousel with counter"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ypD9O_llX4-cvZGwXkM1L_cc-carousel-counter.gif" size="80" position="center" caption="Carousel with counter" alt="Carousel with counter" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ypD9O_llX4-cvZGwXkM1L_cc-carousel-counter.gif"}
 :::
 ::::
 
@@ -542,7 +538,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/sj8QxKZPoS3jYJdhiCvS7_cc-carousel-pag-contained.gif" size="80" position="center" caption="Carousel with contained pagination" alt="Carousel with contained pagination"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/sj8QxKZPoS3jYJdhiCvS7_cc-carousel-pag-contained.gif" size="80" position="center" caption="Carousel with contained pagination" alt="Carousel with contained pagination" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/sj8QxKZPoS3jYJdhiCvS7_cc-carousel-pag-contained.gif"}
 :::
 ::::
 
@@ -632,7 +628,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X_GIlacEm0Nc0eLOwKiTt_cc-carousel-avatar.gif" size="80" position="center" caption="Carousel with avatar" alt="Carousel with avatar"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X_GIlacEm0Nc0eLOwKiTt_cc-carousel-avatar.gif" size="80" position="center" caption="Carousel with avatar" alt="Carousel with avatar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X_GIlacEm0Nc0eLOwKiTt_cc-carousel-avatar.gif"}
 :::
 ::::
 
