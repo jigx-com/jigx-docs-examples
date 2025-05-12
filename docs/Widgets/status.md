@@ -1,10 +1,4 @@
----
-title: status
-slug: K26o-status
-description: Learn how to use and configure a status widget that uses icons and colors to visually represent the status. This document showcases various configuration options such as adding titles, choosing colors, and incorporating formatted text. Get examples of usi
-createdAt: Thu Jun 09 2022 20:16:25 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Mar 10 2025 10:03:14 GMT+0000 (Coordinated Universal Time)
----
+# status
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -14,7 +8,7 @@ The status returned is based on a boolean condition.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tXAcZO-9QGzYEwDiMbZNh_img3839.PNG" size="74" position="center" caption="Status widget" alt="Status widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tXAcZO-9QGzYEwDiMbZNh_img3839.PNG" size="74" position="center" caption="Status widget" alt="Status widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tXAcZO-9QGzYEwDiMbZNh_img3839.PNG"}
 :::
 ::::
 
@@ -22,17 +16,17 @@ The status returned is based on a boolean condition.
 
 | **Core options** |                                                                                                                                                                                                                                              |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `statuses`       | Define at least one or more statuses based on conditions. First evaluated to true will be used.&#xA;The `statuses` property includes:<br />* `when` - the condition when the status should be shown<br />* `icon` - the icon that should be shown |
+| `statuses`       | Define at least one or more statuses based on conditions. First evaluated to true will be used.&#xA;The `statuses` property includes:<br />* `when` - the condition when the status should be shown
+* `icon` - the icon that should be shown |
 
-| **Other options** |                                   |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `top`             |                                                                                                                                           |
-| `bottom`          | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the bottom of the widget.       |
-| `color`           | Choose a color from the provided [color palette]() for the icon. The default color is black if the property is not specified in the YAML. |
-| `footer`          | Add text to the footer of the widget.                                                                                                     |
-| `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                                                       |
-| `placeholder`     | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                                     |
-| `top`             | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the top of the widget.          |
+| **Other options** |                                                                                                                                            |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `bottom`          | The [titles](https://docs.jigx.com/examples/titles) component will be added to the bottom of the widget.                                   |
+| `color`           | Choose a color from the provided [color palette](#) for the icon. The default color is black if the property is not specified in the YAML. |
+| `footer`          | Add text to the footer of the widget.                                                                                                      |
+| `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                                                        |
+| `placeholder`     | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                                      |
+| `top`             | The [titles](https://docs.jigx.com/examples/titles) component will be added to the top of the widget.                                      |
 
 ## Examples and code snippets
 
@@ -41,7 +35,7 @@ The status returned is based on a boolean condition.
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tnCD7-eQIE_OqJABIWIRi_statusiphone13blueportrait.png" size="74" position="center" caption="Status widget" alt="Status widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tnCD7-eQIE_OqJABIWIRi_statusiphone13blueportrait.png" size="74" position="center" caption="Status widget" alt="Status widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tnCD7-eQIE_OqJABIWIRi_statusiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -151,11 +145,10 @@ In this example the `status` widget is configured to show different `icons` and 
 
 **Examples**:
 See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x4/status-1_2x4.jigx).
-
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WTumYhYzqm5kEe-lKlCCK-20240808-084743.PNG" size="74" position="center" caption="Status widget 2x4" alt="Status widget 2x4"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WTumYhYzqm5kEe-lKlCCK-20240808-084743.PNG" size="74" position="center" caption="Status widget 2x4" alt="Status widget 2x4" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WTumYhYzqm5kEe-lKlCCK-20240808-084743.PNG"}
 :::
 ::::
 
@@ -265,7 +258,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7VYbPDMKaVncUxzZOFVTz_wd-status4x2.PNG" size="74" position="center" caption="Status Widget 4x2" alt="Status Widget 4x2"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7VYbPDMKaVncUxzZOFVTz_wd-status4x2.PNG" size="74" position="center" caption="Status Widget 4x2" alt="Status Widget 4x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7VYbPDMKaVncUxzZOFVTz_wd-status4x2.PNG"}
 :::
 
 :::VerticalSplitItem

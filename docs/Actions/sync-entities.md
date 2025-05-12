@@ -1,10 +1,4 @@
----
-title: sync-entities
-slug: u9LK-sync-entities
-description: Learn how to set up a sync-entities action in a Jig with our comprehensive guide. Discover various methods, such as action button, action list, onPress/onChange events, and onRefresh/onFocus events. Each method is accompanied by code snippets and examples
-createdAt: Thu Jun 09 2022 18:22:46 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Feb 12 2025 17:48:37 GMT+0000 (Coordinated Universal Time)
----
+# sync-entities
 
 This action can be used to sync your local database with your live database on the server. There are multiple ways to set up a `sync-entities` action within a jig:
 
@@ -15,15 +9,15 @@ This action can be used to sync your local database with your live database on t
 5. Dynamically sync multiple entities
 
 :::hint{type="warning"}
-[sync-entities]() can't be used if you using [Static Data]().
+[sync-entities](#) can't be used if you using [Static Data](#).
 :::
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 :::::ExpandableHeading
-## sync-entities in action
+### sync-entities in action
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy_Ed5LO5RY_5j_action-sync-entities.PNG" size="80" position="center" caption="Sync-entities action" alt="Sync-entities action"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy_Ed5LO5RY_5j_action-sync-entities.PNG" size="80" position="center" caption="Sync-entities action" alt="Sync-entities action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy_Ed5LO5RY_5j_action-sync-entities.PNG"}
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -53,11 +47,11 @@ actions:
 :::::
 
 :::::ExpandableHeading
-## sync-entities in the action list
+### sync-entities in the action list
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mvmPcSbReereFrlWFAo8t_syncent-actionlist.PNG" size="80" position="center" caption="Sync-entities action" alt="sync-entities action"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mvmPcSbReereFrlWFAo8t_syncent-actionlist.PNG" size="80" position="center" caption="Sync-entities action" alt="sync-entities action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mvmPcSbReereFrlWFAo8t_syncent-actionlist.PNG"}
 :::
 
 :::VerticalSplitItem
@@ -91,11 +85,11 @@ actions:
 :::::
 
 :::::ExpandableHeading
-## sync-entities in onPress/onChange event
+### sync-entities in onPress/onChange event
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-Here is the example of [sync-entity]() in onPress/onChange event in [list-item]()
+Here is the example of [sync-entity](#) in onPress/onChange event in [list-item](#)
 
 **Example:**
 
@@ -104,7 +98,7 @@ The full example of sync-entities in onPress you can find in [GitHub](https://gi
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fSEBZHTaBdKmnRfeiOWlH_syncent-onpress.PNG" size="80" position="center" caption="Sync-entities action with onPress" alt="sync-entities action with onPress"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fSEBZHTaBdKmnRfeiOWlH_syncent-onpress.PNG" size="80" position="center" caption="Sync-entities action with onPress" alt="sync-entities action with onPress" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fSEBZHTaBdKmnRfeiOWlH_syncent-onpress.PNG"}
 :::
 ::::
 
@@ -180,11 +174,11 @@ item:
 :::::
 
 :::::ExpandableHeading
-## sync-entities in onRefresh/onFocus
+### sync-entities in onRefresh/onFocus
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v-diCoJjp-AGG2UGwZn9n_syncent-inchange.PNG" size="80" position="center" caption="sync-entities action with onRefresh" alt="sync-entities action with onRefresh"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v-diCoJjp-AGG2UGwZn9n_syncent-inchange.PNG" size="80" position="center" caption="sync-entities action with onRefresh" alt="sync-entities action with onRefresh" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v-diCoJjp-AGG2UGwZn9n_syncent-inchange.PNG"}
 :::
 
 :::VerticalSplitItem
@@ -224,7 +218,7 @@ onFocus:
 :::::
 
 ::::ExpandableHeading
-## Dynamically sync multiple entities 
+### Dynamically sync multiple entities
 
 When building a solution, the number of entities to sync and the parameters for each are not always known; for example, when syncing the attachments, files, or documents for a message, there can be zero, one, or more. It is necessary to dynamically specify a list of the entities, functions, and function parameters to return from the database using an expression.
 
@@ -271,7 +265,7 @@ actions:
 
 To return all records from the input source use `$item.id`. In this example, a jig has two lists; the first list shows all the user's calendars, and the second list uses the `ids` from the first list to return all the events for all the calendars. A summary component shows a count of the number of events.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GmLSc1g6aMLAAgchgPdQK_jb-dyn-sync-cals.png" size="70" position="center" caption="Sync calendars and events" alt="Sync calendars and events"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GmLSc1g6aMLAAgchgPdQK_jb-dyn-sync-cals.png" size="70" position="center" caption="Sync calendars and events" alt="Sync calendars and events" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GmLSc1g6aMLAAgchgPdQK_jb-dyn-sync-cals.png"}
 
 :::CodeblockTabs
 full-calendar-list
@@ -419,7 +413,7 @@ useLocalCall: true
 
 To return all records for a selected calendar use `=$map(@ctx.action.parameters.selected, function($item)` in the global action. In this example, a jig has a dropdown to select the calendar and a *Show events* button syncs the entries in the selected calendar. A summary component shows a count of the number of events in the selected calendar.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-9e6Q31g_zJYZw9ARJCXw_jb-dyn-sync-cal2.png" size="78" position="center" caption="Sync events for the birthday calendar" alt="Sync events for the birthday calendar"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-9e6Q31g_zJYZw9ARJCXw_jb-dyn-sync-cal2.png" size="78" position="center" caption="Sync events for the birthday calendar" alt="Sync events for the birthday calendar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-9e6Q31g_zJYZw9ARJCXw_jb-dyn-sync-cal2.png"}
 
 :::CodeblockTabs
 my-events.jigx

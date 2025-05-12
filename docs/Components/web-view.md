@@ -1,10 +1,4 @@
----
-title: web-view
-slug: Folz-web-view
-description: Learn how to use the versatile "web-view" component to display web pages from a specific URL in your application with ease. Discover essential configuration options like "uri", "isTrackingTransparencyRequired", "height", and "content". With the "isScrolla
-createdAt: Thu Jun 09 2022 19:58:29 GMT+0000 (Coordinated Universal Time)
-updatedAt: Thu Apr 24 2025 06:27:54 GMT+0000 (Coordinated Universal Time)
----
+# web-view
 
 This component displays a webpage from a specified URL, content from a datasource, or custom HTML.
 
@@ -12,20 +6,20 @@ This component displays a webpage from a specified URL, content from a datasourc
 You can also use the [jig.document](<./../Jig Types/jig_document.md>) type to display web pages in full-screen mode or pass messages from your HTML content via JavaScript to the Jigx App.
 :::
 
-## ****Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                           |
+| **Core structure** |                                                                 |
 | ------------------ | --------------------------------------------------------------- |
 | `uri`              | The source to be displayed in the web-view, for example, a URL. |
 
-| **Other options**                |                                                    |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `content`                        | HTML to render in the web-view.                               |
-| `height`                         | The height of the web-view.                                  |
-| `isEditable`                     | A very basic implementation, if set to `true`, the web-view `content` becomes editable. This works only with `content`, not with a `uri`. The `isEditable` property is only available when using the web-view in a [jig.fullscreen](<./../Jig Types/jig_fullscreen.md>).  |
-| `isTrackingTransparencyRequired` | If set to `true` tracking transparency permission modal is shown before opening the URL. The default setting is `true`.           |
+| **Other options**                |                                                                                                                                                                                                                                                                          |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `content`                        | HTML to render in the web-view.                                                                                                                                                                                                                                          |
+| `height`                         | The height of the web-view.                                                                                                                                                                                                                                              |
+| `isEditable`                     | A very basic implementation, if set to `true`, the web-view `content` becomes editable. This works only with `content`, not with a `uri`. The `isEditable` property is only available when using the web-view in a [jig.fullscreen](<./../Jig Types/jig_fullscreen.md>). |
+| `isTrackingTransparencyRequired` | If set to `true` tracking transparency permission modal is shown before opening the URL. The default setting is `true`.                                                                                                                                                  |
 
 ## Consideration
 
@@ -38,7 +32,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE_SLn_img9582iphone13blueportrait.png" size="80" position="center" caption="Web-view with URL " alt="Web-view with URL "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE_SLn_img9582iphone13blueportrait.png" size="80" position="center" caption="Web-view with URL " alt="Web-view with URL " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE_SLn_img9582iphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -120,7 +114,7 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv_img9581iphone13blueportrait.png" size="80" position="center" caption="Web-view with HTML content" alt="Web-view with HTML content"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv_img9581iphone13blueportrait.png" size="80" position="center" caption="Web-view with HTML content" alt="Web-view with HTML content" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv_img9581iphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -161,7 +155,7 @@ In this example, the web-view component is used to make notes on a job. It is co
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Q9G5hA0487h_W4-I4mfAZ-20250422-104224.gif" size="66" position="center" caption="Editable web-view" alt="Editable web-view"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Q9G5hA0487h_W4-I4mfAZ-20250422-104224.gif" size="66" position="center" caption="Editable web-view" alt="Editable web-view" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Q9G5hA0487h_W4-I4mfAZ-20250422-104224.gif"}
 :::
 ::::
 

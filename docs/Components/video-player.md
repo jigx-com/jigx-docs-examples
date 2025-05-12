@@ -1,10 +1,4 @@
----
-title: video-player
-slug: H7Bo-video-player
-description: Learn how to use the video player component in [story-group](docId:Keky7LpKMoOsAfpPFB3a0) and headers, or as a component in a [jig.default](docId:rTomyJI3UOXIqXDULTZ3O). Explore its configuration options such as URL, title, subtitle, autoplay, loop, and r
-createdAt: Thu Jun 09 2022 19:58:32 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Mar 04 2025 10:26:05 GMT+0000 (Coordinated Universal Time)
----
+# video-player
 
 This component is used to play a video in [headers](./jig-header.md), or as components in a [jig.default](<./../Jig Types/jig_default.md>).
 
@@ -12,24 +6,29 @@ This component is used to play a video in [headers](./jig-header.md), or as comp
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                                                        |
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `URL`              | Specify the URL for the video. The URL format can be:<br />* A direct URL, for example, [https://player.vimeo.com/video/76979871](https://player.vimeo.com/video/76979871)<br />* An embeded URL, for example,&#xA;`<iframe src="https://player.vimeo.com/video/76979871?quality=720p"></iframe>`<br />* A URL referenced in a datasource, for example, &#xA;`url: =@ctx.datasources.video-player-dynamic.uri` |
+| `URL`              | Specify the URL for the video. The URL format can be:<br />* A direct URL, for example, [https://player.vimeo.com/video/76979871](https://player.vimeo.com/video/76979871)
+* An embeded URL, for example,&#xA;`<iframe src="https://player.vimeo.com/video/76979871?quality=720p"></iframe>`
+* A URL referenced in a datasource, for example, &#xA;`url: =@ctx.datasources.video-player-dynamic.uri` |
 
-| **Other options** |                        |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `autoplay`        | Set to `true` will automatically start playing the video. Set to `false` requires you to press the play button. Default setting is `false`.                                                                                                       |
-| `loop`            |  For continuous looping of the video set the property to `true`. Default setting is `false`.                                   |
-| `ratio`           | There are 2 options:<br />* 16:9<br />* 4:3                                               |
-| `title`           |  The title of the video.&#xA;- With a `16:9` ratio, the text overlays at the bottom left of the video. &#xA;- With a `4:3` ratio the text displays under the video.&#xA;`Title` and `subtitle` must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed.    |
-| `subtitle`        | The subtitle of the video. &#xA;- With a `16:9` ratio, the text overlays at the bottom left of the video. &#xA;- With a `4:3` ratio the text displays under the video.&#xA;`Title` and `subtitle` must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed. |
+| **Other options** |                                                                                                                                                                                                                                                                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `autoplay`        | Set to `true` will automatically start playing the video. Set to `false` requires you to press the play button. Default setting is `false`.                                                                                                                                                                                                 |
+| `loop`            | For continuous looping of the video set the property to `true`. Default setting is `false`.                                                                                                                                                                                                                                                 |
+| `ratio`           | There are 2 options:<br />* 16:9
+* 4:3                                                                                                                                                                                                                                                                                                      |
+| `title`           | The title of the video.<br />* With a `16:9` ratio, the text overlays at the bottom left of the video.&#x20;
+* With a `4:3` ratio the text displays under the video.&#xA;`Title` and `subtitle` must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed.     |
+| `subtitle`        | The subtitle of the video. <br />* With a `16:9` ratio, the text overlays at the bottom left of the video.&#x20;
+* With a `4:3` ratio the text displays under the video.&#xA;`Title` and `subtitle` must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed. |
 
 ## Considerations
 
 - We recommend using a paid Vimeo subscription which gives you access to the mp4 link that allows the byline and other attributes to be hidden. You require a paid Vimeo membership to obtain the mp4 Vimeo link. Follow the steps in [Vimeo direct links to video files](https://help.vimeo.com/hc/en-us/articles/12426150952593-Direct-links-to-video-files) to copy the mp4 link.
 - For Vimeo videos, set up your OAuth token once in the Vimeo app and then use it for all videos. See the following resources on creating tokens:
   1. [How-do-I-create-an-API-app](https://help.vimeo.com/hc/en-us/articles/12427832381457-How-do-I-create-an-API-app)
-  2. [How-do-I-generate-a-personal-access-token](https://help.vimeo.com/hc/en-us/articles/12427789081745-How-do-I-generate-a-personal-access-token#:~:text=Go%20to%20your%20Apps%20page,metadata%20public%20on%20vimeo.com.)
+  2. [How-do-I-generate-a-personal-access-token](https://help.vimeo.com/hc/en-us/articles/12427789081745-How-do-I-generate-a-personal-access-token#:~\:text=Go%20to%20your%20Apps%20page,metadata%20public%20on%20vimeo.com.)
   3. [How-can-I-test-the-API-on-the-Developer-Site](https://help.vimeo.com/hc/en-us/articles/12427789133201-How-can-I-test-the-API-on-the-Developer-Site).
 - When configuring video settings for Vimeo and YouTube videos, preferably use the settings within the respective apps first before setting URL parameters, this ensure videos display as expected in the Jigx App.
 
@@ -40,7 +39,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-kpulDNlHd1-TlkW_6Hc0_cc-videoinjig.PNG" size="80" position="center" caption="video-player" alt="video-player"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-kpulDNlHd1-TlkW_6Hc0_cc-videoinjig.PNG" size="80" position="center" caption="video-player" alt="video-player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-kpulDNlHd1-TlkW_6Hc0_cc-videoinjig.PNG"}
 :::
 
 :::VerticalSplitItem
@@ -110,7 +109,7 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/syc3quPN1_3GaWZtNVxPY_cc-videoinheader.PNG" size="80" position="center" caption="video - player" alt="video - player"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/syc3quPN1_3GaWZtNVxPY_cc-videoinheader.PNG" size="80" position="center" caption="video - player" alt="video - player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/syc3quPN1_3GaWZtNVxPY_cc-videoinheader.PNG"}
 :::
 
 :::VerticalSplitItem

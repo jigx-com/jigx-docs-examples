@@ -1,9 +1,4 @@
----
-title: generate-file
-slug: YnFY-g
-createdAt: Wed Feb 26 2025 09:42:10 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Mar 19 2025 09:57:28 GMT+0000 (Coordinated Universal Time)
----
+# generate-file
 
 This action generates files such as PDFs, CSVs, or text files. It accepts content to be written to the file, along with an optional encoding parameter. Once generated, the file's URI is returned and included in the action instance output.
 
@@ -11,24 +6,26 @@ This action generates files such as PDFs, CSVs, or text files. It accepts conten
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-|**Core structure** |                                                                                              |
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `content`          | The content to be included in the file. You can use datasources, expressions, or text.   |
+| `content`          | The content to be included in the file. You can use datasources, expressions, or text.                                                                                                                                                                                                                                                                              |
 | `fileName`         | Give the file a name, this name is used as the local file name, and is referenced as part of the uri, which can be accessed via the action's instance output (`=@ctx.actions.generateFile.outputs.uri`). The action output uri is only available in the sequential `action-list`.&#xA;The file extension must be included in the `fileName`, e.g., Application.txt. |
-| `instanceId`       | Provide a unique identifier for the action, which provides access to the action's state.    |
-| `title`            | Provide the action button with a title, for example, Create Application.    |
+| `instanceId`       | Provide a unique identifier for the action, which provides access to the action's state.                                                                                                                                                                                                                                                                            |
+| `title`            | Provide the action button with a title, for example, Create Application.                                                                                                                                                                                                                                                                                            |
 
-| **Other options** |                                                                                                      |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `encoding`        | The `encoding` parameter specifies how an already encoded file should be interpreted when it is read. It does not encode the file itself but rather determines how the provided file content is decoded.<br />Accepted encoding options:<br />* `utf8` - default<br />* `ascii`<br />* `base64`<br />All three encoding types are supported and will return errors if the provided file content is incompatible with the selected encoding.<br />If a plain text string (e.g., "Hello World") is supplied with base64 encoding, the file will appear empty because it is not a valid base64-encoded string.<br />When a valid base64 string (e.g., "SGVsbG8sIFdvcmx" for "Hello World") is provided, it will be decoded correctly, resulting in a readable file with the expected content.<br />After reading the file, [conversion]() can be configured if needed. |
+| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `encoding`        | The `encoding` parameter specifies how an already encoded file should be interpreted when it is read. It does not encode the file itself but rather determines how the provided file content is decoded.&#xA;Accepted encoding options:<br />* `utf8` - default
+* `ascii`
+* `base64`<br />All three encoding types are supported and will return errors if the provided file content is incompatible with the selected encoding.&#xA;If a plain text string (e.g., "Hello World") is supplied with base64 encoding, the file will appear empty because it is not a valid base64-encoded string.&#xA;When a valid base64 string (e.g., "SGVsbG8sIFdvcmx" for "Hello World") is provided, it will be decoded correctly, resulting in a readable file with the expected content.&#xA;After reading the file, [conversion](#) can be configured if needed. |
 
 ## Considerations
 
 - You can reference the local file using the action's output uri in other actions or components, `=@ctx.actions.generateFile.outputs.uri`. For example, generate the file then [share](./share.md) the file. The `outputs` is only supported in a sequential `action-list`, meaning within the context of that action. To use the `outputs` in components, either use the saved value or persist it to state.
-- Depending on where you save and use the saved file, you might need to use [conversions]().
+- Depending on where you save and use the saved file, you might need to use [conversions](#).
 - The file extension must be included in the `fileName`, e.g., FormA.docx.
 
-## Examples and code snippets 
+## Examples and code snippets
 
 ### Generate and share the file
 

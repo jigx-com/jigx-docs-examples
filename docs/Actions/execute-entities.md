@@ -1,15 +1,9 @@
----
-title: execute-entities
-slug: 04W_-execute-entities
-description: Learn how to use `execute-entities` to efficiently modify, create, and delete multiple rows in a table within a database. This comprehensive document includes code snippets and examples showing the application of `execute-entities` in various contexts, su
-createdAt: Thu Jun 09 2022 18:22:56 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Feb 12 2025 17:44:49 GMT+0000 (Coordinated Universal Time)
----
+# execute-entities
 
 `Execute-entities` is used to modify, create, and delete **multiple rows** in a specific table in a database.
 
 :::hint{type="warning"}
-Execute-entities can't be used if you're using [Static Data]().
+Execute-entities can't be used if you're using [Static Data](#).
 :::
 
 ## Configuration options
@@ -65,16 +59,16 @@ actions:
 
 ## Offline remote data handling
 
-Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling]() explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities, and provides examples and code samples.
+Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](#) explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities, and provides examples and code samples.
 
-## Examples and code snippets ****
+## Examples and code snippets&#x20;
 
 :::::ExpandableHeading
-## Execute-entities in action
+### Execute-entities in action
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZPfcvY8IXq38rfPeeZNGQ_action-exec-entitiesaction.PNG" size="80" position="center" caption="Execute entities" alt="Execute entities"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZPfcvY8IXq38rfPeeZNGQ_action-exec-entitiesaction.PNG" size="80" position="center" caption="Execute entities" alt="Execute entities" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZPfcvY8IXq38rfPeeZNGQ_action-exec-entitiesaction.PNG"}
 :::
 
 :::VerticalSplitItem
@@ -103,7 +97,7 @@ actions:
 :::::
 
 ::::ExpandableHeading
-## Execute-entities in action list
+### Execute-entities in action list
 
 **Example:**
 See the full example of execute-entities in an action list in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-actionlist.jigx).
@@ -145,11 +139,11 @@ actions:
 ::::
 
 ::::ExpandableHeading
-## Execute-entities in onPress/onChange event
+### Execute-entities in onPress/onChange event
 
 Here is the example of execute-entities in onPress/onChange event in [list-item](./../Components/list/list-item.md).
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0N1UFXpdG5QljwfLgPb4P_action-eentitiespress.PNG" size="80" position="center" caption="Execute-entities" alt="Execute-entities"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0N1UFXpdG5QljwfLgPb4P_action-eentitiespress.PNG" size="80" position="center" caption="Execute-entities" alt="Execute-entities" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0N1UFXpdG5QljwfLgPb4P_action-eentitiespress.PNG"}
 
 **Example:**
 
@@ -188,9 +182,9 @@ onChange:
 ::::
 
 ::::ExpandableHeading
-## Execute-entities in onRefresh/onFocus
+### Execute-entities in onRefresh/onFocus
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S3C6VXWWnlIVhWPXbXlXh_actioneenitiesonfocus.PNG" size="80" position="center" caption="Execute-entites" alt="Execute-entites"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S3C6VXWWnlIVhWPXbXlXh_actioneenitiesonfocus.PNG" size="80" position="center" caption="Execute-entites" alt="Execute-entites" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S3C6VXWWnlIVhWPXbXlXh_actioneenitiesonfocus.PNG"}
 
 **Example:**
 
@@ -225,7 +219,7 @@ onFocus:
 ::::
 
 ::::ExpandableHeading
-## Deleting multiple data records using execute-entities
+### Deleting multiple data records using execute-entities
 
 To delete multiple data records in a Dynamic data table use the execute entities action with an expression as shown below.
 

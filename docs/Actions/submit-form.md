@@ -1,12 +1,6 @@
----
-title: submit-form
-slug: CoVT-submit-form
-description: Learn how to effectively use the "submit-form" action in a default jig with a form component to effortlessly save crucial data. This comprehensive document outlines the indispensable information required for this action, including form ID, provider, entit
-createdAt: Wed Jun 29 2022 14:06:21 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Jul 24 2024 10:04:03 GMT+0000 (Coordinated Universal Time)
----
+# submit-form
 
-The action can be used on a form to save data into any of the [data](https://docs.jigx.com/aI2F-data) types (check out [Forms]() to learn more about forms). `submit-form` has to be used on a <a href="https://docs.jigx.com/examples/jigdefault" target="_blank">default jig</a> with the [form](./../Components/form.md) component. A typical use case of submit-form is saving or updating the records in a table.
+The action can be used on a form to save data into any of the [data](https://docs.jigx.com/aI2F-data) types (check out [Forms](#) to learn more about forms). `submit-form` has to be used on a <a href="https://docs.jigx.com/examples/jigdefault" target="_blank">default jig</a> with the [form](./../Components/form.md) component. A typical use case of submit-form is saving or updating the records in a table.
 
 The `submit-form` action can be set up as a primary action on default jig with a form component
 
@@ -17,9 +11,9 @@ The `submit-form` action can be set up as a primary action on default jig with a
 
 ## Offline remote data handling
 
-Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling]() explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities and provides examples and code samples.
+Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](#) explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities and provides examples and code samples.
 
-## Examples and code snippets ****
+## Examples and code snippets&#x20;
 
 ::::ExpandableHeading
 ### submit-form example

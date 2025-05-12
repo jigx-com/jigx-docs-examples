@@ -1,10 +1,4 @@
----
-title: avatar
-slug: I4a9-avatar
-description: Learn how to use avatars as visual identifiers in this comprehensive document. See how avatars can be customized with additional text or a description, and combined with other widgets. Get examples and code snippets for implementing avatars in various sce
-createdAt: Thu Jun 09 2022 11:46:32 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Mar 10 2025 09:11:52 GMT+0000 (Coordinated Universal Time)
----
+# avatar
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -12,24 +6,24 @@ The avatar widget can be used as a unique visual identifier, for example, to dis
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dfGetxkAlt3Vcv55GBnnm_wd-avatar.PNG" size="70" position="center" caption="Avatar widgets" alt="Avatar widgets"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dfGetxkAlt3Vcv55GBnnm_wd-avatar.PNG" size="70" position="center" caption="Avatar widgets" alt="Avatar widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dfGetxkAlt3Vcv55GBnnm_wd-avatar.PNG"}
 :::
 ::::
 
 ## Configuration options
 
-| **Core structure** |                                                                                     |
+| **Core structure** |                                                                                          |
 | ------------------ | ---------------------------------------------------------------------------------------- |
 | `text`             | Display text content on the widget surface when the URI is empty, for example, initials. |
 
-| **Other options** |                                                                                                                                            |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `bottom`          | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the bottom of the widget.                  |
-| `footer`          | Add text to the footer of the widget.                                                                                                                |
-| `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                                                                  |
-| `placeholders`    | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                                                |
-| `top`             | The <a href="https://docs.jigx.com/examples/titles" target="_blank">titles</a> component will be added to the top of the widget.                     |
-| `uri`             | Provide the `uri` for the image. The following can be used: &#xA;- https//: *imagesource*&#xA;- image from a datasource referenced in an expression  |
+| **Other options** |                                                                                                                                                     |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `bottom`          | The [titles](https://docs.jigx.com/examples/titles) component will be added to the bottom of the widget.                                            |
+| `footer`          | Add text to the footer of the widget.                                                                                                               |
+| `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                                                                 |
+| `placeholders`    | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                                               |
+| `top`             | The [titles](https://docs.jigx.com/examples/titles) component will be added to the top of the widget.                                               |
+| `uri`             | Provide the `uri` for the image. The following can be used: &#xA;- https//: *imagesource*&#xA;- image from a datasource referenced in an expression |
 
 ## Examples and code snippets
 
@@ -38,7 +32,7 @@ The avatar widget can be used as a unique visual identifier, for example, to dis
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2zMUlETjxsJBNeE0fHc0e_avatariphone13blueportrait.png" size="80" position="center" caption="Avatar widget" alt="Avatar widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2zMUlETjxsJBNeE0fHc0e_avatariphone13blueportrait.png" size="80" position="center" caption="Avatar widget" alt="Avatar widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2zMUlETjxsJBNeE0fHc0e_avatariphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -116,11 +110,10 @@ This is example shows the avatar widget using the `component.title` to add a nam
 
 **Examples**:
 See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/avatar-2_2x2.jigx).
-
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_U1nDQMrehHQwSgcfmuRF_wd-avatartitle.PNG" size="74" position="center" caption="Avatar widget with title" alt="Avatar widget with title"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_U1nDQMrehHQwSgcfmuRF_wd-avatartitle.PNG" size="74" position="center" caption="Avatar widget with title" alt="Avatar widget with title" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_U1nDQMrehHQwSgcfmuRF_wd-avatartitle.PNG"}
 :::
 ::::
 
@@ -166,7 +159,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQMj-dwf5_KkhMH4AMvys_avatargroupiphone13blueportrait.png" size="80" position="center" caption="Avatar in a group widget" alt="Avatar in a group widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQMj-dwf5_KkhMH4AMvys_avatargroupiphone13blueportrait.png" size="80" position="center" caption="Avatar in a group widget" alt="Avatar in a group widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQMj-dwf5_KkhMH4AMvys_avatargroupiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -264,7 +257,7 @@ See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/bl
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-52t4bV7-5EmSZicDP_BNb-20240808-080947.PNG" size="74" position="center" caption="Avatar widget in group widget" alt="Avatar widget in group widget"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-52t4bV7-5EmSZicDP_BNb-20240808-080947.PNG" size="74" position="center" caption="Avatar widget in group widget" alt="Avatar widget in group widget" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-52t4bV7-5EmSZicDP_BNb-20240808-080947.PNG"}
 :::
 ::::
 
