@@ -1,10 +1,4 @@
----
-title: form
-slug: dIgx-form
-description: Learn how to enhance data input and collection with a comprehensive component comprising 11 versatile components. Avatars, text, media, and more can be effortlessly incorporated to create, update, and delete records in your database. Access valuable examp
-createdAt: Mon Jun 20 2022 09:11:02 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Mar 31 2025 09:41:38 GMT+0000 (Coordinated Universal Time)
----
+# form
 
 Using forms in mobile apps enables users to effortlessly input and submit information, enhancing interaction and user engagement.
 
@@ -28,7 +22,7 @@ These extra components allow for the easy input and collection of data. Using fo
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Form Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CmFxqLjk6bGCPvquRfLsB_form.png" size="76" caption="Form Preview" position="center" }
+::Image[]{alt="Form Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CmFxqLjk6bGCPvquRfLsB_form.png" size="76" caption="Form Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CmFxqLjk6bGCPvquRfLsB_form.png"}
 :::
 ::::
 
@@ -36,15 +30,15 @@ These extra components allow for the easy input and collection of data. Using fo
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                            |
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `children`         | Define the content of the form. The following components can be used in the form:&#xA;- [avatar-field](./form/avatar-field.md)&#xA;- [choice-field](./form/choice-field.md) &#xA;- [checkbox](./form/checkbox.md)&#xA;- [date-picker](./form/date-picker.md)&#xA;- [dropdown](./form/dropdown.md)&#xA;- [email-field](./form/email-field.md)&#xA;- [field-row](./entity/field-row.md)&#xA;- [media-field](./form/media-field.md)&#xA;- [number-field](./form/number-field.md)&#xA;- [section](./entity/section.md)&#xA;- [signature-field](./form/signature-field.md)&#xA;- [text-field](./form/text-field.md) |
-| `instanceId`       | The unique identifier for the form.                         |
+| `instanceId`       | The unique identifier for the form.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
-| **Other options**              |    |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `isDiscardChangesAlertEnabled` | When set to `true` the modal window preventing accidental deletion of your data without saving will pop up. &#xA;     |
-| `initialValues`                | Specify the data to be used as `initialValues` for fields in the form. Using the `reset-state` action with `initialValues` does not clear the form, it resets the form back to it's `initialValue`. &#xA;***Tip***: For `initialValues` on a [form]() to function&#xA; `isDocument: true` in the datasource, this way you don't have to set it up in the individual components. It is set up in one place and the form will match the components to the column names of the datasource. See the example below for Form with initialValue. |
+| **Other options**              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `isDiscardChangesAlertEnabled` | When set to `true` the modal window preventing accidental deletion of your data without saving will pop up. &#xA;                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `initialValues`                | Specify the data to be used as `initialValues` for fields in the form. Using the `reset-state` action with `initialValues` does not clear the form, it resets the form back to it's `initialValue`. &#xA;***Tip***: For `initialValues` on a [form](#) to function&#xA; `isDocument: true` in the datasource, this way you don't have to set it up in the individual components. It is set up in one place and the form will match the components to the column names of the datasource. See the example below for Form with initialValue. |
 
 | **State Configuration**  | **Key**                                   | **Notes**                                                         |
 | ------------------------ | ----------------------------------------- | ----------------------------------------------------------------- |
@@ -189,8 +183,6 @@ datasources:
         FROM [default/form] WHERE '$.category' = "update-form"
 ```
 :::
-
-
 :::::
 
 :::::ExpandableHeading
@@ -273,7 +265,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-In this example, you tap on a contact in the contact-list and the new-contact form opens with the contact's details loaded. For `initialValues` on a [form]() to function the `isDocument: true` in the datasource is set, this way you don't have to set it up in the individual components. It is set up in one place under `InitialValue` and the form will match the components to the column names of the datasource.
+In this example, you tap on a contact in the contact-list and the new-contact form opens with the contact's details loaded. For `initialValues` on a [form](#) to function the `isDocument: true` in the datasource is set, this way you don't have to set it up in the individual components. It is set up in one place under `InitialValue` and the form will match the components to the column names of the datasource.
 :::
 
 :::VerticalSplitItem
