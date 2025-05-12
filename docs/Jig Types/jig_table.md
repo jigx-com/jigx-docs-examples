@@ -208,6 +208,12 @@ columns:
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 This table example displays a week's shifts per technician using a `jig.table` with Dynamic Data. The table is set up with a colored `header` and `footer`, and sorting is configured in descending order on the Technician Name column.
+:::
+
+:::VerticalSplitItem
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-1MvDKuZ881LLxe7MJc2Oo-20250414-095314.png" size="66" position="center" caption="Table with colored header & footer" alt="Table with colored header & footer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-1MvDKuZ881LLxe7MJc2Oo-20250414-095314.png"}
+:::
+::::
 
 **Note:** To add sorting to a table the jig.table must be configured with the following:
 
@@ -222,14 +228,10 @@ This table example displays a week's shifts per technician using a `jig.table` w
      })
    ```
 3. The `sort` property configured at the root level to configure descending or ascending.
-:::
-
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-1MvDKuZ881LLxe7MJc2Oo-20250414-095314.png" size="66" position="center" caption="Table with colored header & footer" alt="Table with colored header & footer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-1MvDKuZ881LLxe7MJc2Oo-20250414-095314.png"}
-:::
-::::
 
 :::CodeblockTabs
+jig-header-footer-sorting
+
 ```yaml
 title: Weekly Technican Roster
 type: jig.table
@@ -281,6 +283,8 @@ columns:
   - id: Thursday 
   - id: Friday   
 ```
+
+datasource
 
 ```yaml
 datasources:
