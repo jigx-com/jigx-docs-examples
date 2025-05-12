@@ -1,10 +1,4 @@
----
-title: Jigx Variables
-slug: y99t-organ
-description: Learn about the variables available in expressions for manipulating data in a JigxApp. This comprehensive document covers organization, system, user, and solution variables, including configuration options and helpful examples. Explore code snippets and a
-createdAt: Thu Jul 27 2023 13:17:38 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Mar 18 2025 18:38:17 GMT+0000 (Coordinated Universal Time)
----
+# Jigx Variables
 
 Jigx has a set of variables that can be used in expressions to manipulate data specific to a  Jigx App, for example, determining the logged-in user, or the Jigx organization and solution.
 
@@ -18,15 +12,15 @@ The `organization` variable is used to get information about the actual organiza
 | ---------- | ----------------------- |
 | id         | `=@ctx.organization.id` |
 
-## Examples and code snippets 
+## Examples and code snippets
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/l9Evc2zPxdR6ZYdCJIOcm_img7983iphone13blueportrait.png" size="92" position="flex-end" caption="Organization expression" alt="Organization expression"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/l9Evc2zPxdR6ZYdCJIOcm_img7983iphone13blueportrait.png" size="92" position="flex-end" caption="Organization expression" alt="Organization expression" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/l9Evc2zPxdR6ZYdCJIOcm_img7983iphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
-This example returns the organization's `id` . Each organization configured in [Organization Settings]() in Jigx Managementand will have a unique id.
+This example returns the organization's `id` . Each organization configured in [Organization Settings](#) in Jigx Managementand will have a unique id.
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/organization.jigx).
 
 ```yaml
@@ -45,25 +39,29 @@ children:
 # System
 
 The system variable in an expression is used to get information about devices, for example, you can find information about the internet connection of the device, the language preference, the device's timezone and location details. System expressions are configured by `=@ctx.system.` followed by the specific variable name.
+
 ## Configuration
 
 The supported variables for the system variable are:
 
-| **Variable**             | **Expression**                                                                                                                                               | **Results**         |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| appVersion               | `=@ctx.system.appVersion`                           | This variable returns the current version of the installed app, which is useful for troubleshooting, crash tracing, and debugging issues.&#xA;E.g. 1.110.7                                                                |
-| deviceType               | `=@ctx.system.deviceType`                               | The variable returns the current user's device type, such as tablet or handset.                                      |
-| geocodes                 | `=@ctx.system.geocodes`                                  |                                                                                                                        |
-| isOffline                | `=@ctx.system.isOffline`                                      | Boolean           |
-| isOnline                 | `=@ctx.system.isOnline`                                        | Boolean             |
-| isPortrait               | `=@ctx.system.isPortrait`                                       | The variable is set with a boolean and is used to configure the behavior of components in either portrait or landscape mode.                                                                                               |
-| locale                   | `=@ctx.system.locale`                                        |                                                                                                                       |
-| location Permissions     | `=@ctx.system.locationPermisions`                             | `Status` can be:<br />* `granted` : granted: true<br />* `undetermined` : granted: false<br />* `denied`: granted: false<br />`=@ctx.system.locationPermissions.foreground.status`<br />`isGranted` is determined by the device's location settings for the Jigx app: <br />* Always (`isGranted: true`)<br />* While using the app (`isGranted: true`)<br />* Never (`isGranted: false`)<br />* Ask Next time or when I share (`isGranted: false`) |
-| timezone                 | `=@ctx.system.timezone.offset`                               | Get the information about the device's timezone, it can be:&#xA;-`name`: e.g. Europe/Prague&#xA;-`offset`: e.g. +200         |
-| geolocation              | **Accuracy: &#xA;**`=@ctx.system.geolocation.coords.accuracy`**&#xA;Altitude:&#xA;**`=@ctx.system.geolocation.coords.altitude`&#xA;**Altitude Accuracy:** `=@ctx.system.geolocation.coords.altitudeAccuracy`&#xA;**Location - Heading:** `=@ctx.system.geolocation.coords.heading`&#xA;**Location - Latitude:&#xA;**`=@ctx.system.geolocation.coords.latitude`&#xA;**Location - Longitude:**&#xA;`=@ctx.system.geolocation.coords.longitude`&#xA;**Location - Speed:&#xA;**`=@ctx.system.geolocation.coords.speed`&#xA;**Location - Timestamp:&#xA;**`=@ctx.system.geolocation.timestamp`&#xA;**Location - Entire array (All details):**&#xA;`=$string(@ctx.system.geolocation)` |                     |
-| isLocationSharingEnabled | `=@ctx.system.isLocationSharingEnabled`                         | Boolean             |
-| solution                 | `=@ctx.solution.id`                                             | XXXXXXXX-XXX-XXXX-XXXX-XXXXXXXXXXXX                                                                                        |
-| user                     | `=@ctx.user.email`&#xA;or&#xA;`=@ctx.user.id`                  | username\@jigx.com&#xA;or&#xA;XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX                                                      |
+| **Variable**             | **Expression**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **Results**                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| appVersion               | `=@ctx.system.appVersion`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | This variable returns the current version of the installed app, which is useful for troubleshooting, crash tracing, and debugging issues.&#xA;E.g. 1.110.7                                                                                                                                                                                                                                                                          |
+| deviceType               | `=@ctx.system.deviceType`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | The variable returns the current user's device type, such as tablet or handset.                                                                                                                                                                                                                                                                                                                                                     |
+| geocodes                 | `=@ctx.system.geocodes`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| isOffline                | `=@ctx.system.isOffline`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Boolean                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| isOnline                 | `=@ctx.system.isOnline`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Boolean                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| isPortrait               | `=@ctx.system.isPortrait`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | The variable is set with a boolean and is used to configure the behavior of components in either portrait or landscape mode.                                                                                                                                                                                                                                                                                                        |
+| locale                   | `=@ctx.system.locale`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| location Permissions     | `=@ctx.system.locationPermisions`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | `Status` can be:<br />* `granted` : granted: true
+* `undetermined` : granted: false
+* `denied`: granted: false&#xA;`=@ctx.system.locationPermissions.foreground.status`<br />`isGranted` is determined by the device's location settings for the Jigx app: <br />* Always (`isGranted: true`)&#xA;\* While using the app (`isGranted: true`)&#xA;\* Never (`isGranted: false`)
+* Ask Next time or when I share (`isGranted: false`) |
+| timezone                 | `=@ctx.system.timezone.offset`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Get the information about the device's timezone, it can be:&#xA;-`name`: e.g. Europe/Prague&#xA;-`offset`: e.g. +200                                                                                                                                                                                                                                                                                                                |
+| geolocation              | **Accuracy: &#xA;**`=@ctx.system.geolocation.coords.accuracy`**&#xA;Altitude:&#xA;**`=@ctx.system.geolocation.coords.altitude`&#xA;**Altitude Accuracy:** `=@ctx.system.geolocation.coords.altitudeAccuracy`&#xA;**Location - Heading:** `=@ctx.system.geolocation.coords.heading`&#xA;**Location - Latitude:&#xA;**`=@ctx.system.geolocation.coords.latitude`&#xA;**Location - Longitude:**&#xA;`=@ctx.system.geolocation.coords.longitude`&#xA;**Location - Speed:&#xA;**`=@ctx.system.geolocation.coords.speed`&#xA;**Location - Timestamp:&#xA;**`=@ctx.system.geolocation.timestamp`&#xA;**Location - Entire array (All details):**&#xA;`=$string(@ctx.system.geolocation)` |                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| isLocationSharingEnabled | `=@ctx.system.isLocationSharingEnabled`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Boolean                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| solution                 | `=@ctx.solution.id`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | XXXXXXXX-XXX-XXXX-XXXX-XXXXXXXXXXXX                                                                                                                                                                                                                                                                                                                                                                                                 |
+| user                     | `=@ctx.user.email`&#xA;or&#xA;`=@ctx.user.id`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | username\@jigx.com&#xA;or&#xA;XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX                                                                                                                                                                                                                                                                                                                                                                  |
 
 ## Examples and code snippets
 
@@ -93,10 +91,6 @@ actions:
           linkTo: advanced-expressions
 ```
 :::
-
-
-
-
 ::::
 :::::
 
@@ -125,8 +119,6 @@ children:
 :::
 
 :::VerticalSplitItem
-
-
 ![System timezone expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oANyCp8ANnxLlVQO8SP9t_br9tnyrzt6xxavl6azvoeimg1075iphone13blueportrait.png "System timezone expression")
 :::
 ::::
@@ -136,14 +128,14 @@ children:
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
 ![system geolocation expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Zw09RzF0UJDUm3XaEwrcM_img7975iphone13blueportrait.png "system geolocation expression")
-
-
 :::
 
 :::VerticalSplitItem
 This example shows how you can use `system.geolocation` to get the device's location (details).
 
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/geolocation.jigx).
+:::
+::::
 
 ```yaml
 children: 
@@ -189,8 +181,6 @@ children:
             value: =$string(@ctx.system.geolocation)
 
 ```
-:::
-::::
 
 ### System locationPermissions
 
@@ -206,7 +196,7 @@ The following `statuses` are returned depending on the device's settings:
 
 Evaluating whether or not permission has been granted using `isGranted` returns a boolean.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Jd_CvMmj_mJUaj5oebWRD-20250317-153841.png" size="98" position="center" caption="System Location Permissions" alt="System Location Permissions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Jd_CvMmj_mJUaj5oebWRD-20250317-153841.png" size="98" position="center" caption="System Location Permissions" alt="System Location Permissions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Jd_CvMmj_mJUaj5oebWRD-20250317-153841.png"}
 
 :::CodeblockTabs
 ```yaml
@@ -263,8 +253,6 @@ placeholders:
     when: =@ctx.system.locationPermissions.foreground.isGranted = false
     icon: missing-data
 ```
-
-locations (datasource)
 
 ```yaml
 datasources:
@@ -395,7 +383,7 @@ children:
 
 # Solution
 
-The `solution` variable is used to get information about the specific Jigx solution, for example, name, and id. [Custom variables]() can be set in [Solution Settings]() in Jigx Management, and the variable value referenced in the solution expression.
+The `solution` variable is used to get information about the specific Jigx solution, for example, name, and id. [Custom variables](#) can be set in [Solution Settings](#) in Jigx Management, and the variable value referenced in the solution expression.
 
 ## Configuration
 
@@ -444,7 +432,7 @@ children:
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG" size="86" position="center" caption="Showing variable value" alt="Showing variable value"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG" size="86" position="center" caption="Showing variable value" alt="Showing variable value" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG"}
 :::
 ::::
 

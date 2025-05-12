@@ -1,10 +1,4 @@
----
-title: Aggregation
-slug: Mktd-a
-description: Learn how to use JSONata aggregation to find the highest, lowest, or average value from an array effortlessly. This comprehensive document provides step-by-step instructions, including expressions for each aggregation type, along with code snippets for il
-createdAt: Thu Jul 27 2023 13:15:31 GMT+0000 (Coordinated Universal Time)
-updatedAt: Fri Jul 28 2023 08:13:29 GMT+0000 (Coordinated Universal Time)
----
+# Aggregation
 
 Use JSONata aggregation to return the results of values to find a maximum, minimum, or average value in an array.
 
@@ -22,15 +16,17 @@ Be careful when using complex expressions, such as expressions that iterate one 
 
 ## Examples and code snippets
 
-:::::VerticalSplit{layout="left"}
+::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X11pn0BVv4LsvZydrxLVL_img6602iphone13blueportrait.png" size="78" position="center" caption="Aggregated expression" alt="Aggregated expression"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X11pn0BVv4LsvZydrxLVL_img6602iphone13blueportrait.png" size="78" position="center" caption="Aggregated expression" alt="Aggregated expression" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X11pn0BVv4LsvZydrxLVL_img6602iphone13blueportrait.png"}
 :::
 
-::::VerticalSplitItem
+:::VerticalSplitItem
 In this example static data is agregated in a `component.enity` to show the result in the entity field.
 
 See the full example code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx).
+:::
+::::
 
 :::CodeblockTabs
 expression.jigx
@@ -68,6 +64,4 @@ children:
             value: =$sum(@ctx.datasources.mydata.array)
 ```
 :::
-::::
-:::::
 

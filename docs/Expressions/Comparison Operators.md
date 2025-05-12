@@ -1,10 +1,4 @@
----
-title: Comparison Operators
-slug: qopr-comparis
-description: Learn how to use JSONata comparison operators to compare values in your data and get accurate Boolean results. This comprehensive document includes a detailed list of operators like equals, not equals, greater than, less than, greater than or equals, less
-createdAt: Thu Jul 27 2023 13:16:28 GMT+0000 (Coordinated Universal Time)
-updatedAt: Fri Jul 28 2023 07:37:29 GMT+0000 (Coordinated Universal Time)
----
+# Comparison Operators
 
 Use JSONata comparison operators to compare values in your data and return a Boolean result (true or false) based on the comparison result, or use them for conditional logical expressions.
 
@@ -22,25 +16,27 @@ The operators used for comparing data are:
 
 ## Configuration
 
-| **Result**        | **Expression**                                                                                                                            |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **Result**        | **Expression**                                                                                                                         |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | Statement is true | `value: "=@ctx.datasources.mydata.color = 'blue' and @ctx.datasources.mydata.number2 != 0 ? 'Statement is true':'Statement is false'"` |
 
 :::hint{type="warning"}
 Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.
 :::
 
-## Examples and code snippets 
+## Examples and code snippets
 
-:::::VerticalSplit{layout="left"}
+::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LfmaXu2WwFEdyH_mHHYMw_pjyuafcqtnxtwl2rfyrgjimg0977iphone13blueportrait.png" size="82" position="center" caption="Comparison operators" alt="Comparison operators"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LfmaXu2WwFEdyH_mHHYMw_pjyuafcqtnxtwl2rfyrgjimg0977iphone13blueportrait.png" size="82" position="center" caption="Comparison operators" alt="Comparison operators" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LfmaXu2WwFEdyH_mHHYMw_pjyuafcqtnxtwl2rfyrgjimg0977iphone13blueportrait.png"}
 :::
 
-::::VerticalSplitItem
+:::VerticalSplitItem
 In this example the `color` and `number2` values are compared, if the color is blue and the vlaue of number2 is not equal to zero then the expression evalutes to True.
 
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx).
+:::
+::::
 
 :::CodeblockTabs
 expression.jigx
@@ -71,6 +67,4 @@ children:
                     ? 'Statement is true':'Statement is false'"
 ```
 :::
-::::
-:::::
 
