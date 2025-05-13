@@ -6,13 +6,12 @@ The grid-item component serves as the child component whenever any grid componen
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                 |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| `size`             | Select the size that the grid-item will be displayed in, the options are `1x1`,`2x2`, `2x4`, `4x2`, `4x4`.                      |
-| `children`         | The following components can be used in the grid-item:&#xA; [Custom components (Alpha)](<./../../Custom components _Alpha_.md>) |
-
-- [image](./../image.md)
-- [widgets](#) |
+| **Core structure** |                                                                                                                                                                          |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `size`             | Select the size that the grid-item will be displayed in, the options are `1x1`,`2x2`, `2x4`, `4x2`, `4x4`.                                                               |
+| `children`         | The following components can be used in the grid-item:<br />* [Custom components (Alpha)](<./../../Custom components _Alpha_.md>)
+* [image](./../image.md)
+* [widgets]() |
 
 ## Considerations
 
