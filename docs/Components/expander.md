@@ -8,8 +8,8 @@ The expander component** **is a collapsible element that initially displays a sm
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `children`         | Define the content of the expander. The following components can be used in the expander:<br />* [avatar](./avatar.md)
 * [bar-chart](./charts/bar-chart.md)
 * [entity](./entity.md)
@@ -21,9 +21,9 @@ Some properties are common to all components, see [Common component properties](
 * [pie-chart](./charts/pie-chart.md)
 * [stepper](./stepper.md)
 * [video-player](./video-player.md)
-* [web-view](./web-view.md) |
+* [web-view](./web-view.md)&#x20; |
 | `header`           | `centerElement` - what is initially visible in your jig. &#xA;The following options are available in `header`:<br />* component [stage](https://docs.jigx.com/examples/stage)
-* component [titles](https://docs.jigx.com/examples/h1bm-titles).                                                                                                                                                                                                                             |
+* component [titles](https://docs.jigx.com/examples/h1bm-titles).&#x20;                                                                                                                                                                                                                             |
 
 | **Other options**      |                                                                                                                                                          |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -398,22 +398,22 @@ children:
     options:
       title: EXPANDER WITH VARIANT (plain), DIVIDER (transparent)
       children: 
-     # First expander.                
+        # First expander.                
       - type: component.expander
         options:
-        # Configure a plain variant.  
+          # Configure a plain variant.  
           variant: plain
-          #Add a transparent divider.
+          # Add a transparent divider.
           divider: transparent
           header:
             centerElement: 
               type: component.titles
               options:
+                title: =@ctx.datasources.product-delivery[0].destination
+                subtitle: =@ctx.datasources.product-delivery[0].deliveryId
                 icon: truck-1
                 iconColor: color2
                 align: right
-                title: =@ctx.datasources.product-delivery[0].destination
-                subtitle: =@ctx.datasources.product-delivery[0].deliveryId
           children:
             - type: component.list-item
               options:
@@ -428,20 +428,20 @@ children:
     options:
       title: EXPANDER WITH VARIANT - EMPHASIZED
       children:
-      # Second expander. 
+        # Second expander. 
       - type: component.expander
         options:
-         # Configure an emphasized variant.
+          # Configure an emphasized variant.
           variant: emphasized
           header:
             centerElement: 
               type: component.stage
               options:
-                icon: truck-cargo
                 right:
                   title: =@ctx.datasources.product-delivery[1].deliveryId
                 left:
                   title: =@ctx.datasources.product-delivery[1].status
+                icon: truck-cargo  
           children:
             - type: component.entity
               options:
@@ -463,7 +463,7 @@ children:
     options:
       title: EXPANDER WITH SOLID DIVIDER
       children:
-      # Third expander.
+        # Third expander.
       - type: component.expander
         options:
           # Add a solid divider,
@@ -473,9 +473,9 @@ children:
             centerElement: 
               type: component.titles
               options:
-                align: left
                 title: =@ctx.datasources.product-delivery[2].deliveryId
                 subtitle: =@ctx.datasources.product-delivery[2].expectedDelivery       
+                align: left 
           children:
             - type: component.list-item
               options:
@@ -497,10 +497,10 @@ children:
     options:
       title: EXPANDER WITH ICON ALIGNMENT & VARIANT (plain)
       children:
-      # Fourth expander. 
+        # Fourth expander. 
       - type: component.expander
         options:
-         # Configured a plain variant. 
+          # Configured a plain variant. 
           variant: plain
           header:
             # Configure the expander icon to display on the left.
@@ -508,23 +508,23 @@ children:
               align: left
             centerElement: 
               type: component.stage
-              options: 
-                icon: truck-cargo-1
+              options:
                 right:
                   title: =@ctx.datasources.product-delivery[3].status
                 left:
-                  title: =@ctx.datasources.product-delivery[3].deliveryId                           
+                  title: =@ctx.datasources.product-delivery[3].deliveryId 
+                icon: truck-cargo-1                            
           children:
             - type: component.entity
               options:
                 children:
                   - type: component.entity-field
                     options:
-                      rightIcon: calendar-3
-                      style:
-                        isWarning: true
                       label: Delivery date
                       value: =@ctx.datasources.product-delivery[3].expectedDelivery
+                      rightIcon: calendar-3
+                      style:
+                        isWarning: true  
 ```
 
 product-delivery.jigx
