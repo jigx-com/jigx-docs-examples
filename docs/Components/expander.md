@@ -9,7 +9,7 @@ The expander component** **is a collapsible element that initially displays a sm
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
 | **Core structure** |   |
-| ---------------------- || ----------------------------------------------------------| 
+| ---------------------- | ----------------------------------------------------------| 
 | `children`         | Define the content of the expander. The following components can be used in the expander:<ul><li>[avatar](./avatar.md)<li/><li>[bar-chart](./charts/bar-chart.md)<li/><li> [entity](./entity.md)<li/><li>[form](./form.md)<li/><li>[interactive-image](./interactive-image.md)<li/><li>[line-chart](./charts/line-chart.md)<li/><li>[list](./list.md)<li/><li>[location](./location.md)<li/><li>[pie-chart](./charts/pie-chart.md)<li/><li>[stepper](./stepper.md)<li/><li>[video-player](./video-player.md)<li/><li>[web-view](./web-view.md)</li></ul>|
 | `header`           | `centerElement` - what is initially visible in your jig. &#xA;The following options are available in `header`:<br /><ul/><li>component [stage](https://docs.jigx.com/examples/stage)<li/><li>component [titles](https://docs.jigx.com/examples/h1bm-titles).<li/></ul>|
 
