@@ -32,19 +32,19 @@ The table Jigx type includes multiple child components, each of which can be con
 
 This component is part of the `columnDefinition` setup, allowing reusable configurations for customizing column cells and ensuring consistent, flexible table layouts.
 
-| **structure** |                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`    | Define the cell `value` by using a [Custom components (Alpha)](<./../Custom components _Alpha_.md>) defined in the components folder, [list-item](./../Components/list/list-item.md), or by using a [component.text](<./../Custom components _Alpha_/Text _Alpha_.md>). Specify a value for the cell, this can be text that can be evaluated, translated, formatted. |
-| `onPress`     | Action that will be triggered by pressing on the table cell for a specific column.                                                                                                                                                                                                                                                                                   |
+| **structure** |                                                                                                                                                                                                                                                            |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `children`    | Define the cell `value` by using a [list-item](./../Components/list/list-item.md), or [component.text](<./../Custom components _Alpha_/Text _Alpha_.md>). Specify a value for the cell, this can be text that can be evaluated, translated, and formatted. |
+| `onPress`     | Action that will be triggered by pressing on the table cell for a specific column.                                                                                                                                                                         |
 
 ### component.table-header-cell
 
 This component is part of the `columnDefinition` setup, allowing reusable configurations for column header cells and ensuring consistent, flexible table layouts.This component targets the cells in the columns' header.
 
-| **Structure** |                                                                                                                                                                                                                                                                |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`    | Define the cell value by using a [list-item](./../Components/list/list-item.md) or by using a [component.text](<./../Custom components _Alpha_/Text _Alpha_.md>). Specify a value for the cell, this can be text that can be evaluated, translated, formatted. |
-| `onPress`     | Action that will be triggered by pressing on the text in the table header's cell for a specific column.                                                                                                                                                        |
+| **Structure** |                                                                                                                                                                                                                                                                    |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `children`    | Define the cell value by using a [list-item](./../Components/list/list-item.md) or by using a [component.text](<./../Custom components _Alpha_/Text _Alpha_.md>). Specify a value for the cell, this can be text that can be evaluated, translated, and formatted. |
+| `onPress`     | Action that will be triggered by pressing on the text in the table header's cell for a specific column.                                                                                                                                                            |
 
 ### component.table-footer-cell
 
@@ -120,6 +120,7 @@ sort:
 - There is no horizontal scroll. Depending on the device, some columns may not be visible. For the best experience when viewing tables with many columns in the app, we recommend using a tablet.
 - To enable sorting in a table, set `isSortable: true` at the root level. The `data` property must include an expression for *sorting* and *lookup*, and the `sort: isDescending` property must be set to either `false` for ascending or `true` for descending.
 - To enable row selection, `isSelectable: true` must be set at the root level of the jig. The `selectableToolbar` becomes visible only when rows are selected and appears at the bottom of the table. It displays a tag showing the number of selected rows, followed by the configured action.
+- The select toolbar compresses when overloaded with actions or lengthy text, causing it to disappear entirely or breaking the padding due to insufficient space. This can negatively impact user experience, so it's recommended that you carefully manage toolbar content to avoid such issues.
 
 ## Examples and code snippets
 
@@ -336,16 +337,19 @@ data: =@ctx.datasources.sales-summary
 item: 
   type: component.table-row
 
-# Define the specific layout for each column using the column id as the identifer.          
+# Define the specific layout for each column,
+# using the column id as the identifer.          
 columnDefinition:
-# Configure the first column's width, ensuring that all text is visible in the column. 
+  # Configure the first column's width, 
+  # ensuring that all text is visible in the column. 
   Product: 
     width: regular
-# In the second column,
-# configure the width, which maximizes table layout by using just the required space.
-# Configure the cells to display the currency in each cell of the column.
-# Format the column footer to display the total revenue using an expression,
-# to add up the values in the column.    
+  # In the second column,
+  # configure the width, which maximizes table layout,
+  # by using just the required space.
+  # Configure the cells to display the currency in each cell of the column.
+  # Format the column footer to display the total revenue,
+  # using an expression to add up the values in the column.    
   TotalRevenue:
     width: small
     cell:
@@ -456,13 +460,7 @@ header:
       options:
         source:
           uri: https://images.unsplash.com/photo-1592818993411-eba55f84e788?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHJlcG9ydHMlMjBjb25zdHJ1Y3Rpb258ZW58MHx8MHx8fDA%3D
-# Add an onFocus to update the table once the data changes.
-onFocus: 
-  type: action.sync-entities
-  options:
-    provider: DATA_PROVIDER_DYNAMIC
-    entities:
-      - default/product-delivery
+
 # Reference the datasource to use in the table.
 data: =@ctx.datasources.product-delivery
 # Define the appearance and behavior of all table rows.
@@ -478,10 +476,12 @@ item:
         actions:
           - type: action.go-to
             options:
-              # Set the jig to open as a modal instead of navigating away from the table jig. 
+              # Set the jig to open as a modal,
+              # instead of navigating away from the table jig. 
               isModal: true
               linkTo: table-onpress-edit  
-              # Pass the row’s status and id as inputs to the jig used for editing the status.
+              # Pass the row’s status and id as inputs to the jig,
+              # used for editing the status.
               inputs:
                 status: =@ctx.current.item.status
                 id: =@ctx.current.item.id
@@ -525,14 +525,16 @@ children:
            # Specific the datasource/table column name that will be updated.
           instanceId: status
           options:
-            # Pass the existing value into the form's text field using inputs.
+            # Pass the existing value into the form's text field,
+            # using inputs.
             initialValue: =@ctx.jig.inputs.status
             label: Update status
 
 actions:
   - numberOfVisibleActions: 1
     children:
-      # Configure the action to update the datasource row with the new status.
+      # Configure the action to update the datasource row,
+      # with the new status.
       - type: action.execute-entity
         options:
           title: Update Record
@@ -542,10 +544,31 @@ actions:
           data:
             # Specify the row using the id that must be updated.
             id: =@ctx.jig.inputs.id
-            # Specify the column/field to updatein the datasource.
+            # Specify the column/field to update in the datasource.
             status: =@ctx.components.status.state.value
-          # Use the goBack to close the modal. The table will reflect the updated status in the row.  
+          # Use the goBack to close the modal. 
+          # The table will reflect the updated status in the row.  
           goBack: previous 
+```
+
+product-delivery (datasource)
+
+```yaml
+type: datasource.sqlite
+options:
+  provider: DATA_PROVIDER_DYNAMIC
+
+  entities:
+    - default/product-delivery
+
+  query: 
+    SELECT id,
+     '$.deliveryId',
+     '$.Item',
+     '$.destination',
+     '$.status',
+     '$.expectedDelivery'
+    FROM [default/product-delivery]
 ```
 :::
 :::::
