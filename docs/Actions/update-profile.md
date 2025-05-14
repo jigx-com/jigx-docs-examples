@@ -4,7 +4,7 @@ This action allows users to update specific information about themselves, which 
 
 This action can be configured within a jig in various ways, such as:
 &#x9;•	An action button
-&#x9;•	A jig-header link or icon
+&#x9;•	A header action link or icon
 &#x9;•	An event, e.g., `onPress`
 
 ## Configuration options
@@ -27,7 +27,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-![Update Profile details](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-zi7qnKPD82uO5zhs5p_r3-20250429-125015.png "Update Profile details")
+![Update Profile details](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NhdCeFqRkSdYEjyKBdnIQ-20250514-093621.png "Update Profile details")
 :::
 
 :::VerticalSplitItem
@@ -101,7 +101,7 @@ This example demonstrates how a form captures basic personal information and upd
 :::
 
 :::VerticalSplitItem
-![Update profile -header link](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xz87A7QksTTf3k28HNqqY-20250429-125139.png "Update profile - header link ")
+![Update profile -header link](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-S3VYcMTayd_F6Z6AXR5aq-20250514-094006.png "Update profile - header link ")
 :::
 ::::
 
@@ -163,7 +163,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-![Update profile - header icon](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Im3DCMrDDsipC5DlFYQST-20250429-125207.png "Update profile - header icon")
+![Update profile - header icon](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-6IbgXLdFBoLHrp0wab0U4-20250514-095340.png "Update profile - header icon")
 :::
 
 :::VerticalSplitItem
@@ -266,7 +266,7 @@ children:
         title: Update
         # Use the onPress event to update the profile details.
         # Configure the action to save the photo captured in the form.
-        # The first and last names are update from a datasource.
+        # The first and last names are updated from a datasource.
         onPress: 
           type: action.update-profile
           options:

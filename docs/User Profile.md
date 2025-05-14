@@ -1,9 +1,4 @@
----
-title: User Profile
-slug: trh--uesr
-createdAt: Thu Mar 13 2025 07:32:35 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Apr 29 2025 11:59:26 GMT+0000 (Coordinated Universal Time)
----
+# User Profile
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -11,7 +6,7 @@ By default, the user profile in Jigx includes various menu options, such as Pers
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0aw583ODqedI-VNze0iU-20250429-115921.png" size="66" position="center" caption="Default Profile screen" alt="Default Profile screen"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0aw583ODqedI-VNze0iU-20250429-115921.png" size="66" position="center" caption="Default Profile screen" alt="Default Profile screen" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0aw583ODqedI-VNze0iU-20250429-115921.png"}
 :::
 ::::
 
@@ -31,7 +26,7 @@ By default, the user profile in Jigx includes various menu options, such as Pers
 
 You can allow users to update specific information in their profile using the [action.update-profile](./Actions/update-profile.md). This action can be configured within a jig in various ways, such as:
 &#x9;•	An action button
-&#x9;•	A jig-header link or icon
+&#x9;•	A header action link or icon
 &#x9;•	In an event, e.g., `onPress`
 
 The following information can be updated when using the action:
@@ -124,11 +119,11 @@ You can create a jig as the first screen a new user sees when they log into the 
 This is especially useful in scenarios where devices are shared among multiple employees, such as contractors or engineers.
 :::
 
-| **Properties**                  | **Description**                                                           |
+| **Properties**                  | **Description**                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Profile`                       | Adding the property with it's values to the index.jigx file will insert the referenced jigs into the header section of the Profile screen.                                   |
+| `Profile`                       | Adding the property with it's values to the index.jigx file will insert the referenced jigs into the header section of the Profile screen.                                                                                                                                                                                                                                         |
 | `isPersonalInfoMenuItemVisible` | Determine whether the Personal Information menu should be hidden (`false`) or visible (`true`). The default setting is `true`. This menu opens a screen displaying the user's name, email, and avatar, and provides an option to delete the account.&#xA;Customizing the Profile screen allows this information to be integrated directly, eliminating the need for a menu option. |
-| `jigId`                         | Provide the `jigId` for the jigs that will be displayed in the Profile screen.                                                                                                 |
+| `jigId`                         | Provide the `jigId` for the jigs that will be displayed in the Profile screen.                                                                                                                                                                                                                                                                                                     |
 
 ### Considerations
 
@@ -141,7 +136,7 @@ This is especially useful in scenarios where devices are shared among multiple e
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wECb6jB_d0KV8RZks0JhF-20250429-115657.png" size="64" position="center" caption="Extended Profile " alt="Extended Profile"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wECb6jB_d0KV8RZks0JhF-20250429-115657.png" size="64" position="center" caption="Extended Profile " alt="Extended Profile" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wECb6jB_d0KV8RZks0JhF-20250429-115657.png"}
 :::
 
 :::VerticalSplitItem
@@ -236,7 +231,7 @@ This example demonstrates how to add a `list` of emergency contacts to a jig, wh
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-H0Dgln2rHI2yHTQ3h6dN_-20250429-115802.png" size="66" position="center" caption="Profile extended with list" alt="Profile extended with list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-H0Dgln2rHI2yHTQ3h6dN_-20250429-115802.png" size="66" position="center" caption="Profile extended with list" alt="Profile extended with list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-H0Dgln2rHI2yHTQ3h6dN_-20250429-115802.png"}
 :::
 ::::
 
@@ -325,7 +320,7 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FH4wEyKl1W6fCjOeD1Cbi-20250429-115844.png" size="64" position="center" caption="Custom Profile" alt="Custom Profile"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FH4wEyKl1W6fCjOeD1Cbi-20250429-115844.png" size="64" position="center" caption="Custom Profile" alt="Custom Profile" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FH4wEyKl1W6fCjOeD1Cbi-20250429-115844.png"}
 :::
 
 :::VerticalSplitItem
