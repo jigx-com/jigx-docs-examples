@@ -8,22 +8,10 @@ The expander component** **is a collapsible element that initially displays a sm
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`         | Define the content of the expander. The following components can be used in the expander:<br />* [avatar](./avatar.md)
-* [bar-chart](./charts/bar-chart.md)
-* [entity](./entity.md)
-* [form](./form.md)
-* [interactive-image](./interactive-image.md)
-* [line-chart](./charts/line-chart.md)
-* [list](./list.md)
-* [location](./location.md)
-* [pie-chart](./charts/pie-chart.md)
-* [stepper](./stepper.md)
-* [video-player](./video-player.md)
-* [web-view](./web-view.md) &#x20; |
-| `header`           | `centerElement` - what is initially visible in your jig. &#xA;The following options are available in `header`:<br />* component [stage](https://docs.jigx.com/examples/stage)
-* component [titles](https://docs.jigx.com/examples/h1bm-titles).&#x20;                                                                                                                                                                                                                              |
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `children`         | Define the content of the expander. The following components can be used in the expander:&#xA;[avatar](./avatar.md)<br />[bar-chart](./charts/bar-chart.md)<br />[entity](./entity.md)&#xA;[form](./form.md)&#xA;[interactive-image](./interactive-image.md)<br />[line-chart](./charts/line-chart.md)&#xA;[list](./list.md)<br />[location](./location.md)&#xA;[pie-chart](./charts/pie-chart.md)<br />[stepper](./stepper.md)<br />[video-player](./video-player.md)&#xA;[web-view](./web-view.md)  |
+| `header`           | `centerElement` - what is initially visible in your jig. &#xA;The following options are available in `header`:&#xA;- component [stage&#xA;](https://docs.jigx.com/examples/stage)- component [titles](https://docs.jigx.com/examples/h1bm-titles)                                                                                                                                                                                                                                                     |
 
 :::Iframe{code="<ul>"}
 
