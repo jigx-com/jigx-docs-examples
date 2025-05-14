@@ -50,10 +50,10 @@ This component is part of the `columnDefinition` setup, allowing reusable config
 
 This component is part of the `columnDefinition` setup, allowing reusable configurations for column footer cells and ensuring consistent, flexible table layouts.This component targets the cells in the columns' footer.
 
-| **Structure** |                                                                                                                                                                                                                                                                                                                                                                   |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`    | Define the cell value by using a [Custom components (Alpha)](<./../Custom components _Alpha_.md>) defined in the components folder,[list-item](./../Components/list/list-item.md), or by using a [component.text](<./../Custom components _Alpha_/Text _Alpha_.md>). Specify a value for the cell, this can be text that can be evaluated, translated, formatted. |
-| `onPress`     | Action that will be triggered by pressing on the text in the table footer's cell for a specific column.                                                                                                                                                                                                                                                           |
+| **Structure** |                                                                                                                                                                                                                                                               |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `children`    | Define the cell value by using a [list-item](./../Components/list/list-item.md), or by using [component.text](<./../Custom components _Alpha_/Text _Alpha_.md>). Specify a value for the cell, this can be text that can be evaluated, translated, formatted. |
+| `onPress`     | Action that will be triggered by pressing on the text in the table footer's cell for a specific column.                                                                                                                                                       |
 
 ### component.table-footer
 
