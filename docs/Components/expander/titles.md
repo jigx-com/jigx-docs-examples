@@ -18,17 +18,13 @@ Some properties are common to all components, see [Common component properties](
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `title`            | Add text on the `centerElements` of the `component.expander`. You can add text, expressions or Text with Format in the field. Text with format includes, currency, decimal, dateTime and more. |
 
-| **Other options** |                                                                                                                                                                                                               |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `align`           | The alignment of the content inside of your component. Where the container and text should be aligned, the options are:<br />* `left`
-* `right`
-* `center`                                                    |
-| `icon`            | Add an icon to the title. A list of icons is available. See [Jigx icons](#) for more information.                                                                                                             |
-| `iconColor`       | Sets the color of the icon, choose a color from the provided color palette. Default color is black if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](#). |
-| `style`           | The following styling sets are available:<br />* `isNegative`
-* `isPositive`
-* `isWarning`                                                                                                                    |
-| `subtitle`        | Add a  `subtitle`/ short description of the component.                                                                                                                                                        |
+| **Other options** |                                                                                                                                                                                                              |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `align`           | The alignment of the content inside of your component. Where the container and text should be aligned, the options are:&#xA;`left`<br />`right`<br />`center`                                                |
+| `icon`            | Add an icon to the title. A list of icons is available. See [Jigx icons]() for more information.                                                                                                             |
+| `iconColor`       | Sets the color of the icon, choose a color from the provided color palette. Default color is black if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](). |
+| `style`           | The following styling sets are available:&#xA;`isNegative`<br />`isPositive`<br />`isWarning`                                                                                                                |
+| `subtitle`        | Add a  `subtitle`/ short description of the component.                                                                                                                                                       |
 
 ## Consideration
 

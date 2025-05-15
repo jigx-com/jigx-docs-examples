@@ -18,15 +18,11 @@ Some properties are common to all components, see [Common component properties](
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `title`            | Add a title for the avatar, this is text displayed when the `uri` is empty. In the visual presentation, the `title` can be substituted by an image using the `uri` property. But the content of the text property has to be kept at least to the empty string: "") |
 
-| **Other options** |                                                                                                   |
-| ----------------- | ------------------------------------------------------------------------------------------------- |
-| `align`           | By default the avatar is aligned `left` but can be changed to:<br />* `center`
-* `left`
-* `right` |
-| `size`            | The size of the avatar can be set to:<br />* `small`
-* `regular`
-* `large`                        |
-| `uri`             | Source of the image to display as the avatar.                                                     |
+| **Other options** |                                                                                                      |
+| ----------------- | ---------------------------------------------------------------------------------------------------- |
+| `align`           | By default the avatar is aligned `left` but can be changed to:&#xA;`center`<br />`left`<br />`right` |
+| `size`            | <br />The size of the avatar can be set to:&#xA;`small`<br />`regular`<br />`large`                  |
+| `uri`             | Source of the image to display as the avatar.                                                        |
 
 ## Examples and code snippets
 
