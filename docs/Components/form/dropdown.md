@@ -34,25 +34,23 @@ Some properties are common to all components, see [Common component properties](
 | `style`                 | The following property settings are available:&#xA;- `flex` - Flex property if rendered inside row.&#xA;- `isBusy` - Displays spinner on right side of field. It removes any  configured icon.&#xA;- `isDisabled` - disables the dropdown preventing the dropdown-items popup from displaying.&#xA;- `isPositive` - a green icon displays on the right of the dropdown field.&#xA;More than one can be true. It will be evaluated based on priority. |
 | `value`                 | The value to show in the dropdown, e.g. you can configure the first dropdown-item for be selected by default when the form loads. For example, `value: =@ctx.datasources.employees-static[0].firstName `                                                                                                                                                                                                                                             |
 
-| **Other options for dropdown-item** |                                                                                                                                                                |
-| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `description`                       | Description of steps displayed on list items as subtitles.                                                                                                     |
-| `instanceId`                        | The unique identifier for the dropdown-item component.                                                                                                         |
-| `leftElement`                       | The following elements can be added in the dropdown component, which will display on the left of the dropdown-item `title`:<br />* `avatar`
-* `icon`
-* `image` |
-| `subtitle`                          | The subtitle for the dropdown item.                                                                                                                            |
-| `title`                             | Title displayed on list item. You can add text, expressions or Text with Format in the field. Text with format includes, currency, decimal, dateTime and more. |
-| `value`                             | The value of the item. It has to be unique for each item and is usually the ID of the record from the datasource.                                              |
+| **Other options for dropdown-item** |                                                                                                                                                                   |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `description`                       | Description of steps displayed on list items as subtitles.                                                                                                        |
+| `instanceId`                        | The unique identifier for the dropdown-item component.                                                                                                            |
+| `leftElement`                       | The following elements can be added in the dropdown component, which will display on the left of the dropdown-item `title`:&#xA;`avatar`<br />`icon`<br />`image` |
+| `subtitle`                          | The subtitle for the dropdown item.                                                                                                                               |
+| `title`                             | Title displayed on list item. You can add text, expressions or Text with Format in the field. Text with format includes, currency, decimal, dateTime and more.    |
+| `value`                             | The value of the item. It has to be unique for each item and is usually the ID of the record from the datasource.                                                 |
 
 | **Actions** |                                                                                                                                            |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `onChange`  | The action is triggered when the content in the `dropdown` is changed. Use IntelliSense (ctrl+space) to see the list of available actions. |
 
-| **State Configuration**  | **Key**                           | **Notes**                                                         |
-| ------------------------ | --------------------------------- | ----------------------------------------------------------------- |
-| `=@ctx.component.state.` | searchText&#xA;selected&#xA;value | - State is the variable of the component.                         |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now              | * Global state variable that can be used throughout the solution. |
+| **State Configuration**  | **Key**                           | **Notes**                                                          |
+| ------------------------ | --------------------------------- | ------------------------------------------------------------------ |
+| `=@ctx.component.state.` | searchText&#xA;selected&#xA;value | - State is the variable of the component.                          |
+| `=@ctx.solution.state.`  | activeItemId&#xA;now              | \* Global state variable that can be used throughout the solution. |
 
 ## Examples and code snippets
 

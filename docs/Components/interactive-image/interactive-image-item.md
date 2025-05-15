@@ -12,14 +12,13 @@ Some properties are common to all components, see [Common component properties](
 | `percentageCoordinates` | Percentage `x` and `y` coordinates are required.  Coordinates are represented as absolute percentage numbers between 0-100. |
 | `title`                 | Give a name/title for the point, for example, Table 1.                                                                      |
 
-| **Other options** |                                                                                                                                                                                                           |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`           | This allows you to set a specific color for the active/selected point (e.g., when the point is selected or active).                                                                                       |
-| `icon`            | This allows you to set a specific icon for different states (e.g., when the point is selected active or inactive).                                                                                        |
-| `index`           | Index for the initial animation.                                                                                                                                                                          |
-| `groupId`         | This property allows you to add the item to the group. The groups are created inside the [interactive-image](./../interactive-image.md) component. Effective only initial load.                           |
-| `style`           | The following style options are available:<br />* `isActive` - shows if the point is active or available for selection.
-* `isDisabled` - shows if the point is disabled and is unavailable for selection. |
+| **Other options** |                                                                                                                                                                                                          |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `color`           | This allows you to set a specific color for the active/selected point (e.g., when the point is selected or active).                                                                                      |
+| `icon`            | This allows you to set a specific icon for different states (e.g., when the point is selected active or inactive).                                                                                       |
+| `index`           | Index for the initial animation.                                                                                                                                                                         |
+| `groupId`         | This property allows you to add the item to the group. The groups are created inside the [interactive-image](./../interactive-image.md) component. Effective only initial load.                          |
+| `style`           | The following style options are available:&#xA;`isActive` - shows if the point is active or available for selection.&#xA;`isDisabled` - shows if the point is disabled and is unavailable for selection. |
 
 | **Actions** |                                                                                                                                                |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |

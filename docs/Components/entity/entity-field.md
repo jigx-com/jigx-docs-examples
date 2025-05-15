@@ -11,23 +11,12 @@ Some properties are common to all components, see [Common component properties](
 | `label`            | Add a label for the entity-field, you can add text or an expression.           |
 | `value`            | Add a value to display in the entity-field, you can add text or an expression. |
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `contentType`     | Various types of entity fields determine the visual display and behavior of the entity-field, including: <br />* `default`
-* `checkbox`
-* `copy`
-* `date`
-* `email` - format: [*email@example.com*](mailto\:email@example.com)
-* `link`
-* `phone`- format: *1234567890* or *+001234567890* (no spaces)
-* `signature `
-* `time` |
-| `instanceId`      | The unique identifier for the entity field.                                                                                                                                                                                                                                                                                    |
-| `rightIcon`       | A list of icons is available. See [Jigx icons](#) for more information.                                                                                                                                                                                                                                                        |
-| `style`           | The following styling set is available and works in conjunction with `rightIcon` to determine the color of the icon and the enitity-field line separator:<br />* `isNegative`
-* `isPositive`
-* `isPrimary`
-* `isWarning`                                                                                                       |
+| **Other options** |                                                                                                                                                                                                                                                                                                                                                     |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `contentType`     | Various types of entity fields determine the visual display and behavior of the entity-field, including: &#xA;`default`<br />`checkbox`<br />`copy`<br />`date`<br />`email` - format: [*email@example.com*](mailto\:email@example.com)<br />`link`<br />`phone`- format: *1234567890* or *+001234567890* (no spaces)<br />`signature `<br />`time` |
+| `instanceId`      | The unique identifier for the entity field.                                                                                                                                                                                                                                                                                                         |
+| `rightIcon`       | A list of icons is available. See [Jigx icons]() for more information.                                                                                                                                                                                                                                                                              |
+| `style`           | The following styling set is available and works in conjunction with `rightIcon` to determine the color of the icon and the enitity-field line separator:&#xA;`isNegative`<br />`isPositive`<br />`isPrimary`<br />`isWarning`                                                                                                                      |
 
 ## Consideration
 
