@@ -8,7 +8,7 @@ The summary is fixed and displays even when the screen is scrolled. Make the sum
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Af4rdF6CCq-kFe9fSSFFg_summary.png" size="88" position="center" caption="Summary Preview" alt="Summary Preview" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Af4rdF6CCq-kFe9fSSFFg_summary.png"}
+![Summary Preview](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qvA_G2dUG6m5hTRuSzrwS-20250515-070710.png "Summary Preview")
 :::
 ::::
 
@@ -16,12 +16,10 @@ The summary is fixed and displays even when the screen is scrolled. Make the sum
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `layout`           | There are three types to choose from:<br />1) `default` - used to display information. This is the default layout, allowing you to specify what must be shown.
-2) `cart` - useful for an online shopping app to show the number of items in a cart. The `value` is shown to the right of the `title`.
-3) `counter` - useful for showing a count, for example, the number of sales made in a month. The `value` is shown to the left of the `title`. |
-| `title`            | The main text to display on the component.                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `layout`           | There are three types to choose from:&#xA;1\) `default` - used to display information. This is the default layout, allowing you to specify what must be shown.&#xA;2\) `cart` - useful for an online shopping app to show the number of items in a cart. The `value` is shown to the right of the `title`.<br />3) `counter` - useful for showing a count, for example, the number of sales made in a month. The `value` is shown to the left of the `title`.  |
+| `title`            | The main text to display on the component.                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 :::Iframe{code="<be />"}
 
@@ -56,7 +54,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9WcZVQ8jyZMEf7vU267Qn_ucardmuoo9uetnzfhtbhosummary-defaultiphone13blueportrait.png" size="80" position="center" caption="Default layout" alt="Default layout" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9WcZVQ8jyZMEf7vU267Qn_ucardmuoo9uetnzfhtbhosummary-defaultiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8KO0c_Gob5Y71dIkYhi37-20250515-065249.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8KO0c_Gob5Y71dIkYhi37-20250515-065249.png" size="80" width="1224" height="2466" position="center" caption="Default layout" alt="Default layout"}
 :::
 
 :::VerticalSplitItem
@@ -96,7 +94,7 @@ The full example of the summary type: cart using expander is on [GitHub](https:/
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DfxfVkL_Zvqbx_OiYwBDW_r7zsureyfsbt92t6oyubcsummary-cartiphone13blueportrait.png" size="80" position="center" caption="Cart layout" alt="Cart layout" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DfxfVkL_Zvqbx_OiYwBDW_r7zsureyfsbt92t6oyubcsummary-cartiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cRcH3caCDaCROlthQTsvC-20250515-065436.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cRcH3caCDaCROlthQTsvC-20250515-065436.png" size="80" width="1224" height="2466" position="center" caption="Cart layout" alt="Cart layout"}
 :::
 ::::
 
@@ -298,7 +296,7 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-K57_A1BTQ_pjvlgZHHx4_6dfg0efdsgk3eipf4w5wsummary-counteriphone13blueportrait.png" size="80" position="center" caption="Counter layout" alt="Counter layout" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-K57_A1BTQ_pjvlgZHHx4_6dfg0efdsgk3eipf4w5wsummary-counteriphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-q8MySAMTMx1Xkxjn3sDXv-20250515-065617.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-q8MySAMTMx1Xkxjn3sDXv-20250515-065617.png" size="80" width="1224" height="2466" position="center" caption="Counter layout" alt="Counter layout"}
 :::
 
 :::VerticalSplitItem
@@ -514,7 +512,7 @@ The full example is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/ma
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HNRpSmoGvbB6WvjojCsVL_cc-summaryaction.PNG" size="70" position="center" caption="Summary with action" alt="Summary with action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HNRpSmoGvbB6WvjojCsVL_cc-summaryaction.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Z9TXyir8aI7GgqI4dPQM9-20250515-070027.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Z9TXyir8aI7GgqI4dPQM9-20250515-070027.png" size="70" width="1224" height="2466" position="center" caption="Summary with action" alt="Summary with action"}
 :::
 ::::
 
