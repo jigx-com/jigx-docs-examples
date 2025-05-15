@@ -120,7 +120,7 @@ sort:
 - There is no horizontal scroll. Depending on the device, some columns may not be visible. For the best experience when viewing tables with many columns in the app, we recommend using a tablet.
 - To enable sorting in a table, set `isSortable: true` at the root level. The `data` property must include an expression for *sorting* and *lookup*, and the `sort: isDescending` property must be set to either `false` for ascending or `true` for descending.
 - To enable row selection, `isSelectable: true` must be set at the root level of the jig. The `selectableToolbar` becomes visible only when rows are selected and appears at the bottom of the table. It displays a tag showing the number of selected rows, followed by the configured action.
-- The select toolbar compresses when overloaded with actions or lengthy text, causing it to disappear entirely or breaking the padding due to insufficient space. This can negatively impact user experience, so it's recommended that you carefully manage toolbar content to avoid such issues.
+- Avoid overloading the `selectionToolbar` with too many actions or long labels, as it may compress, break layout, or disappear if space runs out.
 
 ## Examples and code snippets
 
