@@ -15,15 +15,13 @@ There are, instances when you want to create a list widget on a jig that is not 
 :::
 ::::
 
-## **Configuration options**
+## Configuration options
 
 A list widget can be used on any type of jig, i.e. list, default, composite, calendar and document.
 
-| **Core options** |                                                                                                                                                                                                                               |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `item`           | The `item` property includes the setup options of:<br />* [Stage](https://docs.jigx.com/examples/stage)
-* [Product-item](https://docs.jigx.com/examples/product-item)
-* [List-item](https://docs.jigx.com/examples/list-item) |
+| **Core options** |                                                                                                                                                                                                                                |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `item`           | The `item` property includes the setup options of:&#xA;[Stage&#xA;](https://docs.jigx.com/examples/stage)[Product-item&#xA;](https://docs.jigx.com/examples/product-item)[List-item](https://docs.jigx.com/examples/list-item) |
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,14 +43,9 @@ A list widget can be used on any type of jig, i.e. list, default, composite, cal
 
 The `Extended List Widget` can only be used on a list jig . The purpose of using this widget is to customize what shows in the widget on the Home Hub rather than showing its automatic list display.  The `Extended List Widget` must be configured with a size 2x2 or greater. Reuse the data in the list jig , for example, `=@ctx.datasources.users.title` or `=@ctx.current.item.value`.
 
-| **Core options** |                                                                                                                                                                                                                                                                                                                                                                               |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `item`           | The `item` property includes the setup options of:<br />* [bar-chart](./../Components/charts/bar-chart.md)
-* [expander](./../Components/expander.md)
-* [Stage](https://docs.jigx.com/examples/stage)
-* [Product-item](https://docs.jigx.com/examples/product-item)
-* [List-item](https://docs.jigx.com/examples/list-item)
-* [pie-chart](./../Components/charts/pie-chart.md) |
+| **Core options** |                                                                                                                                                                                                                                                                                                                                                                                      |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `item`           | The `item` property includes the setup options of:&#xA;[bar-chart](./../Components/charts/bar-chart.md)&#xA;[expander](./../Components/expander.md)&#xA;[Stage](https://docs.jigx.com/examples/stage)&#xA;[Product-item&#xA;](https://docs.jigx.com/examples/product-item)[List-item&#xA;](https://docs.jigx.com/examples/list-item)[pie-chart](./../Components/charts/pie-chart.md) |
 
 ## Examples and code snippets
 
