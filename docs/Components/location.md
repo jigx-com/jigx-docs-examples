@@ -11,15 +11,15 @@ Some properties are common to all components, see [Common component properties](
 | `address`                     | The actual address of the location.&#xA;Valid formats are: &#xA;- **address string - city, street**, e.g.&#xA; `address: 20 W 34th St., New York, NY 10001, USA`&#xA;or in an expression calling a datasource `=@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`&#xA;- **latitude and longitude**, e.g. &#xA;`address: 40.759412, -73.912306`                           |
 | `is AnimationDisabled`        | `true` or `false` to determine if map animation is disabled.      |
 | `isFollowUserLocationEnabled` | When enabled, the `viewPoint` will be centred on the user’s real-time location.                                                                  |
-| `markers`                     | Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map.&#xA;For example:&#xA;`-type: component.location`<br />
-    `options:`<br />
-      `markers:`<br />
-        `data:`<br />
-        `-latitude: 40.759412`<br />
-         `longitude: -73.912306`<br />
-        `-latitude: 40.745368`<br />
-        `longitude: -74.057189`<br />
-        `-latitude: 40.76479429122513`<br />
+| `markers`                     | Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map.&#xA;For example:&#xA;`type: component.location`
+    `options:`
+      `markers:`
+        `data:`
+        `latitude: 40.759412`
+         `longitude: -73.912306`
+        `latitude: 40.745368`
+        `longitude: -74.057189`
+        `latitude: 40.76479429122513`
         `longitude: -73.97429291692742`<br />You can use an expression to provide the latitude and longitude points from a datasource, for example:&#xA;`markers:
    data: \|       =@ctx.datasources.jobs.{"lng": $number($.lng), "lat": $number($.lat)}` |
 | `marker-item`                 | `anchorTo:` - Anchor the marker to a specific point, either `bottom-center` or `center`<br />`radius` - Display a circle around the marker. In the radius you can configure the `color`, `unit` (Default is kilometres)<br />`icon` - Choose an icon for the markers. You can style the icon `color`, `emphasis`, `type`, `shape` and `size`.       |
