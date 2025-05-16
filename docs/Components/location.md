@@ -6,34 +6,55 @@ The location component enables users to display a location on a map within a jig
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Options**                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `address`                     | The actual address of the location.&#xA;Valid formats are: &#xA;- **address string - city, street**, e.g.&#xA; `address: 20 W 34th St., New York, NY 10001, USA`&#xA;or in an expression calling a datasource `=@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`&#xA;- **latitude and longitude**, e.g. &#xA;`address: 40.759412, -73.912306`                           |
-| `is AnimationDisabled`        | `true` or `false` to determine if map animation is disabled.      |
-| `isFollowUserLocationEnabled` | When enabled, the `viewPoint` will be centred on the user’s real-time location.                                                                  |
-| `markers`                     | Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map.&#xA;For example:&#xA;`type: component.location`
-    `options:`
-      `markers:`
-        `data:`
-        `latitude: 40.759412`
-         `longitude: -73.912306`
-        `latitude: 40.745368`
-        `longitude: -74.057189`
-        `latitude: 40.76479429122513`
-        `longitude: -73.97429291692742`<br />You can use an expression to provide the latitude and longitude points from a datasource, for example:&#xA;`markers:
-   data: \|       =@ctx.datasources.jobs.{"lng": $number($.lng), "lat": $number($.lat)}` |
-| `marker-item`                 | `anchorTo:` - Anchor the marker to a specific point, either `bottom-center` or `center`<br />`radius` - Display a circle around the marker. In the radius you can configure the `color`, `unit` (Default is kilometres)<br />`icon` - Choose an icon for the markers. You can style the icon `color`, `emphasis`, `type`, `shape` and `size`.       |
-| `paths`                       | Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map.&#xA;for example:&#xA;`-type: component.location`<br />
-    `options:`<br />
-      `paths:`<br />
-        `data:`<br />
-        `-latitude: 40.759412`<br />
-         `longitude: -73.912306`<br />
-        `-latitude: 40.803495`<br />
-         `longitude: -73.950694`<br />
-      `address: =@ctx.datasources.location[0]`.<br />`address`              |
-| `viewPoint`                   | Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation.&#xA;Options include:&#xA;`centerPosition:` `middle` or `top`                                            |
-| `zoomLevel`                   | Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.   |
+| **Options**                   |                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `address`                     | The actual address of the location.&#xA;Valid formats are: &#xA;- **address string - city, street**, e.g.&#xA; `address: 20 W 34th St., New York, NY 10001, USA`&#xA;or in an expression calling a datasource `=@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`&#xA;- **latitude and longitude**, e.g. &#xA;`address: 40.759412, -73.912306` |
+| `is AnimationDisabled`        | `true` or `false` to determine if map animation is disabled.                                                                                                                                                                                                                                                                                                                                                 |
+| `isFollowUserLocationEnabled` | When enabled, the `viewPoint` will be centred on the user’s real-time location.                                                                                                                                                                                                                                                                                                                              |
+| `markers`                     | Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map. See *multi-markers* code example below. &#xA;You can use an expression to provide the latitude and longitude points from a datasource. See *multi-datasource* code example below.                                                                                                             |
+| `marker-item`                 | `anchorTo:` - Anchor the marker to a specific point, either `bottom-center` or `center`<br />`radius` - Display a circle around the marker. In the radius you can configure the `color`, `unit` (Default is kilometres)<br />`icon` - Choose an icon for the markers. You can style the icon `color`, `emphasis`, `type`, `shape` and `size`.                                                                |
+| `paths`                       | Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map.&#xA;See *path-multi-points* code example below.                                                                                                                                                                                          |
+| `viewPoint`                   | Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation.&#xA;Options include:&#xA;`centerPosition:` `middle` or `top`                                                                                                                                                                                                                       |
+| `zoomLevel`                   | Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.                                                                                                                                                                                                                                                   |
+
+:::CodeblockTabs
+multiple-markers
+
+```yaml
+- type: component.location
+    options:
+      markers:
+        data:
+        - latitude: 40.759412
+          longitude: -73.912306
+        - latitude: 40.745368
+          longitude: -74.057189
+        - latitude: 40.76479429122513
+          longitude: -73.97429291692742 
+```
+
+markers-datasource
+
+```yaml
+markers:
+   data: |
+      =@ctx.datasources.jobs.{"lng": $number($.lng), "lat": $number($.lat)}
+```
+
+path-multi-points
+
+```yaml
+ - type: component.location
+    options:
+      paths:
+        data:
+        - latitude: 40.759412
+          longitude: -73.912306
+        - latitude: 40.803495
+          longitude: -73.950694
+      address: =@ctx.datasources.location[0].address
+```
+:::
 
 | **Action**                                             |                                                                                                                                                                                                                                  |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
