@@ -151,11 +151,11 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-In this example, the web-view component is used to make notes on a job. It is configured in a `jig.full-screen` to display `content` from a datasource. The `isEditable` property is set to `true`, allowing the text in the web-view to be edited. An `execute-entity` action ensures the updated text is saved to the database.
+In this example, the web-view component is used to make notes on a job. It is configured in a `jig.full-screen` to display `content` from a datasource. The `isEditable` property is set to `true`, allowing the text in the web-view to be edited. An `execute-entity` action ensures the updated HTML is saved to the database.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Q9G5hA0487h_W4-I4mfAZ-20250422-104224.gif" size="66" position="center" caption="Editable web-view" alt="Editable web-view" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Q9G5hA0487h_W4-I4mfAZ-20250422-104224.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4yhXXgCmRFjbhuG8YuyU--20250519-104335.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4yhXXgCmRFjbhuG8YuyU--20250519-104335.gif" size="66" width="681" height="1377" position="center" caption="Editable web-view" alt="Editable web-view"}
 :::
 ::::
 
@@ -169,14 +169,22 @@ icon: notes-add
 
 # Add the web-view component using the content property. 
 # Set the isEditable property to true,
-# to allow the text in the view to be edited by tapping the component.     
+# to allow the HTML in the view to be edited by tapping the component.     
 component: 
   type: component.web-view
   instanceId: edit-notes
   options:
     isEditable: true
-    content: =@ctx.datasources.work-notes.job-notes
-# Configure an action to save the edited text to the database.       
+    # Add HTML to the content, the HTML will be editable when tapped.
+    content: |
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notes</title>
+        <p><i>Add your notes here</i></p> 
+# Configure an action to save the edited HTML to the database.       
 actions:
     - children:
         - type: action.execute-entity
@@ -185,10 +193,21 @@ actions:
             provider: DATA_PROVIDER_DYNAMIC
             entity: default/jobs
             method: update
-            goBack: previous
+            goBack: stay
             data:
               id: =@ctx.datasources.work-notes.id
               job-notes: =@ctx.components.edit-notes.state.content
+            # Confirm that the notes were saved successfully.  
+            onSuccess:  
+              type: action.info-modal
+              options:
+                modal:
+                  element: 
+                    type: icon
+                    icon: check-2-alternate
+                    color: positive
+                  title: Notes added successfully
+                  buttonText: Exit
 ```
 
 datasource
