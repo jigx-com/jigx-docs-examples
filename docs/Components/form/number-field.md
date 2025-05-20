@@ -12,6 +12,10 @@ The component can only be used in a [jig.default](<./../../Jig Types/jig_default
 :::
 ::::
 
+:::hint{type="info"}
+The `number-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
+:::
+
 ## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.

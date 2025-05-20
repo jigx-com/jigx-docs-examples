@@ -4,6 +4,10 @@ Dropdown fields in forms streamline the user experience by offering a compact, s
 
 ::Image[]{alt="Dropdown preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Opq5FI49WK91cD2RFcpO_dropdown.png" size="90" caption="Dropdown preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Opq5FI49WK91cD2RFcpO_dropdown.png"}
 
+:::hint{type="info"}
+The `dropdown` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
+:::
+
 ## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
@@ -34,14 +38,14 @@ Some properties are common to all components, see [Common component properties](
 | `style`                 | The following property settings are available:&#xA;- `flex` - Flex property if rendered inside row.&#xA;- `isBusy` - Displays spinner on right side of field. It removes any  configured icon.&#xA;- `isDisabled` - disables the dropdown preventing the dropdown-items popup from displaying.&#xA;- `isPositive` - a green icon displays on the right of the dropdown field.&#xA;More than one can be true. It will be evaluated based on priority. |
 | `value`                 | The value to show in the dropdown, e.g. you can configure the first dropdown-item for be selected by default when the form loads. For example, `value: =@ctx.datasources.employees-static[0].firstName `                                                                                                                                                                                                                                             |
 
-| **Other options for dropdown-item** |                                                                                                                                                                   |
-| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `description`                       | Description of steps displayed on list items as subtitles.                                                                                                        |
-| `instanceId`                        | The unique identifier for the dropdown-item component.                                                                                                            |
-| `leftElement`                       | The following elements can be added in the dropdown component, which will display on the left of the dropdown-item `title`:&#xA;`avatar`<br />`icon`<br />`image` |
-| `subtitle`                          | The subtitle for the dropdown item.                                                                                                                               |
-| `title`                             | Title displayed on list item. You can add text, expressions or Text with Format in the field. Text with format includes, currency, decimal, dateTime and more.    |
-| `value`                             | The value of the item. It has to be unique for each item and is usually the ID of the record from the datasource.                                                 |
+| **Other options for dropdown-item** |                                                                                                                                                                 |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `description`                       | Description of steps displayed on list items as subtitles.                                                                                                      |
+| `instanceId`                        | The unique identifier for the dropdown-item component.                                                                                                          |
+| `leftElement`                       | The following elements can be added in the dropdown component, which will display on the left of the dropdown-item `title`:&#xA;`avatar`&#xA;`icon`&#xA;`image` |
+| `subtitle`                          | The subtitle for the dropdown item.                                                                                                                             |
+| `title`                             | Title displayed on list item. You can add text, expressions or Text with Format in the field. Text with format includes, currency, decimal, dateTime and more.  |
+| `value`                             | The value of the item. It has to be unique for each item and is usually the ID of the record from the datasource.                                               |
 
 | **Actions** |                                                                                                                                            |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |

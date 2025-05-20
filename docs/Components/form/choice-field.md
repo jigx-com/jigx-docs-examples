@@ -4,6 +4,10 @@ The choice-field component allows you to select one or more options from a prede
 
 **Benefit:** Using the choice-field component over the [checkbox](./checkbox.md) component eliminates the need to use numerous checkboxes and complex expressions to achieve the same outcome.
 
+:::hint{type="info"}
+The `choice-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
+:::
+
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-bBqh_WETCy6CgvD8nBr8c-20240826-164834.png" size="80" position="center" caption="Choice-field" alt="Choice-field" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-bBqh_WETCy6CgvD8nBr8c-20240826-164834.png"}
 
 ## Configuration options
@@ -42,10 +46,10 @@ Some properties are common to all components, see [Common component properties](
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onChange`  | The action is triggered when the content in the `choice-field-item` is changed. Use IntelliSense (ctrl+space) to see the list of available actions. |
 
-| **State Configuration**  | **Key**              | **Notes**                                                         |
-| ------------------------ | -------------------- | ----------------------------------------------------------------- |
-| `=@ctx.component.state.` | selected&#xA;value   | - State is the variable of the component.                         |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now | * Global state variable that can be used throughout the solution. |
+| **State Configuration**  | **Key**              | **Notes**                                                          |
+| ------------------------ | -------------------- | ------------------------------------------------------------------ |
+| `=@ctx.component.state.` | selected&#xA;value   | - State is the variable of the component.                          |
+| `=@ctx.solution.state.`  | activeItemId&#xA;now | \* Global state variable that can be used throughout the solution. |
 
 ## Considerations
 

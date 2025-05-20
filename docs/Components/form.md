@@ -4,19 +4,19 @@ Using forms in mobile apps enables users to effortlessly input and submit inform
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This component contains the following components:
+The following components are available in a form:
 
 1. [avatar-field](./form/avatar-field.md)
-2. [choice-field](./form/choice-field.md)
-3. [text-field](./form/text-field.md)
-4. [media-field](./form/media-field.md)
-5. [email-field](./form/email-field.md)
-6. [number-field](./form/number-field.md)
-7. [dropdown](./form/dropdown.md)
-8. [checkbox](./form/checkbox.md)
-9. [date-picker](./form/date-picker.md)
-10. [signature-field](./form/signature-field.md)
-11. [section](./entity/section.md)
+2. [checkbox](./form/checkbox.md)&#x20;
+3. [choice-field](./form/choice-field.md)
+4. [date-picker](./form/date-picker.md)&#x20;
+5. [dropdown](./form/dropdown.md)&#x20;
+6. [duration-picker](./form/duration-picker.md)&#x20;
+7. [email-field](./form/email-field.md)&#x20;
+8. [media-field](./form/media-field.md)&#x20;
+9. [number-field](./form/number-field.md)&#x20;
+10. [signature-field](./form/signature-field.md)&#x20;
+11. [text-field](./form/text-field.md)&#x20;
 
 These extra components allow for the easy input and collection of data. Using forms, records in a database can be created, updated, or deleted based on user input information.
 :::
@@ -30,20 +30,20 @@ These extra components allow for the easy input and collection of data. Using fo
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`         | Define the content of the form. The following components can be used in the form:&#xA;- [avatar-field](./form/avatar-field.md)&#xA;- [choice-field](./form/choice-field.md) &#xA;- [checkbox](./form/checkbox.md)&#xA;- [date-picker](./form/date-picker.md)&#xA;- [dropdown](./form/dropdown.md)&#xA;- [email-field](./form/email-field.md)&#xA;- [field-row](./entity/field-row.md)&#xA;- [media-field](./form/media-field.md)&#xA;- [number-field](./form/number-field.md)&#xA;- [section](./entity/section.md)&#xA;- [signature-field](./form/signature-field.md)&#xA;- [text-field](./form/text-field.md) |
-| `instanceId`       | The unique identifier for the form.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `children`         | Define the content of the form. The following components can be used in the form:&#xA;- [avatar-field](./form/avatar-field.md)&#xA;- [choice-field](./form/choice-field.md) &#xA;- [checkbox](./form/checkbox.md)&#xA;- [date-picker](./form/date-picker.md)&#xA;- [dropdown](./form/dropdown.md)&#xA;- [duration-picker](./form/duration-picker.md) <br />-[email-field](./form/email-field.md)&#xA;- [field-row](./entity/field-row.md)&#xA;- [media-field](./form/media-field.md)&#xA;- [number-field](./form/number-field.md)&#xA;- [section](./entity/section.md)&#xA;- [signature-field](./form/signature-field.md)&#xA;- [text-field](./form/text-field.md) |
+| `instanceId`       | The unique identifier for the form.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 | **Other options**              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `isDiscardChangesAlertEnabled` | When set to `true` the modal window preventing accidental deletion of your data without saving will pop up. &#xA;                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `initialValues`                | Specify the data to be used as `initialValues` for fields in the form. Using the `reset-state` action with `initialValues` does not clear the form, it resets the form back to it's `initialValue`. &#xA;***Tip***: For `initialValues` on a [form](#) to function&#xA; `isDocument: true` in the datasource, this way you don't have to set it up in the individual components. It is set up in one place and the form will match the components to the column names of the datasource. See the example below for Form with initialValue. |
 
-| **State Configuration**  | **Key**                                   | **Notes**                                                         |
-| ------------------------ | ----------------------------------------- | ----------------------------------------------------------------- |
-| `=@ctx.component.state.` | data&#xA;isValid&#xA;isDirty&#xA;response | - State is the variable of the component.                         |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now                      | * Global state variable that can be used throughout the solution. |
+| **State Configuration**  | **Key**                                   | **Notes**                                                          |
+| ------------------------ | ----------------------------------------- | ------------------------------------------------------------------ |
+| `=@ctx.component.state.` | data&#xA;isValid&#xA;isDirty&#xA;response | - State is the variable of the component.                          |
+| `=@ctx.solution.state.`  | activeItemId&#xA;now                      | \* Global state variable that can be used throughout the solution. |
 
 ## Examples and code snippets
 

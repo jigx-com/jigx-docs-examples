@@ -12,6 +12,10 @@ The `email-field` component can only be used in a [jig.default](<./../../Jig Typ
 :::
 ::::
 
+:::hint{type="info"}
+The `email-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
+:::
+
 ## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
@@ -45,10 +49,10 @@ Some properties are common to all components, see [Common component properties](
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onChange`  | The action is triggered when the content in the email-field is changed. Use IntelliSense (ctrl+space) to see the list of available actions. |
 
-| **State Configuration**  | **Key**              | **Notes**                                                         |
-| ------------------------ | -------------------- | ----------------------------------------------------------------- |
-| `=@ctx.component.state.` | value                | - State is the variable of the component.                         |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now | * Global state variable that can be used throughout the solution. |
+| **State Configuration**  | **Key**              | **Notes**                                                          |
+| ------------------------ | -------------------- | ------------------------------------------------------------------ |
+| `=@ctx.component.state.` | value                | - State is the variable of the component.                          |
+| `=@ctx.solution.state.`  | activeItemId&#xA;now | \* Global state variable that can be used throughout the solution. |
 
 ## Examples and code snippets
 
