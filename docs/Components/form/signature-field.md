@@ -1,8 +1,20 @@
 # signature-field
 
+:::::VerticalSplit{layout="middle"}
+::::VerticalSplitItem
 Simply draw your signature on your mobile screen to approve and proceed. This component can only be used in a [jig.default](<./../../Jig Types/jig_default.md>) inside of a [form](./../form.md) component for the input of a signature. It provides the experience of creating, uploading, and saving your eSignature in a few easy steps.
 
+:::hint{type="info"}
+The `signature-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
+:::
+::::
+
+:::VerticalSplitItem
 ![Signature Field Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xFXGhidiImIpwwIhQy4kU_signature.png "Signature Field Preview")
+
+
+:::
+:::::
 
 ## Configuration options
 

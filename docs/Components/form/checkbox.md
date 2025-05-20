@@ -1,16 +1,20 @@
 # checkbox
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+:::::VerticalSplit{layout="middle"}
+::::VerticalSplitItem
 Checkboxes on mobile app forms offer a straightforward way to make selections, especially for multiple options, enhancing usability and interaction.
 
 The component is used in a [jig.default](<./../../Jig Types/jig_default.md>) inside of a [form](./../form.md) component and supports single- and multiple-selection options. The checkbox's initial checkbox status and required checkbox status can be set.
+
+:::hint{type="info"}
+The `checkbox` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 :::
+::::
 
 :::VerticalSplitItem
 ::Image[]{alt="Checkbox preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/C108AXi_xo5aRgmBnjo_9_checkboxes.png" size="90" caption="Checkbox preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/C108AXi_xo5aRgmBnjo_9_checkboxes.png"}
 :::
-::::
+:::::
 
 ## Configuration options
 
@@ -42,10 +46,10 @@ Some properties are common to all components, see [Common component properties](
 | `onChange`  | The action is triggered when the content in the `checkbox` is changed. Use IntelliSense (ctrl+space) to see the list of available actions. |
 | `onPress`   | `OnPress` action overwrites the main check / uncheck functionality.                                                                        |
 
-| **State Configuration**  | **Key**              | **Notes**                                                         |
-| ------------------------ | -------------------- | ----------------------------------------------------------------- |
-| `=@ctx.component.state.` | value                | - State is the variable of the component.                         |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now | * Global state variable that can be used throughout the solution. |
+| **State Configuration**  | **Key**              | **Notes**                                                          |
+| ------------------------ | -------------------- | ------------------------------------------------------------------ |
+| `=@ctx.component.state.` | value                | - State is the variable of the component.                          |
+| `=@ctx.solution.state.`  | activeItemId&#xA;now | \* Global state variable that can be used throughout the solution. |
 
 :::hint{type="info"}
 There's also the option to configure checkboxes as part of [entity-field](./../entity/entity-field.md) or [list-item](./../list/list-item.md).

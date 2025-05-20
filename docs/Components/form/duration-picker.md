@@ -12,6 +12,10 @@ It helps to ensure data consistency and ease of use, especially for workers in f
 :::
 ::::
 
+:::hint{type="info"}
+The `duration-picker` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
+:::
+
 ## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
@@ -32,19 +36,19 @@ Some properties are common to all components, see [Common component properties](
 | `isIgnored`             | When `true`, the field will be ignored when submitting the form and the content will not be stored.                                                                                                                                                                                                                                                                                                                                 |
 | `isOptionalLabelHidden` | If the field is optional you can turn off the "(optional)" label by setting this field to `true`. This property works in combination with `isRequired: false`.                                                                                                                                                                                                                                                                      |
 | `isRequired`            | Set to `true` when the duration-picker is required. Useful when you use it in form submission. Set to `false` the duration-picker is optional and will have (optional) in the label.                                                                                                                                                                                                                                                |
-| `minutes`               | Specify whether the duration-picker will use minutes or not.&#xA;`isEnabled` - `true` is the default, `false` disables the minute selector which is greyed out.<br />`step` - Determine the increments in which the minutes will be displayed. For example, an increment of 15 will display the minutes for selection as 15 and 30.                                                                                                 |
+| `minutes`               | Specify whether the duration-picker will use minutes or not.&#xA;`isEnabled` - `true` is the default, `false` disables the minute selector which is greyed out.&#xA;`step` - Determine the increments in which the minutes will be displayed. For example, an increment of 15 will display the minutes for selection as 15 and 30.                                                                                                  |
 | `nextProperty`          | Name of the property you want to focus next in the form when you use return/next on a keyboard.                                                                                                                                                                                                                                                                                                                                     |
-| `style`                 | The following property settings are available:&#xA;`flex` - Flex property if rendered inside row.<br />`isBusy` - Displays spinner on right side of field. It removes any icon.<br />`isDisabled` - disables the duration-picker preventing any time selection.<br />`isPositive` - a green icon displays on the right of the duration-picker.&#xA;More than one can be `true`. It will be evaluated based on priority.             |
+| `style`                 | The following property settings are available:&#xA;`flex` - Flex property if rendered inside row.&#xA;`isBusy` - Displays spinner on right side of field. It removes any icon.&#xA;`isDisabled` - disables the duration-picker preventing any time selection.&#xA;`isPositive` - a green icon displays on the right of the duration-picker.&#xA;More than one can be `true`. It will be evaluated based on priority.                |
 | `value`                 | The value that the duration-picker will output as its state. Specified in seconds, for example, 1800 for 30 mins.                                                                                                                                                                                                                                                                                                                   |
 
 | **Actions** |                                                                                                                                              |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onChange`  | The action is triggered when the time in the duration-picker is changed. Use IntelliSense (ctrl+space) to see the list of available actions. |
 
-| **State Configuration**  | **Key**               | **Notes**                                                                                                                                                            |
-| ------------------------ | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `=@ctx.component.state.` | value                 | State is the variable of the component.&#xA;When used in the `initialValue`, its set as a string.&#xA;When the value of the component changes, its set as a number.  |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now  | Global state variable that can be used throughout the solution.                                                                                                      |
+| **State Configuration**  | **Key**              | **Notes**                                                                                                                                                           |
+| ------------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `=@ctx.component.state.` | value                | State is the variable of the component.&#xA;When used in the `initialValue`, its set as a string.&#xA;When the value of the component changes, its set as a number. |
+| `=@ctx.solution.state.`  | activeItemId&#xA;now | Global state variable that can be used throughout the solution.                                                                                                     |
 
 ## Considerations
 
