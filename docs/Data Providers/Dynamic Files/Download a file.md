@@ -207,7 +207,7 @@ download-multiple-files
 ```
 :::
 
-## Download a file in Jigx management
+## Download a file in Jigx Management
 
 Files can be uploaded in Management by:
 
