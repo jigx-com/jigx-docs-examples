@@ -1,36 +1,32 @@
 ---
-title: Download a file
-slug: 1Z3R-rea
-createdAt: 2023-11-09T08:48:09.179Z
-updatedAt: 2025-05-21T06:57:52.827Z
+title: Upload a file
+slug: 8PWc-create-a
+createdAt: 2023-11-09T08:46:14.820Z
+updatedAt: 2025-05-20T13:29:49.005Z
 ---
 
-## Download a file in jig
+## Upload file in a jig
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example displays a department's expenses in a list. The expense receipt is downloaded by tapping the button to the right of the expense. A jig opens, displaying the receipt and its metadata.&#x20;
-To `download` the receipt to a `localPath`, the `execute-entity`'s `download` method is configured.
-A `go-to` action opens a jig that displays the downloaded file in an `image` component and the file's metadata in `entity-fields`.
+In this example, an expense claim form allows you to capture expense details and upload a file, such as a slip or invoice.
+
+The `media-field` is configured to accept `any` file type, with a `maximumFileSize` set to ensure files remain within acceptable limits. An `execute-entity` action creates the record in the datasource and links the uploaded file to the record by using the `create `method, with the `file` specified in the `localPath` property.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" size="66"  position="center" caption="Download files" alt="Download files"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uCb0bqIVvxwoDdMihP0My-20250519-074426.gif" size="66"  position="center" caption="Upload file" alt="Upload file"}
 :::
 ::::
 
 :::CodeblockTabs
-file-download-receipts.jigx
+file-create-expense.jigx
 
 ```yaml
-title: Department Expense list
-description: List of Expenses
-type: jig.list
+title: Expense Claim
+description: Expense
+type: jig.default
 
-inputs:
-  expenseId:
-    type: string 
-    
 header:
   type: component.jig-header
   options:
@@ -39,180 +35,84 @@ header:
       type: component.image
       options:
         source:
-          uri: https://cdn.pixabay.com/photo/2023/08/22/11/57/finance-8206242_1280.jpg
+          uri: https://cdn.pixabay.com/photo/2016/05/04/23/02/receipts-1372960_1280.jpg
 
-datasources:
-  expenses-ds:
-    type: datasource.sqlite
-    options:
-      provider: DATA_PROVIDER_DYNAMIC
-      entities:
-        - default/expenses
-      query: |
-        SELECT
-          id,
-          '$.expenseitem',
-          json_extract(file, '$.localPath') as localPath,
-          json_extract(file, '$.fileName')  as filename,
-          json_extract(file, '$.status') as status,
-          json_extract(file, '$.thumbnail.base64') as thumbnail
-        FROM [default/expenses]
-        ORDER BY '$.expenseitem'
-
-data: =@ctx.datasources.expenses-ds
-item:
-  type: component.list-item
+onFocus:
+  type: action.reset-state
   options:
-    title: =@ctx.current.item.expenseitem
-    subtitle: =@ctx.current.item.filename 
-    tags:
-      - text: =@ctx.current.item.status
-        color: color14  
-    leftElement:
-      element: avatar
-      text: ""
-      uri: |
-        =@ctx.current.item.thumbnail != null ? 'data:image/png;base64,' & @ctx.current.item.thumbnail :
-        @ctx.current.item.localPath != null ? @ctx.current.item.localPath
-    rightElement: 
-      element: button
-      title: View receipt
-      onPress: 
-        type: action.action-list
+    state: =@ctx.components.expense.state.data
+
+children:
+  - type: component.form
+    instanceId: expense
+    options:
+      isDiscardChangesAlertEnabled: false
+      children:
+        - type: component.text-field
+          instanceId: recordid
+          options:
+            label: recordid
+            isHidden: true
+            initialValue: =$uuid()
+        - type: component.field-row
+          options:
+            children:
+              - type: component.text-field
+                instanceId: expenseitem
+                options:
+                  label: Expense detail
+              - type: component.number-field
+                instanceId: expenseamount
+                options:
+                  label: Amount
+                  format:
+                    numberStyle: currency
+                    currency: USD
+        # Use the media field to select the file to be uploaded.           
+        - type: component.media-field
+          instanceId: expenseimage
+          options:
+            label: Expense receipt
+            mediaType: any
+            maximumFileSize: =500 * 1024 * 1024
+            isMultiple: false
+
+actions:
+  - children:
+      - type: action.action-list
         options:
+          title: Submit
           isSequential: true
           actions:
-            # Configure the download method to download the file,
-            # to a local cache, use the current item's id.
             - type: action.execute-entity
               options:
                 provider: DATA_PROVIDER_DYNAMIC
                 entity: default/expenses
-                method: download
+                # Configure the create method with a file property,
+                # the file will be linked to the record.
+                method: create
+                goBack: previous
                 data:
-                    id: =@ctx.current.item.id
-            # Configure a go-to action to view the file and file metadata.        
-            - type: action.go-to
-              options:
-                linkTo: expense-receipt-details
-                inputs: 
-                  expenseId: =@ctx.current.item.id
-            
-actions:
-  - children:
-      - type: action.go-to
-        options:
-          title: Create Expense
-          linkTo: files-create-expense
-```
-
-expense-receipt-details.jigx
-
-```yaml
-title: Receipt Details
-type: jig.default
-
-inputs:
-  expenseId:
-    type: string  
-
-datasources:
-  receipt-ds:
-    type: datasource.sqlite
-    options:
-      provider: DATA_PROVIDER_DYNAMIC
-      entities:
-        - default/expenses
-      query: |
-        SELECT
-          id,
-          '$.expenseitem',
-          '$.comments',
-          json_extract(file, '$.localPath') as localPath,
-          json_extract(file, '$.fileName')  as fileName,
-          json_extract(file, '$.filepath')  as filepath,
-          json_extract(file, '$.contentType') as contentType,
-          json_extract(file, '$.contentLength') as contentLength,
-          json_extract(file, '$.thumbnail.base64') as thumbnailBase64,
-          json_extract(file, '$.thumbnail.contentType') as thumbnailContentType,
-          json_extract(file, '$.thumbnail.contentLength') as thumbnailContentLength
-        FROM [default/expenses]
-        WHERE id = @expenseId
-      queryParameters:
-        expenseId: =@ctx.jig.inputs.expenseId
-children:  
-  # Configure the image component to use the localpath,
-  # to display the downloaded file.      
-  - type: component.image
-    options:
-      source:
-        uri: =@ctx.datasources.receipt-ds.localPath
-  # Configure entity fields to view the file metadata.  
-  - type: component.entity
-    options:
-      children:
-        - type: component.entity-field
-          options:
-            label: filename
-            value: =@ctx.datasources.receipt-ds.fileName
-        - type: component.entity-field
-          options:
-            label: contentLength
-            value: =@ctx.datasources.receipt-ds.contentLength
-        - type: component.entity-field
-          options:
-            label: contentType
-            value: =@ctx.datasources.receipt-ds.contentType
-        - type: component.entity-field
-          options:
-            label: localPath
-            value: =@ctx.datasources.receipt-ds.localPath
-        - type: component.entity-field
-          options:
-            label: thumbnailContentLength
-            value: =@ctx.datasources.receipt-ds.thumbnailContentLength
-        - type: component.entity-field
-          options:
-            label: thumbnailContentType
-            value: =@ctx.datasources.receipt-ds.thumbnailContentType
+                  id: =@ctx.jig.components.recordid.state.value
+                  expenseitem: =@ctx.jig.components.expenseitem.state.value
+                  expenseamount: =@ctx.components.expenseamount.state.value
+                file: 
+                  localPath: =@ctx.components.expenseimage.state.value
 ```
 :::
 
-## Downloading multiple files
+In Management the record is created in the **expense** dynamic data table and the file is linked to the record. The file and metadata is displayed in the file tab of the record. The file thumbnail is displayed in the system file column (use column settings to set the column to visible).
 
-In scenarios where multiple files must be downloaded, use the execute-entities action and in the data configure the data with an expression using the `$map` JSONATA [Path Operators](docId:2mRsMRwOOFLr70HBAUWeC).
+![Files in Management](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--_meerV3mLUQB6DlK4OWi-20250519-075245.gif "Files in Management")
 
-:::CodeblockTabs
-download-multiple-files
-
-```yaml
- actions:
-  - children:
-      # Configure the execute-entities for multiple file downloads.
-      - type: action.execute-entities
-        options:
-          title: Download All
-          provider: DATA_PROVIDER_DYNAMIC
-          entity: default/expenses
-          # Use the download method. 
-          method: download
-          # Configure the data using the map path operator,
-          # to download multiple files.
-          data: |
-            =$map(@ctx.datasources.receipt-ds.id, function($v, $i, $a) {
-              $.{
-                "id": $v
-                }
-              })
-```
-:::
-
-## Download a file in Jigx management
+## Upload a file in Jigx Management
 
 Files can be uploaded in Management by:
 
 1. Log in to [https://manage.jigx.com](https://manage.jigx.com).
-2. Browse to the required solution's **data** tab a select the record containing the file to be downloaded.
-3. Select the **File** tab in the Edit record pane.
-4. To download the file use the **Download file** link at the top of the record.
+2. Browse to the required solution's **data** tab a select the record you want to add a file too, or create a new record.
+3. Select the **File** tab, and add the file.
+4. Add a **Name** for the file and include the file extension. If no file name is specified the name of the file is used.
+5. Click the **Save** button.
+6. The **status** of the file upload is shown in the top left corner of the File tab.
 
