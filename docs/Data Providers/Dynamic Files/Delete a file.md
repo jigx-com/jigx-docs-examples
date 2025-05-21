@@ -19,7 +19,7 @@ In this example, a list of expenses is displayed with the following:
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JG8sn10_wFTyXLGp_QSAS-20250519-125130.gif" position="center" caption="Delete record or file" alt="Delete record or file"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JG8sn10_wFTyXLGp_QSAS-20250519-125130.gif" size="66" position="center" caption="Delete record or file" alt="Delete record or file"}
 :::
 ::::
 
