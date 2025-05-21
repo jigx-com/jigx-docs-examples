@@ -6,7 +6,11 @@
     - [Reading Dynamic Data](<Data Providers/Dynamic Data/Reading Dynamic Data.md>)
     - [Updating Dynamic Data](<Data Providers/Dynamic Data/Updating Dynamic Data.md>)
     - [Updating Dynamic Data](<Data Providers/Dynamic Data/Deleting Dynamic Data.md>)
-    
+  - [Dynamic Files](Data%20Providers/Dynamic%20Files.md) 
+    - [Upload a file](Data%20Providers/Dynamic%20Files/Upload%20a%20file.md)
+    - [Download a file](Data%20Providers/Dynamic%20Files/Download%20a%20file.md)
+    - [Delete a file](Data%20Providers/Dynamic%20Files/Delete%20a%20file.md)
+    - [Status of a file](Data%20Providers/Dynamic%20Files/Status%20of%20a%20file.md) 
   - [Microsoft Azure SQL](<Data Providers/Microsoft Azure SQL.md>)
     - [Microsoft Azure SQL](<Data Providers/Microsoft Azure SQL/Database Scripts.md>)
     - [List customers (SELECT)](<Data Providers/Microsoft Azure SQL/List customers _SELECT_.md>)
