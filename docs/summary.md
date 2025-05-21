@@ -6,6 +6,7 @@
     - [Reading Dynamic Data](<Data Providers/Dynamic Data/Reading Dynamic Data.md>)
     - [Updating Dynamic Data](<Data Providers/Dynamic Data/Updating Dynamic Data.md>)
     - [Updating Dynamic Data](<Data Providers/Dynamic Data/Deleting Dynamic Data.md>)
+    
   - [Microsoft Azure SQL](<Data Providers/Microsoft Azure SQL.md>)
     - [Microsoft Azure SQL](<Data Providers/Microsoft Azure SQL/Database Scripts.md>)
     - [List customers (SELECT)](<Data Providers/Microsoft Azure SQL/List customers _SELECT_.md>)
