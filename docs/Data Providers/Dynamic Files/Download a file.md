@@ -15,7 +15,7 @@ A `go-to` action opens a jig that displays the downloaded file in an `image` com
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" position="center" caption="Download files" alt="Download files"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" size="66" position="center" caption="Download files" alt="Download files"}
 :::
 ::::
 

@@ -9,13 +9,13 @@ updatedAt: 2025-05-21T06:57:52.827Z
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This example displays a department's expenses in a list. The expense receipt is downloaded by tapping the button to the right of the expense. A jig opens, displaying the receipt and its metadata.
+This example displays a department's expenses in a list. The expense receipt is downloaded by tapping the button to the right of the expense. A jig opens, displaying the receipt and its metadata.&#x20;
 To `download` the receipt to a `localPath`, the `execute-entity`'s `download` method is configured.
 A `go-to` action opens a jig that displays the downloaded file in an `image` component and the file's metadata in `entity-fields`.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" position="center" caption="Download files" alt="Download files"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" size="66"  position="center" caption="Download files" alt="Download files"}
 :::
 ::::
 
