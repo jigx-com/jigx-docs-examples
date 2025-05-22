@@ -284,11 +284,11 @@ actions:
       - type: action.go-to
         options:
           title: Options
-          linkTo: options
+          linkTo: options-action
           isModal: true
 ```
 
-options.jigx
+options-action.jigx
 
 ```yaml
 # Jig that opens in the bottomSheet.
@@ -603,7 +603,7 @@ bottomSheet:
     - 40% # First snap point at 40% of screen height
 # Specify the jig that will open in the bottomSheet.        
   children:
-    - jigId: options   
+    - jigId: options-action   
 
 # Configuring a bottomSheet requires that the go-to action be set,
 # with the same jig name as in the jigId specified in the linkTo property.
@@ -614,11 +614,11 @@ actions:
       - type: action.go-to
         options:
           title: Booking options
-          linkTo: options
+          linkTo: options-action
           isModal: true
 ```
 
-options.jigx
+options-action.jigx
 
 ```yaml
 # Jig that opens in the bottomSheet.
@@ -795,7 +795,7 @@ actions:
       - type: action.go-to
         options:
           title: Options
-          linkTo: options
+          linkTo: options-action
           isModal: true
 ```
 
@@ -1290,10 +1290,10 @@ children:
     
 bottomSheet:
 # Set the first bottomSheet to open by default when the parent jig loads.
-  initialValue: options
+  initialValue: options-bookings
   children:
 # Specify the two jigs that will open in the bottomSheet.  
-    - jigId: options
+    - jigId: options-bookings
 # Local bottomsheet properties.
 # Configure each bottomSheet jig with its own individual properties,
 # this ensures the bottomSheet renders correctly for each jig in the bottomSheet.      
@@ -1319,11 +1319,11 @@ actions:
 # In the options.jigx file,
 # set the go-to action for the second bottomsheet jig.        
           title: Booking options
-          linkTo: options
+          linkTo: options-bookings
           isModal: true 
 ```
 
-options.jix
+options-bookings.jigx
 
 ```yaml
 # First jig that opens in the bottomSheet.
