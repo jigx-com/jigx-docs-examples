@@ -1,14 +1,8 @@
 # jig.table
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
 The table jig displays structured data in rows and columns, allowing users to view and interact with multiple records within the app.
-:::
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HQa4y6l2wh5CVhWpfLJF5-20250414-094024.png" size="60" position="center" caption="Table jig" alt="Table jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HQa4y6l2wh5CVhWpfLJF5-20250414-094024.png"}
-:::
-::::
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a64VzmoGUKu3y7C4X9jSH-20250522-070201.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a64VzmoGUKu3y7C4X9jSH-20250522-070201.png" size="80" width="3532" height="2496" position="center" caption="Table jig" alt="Table jig"}
 
 ## Configuration options
 
