@@ -1,9 +1,4 @@
----
-title: Delete a file
-slug: rM3j-delete
-createdAt: 2023-11-09T08:51:11.634Z
-updatedAt: 2025-05-20T13:29:54.744Z
----
+# Delete a file
 
 ## Delete a file in a jig
 
@@ -14,12 +9,12 @@ In this example, a list of expenses is displayed with the following:
 - The `subtitle` displays the `filename`.
 - A `label` is configured with `color` and text to display the status of the file.
 - A `left swipeable` action is configured with two actions:
-  - The first deletes the entire record in the database using the `execute-entity` action with the `delete` method.
   - The second only deletes the file associated with the record using the `execute-entity` action with the `update` method and the file property set to `null`.
+  - The second deletes the entire record in the database using the `execute-entity` action with the `delete` method.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JG8sn10_wFTyXLGp_QSAS-20250519-125130.gif" size="66" position="center" caption="Delete record or file" alt="Delete record or file"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JG8sn10_wFTyXLGp_QSAS-20250519-125130.gif" size="66" position="center" caption="Delete record or file" alt="Delete record or file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JG8sn10_wFTyXLGp_QSAS-20250519-125130.gif"}
 :::
 ::::
 
@@ -152,9 +147,10 @@ In Management the *Hotel accomodation* record is deleted in the **expense** dyna
 
 ## Delete a file in Jigx Management
 
-Files can be deleted in Management by:
+Files can be deleted in Management by following these steps:
 
 1. Log in to [https://manage.jigx.com](https://manage.jigx.com).
-2. Browse to the required solution's **data** tab a select the record containing the file to be deleted.
+2. Browse to the required solution's **data** tab and select the record containing the file to be deleted.
 3. Select the **File** tab, and click the **x** next to file's thumbnail.
-   **Important:** Clicking the Delete button at the bottom of the Edit record pane deletes the entire record and file.
+   **Caution:** Clicking the *Delete* button at the bottom of the Edit record pane deletes the entire record and file.
+

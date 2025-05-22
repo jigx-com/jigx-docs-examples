@@ -1,9 +1,4 @@
----
-title: Download a file
-slug: 1Z3R-rea
-createdAt: 2023-11-09T08:48:09.179Z
-updatedAt: 2025-05-21T06:57:52.827Z
----
+# Download a file
 
 ## Download a file in jig
 
@@ -15,7 +10,7 @@ A `go-to` action opens a jig that displays the downloaded file in an `image` com
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" size="66" position="center" caption="Download files" alt="Download files"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" size="66" position="center" caption="Download files" alt="Download files" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif"}
 :::
 ::::
 
@@ -180,7 +175,7 @@ children:
 
 ## Downloading multiple files
 
-In scenarios where multiple files must be downloaded, use the execute-entities action and in the data configure the data with an expression using the `$map` JSONATA [Path Operators](docId:2mRsMRwOOFLr70HBAUWeC).
+In scenarios where multiple files must be downloaded, use the `execute-entities` action. In the `data` property, configure an expression using the `$map` JSONATA [Path Operators](docId:2mRsMRwOOFLr70HBAUWeC) to handle multiple entries.
 
 :::CodeblockTabs
 download-multiple-files
@@ -209,10 +204,10 @@ download-multiple-files
 
 ## Download a file in Jigx Management
 
-Files can be uploaded in Management by:
+Files can be uploaded in Management by following these steps:
 
 1. Log in to [https://manage.jigx.com](https://manage.jigx.com).
-2. Browse to the required solution's **data** tab a select the record containing the file to be downloaded.
+2. Browse to the required solution's **data** tab and select the record containing the file to be downloaded.
 3. Select the **File** tab in the Edit record pane.
 4. To download the file use the **Download file** link at the top of the record.
 
