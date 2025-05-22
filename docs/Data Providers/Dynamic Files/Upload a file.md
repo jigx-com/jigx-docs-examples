@@ -1,9 +1,4 @@
----
-title: Upload a file
-slug: 8PWc-create-a
-createdAt: 2023-11-09T08:46:14.820Z
-updatedAt: 2025-05-20T13:29:49.005Z
----
+# Upload a file
 
 ## Upload file in a jig
 
@@ -15,7 +10,7 @@ The `media-field` is configured to accept `any` file type, with a `maximumFileSi
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uCb0bqIVvxwoDdMihP0My-20250519-074426.gif" size="66"  position="center" caption="Upload file" alt="Upload file"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uCb0bqIVvxwoDdMihP0My-20250519-074426.gif" size="66" position="center" caption="Upload file" alt="Upload file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uCb0bqIVvxwoDdMihP0My-20250519-074426.gif"}
 :::
 ::::
 
@@ -107,10 +102,10 @@ In Management the record is created in the **expense** dynamic data table and th
 
 ## Upload a file in Jigx Management
 
-Files can be uploaded in Management by:
+Files can be uploaded in Management by following these steps:
 
 1. Log in to [https://manage.jigx.com](https://manage.jigx.com).
-2. Browse to the required solution's **data** tab a select the record you want to add a file too, or create a new record.
+2. Browse to the required solution's **data** tab and select the record you want to add a file too, or create a new record.
 3. Select the **File** tab, and add the file.
 4. Add a **Name** for the file and include the file extension. If no file name is specified the name of the file is used.
 5. Click the **Save** button.
