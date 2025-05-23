@@ -24,6 +24,10 @@ This action lets you immediately open the media picker, enabling you to capture 
 | `=@ctx.actions.instanceId.outputs.` | newItems     | string\[]&#xA;Used for newly added items that were successfully uploaded.         |
 | `=@ctx.actions.instanceId.outputs.` | invalidItems | string\[]&#xA;Used for options that are invalid or failed to upload successfully. |
 
+## Considerations
+
+- Files captured using the `media-field` component can be saved to [Dynamic Files](<./../Data Providers/Dynamic Files.md>) by assigning them to the `file` property of a dynamic data entity, enabling seamless upload and storage in Amazon S3.
+
 ## Examples and code snippets
 
 ::::ExpandableHeading
