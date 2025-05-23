@@ -88,7 +88,6 @@ actions:
                 method: create
                 goBack: previous
                 data:
-                  id: =@ctx.jig.components.recordid.state.value
                   expenseitem: =@ctx.jig.components.expenseitem.state.value
                   expenseamount: =@ctx.components.expenseamount.state.value
                 file: 

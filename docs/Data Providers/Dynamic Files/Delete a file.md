@@ -9,7 +9,7 @@ In this example, a list of expenses is displayed with the following:
 - The `subtitle` displays the `filename`.
 - A `label` is configured with `color` and text to display the status of the file.
 - A `left swipeable` action is configured with two actions:
-  - The second only deletes the file associated with the record using the `execute-entity` action with the `update` method and the file property set to `null`.
+  - The first only deletes the file associated with the record using the `execute-entity` action with the `update` method and the file property set to `null`.
   - The second deletes the entire record in the database using the `execute-entity` action with the `delete` method.
 :::
 
@@ -62,15 +62,8 @@ item:
       uri: |
         =@ctx.current.item.thumbnail != null ? 'data:image/png;base64,' & @ctx.current.item.thumbnail :
         @ctx.current.item.localPath != null ? @ctx.current.item.localPath
-          
-    onPress:
-      type: action.go-to
-      options:
-        linkTo: expense-item-comp
-        inputs:
-          expenseId: =@ctx.current.item.id
    # Configure a left swipeable action with two actions, 
-   # the first deletes the entire record inthe database.
+   # the first deletes the entire record in the database.
    # The second only deletes the file associated with the record.      
     swipeable:
       left:
@@ -92,7 +85,7 @@ item:
           color: warning
           onPress: 
             # Second action only deletes the file. 
-            # The recors still exists. 
+            # The records still exists. 
             type: action.execute-entity
             options:
               provider: DATA_PROVIDER_DYNAMIC
@@ -137,7 +130,6 @@ datasources:
           json_extract(file, '$.thumbnail.base64') as thumbnail,
           json_extract(file, '$.thumbnail.contentType'),
           json_extract(file, '$.thumbnail.contentLength')
-
         FROM [default/expenses]
         ORDER BY '$.expenseitem'
 ```

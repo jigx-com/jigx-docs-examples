@@ -10,7 +10,7 @@ The `media-field` component can be used independently or within a `form` compone
 
 :::hint{type="warning"}
 - `media-field` can only be used in [jig.default](<./../../Jig Types/jig_default.md>) or inside a [form](./../form.md) component.
-- The `media-field` requires a data source to store the files, you can configure one of the [Data Providers](<./../../Data Providers.md>) for this.
+- The `media-field` requires a data source to store the files, you can configure one of the [Data Providers](<./../../Data Providers.md>) for this, or store the image using [Dynamic files]().
 - [Conversions](#) allow you to determine the format the files are stored in and  returned in.
 - Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K.
 :::
@@ -44,6 +44,7 @@ Some properties are common to all components, see [Common component properties](
 - An image, video, or file can be reference for upload from a data source.
 - When using the `intialValue` property to display a media file be aware that uploading media from Android and trying to read it in iOS and vice versus is not possible as it cannot display the image due to the local-uri path. When a media-file cannot be viewed an icon with the file's title is displayed. Use [conversions ](#) to base64 to store files.
 - When uploading multiple files, by default only three files are displayed in the media-field. If there are more than three files for upload the third file is overlayed with a + and the number of files, e.g. +2 and the number of items displays in the top right-hand corner of the media-field.
+- Files captured using the `media-field` component can be saved to [Dynamic Files](<./../../Data Providers/Dynamic Files.md>) by assigning them to the `file` property of a dynamic data entity, enabling seamless upload and storage in Amazon S3.
 
 ## Examples and code snippets
 
