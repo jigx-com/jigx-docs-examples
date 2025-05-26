@@ -16,10 +16,10 @@ The summary is fixed and displays even when the screen is scrolled. Make the sum
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `layout`           | There are three types to choose from:&#xA;1\) `default` - used to display information. This is the default layout, allowing you to specify what must be shown.&#xA;2\) `cart` - useful for an online shopping app to show the number of items in a cart. The `value` is shown to the right of the `title`.<br />3) `counter` - useful for showing a count, for example, the number of sales made in a month. The `value` is shown to the left of the `title`.  |
-| `title`            | The main text to display on the component.                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `layout`           | There are three types to choose from:&#xA;1\) `default` - used to display information. This is the default layout, allowing you to specify what must be shown.&#xA;2\) `cart` - useful for an online shopping app to show the number of items in a cart. The `value` is shown to the right of the `title`.&#xA;3) `counter` - useful for showing a count, for example, the number of sales made in a month. The `value` is shown to the left of the `title`. |
+| `title`            | The main text to display on the component.                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 :::Iframe{code="<be />"}
 
@@ -46,6 +46,11 @@ Some properties are common to all components, see [Common component properties](
 - Only numbers can be shown in the `value` property.
 - If the `value` property exceeds 100 a default 99+ will be displayed in the property.
 - Enhance the usability of your jig and make it more efficient by using the summary component along with an [action](./../Actions.md).
+- **Working with Parent and Child Actions and Summaries:**
+  &#x20;When configuring `actions` or `summary` buttons across parent and child jigs, the following behavior applies:
+  - If both the parent and child jigs have an `action` or `summary` configured, the child’s configuration takes precedence and overrides the parent’s.
+  - If only the parent has an `action` or `summary`, it automatically applies to the child.
+  - If only the child has an `action` or `summary`, it is used in the parent jig as well.
 
 ## Examples and code snippets
 
@@ -69,15 +74,34 @@ The full example is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/ma
 summary
 
 ```yaml
+title: Products
+type: jig.list
+
+# Add the summary showing an icon with default layout.  
 summary:
   children:
     type: component.summary
-    options: 
-      layout: default
+    options:
       title: Your cart is empty
+      layout: default
       leftIcon:
         element: icon
         icon: shopping-cart-empty-1
+        
+data: =@ctx.datasources.products
+item:
+  type: component.product-item
+  options:
+    title: =@ctx.current.item.title
+    discount: =@ctx.current.item.discount
+    image:
+      uri: =@ctx.current.item.uri
+    price:
+      format:
+        numberStyle: currency
+      value: =@ctx.current.item.price
+    tag: =@ctx.current.item.tag
+
 ```
 :::
 :::::
@@ -102,32 +126,50 @@ The full example of the summary type: cart using expander is on [GitHub](https:/
 summary-cart-product-item
 
 ```yaml
+title: Products
+type: jig.list
+
+# Add the summary to show there are two products available using a cart layout.  
 summary:
   children:
     type: component.summary
-    options: 
-      layout: cart
+    options:
       title: "Items in cart:"
+      layout: cart
       value: 2
       
 data: =@ctx.datasources.products
-item: 
+item:
   type: component.product-item
   options:
     title: =@ctx.current.item.title
+    discount: =@ctx.current.item.discount
     image:
       uri: =@ctx.current.item.uri
-    tag: =@ctx.current.item.tag
-    price: 
-      value: =@ctx.current.item.price
+    price:
       format:
         numberStyle: currency
-    discount: =@ctx.current.item.discount
+      value: =@ctx.current.item.price
+    tag: =@ctx.current.item.tag
 ```
 
 summary-cart-expander
 
 ```yaml
+title: Flights
+type: jig.list
+
+header:
+  type: component.jig-header
+  options:
+    height: medium
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://images.unsplash.com/photo-1490430657723-4d607c1503fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZmxpZ2h0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60
+ 
+# Add the summary to show there are three flight available using a cart layout. 
 summary:
   children:
     type: component.summary
@@ -135,7 +177,7 @@ summary:
       layout: cart
       title: "Flights found:"
       value: 3
-      
+        
 data: =@ctx.datasources.flight-schedule-static
 item:
   type: component.expander
@@ -199,7 +241,7 @@ item:
         options:
           viewPoint:
             centerPosition: middle
-            address: =@ctx.current.item.to
+            address: =@ctx.current.item.to         
 ```
 
 datasources 1 (static)
@@ -312,55 +354,73 @@ The full example of the summary type: counter using expander is on [GitHub](http
 summary-counter-product-item
 
 ```yaml
+title: Products
+type: jig.list
+
+# Add the summary to show there are two items.  
 summary:
   children:
     type: component.summary
-    options: 
-      layout: counter
+    options:
       title: Items in cart
+      layout: counter
       value: 2
       
-
 data: =@ctx.datasources.products
-item: 
+item:
   type: component.product-item
   options:
     title: =@ctx.current.item.title
+    discount: =@ctx.current.item.discount
     image:
       uri: =@ctx.current.item.uri
-    tag: =@ctx.current.item.tag
-    price: 
-      value: =@ctx.current.item.price
+    price:
       format:
         numberStyle: currency
-    discount: =@ctx.current.item.discount
+      value: =@ctx.current.item.price
+    tag: =@ctx.current.item.tag
 ```
 
 summary-counter-expander
 
 ```yaml
+title: Today's Flights
+type: jig.list
+
+header:
+  type: component.jig-header
+  options:
+    height: medium
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://images.unsplash.com/photo-1490430657723-4d607c1503fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZmxpZ2h0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60
+ 
+ # Add the summary to show there are three flight options available. 
 summary:
   children:
     type: component.summary
-    options: 
-      layout: counter
+    options:
       title: Flights found
+      layout: counter
       value: 3
-      
+            
 data: =@ctx.datasources.flight-schedule-static
 item:
   type: component.expander
   options:
     header:
-      centerElement: 
+      centerElement:
         type: component.stage
         options:
-          right:
-            title: =@ctx.current.item.toabrv
-            subtitle: =@ctx.current.item.disembark
           left:
-            title: =@ctx.current.item.fromabrv
             subtitle: =@ctx.current.item.board
+            title: =@ctx.current.item.fromabrv
+          right:
+            subtitle: =@ctx.current.item.disembark
+            title: =@ctx.current.item.toabrv
+        
     children:
       - type: component.entity
         options:
@@ -375,18 +435,18 @@ item:
                   - type: component.entity-field
                     options:
                       label: Destination
-                      value: =@ctx.current.item.to
+                      value: =@ctx.current.item.to 
             - type: component.field-row
               options:
                 children:
                   - type: component.entity-field
                     options:
                       label: Board Time
-                      value: =@ctx.current.item.board
+                      value: =@ctx.current.item.board  
                   - type: component.entity-field
                     options:
                       label: Disembark Time
-                      value: =@ctx.current.item.disembark
+                      value: =@ctx.current.item.disembark  
             - type: component.entity-field
               options:
                 label: Passenger
@@ -405,10 +465,12 @@ item:
                   - type: component.entity-field
                     options:
                       label: Seat
-                      value: =@ctx.current.item.seat
+                      value: =@ctx.current.item.seat   
       - type: component.location
         options:
-          address: =@ctx.current.item.to
+          viewPoint:
+            centerPosition: middle
+            address: =@ctx.current.item.to
 ```
 
 datasources 1 (static)
@@ -524,86 +586,90 @@ title: Flights
 type: jig.list
 
 header:
-  type: component.jig-header
-  options:
-    children:
-      options:
-        source:
-          uri: https://images.unsplash.com/photo-1490430657723-4d607c1503fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZmxpZ2h0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60
-      type: component.image
+    type: component.jig-header
     height: medium
-    
-data: =@ctx.datasources.flight-schedule-static
-item:
-  type: component.expander
-  options:
-    children:
-      - options:
-          children:
-            - options:
-                children:
-                  - options:
-                      label: Boarding
-                      value: =@ctx.current.item.from
-                    type: component.entity-field
-                  - options:
-                      label: Destination
-                      value: =@ctx.current.item.to
-                    type: component.entity-field
-              type: component.field-row
-            - options:
-                children:
-                  - options:
-                      label: Board Time
-                      value: =@ctx.current.item.board
-                    type: component.entity-field
-                  - options:
-                      label: Disembark Time
-                      value: =@ctx.current.item.disembark
-                    type: component.entity-field
-              type: component.field-row
-            - options:
-                label: Passenger
-                value: =@ctx.current.item.name
-              type: component.entity-field
-            - options:
-                children:
-                  - options:
-                      label: Flight
-                      value: =@ctx.current.item.flight
-                    type: component.entity-field
-                  - options:
-                      label: Gate
-                      value: =@ctx.current.item.gate
-                    type: component.entity-field
-                  - options:
-                      label: Seat
-                      value: =@ctx.current.item.seat
-                    type: component.entity-field
-              type: component.field-row
-        type: component.entity
-      - options:
-          address: =@ctx.current.item.to
-        type: component.location
-    header:
-      centerElement:
-        type: component.stage
-        options:
-          left:
-            subtitle: =@ctx.current.item.board
-            title: =@ctx.current.item.fromabrv
-          right:
-            subtitle: =@ctx.current.item.disembark
-            title: =@ctx.current.item.toabrv
-  
+    options:
+        children:
+            type: component.image
+            options:
+                source:
+                    uri: https://images.unsplash.com/photo-1490430657723-4d607c1503fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZmxpZ2h0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60
+
+# Add the summary to show there are three flight options available.                      
 summary:
   children:
     type: component.summary
     options:
       title: "Flights found:"
-      layout: cart
+      layout: counter
       value: 3
-    
+      
+data: =@ctx.datasources.flight-schedule-static
+item:
+    type: component.expander
+    options:
+        header:
+            centerElement:
+                type: component.stage
+                options:
+                    left:
+                        subtitle: =@ctx.current.item.board
+                        title: =@ctx.current.item.fromabrv
+                    right:
+                        subtitle: =@ctx.current.item.disembark
+                        title: =@ctx.current.item.toabrv
+
+        children:
+            - type: component.entity
+              options:
+                  children:
+                      - type: component.field-row
+                        options:
+                            children:
+                                - type: component.entity-field
+                                  options:
+                                      label: Boarding
+                                      value: =@ctx.current.item.from
+                                - type: component.entity-field
+                                  options:
+                                      label: Destination
+                                      value: =@ctx.current.item.to
+                      - type: component.field-row
+                        options:
+                            children:
+                                - type: component.entity-field
+                                  options:
+                                      label: Board Time
+                                      value: =@ctx.current.item.board
+                                - type: component.entity-field
+                                  options:
+                                      label: Disembark Time
+                                      value: =@ctx.current.item.disembark
+                      - type: component.entity-field
+                        options:
+                            label: Passenger
+                            value: =@ctx.current.item.name
+                      - type: component.field-row
+                        options:
+                            children:
+                                - type: component.entity-field
+                                  options:
+                                      label: Flight
+                                      value: =@ctx.current.item.flight
+                                - type: component.entity-field
+                                  options:
+                                      label: Gate
+                                      value: =@ctx.current.item.gate
+                                - type: component.entity-field
+                                  options:
+                                      label: Seat
+                                      value: =@ctx.current.item.seat
+            - type: component.location
+              options:
+                  viewPoint:
+                      address: =@ctx.current.item.to
+
+# Use the go-to action to navigate to a jig to book a flight.    
 actions:
   - children:
       - type: action.go-to

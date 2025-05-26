@@ -6,6 +6,14 @@ Certain properties are shared across all actions, ensuring consistency and flexi
 
 Adding an `icon` property in an action only applies to `swipeable`, `secondary`, and `header` actions. Primary actions do not support icon setups.
 
+## Working with Parent & Child Actions
+
+&#x20;When configuring actions across parent and child jigs, the following behavior applies:
+
+- If both the parent and child jigs have an `action` configured, the child’s configuration takes precedence and overrides the parent’s.
+- If only the parent has an `action`, it automatically applies to the child.
+- If only the child has an `action`, it is used in the parent jig as well.
+
 ## Dual action buttons
 
 ::::VerticalSplit{layout="middle"}
