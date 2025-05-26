@@ -16,10 +16,10 @@ The summary is fixed and displays even when the screen is scrolled. Make the sum
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `layout`           | There are three types to choose from:&#xA;1\) `default` - used to display information. This is the default layout, allowing you to specify what must be shown.&#xA;2\) `cart` - useful for an online shopping app to show the number of items in a cart. The `value` is shown to the right of the `title`.&#xA;3) `counter` - useful for showing a count, for example, the number of sales made in a month. The `value` is shown to the left of the `title`. |
-| `title`            | The main text to display on the component.                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `layout`           | There are three types to choose from:&#xA;1\) `default` - used to display information. This is the default layout, allowing you to specify what must be shown.&#xA;2\) `cart` - useful for an online shopping app to show the number of items in a cart. The `value` is shown to the right of the `title`.&#xA;3\) `counter` - useful for showing a count, for example, the number of sales made in a month. The `value` is shown to the left of the `title`. |
+| `title`            | The main text to display on the component.                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 :::Iframe{code="<be />"}
 
@@ -415,11 +415,11 @@ item:
         type: component.stage
         options:
           left:
-            subtitle: =@ctx.current.item.board
             title: =@ctx.current.item.fromabrv
+            subtitle: =@ctx.current.item.board
           right:
-            subtitle: =@ctx.current.item.disembark
             title: =@ctx.current.item.toabrv
+            subtitle: =@ctx.current.item.disembark
         
     children:
       - type: component.entity
@@ -613,11 +613,11 @@ item:
                 type: component.stage
                 options:
                     left:
-                        subtitle: =@ctx.current.item.board
                         title: =@ctx.current.item.fromabrv
+                        subtitle: =@ctx.current.item.board
                     right:
-                        subtitle: =@ctx.current.item.disembark
                         title: =@ctx.current.item.toabrv
+                        subtitle: =@ctx.current.item.disembark
 
         children:
             - type: component.entity
