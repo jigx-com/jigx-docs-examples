@@ -1,11 +1,10 @@
----
-title: Common action properties
-slug: xwLa-common-component-properties
-createdAt: Mon Feb 24 2025 08:03:32 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Mar 10 2025 17:52:53 GMT+0000 (Coordinated Universal Time)
----
+# Common action properties
 
 Certain properties are shared across all actions, ensuring consistency and flexibility in configuration. These common properties allow you to define behaviors, appearance, and functionality that apply universally, regardless of the specific actions used. This simplifies the setup process and helps maintain uniformity across different jigs.
+
+## Icons in actions
+
+Adding an `icon` property in an action only applies to `swipeable`, `secondary`, and `header` actions. Primary actions do not support icon setups.
 
 ## Dual action buttons
 
