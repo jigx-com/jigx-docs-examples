@@ -26,7 +26,7 @@ The chart widget is suitable for displaying the \<[line-chart](https://docs.jigx
 
 ## Considerations
 
-- It is recommended to set both the `top` and `bottom` properties when configuring a chart widget to ensure it renders correctly and maintains a clear, readable layout within the widget.
+- It is recommended to set either the `top`, `bottom`, or both properties when configuring a chart widget to ensure it renders correctly and maintains a clear, readable layout within the widget.
 
 ## Examples and code snippets
 
