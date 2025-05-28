@@ -6,7 +6,7 @@ Certain properties are shared across all actions, ensuring consistency and flexi
 
 Adding an `icon` property in an action only applies to `swipeable`, `secondary`, and `header` actions. Primary actions do not support icon setups.
 
-## Working with Parent & Child Actions
+## Working with parent & child actions
 
 &#x20;When configuring actions across parent and child jigs, the following behavior applies:
 
