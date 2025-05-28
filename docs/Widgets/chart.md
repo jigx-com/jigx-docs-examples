@@ -1,43 +1,41 @@
----
-title: chart
-slug: dQoZ-chart
-description: Learn how to configure and effectively utilize the chart widget through this comprehensive document. Find detailed examples of line-chart, bar-chart, and pie-chart components, along with code snippets and data source links for both static and dynamic data
-createdAt: Thu Jun 09 2022 11:07:31 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Mar 10 2025 09:28:38 GMT+0000 (Coordinated Universal Time)
----
+# chart
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-The chart widget is suitable for displaying the <[line-chart](https://docs.jigx.com/examples/line-chart), [bar-chart](https://docs.jigx.com/examples/bar-chart), or [pie-chart](https://docs.jigx.com/examples/pie-chart) on the Home Hub .
+The chart widget is suitable for displaying the \<[line-chart](https://docs.jigx.com/examples/line-chart), [bar-chart](https://docs.jigx.com/examples/bar-chart), or [pie-chart](https://docs.jigx.com/examples/pie-chart) on the Home Hub .
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/adjbqUzKWPTPOznhe57WH_wd-charts.PNG" size="64" position="center" caption="Chart widgets" alt="Chart widgets"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/adjbqUzKWPTPOznhe57WH_wd-charts.PNG" size="64" position="center" caption="Chart widgets" alt="Chart widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/adjbqUzKWPTPOznhe57WH_wd-charts.PNG"}
 :::
 ::::
 
 ## Configuration options
 
-| **Core structure** |                                   |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Core structure** |                                                                                                                                                                                                                                                            |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `chart`            | The configuration is the same as for the chart components, refer to the [line-chart](https://docs.jigx.com/examples/line-chart), [bar-chart](https://docs.jigx.com/examples/bar-chart), or [pie-chart](https://docs.jigx.com/examples/pie-chart) examples. |
 
-| **Other options** |                               |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Other options** |                                                                                                          |
+| ----------------- | -------------------------------------------------------------------------------------------------------- |
 | `bottom`          | The [titles](https://docs.jigx.com/examples/titles) component will be added to the bottom of the widget. |
-| `footer`          | Add text to the footer of the widget.                                                                                               |
-| `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                                                 |
-| `placeholders`    | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                               |
+| `footer`          | Add text to the footer of the widget.                                                                    |
+| `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                      |
+| `placeholders`    | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.    |
 | `top`             | The [titles](https://docs.jigx.com/examples/titles) component will be added to the top of the widget.    |
 
-## Examples and code snippets 
+## Considerations
+
+- It is recommended to set both the `top` and `bottom` properties when configuring a chart widget to ensure it renders correctly and maintains a clear, readable layout within the widget.
+
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Chart widget: line-chart component (2x2)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/J6pNWuARKgPksDAqWwkzK_wd-chartline22.PNG" size="74" position="center" caption="Line-chart 2x2" alt="Line-chart 2x2"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/J6pNWuARKgPksDAqWwkzK_wd-chartline22.PNG" size="74" position="center" caption="Line-chart 2x2" alt="Line-chart 2x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/J6pNWuARKgPksDAqWwkzK_wd-chartline22.PNG"}
 :::
 
 :::VerticalSplitItem
@@ -149,7 +147,7 @@ See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/bl
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9x1YJjqI0mnBBDuf9rBh_wd-chartline24.PNG" size="84" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9x1YJjqI0mnBBDuf9rBh_wd-chartline24.PNG" size="84" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9x1YJjqI0mnBBDuf9rBh_wd-chartline24.PNG"}
 :::
 ::::
 
@@ -438,7 +436,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mqh4r9GH4TOTnBy1_kXtQ_linechartiphone13blueportrait.png" size="80" position="center" caption="line-chart widget" alt="line-chart widget 4"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mqh4r9GH4TOTnBy1_kXtQ_linechartiphone13blueportrait.png" size="80" position="center" caption="line-chart widget" alt="line-chart widget 4" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mqh4r9GH4TOTnBy1_kXtQ_linechartiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -451,8 +449,6 @@ See the complete example using dynamic data in [GitHub](https://github.com/jigx-
 **Datasources**:
 See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx).
 See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx)
-
-
 :::
 ::::
 
@@ -561,7 +557,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/klbestBzZ9mIfpOu6q7D__wd-linegroup.PNG" size="80" position="center" caption="Group widget with line-charts" alt="Group widget with line-charts"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/klbestBzZ9mIfpOu6q7D__wd-linegroup.PNG" size="80" position="center" caption="Group widget with line-charts" alt="Group widget with line-charts" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/klbestBzZ9mIfpOu6q7D__wd-linegroup.PNG"}
 :::
 
 :::VerticalSplitItem
@@ -809,7 +805,7 @@ See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/bl
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fp7s1B__h9Bjo1bbuR9-k_wd-bar22.PNG" size="80" position="center" caption="Bar-chart widget 2x2" alt="Bar-chart widget 2x2"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fp7s1B__h9Bjo1bbuR9-k_wd-bar22.PNG" size="80" position="center" caption="Bar-chart widget 2x2" alt="Bar-chart widget 2x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fp7s1B__h9Bjo1bbuR9-k_wd-bar22.PNG"}
 :::
 ::::
 
@@ -907,7 +903,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y3CKSyi1KM2u5eeo3bFHz_wd-bar42.PNG" size="80" position="center" caption="Bar-chart widget 4x2" alt="Bar-chart widget 4x2"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y3CKSyi1KM2u5eeo3bFHz_wd-bar42.PNG" size="80" position="center" caption="Bar-chart widget 4x2" alt="Bar-chart widget 4x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y3CKSyi1KM2u5eeo3bFHz_wd-bar42.PNG"}
 :::
 
 :::VerticalSplitItem
@@ -998,7 +994,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2aOyKeqQJOsjZiJRMpoIO_barchartiphone13blueportrait.png" size="80" position="center" caption="Bar-chart widget" alt="Bar-chart widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2aOyKeqQJOsjZiJRMpoIO_barchartiphone13blueportrait.png" size="80" position="center" caption="Bar-chart widget" alt="Bar-chart widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2aOyKeqQJOsjZiJRMpoIO_barchartiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -1011,8 +1007,6 @@ See the complete example using dynamic data in [GitHub](https://github.com/jigx-
 **Datasources**:
 See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx).
 See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx).
-
-
 :::
 ::::
 
@@ -1115,7 +1109,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9aLZHIlMWl2SxoD9rn2V9_piechartiphone13blueportrait.png" size="80" position="center" caption="Pie-chart widget 2x" alt="Pie-chart widget 2x2"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9aLZHIlMWl2SxoD9rn2V9_piechartiphone13blueportrait.png" size="80" position="center" caption="Pie-chart widget 2x" alt="Pie-chart widget 2x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9aLZHIlMWl2SxoD9rn2V9_piechartiphone13blueportrait.png"}
 :::
 
 :::VerticalSplitItem
@@ -1128,8 +1122,6 @@ See the complete example using dynamic data in [GitHub](https://github.com/jigx-
 **Datasources**:
 See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/pie-chart-data.jigx).
 See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-dynamic.jigx).
-
-
 :::
 ::::
 
@@ -1213,7 +1205,7 @@ See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/bl
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FA-eiRkpMZ-BpHy1o-b6s_wd-pie2x4.PNG" size="80" position="center" caption="Pie-chart widget 2x4" alt="Pie-chart widget 2x4"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FA-eiRkpMZ-BpHy1o-b6s_wd-pie2x4.PNG" size="80" position="center" caption="Pie-chart widget 2x4" alt="Pie-chart widget 2x4" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FA-eiRkpMZ-BpHy1o-b6s_wd-pie2x4.PNG"}
 :::
 ::::
 
@@ -1284,8 +1276,6 @@ children:
           widgetId: pie1-2x4
 ```
 :::
-
-
 :::::
 
 :::::ExpandableHeading
@@ -1300,7 +1290,7 @@ See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/bl
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zS66aUyNJyNwAzzhSZ1pP_wd-combinedpie.PNG" size="80" position="center" caption="Group widget 4x" alt}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zS66aUyNJyNwAzzhSZ1pP_wd-combinedpie.PNG" size="80" position="center" caption="Group widget 4x" alt signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zS66aUyNJyNwAzzhSZ1pP_wd-combinedpie.PNG"}
 :::
 ::::
 
