@@ -12,7 +12,7 @@ Tabs allow you to navigate between different jigs with ease, enhancing the user 
 
 ## Configuration options
 
-Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
+Some properties are common to all jig types, see [Common jig type properties](docId:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
 
 The `jig.tabs` can be configured in the following way in Jigx Builder.
 
@@ -23,7 +23,7 @@ The `jig.tabs` can be configured in the following way in Jigx Builder.
 | `jigId`            | Provide the `jigId` for the jig that will be displayed when the tab is active.                                                                                                                            |
 | `instanceId`       | Give the tab a unique identifier, that can be used in expressions.                                                                                                                                        |
 | `tab`              | - `title` - The text that displays as the tab name.                                                                                                                                                       |
-| `icon`             | - Add an icon to display in the tab. A list of available icons can be found in  [Jigx icons](#). The `title` appears below the `icon` in the tab.                                                         |
+| `icon`             | - Add an icon to display in the tab. A list of available icons can be found in [Jigx icons](#). The `title` appears below the `icon` in the tab.                                                          |
 | `badge`            | - Add a badge to display on the tab to highlight critical information. The badge can be configured at the root level of the jig file. The badge can be configured with an `icon`, `color`, and a `value`. |
 
 | **Other options**   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -36,9 +36,9 @@ The `jig.tabs` can be configured in the following way in Jigx Builder.
 | `isSwipeable`       | Set to `true` allows you to navigate between tabs by swiping left and right anywhere on the jig. By default tabs are not swipeable and require you to press on the tab title for navigation.                                                                                                                                                                                                                                                                                      |
 | `when`              | This property is used to show/hide any tab based on conditions, such as true, false, or conditions set using an expression.                                                                                                                                                                                                                                                                                                                                                       |
 
-| **Actions** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `actions`   | The `actions` property is a local action applicable to the specific tab. Once the tab is tapped the action will execute.&#xA;`Action Identifier` - Provide a unique name that is used to identify the action.<br />`Action Identifier` - Provide a unique name that is used to identify the action.<br />`type` - Select the [action](./../Actions.md)  that is triggered in the specific tab. Use IntelliSense to see the available list of actions.&#xA;See the [Tabs with actions]() code example below. |
+| **Actions** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `actions`   | The `actions` property is a local action applicable to the specific tab. Once the tab is tapped the action will execute.&#xA;`Action Identifier` - Provide a unique name that is used to identify the action.<br />`Action Identifier` - Provide a unique name that is used to identify the action.<br />`type` - Select the [action](./../Actions.md) that is triggered in the specific tab. Use IntelliSense to see the available list of actions.&#xA;See the [Tabs with actions]() code example below. |
 
 | **State Configuration** | **Key**     | **Notes**                                               |
 | ----------------------- | ----------- | ------------------------------------------------------- |
@@ -54,6 +54,7 @@ The `jig.tabs` can be configured in the following way in Jigx Builder.
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Basic tabs
 
 ::::VerticalSplit{layout="middle"}
@@ -87,26 +88,26 @@ children:
     tab:
       type: component.tab-button
       options:
-        # Give the tabs a name,you can use an expression, datasource or text. 
-        title: Today  
-  # Tab 2        
+        # Give the tabs a name,you can use an expression, datasource or text.
+        title: Today
+  # Tab 2
   - jigId: inventory
     tab:
       type: component.tab-button
       options:
         title: Stock
-  # Tab 3      
+  # Tab 3
   - jigId: timelogs
     tab:
       type: component.tab-button
-      options: 
+      options:
         title: Logs
-  # Tab 4  
+  # Tab 4
   - jigId: manuals
     tab:
       type: component.tab-button
       options:
-        title: Help   
+        title: Help
 ```
 
 index.jigx
@@ -114,12 +115,12 @@ index.jigx
 ```yaml
 name: work
 title: work
-category: business      
+category: business
 # Configure the jig containing the tabs to open on the home hub.
 tabs:
   home:
     label: home
-# Specify the jig to open when the home icon in the navigation bar is pressed.    
+    # Specify the jig to open when the home icon in the navigation bar is pressed.
     jigId: jig-tabs-basic
     icon: home-apps-logo
 ```
@@ -133,7 +134,7 @@ description: My appointments for today
 type: jig.default
 
 datasources:
-  appointments: 
+  appointments:
     type: datasource.static
     options:
       data:
@@ -148,7 +149,7 @@ datasources:
         - id: 3
           time: 8:00am
           customer: Becker Consulting
-          address: Suite A, Tower building, Main street  
+          address: Suite A, Tower building, Main street
 children:
   - type: component.form
     instanceId: schedule-appt
@@ -176,31 +177,30 @@ description: Select the parts required for the job
 type: jig.list
 
 datasources:
-  inventory: 
+  inventory:
     type: datasource.static
     options:
       data:
         - id: 1
-          item: Compressor 
+          item: Compressor
         - id: 2
-          item: Condenser Coil 
+          item: Condenser Coil
         - id: 3
-          item: Refrigerant 
-        - id: 4 
-          item: Expansion Valve 
+          item: Refrigerant
+        - id: 4
+          item: Expansion Valve
         - id: 5
-          item: Fan Motor                        
+          item: Fan Motor
 
 data: =@ctx.datasources.inventory
 item:
   type: component.list-item
   options:
-    leftElement: 
+    leftElement:
       element: icon
       icon: tool-organizer-1
       isDuotone: true
     title: =@ctx.current.item.item
-    
 ```
 
 timelogs
@@ -211,11 +211,11 @@ title: Time logging
 description: Log the time taken to complete the job
 type: jig.default
 
-onRefresh: 
+onRefresh:
   type: action.reset-state
   options:
     state: =@ctx.components.shift-form.state.data
-    
+
 children:
   - type: component.form
     instanceId: shift-form
@@ -235,11 +235,11 @@ children:
               - type: component.text-field
                 instanceId: lastName
                 options:
-                  label: Last Name   
-        - type: component.email-field  
+                  label: Last Name
+        - type: component.email-field
           instanceId: email
           options:
-            label: Email  
+            label: Email
         - type: component.text-field
           instanceId: contact
           options:
@@ -248,26 +248,25 @@ children:
         - type: component.field-row
           options:
             children:
-              
               - type: component.date-picker
                 instanceId: shift-date
                 options:
-                  label: Select shift date 
+                  label: Select shift date
               - type: component.duration-picker
                 instanceId: shift-duration
                 options:
                   label: Log your shift duration
                   initialValue: 14400
-                  helperText: Standard shift is 4 hours 
-                  errorText: =@ctx.component.state.value > 14400 ? 'Shift time needs approval':'' 
+                  helperText: Standard shift is 4 hours
+                  errorText: =@ctx.component.state.value > 14400 ? 'Shift time needs approval':''
                   hours:
                     step: 4
                   minutes:
-                    step: 2  
-                    
+                    step: 2
+
 actions:
   - children:
-      - type: action.execute-entity 
+      - type: action.execute-entity
         options:
           title: Log job time
           provider: DATA_PROVIDER_DYNAMIC
@@ -278,9 +277,9 @@ actions:
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
             email: =@ctx.components.email.state.value
-            contact:  =@ctx.components.contact.state.value
+            contact: =@ctx.components.contact.state.value
             shift-date: =@ctx.components.shift-date.state.value
-            shift-duration: =@ctx.components.shift-duration.state.value  
+            shift-duration: =@ctx.components.shift-duration.state.value
 ```
 
 manuals.jigx
@@ -294,10 +293,12 @@ source:
   documentType: PDF
   uri: https://s28.q4cdn.com/392171258/files/doc_downloads/test.pdf
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Scrollable tabs
 
 ::::VerticalSplit{layout="middle"}
@@ -306,7 +307,7 @@ source:
 :::
 
 :::VerticalSplitItem
-This example shows the `jig.tabs` with ten tabs. Tab8, Tab9, and Tab10 are not visible. Setting the  the `areTabsScrollable: true` property enables scrolling on the tab bar.  Each tab opens the corresponding jig when pressed.  For demonstration purposes placeholder jigs are used.
+This example shows the `jig.tabs` with ten tabs. Tab8, Tab9, and Tab10 are not visible. Setting the the `areTabsScrollable: true` property enables scrolling on the tab bar. Each tab opens the corresponding jig when pressed. For demonstration purposes placeholder jigs are used.
 
 **Examples:**
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-scrollable.jigx).
@@ -330,7 +331,7 @@ children:
     tab:
       type: component.tab-button
       options:
-       title: Tab 1
+        title: Tab 1
   - jigId: inventory
     tab:
       type: component.tab-button
@@ -345,37 +346,37 @@ children:
     tab:
       type: component.tab-button
       options:
-        title: tab 4          
+        title: tab 4
   - jigId: tab-placeholder
     tab:
       type: component.tab-button
       options:
-        title: Tab 5  
+        title: Tab 5
   - jigId: tab-placeholder1
     tab:
       type: component.tab-button
       options:
-        title: Tab 6  
+        title: Tab 6
   - jigId: tab-placeholder2
     tab:
       type: component.tab-button
       options:
-        title: Tab 7  
+        title: Tab 7
   - jigId: tab-placeholder3
     tab:
       type: component.tab-button
       options:
-        title: Tab 8  
+        title: Tab 8
   - jigId: tab-placeholder4
     tab:
       type: component.tab-button
       options:
-        title: Tab 9  
+        title: Tab 9
   - jigId: tab-placeholder5
     tab:
       type: component.tab-button
       options:
-        title: Tab 10   
+        title: Tab 10
 ```
 
 index.jigx
@@ -383,12 +384,12 @@ index.jigx
 ```yaml
 name: work
 title: work
-category: business      
+category: business
 # Configure the jig containing the tabs to open on the home hub.
 tabs:
   home:
     label: home
-# Specify the jig to open when the home icon in the navigation bar is pressed.    
+    # Specify the jig to open when the home icon in the navigation bar is pressed.
     jigId: jig-tabs-scrollable
     icon: home-apps-logo
 ```
@@ -396,29 +397,31 @@ tabs:
 tab-placeholder.jigx
 
 ```yaml
-# This jig is create the base for the placeholder jigs in this example. 
-# Duplicate the jig to create the required placeholder jigs. 
-title: Placeholder 
+# This jig is create the base for the placeholder jigs in this example.
+# Duplicate the jig to create the required placeholder jigs.
+title: Placeholder
 description: This screen is a placeholder for demo purposes
 type: jig.default
 
 placeholders:
   - title: No data to display
     icon: missing-data
-    
+
 children:
   - type: component.entity
     options:
       children:
         - type: component.entity-field
           options:
-            label: ' '
-            value: ' '
+            label: " "
+            value: " "
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Swipeable tabs
 
 ::::VerticalSplit{layout="middle"}
@@ -427,7 +430,7 @@ children:
 :::
 
 :::VerticalSplitItem
-This example shows the `jig.tabs` with four tabs. Setting the `isSwipeable: true` property allows you to swipe left and right anywhere on the screen to navigate between the tabs instead of pressing on each tab title to display the jigs.  Each tab opens the corresponding jig.
+This example shows the `jig.tabs` with four tabs. Setting the `isSwipeable: true` property allows you to swipe left and right anywhere on the screen to navigate between the tabs instead of pressing on each tab title to display the jigs. Each tab opens the corresponding jig.
 
 **Examples:**
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-swipeable.jigx).
@@ -448,7 +451,7 @@ isSwipeable: true
 # Specify the jigs that will open in each tab.
 
 children:
-  # Specify the jigs that will open when the tabs are pressed. 
+  # Specify the jigs that will open when the tabs are pressed.
   - jigId: appointments
     tab:
       type: component.tab-button
@@ -468,7 +471,7 @@ children:
     tab:
       type: component.tab-button
       options:
-        title: Help               
+        title: Help
 ```
 
 index.jigx
@@ -476,19 +479,21 @@ index.jigx
 ```yaml
 name: work
 title: work
-category: business      
+category: business
 # Configure the jig containing the tabs to open on the home hub.
 tabs:
   home:
     label: home
-# Specify the jig to open when the home icon in the navigation bar is pressed.    
+    # Specify the jig to open when the home icon in the navigation bar is pressed.
     jigId: jig-tabs-swipeable
     icon: home-apps-logo
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Tabs with initialTabId
 
 ::::VerticalSplit{layout="middle"}
@@ -513,11 +518,11 @@ type: jig.tabs
 title: Global INC
 # Aligns the tabs at the center, enhancing visual consistency.
 areTabsScrollable: false
-# Specify the jigId for the tab that must be displayed when the jig opens. 
+# Specify the jigId for the tab that must be displayed when the jig opens.
 initialTabId: timelogs
 
 children:
-  # Specify the jigs that will open in each tab. 
+  # Specify the jigs that will open in each tab.
   - jigId: appointments
     tab:
       type: component.tab-button
@@ -537,7 +542,7 @@ children:
     tab:
       type: component.tab-button
       options:
-        title: Help    
+        title: Help
 ```
 
 index.jigx
@@ -545,19 +550,21 @@ index.jigx
 ```yaml
 name: work
 title: work
-category: business      
+category: business
 # Configure the jig containing the tabs to open on the home hub.
 tabs:
   home:
     label: home
-# Specify the jig to open when the home icon in the navigation bar is pressed.    
+    # Specify the jig to open when the home icon in the navigation bar is pressed.
     jigId: jig-tabs-initialtabid
     icon: home-apps-logo
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Tabs with icons
 
 ::::VerticalSplit{layout="middle"}
@@ -589,16 +596,16 @@ children:
     tab:
       type: component.tab-button
       options:
-       title: Today
-       # Add an icon to the tab. The title is diplayed below the icon.
-       # When active the icon uses the primary color.   
-       icon: calendar-3
+        title: Today
+        # Add an icon to the tab. The title is diplayed below the icon.
+        # When active the icon uses the primary color.
+        icon: calendar-3
   - jigId: inventory
     tab:
       type: component.tab-button
       options:
         title: Stock
-        # Add an icon to the tab. The title is diplayed below the icon. 
+        # Add an icon to the tab. The title is diplayed below the icon.
         icon: supply-chain-shipping-fee-included-truck
   - jigId: timelogs
     tab:
@@ -612,7 +619,7 @@ children:
       type: component.tab-button
       options:
         title: Help
-        # Add an icon to the tab. The title is diplayed below the icon.    
+        # Add an icon to the tab. The title is diplayed below the icon.
         icon: book-book-pages
 ```
 
@@ -621,19 +628,21 @@ index.jigx
 ```yaml
 name: work
 title: work
-category: business      
+category: business
 # Configure the jig containing the tabs to open on the home hub.
 tabs:
   home:
     label: home
-# Specify the jig to open when the home icon in the navigation bar is pressed.    
+    # Specify the jig to open when the home icon in the navigation bar is pressed.
     jigId: jig-tabs-icons
     icon: home-apps-logo
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Tabs with inputs
 
 ::::VerticalSplit{layout="middle"}
@@ -642,7 +651,7 @@ tabs:
 :::
 
 :::VerticalSplitItem
-This example demonstrates `jig.tabs` where the *Logs* tab is configured to use a jig with inputs. The input values are set within `jig.tabs` under the `jigId` of the corresponding jig.
+This example demonstrates `jig.tabs` where the _Logs_ tab is configured to use a jig with inputs. The input values are set within `jig.tabs` under the `jigId` of the corresponding jig.
 
 **Examples:**
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-inputs.jigx).
@@ -676,8 +685,8 @@ children:
       type: component.tab-button
       options:
         title: Logs
-    # The jig that displays in the tab has inputs defined. 
-    # Provide the values for the inputs to the jig.      
+    # The jig that displays in the tab has inputs defined.
+    # Provide the values for the inputs to the jig.
     inputs:
       Name: =@ctx.user.displayName
       email: =@ctx.user.email
@@ -686,7 +695,7 @@ children:
     tab:
       type: component.tab-button
       options:
-        title: Help 
+        title: Help
 ```
 
 timelogs-inputs.jigx
@@ -696,43 +705,43 @@ title: Time logging
 description: Log the time taken to complete the job
 type: jig.default
 
-onRefresh: 
+onRefresh:
   type: action.reset-state
   options:
     state: =@ctx.components.shift-form.state.data
 # Specify the inputs that are needed in the jig.
-inputs:  
-  Name: 
+inputs:
+  Name:
     type: string
     required: true
-  email: 
+  email:
     type: string
     required: true
-  contact: 
+  contact:
     type: number
     required: true
-        
+
 children:
   - type: component.form
     instanceId: shift-form
-    options:  
+    options:
       children:
         - type: component.text-field
           instanceId: Name
           options:
-# Use the input provided in the jig.tab to display the initial value.          
+            # Use the input provided in the jig.tab to display the initial value.
             initialValue: =@ctx.jig.inputs.Name
-            label: Name  
-        - type: component.email-field  
+            label: Name
+        - type: component.email-field
           instanceId: email
           options:
-# Use the input provided in the jig.tab to display the initial value.              
+            # Use the input provided in the jig.tab to display the initial value.
             initialValue: =@ctx.jig.inputs.email
-            label: Email  
+            label: Email
         - type: component.text-field
           instanceId: contact
           options:
-# Use the input provided in the jig.tab to display the initial value.              
+            # Use the input provided in the jig.tab to display the initial value.
             initialValue: =@ctx.jig.inputs.contact
             textContentType: telephoneNumber
             label: Contact number
@@ -742,18 +751,18 @@ children:
               - type: component.date-picker
                 instanceId: shift-date
                 options:
-                  label: Select shift date 
+                  label: Select shift date
               - type: component.duration-picker
                 instanceId: shift-duration
                 options:
                   label: Log your shift duration
                   initialValue: 14400
-                  helperText: Standard shift is 4 hours 
-                  errorText: =@ctx.component.state.value > 14400 ? 'Shift time needs approval':'' 
+                  helperText: Standard shift is 4 hours
+                  errorText: =@ctx.component.state.value > 14400 ? 'Shift time needs approval':''
                   hours:
                     step: 4
                   minutes:
-                    step: 2  
+                    step: 2
 ```
 
 index.jigx
@@ -761,19 +770,21 @@ index.jigx
 ```yaml
 name: work
 title: work
-category: business      
+category: business
 # Configure the jig containing the tabs to open on the home hub.
 tabs:
   home:
     label: home
-# Specify the jig to open when the home icon in the navigation bar is pressed.    
+    # Specify the jig to open when the home icon in the navigation bar is pressed.
     jigId: jig-tabs-inputs
     icon: home-apps-logo
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Set tab's content from a single jig
 
 ::::VerticalSplit{layout="middle"}
@@ -801,23 +812,23 @@ areTabsScrollable: false
 initialTabId: week1
 # Specify the single jig that will open in each tab.
 # Use inputs to change the content in the tab.
-Children:
-  # Tab 1 
-  # Note all the tabs use the same jigId. 
+children:
+  # Tab 1
+  # Note all the tabs use the same jigId.
   - jigId: timecard
     instanceId: week1
     tab:
       type: component.tab-button
       options:
-        title: Week 1 
+        title: Week 1
         icon: number-one-circle
-    # Provide the values for the inputs to the jig to display on the jig.     
+    # Provide the values for the inputs to the jig to display on the jig.
     inputs:
       Team: HVAC Team
       shift: Day
       hours: 8
-  # Tab 2 
-  # Note all the tabs use the same jigId.  
+  # Tab 2
+  # Note all the tabs use the same jigId.
   - jigId: timecard
     instanceId: week2
     tab:
@@ -825,22 +836,22 @@ Children:
       options:
         title: Week 2
         icon: number-two-circle
-    # Provide the values for the inputs to the jig to display on the jig.      
+    # Provide the values for the inputs to the jig to display on the jig.
     inputs:
       Team: Electrical Team
       shift: Night
       hours: 12
       color: color2
-  # Tab 3 
-  # Note all the tabs use the same jigId.     
+  # Tab 3
+  # Note all the tabs use the same jigId.
   - jigId: timecard
     instanceId: week3
     tab:
       type: component.tab-button
       options:
         title: Week 3
-        icon: number-three-circle  
-    # Provide the values for the inputs to the jig to display on the jig.      
+        icon: number-three-circle
+    # Provide the values for the inputs to the jig to display on the jig.
     inputs:
       Team: Plumbing Team
       shift: Split
@@ -855,49 +866,49 @@ title: Time-tracking
 type: jig.default
 # Define the inputs required in the jig, the content is set per tab.
 inputs:
-  Team: 
+  Team:
     type: string
     required: true
-  shift: 
+  shift:
     type: string
     required: true
   hours:
     type: number
     required: true
-    
+
 children:
   - type: component.list-item
     instanceId: rotation
-    options:  
-      # Use the input provided in the jig.tab to display the title.   
+    options:
+      # Use the input provided in the jig.tab to display the title.
       title: =@ctx.jig.inputs.Team
       # Use the input provided in the jig.tab to display the icon color.
       color: =@ctx.jig.inputs.color
-      leftElement: 
+      leftElement:
         element: icon
         icon: multiple-man-woman-2-geometric-close-up
         isContained: true
   - type: component.list-item
     instanceId: work-day
-    options:  
-      # Use the input provided in the jig.tab to display the shift value.    
+    options:
+      # Use the input provided in the jig.tab to display the shift value.
       title: =@ctx.jig.inputs.shift
       color: =@ctx.jig.inputs.color
-      leftElement: 
+      leftElement:
         element: icon
         icon: calendar
         isContained: true
   - type: component.list-item
     instanceId: time
-    options:  
+    options:
       # Use the input provided in the jig.tab to display the hours worked.
-      title: =@ctx.jig.inputs.hours 
+      title: =@ctx.jig.inputs.hours
       color: =@ctx.jig.inputs.color
-      leftElement: 
+      leftElement:
         element: icon
         icon: time-clock-circle-1-alternate
         isDuotone: true
 ```
+
 :::
 :::::
-
