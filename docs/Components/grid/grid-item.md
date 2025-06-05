@@ -6,16 +6,25 @@ The grid-item component serves as the child component whenever any grid componen
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                           |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `size`             | Select the size that the grid-item will be displayed in, the options are `1x1`,`2x2`, `2x4`, `4x2`, `4x4`.                                                                |
-| `children`         | The following components can be used in the grid-item:&#xA;[Custom components (Alpha)](<./../../Custom components _Alpha_.md>)&#xA;[image](./../image.md)&#xA;[widgets]() |
+| **Core structure** |                                                                                                                                                                            |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `size`             | Select the size that the grid-item will be displayed in, the options are `1x1`,`2x2`, `2x4`, `4x2`, `4x4`.                                                                 |
+| `children`         | The following components can be used in the grid-item:&#xA;[Custom components (Alpha)](<./../../Custom components _Alpha_.md>)&#xA;[image](./../image.md)&#xA;[widgets](#) |
+
+| **Other options** |                                                                                                                                                                                                                                                                                                                                                   |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `icon`            | The icon will be displayed on the [widget]() of the jig. Start typing the name of the icon to invoke the available list in IntelliSene. See [Jigx icons]() for information on working with icons. The `icon` property applies to `component.jig-widget` without a `widgetId`. See the considerations below for the rules governing icon behavior. |
+| `title`           | By default, the jig's title is displayed. You can override it by adding the `title` property to the `grid-item`, either with a custom `title` or with `''` (a blank space) to remove the title entirely.                                                                                                                                          |
 
 ## Considerations
 
 - When using the `grid-item` with a `component.jig-widget`, note of the following:
   - A `widgetId` is required if the referenced jig includes a widget configuration. This value should match the `Widget Name` specified in the referenced jig.
   - If no widget configuration exists, the widget's icon is derived from the jig's `icon` value. If none is specified, a default icon is assigned.
+- For a `1x1` widget, the following rules apply:
+  - If no `icon` is specified, a default icon is displayed.
+  - If an `icon` is configured in the linked jig, that icon is used.
+  - If an `icon` is specified in the `grid-item`, it overrides all other icon settings.
 
 ## Examples and code snippets
 
@@ -189,6 +198,110 @@ widgets:
               color: color3
             - data: =@ctx.datasources.static-data-2
               color: positive
+```
+:::
+:::::
+
+:::::ExpandableHeading
+### Grid-item options
+
+::::VerticalSplit{layout="middle"}
+:::VerticalSplitItem
+This example shows the various configurations available to customize a `grid-item`, making it a versatile widget component. Options include:
+
+- Default `icon`.
+- Customized `icons`.
+- Overridden or hidden `titles` using the title property.
+- `onPress` actions for interactive behavior.
+:::
+
+:::VerticalSplitItem
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-eWxJs3no2ja7nEJdJ1LMG-20250605-104403.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-eWxJs3no2ja7nEJdJ1LMG-20250605-104403.png" size="66" width="1313" height="2676" position="center" caption}
+:::
+::::
+
+:::CodeblockTabs
+default-icon
+
+```yaml
+- type: component.grid
+  options:
+    children:
+      - type: component.grid-item
+        options:
+          # Widget with 1x1 with default icon.
+          size: 1x1
+          children:
+            type: component.jig-widget
+            options:
+              jigId: placeholder                                                                           
+```
+
+custom-icon
+
+```yaml
+- type: component.grid
+  options:
+    children:
+      - type: component.grid-item
+        options:
+          size: "1x1"
+          children:
+            type: component.jig-widget
+            options:
+              jigId: placeholder
+              # Configure a custom icon to display on the widget
+              icon: delivery-truck-2
+              # Configuring the title with (" ") removes the title entirely.
+              title: " "
+```
+
+custom-title
+
+```yaml
+- type: component.grid
+  options:
+    children:
+      - type: component.grid-item
+        options:
+          size: "1x1"
+          children:
+            type: component.jig-widget
+            options:
+              jigId: time-log
+              # Configure a custom icon to display on the widget.
+              icon: time-clock-file-add
+              # Configure a custom title to display below the widget. 
+              # Configuring the title with (" ") removes the title entirely.
+              title: Log
+```
+
+onPress-event
+
+```yaml
+- type: component.grid-item
+  options:
+    size: "1x1"
+    children:
+      type: component.jig-widget
+      options:
+        jigId: inspection
+        # Configure a custom icon to display on the widget.
+        icon: air-quality-check-magnifying-glass
+        # Configure a custom title to display below the widget.
+        title: Checklist
+        # Configure an action that will execute when the widget is pressed.
+        onPress:
+          type: action.info-modal
+          options:
+            modal:
+              title: Inspection checklist
+              description: Complete the manual inspection checklist
+              element:
+                type: icon
+                icon: checklist-alternate
+                color: warning
+              buttonText: Exit
 ```
 :::
 :::::
