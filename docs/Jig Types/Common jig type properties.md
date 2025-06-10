@@ -40,8 +40,8 @@ isHomeButtonVisible: false
 
 - In some cases, keeping the home button visible can create extra spacing at the bottom of the jig or cause the home button to shift above or below other components.
   - Hiding the home button when using the [chat](./../Components/chat.md) component ensures optimal use of the full screen for chat messages. If not hidden, the message field and send button are pushed up, and the home button appears beneath them.
+  - When using two primary actions on a jig with the home button visible, results in the home button displaying above the action bar.
   - Similarly, when using the [summary](./../Components/summary.md) component without hiding the home button, the home button is displayed above the summary.
   - Using [bottomSheet (Beta)](<./Common jig type properties/bottomSheet _Beta_.md>) or [go-to](./../Actions/go-to.md) with `isModal`, the modal overlays the home button on the main jig.&#x20;
-  - When using two primary actions on a jig with the home button visible, results in the home button displaying above the action bar.
 ::::
 
