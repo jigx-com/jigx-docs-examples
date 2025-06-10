@@ -47,7 +47,7 @@ Some properties are common to all components, see [Common component properties](
 - If the `value` property exceeds 100 a default 99+ will be displayed in the property.
 - Enhance the usability of your jig and make it more efficient by using the summary component along with an [action](./../Actions.md).
 - **Working with Parent and Child Actions and Summaries:**
-  &#x20;When configuring `actions` or `summary` buttons across parent and child jigs, the following behavior applies:
+  When configuring `actions` or `summary` buttons across parent and child jigs, the following behavior applies:
   - If both the parent and child jigs have an `action` or `summary` configured, the child’s configuration takes precedence and overrides the parent’s.
   - If only the parent has an `action` or `summary`, it automatically applies to the child.
   - If only the child has an `action` or `summary`, it is used in the parent jig as well.
@@ -586,88 +586,84 @@ title: Flights
 type: jig.list
 
 header:
-    type: component.jig-header
+  type: component.jig-header
+  options:
     height: medium
-    options:
-        children:
-            type: component.image
-            options:
-                source:
-                    uri: https://images.unsplash.com/photo-1490430657723-4d607c1503fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZmxpZ2h0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://images.unsplash.com/photo-1490430657723-4d607c1503fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZmxpZ2h0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60
 
-# Add the summary to show there are three flight options available.                      
+# Add the summary to show there are three flight options available.
 summary:
   children:
     type: component.summary
-    options:
-      title: "Flights found:"
+    options: 
       layout: counter
       value: 3
-      
+      title: "Flights found:"
+                
 data: =@ctx.datasources.flight-schedule-static
 item:
-    type: component.expander
-    options:
-        header:
-            centerElement:
-                type: component.stage
-                options:
-                    left:
-                        title: =@ctx.current.item.fromabrv
-                        subtitle: =@ctx.current.item.board
-                    right:
-                        title: =@ctx.current.item.toabrv
-                        subtitle: =@ctx.current.item.disembark
-
-        children:
-            - type: component.entity
+  type: component.expander
+  options:
+    header:
+      centerElement: 
+        type: component.stage
+        options:
+          right:
+            title: =@ctx.current.item.fromabrv
+            subtitle: =@ctx.current.item.board
+          left:
+            title: =@ctx.current.item.toabrv
+            subtitle: =@ctx.current.item.disembark 
+    children:
+      - type: component.entity
+        options:
+          children:
+            - type: component.entity-field
               options:
-                  children:
-                      - type: component.field-row
-                        options:
-                            children:
-                                - type: component.entity-field
-                                  options:
-                                      label: Boarding
-                                      value: =@ctx.current.item.from
-                                - type: component.entity-field
-                                  options:
-                                      label: Destination
-                                      value: =@ctx.current.item.to
-                      - type: component.field-row
-                        options:
-                            children:
-                                - type: component.entity-field
-                                  options:
-                                      label: Board Time
-                                      value: =@ctx.current.item.board
-                                - type: component.entity-field
-                                  options:
-                                      label: Disembark Time
-                                      value: =@ctx.current.item.disembark
-                      - type: component.entity-field
-                        options:
-                            label: Passenger
-                            value: =@ctx.current.item.name
-                      - type: component.field-row
-                        options:
-                            children:
-                                - type: component.entity-field
-                                  options:
-                                      label: Flight
-                                      value: =@ctx.current.item.flight
-                                - type: component.entity-field
-                                  options:
-                                      label: Gate
-                                      value: =@ctx.current.item.gate
-                                - type: component.entity-field
-                                  options:
-                                      label: Seat
-                                      value: =@ctx.current.item.seat
-            - type: component.location
+                label: Boarding
+                value: =@ctx.current.item.from
+            - type: component.entity-field
               options:
-                  viewPoint:
-                      address: =@ctx.current.item.to
+                  label: Destination
+                  value: =@ctx.current.item.to
+            - type: component.field-row
+              options:
+                children:
+                  - type: component.entity-field
+                    options:
+                      label: Board Time
+                      value: =@ctx.current.item.board
+                  - type: component.entity-field
+                    options:
+                        label: Disembark Time
+                        value: =@ctx.current.item.disembark 
+                  - type: component.entity-field
+                    options:
+                      label: Passenger
+                      value: =@ctx.current.item.name
+            - type: component.field-row
+              options:
+                children:
+                  - type: component.entity-field
+                    options:
+                      label: Flight
+                      value: =@ctx.current.item.flight 
+                  - type: component.entity-field
+                    options:
+                        label: Gate
+                        value: =@ctx.current.item.gate
+                  - type: component.entity-field
+                    options:
+                        label: Seat
+                        value: =@ctx.current.item.seat    
+      - type: component.location
+        options:
+            viewPoint:
+                address: =@ctx.current.item.to  
 
 # Use the go-to action to navigate to a jig to book a flight.    
 actions:
@@ -675,7 +671,7 @@ actions:
       - type: action.go-to
         options:
           title: Book a flight
-          linkTo: expander-trip
+          linkTo: expander-trip 
 ```
 
 datasource
