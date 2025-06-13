@@ -43,12 +43,6 @@ children:
     options:
       isDiscardChangesAlertEnabled: false
       children:
-        - type: component.text-field
-          instanceId: recordid
-          options:
-            label: recordid
-            isHidden: true
-            initialValue: =$uuid()
         - type: component.field-row
           options:
             children:

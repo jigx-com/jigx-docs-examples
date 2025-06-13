@@ -121,15 +121,8 @@ datasources:
           '$.expenseitem',
           json_extract(file, '$.localPath') as localPath,
           json_extract(file, '$.fileName')  as filename,
-          json_extract(file, '$.uploadProgress')  as uploadProgress,
-          json_extract(file, '$.downloadProgress')  as downloadProgress,
-          json_extract(file, '$.hash'),
           json_extract(file, '$.status') as status,
-          json_extract(file, '$.contentType'),
-          json_extract(file, '$.contentLength'),
-          json_extract(file, '$.thumbnail.base64') as thumbnail,
-          json_extract(file, '$.thumbnail.contentType'),
-          json_extract(file, '$.thumbnail.contentLength')
+          json_extract(file, '$.thumbnail.base64') as thumbnail
         FROM [default/expenses]
         ORDER BY '$.expenseitem'
 ```

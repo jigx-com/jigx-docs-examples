@@ -1,9 +1,4 @@
----
-title: Status of a file
-slug: SmP5-update
-createdAt: 2023-11-09T08:48:39.693Z
-updatedAt: 2025-05-21T09:46:52.868Z
----
+# Status of a file
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -13,7 +8,7 @@ Progress is shown in a `list-item` using `color`, `progress`, and a status `labe
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2z-QoO-_f4ZycKRz0uWo-20250521-115828.gif" size="66" position="center" caption="File status" alt="File status"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2z-QoO-_f4ZycKRz0uWo-20250521-115828.gif" size="66" position="center" caption="File status" alt="File status" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2z-QoO-_f4ZycKRz0uWo-20250521-115828.gif"}
 :::
 ::::
 
@@ -51,12 +46,6 @@ children:
     options:
       isDiscardChangesAlertEnabled: false
       children:
-        - type: component.text-field
-          instanceId: recordid
-          options:
-            label: recordid
-            isHidden: true
-            initialValue: =$uuid()
         - type: component.field-row
           options:
             children:
@@ -96,7 +85,6 @@ actions:
                 entity: default/expenses
                 method: create
                 data:
-                  id: =@ctx.jig.components.recordid.state.value
                   expenseitem: =@ctx.jig.components.expenseitem.state.value
                   expenseamount: =@ctx.components.expenseamount.state.value
                 file: 
@@ -216,3 +204,4 @@ children:
                           id: =@ctx.current.item.commandId
 ```
 :::
+

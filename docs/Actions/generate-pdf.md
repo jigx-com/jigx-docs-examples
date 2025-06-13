@@ -1,9 +1,4 @@
----
-title: generate-pdf
-slug: d0jx-g
-createdAt: Tue Feb 11 2025 14:54:28 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Apr 23 2025 07:00:49 GMT+0000 (Coordinated Universal Time)
----
+# generate-pdf
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -13,7 +8,7 @@ The URI of the generated file is returned and is available as part of the action
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif" size="60" position="center" caption="Generate a PDF file" alt="Generate a PDF file"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif" size="60" position="center" caption="Generate a PDF file" alt="Generate a PDF file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif"}
 :::
 ::::
 
@@ -21,31 +16,31 @@ The URI of the generated file is returned and is available as part of the action
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |   |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `html`             | Use standard HTML elements to ensure optimal formatting and compatibility when rendering content in the PDF file, for example, \<html>\<body>Invoices are provided monthly.\</body\</html>.&#xA;The HTML can be built up using JSONata or JavaScript.   |
-| `fileName`         | Give the PDF a name, this name is used as the local file name, and is referenced as part of the uri, which can be accessed via the action's instance output (`=@ctx.actions.generatePDF.outputs.uri`). The action output uri is only available in the sequential action list.&#xA;The .pdf extension is automatically added to the `fileName`. |
-| `title`            | Provide the action button with a title, for example, Invoice.  |
+| **Core structure** |                                                                                                                                                                                                                                                                          |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `html`             | Use standard HTML elements to ensure optimal formatting and compatibility when rendering content in the PDF file, for example, \<html>\<body>Invoices are provided monthly.\</body\</html>.&#xA;The HTML can be built up using JSONata or JavaScript.                    |
+| `fileName`         | Give the PDF a name, this name is used as the local file name, and is referenced as part of the uri, which can be accessed via the action's instance output (`=@ctx.actions.generatePDF.outputs.uri`). &#xA;The .pdf extension is automatically added to the `fileName`. |
+| `title`            | Provide the action button with a title, for example, Invoice.                                                                                                                                                                                                            |
 
-| **Other options** |                                                                                           |
+| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon]() to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).    |
-| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.       |
+| `icon`            | Select an [icon](#) to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                       |
+| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
 | `styles`          | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
 
 ## Considerations
 
-- You can reference the local PDF file using the action's output uri in other actions or components, `=@ctx.actions.generatePDF.outputs.uri`. For example, generate the PDF file then [share](./share.md) the file. The outputs is only supported in a sequential action list, meaning within the context of that action. To use the outputs in components, either use the saved value or persist it to state.
-- Depending on where you save and use the saved PDF, you might need to use [conversions]().
+- You can reference the local PDF file using the action's output uri in other actions or components, `=@ctx.actions.generatePDF.outputs.uri`. For example, generate the PDF file then [share](./share.md) the file. The outputs is only supported within the context of that action. To use the outputs in components, either use the saved value or persist it to state.
+- Depending on where you save and use the saved PDF, you might need to use [conversions](#).
 - The .pdf extension is automatically added to the `fileName`.
 
-## Examples and code snippets 
+## Examples and code snippets
 
 ### Basic generate a PDF and share
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif" size="70" position="center" caption="Generate and share PDF" alt="Generate and share PDF"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif" size="70" position="center" caption="Generate and share PDF" alt="Generate and share PDF" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif"}
 :::
 
 :::VerticalSplitItem
@@ -165,7 +160,7 @@ In this example, an action list contains three actions: the first generates a PD
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" size="70" position="center" caption="Generate PDF, save & share" alt="Generate PDF, save & share"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" size="70" position="center" caption="Generate PDF, save & share" alt="Generate PDF, save & share" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif"}
 :::
 ::::
 
@@ -458,7 +453,6 @@ actions:
       - type: action.action-list
         options:
           title: Send Invoice
-          #The action output uri is only available in the sequential action list.
           isSequential: true
           actions:
             # First action to create the pdf.
