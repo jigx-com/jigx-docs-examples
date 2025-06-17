@@ -1,15 +1,10 @@
----
-title: execute-sql
-slug: 2uGD-execute
-createdAt: Fri Apr 25 2025 06:52:04 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Apr 30 2025 15:51:55 GMT+0000 (Coordinated Universal Time)
----
+# execute-sql
 
 This action allows the mobile app to execute a SQL statement on local execution of SQLite,  used in editing LOCAL tables or Dynamic Data tables. It’s useful for running custom queries or updates based on user interaction or app events.
 
 ## Configuration options
 
-| **Core structure** |                                                                                                                                                                                                                                                 |
+| **Core structure** |                                                                                                                                                                                                                                                       |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `entities`         | The entities/tables affected by the statements. Before executing the statements, a check ensures that the tables exist.&#xA;After execution any datasources that use these entities will be notified that the database was changed.                   |
 | `statements`       | List of statements to execute in sequence. Multiple statements can be configured to execute in sequence.&#xA;`statement` - the SQL statement to execute against the solution database.&#xA;`parameters` - The parameters used in the above statement. |
@@ -17,9 +12,13 @@ This action allows the mobile app to execute a SQL statement on local execution 
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon]() to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                        |
+| `icon`            | Select an [icon](#) to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                       |
 | `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
 | `style`           | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
+
+## Considerations
+
+- Validation currently only applies to SELECT statements and does not apply to INSERT, UPDATE, or DELETE operations, due to limitations in the SQLite parser.
 
 ## Examples and code snippets
 
@@ -51,11 +50,11 @@ actions:
                   parameters:
                       data: |
                         ={
-                          "name": @.components.name.state.value,
-                          "description": @.components.description.state.value,
+                          "name": @ctx.components.name.state.value,
+                          "description": @ctx.components.description.state.value,
                           "count": 0
                         }
-                      id: =@.components.id.state.value   
+                      id: =@ctx.components.id.state.value   
                 entities:
                   - tags
             - type: action.go-back
@@ -72,8 +71,8 @@ children:
             label: Id
             style:
               isDisabled: true
-            value: "=$base64encode(@.components.name.state.value ?
-              @.components.name.state.value : '')"
+            value: "=$base64encode(@ctx.components.name.state.value ?
+              @ctx.components.name.state.value : '')"
         - type: component.text-field
           instanceId: name
           options:
@@ -111,13 +110,13 @@ datasources:
          '$.count'
         FROM [tags]
     
-data: =@.datasources.tags
+data: =@ctx.datasources.tags
 item:
   type: component.list-item
   options:
-    title: =@.current.item.name
-    subtitle: "='count: ' & @.current.item.count"
-    description: =@.current.item.description
+    title: =@ctx.current.item.name
+    subtitle: "='count: ' & @ctx.current.item.count"
+    description: =@ctx.current.item.description
     onPress:
       type: action.execute-sql
       options:
@@ -129,11 +128,11 @@ item:
             parameters:
               data: |
                 ={
-                  "name": @.current.item.name,
-                  "description": @.current.item.description,
-                  "count": @.current.item.count + 1
+                  "name": @ctx.current.item.name,
+                  "description": @ctx.current.item.description,
+                  "count": @ctx.current.item.count + 1
                 }
-              id: =@.current.item.id
+              id: =@ctx.current.item.id
               
     swipeable:
       left:
@@ -146,7 +145,6 @@ item:
               modal:
                 cancel: Do not delete
                 confirm: DELETE
-                description: =@.parents.list-data.item.name
                 title: Do you really want to remove this Tag?
               onConfirmed:
                 type: action.execute-sql
@@ -155,7 +153,7 @@ item:
                     - statement: |
                         DELETE FROM tags WHERE id = @id
                       parameters:
-                        id: =@.current.item.id  
+                        id: =@ctx.current.item.id  
                   entities:
                       - tags
 ```
@@ -163,7 +161,7 @@ item:
 
 ### Execute SQL statements to create & drop  indexes
 
-description
+This example demonstrates how to use the `execute-sql` action to run both CREATE and DELETE statements. It also shows how to incorporate indexes to optimize query performance. Using SQL statements in this way allows you to define and manage table structures, remove data, and improve efficiency through indexing—all directly from your Jigx solution.
 
 :::CodeblockTabs
 list-tasks-dd.jigx
@@ -238,22 +236,22 @@ datasources:
         WHERE json_extract(T.data, '$.assignedTo') = @assignedTo
         ORDER BY [name]
       queryParameters:
-        assignedTo: =@.user.email
+        assignedTo: =@ctx.user.email
     
-data: =@.datasources.tasks
+data: =@ctx.datasources.tasks
 item:
   type: component.list-item
   options:
-    title: =@.current.item.title
-    subtitle: =@.current.item.description
+    title: =@ctx.current.item.title
+    subtitle: =@ctx.current.item.description
     onPress:
       type: action.execute-entity
       options:
         provider: DATA_PROVIDER_DYNAMIC
         entity: default/tasks
         data:
-          completed: "=(@.current.item.completed = 1 ? 0 : 1)"
-          id: =@.current.item.id
+          completed: "=(@ctx.current.item.completed = 1 ? 0 : 1)"
+          id: =@ctx.current.item.id
         method: save  
     swipeable:
       left:
@@ -266,7 +264,7 @@ item:
               modal:
                 cancel: Do not delete
                 confirm: DELETE
-                description: =@.parents.list-data.item.name
+                description: =@ctx.parents.list-data.item.name
                 title: Do you really want to remove this Task?
               onConfirmed:
                 type: action.execute-entity
@@ -274,7 +272,7 @@ item:
                   provider: DATA_PROVIDER_DYNAMIC
                   entity: default/tasks
                   data:
-                    id: =@.current.item.id
+                    id: =@ctx.current.item.id
                   method: delete 
         - icon: pencil-2
           label: Edit
@@ -282,14 +280,14 @@ item:
             type: action.go-to
             options:
               inputs:
-                taskId: =@.current.item.id
+                taskId: =@ctx.current.item.id
               linkTo: edit-task-dd
 ```
 
 create-task-dd.jigx
 
 ```yaml
-itle: Create Task
+title: Create Task
 type: jig.default
 icon: checklist
 
@@ -304,10 +302,10 @@ actions:
           formId: task-form
           goBack: previous
           data:
-            assignedTo: =@.user.email
+            assignedTo: =@ctx.user.email
             createdAt: =$now()
-            createdBy: =@.user.email
-            owner: =@.user.email
+            createdBy: =@ctx.user.email
+            owner: =@ctx.user.email
 
       - type: action.execute-entity
         options:
@@ -316,12 +314,12 @@ actions:
           entity: default/tasks
           method: create
           data:
-            assignedTo: =@.user.email
+            assignedTo: =@ctx.user.email
             createdAt: =$now()
-            createdBy: =@.user.email
-            description: =@.components.description.state.value
-            owner: =@.user.email
-            title: =@.components.title.state.value
+            createdBy: =@ctx.user.email
+            description: =@ctx.components.description.state.value
+            owner: =@ctx.user.email
+            title: =@ctx.components.title.state.value
           goBack: previous
            
 datasources:
@@ -365,7 +363,7 @@ actions:
           method: create
           formId: task-form
           data:
-            owner: =@.user.email
+            owner: =@ctx.user.email
           goBack: previous
       - type: action.execute-entity
         options:
@@ -374,15 +372,15 @@ actions:
           entity: default/tasks
           method: create
           data:
-            description: =@.components.description.state.value
-            owner: =@.user.email
-            title: =@.components.title.state.value
+            description: =@ctx.components.description.state.value
+            owner: =@ctx.user.email
+            title: =@ctx.components.title.state.value
           goBack: previous
             
 children:
-  - instanceId: task-form
+  - type: component.form
+    instanceId: task-form
     options:
-      type: component.form
       children:
         - type: component.text-field
           instanceId: title
@@ -645,7 +643,6 @@ options:
     ORDER BY [name]
   queryParameters:
     assignedTo: =@ctx.user.email
-
 ```
 :::
 
