@@ -103,4 +103,3 @@ Files can be uploaded in Management by following these steps:
 4. Add a **Name** for the file and include the file extension. If no file name is specified the name of the file is used.
 5. Click the **Save** button.
 6. The **status** of the file upload is shown in the top left corner of the File tab.
-

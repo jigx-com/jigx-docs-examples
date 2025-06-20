@@ -30,7 +30,7 @@ Some properties are common to all components, see [Common component properties](
 
 ## Considerations
 
-- You can reference the local PDF file using the action's output uri in other actions or components, `=@ctx.actions.generatePDF.outputs.uri`. For example, generate the PDF file then [share](./share.md) the file. The outputs is only supported within the context of that action. To use the outputs in components, either use the saved value or persist it to state.
+- You can reference the local PDF file using the action's output uri in other actions or components, `=@ctx.actions.generatePDF.outputs.uri`. For example, generate the PDF file then [share](./share.md) the file.&#x20;
 - Depending on where you save and use the saved PDF, you might need to use [conversions](#).
 - The .pdf extension is automatically added to the `fileName`.
 
