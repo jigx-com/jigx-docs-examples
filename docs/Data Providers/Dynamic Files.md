@@ -1,6 +1,6 @@
 # Dynamic Files
 
-Dynamic Files extend Jigx's Dynamic Data entities to include file references, allowing files to be securely stored and associated with entities. See [Dynamic files]()  to understand more.
+Dynamic Files extend Jigx's Dynamic Data entities to include file references, allowing files to be securely stored and associated with entities. See [Dynamic files]() to understand more.
 
 The following examples with code snippets are provided in this section:
 
