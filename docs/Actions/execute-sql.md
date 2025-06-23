@@ -19,7 +19,7 @@ This action allows the app to execute a SQL statement during local SQLite execut
 ## Considerations
 
 - Validation currently only applies to SELECT statements and does not apply to INSERT, UPDATE, or DELETE operations, due to limitations in the SQLite parser.
-- Creating indexes should occur before actual queries are run against the tables. Creating the index in the `onload` event in the index.jigx file ensures the app loads with the exact data.
+- Creating indexes should occur before actual queries are run against the tables. Creating the index in the `onLoad` event in the index.jigx file ensures the app loads with the exact data.
 
 ## Examples and code snippets
 
@@ -172,7 +172,7 @@ datasources:
 
 ### Execute SQL statements to create  indexes
 
-This example demonstrates how to use the `execute-sql` action to run the CREATE statements. It also shows how to incorporate indexes to optimize query performance. Using SQL statements in this way allows you to define and manage table structures, remove data, and improve efficiency through indexing—all directly from your Jigx solution. Creating indexes should occur before actual queries are run against the tables. In this example we create the index on the `assignedTo` column in the `onload` event in the index.jigx file, ensuring that only the tasks for the logged on user are displayed.
+This example demonstrates how to use the `execute-sql` action to run the CREATE statements. It also shows how to incorporate indexes to optimize query performance. Using SQL statements in this way allows you to define and manage table structures, remove data, and improve efficiency through indexing—all directly from your Jigx solution. Creating indexes should occur before actual queries are run against the tables. In this example we create the index on the `assignedTo` column in the `onLoad` event in the index.jigx file, ensuring that only the tasks for the logged on user are displayed.
 
 :::CodeblockTabs
 index.jigx
@@ -314,8 +314,8 @@ edit-task-dd.jigx
 title: Edit Task
 type: jig.default
 icon: checklist
-# Pass the task record as an object as an input from the list,
-# this allows all the details to be populated in the form for editing. 
+# Use inputs to pass the task record as an object from the list. 
+# Allowing the form to be pre-filled with all the task details for editing.
 inputs:
   task:
     type: object
