@@ -1,6 +1,6 @@
 # execute-sql
 
-This action allows the mobile app to execute a SQL statement on local execution of SQLite,  used in editing LOCAL tables or Dynamic Data tables. It’s useful for running custom queries or updates based on user interaction or app events.
+This action allows the app to execute a SQL statement during local SQLite execution, which is used to edit either local tables or Dynamic Data tables. It's useful for running custom queries or updates in response to user interactions or app events. To improve performance, consider creating indexes on frequently queried columns—this enables SQLite to locate rows more efficiently using optimized lookup structures.
 
 ## Configuration options
 
@@ -12,19 +12,20 @@ This action allows the mobile app to execute a SQL statement on local execution 
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon](#) to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                       |
+| `icon`            | Select an [icon]() to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                        |
 | `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
 | `style`           | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
 
 ## Considerations
 
 - Validation currently only applies to SELECT statements and does not apply to INSERT, UPDATE, or DELETE operations, due to limitations in the SQLite parser.
+- Creating indexes should occur before actual queries are run against the tables. Creating the index in the `onload` event in the index.jigx file ensures the app loads with the exact data.
 
 ## Examples and code snippets
 
 ### Execute SQL statements to update & delete
 
-This example shows a list with an `onPress` event that executes a SQL statement to update the *Tags* table in the database. A `swipeable` event is also configured to delete the list item record from the SQL database.
+This example shows a list with an `onPress` event that executes a SQL statement to update the *Tags* table in the local database. A `swipeable` event is configured to delete the list item record from the local database.
 
 :::CodeblockTabs
 create-tag.jigx
@@ -41,6 +42,9 @@ actions:
           title: Create Tag
           isSequential: true
           actions:
+            # Create the tags record in the local SQLite table,
+            # by writing a SQL statement to insert the record,
+            # and parameters defining the record's data. 
             - type: action.execute-sql
               options:
                 statements:
@@ -58,7 +62,7 @@ actions:
                 entities:
                   - tags
             - type: action.go-back
-                  
+# Configure a form to capture the tag details.                  
 children:
   - type: component.form
     instanceId: tag-form
@@ -88,28 +92,16 @@ list-tag.jigx
 ```yaml
 title: Tags (execute-sql)
 type: jig.list
-
+# Add the action button in the list to create a new tag. 
 actions:
   - children:
       - type: action.go-to
         options:
           title: Create Tag
-          linkTo: create-tag
-        
-datasources:
-  tags:
-    type: datasource.sqlite
-    options:
-      provider: DATA_PROVIDER_LOCAL
-      entities:
-        - entity: tags
-      query: |
-        SELECT id,
-         '$.name', 
-         '$.description',
-         '$.count'
-        FROM [tags]
-    
+          linkTo: create-tag    
+# In the list display the tag's details, use an onPress with the execute-sql
+# action to update the dataset by increasing the tag count
+# when the item is pressed.   
 data: =@ctx.datasources.tags
 item:
   type: component.list-item
@@ -133,7 +125,8 @@ item:
                   "count": @ctx.current.item.count + 1
                 }
               id: =@ctx.current.item.id
-              
+# When swiping left on the list item, delete the tag's record
+# from the local database using the execute-sql action.              
     swipeable:
       left:
         - icon: close
@@ -157,102 +150,134 @@ item:
                   entities:
                       - tags
 ```
+
+tags (datasource)
+
+```yaml
+datasources:
+  tags:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_LOCAL
+      entities:
+        - entity: tags
+      query: |
+        SELECT id,
+         '$.name', 
+         '$.description',
+         '$.count'
+        FROM [tags]
+```
 :::
 
-### Execute SQL statements to create & drop  indexes
+### Execute SQL statements to create  indexes
 
-This example demonstrates how to use the `execute-sql` action to run both CREATE and DELETE statements. It also shows how to incorporate indexes to optimize query performance. Using SQL statements in this way allows you to define and manage table structures, remove data, and improve efficiency through indexing—all directly from your Jigx solution.
+This example demonstrates how to use the `execute-sql` action to run the CREATE statements. It also shows how to incorporate indexes to optimize query performance. Using SQL statements in this way allows you to define and manage table structures, remove data, and improve efficiency through indexing—all directly from your Jigx solution. Creating indexes should occur before actual queries are run against the tables. In this example we create the index on the `assignedTo` column in the `onload` event in the index.jigx file, ensuring that only the tasks for the logged on user are displayed.
 
 :::CodeblockTabs
+index.jigx
+
+```yaml
+name: jigx-demo-2025
+title: jigx-demo-2025
+category: analytics
+
+# When the app loads, return only the tasks assigned to the logged-in user.
+# Execute a SQLite statement to create an index on the assignedTo column
+# in the task table.
+onLoad:
+  type: action.execute-sql
+  options:
+    # Specify the table where the index is required. 
+    entities:
+      - default/tasks
+    statements:
+      # Create the index that returns the tasks for the assignedTo user.
+      - statement: |
+          CREATE INDEX IF NOT EXISTS idx_task__assignedTo
+          ON [default/tasks] (JSON_EXTRACT(data, '$.assignedTo'))
+tabs:
+  home:
+    label: Home label
+    jigId: create-task-dd
+    icon: home-apps-logo          
+```
+
+create-task-dd.jigx
+
+```yaml
+title: Create Task
+type: jig.default
+icon: checklist
+# Pulling down on the jig will clear the form of any data.
+onRefresh:
+  type: action.reset-state
+  options:
+    state: =@ctx.components.task-form.state.data
+# Configure the action to create the task record in the Dynamic Data table.
+actions:
+  - children:
+      - type: action.execute-entity
+        options:
+          title: Create
+          provider: DATA_PROVIDER_DYNAMIC
+          entity: default/tasks
+          method: create
+          goBack: previous
+          data:
+            assignedTo: =@ctx.user.email
+            createdAt: =$now()
+            createdBy: =@ctx.user.email
+            description: =@ctx.components.description.state.value
+            name: =@ctx.components.name.state.value
+# Use the form component to capture the task name and description.
+children:
+  - type: component.form
+    instanceId: task-form
+    options:
+      isDiscardChangesAlertEnabled: false
+      children:
+        - type: component.text-field
+          instanceId: name
+          options:
+            label: Name
+        - type: component.text-field
+          instanceId: description
+          options:
+            label: Description
+```
+
 list-tasks-dd.jigx
 
 ```yaml
 title: Tasks (DD)
 type: jig.list
 icon: checklist
-
-onRefresh:
-  type: action.sync-entities
-  options:
-    provider: DATA_PROVIDER_DYNAMIC
-    entities:
-      - default/tasks
-    force: true
-  
+# Add the action button in the list to create a new task. 
 actions:
   - children:
       - type: action.go-to
         options:
           title: Create Task
           linkTo: create-task-dd
-        
-      - type: action.execute-sql
-        options:
-          title: Create Indexes
-          statements:
-            - statement: |
-                CREATE UNIQUE INDEX IF NOT EXISTS udx_task_categories__name
-                ON [default/task-categories] (JSON_EXTRACT(data, '$.name'))
-            - statement: |
-                CREATE INDEX IF NOT EXISTS idx_task__assignedTo
-                ON [default/tasks] (JSON_EXTRACT(data, '$.assignedTo'))
-          entities:
-            - default/task-categories
-            - default/tasks
-            
-      - type: action.execute-sql
-        options:
-          title: Delete Indexes
-          statements:
-            - statement: |
-                DROP INDEX IF EXISTS udx_task_categories__name
-            - statement: |
-                DROP INDEX IF EXISTS idx_tasks__assignedTo
-          entities:
-            - default/task-categories
-            - default/tasks
-
-datasources:
-  tasks:
-    type: datasource.sqlite
-    options:
-      provider: DATA_PROVIDER_DYNAMIC
-      entities:
-        - default/tasks
-        - default/task-categories
-      query: |
-        SELECT
-          T.id,
-          json_extract(T.data, '$.name') as name,
-          json_extract(T.data, '$.description') as description,
-          json_extract(T.data, '$.complete') as complete,
-          C.id as categoryId,
-          json_extract(C.data, '$.name') as category,
-          json_extract(T.data, '$.completed') as completed,
-          json_extract(T.data, '$.assignedTo') as assignedTo
-        FROM [default/tasks] AS T
-        LEFT JOIN [default/task-categories] AS C
-        ON json_extract(T.data,'$.categoryId') = C.id
-        WHERE json_extract(T.data, '$.assignedTo') = @assignedTo
-        ORDER BY [name]
-      queryParameters:
-        assignedTo: =@ctx.user.email
-    
-data: =@ctx.datasources.tasks
+          
+data: =@ctx.datasources.task-dd
 item:
   type: component.list-item
   options:
-    title: =@ctx.current.item.title
+    title: =@ctx.current.item.name
     subtitle: =@ctx.current.item.description
+    # Complete the task by adding an onPress action. 
     onPress:
       type: action.execute-entity
       options:
         provider: DATA_PROVIDER_DYNAMIC
         entity: default/tasks
+        method: save
         data:
-          completed: "=(@ctx.current.item.completed = 1 ? 0 : 1)"
           id: =@ctx.current.item.id
-        method: save  
+          completed: "=(@ctx.current.item.completed = 1 ? 0 : 1)"
+    # Edit or delete the task by swiping left, use the execute-entity action.      
     swipeable:
       left:
         - icon: close
@@ -264,86 +289,23 @@ item:
               modal:
                 cancel: Do not delete
                 confirm: DELETE
-                description: =@ctx.parents.list-data.item.name
                 title: Do you really want to remove this Task?
               onConfirmed:
                 type: action.execute-entity
                 options:
                   provider: DATA_PROVIDER_DYNAMIC
                   entity: default/tasks
+                  method: delete
                   data:
                     id: =@ctx.current.item.id
-                  method: delete 
         - icon: pencil-2
           label: Edit
           onPress:
             type: action.go-to
             options:
               inputs:
-                taskId: =@ctx.current.item.id
+                task: =@ctx.current.item
               linkTo: edit-task-dd
-```
-
-create-task-dd.jigx
-
-```yaml
-title: Create Task
-type: jig.default
-icon: checklist
-
-actions:
-  - children:
-      - type: action.submit-form
-        options:
-          title: Create (submit-form)
-          provider: DATA_PROVIDER_DYNAMIC
-          entity: default/tasks
-          method: create
-          formId: task-form
-          goBack: previous
-          data:
-            assignedTo: =@ctx.user.email
-            createdAt: =$now()
-            createdBy: =@ctx.user.email
-            owner: =@ctx.user.email
-
-      - type: action.execute-entity
-        options:
-          title: Create (execute-entity)
-          provider: DATA_PROVIDER_DYNAMIC
-          entity: default/tasks
-          method: create
-          data:
-            assignedTo: =@ctx.user.email
-            createdAt: =$now()
-            createdBy: =@ctx.user.email
-            description: =@ctx.components.description.state.value
-            owner: =@ctx.user.email
-            title: =@ctx.components.title.state.value
-          goBack: previous
-           
-datasources:
-  static:
-    type: datasource.static
-    options:
-      data:
-        - field1: value
-          field2: value
-          id: 1
-    
-children:
-  - type: component.form
-    instanceId: task-form
-    options:
-      children:
-        - type: component.text-field
-          instanceId: title
-          options:
-            label: Title
-        - type: component.text-field
-          instanceId: description
-          options:
-            label: Description
 ```
 
 edit-task-dd.jigx
@@ -352,49 +314,51 @@ edit-task-dd.jigx
 title: Edit Task
 type: jig.default
 icon: checklist
-
+# Pass the task record as an object as an input from the list,
+# this allows all the details to be populated in the form for editing. 
+inputs:
+  task:
+    type: object
+    required: true
+# Use update to save the changes made in the edit form. 
 actions:
   - children:
-      - type: action.submit-form
-        options:
-          title: Create (submit-form)
-          provider: DATA_PROVIDER_DYNAMIC
-          entity: default/tasks
-          method: create
-          formId: task-form
-          data:
-            owner: =@ctx.user.email
-          goBack: previous
       - type: action.execute-entity
         options:
-          title: Create (execute-entity)
+          title: Update
           provider: DATA_PROVIDER_DYNAMIC
           entity: default/tasks
-          method: create
-          data:
-            description: =@ctx.components.description.state.value
-            owner: =@ctx.user.email
-            title: =@ctx.components.title.state.value
+          method: update
           goBack: previous
-            
+          data:
+            id: =@ctx.jig.inputs.task.id
+            description: =@ctx.components.description.state.value
+            assignedTo: =@ctx.components.assignedTo.state.value
+            name: =@ctx.components.name.state.value
+
+# Use the defined jig inputs to populate the form fields,
+# with the current records details.
 children:
   - type: component.form
     instanceId: task-form
     options:
+      isDiscardChangesAlertEnabled: false
       children:
         - type: component.text-field
-          instanceId: title
+          instanceId: name
           options:
-            label: Title
+            initialValue: =@ctx.jig.inputs.task.name
+            label: Name
         - type: component.text-field
           instanceId: description
           options:
-            label: Description 
+            initialValue: =@ctx.jig.inputs.task.description
+            label: Description
         - type: component.text-field
-          instanceId: owner
+          instanceId: assignedTo
           options:
-            initialValue: =@ctx.user.email
-            label: Owner
+            initialValue: =@ctx.jig.inputs.task.assignedTo
+            label: assignedTo
             style:
               isDisabled: true
 ```
@@ -407,22 +371,20 @@ options:
   provider: DATA_PROVIDER_DYNAMIC
   entities:
     - default/tasks
-    - default/task-categories
+# Configure the datasource query, ensuring the assignTo parameter uses
+# the logged in user. This is used by the execute-sql action to create the 
+# index when the app loads. Only the logged on user's tasks are displayed.     
   query: |
     SELECT
-      T.id,
-      json_extract(T.data, '$.name') as name,
-      json_extract(T.data, '$.description') as description,
-      json_extract(T.data, '$.status') as status,
-      json_extract(T.data, '$.assignedTo') as assignedTo,
-      json_extract(T.data, '$.createdAt') as createdAt,
-      C.id as categoryId,
-      json_extract(C.data, '$.name') as category
-    FROM [default/tasks] AS T
-    LEFT JOIN [default/task-categories] AS C
-    ON json_extract(T.data,'$.categoryId') = C.id
-    WHERE json_extract(T.data, '$.assignedTo') = @assignedTo
-    ORDER BY [name]
+      id,
+      json_extract(data, '$.name') as name,
+      json_extract(data, '$.description') as description,
+      json_extract(data, '$.complete') as complete,
+      json_extract(data, '$.completed') as completed,
+      json_extract(data, '$.assignedTo') as assignedTo
+    FROM [default/tasks]
+    WHERE json_extract(data, '$.assignedTo') = @assignedTo
+    ORDER BY name
   queryParameters:
     assignedTo: =@ctx.user.email
 ```
