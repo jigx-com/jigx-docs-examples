@@ -651,6 +651,7 @@ header:
       options:
         source:
           uri: https://www.dropbox.com/scl/fi/o1gobv6lj1l3076veyaff/cloud-7906280_1280.png?rlkey=c5ad2oknpw5fju9qjlb1c2d2o&raw=1
+
 # Set the onFocus to clear all data from the jig. 
 onFocus: 
   type: action.reset-state
