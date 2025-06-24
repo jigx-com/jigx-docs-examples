@@ -631,7 +631,7 @@ See the example in [Upload product images (POST)](<./../../Data Providers/REST/C
 :::
 
 :::VerticalSplitItem
-![Upload images using REST](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9JpcY3lPb4m2WL0w-v4il_rest-image.PNG "Upload images using REST")
+![Upload images using REST](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RiSOkNLzZS31uj9Z5TS-b-20250624-131725.png "Upload images using REST")
 :::
 ::::
 
@@ -792,7 +792,7 @@ This example shows how multiple images can be loaded in the media-field using th
 - The load images into the media-field, requires images to be in `local-uri` format, a conversion is set in the REST GET function, converting the file from base64 to local-uri to display the image.&#x20;
 - When clicking on the `media-field` to add additional images the intial images are loaded in the field. Depending on the function used, for example POST,  if the images are not cleared or removed, the initial images will be uploaded as new images, creating duplicates. Using a PATCH or PUT function could avoid duplicates.
 
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uWAWLJveF_UZewQnWNtgV-20240821-135959.PNG" size="68" position="center" caption="Load with intial images" alt="Load with intial images" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uWAWLJveF_UZewQnWNtgV-20240821-135959.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CT3vEJON-ZoWYhtqyCtZD-20250624-132902.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CT3vEJON-ZoWYhtqyCtZD-20250624-132902.png" size="68" width="2684" height="2684" position="center" caption="Load with intial images" alt="Load with intial images"}
 
 :::CodeblockTabs
 add-customer-images.jigx
@@ -1010,7 +1010,7 @@ conversions:
 
 Jigx stores files as local files on the device and returns the file's URI as the default value. When saving these files to a datasource, you must convert files from the local-uri to base64, data-uri, or buffer. The opposite is true when handling the files returned from the datasource, you need to convert them from their saved state (base64, data-uri, or buffer) to a local-uri. In this example we upload a profile photo and convert from local-uri on the device to buffer for storage in SQL and then get the photo back from SQL and convert it from buffer to local-uri to display the photo as an avatar in a list. See [File handling]() for more information.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gAVxsX1KLX2lFjBhNFGKA_cc-hiking.PNG" size="80" position="center" caption="File conversion in SQL function" alt="File conversion in SQL function" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gAVxsX1KLX2lFjBhNFGKA_cc-hiking.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-YpTN8kMi3gUgmNxRDaWmD-20250624-142109.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-YpTN8kMi3gUgmNxRDaWmD-20250624-142109.png" size="80" width="2540" height="2500" position="center" caption="File conversion in SQL function" alt="File conversion in SQL function"}
 
 :::CodeblockTabs
 update-hiker.jigx
