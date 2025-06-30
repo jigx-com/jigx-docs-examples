@@ -1,9 +1,4 @@
----
-title: List & View customers (GET)
-slug: A1Q3-view
-createdAt: Tue May 07 2024 08:58:23 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Oct 23 2024 11:45:46 GMT+0000 (Coordinated Universal Time)
----
+# List & View customers (GET)
 
 ## Scenario
 
@@ -13,7 +8,7 @@ In this scenario, records are limited to return only fifty from the REST service
 
 The REST APIs GET operator is used in a Jigx function with an `outputTransform` to specify the exact data to be returned. A `continuation` is added to return all records; the records property specifies all records in the customer's table. A global action is configured to sync the data in the app with the REST data provider calling the function. In turn, the global action is called in the index.jigx file to load the data when the app is opened. In the list jig the local data provider is used to configure the list-item component. In the view-customer jig `jsonProperties` are used for address and phone to return the nested object.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9_rest-listview.PNG" size="76" position="center" caption="List & view customer details" alt="List & view customer details"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9_rest-listview.PNG" size="76" position="center" caption="List & view customer details" alt="List & view customer details" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9_rest-listview.PNG"}
 
 :::hint{type="info"}
 This code sample builds upon the previous [List customers (GET)](<./List customers _GET_.md>) step, to develop a complete and functional solution.
@@ -35,32 +30,36 @@ rest-get-customer-cont.jigx
 
 ```yaml
 provider: DATA_PROVIDER_REST
-method: GET #Fetches data from the REST Service
-url: https://[your_rest_service]/api/customers?continuation_enabled=true #Use your REST service URL 
-# return data for rows with matching ids
+# Fetches data from the REST Service.
+method: GET
+# Use your REST service URL.  
+url: https://[your_rest_service]/api/customers?continuation_enabled=true 
+# Return data for rows with matching ids.
 forRowsWithMatchingIds: true
-# direct the function call to use remote execution between the mobile device and the REST service
-useLocalCall: false #Directs the function call to use remote execution
+# Direct the function call to use remote execution between the device
+# and the REST service.
+useLocalCall: false 
 
 parameters:
   accessToken:
     location: header
     required: true
     type: string
-    value: service.oauth #Use manage.jigx.com to define credentials for your solution
+    # Use manage.jigx.com to define credentials for your solution.
+    value: service.oauth 
 
   myparam:
     type: string
     location: query
     required: false
     value: myParamValue
-# Continuation ensures all records are returned from the REST Service
+# Continuation ensures all records are returned from the REST Service.
 continuation:
   when: =$.next_link
   url: =$.next_link
-#specify that the records are from the customers table
+# Specify that the records are from the customers table.
 records: =$.customers
-#Define the customer fields that must be fetched from the REST Service
+# Define the customer fields that must be fetched from the REST Service.
 outputTransform: |
   {
     "customers": customers.{
@@ -89,9 +88,10 @@ Create a load-data.jigx file under the actions folder. This file is configured w
 load-data.jigx
 
 ```yaml
-# The sync-entities action is used to get the data from the REST data provider using the function.
-# The global action can be referenced throughout the solution for effieicency and performance.
-# The data is synced from the REST data provider to a local data provider on the device.
+# The sync-entities action is used to get the data from the REST data
+# provider using the function. The global action can be referenced 
+# throughout the solution for effieicency and performance. The data is
+# synced from the REST data provider to a local data provider on the device.
 action: 
   type: action.sync-entities
   options:
@@ -128,19 +128,18 @@ header:
     children: 
       type: component.location 
       options:
-#Use the JsonProperty to return the nested objects in the REST JSON       
+        # Use the JsonProperty to return nested objects in the REST JSON.       
         address: =@ctx.datasources.customer.addresses[0].address & ' ' & @ctx.datasources.customer.addresses[0].city & ', ' & @ctx.datasources.customer.addresses[0].state & ', ' & @ctx.datasources.customer.addresses[0].zip
   
-#Define the data to use in the jig, the data has been synced by the global action to the local data provider from the REST Service
+# Define the data to use in the jig, the data has been synced 
+# by the global action to the local data provider from the REST Service.
 datasources: 
   customer: 
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
       entities:
-        - entity: customers
-  
+        - entity: customers 
       query: |
         SELECT 
           cus.id AS id, 
@@ -163,10 +162,10 @@ datasources:
           id = @custId
         ORDER BY 
           json_extract(cus.data, '$.companyName')
-
       queryParameters:
         custId: =@ctx.jig.inputs.customer.id
-#Use jsonProperties to return the complex structure for address and phone      
+      # Use jsonProperties to return the complex structure for address 
+      # and phone.      
       jsonProperties: 
         - addresses
         - phones
@@ -206,8 +205,7 @@ children:
           options:
             contentType: link
             label: Web
-            value: =@ctx.datasources.customer.web
-                   
+            value: =@ctx.datasources.customer.web                   
 ```
 
 list-customers.jigx
@@ -226,16 +224,15 @@ header:
       options:
         source:
           uri: https://www.dropbox.com/scl/fi/ha9zh6wnixblrbubrfg3e/business-5475661_640.jpg?rlkey=anemjh5c9qsspvzt5ri0i9hva&raw=1
-#Define the data to use in the jig, the data has been synced by the global action to the local data provider from the REST Service
+# Define the data to use in the jig, the data has been synced by the global 
+# action to the local data provider from the REST Service.
 datasources:
   customers: 
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
       entities:
-        - entity: customers
-  
+        - entity: customers  
       query: |
         SELECT 
           cus.id AS id, 
@@ -299,20 +296,26 @@ item:
             type: action.confirm
             options:
               isConfirmedAutomatically: false
-              onConfirmed: 
-               type: action.execute-entity #action to execute the delete
+              onConfirmed:
+               # Action to execute the delete. 
+               type: action.execute-entity 
                 options:
-#Use the REST data provider to call the delete function.                  
+                  # Use the REST data provider to call the delete function.                  
                   provider: DATA_PROVIDER_REST
                   entity: customers
-                  method: delete #Delete the record from the local SQLite table
+                  # Delete the record from the local SQLite table.
+                  method: delete 
                   goBack: stay
-                  function: rest-delete-customer #Delete the record from the REST service
-#Specifiy the function parameters required by the function to delete the customer, in this example custId                 
+                  # Delete the record from the REST service.
+                  function: rest-delete-customer 
+                  #Specifiy the function parameters required by the function
+                  # to delete the customer, in this example custId.                 
                   functionParameters:
-                    custId: =$number(@ctx.current.item.id) #id of customer record to be deleted in REST service                 
-                  data:  
-                    id: =@ctx.current.item.id #id of customer to be deleted from local data provider
+                  # id of customer record to be deleted in REST service. 
+                    custId: =$number(@ctx.current.item.id)                 
+                  data:
+                    # id of customer to be deleted from local data provider.  
+                    id: =@ctx.current.item.id 
               modal:
                 title: Are you sure?
                 description: =('Press Confirm to permanently delete ' & @ctx.current.item.companyName)
@@ -337,20 +340,27 @@ index.jigx
 name: hello-rest-example
 title: Hello REST Solution
 category: sales
-# onFocus is triggered whenever the jig is displayed. The sync-entities action in the global action calls the Jigx REST function and populates the local SQLite tables on the device with the data returned from REST service 
+# onFocus is triggered whenever the jig is displayed.
+# The sync-entities action in the global action calls the Jigx REST function 
+# and populates the local SQLite tables on the device with the data returned 
+# from REST service. 
 onFocus: 
   type: action.execute-action
   options:
     action: load-data
-# onLoad is triggered when the solution is loaded on the device. The sync-entities action in the global action calls the Jigx REST function and populates the local SQLite tables on the device with the data returned from REST service        
+# onLoad is triggered when the solution is loaded on the device. 
+# The sync-entities action in the global action calls the Jigx REST function
+# and populates the local SQLite tables on the device with the data returned 
+# from REST service.        
 onLoad: 
   type: action.execute-action
   options:
     action: load-data
     
-widgets:
-  - size: 1x1 
+tabs:
+  home:
     jigId: list-customers
+    icon: home-apps-logo
 ```
 :::
 

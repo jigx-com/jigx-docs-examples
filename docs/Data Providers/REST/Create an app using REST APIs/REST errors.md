@@ -1,9 +1,4 @@
----
-title: REST errors
-slug: EXlO-rest
-createdAt: Wed Oct 09 2024 09:45:40 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Feb 12 2025 13:28:59 GMT+0000 (Coordinated Universal Time)
----
+# REST errors
 
 ## Scenario
 
@@ -17,7 +12,7 @@ When trying to view a customer and their details or create a new customer in the
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif" size="80" position="center" caption="REST Error handling" alt="REST Error handling"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif" size="80" position="center" caption="REST Error handling" alt="REST Error handling" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif"}
 :::
 ::::
 
@@ -43,7 +38,7 @@ rest-create-customer.jigx
 provider: DATA_PROVIDER_REST
 # Create new record in the backend
 method: POST 
-#Use your REST service URL 
+# Use your REST service URL 
 url: https://[your_rest_service]/api/customers 
 # Direct the function call to use local execution,
 # between the mobile device and the REST service.
@@ -54,7 +49,7 @@ parameters:
     location: header
     required: false
     type: string
-# Use manage.jigx.com to define credentials for your solution.
+    # Use manage.jigx.com to define credentials for your solution.
     value: service.oauth 
   firstName:
     type: string
@@ -138,28 +133,33 @@ outputTransform: |
   }
 # Configure multiple REST error responses.
 error:
-# Configure the specific REST endpoint error that is returned. 
+    # Configure the specific REST endpoint error that is returned. 
   - when: =@ctx.response.status = 401
-# Choose an icon to show in the error message.  
+    # Choose an icon to show in the error message.  
     icon: on-error-sad
-# Provide a short meaningful title for the error.    
+    # Provide a short meaningful title for the error.    
     title: Oops! Something Went Wrong
-# Describe a user-friendly explanation for the error.     
+    # Describe a user-friendly explanation for the error.     
     description: "It seems like you don’t have permission to Add customers.
       If you think this is a mistake, please contact support. We’re here to help!"
     details: =('Error:' & ' ' & @ctx.response.statusText & ' (' &
       @ctx.response.status & ')')
-# Write the error to the customer_error table      
+    # Write the error to the customer_error table      
     table: =@ctx.entity & "_error"
-# Send a notification to the app user using the title, description, detail and icon properties    
+    # Send a notification to the app user using the title, description, 
+    #detail and icon properties.    
     notification: true
-# Specifiy what data must be written in the error table     
+    # Specifiy what data must be written in the error table.     
     transform: 
       '={ "id": @ctx.commandId, "type": "System Offline", 
       "screen": "system-offline",  "response": @ctx.response, 
       "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
       "entity": @ctx.entity, "correlationId": @ctx.correlationId}'
-# Configure the next error that could be returned from the REST endpoint 
+    # Add the number of retries and the time between each retry.   
+    retry:
+      delay: "=(@ctx.response.headers.'retry-after' ? $number(@ctx.response.headers.'retry-after') : 5) * 1000"
+      maxRetries: 3  
+    # Configure the next error that could be returned from the REST endpoint. 
   - when: =@ctx.response.status = 403
     title: System Offline
     description: 
@@ -176,14 +176,15 @@ error:
       "screen": "system-offline",  "response": @ctx.response, 
       "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
       "entity": @ctx.entity, "correlationId": @ctx.correlationId}'
-# All other returned REST endpoint errors will be caught under the Unexpected error section 
+    # All other returned REST endpoint errors will be caught
+    # under the Unexpected error section. 
   - title: Unexpected error
     description: 
       An unexpected error occurred. Support has been notified and will
       reach out via email once the issue is resolved.
     details: =@ctx.response.body
-# Set an automatic retry, specify the delay befre the retry is actioned,
-# Set the number of retries allowed.        
+    # Set an automatic retry, specify the delay befre the retry is actioned,
+    # Set the number of retries allowed.        
     retry:
       delay: "=(@ctx.response.headers.'retry-after' ? $number(@ctx.response.headers.'retry-after') : 5)*1000"
       maxRetries: 3
@@ -214,7 +215,7 @@ parameters:
     location: header
     required: false
     type: string
-# Use manage.jigx.com to define credentials for your solution.    
+    # Use manage.jigx.com to define credentials for your solution.    
     value: XXX
   syncId:
     type: number
@@ -248,20 +249,21 @@ conversions:
     to: local-uri
 # Configure multiple REST error responses.    
 error:
-# Configure the specific REST endpoint error that is returned. 
+    # Configure the specific REST endpoint error that is returned. 
   - when: =@ctx.response.status = 403
-# Provide a short meaningful title for the error.   
+    # Provide a short meaningful title for the error.   
     title: System Offline
-# Describe a user-friendly explanation for the error.     
+    # Describe a user-friendly explanation for the error.     
     description: 
       It looks like our system is temporarily unavailable. 
       We're working hard to fix this and get things back on 
       track. Please try again in a little while. Thank you 
       for your patience!
     details: =@ctx.response.body
-# Choose an icon to show in the error message.    
+    # Choose an icon to show in the error message.    
     icon: server-error-403-hand-forbidden
-# Send a notification to the app user using the title, description, detail and icon properties        
+    # Send a notification to the app user using the title, description, 
+    # detail and icon properties.        
     notification: true
     table: datasync-error
     transform: 
@@ -269,7 +271,7 @@ error:
       "screen": "system-offline",  "response": @ctx.response, 
       "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
       "entity": @ctx.entity, "correlationId": @ctx.correlationId}'
- # Specifiy what data must be written in the error table     
+    # Specifiy what data must be written in the error table.     
   - when: =@ctx.response.status = 401
     title: Access Denied
     description: 
@@ -285,7 +287,8 @@ error:
       "screen": "access-denied",  "response": @ctx.response, 
       "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
       "entity": @ctx.entity, "correlationId": @ctx.correlationId}'
-# All other returned REST endpoint errors will be caught under the Unexpected error section     
+    # All other returned REST endpoint errors will be caught
+    # under the Unexpected error section.     
   - title: Oops! Something Went Wrong
     description: 
       "We’re not sure what happened, but we’re working on it. Please 
@@ -305,9 +308,9 @@ rest-update-customer.jigx
 
 ```yaml
 provider: DATA_PROVIDER_REST
-#Update the customer data
+# Update the customer data
 method: PUT
-#Use your REST service URL 
+# Use your REST service URL 
 url: https://[your_rest_service]/api/customers 
 # Direct the function call to use local execution,
 # between the mobile device and the REST service.
@@ -319,7 +322,7 @@ parameters:
       location: header
       required: false
       type: string
-# Use manage.jigx.com to define credentials for your solution.      
+      # Use manage.jigx.com to define credentials for your solution.      
       value: XXXX
   id:
     type: int
@@ -403,28 +406,29 @@ inputTransform: |
   
 # Configure multiple REST error responses.
 error:
-# Configure the specific REST endpoint error that is returned. 
+    # Configure the specific REST endpoint error that is returned. 
   - when: =@ctx.response.status = 401
-# Choose an icon to show in the error message.  
+    # Choose an icon to show in the error message.  
     icon: on-error-sad
-# Provide a short meaningful title for the error.    
+    # Provide a short meaningful title for the error.    
     title: Oops! Something Went Wrong
-# Describe a user-friendly explanation for the error.     
+    # Describe a user-friendly explanation for the error.     
     description: "It seems like you don’t have permission to Add customers.
       If you think this is a mistake, please contact support. We’re here to help!"
     details: =('Error:' & ' ' & @ctx.response.statusText & ' (' &
       @ctx.response.status & ')')
-# Write the error to the customer_error table      
+    # Write the error to the customer_error table.      
     table: =@ctx.entity & "_error"
-# Send a notification to the app user using the title, description, detail and icon properties    
+    # Send a notification to the app user using the title, description,
+    # detail and icon properties.    
     notification: true
-# Specifiy what data must be written in the error table     
+    # Specifiy what data must be written in the error table.     
     transform: 
       '={ "id": @ctx.commandId, "type": "System Offline", 
       "screen": "system-offline",  "response": @ctx.response, 
       "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
       "entity": @ctx.entity, "correlationId": @ctx.correlationId}'
-# Configure the next error that could be returned from the REST endpoint 
+    # Configure the next error that could be returned from the REST endpoint 
   - when: =@ctx.response.status = 403
     title: System Offline
     description: 
@@ -442,7 +446,8 @@ error:
       "screen": "system-offline",  "response": @ctx.response, 
       "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
       "entity": @ctx.entity, "correlationId": @ctx.correlationId}'
-# All other returned REST endpoint errors will be caught under the Unexpected error section 
+    # All other returned REST endpoint errors will be caught
+    # under the Unexpected error section. 
   - title: Unexpected error
     description: 
       An unexpected error occurred. Support has been notified and will
@@ -493,7 +498,7 @@ options:
 
 There are a number of options available to process items that are in an error state.
 
-1. Use the ***commandQueue**. Items that return an error from the REST endpoint will remain on the commandQueue and are not automatically processed by the queue. You must configure an action to either retry the item or delete the item from the queue. The retry executes the REST call again.
+1. Use the \***commandQueue**. Items that return an error from the REST endpoint will remain on the commandQueue and are not automatically processed by the queue. You must configure an action to either retry the item or delete the item from the queue. The retry executes the REST call again.
 2. Use the ***customer\_error*** table configured in the function. Use the data from the table in a jig to allow app users to resolve the error or delete the item in error.
 
 ### Use the commandQueue
@@ -518,7 +523,7 @@ header:
       options:
         source:
           uri: https://builder.jigx.com/assets/images/header.jpg
-# Configure a datasource to return the data available in the system table
+# Configure a datasource to return the data available in the system table.
 datasources:
   queued-commands:
     type: datasource.sqlite
@@ -533,7 +538,7 @@ datasources:
         ORDER BY id;
       jsonProperties:
         - payload
-# Create a list of the items on the queue
+# Create a list of the items on the queue.
 data: =@ctx.datasources.queued-commands
 
 item:
@@ -542,7 +547,8 @@ item:
     title: =(@ctx.current.item.payload.functionId = 'rest-create-customer' ? 'Create Customer Failed':@ctx.current.item.id & " - " & @ctx.current.item.queue & " - " & @ctx.current.item.type & " - " & @ctx.current.item.state)
     subtitle: =@ctx.current.item.payload.data.companyName & ' could not be created'
     description: =@ctx.current.item.payload.data.internalRef
-# Configure an onPress to view all the details of the individual item in a separate jig.    
+    # Configure an onPress to view all the details of the individual item
+    # in a separate jig.    
     onPress:
       type: action.go-to
       options:
@@ -550,7 +556,7 @@ item:
         parameters:
           commandId: =@.current.item.id
           internalRef: =@ctx.current.item.payload.data.internalRef
-# Add two actions for the items, a retry and a delete.          
+    # Add two actions for the items, a retry and a delete.          
     swipeable:
       left:
         - icon: close
@@ -566,7 +572,6 @@ item:
             type: action.retry-queue-command
             options:
               id: =@.current.item.id
-
 ```
 
 view-command-queue.jigx
@@ -735,7 +740,7 @@ item:
       type: action.go-to
       options:
         linkTo: =(@ctx.current.item.response.status = 401 ? 'customer-error-401':@ctx.current.item.response.status = 403 ? 'customer-error-403':'customer-error-500')
-        parameters:
+        inputs:
           commandId: =@ctx.current.item.id
     leftElement: 
       element: icon
@@ -745,7 +750,7 @@ item:
       icon: arrow-right
 
 widgets:
-  "1x1": 
+  errorStatus: 
     type: widget.status
     options:
       statuses:
@@ -769,12 +774,8 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-    
       entities:
-        # jigx-ignore 
         - entity: customers_error
-    
-      # jigx-ignore
       query: 
         SELECT 
           id,
@@ -790,15 +791,12 @@ datasources:
         FROM
           [customers_error] AS err
         WHERE
-          id = @commandId
-          
+          id = @commandId         
       queryParameters:
-        commandId: =@ctx.jig.inputs.commandId
-        
+        commandId: =@ctx.jig.inputs.commandId      
       jsonProperties: 
         - body
-        - response
-      
+        - response  
       isDocument: true
 
   queued-command:
@@ -806,9 +804,7 @@ datasources:
     options:
       provider: DATA_PROVIDER_LOCAL
       entities:
-        # jigx-ignore
         - _commandQueue
-      # jigx-ignore
       query: |
         SELECT
           id, 
@@ -821,10 +817,8 @@ datasources:
           [_commandQueue]
         WHERE 
           id = @id;
-      
       queryParameters:
-        id: =@ctx.jig.inputs.commandId
-      
+        id: =@ctx.jig.inputs.commandId 
       isDocument: true
   
 children:
@@ -838,9 +832,7 @@ children:
         @ctx.datasources.customer-errors.response.status & ')'
       errorDescription: 
         "It seems you don’t have permission to create customers at the moment. 
-        If you believe this is an error, please contact support. 
-        
-        
+        If you believe this is an error, please contact support.    
         We're here to assist!"
   - type: component.entity
     options:
@@ -891,7 +883,6 @@ actions:
             - type: action.execute-entity
               options:
                 provider: DATA_PROVIDER_LOCAL
-                # jigx-ignore
                 entity: customers_error
                 method: delete
                 goBack: previous
@@ -908,7 +899,6 @@ actions:
             - type: action.execute-entity
               options:
                 provider: DATA_PROVIDER_LOCAL
-                # jigx-ignore 
                 entity: customers_error
                 method: delete
                 goBack: previous
@@ -934,13 +924,9 @@ datasources:
   customer-errors:
     type: datasource.sqlite
     options:
-      provider: DATA_PROVIDER_LOCAL
-    
+      provider: DATA_PROVIDER_LOCAL   
       entities:
-        # jigx-ignore
         - entity: customers_error
-    
-      # jigx-ignore
       query: 
         SELECT 
           id,
@@ -956,15 +942,12 @@ datasources:
         FROM
           [customers_error] AS err
         WHERE
-          id = @commandId
-          
+          id = @commandId          
       queryParameters:
-        commandId: =@ctx.jig.inputs.commandId
-        
+        commandId: =@ctx.jig.inputs.commandId        
       jsonProperties: 
         - body
-        - response
-      
+        - response      
       isDocument: true
 
   queued-command:
@@ -972,9 +955,7 @@ datasources:
     options:
       provider: DATA_PROVIDER_LOCAL
       entities:
-        # jigx-ignore
         - _commandQueue
-      # jigx-ignore
       query: |
         SELECT
           id, 
@@ -986,11 +967,9 @@ datasources:
         FROM 
           [_commandQueue]
         WHERE 
-          id = @id;
-      
+          id = @id;      
       queryParameters:
-        id: =@ctx.jig.inputs.commandId
-      
+        id: =@ctx.jig.inputs.commandId 
       isDocument: true
   
 children:
@@ -1048,8 +1027,7 @@ actions:
           actions:
             - type: action.execute-entity
               options:
-                provider: DATA_PROVIDER_LOCAL
-                # jigx-ignore 
+                provider: DATA_PROVIDER_LOCAL 
                 entity: customers_error
                 method: delete
                 goBack: previous
@@ -1067,7 +1045,6 @@ actions:
             - type: action.execute-entity
               options:
                 provider: DATA_PROVIDER_LOCAL
-                # jigx-ignore
                 entity: customers_error
                 method: delete
                 goBack: previous
@@ -1208,8 +1185,10 @@ name: hello-rest-example
 title: Hello REST Solution
 category: sales
 # onFocus is triggered when the home hub loads. 
-# The sync-entities action in the global action (load-data) calls the Jigx REST function,
-# and populates the local SQLite tables on the device with the data returned from REST service.
+# The sync-entities action in the global action (load-data)
+# calls the Jigx REST function,
+# and populates the local SQLite tables on the device
+# with the data returned from REST service.
 onFocus: 
   type: action.execute-action
   options:

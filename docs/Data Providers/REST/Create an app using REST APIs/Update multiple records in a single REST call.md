@@ -1,9 +1,4 @@
----
-title: Update multiple records in a single REST call
-slug: QSM3-updait
-createdAt: Tue Sep 17 2024 11:40:34 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Feb 12 2025 13:26:47 GMT+0000 (Coordinated Universal Time)
----
+# Update multiple records in a single REST call
 
 ## Why would you want to update multiple records in a single REST call?
 
@@ -32,8 +27,8 @@ actions:
           entity: customers
           method: update
           function: rest-update-customer
-# All records will be updated with Bronze tag
-# CustomerType is the same (static) across all records         
+          # All records will be updated with Bronze tag
+          # CustomerType is the same (static) across all records         
           functionParameters:
             customerType: Bronze    
 ```
@@ -51,9 +46,10 @@ actions:
           method: update
           goBack: stay
           function: rest-update-customer
-# All records will be updated dynamically per record.
-# Define the properties to be updated in the records.
-# Data must include all required properties on the record in the datasource.          
+          # All records will be updated dynamically per record.
+          # Define the properties to be updated in the records.
+          # Data must include all required properties on the record 
+          # in the datasource.          
           data: =@ctx.datasources.customers.{"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}[]           
 ```
 :::
@@ -80,7 +76,7 @@ This example lists all customers without a label (`CustomerType` property). Usin
 
 ### How is this scenario configured
 
-1. The customer list is loaded from the *customers* datasource, the query returns all records WHERE `customerType` IS NULL. 
+1. The customer list is loaded from the *customers* datasource, the query returns all records WHERE `customerType` IS NULL.
 2. An `execute-entities` action is configured to update multiple records with a single REST call. The update function calls the REST APIs PATCH operation.
 3. The `execute-entities` action is configured using `functionParameters` to update the `customerType` property to Bronze. This is a static value and will be the same for all the customers in the list.
 4. The `execute-entities` action is configured using `data` to define the required REST properties for the customers' records. In this example, `id`, `firstName`, `lastName` and `companyName` are required parameters in the REST function.
@@ -105,16 +101,20 @@ provider: DATA_PROVIDER_REST
 # Updates data in the REST Service 
 # PATCH modifies only the specified fields or properties of the resource.
 method: PATCH 
-url: https://[your_rest_service]/api/customers #Use your REST service URL 
-useLocalCall: true #Direct the function call to use local execution between the mobile device and the REST service
+# Use your REST service URL 
+url: https://[your_rest_service]/api/customers 
+# Direct the function call to use local execution between the mobile device
+# and the REST service.
 format: text
+useLocalCall: true 
 
 parameters:
   accessToken:
     location: header
     required: true
     type: string
-    value: service.oauth #Use manage.jigx.com to define credentials for your solution
+    # Use manage.jigx.com to define credentials for your solution.
+    value: service.oauth 
 
   id:
     type: int
@@ -176,7 +176,7 @@ parameters:
     type: string
     location: body
     required: false
-#Define the customer data that must be updated in the record in the REST Service  
+# Define the customer data to be updated in the record in the REST Service.  
 inputTransform: |
   {
     "custId": id,
@@ -206,7 +206,8 @@ Create a load-data.jigx file under the actions folder. This file is configured w
 load-data.jigx
 
 ```yaml
-# The sync-entities action gets the data from the REST data provider using the function.
+# The sync-entities action gets the data from the REST data provider 
+# using the function.
 # The global action can be referenced throughout the solution,
 # for effieicency and performance.
 # Data is synced from the REST data provider to a local data provider,
@@ -290,8 +291,8 @@ datasources:
   
       entities:
         - entity: customers
-# Configure the WHERE statement to return all customers,
-# without a value (NULL) for for the customerType property.
+      # Configure the WHERE statement to return all customers,
+      # without a value (NULL) for for the customerType property.
       query: |
         SELECT 
           cus.id AS id, 
@@ -339,12 +340,13 @@ actions:
           entity: customers
           method: update
           function: rest-update-customer
-# Use functionParameters for values that must be evaluated statically,
-# across all the records. 
-# All records in the list will be updated to Bronze.          
+          # Use functionParameters for values that must be evaluated 
+          # statically, across all the records. 
+          # All records in the list will be updated to Bronze.          
           functionParameters:
             customerType: Bronze 
-# Use data to define the required REST paramameter fields to be updated             
+          # Use data to define the required REST paramameter fields
+          # to be updated.             
           data: =@ctx.datasources.customers.{"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}[]
 ```
 :::
@@ -360,12 +362,18 @@ index.jigx
 name: hello-rest-example
 title: Hello REST Solution
 category: sales
-# onFocus is triggered whenever the jig is displayed. The sync-entities action in the global action calls the Jigx REST function and populates the local SQLite tables on the device with the data returned from REST service
+# onFocus is triggered whenever the jig is displayed. 
+# The sync-entities action in the global action calls the Jigx REST function
+# and populates the local SQLite tables on the device
+# with the data returned from REST service.
 onFocus: 
   type: action.execute-action
   options:
     action: load-data
-# onLoad is triggered when the solution is loaded on the device. The sync-entities action in the global action calls the Jigx REST function and populates the local SQLite tables on the device with the data returned from REST service        
+# onLoad is triggered when the solution is loaded on the device. 
+# The sync-entities action in the global action calls the Jigx REST function 
+# and populates the local SQLite tables on the device with the data 
+# returned from REST service.        
 onLoad: 
   type: action.execute-action
   options:
@@ -377,6 +385,4 @@ tabs:
     icon: home-apps-logo
 ```
 :::
-
-
 
