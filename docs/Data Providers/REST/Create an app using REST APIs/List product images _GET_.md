@@ -1,9 +1,4 @@
----
-title: List product images (GET)
-slug: 6OzZ-view
-createdAt: Tue May 07 2024 09:03:17 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Oct 23 2024 11:46:08 GMT+0000 (Coordinated Universal Time)
----
+# List product images (GET)
 
 ## Scenario
 
@@ -41,23 +36,30 @@ rest-get-customer-images.jigx
 
 ```yaml
 provider: DATA_PROVIDER_REST
-method: GET #Fetches data from the REST Service
-url: https://[your_rest_service]/api/images?custId={custId}&includeImage=true #Use your REST service URL 
-useLocalCall: true #Direct the function call to use local execution between the mobile device and the REST service
-forRowsWithValues: #Use forRowsWithValues with the customer Id to only get images specific to that customer instead of all rows (images)
+# Fetches data from the REST Service.
+method: GET 
+# Use your REST service URL. 
+url: https://[your_rest_service]/api/images?custId={custId}&includeImage=true 
+# Direct the function call to use local execution between the mobile device
+# and the REST service.
+useLocalCall: true 
+# Use forRowsWithValues with the customer Id to only get images specific 
+# to that customer instead of all rows (images).
+forRowsWithValues: 
   custId: custId 
 parameters:
   accessToken:
     location: header
     required: true
     type: string
-    value: service.oauth #Use manage.jigx.com to define credentials for your solution
+    # Use manage.jigx.com to define credentials for your solution.
+    value: service.oauth 
 
   custId:
     type: string
     location: query
     required: true
-#Define the customer images that must be fetched from the REST Service
+# Define the customer images that must be fetched from the REST Service.
 outputTransform: |
   $.images.
     {
@@ -68,7 +70,8 @@ outputTransform: |
         "description": description,
         "image": image
     }[]
-#Convert the images returned from the REST service to local-uri which the jig expects to be able to display the image
+# Convert the images returned from the REST service to local-uri which
+# the jig expects to be able to display the image.
 conversions:
   - property: image
     from: base64
@@ -86,9 +89,12 @@ The *rest-get-customers-images* function is NOT added to the `sync-entities` act
 load-data.jigx
 
 ```yaml
-# The sync-entities action is used to get the data from the REST data provider using the function.
-# The global action can be referenced throughout the solution for effieicency and performance.
-# The data is synced from the REST data provider to a local data provider on the device.
+# The sync-entities action is used to get the data from the REST data 
+# provider using the function.
+# The global action can be referenced throughout the solution
+# for efficiency and performance.
+# The data is synced from the REST data provider to a local data provider
+# on the device.
 action: 
   type: action.sync-entities
   options:
@@ -120,12 +126,13 @@ list-customer-images.jigx
 title: Products and Services
 type: jig.list
 icon: image-file-camera-alternate
-#Add a placeholder if there are no images to return
+# Add a placeholder if there are no images to return.
 placeholders:
   - title: It seems we're fresh out of visuals here
     when: =$count(@ctx.datasources.customerImages) = 0
     icon: loading-data
-#Define the data to use in the jig, the data has been synced by the global action to the local data provider from the REST Service
+# Define the data to use in the jig, the data has been synced by the global
+# action to the local data provider from the REST Service.
 datasources:
   customerImages: 
     type: datasource.sqlite
@@ -162,8 +169,7 @@ item:
     leftElement: 
       element: image
       text: ''
-      uri: =@ctx.current.item.image
-                   
+      uri: =@ctx.current.item.image                  
 ```
 
 view-customer-details.jigx
@@ -180,16 +186,15 @@ header:
       type: component.location
       options:
         address: =@ctx.jig.inputs.customer.address & ' ' & @ctx.jig.inputs.customer.city & ', ' & @ctx.jig.inputs.customer.state & ', ' & @ctx.jig.inputs.customer.zip
-#Define the data to use in the jig, the data has been synced by the global action to the local data provider from the REST Service
+# Define the data to use in the jig, the data has been synced by the global
+# action to the local data provider from the REST Service.
 datasources: 
   customer: 
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
       entities:
         - entity: customers
-  
       query: |
         SELECT 
           cus.id AS id, 
@@ -212,10 +217,9 @@ datasources:
           id = @custId
         ORDER BY 
           json_extract(cus.data, '$.companyName')
-
       queryParameters:
         custId: =@ctx.jig.inputs.customer.id
-#Use jsonProperties to return the complex structure for address and phone      
+      # Use jsonProperties to return the complex structure for address & phone      
       jsonProperties: 
         - addresses
         - phones
@@ -255,8 +259,7 @@ children:
           options:
             contentType: link
             label: Web
-            value: =@ctx.datasources.customer.web
-          
+            value: =@ctx.datasources.customer.web       
 ```
 
 customer-composite.jigx
@@ -420,20 +423,27 @@ index.jigx
 name: hello-rest-example
 title: Hello REST Solution
 category: sales
-# onFocus is triggered whenever the jig is displayed. The sync-entities action in the global action calls the Jigx REST function and populates the local SQLite tables on the device with the data returned from REST service
+# onFocus is triggered whenever the jig is displayed. 
+# The sync-entities action in the global action calls the Jigx REST function
+# and populates the local SQLite tables on the device with the data returned
+# from REST service.
 onFocus: 
   type: action.execute-action
   options:
     action: load-data
-# onLoad is triggered when the solution is loaded on the device. The sync-entities action in the global action calls the Jigx REST function and populates the local SQLite tables on the device with the data returned from REST service        
+# onLoad is triggered when the solution is loaded on the device. 
+#The sync-entities action in the global action calls the Jigx REST function
+# and populates the local SQLite tables on the device with the data returned
+# from REST service.        
 onLoad: 
   type: action.execute-action
   options:
     action: load-data
     
-widgets:
-  - size: 1x1 
+tabs:
+  home:
     jigId: list-customers
+    icon: home
 ```
 :::
 

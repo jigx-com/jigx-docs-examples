@@ -1,9 +1,4 @@
----
-title: Delete customer (DELETE)
-slug: NCD--det
-createdAt: Tue May 07 2024 10:52:05 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Feb 12 2025 12:56:39 GMT+0000 (Coordinated Universal Time)
----
+# Delete customer (DELETE)
 
 ## Scenario
 
@@ -13,7 +8,7 @@ Add the ability to delete a customer from the list of customers by swiping left 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1_rest-delete.PNG" size="70" position="center" caption="Delete customer" alt="Delete customer"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1_rest-delete.PNG" size="70" position="center" caption="Delete customer" alt="Delete customer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1_rest-delete.PNG"}
 :::
 ::::
 
@@ -41,9 +36,13 @@ rest-delete-customer.jigx
 
 ```yaml
 provider: DATA_PROVIDER_REST
-method: DELETE #Deletes data from the REST Service
-url: https://[your_rest_service]/api/customers?id={custId} #Use your REST service URL 
-useLocalCall: true #Direct the function call to use local execution between the mobile device and the REST service
+# Deletes data from the REST Service.
+method: DELETE 
+# Use your REST service URL. 
+url: https://[your_rest_service]/api/customers?id={custId}
+# Direct the function call to use local execution between the device
+# and the REST service. 
+useLocalCall: true 
 format: text
 
 parameters:
@@ -51,8 +50,8 @@ parameters:
     location: header
     required: true
     type: string
-    value: service.oauth #Use manage.jigx.com to define credentials for your solution
-
+    # Use manage.jigx.com to define credentials for your solution.
+    value: service.oauth 
   custId:
     type: int
     location: query
@@ -68,9 +67,10 @@ Create a load-data.jigx file under the actions folder. This file is configured w
 load-data.jigx
 
 ```yaml
-# The sync-entities action is used to get the data from the REST data provider using the function.
-# the global action can be referenced throughout the solution for effieicency and performance.
-# The data is synced from the REST data provider to a local data provider on the device.
+# The sync-entities action is used to get the data from the REST data 
+# provider using the function. The global action can be referenced 
+# throughout the solution for effieicency and performance. The data is 
+# synced from the REST data provider to a local data provider on the device.
 action: 
   type: action.sync-entities
   options:
@@ -106,16 +106,15 @@ header:
         source:
           uri: https://www.dropbox.com/scl/fi/ha9zh6wnixblrbubrfg3e/business-5475661_640.jpg?rlkey=anemjh5c9qsspvzt5ri0i9hva&raw=1
 
-#Define the data to use in the jig, the data has been synced by the global action to the local data provider from the REST Service  
+# Define the data to use in the jig, the data has been synced by the global
+# action to the local data provider from the REST Service.  
 datasources:
   customers: 
     type: datasource.sqlite
     options:
-      provider: DATA_PROVIDER_LOCAL
-  
+      provider: DATA_PROVIDER_LOCAL  
       entities:
         - entity: customers
-  
       query: |
         SELECT 
           cus.id AS id, 
@@ -155,7 +154,8 @@ item:
           color: color3
         - when: =@ctx.current.item.customerType = 'Silver'
           color: color14
-#Add the swipeable event to the customer - list to include the delete button         
+    # Add the swipeable event to the customer - list to include 
+    # the delete button.         
     swipeable:
       left:
         - label: DELETE
@@ -165,19 +165,25 @@ item:
             type: action.confirm
             options:
               isConfirmedAutomatically: false
-              onConfirmed:             
-                type: action.execute-entity #action to execute the delete
+              onConfirmed:
+                # Action to execute the delete.             
+                type: action.execute-entity 
                 options:
-#Use the REST data provider to call the delete function.                  
+                  # Use the REST data provider to call the delete function.                  
                   provider: DATA_PROVIDER_REST
                   entity: customers
-                  method: delete #Delete the record from the local SQLite table
-                  function: rest-delete-customer #Delete the record from the REST service
-#Specifiy the function parameters required by the function to delete the customer, in this example custId                 
+                  # Delete the record from the local SQLite table. 
+                  method: delete 
+                  # Delete the record from the REST service.
+                  function: rest-delete-customer 
+                  # Specifiy the function parameters required by the 
+                  # function to delete the customer, in this example custId.                 
                   functionParameters:
-                    custId: =$number(@ctx.current.item.id) #id of customer record to be deleted in REST service                 
-                  data:  
-                    id: =@ctx.current.item.id #id of customer to be deleted from local data provider
+                    # id of customer record to be deleted in REST service.  
+                    custId: =$number(@ctx.current.item.id)                 
+                  data:
+                   # id of customer to be deleted from local data provider.  
+                    id: =@ctx.current.item.id 
               modal:
                 title: Are you sure?
                 description: =('Press Confirm to permanently delete ' & @ctx.current.item.companyName)
@@ -195,12 +201,18 @@ index.jigx
 name: hello-rest-example
 title: Hello REST Solution
 category: sales
-# onFocus is triggered whenever the jig is displayed. The sync-entities action in the global action calls the Jigx REST function and populates the local SQLite tables on the device with the data returned from REST service
+# onFocus is triggered whenever the jig is displayed. The sync-entities 
+# action in the global action calls the Jigx REST function and populates
+# the local SQLite tables on the device with the data returned from REST 
+# service.
 onFocus: 
   type: action.execute-action
   options:
     action: load-data
-# onLoad is triggered when the solution is loaded on the device. The sync-entities action in the global action calls the Jigx REST function and populates the local SQLite tables on the device with the data returned from REST service        
+# onLoad is triggered when the solution is loaded on the device. 
+# The sync-entities action in the global action calls the Jigx REST function
+# and populates the local SQLite tables on the device with the data returned 
+# from REST service.        
 onLoad: 
   type: action.execute-action
   options:

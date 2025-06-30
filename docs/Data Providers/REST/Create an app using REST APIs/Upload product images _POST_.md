@@ -1,16 +1,10 @@
----
-title: Upload product images (POST)
-slug: Qp0O-u
-createdAt: Tue May 07 2024 09:04:02 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Feb 12 2025 13:26:20 GMT+0000 (Coordinated Universal Time)
----
+# Upload product images (POST)
 
 ## Scenario
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 From the [view customer ](<./List _ View customers _GET_.md>) On the screen, tap the *Add Images* button, which will direct you to a screen that allows you to upload multiple images of products for each customer.
-
 :::
 
 :::VerticalSplitItem
@@ -42,16 +36,21 @@ rest-upload-customer-images.jigx
 
 ```yaml
 provider: DATA_PROVIDER_REST
-method: POST #Creates data in the backend
-url: https://jigx-training.azurewebsites.net/api/images #Use your REST service URL
-useLocalCall: true #Direct the function call to use local execution between the mobile device and the REST service 
-  
+# Creates data in the backend.
+method: POST 
+# Use your REST service URL.
+url: https://jigx-training.azurewebsites.net/api/images 
+# Direct the function call to use local execution between the mobile device
+# and the REST service.  
+useLocalCall: true 
+ 
 parameters:
   accessToken:
     location: header
     required: true
     type: string
-    value: service.oauth #Use manage.jigx.com to define credentials for your solution
+    # Use manage.jigx.com to define credentials for your solution.
+    value: service.oauth 
 
   custId:
     type: string
@@ -74,7 +73,7 @@ parameters:
     type: image
     location: body
     required: false
-#Define the image metadata that must be created in the record in the REST API    
+# Define the image metadata that must be created in the record in the REST API.    
 inputTransform: |
   {
     "custId": custId,
@@ -83,12 +82,15 @@ inputTransform: |
     "createdDate": createdDate,
     "image": image
   }
-#Specifiying an outputTransform for the image_id ensure that the id created by the REST API is automatically synced back to the Jigx local datasource replacing the temp_id.    
+# Specifiying an outputTransform for the image_id ensure that the id created
+# by the REST API is automatically synced back to the Jigx local datasource
+# replacing the temp_id.    
 outputTransform: |
   $.{
       "id": image_id
     }
-#Convert the images to be uploaded to the REST service to base64 which the REST service expects to be able to store the image  
+# Convert the images to be uploaded to the REST service to base64 
+# which the REST service expects to be able to store the image.  
 conversions:
   - property: image
     from: local-uri
@@ -106,9 +108,12 @@ The *rest-get-customers-images* function is NOT added to the `sync-entities` act
 load-data.jigx
 
 ```yaml
-# The sync-entities action is used to get the data from the REST data provider using the function.
-# The global action can be referenced throughout the solution for effieicency and performance.
-# The data is synced from the REST data provider to a local data provider on the device.
+# The sync-entities action is used to get the data from the REST
+# data provider using the function.
+# The global action can be referenced throughout the solution 
+# for effieicency and performance.
+# The data is synced from the REST data provider to a local data provider
+# on the device.
 action: 
   type: action.sync-entities
   options:
@@ -145,7 +150,8 @@ header:
       options:
         source:
           uri: https://www.dropbox.com/scl/fi/o1gobv6lj1l3076veyaff/cloud-7906280_1280.png?rlkey=c5ad2oknpw5fju9qjlb1c2d2o&raw=1
-#Set the onFocus to clear all data from the jig and reset it for the next uplaod
+# Set the onFocus to clear all data from the jig and reset it
+# for the next upload.
 onFocus: 
   type: action.reset-state
   options:
@@ -178,14 +184,19 @@ children:
 
 actions:
   - children:
-      - type: action.execute-entities #Action to upload the images
+        # Action to upload the images.
+      - type: action.execute-entities 
         options:
           title: Upload images
           provider: DATA_PROVIDER_REST
           entity: customer-images
-          method: create #Create the image record in the local SQLite table 
-          function: rest-upload-customer-images #Create the image record in the REST service
-          #Data configuration points to the collection of images with their metadata in the media-picker ensuring that the call to POST & create is executed multiple times for each image
+          # Create the image record in the local SQLite table. 
+          method: create 
+          # Create the image record in the REST service.
+          function: rest-upload-customer-images 
+           # Data configuration points to the collection of images with their metadata
+           # in the media-picker ensuring that the call to POST 
+           # & create is executed multiple times for each image.
             =@ctx.components.image.state.value.
             {
               "custId": @ctx.jig.inputs.customer.id,
@@ -212,17 +223,15 @@ header:
       type: component.location
       options:
         address: =@ctx.jig.inputs.customer.address & ' ' & @ctx.jig.inputs.customer.city & ', ' & @ctx.jig.inputs.customer.state & ', ' & @ctx.jig.inputs.customer.zip
-#Define the data to use in the jig, the data has been synced by the global action to the local data provider from the REST Service
-datasources:
+# Define the data to use in the jig, the data has been synced by the global
+# action to the local data provider from the REST Service.
 datasources: 
   customer: 
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
       entities:
         - entity: customers
-  
       query: |
         SELECT 
           cus.id AS id, 
@@ -245,10 +254,10 @@ datasources:
           id = @custId
         ORDER BY 
           json_extract(cus.data, '$.companyName')
-
       queryParameters:
         custId: =@ctx.jig.inputs.customer.id
-#Use jsonProperties to return the complex structure for address and phone            
+      # Use jsonProperties to return the complex structure for address 
+      # and phone.            
       jsonProperties: 
         - addresses
         - phones
@@ -289,7 +298,6 @@ children:
             contentType: link
             label: Web
             value: =@ctx.datasources.customer.web
-          
 ```
 
 customer-composite.jigx
@@ -297,7 +305,8 @@ customer-composite.jigx
 ```yaml
 title: Customer Details
 type: jig.composite
-#Add an onFocus to return the. images for the specific customer using the id. This is on demand syncing to limit the images returned
+# Add an onFocus to return the. images for the specific customer 
+#using the id. This is on demand syncing to limit the images returned.
 onFocus: 
   type: action.sync-entities
   options:
@@ -332,8 +341,7 @@ actions:
           title: Add images
           linkTo: add-customer-images
           parameters:
-            customer: =@ctx.jig.inputs.customer      
-      
+            customer: =@ctx.jig.inputs.customer
 ```
 
 list-customers.jigx
@@ -352,16 +360,15 @@ header:
       options:
         source:
           uri: https://www.dropbox.com/scl/fi/ha9zh6wnixblrbubrfg3e/business-5475661_640.jpg?rlkey=anemjh5c9qsspvzt5ri0i9hva&raw=1
-#Define the data to use in the jig, the data has been synced by the global action to the local data provider from the REST Service
+# Define the data to use in the jig, the data has been synced
+# by the global action to the local data provider from the REST Service.
 datasources:
   customers: 
     type: datasource.sqlite
     options:
-      provider: DATA_PROVIDER_LOCAL
-  
+      provider: DATA_PROVIDER_LOCAL 
       entities:
-        - entity: customers
-  
+        - entity: customers  
       query: |
         SELECT 
           cus.id AS id, 
@@ -414,7 +421,7 @@ item:
             options:
               parameters:
                customer: =@ctx.current.item  
-# link to the composite to see the customer details and images                 
+# Link to the composite to see the customer details and images.                 
               linkTo: customer-composite
           label: View
           icon: view
@@ -426,19 +433,25 @@ item:
             options:
               isConfirmedAutomatically: false
               onConfirmed: 
-               type: action.execute-entity #action to execute the delete
+               # Action to execute the delete.
+               type: action.execute-entity 
                 options:
-#Use the REST data provider to call the delete function.                  
+                  # Use the REST data provider to call the delete function.                  
                   provider: DATA_PROVIDER_REST
                   entity: customers
-                  method: delete #Delete the record from the local SQLite table
+                  # Delete the record from the local SQLite table. 
+                  method: delete 
                   goBack: stay
-                  function: rest-delete-customer #Delete the record from the REST service
-#Specifiy the function parameters required by the function to delete the customer, in this example custId                 
+                  # Delete the record from the REST service.
+                  function: rest-delete-customer 
+                  # Specifiy the function parameters required by the
+                  # function to delete the customer, in this example custId                 
                   functionParameters:
-                    custId: =$number(@ctx.current.item.id) #id of customer record to be deleted in REST service                 
+                    # id of customer record to be deleted in REST service.
+                    custId: =$number(@ctx.current.item.id)                  
                   data:  
-                    id: =@ctx.current.item.id #id of customer to be deleted from local data provider
+                    # id of customer to be deleted from local data provider
+                    id: =@ctx.current.item.id 
               modal:
                 title: Are you sure?
                 description: =('Press Confirm to permanently delete ' & @ctx.current.item.companyName)
@@ -463,12 +476,18 @@ index.jigx
 name: hello-rest-example
 title: Hello REST Solution
 category: sales
-# onFocus is triggered whenever the jig is displayed. The sync-entities action in the global action calls the Jigx REST function and populates the local SQLite tables on the device with the data returned from REST service
+# onFocus is triggered whenever the jig is displayed. 
+# The sync-entities action in the global action calls the Jigx REST function
+# and populates the local SQLite tables on the device with the data 
+# returned from REST service.
 onFocus: 
   type: action.execute-action
   options:
     action: load-data
-# onLoad is triggered when the solution is loaded on the device. The sync-entities action in the global action calls the Jigx REST function and populates the local SQLite tables on the device with the data returned from REST service        
+# onLoad is triggered when the solution is loaded on the device. 
+# The sync-entities action in the global action calls the Jigx REST function
+# and populates the local SQLite tables on the device with the data 
+# returned from REST service.        
 onLoad: 
   type: action.execute-action
   options:

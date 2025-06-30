@@ -1,9 +1,4 @@
----
-title: List customers (GET)
-slug: 1O2k-get
-createdAt: Tue Apr 30 2024 08:30:58 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Feb 12 2025 12:54:55 GMT+0000 (Coordinated Universal Time)
----
+# List customers (GET)
 
 ## Scenario
 
@@ -13,7 +8,7 @@ Create a list of customers showing the company name, contact person's first and 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DS3wYOeRqIAtsmqCP6op5_rest-list.PNG" size="80" position="center" caption="Customer list" alt="Customer list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DS3wYOeRqIAtsmqCP6op5_rest-list.PNG" size="80" position="center" caption="Customer list" alt="Customer list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DS3wYOeRqIAtsmqCP6op5_rest-list.PNG"}
 :::
 ::::
 
@@ -37,11 +32,14 @@ rest-get-customer.jigx
 
 ```yaml
 provider: DATA_PROVIDER_REST
-method: GET #Fetches data from the REST Service
-url: https://[your_rest_service]/api/customers #Use your REST service URL 
-#Return data for rows with matching ids
+# Fetches data from the REST Service.
+method: GET 
+# Use your REST service URL.
+url: https://[your_rest_service]/api/customers  
+# Return data for rows with matching ids.
 forRowsWithMatchingIds: true
-#Direct the function call to use local execution between the mobile device and the REST service
+# Direct the function call to use local execution between the device and
+# the REST service.
 useLocalCall: true
 
 parameters:
@@ -49,8 +47,9 @@ parameters:
     location: header
     required: true
     type: string
-    value: service.oauth #Use manage.jigx.com to define credentials for your solution
-#Define the customer fields that must be fetched from the REST Service
+    # Use manage.jigx.com to define credentials for your solution.
+    value: service.oauth 
+# Define the customer fields that must be fetched from the REST Service.
 outputTransform: |
     $.customers.{
         "id": custId,
@@ -70,7 +69,8 @@ outputTransform: |
         "jobTitle": jobTitle,
         "logo": logo
       }
-#Convert the images returned from the REST service to local-uri which the jig expects to be able to display the image      
+# Convert the images returned from the REST service to local-uri
+# which the jig expects to be able to display the image.      
 conversions:
   - property: logo
     from: base64
@@ -86,9 +86,10 @@ Create a load-data.jigx file under the actions folder. This file is configured w
 load-data.jigx
 
 ```yaml
-# The sync-entities action is used to get the data from the REST data provider using the function.
-# The global action can be referenced throughout the solution for effieicency and performance.
-# The data is synced from the REST data provider to a local data provider on the device.
+# The sync-entities action is used to get the data from the REST data 
+# provider using the function. The global action can be referenced 
+# throughout the solution for effieicency and performance. The data is 
+# synced from the REST data provider to a local data provider on the device.
 action: 
   type: action.sync-entities
   options:
@@ -122,16 +123,15 @@ header:
       options:
         source:
           uri: https://www.dropbox.com/scl/fi/ha9zh6wnixblrbubrfg3e/business-5475661_640.jpg?rlkey=anemjh5c9qsspvzt5ri0i9hva&raw=1
-#Define the data to use in the jig, the data has been synced by the global action to the local data provider from the REST Service
+# Define the data to use in the jig, the data has been synced by the global 
+# action to the local data provider from the REST Service.
 datasources:
   customers: 
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
       entities:
         - entity: customers
-  
       query: |
         SELECT 
           cus.id AS id, 
@@ -171,7 +171,6 @@ item:
           color: color3
         - when: =@ctx.current.item.customerType = 'Silver'
           color: color14
-    
 ```
 :::
 
@@ -186,12 +185,18 @@ index.jigx
 name: hello-rest-example
 title: Hello REST Solution
 category: sales
-# onFocus is triggered whenever the jig is displayed. The sync-entities action in the global action calls the Jigx REST function and populates the local SQLite tables on the device with the data returned from REST service
+# onFocus is triggered whenever the jig is displayed. 
+# The sync-entities action in the global action calls the Jigx REST function
+# and populates the local SQLite tables on the device with the data returned
+# from REST service.
 onFocus: 
   type: action.execute-action
   options:
     action: load-data
-# onLoad is triggered when the solution is loaded on the device. The sync-entities action in the global action calls the Jigx REST function and populates the local SQLite tables on the device with the data returned from REST service        
+# onLoad is triggered when the solution is loaded on the device. 
+# The sync-entities action in the global action calls the Jigx REST function
+# and populates the local SQLite tables on the device with the data returned
+# from REST service.        
 onLoad: 
   type: action.execute-action
   options:
