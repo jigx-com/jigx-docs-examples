@@ -16,7 +16,7 @@ Update a user's profile photo in Microsoft Graph using the `media-field` compone
 
 - [Update profilePhoto Graph](https://learn.microsoft.com/en-us/graph/api/profilephoto-update?view=graph-rest-1.0&tabs=http) documentation
 - [Graph explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Configuring OAuth for MS Graph]()
+- [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
@@ -50,8 +50,8 @@ tabs:
   home:
     jigId: view-user-jigx
     icon: home-apps-logo
- 
-onFocus: 
+
+onFocus:
   type: action.action-list
   options:
     isSequential: true
@@ -67,9 +67,10 @@ onFocus:
             - entity: profile-picture
               function: get-profile-picture
               functionParameters:
-                accessToken: microsoft.OAuth 
-                userId: =@ctx.user.email   
+                accessToken: microsoft.OAuth
+                userId: =@ctx.user.email
 ```
+
 :::
 
 ## Functions
@@ -103,8 +104,8 @@ conversions:
   - property: file
     from: local-uri
     to: buffer
-
 ```
+
 :::
 
 ## Jigs
@@ -123,7 +124,7 @@ header:
   type: component.jig-header
   options:
     height: small
-    children: 
+    children:
       type: component.image
       options:
         source:
@@ -142,7 +143,7 @@ children:
             mediaType: image
             isMultiple: false
             imageQuality: 80 # optimized photo size with minimal quality loss
-            
+
 actions:
   - children:
       - type: action.execute-entity
@@ -154,15 +155,14 @@ actions:
           functionParameters:
             accessToken: microsoft.OAuth
             Content-Type: image/jpeg
-            file: =@ctx.components.profilePicture.state.value 
+            file: =@ctx.components.profilePicture.state.value
           method: functionCall
-          onSuccess: 
+          onSuccess:
             type: action.go-back
-
 ```
+
 :::
 
 ## See Also
 
 - [Get User Profile & Photo](<./Get User Profile _ Photo.md>)
-

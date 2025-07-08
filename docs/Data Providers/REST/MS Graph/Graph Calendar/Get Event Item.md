@@ -1,7 +1,7 @@
 ---
 title: Get Event Item
 slug: e9aK-get-event-item
-description: Learn how to retrieve the details of an event item from a user's calendar using Microsoft Graph with this comprehensive document. Explore code examples, configuration details, and REST calls with OAuth authentication. Additionally, discover how to create 
+description: Learn how to retrieve the details of an event item from a user's calendar using Microsoft Graph with this comprehensive document. Explore code examples, configuration details, and REST calls with OAuth authentication. Additionally, discover how to create
 createdAt: Sat Nov 26 2022 20:48:33 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed May 08 2024 14:27:40 GMT+0000 (Coordinated Universal Time)
 ---
@@ -16,7 +16,7 @@ Get the details of an event item in a user's calendar from Microsoft Graph using
 
 - [List Event](https://learn.microsoft.com/en-us/graph/api/user-list-events?view=graph-rest-1.0&tabs=http) - MS Graph documentation
 - [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Configuring OAuth for MS Graph]()
+- [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
@@ -57,7 +57,7 @@ widgets:
   - size: "4x2"
     jigId: next-meeting
     when: |
-      =@ctx.datasources.next-meeting=null? false:true 
+      =@ctx.datasources.next-meeting=null? false:true
   - size: "2x2"
     jigId: list-email-messages
   - size: "2x2"
@@ -65,7 +65,7 @@ widgets:
   - size: "4x2"
     jigId: items-trending
 
-onFocus: 
+onFocus:
   type: action.action-list
   options:
     isSequential: true
@@ -84,14 +84,14 @@ onFocus:
               function: get-calendar-list
               functionParameters:
                 accessToken: microsoft.OAuth
-
 ```
+
 :::
 
 ## Functions
 
 :::hint{type="info"}
-We will use `forRowsWithValues` in the get-calendar-event-details function to update only one record in the calendarEvents table when called from `onRefresh` on the view-calendar-event-details jig. If you dont specify `forRowsWithValues` the entire table is wiped by the REST call and only the result is inserted. See [REST Overview]() for more information on using `forRowsWithValues` with REST calls.
+We will use `forRowsWithValues` in the get-calendar-event-details function to update only one record in the calendarEvents table when called from `onRefresh` on the view-calendar-event-details jig. If you dont specify `forRowsWithValues` the entire table is wiped by the REST call and only the result is inserted. See [REST Overview](https://docs.jigx.com/rest-overview) for more information on using `forRowsWithValues` with REST calls.
 :::
 
 MS Graph Event Item function in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/functions/calendar/get-calendar-event-details.jigx).
@@ -124,8 +124,8 @@ parameters:
     required: true
 forRowsWithValues:
   id: calendarEventId
-  
 ```
+
 :::
 
 ## Jigs
@@ -143,7 +143,7 @@ header:
   type: component.jig-header
   options:
     height: small
-    children: 
+    children:
       type: component.image
       options:
         source:
@@ -188,10 +188,10 @@ children:
     options:
       isInitiallyCollapsed: true
       header:
-        centerElement: 
+        centerElement:
           type: component.titles
-          options: 
-            title: Task Message (Expand to Read)  
+          options:
+            title: Task Message (Expand to Read)
       children:
         - type: component.web-view
           options:
@@ -211,7 +211,7 @@ children:
     options:
       data: =@ctx.jig.inputs.attendees
       maximumItemsToRender: 8
-      item: 
+      item:
         type: component.list-item
         options:
           title: =@ctx.current.item.emailAddress.name
@@ -224,7 +224,7 @@ children:
                 color: color2
               - when: =@ctx.current.item.type != 'required'
                 color: color7
-          leftElement: 
+          leftElement:
             element: avatar
             text: =$uppercase(@ctx.current.item.emailAddress.name)
 
@@ -236,13 +236,13 @@ actions:
           url: =@ctx.jig.inputs.onlineMeetingUrl
           isHidden: |
             =@ctx.jig.inputs.isOnlineMeeting? false: true
-            
+
 preview:
-  header: 
+  header:
     type: component.jig-header
     options:
       height: small
-      children: 
+      children:
         type: component.image
         options:
           source:
@@ -251,31 +251,31 @@ preview:
   children:
     - type: component.entity
       options:
-        children: 
-        - type: component.entity-field
-          options:
-            label: Subject
-            value: =@ctx.jig.inputs.subject
-            contentType: default
-        - type: component.field-row
-          options:
-            children:
-              - type: component.entity-field
-                options:
-                  label: Day
-                  value: =$fromMillis($toMillis(@ctx.jig.inputs.evtFrom), '[MNn] [D], [Y]', @ctx.system.timezone.offset)
-              - type: component.entity-field
-                options:
-                  label: Time
-                  value: |
-                    = $fromMillis($toMillis(@ctx.jig.inputs.evtFrom), '[h]:[m01] [PN]', @ctx.system.timezone.offset)
-                    & " to " & 
-                    $fromMillis($toMillis(@ctx.jig.inputs.evtTo), '[h]:[m01] [PN]', @ctx.system.timezone.offset)
-        - type: component.entity-field
-          options:
-            label: Summary
-            value: =@ctx.jig.inputs.bodyPreview
-            isMultiline: true
+        children:
+          - type: component.entity-field
+            options:
+              label: Subject
+              value: =@ctx.jig.inputs.subject
+              contentType: default
+          - type: component.field-row
+            options:
+              children:
+                - type: component.entity-field
+                  options:
+                    label: Day
+                    value: =$fromMillis($toMillis(@ctx.jig.inputs.evtFrom), '[MNn] [D], [Y]', @ctx.system.timezone.offset)
+                - type: component.entity-field
+                  options:
+                    label: Time
+                    value: |
+                      = $fromMillis($toMillis(@ctx.jig.inputs.evtFrom), '[h]:[m01] [PN]', @ctx.system.timezone.offset)
+                      & " to " & 
+                      $fromMillis($toMillis(@ctx.jig.inputs.evtTo), '[h]:[m01] [PN]', @ctx.system.timezone.offset)
+          - type: component.entity-field
+            options:
+              label: Summary
+              value: =@ctx.jig.inputs.bodyPreview
+              isMultiline: true
     - type: component.web-view
       options:
         isTrackingTransparencyRequired: false
@@ -293,14 +293,14 @@ preview:
   actions:
     # - when: =@ctx.jig.inputs.isOnlineMeeting = 1
     - children:
-      - type: action.open-url
-        options:
-          title: Join Meeting
-          url: =@ctx.jig.inputs.onlineMeetingUrl
-          isHidden: |
-            =@ctx.jig.inputs.isOnlineMeeting? false: true
-         
+        - type: action.open-url
+          options:
+            title: Join Meeting
+            url: =@ctx.jig.inputs.onlineMeetingUrl
+            isHidden: |
+              =@ctx.jig.inputs.isOnlineMeeting? false: true
 ```
+
 :::
 
 ## See Also
@@ -308,4 +308,3 @@ preview:
 - [Get Event List](<./Get Event List.md>)
 - [Get Calendar List](<./Get Calendar List.md>)
 - [Create Event Item](<./Create Event Item.md>)
-

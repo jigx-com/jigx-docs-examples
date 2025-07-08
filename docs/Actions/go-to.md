@@ -6,7 +6,7 @@ createdAt: Thu Jun 09 2022 18:22:52 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Feb 25 2025 08:38:01 GMT+0000 (Coordinated Universal Time)
 ---
 
-This action redirects you to another jig. The `go-to` action can be used with elements like `swipeable` and `rightElement` or combined with another action. When paired with another action, it is triggered after the main action to navigate to a specified screen, for example, saving a date in a form and then opening a list of customers. `go-to` helps configure navigation, ensuring a seamless app flow. See [Navigation]() for more information.
+This action redirects you to another jig. The `go-to` action can be used with elements like `swipeable` and `rightElement` or combined with another action. When paired with another action, it is triggered after the main action to navigate to a specified screen, for example, saving a date in a form and then opening a list of customers. `go-to` helps configure navigation, ensuring a seamless app flow. See [Navigation](https://docs.jigx.com/navigation) for more information.
 
 ## Configuration option
 
@@ -32,6 +32,7 @@ A go-to action can be set up in various ways:
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### go-to as an action
 
 ::::VerticalSplit{layout="middle"}
@@ -59,10 +60,12 @@ actions:
           title: Go to
           linkTo: default-employee-detail
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### go-to swipeable left/right
 
 ::::VerticalSplit{layout="middle"}
@@ -92,11 +95,11 @@ item:
   options:
     title: =@ctx.current.item.lastname
     subtitle: =@ctx.current.item.firstname
-    leftElement: 
+    leftElement:
       element: avatar
       text: " "
       uri: =@ctx.current.item.img
-    rightElement: 
+    rightElement:
       element: button
       title: Go to
       onPress:
@@ -113,7 +116,7 @@ item:
   options:
     title: =@ctx.current.item.lastname
     subtitle: =@ctx.current.item.firstname
-    leftElement: 
+    leftElement:
       element: avatar
       text: " "
       uri: =@ctx.current.item.img
@@ -126,10 +129,12 @@ item:
             options:
               linkTo: default-employee-detail
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### go-to right button element
 
 ::::VerticalSplit{layout="middle"}
@@ -155,11 +160,11 @@ item:
   options:
     title: =@ctx.current.item.lastname
     subtitle: =@ctx.current.item.firstname
-    leftElement: 
+    leftElement:
       element: avatar
       text: " "
       uri: =@ctx.current.item.img
-    rightElement: 
+    rightElement:
       element: button
       title: Go to
       onPress:
@@ -167,10 +172,12 @@ item:
         options:
           linkTo: default-employee-detail
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### go-to onSuccess
 
 ::::VerticalSplit{layout="middle"}
@@ -210,13 +217,15 @@ actions:
                     - type: action.go-to
                       options:
                         title: Go to employee detail
-                        linkTo: default-employee-detail   
+                        linkTo: default-employee-detail
             - type: action.go-back
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### go-to open a jig as a modal
 
 ::::VerticalSplit{layout="middle"}
@@ -245,18 +254,18 @@ item:
   options:
     title: =@ctx.current.item.lastname
     subtitle: =@ctx.current.item.firstname
-    leftElement: 
+    leftElement:
       element: avatar
       text: " "
       uri: =@ctx.current.item.photo
-    rightElement: 
+    rightElement:
       element: button
       title: Go to
       onPress:
         type: action.go-to
         options:
-          # When navigating to the jig, the jig opens as a modal, 
-          # specifying false will open as a normal jig.        
+          # When navigating to the jig, the jig opens as a modal,
+          # specifying false will open as a normal jig.
           isModal: true
           linkTo: default-employee-detail
 ```
@@ -270,11 +279,11 @@ type: jig.default
 children:
   - type: component.avatar
     options:
-      title: ''
+      title: ""
       uri: https://images.unsplash.com/photo-1591084728795-1149f32d9866?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80
       size: large
       align: center
-  
+
   - type: component.entity
     options:
       children:
@@ -288,7 +297,7 @@ children:
                     - type: component.entity-field
                       options:
                         label: Birth date
-                        value: '12.02.1993'
+                        value: "12.02.1993"
                     - type: component.entity-field
                       options:
                         label: Gender
@@ -304,7 +313,7 @@ children:
                     - type: component.entity-field
                       options:
                         label: Phone
-                        value: '+61 392 482 323'
+                        value: "+61 392 482 323"
                         contentType: phone
         - type: component.section
           options:
@@ -332,7 +341,7 @@ children:
                       options:
                         label: Country
                         value: Australia
-                        
+
   - type: component.list
     options:
       data: =@ctx.datasources.quartal
@@ -392,36 +401,38 @@ options:
       subtitle: Q1/2022
       data:
         - y: 91
-          color: positive   
+          color: positive
         - y: 9
           color: transparent
     - title: 99%
       subtitle: Q2/2022
       data:
         - y: 99
-          color: positive   
+          color: positive
         - y: 1
           color: transparent
     - title: 10%
       subtitle: Q3/2022
       data:
         - y: 10
-          color: positive   
+          color: positive
         - y: 90
           color: transparent
     - title: 0%
       subtitle: Q4/2022
       data:
         - y: 0
-          color: positive   
+          color: positive
         - y: 100
           color: transparent
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
-### go-to using  new & existing behaviour
+
+### go-to using new & existing behaviour
 
 In this example, three jigs are configured to create a stack of data for each guest, including their Name, Age, and Address. Each jig's `go-to` action is set with the `behaviour` property as `new`, enabling new guest details to be pushed into the app history. In the final jig, a secondary `go-to` action is added. This action introduces a button to review each guest's data by setting the `behaviour` property to `existing` and linking to the first jig in the stack via the `linkTo` property. The review process will cycle through each guest's details in the stack before completing.
 
@@ -442,11 +453,11 @@ jig-a.jigx
 title: Name
 type: jig.default
 
-onFocus: 
+onFocus:
   type: action.reset-state
   options:
     state: =@ctx.solution.state
-    
+
 header:
   type: component.jig-header
   options:
@@ -467,7 +478,7 @@ children:
           instanceId: fullName
           options:
             label: Name
- 
+
 actions:
   - children:
       - type: action.action-list
@@ -480,19 +491,19 @@ actions:
                 provider: DATA_PROVIDER_LOCAL
                 entity: guests
                 method: save
-                data:  
-                  fullName: =@ctx.components.fullName.state.value 
-            # The go-to action is configured to open the next jig in the stack.            
+                data:
+                  fullName: =@ctx.components.fullName.state.value
+            # The go-to action is configured to open the next jig in the stack.
             - type: action.go-to
               options:
-               # Set the parameters to use the value held in the state,
-               # this will be used as an input throughout the stack.             
+                # Set the parameters to use the value held in the state,
+                # this will be used as an input throughout the stack.
                 inputs:
                   fullName: =@ctx.components.fullName.state.value
                 # Select new to push the jig into the app history,
-                # this allows you to capture the next jig's data in the stack.                   
+                # this allows you to capture the next jig's data in the stack.
                 behaviour: new
-                # Configure which jig must open next.                   
+                # Configure which jig must open next.
                 linkTo: jig-b
 ```
 
@@ -502,12 +513,12 @@ jig-b.jigx
 title: Age
 type: jig.default
 
-# Use inputs from the first jig in the stack. 
+# Use inputs from the first jig in the stack.
 inputs:
- fullName: 
+  fullName:
     type: string
     required: true
-    
+
 header:
   type: component.jig-header
   options:
@@ -542,17 +553,17 @@ actions:
                 method: save
                 data:
                   age: =@ctx.components.age.state.value
-           # Select new to push the jig into the app history,
-           # this allows you to capture the next jig's data in the stack.                   
+            # Select new to push the jig into the app history,
+            # this allows you to capture the next jig's data in the stack.
             - type: action.go-to
               options:
-                # Set the parameters to use the input value passed from the first jig in the stack.                
+                # Set the parameters to use the input value passed from the first jig in the stack.
                 inputs:
                   fullName: =@ctx.jig.inputs.fullName
                 # Select new to push the jig into the app history,
-                # this allows you to capture the next jig's data in the stack.                    
+                # this allows you to capture the next jig's data in the stack.
                 behaviour: new
-                # Configure which jig must open next in the stack.                
+                # Configure which jig must open next in the stack.
                 linkTo: jig-c
 ```
 
@@ -562,9 +573,9 @@ jig-c.jigx
 title: Address
 type: jig.default
 
-# Use inputs from the first jig in the stack. 
+# Use inputs from the first jig in the stack.
 inputs:
-  fullName: 
+  fullName:
     type: string
     required: true
 
@@ -589,38 +600,37 @@ children:
           options:
             isMultiline: true
             label: Address
-            
+
 actions:
   - children:
-  
       - type: action.go-to
         options:
           inputs:
             fullName: =@ctx.jig.inputs.fullName
           # In this go-to action we go back to start capturing the next stack
-          # in the data set.           
+          # in the data set.
           title: Add another guest
           # Select new to push the jig into the app history,
-          # this allows you to capture the next set of data for a new stack.           
+          # this allows you to capture the next set of data for a new stack.
           behaviour: new
-          # Open the first jig in the stack to start capturing the new stack of data.           
+          # Open the first jig in the stack to start capturing the new stack of data.
           linkTo: jig-a
-     # Add a second go-to action that will create a secondary button, 
-     # allowing you to review the existing data set in the stack.
-     # Add existing to behaviour which will cycle through all the jigs in the history,
-     # showing the jig with the data for each jig. 
-     # Note the jigs will cycle through the screens for each capture, 
-     # meaning if you captured 3 sets in the stack, all 3 stacks are shown.  
+      # Add a second go-to action that will create a secondary button,
+      # allowing you to review the existing data set in the stack.
+      # Add existing to behaviour which will cycle through all the jigs in the history,
+      # showing the jig with the data for each jig.
+      # Note the jigs will cycle through the screens for each capture,
+      # meaning if you captured 3 sets in the stack, all 3 stacks are shown.
       - type: action.go-to
         options:
           title: Review details
           # Select existing to return and display the jig data
-          # that is held in the app history.          
+          # that is held in the app history.
           behaviour: existing
           # Open the first jig in the stack to start cycling through the data
-          # for each stack captured.        
-          linkTo: jig-a 
+          # for each stack captured.
+          linkTo: jig-a
 ```
+
 :::
 :::::
-

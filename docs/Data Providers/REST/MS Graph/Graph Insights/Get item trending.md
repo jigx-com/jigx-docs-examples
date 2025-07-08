@@ -15,7 +15,7 @@ Get insights that include a list of documents trending around the user using a G
 
 - [Insights list trending](https://learn.microsoft.com/en-us/graph/api/insights-list-trending?view=graph-rest-1.0&tabs=http) - MS Graph documentation
 - [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Configuring OAuth for MS Graph]()
+- [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
@@ -45,14 +45,14 @@ title: MS Graph Demonstrator
 description: A sample solution that uses the Microsoft Graph API. You can deploy and use this solution without any additional configuration.
 category: business
 tabs:
-  Home: 
+  Home:
     jigId: view-user-jigx
     icon: person
   Trends:
     jigId: items-trending
-    icon: newspaper 
-          
+    icon: newspaper
 ```
+
 :::
 
 ## Functions
@@ -87,8 +87,9 @@ continuation:
       location: header
       required: true
       type: string
-      value: microsoft.OAuth 
+      value: microsoft.OAuth
 ```
+
 :::
 
 ## Jigs
@@ -126,15 +127,15 @@ onRefresh:
                 accessToken: microsoft.OAuth
 
 datasources:
-  mydata: 
+  mydata:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
+
       entities:
         - entity: items-trending
-  
-      query: SELECT id, '$.weight', 
+
+      query: SELECT id, '$.weight',
         json_extract(Data, '$.resourceReference.webUrl') as webUrl,
         json_extract(Data, '$.resourceVisualization.containerDisplayName') as containerDisplayName,
         json_extract(Data, '$.resourceVisualization.previewText') as previewText,
@@ -148,7 +149,7 @@ children:
     options:
       data: =@ctx.datasources.mydata
       maximumItemsToRender: =$count(@ctx.datasources.mydata)
-      item: 
+      item:
         type: component.list-item
         options:
           title: =@ctx.current.item.title
@@ -156,27 +157,27 @@ children:
             ="Relevance: " & $round((@ctx.current.item.weight * 100),2) & "%"
           description: =@ctx.current.item.previewText
           divider: solid
-          leftElement: 
+          leftElement:
             element: icon
             icon: gauge-dashboard
           label:
             title: =@ctx.current.item.type
-          onPress: 
+          onPress:
             type: action.go-to
             options:
               linkTo: =@ctx.current.item.type='pdf'? 'view-trending-object-pdf':'view-trending-object'
               parameters:
                 uri: =@ctx.current.item.webUrl
-            
+
 widgets:
-  trends: 
+  trends:
     type: widget.group
     options:
       children:
         - type: widget.image
           options:
             isContentOverlaid: true
-            bottom: 
+            bottom:
               type: component.titles
               options:
                 align: center
@@ -186,20 +187,19 @@ widgets:
         - type: widget.list
           options:
             data: =@ctx.datasources.mydata
-            item: 
+            item:
               type: component.list-item
               options:
                 title: =@ctx.current.item.title
                 subtitle: =@ctx.current.item.type & " document"
                 description: =@ctx.current.item.previewText
                 divider: solid
-                onPress: 
+                onPress:
                   type: action.go-to
                   options:
                     linkTo: =@ctx.current.item.type='pdf'? 'view-trending-object-pdf':'view-trending-object'
                     parameters:
                       uri: =@ctx.current.item.webUrl
-          
 ```
 
 view-trending-object-pdf.jigx
@@ -224,7 +224,7 @@ source:
   uri: =@ctx.jig.inputs.uri
   isTrackingTransparencyRequired: false
 ```
+
 :::
 
 ##
-

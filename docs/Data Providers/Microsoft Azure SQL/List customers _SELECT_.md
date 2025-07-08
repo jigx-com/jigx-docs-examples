@@ -7,11 +7,12 @@ updatedAt: Wed Feb 12 2025 12:51:55 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="warning"}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information.
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId:eOUi2cPYynsdRuK-TobDp) for more information.
 :::
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
+
 ## Scenario
 
 Create a list of customers showing their names, email addresses, and locations. On the left is an avatar, and on the right is the country the customer resides in.
@@ -19,7 +20,7 @@ Create a list of customers showing their names, email addresses, and locations. 
 ## Resources
 
 - Scripts for creating Azure SQL tables and stored procedures [Database Scripts](<./Database Scripts.md>)
-- [Configuring the SQL Connection]()
+- [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection)
 
 ## Jigx Code
 
@@ -55,6 +56,7 @@ connection: customer.azure # Use manage.jigx.com to configure a SQL connection
 method: execute #Use SQL stored procedure to interact with the data in SQL
 procedure: sp_GetAllCustomers
 ```
+
 :::
 
 ### A query-based version of get-customers.jigx
@@ -84,8 +86,8 @@ query: |
     country
   FROM
     customers
-
 ```
+
 :::
 
 ## jig (screen)
@@ -116,7 +118,7 @@ header:
           uri: https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80
 
 # onFocus is triggered whenever the jig is displayed. The sync-entities action calls the Jigx SQL function and populates the local SQLite tables on the device with the data returned from Azure SQL.
-onFocus: 
+onFocus:
   type: action.sync-entities
   options:
     provider: DATA_PROVIDER_SQL
@@ -126,14 +128,14 @@ onFocus:
 
 # The mydata data source selects the data from the local SQLite database.
 datasources:
-  mydata: 
+  mydata:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
+
       entities:
         - entity: customers
-  
+
       query: |
         SELECT
           id,
@@ -166,12 +168,13 @@ item:
         @ctx.current.item.zip_code
     label:
       title: =@ctx.current.item.country
-    leftElement: 
+    leftElement:
       element: avatar
       # The text property of the left element is specified using a JSONata expression that builds a two-letter string by concatenating the first letters of the customer's first and last names.
       text: =$substring(@ctx.current.item.first_name,0,1) & $substring(@ctx.current.item.last_name,0,1)
     divider: solid
 ```
+
 :::
 
 ## index
@@ -190,7 +193,6 @@ tabs:
   home:
     jigId: listCustomers
     icon: home-apps-logo
-
 ```
-:::
 
+:::

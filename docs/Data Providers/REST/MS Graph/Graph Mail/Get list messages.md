@@ -15,7 +15,7 @@ Get a list of emails for a user in Microsoft Graph using a GET REST function and
 
 - [List messages](https://learn.microsoft.com/en-us/graph/api/user-list-messages?view=graph-rest-1.0&tabs=http#http-request) - MS Graph documentation
 - [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Configuring OAuth for MS Graph]()
+- [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
@@ -46,7 +46,7 @@ title: MS Graph Demonstrator
 description: A sample solution that uses the Microsoft Graph API. You can deploy and use this solution without any additional configuration.
 category: business
 tabs:
- home: 
+ home:
     jigId: view-user-jigx
     icon: home-apps-logo
  calendar: "2x2"
@@ -55,12 +55,13 @@ tabs:
  meeting:
     jigId: next-meeting
     when: |
-      =@ctx.datasources.next-meeting=null? false:true 
-    icon: meeting-remote  
+      =@ctx.datasources.next-meeting=null? false:true
+    icon: meeting-remote
  emails:
     jigId: list-email-messages
     icon: email
 ```
+
 :::
 
 ## Functions
@@ -100,8 +101,9 @@ continuation:
       location: header
       required: true
       type: string
-      value: microsoft.OAuth 
+      value: microsoft.OAuth
 ```
+
 :::
 
 ## Jigs
@@ -142,20 +144,20 @@ onRefresh:
                 $top: "200"
 
 datasources:
-  mydata: 
+  mydata:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
       entities:
         - entity: email-messages
-      jsonProperties: 
+      jsonProperties:
         - body
         - sender
         - from
         - toRecipients
         - replyTo
-      query: SELECT id, 
-        '$.receivedDateTime', 
+      query: SELECT id,
+        '$.receivedDateTime',
         '$.sentDateTime',
         '$.hasAttachments',
         '$.subject',
@@ -187,14 +189,14 @@ item:
     divider: solid
     subtitle: =@ctx.current.item.subject
     description: =@ctx.current.item.bodyPreview
-    rightElement: 
+    rightElement:
       element: icon
       icon: =(@ctx.current.item.hasAttachments = 1 ? 'document' :'')
-    leftElement: 
+    leftElement:
       element: avatar
       text: =$substring(@ctx.current.item.from.emailAddress.name, 0, 1)
-      uri: ''
-    onPress: 
+      uri: ""
+    onPress:
       type: action.go-to
       options:
         linkTo: view-email
@@ -215,12 +217,12 @@ item:
           ccRecipients: =@ctx.current.item.ccRecipients
           bccRecipients: =@ctx.current.item.bccRecipients
           replyTo: =@ctx.current.item.replyTo
-          
-filter: 
+
+filter:
   - title: Focused
     value: focused
   - title: Other
-    value: other       
+    value: other
 ```
 
 view-email.jigx
@@ -278,5 +280,5 @@ children:
         & "</body>
         </html>")
 ```
-:::
 
+:::

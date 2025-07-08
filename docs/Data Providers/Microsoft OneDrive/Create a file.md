@@ -1,7 +1,7 @@
 ---
 title: Create a file
 slug: VOFr-creating-a
-description: Learn how to create a file in OneDrive using the JigxApp solution with this comprehensive document. Discover the necessary properties, like file, fileName, entity, tokenType, and method, and understand the usage of the media-field component 
+description: Learn how to create a file in OneDrive using the JigxApp solution with this comprehensive document. Discover the necessary properties, like file, fileName, entity, tokenType, and method, and understand the usage of the media-field component
 createdAt: Mon May 29 2023 08:23:33 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 13:53:04 GMT+0000 (Coordinated Universal Time)
 ---
@@ -39,7 +39,7 @@ The code below provides an example for creating an invoice in the `myfiles` dire
 create-file.jigx
 
 ```yaml
-title: Create Monthly Invoice 
+title: Create Monthly Invoice
 description: 2 Submit your monthly invoices
 type: jig.default
 
@@ -52,18 +52,18 @@ header:
       options:
         source:
           uri: https://builder.jigx.com/assets/images/header.jpg
-  
+
 children:
   - type: component.form
     instanceId: Invoices
     options:
       children:
-      # reference the fileName required property as the instanceId      
+        # reference the fileName required property as the instanceId
         - type: component.text-field
           instanceId: fileName
           options:
             label: Month
-      # reference the file required property as the instanceId and use the media field to add the physical file, use any mediaType to allow files of different formats to be selected     
+        # reference the file required property as the instanceId and use the media field to add the physical file, use any mediaType to allow files of different formats to be selected
         - type: component.media-field
           instanceId: file
           options:
@@ -82,14 +82,15 @@ actions:
                 provider: DATA_PROVIDER_ONEDRIVE
                 entity: myfiles
                 method: create
-                data: 
+                data:
                   file: =@ctx.components.file.state.value
                   fileName: =@ctx.components.fileName.state.value
                   tokenType: jigx.graph.oauth
-                onSuccess: 
-                  title: Successfully created   
+                onSuccess:
+                  title: Successfully created
             - type: action.go-back
 ```
+
 :::
 
 Example of a `modal` message that can be displayed when creating a file with an existing file name. The full code snippet is shown:
@@ -98,7 +99,7 @@ Example of a `modal` message that can be displayed when creating a file with an 
 Modal
 
 ```yaml
-title: Create Invoice 
+title: Create Invoice
 description: Create monthly invoices
 type: jig.default
 
@@ -111,18 +112,18 @@ header:
       options:
         source:
           uri: https://builder.jigx.com/assets/images/header.jpg
-onFocus: 
+onFocus:
   type: action.sync-entities
-  options: 
+  options:
     #use the OneDrive provider to sync the file metadata to the local provider
     provider: DATA_PROVIDER_ONEDRIVE
     entities:
       - entity: myfiles
-        data: 
-          tokenType: jigx.graph.oauth 
+        data:
+          tokenType: jigx.graph.oauth
 
 datasources:
-  file-data-root: 
+  file-data-root:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
@@ -132,24 +133,24 @@ datasources:
       queryParameters:
         fileName: =@ctx.components.New-file-Name.state.value
 
-children: 
+children:
   - type: component.form
     instanceId: Invoice
     options:
       children:
-      # reference the fileName required property as the instanceId      
+        # reference the fileName required property as the instanceId
         - type: component.text-field
           instanceId: New-file-Name
           options:
             label: Month
-            
-      # reference the file required property as the instanceId and use the media field to add the physical file, use any mediaType to allow files of different formats to be selected     
+
+        # reference the file required property as the instanceId and use the media field to add the physical file, use any mediaType to allow files of different formats to be selected
         - type: component.media-field
           instanceId: file
           options:
             label: Add your Invoice
             mediaType: any
-          
+
 actions:
   - children:
       - type: action.confirm
@@ -157,9 +158,9 @@ actions:
           title: Submit
           # check if the filename exist
           isConfirmedAutomatically: =$exists(@ctx.datasources.file-data-root.name) ? false:true
-          onConfirmed: 
+          onConfirmed:
             type: action.submit-form
-            options: 
+            options:
               formId: Invoice
               provider: DATA_PROVIDER_ONEDRIVE
               entity: myfiles
@@ -168,21 +169,21 @@ actions:
                 file: =@ctx.components.file.state.value
                 fileName: =@ctx.components.New-file-Name.state.value
                 tokenType: jigx.graph.oauth
-              onSuccess: 
+              onSuccess:
                 title: Successfully created
-         # show message if filename exists       
+          # show message if filename exists
           modal:
             title: File name already exists. Continuing will result in an error.
             cancel: Cancel
             confirm: Continue
 ```
+
 :::
 
 ### See also
 
-- [Microsoft OneDrive]()
+- [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
 - [Update/Save a file](<./Update_Save a file.md>)
 - [Delete a file](<./Delete a file.md>)
 - [List files](<./List files.md>)
 - [Download a file](<./Download a file.md>)
-

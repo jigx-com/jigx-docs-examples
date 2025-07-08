@@ -1,7 +1,7 @@
 ---
 title: List files
 slug: qxbO-get-a-file
-description: Learn how to interact with files on OneDrive with this comprehensive document effectively. Discover the essential YAML properties, explore various components for file display, and understand important considerations like avoiding unnecessary downloads. 
+description: Learn how to interact with files on OneDrive with this comprehensive document effectively. Discover the essential YAML properties, explore various components for file display, and understand important considerations like avoiding unnecessary downloads.
 createdAt: Mon May 29 2023 08:25:13 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 14:37:02 GMT+0000 (Coordinated Universal Time)
 ---
@@ -35,7 +35,7 @@ The code example below provides an example of a list of invoices in the `myfiles
 list-files.jigx
 
 ```yaml
-title: List Monthly Invoices 
+title: List Monthly Invoices
 description: List all monthly invoices
 type: jig.list
 icon: contact
@@ -51,47 +51,47 @@ header:
           uri: https://builder.jigx.com/assets/images/header.jpg
 
 # Connection to OneDrive files in myfiles directory
-onFocus: 
+onFocus:
   type: action.sync-entities
-  options: 
+  options:
     provider: DATA_PROVIDER_ONEDRIVE
     entities:
       - entity: myfiles
-        data: 
-          tokenType: jigx.graph.oauth       
+        data:
+          tokenType: jigx.graph.oauth
 # Hold the OneDrive file details on local device
 
 datasources:
-  file-data-myfiles: 
+  file-data-myfiles:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-      entities: 
-         - myfiles
-      query: SELECT id, '$.name' as name FROM [myfiles] ORDER BY '$.name' DESC 
+      entities:
+        - myfiles
+      query: SELECT id, '$.name' as name FROM [myfiles] ORDER BY '$.name' DESC
 
 data: =@ctx.datasources.file-data-myfiles
 item:
   type: component.list-item
   options:
-    leftElement: 
+    leftElement:
       element: avatar
-      text: OD 
+      text: OD
     title: =@ctx.current.item.name
-      
+
 actions:
-   - children:
-       - type: action.go-back
-         options:
-           title: previous
+  - children:
+      - type: action.go-back
+        options:
+          title: previous
 ```
+
 :::
 
 ### See also
 
-- [Microsoft OneDrive]()
+- [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
 - [Create a file](<./Create a file.md>)
 - [Update/Save a file](<./Update_Save a file.md>)
 - [Delete a file](<./Delete a file.md>)
 - [Download a file](<./Download a file.md>)
-

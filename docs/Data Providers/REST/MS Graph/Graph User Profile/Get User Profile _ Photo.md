@@ -17,7 +17,7 @@ Gets a user's profile and photo in Microsoft Graph using Jigx functions, and dis
 1. [Profile Photo Graph](https://learn.microsoft.com/en-us/graph/api/resources/profilephoto?view=graph-rest-1.0) documentation
 2. [Graph Get a User](https://learn.microsoft.com/en-us/graph/api/user-get?view=graph-rest-1.0&tabs=http) documentation
 3. [Graph explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-4. [Configuring OAuth for MS Graph]()
+4. [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
@@ -56,8 +56,8 @@ tabs:
   home:
     jigId: view-user-jigx
     icon: home-apps-logo
- 
-onFocus: 
+
+onFocus:
   type: action.action-list
   options:
     isSequential: true
@@ -73,14 +73,14 @@ onFocus:
             - entity: profile-picture
               function: get-profile-picture
               functionParameters:
-                accessToken: microsoft.OAuth 
-                userId: =@ctx.user.email 
+                accessToken: microsoft.OAuth
+                userId: =@ctx.user.email
             - entity: user-emails
               function: get-user-emails-addresses
               functionParameters:
-                accessToken: microsoft.OAuth                   
-
+                accessToken: microsoft.OAuth
 ```
+
 :::
 
 ## Functions
@@ -102,7 +102,6 @@ parameters:
     required: true
     type: string
     value: microsoft.OAuth #Use manage.jigx.com to define credentials for your solution
-    
 ```
 
 get-profile-picture.jigx
@@ -129,6 +128,7 @@ conversions:
     from: base64
     to: local-uri
 ```
+
 :::
 
 ## Jigs
@@ -148,13 +148,13 @@ header:
   type: component.jig-header
   options:
     height: small
-    children: 
+    children:
       type: component.image
       options:
         source:
           uri: https://support.content.office.net/en-us/media/f1c4b693-4670-4e7a-8102-bbf1749e83fe.jpg
-      
-onRefresh: 
+
+onRefresh:
   type: action.sync-entities
   options:
     provider: DATA_PROVIDER_REST
@@ -166,15 +166,15 @@ onRefresh:
       - entity: profile-picture
         function: get-profile-picture
         functionParameters:
-          accessToken: microsoft.OAuth 
+          accessToken: microsoft.OAuth
           userId: =@ctx.user.email
       - entity: user-emails
         function: get-user-emails-addresses
         functionParameters:
           accessToken: microsoft.OAuth
-      
+
 datasources:
-  userProfile: 
+  userProfile:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
@@ -194,7 +194,7 @@ datasources:
         '$.id' 
         FROM [user-profile]
       isDocument: true
-      
+
   profilePhoto:
     type: datasource.sqlite
     options:
@@ -203,7 +203,7 @@ datasources:
         - entity: profile-picture
       query: SELECT id, '$.userId', '$.data' FROM [profile-picture]
       isDocument: true
-      
+
   userEmails:
     type: datasource.sqlite
     options:
@@ -216,7 +216,7 @@ children:
   - type: component.image
     options:
       source:
-        uri: =@ctx.datasources.profilePhoto.data         
+        uri: =@ctx.datasources.profilePhoto.data
       height: 200
       resizeMode: contain
   - type: component.entity
@@ -249,14 +249,14 @@ children:
         - type: component.field-row
           options:
             children:
-            - type: component.entity-field
-              options:
-                label: Job Title
-                value: =@ctx.datasources.userProfile.jobTitle
-            - type: component.entity-field
-              options:
-                label: Mobile Phone
-                value: =@ctx.datasources.userProfile.mobilePhone
+              - type: component.entity-field
+                options:
+                  label: Job Title
+                  value: =@ctx.datasources.userProfile.jobTitle
+              - type: component.entity-field
+                options:
+                  label: Mobile Phone
+                  value: =@ctx.datasources.userProfile.mobilePhone
         - type: component.entity-field
           options:
             label: Office Location
@@ -269,18 +269,18 @@ children:
           options:
             data: =@ctx.datasources.userEmails
             maximumItemsToRender: 8
-            item: 
+            item:
               type: component.list-item
               options:
                 divider: solid
-                leftElement: 
+                leftElement:
                   element: icon
                   icon: email
                 title: =@ctx.current.item.address
                 subtitle: |
                   ="Type: " & @ctx.current.item.type
                 description: |
-                  ="Allowed Audiences: " & @ctx.current.item.allowedAudiences               
+                  ="Allowed Audiences: " & @ctx.current.item.allowedAudiences
 
 actions:
   - children:
@@ -288,39 +288,38 @@ actions:
         options:
           title: Update Profile Picture
           linkTo: update-profile-picture
-            
+
 widgets:
-  "2x4": 
+  "2x4":
     type: widget.group
     options:
       children:
         - type: widget.avatar
           options:
             text: "Your Profile"
-            uri: =@ctx.datasources.profilePhoto.data            
+            uri: =@ctx.datasources.profilePhoto.data
             bottom:
               type: component.titles
               options:
                 align: center
                 title: =@ctx.datasources.userProfile.displayName
                 subtitle: =@ctx.datasources.userProfile.jobTitle
-                
-  "2x2": 
+
+  "2x2":
     type: widget.image
     options:
       isContentOverlaid: true
       source:
         uri: =@ctx.datasources.profilePhoto.data
-      bottom: 
+      bottom:
         type: component.titles
         options:
           title: =@ctx.datasources.userProfile.displayName
           subtitle: =@ctx.datasources.userProfile.jobTitle
-        
 ```
+
 :::
 
 ## See Also
 
 - [Update Profile Photo](<./Update Profile Photo.md>)
-

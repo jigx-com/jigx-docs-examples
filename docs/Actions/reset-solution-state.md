@@ -9,22 +9,23 @@ This action affects the solution's overall state, allowing dynamic UI updates an
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-|**Core structure** |                                                                                                                 |
+| **Core structure** |                                                                                                                      |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------- |
 | `changes`          | Specify the solution-state's `State Key` , the state will be reset to the initial solution state value for this key. |
 | `title`            | Provide the action button with a title, for example, Reset.                                                          |
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon]() to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                        |
+| `icon`            | Select an [icon](https://docs.jigx.com/jigx-icons) to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                        |
 | `isHidden`        | `false` hides the action button, `true` shows the action button. Default setting is `true`.                                                                                                                                                                                                                                                                                                                                        |
 | `style`           | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
 
-## Examples and code snippets 
+## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Reset solution state
 
 ::::VerticalSplit{layout="middle"}
@@ -38,10 +39,13 @@ Some properties are common to all components, see [Common component properties](
 ::::
 
 ```yaml
+
 ```
+
 :::::
 
 :::::ExpandableHeading
+
 ### Reset solution state in the onRefresh event
 
 ::::VerticalSplit{layout="middle"}
@@ -55,10 +59,13 @@ Some properties are common to all components, see [Common component properties](
 ::::
 
 ```yaml
+
 ```
+
 :::::
 
 :::::ExpandableHeading
+
 ### Reset solution state in a jig
 
 ::::VerticalSplit{layout="middle"}
@@ -72,6 +79,7 @@ Some properties are common to all components, see [Common component properties](
 ::::
 
 ```yaml
-```
-:::::
 
+```
+
+:::::

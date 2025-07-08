@@ -6,7 +6,7 @@ createdAt: Wed Jul 13 2022 10:20:52 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Mar 06 2025 08:30:25 GMT+0000 (Coordinated Universal Time)
 ---
 
-Creating  Dynamic Data can be achieved in several ways, one of which is by using a form. In this example, we will demonstrate how to create a new employee form that will create the employee table, columns, and data record in the Dynamic Data database when the form is submitted.
+Creating Dynamic Data can be achieved in several ways, one of which is by using a form. In this example, we will demonstrate how to create a new employee form that will create the employee table, columns, and data record in the Dynamic Data database when the form is submitted.
 
 ## Data provider, jig, component & action
 
@@ -36,6 +36,7 @@ default.jigx
 tables:
   employee: null
 ```
+
 :::
 ::::
 :::::
@@ -69,34 +70,34 @@ children:
     options:
       title: Personal Information
       children:
-      # add the form component with fields to capture the dynamic data record
+        # add the form component with fields to capture the dynamic data record
         - type: component.form
-        # The id is used in the action for context to the fields which crete the columns and data 
+          # The id is used in the action for context to the fields which crete the columns and data
           instanceId: form-employee
           options:
             children:
               - type: component.text-field
-              # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value   
+                # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value
                 instanceId: first_name
                 options:
                   label: First Name
               - type: component.text-field
-              # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value  
+                # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value
                 instanceId: last_name
                 options:
                   label: Last Name
               - type: component.text-field
-              # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value  
+                # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value
                 instanceId: address
                 options:
-                  label: Address   
+                  label: Address
               - type: component.text-field
-              # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value  
+                # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value
                 instanceId: contact
                 options:
                   label: Contact Information
               - type: component.text-field
-              # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value  
+                # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value
                 instanceId: email
                 options:
                   label: Email
@@ -105,33 +106,33 @@ children:
                   title: Employment Information
                   children:
                     - type: component.text-field
-                    # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value  
+                      # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value
                       instanceId: job_title
                       options:
-                        label: Job Title 
+                        label: Job Title
                     - type: component.text-field
-                    # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value  
+                      # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value
                       instanceId: department
                       options:
-                        label: Department  
+                        label: Department
                     - type: component.date-picker
-                    # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value  
+                      # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value
                       instanceId: start_date
                       options:
                         label: Start Date
 actions:
   - children:
-  # use the submit form action to execute the create/save method of the Dynamic Data provider. 
+      # use the submit form action to execute the create/save method of the Dynamic Data provider.
       - type: action.submit-form
         options:
-        # The formId is used to get the context to the fields and values that specify the columns and data
+          # The formId is used to get the context to the fields and values that specify the columns and data
           formId: form-employee
           # specify the Dynamic Data provider to store the employees data record
           provider: DATA_PROVIDER_DYNAMIC
           title: Create Record
           entity: default/employee
-          method: save # use the create or save method, the first exection will create columns and records, the second will create data records as the columns already exist. 
-          onSuccess: 
+          method: save # use the create or save method, the first exection will create columns and records, the second will create data records as the columns already exist.
+          onSuccess:
             type: action.go-back
 ```
 
@@ -147,11 +148,11 @@ tabs:
     jigId: new-employee-form
     icon: home-apps-logo
 ```
+
 :::
 
 ### View the Dynamic Data in Jigx Management
 
-1. Open [Management]() , navigate to your solution (employees).
+1. Open [Management](https://docs.jigx.com/management-overview) , navigate to your solution (employees).
 2. Navigate to **Data** option
 3. Click on the **employee table** and view the **data record **you just created.
-

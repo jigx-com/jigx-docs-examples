@@ -8,11 +8,11 @@ This action allows the app to execute a SQL statement during local SQLite execut
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `entities`         | The entities/tables affected by the statements. Before executing the statements, a check ensures that the tables exist.&#xA;After execution any datasources that use these entities will be notified that the database was changed.                   |
 | `statements`       | List of statements to execute in sequence. Multiple statements can be configured to execute in sequence.&#xA;`statement` - the SQL statement to execute against the solution database.&#xA;`parameters` - The parameters used in the above statement. |
-| `title`            | Provide the action button with a title, for example, *Delete record*.                                                                                                                                                                                 |
+| `title`            | Provide the action button with a title, for example, _Delete record_.                                                                                                                                                                                 |
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon]() to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                        |
+| `icon`            | Select an [icon](https://docs.jigx.com/jigx-icons) to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                        |
 | `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
 | `style`           | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
 
@@ -25,7 +25,7 @@ This action allows the app to execute a SQL statement during local SQLite execut
 
 ### Execute SQL statements to update & delete
 
-This example shows a list with an `onPress` event that executes a SQL statement to update the *Tags* table in the local database. A `swipeable` event is configured to delete the list item record from the local database.
+This example shows a list with an `onPress` event that executes a SQL statement to update the _Tags_ table in the local database. A `swipeable` event is configured to delete the list item record from the local database.
 
 :::CodeblockTabs
 create-tag.jigx
@@ -44,25 +44,25 @@ actions:
           actions:
             # Create the tags record in the local SQLite table,
             # by writing a SQL statement to insert the record,
-            # and parameters defining the record's data. 
+            # and parameters defining the record's data.
             - type: action.execute-sql
               options:
                 statements:
-                - statement: |
+                  - statement: |
                       INSERT INTO tags (id, data)
                       VALUES (@id, @data)
-                  parameters:
+                    parameters:
                       data: |
                         ={
                           "name": @ctx.components.name.state.value,
                           "description": @ctx.components.description.state.value,
                           "count": 0
                         }
-                      id: =@ctx.components.id.state.value   
+                      id: =@ctx.components.id.state.value
                 entities:
                   - tags
             - type: action.go-back
-# Configure a form to capture the tag details.                  
+# Configure a form to capture the tag details.
 children:
   - type: component.form
     instanceId: tag-form
@@ -92,16 +92,16 @@ list-tag.jigx
 ```yaml
 title: Tags (execute-sql)
 type: jig.list
-# Add the action button in the list to create a new tag. 
+# Add the action button in the list to create a new tag.
 actions:
   - children:
       - type: action.go-to
         options:
           title: Create Tag
-          linkTo: create-tag    
+          linkTo: create-tag
 # In the list display the tag's details, use an onPress with the execute-sql
 # action to update the dataset by increasing the tag count
-# when the item is pressed.   
+# when the item is pressed.
 data: =@ctx.datasources.tags
 item:
   type: component.list-item
@@ -125,8 +125,8 @@ item:
                   "count": @ctx.current.item.count + 1
                 }
               id: =@ctx.current.item.id
-# When swiping left on the list item, delete the tag's record
-# from the local database using the execute-sql action.              
+    # When swiping left on the list item, delete the tag's record
+    # from the local database using the execute-sql action.
     swipeable:
       left:
         - icon: close
@@ -146,9 +146,9 @@ item:
                     - statement: |
                         DELETE FROM tags WHERE id = @id
                       parameters:
-                        id: =@ctx.current.item.id  
+                        id: =@ctx.current.item.id
                   entities:
-                      - tags
+                    - tags
 ```
 
 tags (datasource)
@@ -168,9 +168,10 @@ datasources:
          '$.count'
         FROM [tags]
 ```
+
 :::
 
-### Execute SQL statements to create  indexes
+### Execute SQL statements to create indexes
 
 This example demonstrates how to use the `execute-sql` action to run the CREATE statements. It also shows how to incorporate indexes to optimize query performance. Using SQL statements in this way allows you to define and manage table structures, remove data, and improve efficiency through indexing—all directly from your Jigx solution. Creating indexes should occur before actual queries are run against the tables. In this example we create the index on the `assignedTo` column in the `onLoad` event in the index.jigx file, ensuring that only the tasks for the logged on user are displayed.
 
@@ -188,7 +189,7 @@ category: analytics
 onLoad:
   type: action.execute-sql
   options:
-    # Specify the table where the index is required. 
+    # Specify the table where the index is required.
     entities:
       - default/tasks
     statements:
@@ -200,7 +201,7 @@ tabs:
   home:
     label: Home label
     jigId: create-task-dd
-    icon: home-apps-logo          
+    icon: home-apps-logo
 ```
 
 create-task-dd.jigx
@@ -253,21 +254,21 @@ list-tasks-dd.jigx
 title: Tasks (DD)
 type: jig.list
 icon: checklist
-# Add the action button in the list to create a new task. 
+# Add the action button in the list to create a new task.
 actions:
   - children:
       - type: action.go-to
         options:
           title: Create Task
           linkTo: create-task-dd
-          
+
 data: =@ctx.datasources.task-dd
 item:
   type: component.list-item
   options:
     title: =@ctx.current.item.name
     subtitle: =@ctx.current.item.description
-    # Complete the task by adding an onPress action. 
+    # Complete the task by adding an onPress action.
     onPress:
       type: action.execute-entity
       options:
@@ -277,7 +278,7 @@ item:
         data:
           id: =@ctx.current.item.id
           completed: "=(@ctx.current.item.completed = 1 ? 0 : 1)"
-    # Edit or delete the task by swiping left, use the execute-entity action.      
+    # Edit or delete the task by swiping left, use the execute-entity action.
     swipeable:
       left:
         - icon: close
@@ -314,13 +315,13 @@ edit-task-dd.jigx
 title: Edit Task
 type: jig.default
 icon: checklist
-# Use inputs to pass the task record as an object from the list. 
+# Use inputs to pass the task record as an object from the list.
 # Allowing the form to be pre-filled with all the task details for editing.
 inputs:
   task:
     type: object
     required: true
-# Use update to save the changes made in the edit form. 
+# Use update to save the changes made in the edit form.
 actions:
   - children:
       - type: action.execute-entity
@@ -371,9 +372,9 @@ options:
   provider: DATA_PROVIDER_DYNAMIC
   entities:
     - default/tasks
-# Configure the datasource query, ensuring the assignTo parameter uses
-# the logged in user. This is used by the execute-sql action to create the 
-# index when the app loads. Only the logged on user's tasks are displayed.     
+  # Configure the datasource query, ensuring the assignTo parameter uses
+  # the logged in user. This is used by the execute-sql action to create the
+  # index when the app loads. Only the logged on user's tasks are displayed.
   query: |
     SELECT
       id,
@@ -388,5 +389,5 @@ options:
   queryParameters:
     assignedTo: =@ctx.user.email
 ```
-:::
 
+:::

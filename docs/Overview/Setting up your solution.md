@@ -14,7 +14,7 @@ To see the samples in the Jigx App, and experience the functionality first-hand,
 
 1. Using the sample solution or a starter app works no differently than your own solution. Select your desired solution - either the main jigx-samples solution or one of the starter apps at your disposal.
 2. Open the relevant solution/starter-app folder in VS Code.
-3. Now publish the solution as per [publishing your solutions]().
+3. Now publish the solution as per [publishing your solutions](https://docs.jigx.com/publishing-a-solution).
 4. Navigate to the solutions in Jigx Management to view the solution.
 
 :::hint{type="warning"}
@@ -26,7 +26,7 @@ The solution will not be visible in Jigx Management until the solution is publis
 Now that the solution has been published, the right people need access.
 
 1. Once the solution has been published, the creator that performed the publishing will be listed as the `Owner` of the solution and will automatically have Owner rights
-2. You can adjust these rights or assign additional users to this solution. Refer to [Users]() for more information on this.
+2. You can adjust these rights or assign additional users to this solution. Refer to [Users](https://docs.jigx.com/users) for more information on this.
 
 :::hint{type="success"}
 If at any time you don't want the sample solution visible in the application, you can set your rights to Deny.
@@ -38,16 +38,10 @@ Dynamic Data tables require data to be populated, as your new solution will not 
 
 1. Be sure to access the relevant data table extracts. For the jigx-samples solution, you can download all [CSV files](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/csv) for the tables from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/csv).
 2. Navigate to the relevant Dynamic Data tables in the data section of your solution in Jigx Management.
-3. Now upload the extracts as detailed in the [Data]() section.
+3. Now upload the extracts as detailed in the [Data](https://docs.jigx.com/S_SB-data) section.
 
 Once your data has been populated, your sample solutions are ready for use on the Jigx App.
 
 ### Consulting the sample solution
 
 Whenever you come across a new jig and wish to consult an example, navigate to the jigx-samples solution in your app.
-
-
-
-
-
-

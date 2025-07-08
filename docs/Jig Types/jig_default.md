@@ -16,6 +16,7 @@ Type` jig.default` is the most versatile jig allowing you to create a jig with v
 - Used with a combination of different components and actions.
 
 ##
+
 :::
 
 :::VerticalSplitItem
@@ -25,24 +26,25 @@ Type` jig.default` is the most versatile jig allowing you to create a jig with v
 
 ## Configuration options
 
-Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
+Some properties are common to all jig types, see [Common jig type properties](docId:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
 
-| **Core structure** |                                                                                          |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `children`         | Add the UI elements ([Components](./../Components.md)) under the children property, for example, `component.form`. Use Intellisense (ctrl+space) to select a component from the available list.  |
-| `title`            | Provide the name of the screen. If you do not want to show a title in a jig use `title: ' '` or add an expression.                                                                               |
+| **Core structure** |                                                                                                                                                                                                 |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `children`         | Add the UI elements ([Components](./../Components.md)) under the children property, for example, `component.form`. Use Intellisense (ctrl+space) to select a component from the available list. |
+| `title`            | Provide the name of the screen. If you do not want to show a title in a jig use `title: ' '` or add an expression.                                                                              |
 
 ### Other options
 
-The jig.default is the most versatile jigavailable allowing you to create a variety of screens. Many options are available for configuration on this jig, see [jig-default-specification]() for a list of the additional options.
+The jig.default is the most versatile jig available allowing you to create a variety of screens. Many options are available for configuration on this jig.
 
-## Examples and code snippets 
+## Examples and code snippets
 
 :::hint{type="success"}
-The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples), and follow the instructions in [Setting up your solution](docId:1gfew7GRPvkfxon-TsymP).
+The code below is an extract from the full _jigx-samples_ solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full _jigx-samples_ project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples), and follow the instructions in [Setting up your solution](docId:1gfew7GRPvkfxon-TsymP).
 :::
 
 :::::ExpandableHeading
+
 ### Jig.default as a Form
 
 ::::VerticalSplit{layout="left"}
@@ -55,7 +57,6 @@ The code below is an extract from the full *jigx-samples* solution. The code sni
 See the full default-form.jigx code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-form.jigx).
 **Datasource:**
 See the full datasource code example for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-form.jigx).
-
 
 :::
 ::::
@@ -75,7 +76,7 @@ actions:
           provider: DATA_PROVIDER_DYNAMIC
           title: Submit form
           method: save
-          entity: default/form     
+          entity: default/form
 
 children:
   - type: component.form
@@ -150,7 +151,7 @@ datasources:
       query: |
         SELECT 
           id
-        FROM [default/employees] 
+        FROM [default/employees]
 ```
 
 default.jigx
@@ -173,10 +174,12 @@ tabs:
     jigId: defaut-form
     icon: home-apps-logo
 ```
+
 :::
 :::::
 
 ::::::ExpandableHeading
+
 ### Jig.default as a List
 
 :::::VerticalSplit{layout="left"}
@@ -197,10 +200,8 @@ See the full code sample for datasource for static data in [GitHub](https://gith
 
 See the full datasource code samples for dynamic data for [product](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/prods.jigx) and [sales](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/sale.jigx) in GitHub.
 
-
-
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for products. You can use the products.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/products.csv) and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for products. You can use the products.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/products.csv) and upload it via the [Data](https://docs.jigx.com/S_SB-data) configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -212,7 +213,6 @@ default-list-dynamic.jigx
 title: List
 type: jig.default
 
-
 children:
   - type: component.section
     options:
@@ -221,14 +221,14 @@ children:
         - type: component.list
           options:
             data: =@ctx.datasources.prods
-            item: 
+            item:
               type: component.product-item
               options:
                 title: =@ctx.current.item.title
                 image:
                   uri: =@ctx.current.item.uri
                 tag: =@ctx.current.item.tag
-                price: 
+                price:
                   value: =@ctx.current.item.price
                   format:
                     numberStyle: currency
@@ -239,14 +239,14 @@ children:
         - type: component.list
           options:
             data: =@ctx.datasources.sale
-            item: 
+            item:
               type: component.product-item
               options:
                 title: =@ctx.current.item.title
                 image:
                   uri: =@ctx.current.item.uri
                 tag: =@ctx.current.item.tag
-                price: 
+                price:
                   value: =@ctx.current.item.price
                   format:
                     numberStyle: currency
@@ -274,7 +274,7 @@ datasources:
           '$.sale'
         FROM [default/products]
         WHERE '$.category' = 'product' AND '$.sale' IS NULL
-        
+
   sales:
     type: datasource.sqlite
     options:
@@ -300,12 +300,14 @@ default.jigx
 ```yaml
 databaseId: default
 tables:
- products: null
+  products: null
 ```
+
 :::
 ::::::
 
 ::::::ExpandableHeading
+
 ### Other examples of jig.default
 
 :::::VerticalSplit{layout="left"}
@@ -324,7 +326,7 @@ See the full datasource code sample for static data in [GitHub](https://github.c
 See the full datasource code samples for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products-dynamic.jigx)
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for employees. You can use the employee.csv file in[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/employees.csv) and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for employees. You can use the employee.csv file in[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/employees.csv) and upload it via the [Data](https://docs.jigx.com/S_SB-data) configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -339,11 +341,11 @@ type: jig.default
 children:
   - type: component.avatar
     options:
-      title: ''
+      title: ""
       uri: =@ctx.datasources.employee-detail-dynamic.photo
       size: large
       align: center
-  
+
   - type: component.entity
     options:
       children:
@@ -401,7 +403,7 @@ children:
                       options:
                         label: Country
                         value: =@ctx.datasources.employee-detail-dynamic.country
-                        
+
   - type: component.list
     options:
       data: =@ctx.datasources.quartal
@@ -437,31 +439,31 @@ datasources:
           subtitle: Q1/2022
           data:
             - y: 91
-              color: positive   
+              color: positive
             - y: 9
               color: transparent
         - title: 99%
           subtitle: Q2/2022
           data:
             - y: 99
-              color: positive   
+              color: positive
             - y: 1
               color: transparent
         - title: 10%
           subtitle: Q3/2022
           data:
             - y: 10
-              color: positive   
+              color: positive
             - y: 90
               color: transparent
         - title: 0%
           subtitle: Q4/2022
           data:
             - y: 0
-              color: positive   
+              color: positive
             - y: 100
               color: transparent
-              
+
   employee-detail-dynamic:
     type: datasource.sqlite
     options:
@@ -485,7 +487,6 @@ datasources:
           '$.category', 
           '$.modify' 
         FROM [default/employees] WHERE '$.category' = "employee-detail"
-    
 ```
 
 default.jigx
@@ -493,8 +494,9 @@ default.jigx
 ```yaml
 databaseId: default
 tables:
- employees: null
+  employees: null
 ```
+
 :::
 
 :::::VerticalSplit{layout="left"}
@@ -503,7 +505,6 @@ tables:
 :::
 
 ::::VerticalSplitItem
-
 
 **Examples:**
 
@@ -516,7 +517,7 @@ See the full datasource code sample for static data in [GitHub](https://github.c
 See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/product-detail-dynamic.jigx).
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for products. You can use the products.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/products.csv) and upload it via the [Data]() configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for products. You can use the products.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/products.csv) and upload it via the [Data](https://docs.jigx.com/S_SB-data) configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -543,7 +544,7 @@ header:
 summary:
   children:
     type: component.summary
-    options: 
+    options:
       layout: default
       title: Add to cart
       leftIcon:
@@ -562,7 +563,7 @@ children:
   - type: component.expander
     options:
       header:
-        centerElement: 
+        centerElement:
           type: component.titles
           options:
             title: Details
@@ -606,11 +607,11 @@ children:
                         label: ""
                         isMultiline: true
                         value: =@ctx.datasources.product-detail-dynamic.design-detail
-                                                
+
   - type: component.expander
     options:
       header:
-        centerElement: 
+        centerElement:
           type: component.titles
           options:
             title: Tech Specs
@@ -618,44 +619,44 @@ children:
         - type: component.entity
           options:
             children:
-             - type: component.section
-               options:
-                 title: Compatible Devices
-                 children:
-                   - type: component.entity-field
-                     options:
-                       label: ""
-                       isMultiline: true
-                       value: =@ctx.datasources.product-detail-dynamic.compatible-detail
+              - type: component.section
+                options:
+                  title: Compatible Devices
+                  children:
+                    - type: component.entity-field
+                      options:
+                        label: ""
+                        isMultiline: true
+                        value: =@ctx.datasources.product-detail-dynamic.compatible-detail
         - type: component.entity
           options:
             children:
-             - type: component.section
-               options:
-                 title: Weight
-                 children:
-                   - type: component.entity-field
-                     options:
-                       label: ""
-                       isMultiline: true
-                       value: =@ctx.datasources.product-detail-dynamic.weight-detail
+              - type: component.section
+                options:
+                  title: Weight
+                  children:
+                    - type: component.entity-field
+                      options:
+                        label: ""
+                        isMultiline: true
+                        value: =@ctx.datasources.product-detail-dynamic.weight-detail
         - type: component.entity
           options:
             children:
-             - type: component.section
-               options:
-                 title: Guarantee
-                 children:
-                   - type: component.entity-field
-                     options:
-                       label: ""
-                       isMultiline: true
-                       value: =@ctx.datasources.product-detail-dynamic.guarantee-detail                          
-                       
+              - type: component.section
+                options:
+                  title: Guarantee
+                  children:
+                    - type: component.entity-field
+                      options:
+                        label: ""
+                        isMultiline: true
+                        value: =@ctx.datasources.product-detail-dynamic.guarantee-detail
+
   - type: component.expander
     options:
       header:
-        centerElement: 
+        centerElement:
           type: component.titles
           options:
             title: Shipping & Returns
@@ -678,10 +679,10 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_DYNAMIC
-    
+
       entities:
         - entity: default/products
-    
+
       query: |
         SELECT 
           id, 
@@ -707,7 +708,7 @@ default.jigx
 ```yaml
 databaseId: default
 tables:
- products: null
+  products: null
 ```
 
 index.jigx
@@ -722,11 +723,11 @@ tabs:
     jigId: defaut-product-detail-dynamic
     icon: home-apps-logo
 ```
+
 :::
 ::::::
 
 ## See also
 
-- [Jigs (screens)]()
+- [Jigs (screens)](https://docs.jigx.com/jigs-screens)
 - [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-default)
-

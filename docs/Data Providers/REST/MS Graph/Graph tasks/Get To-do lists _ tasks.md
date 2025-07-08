@@ -15,7 +15,7 @@ Get a list of To-do tasks for a user in Microsoft Graph using a GET REST functio
 
 - [List tasks](https://learn.microsoft.com/en-us/graph/api/todotasklist-list-tasks?view=graph-rest-1.0&tabs=http) - MS Graph documentation&#x20;
 - [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Configuring OAuth for MS Graph]()
+- [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
@@ -52,7 +52,7 @@ widgets:
   - size: "4x2"
     jigId: next-meeting
     when: |
-      =@ctx.datasources.next-meeting=null? false:true 
+      =@ctx.datasources.next-meeting=null? false:true
   - size: "2x2"
     jigId: list-email-messages
   - size: "2x2"
@@ -60,7 +60,7 @@ widgets:
   - size: "4x2"
     jigId: items-trending
 
-onFocus: 
+onFocus:
   type: action.action-list
   options:
     isSequential: true
@@ -76,7 +76,7 @@ onFocus:
             - entity: profile-picture
               function: get-profile-picture
               functionParameters:
-                accessToken: microsoft.OAuth 
+                accessToken: microsoft.OAuth
                 userId: =@ctx.user.email
             - entity: user-emails
               function: get-user-emails-addresses
@@ -125,7 +125,7 @@ onFocus:
                     })
                   }
 
-onRefresh: 
+onRefresh:
   type: action.action-list
   options:
     isSequential: true
@@ -138,7 +138,7 @@ onRefresh:
               function: get-task-lists
               functionParameters:
                 accessToken: microsoft.OAuth
-            
+
       - type: action.sync-entities
         options:
           provider: DATA_PROVIDER_REST
@@ -158,8 +158,8 @@ onRefresh:
                       }
                     })
                   }
-          
 ```
+
 :::
 
 ## Functions
@@ -183,8 +183,8 @@ parameters:
     location: header
     required: true
     type: string
-    value: microsoft.OAuth  #Use manage.jigx.com to define credentials for your solution
-  Content-Type: 
+    value: microsoft.OAuth #Use manage.jigx.com to define credentials for your solution
+  Content-Type:
     type: string
     location: header
     required: false
@@ -226,12 +226,13 @@ continuation:
       location: header
       required: true
       type: string
-      value: microsoft.OAuth 
+      value: microsoft.OAuth
 errorTransform: |
   {
     "error": "No lists"
   }
 ```
+
 :::
 
 ## Jigs
@@ -270,14 +271,15 @@ onRefresh:
                 accessToken: microsoft.OAuth
 
 datasources:
-  mydata: 
+  mydata:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
       entities:
         - entity: todo-task-lists
         - entity: todo-tasks
-      query: SELECT json_extract(tlists.Data, '$.id') as tlId, json_extract(tlists.Data, '$.displayName') as tlDisplayName,
+      query:
+        SELECT json_extract(tlists.Data, '$.id') as tlId, json_extract(tlists.Data, '$.displayName') as tlDisplayName,
         json_extract(tlists.Data, '$.isOwner') as isOwner, count(json_extract(tasks.Data, '$.id')) AS task_count
         FROM [todo-task-lists] tlists
         LEFT JOIN [todo-tasks] tasks ON json_extract(tlists.Data, '$.id') = json_extract(tasks.Data, '$.toDoListId')
@@ -289,11 +291,11 @@ item:
   type: component.list-item
   options:
     title: =@ctx.current.item.tlDisplayName
-    leftElement: 
+    leftElement:
       element: icon
       icon: task-list
     divider: solid
-    rightElement: 
+    rightElement:
       element: icon
       icon: arrow-right
     subtitle: |
@@ -301,24 +303,22 @@ item:
     label:
       title: |
         =@ctx.current.item.task_count
-    
+
 widgets:
-  toDo: 
+  toDo:
     type: widget.list
     options:
       data: =@ctx.datasources.mydata
-      item: 
+      item:
         type: component.list-item
         options:
           title: =@ctx.current.item.tlDisplayName
-          leftElement: 
+          leftElement:
             element: icon
             icon: task-list
           divider: solid
           subtitle: |
             ="Number of Tasks: " & @ctx.current.item.task_count
-          
 ```
+
 :::
-
-

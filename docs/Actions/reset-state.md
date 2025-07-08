@@ -6,7 +6,7 @@ createdAt: Mon Jun 13 2022 13:39:09 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Sep 30 2024 12:19:59 GMT+0000 (Coordinated Universal Time)
 ---
 
-`Reset-state` action is typically used to reset the state of the key inside the jig file and can be used further to reset the state of UI components and forms. To understand how to use states, see [State]().
+`Reset-state` action is typically used to reset the state of the key inside the jig file and can be used further to reset the state of UI components and forms. To understand how to use states, see [State](https://docs.jigx.com/state).
 
 ## Configuration options
 
@@ -20,6 +20,7 @@ There are multiple ways to set up a reset-state action within a jig:
 ## Examples and code snippets
 
 ::::ExpandableHeading
+
 ### reset-state onFocus/onRefresh
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/me_Ah8R_TyYAScqJsBsn6_reset-state-onfocus.PNG" size="80" position="center" caption="Reset-state onFocus/onRefresh" alt="Reset-state onFocus/onRefresh"}
@@ -35,7 +36,7 @@ See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/m
 onFocus.jigx
 
 ```yaml
-onFocus: 
+onFocus:
   type: action.reset-state
   options:
     state: =@ctx.solution.state.onFocus-key
@@ -44,15 +45,17 @@ onFocus:
 onRefresh.jigx
 
 ```yaml
-onRefresh: 
+onRefresh:
   type: action.reset-state
   options:
     state: =@ctx.solution.state.onRefresh-key
 ```
+
 :::
 ::::
 
 ::::ExpandableHeading
+
 ### reset-state as action
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/c43Ii0P7_-wNzHN8VeReE_reset-state-action.PNG" size="80" position="center" caption="Reset-state action" alt="Reset-state action"}
@@ -76,10 +79,12 @@ actions:
           title: Reset state of the form
           state: =@ctx.components.form.state.data
 ```
+
 :::
 ::::
 
 ::::ExpandableHeading
+
 ### reset-state onPress/onChange
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vrFGC9hXE3ufLaIzJ2c-m_reset-state-onpress.PNG" size="80" position="center" caption="Reset-state onPress/onChange" alt="Reset-state onPress/onChange"}
@@ -96,7 +101,7 @@ See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/m
 onPress.jigx
 
 ```yaml
-onPress: 
+onPress:
   type: action.reset-state
   options:
     state: =@ctx.solution.state.onPress-key
@@ -105,11 +110,11 @@ onPress:
 onChange.jigx
 
 ```yaml
-onChange: 
+onChange:
   type: action.reset-state
   options:
     state: =@ctx.solution.state.onChange-key
 ```
+
 :::
 ::::
-

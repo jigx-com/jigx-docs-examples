@@ -8,8 +8,8 @@ updatedAt: Mon Nov 04 2024 15:41:43 GMT+0000 (Coordinated Universal Time)
 
 Execute-entity can save, update, or delete data in a **single row** from a database, depending on the chosen method. Each datasource type (Dynamic / SQL / REST) will have a different syntax for updating, saving, and deleting data.
 
-For the Dynamic datasource, values will be saved under the *data* option.
-For SQL/REST datasource, values will be saved under the *functionParameters* option.
+For the Dynamic datasource, values will be saved under the _data_ option.
+For SQL/REST datasource, values will be saved under the _functionParameters_ option.
 
 :::hint{type="warning"}
 This action can't be used if you are using [Static Data]().
@@ -25,16 +25,17 @@ An `execute-entity` action can be used in multiple areas:
 4. In onRefresh/onFocus
 
 :::hint{type="warning"}
-The execute-entity has a `go-back `option, which is set to on by default.  That means when you run execute-entity, it will automatically return you to the previous jig.
+The execute-entity has a `go-back `option, which is set to on by default. That means when you run execute-entity, it will automatically return you to the previous jig.
 :::
 
 ## Offline remote data handling
 
-Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling]() explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities and provides examples and code samples.
+Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](https://docs.jigx.com/offline-remote-data-handling) explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities and provides examples and code samples.
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Execute-entity in action
 
 ::::VerticalSplit{layout="middle"}
@@ -43,7 +44,7 @@ Dealing with offline remote data is fundamental to ensuring data synchronization
 :::
 
 :::VerticalSplitItem
-In this example, execute entity is used in *action* with the *create* method. This example results in creating a new record with the First name, Last name, Email, and Phone number information. Execute entity is called by the press of the *Save details* button on the bottom.
+In this example, execute entity is used in _action_ with the _create_ method. This example results in creating a new record with the First name, Last name, Email, and Phone number information. Execute entity is called by the press of the _Save details_ button on the bottom.
 
 **Example:**
 See the full example of execute-entity in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-action.jigx).
@@ -56,24 +57,26 @@ execute-entity-action
 ```yaml
 actions:
   - children:
-    - type: action.execute-entity
-      options:
-        title: Save details
-        provider: DATA_PROVIDER_DYNAMIC
-        method: create
-        entity: default/form
-        data:
-          firstname: =@ctx.datasources.employee-detail-dynamic.firstname
-          lastname: =@ctx.datasources.employee-detail-dynamic.lastname
-          email: =@ctx.datasources.employee-detail-dynamic.email
-          phone: =@ctx.datasources.employee-detail-dynamic.phone
-        onSuccess: 
+      - type: action.execute-entity
+        options:
+          title: Save details
+          provider: DATA_PROVIDER_DYNAMIC
+          method: create
+          entity: default/form
+          data:
+            firstname: =@ctx.datasources.employee-detail-dynamic.firstname
+            lastname: =@ctx.datasources.employee-detail-dynamic.lastname
+            email: =@ctx.datasources.employee-detail-dynamic.email
+            phone: =@ctx.datasources.employee-detail-dynamic.phone
+          onSuccess:
             type: action.go-back
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Execute-entity in action list
 
 ::::VerticalSplit{layout="middle"}
@@ -82,7 +85,7 @@ actions:
 :::
 
 :::VerticalSplitItem
-By pressing the *Save details* button the execute-entity action will be followed by the go-to action.
+By pressing the _Save details_ button the execute-entity action will be followed by the go-to action.
 
 **Examples:**
 See the full example of execute-entity in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-actionlist.jigx).
@@ -113,21 +116,23 @@ actions:
             - type: action.info-modal
               options:
                 modal:
-                  title: Details successfully saved  
+                  title: Details successfully saved
                   buttonText: View list
-                  element: 
+                  element:
                     type: icon
                     icon: cog-approved
                     color: primary
-                onConfirmed: 
+                onConfirmed:
                   type: action.go-to
                   options:
-                    linkTo: ja-execute-entity-onPress     
+                    linkTo: ja-execute-entity-onPress
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Execute-entity in onPress/onChange event
 
 ::::VerticalSplit{layout="middle"}
@@ -149,24 +154,24 @@ onPress
 
 ```yaml
 item:
-  type: component.list-item 
+  type: component.list-item
   options:
     title: =@ctx.current.item.firstname
     subtitle: =@ctx.current.item.lastname
     description: =(@ctx.current.item.modify = 0 ? 0 :@ctx.current.item.modify) & ' time/s changed.'
-    leftElement: 
+    leftElement:
       element: avatar
-      text: ''
+      text: ""
       uri: =@ctx.current.item.photo
-    onPress: 
+    onPress:
       type: action.execute-entity
       options:
-          provider: DATA_PROVIDER_LOCAL
-          method: update
-          entity: default/employees
-          data: 
-            id: =@ctx.current.item.id
-            modify: =($number(@ctx.current.item.modify) + 1)
+        provider: DATA_PROVIDER_LOCAL
+        method: update
+        entity: default/employees
+        data:
+          id: =@ctx.current.item.id
+          modify: =($number(@ctx.current.item.modify) + 1)
 ```
 
 onChange
@@ -178,27 +183,29 @@ item:
     title: =@ctx.current.item.firstname
     subtitle: =@ctx.current.item.lastname
     description: =(@ctx.current.item.modify = 0 ? 0 :@ctx.current.item.modify) & ' time/s changed.'
-    leftElement: 
+    leftElement:
       element: avatar
-      text: ''
+      text: ""
       uri: =@ctx.current.item.photo
     rightElement:
       element: checkbox
       value: true
-      onChange: 
+      onChange:
         type: action.execute-entity
         options:
           provider: DATA_PROVIDER_LOCAL
           method: update
           entity: default/employees
-          data: 
+          data:
             id: =@ctx.current.item.id
             modify: =$number(@ctx.current.item.modify) + 1
 ```
+
 :::
 :::::
 
 ::::ExpandableHeading
+
 ### Execute-entity in onRefresh/onFocus
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ODgGFijGrBYtf6_qv57VK_actioneentityrefresh.PNG" size="80" position="center" caption="Execute entity" alt="Execute entity"}
@@ -212,13 +219,13 @@ See the full example using onFocus in [GitHub](https://github.com/jigx-com/jigx-
 execute-entity-onRefresh
 
 ```yaml
-onRefresh: 
+onRefresh:
   type: action.execute-entity
   options:
     provider: DATA_PROVIDER_DYNAMIC
     method: update
     entity: default/employees
-    data: 
+    data:
       id: =@ctx.datasources.employee-detail-dynamic.id
       modify: =@ctx.datasources.employee-detail-dynamic.modify >= 10 ? 1 :($number(@ctx.datasources.employee-detail-dynamic.modify) + 1)
 ```
@@ -226,20 +233,22 @@ onRefresh:
 execute-entity-onFocus
 
 ```yaml
-onFocus: 
+onFocus:
   type: action.execute-entity
   options:
     provider: DATA_PROVIDER_DYNAMIC
     method: update
     entity: default/employees
-    data: 
+    data:
       id: =@ctx.datasources.employee-detail-dynamic.id
       modify: =@ctx.datasources.employee-detail-dynamic.modify >= 10 ? 1 :($number(@ctx.datasources.employee-detail-dynamic.modify) + 1)
 ```
+
 :::
 ::::
 
 ::::ExpandableHeading
+
 ### Deleting data using execute-entity
 
 Here is an example of deleting different data using execute-entity. There are always 2 options for how you can delete a record:
@@ -271,7 +280,7 @@ datasource:
         FROM [people] WHERE '$.name' LIKE 'Jane'
 
 actions:
-  - type: 'action.execute-entity'
+  - type: "action.execute-entity"
     options:
       entity: people
       method: delete
@@ -283,7 +292,7 @@ actions:
 delete-by-fist-name-jsonata-function
 
 ```yaml
-type: 'action.execute-entity'
+type: "action.execute-entity"
 options:
   goBack: stay
   entity: form
@@ -310,9 +319,8 @@ datasource:
           '$.address'
         FROM [default/people] LIMIT 3
 
-
 actions:
-  - type: 'action.execute-entity'
+  - type: "action.execute-entity"
     options:
       goBack: stay
       entity: deafult/people
@@ -321,6 +329,6 @@ actions:
       data:
         id: =@ctx.datasource.people.id
 ```
+
 :::
 ::::
-

@@ -13,12 +13,12 @@ This feature is currently in its **Alpha **stage of development.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
-:::
+  :::
 
-Custom components extend the standard set of components in Jigx to provide additional UI capabilities and features. To understand what custom components are, when and why you would use them, see [Custom Components (Alpha)]().
+Custom components extend the standard set of components in Jigx to provide additional UI capabilities and features. To understand what custom components are, when and why you would use them, see [Custom Components (Alpha)](https://docs.jigx.com/custom-components-alpha).
 
-1. [Creating custom components (Alpha)]() explains where and how to create the components and how to reuse them in a jig.
-2. Passing data in and out of custom components is explained in [Inputs & outputs (Alpha)]().&#x20;
+1. [Creating custom components (Alpha)](https://docs.jigx.com/creating-custom-components-alpha) explains where and how to create the components and how to reuse them in a jig.
+2. Passing data in and out of custom components is explained in [Inputs & outputs (Alpha)](https://docs.jigx.com/inputs-and-outputs-alpha).
 3. [Combine custom & standard components (Alpha)](<./Custom components _Alpha_/Combine custom _ standard components _Alpha_.md>) to create your own customized components and templates.
 4. Jigx offers a variety of [Templates (Alpha)](<./Custom components _Alpha_/Templates _Alpha_.md>) ready to use in your app, making development faster and easier. Select the template you want to use, copy the code from GitHub, and customize it to meet your needs.
 5. The components that fall into the custom component category are:
@@ -66,18 +66,19 @@ Test the jig on a mobile device to ensure the button is rendering correctly.
 
 ## Considerations
 
-- [Localization]() can be applied to custom components such as [Button (Alpha)](<./Custom components _Alpha_/Button _Alpha_.md>) and [Text (Alpha)](<./Custom components _Alpha_/Text _Alpha_.md>). &#x20;
+- [Localization](https://docs.jigx.com/localization) can be applied to custom components such as [Button (Alpha)](<./Custom components _Alpha_/Button _Alpha_.md>) and [Text (Alpha)](<./Custom components _Alpha_/Text _Alpha_.md>).
 - You can nest custom components by using `component.custom-component` and referencing the desired component in the `componentId` property.
+
   ```yaml
   type: component.default
   componentId: brand-form
 
   children:
-  # Reference a custom component inside this custom component using componentId.
+    # Reference a custom component inside this custom component using componentId.
     - type: component.custom-component
       componentId: itinerary-day
     - type: component.card
-      options:    
+      options:
         children:
           - type: component.form
             instanceId: new-form
@@ -86,8 +87,9 @@ Test the jig on a mobile device to ensure the button is rendering correctly.
                 - type: component.text-field
                   instanceId: company-name
                   options:
-                    label: Company Name            
+                    label: Company Name
   ```
+
 - When using `component.image` in a custom component, the `height` property must be specified as part of the `size` property, otherwise validation errors occur, see below:
 
 :::CodeblockTabs
@@ -98,7 +100,7 @@ Correct YAML
 # when used in a custom component.
 - type: component.image
           options:
-            size: 
+            size:
               height: 196
             source:
               uri: https://images
@@ -113,7 +115,7 @@ Incorrect YAML
           options:
             height: 196
             source:
-              uri: https://images     
+              uri: https://images
 ```
-:::
 
+:::

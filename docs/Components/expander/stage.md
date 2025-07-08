@@ -10,23 +10,23 @@ In this component, you add left and right elements, typically showing a start-an
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-|**Core structure** |                                                              |
+| **Core structure** |                                                                   |
 | ------------------ | ----------------------------------------------------------------- |
 | `left`             | Add content to the `left` element as text, or use an expression.  |
 | `right`            | Add content to the `right` element as text, or use an expression. |
 | `title`            | Add `titles` for the text on the `left` and `right` elements.     |
 
-|**Other options** |    |
+| **Other options** |                                                                                                                                                                      |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Add an icon to show in the `centerElement`. A list of icons is available. See [Jigx icons]() for more information.                                                   |
+| `icon`            | Add an icon to show in the `centerElement`. A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.                   |
 | `style`           | `isWaitingSync` - Will display a "Waiting sync" indicator (cloud with a line through it), a visual indicator showing that data has not been synced to the cloud yet. |
 | `subtitle`        | Add a `subtitle` to either the left or right element as text, or use an expression.                                                                                  |
 
-|**Actions** |    |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `onPress`   | The action is triggered while pressing on the content in the stage. Use IntelliSense (ctrl+space) to see the list of available actions.  |
+| **Actions** |                                                                                                                                         |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `onPress`   | The action is triggered while pressing on the content in the stage. Use IntelliSense (ctrl+space) to see the list of available actions. |
 
 ## Consideration
 
@@ -35,6 +35,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Stage in expander
 
 ::::VerticalSplit{layout="left"}
@@ -58,7 +59,7 @@ children:
   - type: component.expander
     options:
       header:
-        centerElement: 
+        centerElement:
           type: component.stage
           options:
             right:
@@ -79,7 +80,7 @@ children:
   - type: component.expander
     options:
       header:
-        centerElement: 
+        centerElement:
           type: component.stage
           options:
             right:
@@ -125,10 +126,12 @@ datasources:
           '$.toabrv' 
         FROM [default/flight-schedule]
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Stage in list
 
 ::::VerticalSplit{layout="left"}
@@ -145,7 +148,7 @@ See the full example using dynamic data in [GitHub](https://github.com/jigx-com/
 **Datasources:**
 
 See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/trip-static.jigx).
-See the full datasource for dynamic data  in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/trip-dynamic.jigx).
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/trip-dynamic.jigx).
 :::
 ::::
 
@@ -155,7 +158,6 @@ stage-list (static)
 ```yaml
 title: Trip in list
 type: jig.list
-
 
 data: =@ctx.datasources.trip-static
 item:
@@ -174,7 +176,6 @@ stage-list (dynamic)
 ```yaml
 title: Stage in list
 type: jig.list
-
 
 data: =@ctx.datasources.trip-dynamic
 item:
@@ -240,6 +241,6 @@ datasources:
           '$.toabrv' 
         FROM [default/flight-schedule]
 ```
+
 :::
 :::::
-

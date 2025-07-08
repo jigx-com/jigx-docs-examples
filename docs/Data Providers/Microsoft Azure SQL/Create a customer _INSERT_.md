@@ -1,17 +1,18 @@
 ---
 title: Create a customer (INSERT)
 slug: G9nH-creating-a-record
-description: Learn how to use a default jig with a form to execute SQL commands for creating new customer records. This document provides code snippets, examples, and links to related resources for saving data from a form to a database or backend system. Discover the 
+description: Learn how to use a default jig with a form to execute SQL commands for creating new customer records. This document provides code snippets, examples, and links to related resources for saving data from a form to a database or backend system. Discover the
 createdAt: Wed Mar 15 2023 12:45:50 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 11:36:55 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="warning"}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information.
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId:eOUi2cPYynsdRuK-TobDp) for more information.
 :::
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
+
 ## Scenario
 
 This example uses a default jig with a form that executes an SQL command to create a new customer record.
@@ -19,7 +20,7 @@ This example uses a default jig with a form that executes an SQL command to crea
 ## **Resources**
 
 - Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<./Database Scripts.md>).
-- [Configuring the SQL Connection]().
+- [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection).
 - This sample depends on [List customers (SELECT)](<./List customers _SELECT_.md>).
 
 ## Jigx Code
@@ -36,9 +37,9 @@ The Azure SQL Docs solution is on <a href="https://github.com/jigx-com/jigx-samp
 
 - The `execute-entity` action allows you to specify the function parameters and their values, as well as the data properties for the SQLite table. You have more granular control over the values being saved and can include expressions.
 - The example below uses an `execute-entity` action and maps both the `parameters` of the jig function and the SQLite data in the action's configuration.
-- To improve the user experience, data displayed after it has been created or updated should be updated in the local SQLite database and the backend system in the same action.&#x20;
-- If the data is only submitted to the backend system, it must be synced back to the device before the local tables are updated, and the information can be displayed. This can cause a significant lag and latency in the user's experience. 
-- The example below updates the data in Azure SQL and the SQLite database on the device when the user presses the Save button. This is the best practice for building responsive user experiences when working with remote data. See the [Data lifecycles in Jigx]() section of the documentation for a detailed explanation.
+- To improve the user experience, data displayed after it has been created or updated should be updated in the local SQLite database and the backend system in the same action.
+- If the data is only submitted to the backend system, it must be synced back to the device before the local tables are updated, and the information can be displayed. This can cause a significant lag and latency in the user's experience.
+- The example below updates the data in Azure SQL and the SQLite database on the device when the user presses the Save button. This is the best practice for building responsive user experiences when working with remote data. See the [Data lifecycles in Jigx](https://docs.jigx.com/data-lifecycles-in-jigx) section of the documentation for a detailed explanation.
 
 ## Functions
 
@@ -54,7 +55,7 @@ The **stored procedure** in the example was designed to create a new record in A
 create-customer.jigx
 
 ```yaml
-# Jigx SQL function executing a stored procedure to create a new customer record. 
+# Jigx SQL function executing a stored procedure to create a new customer record.
 provider: DATA_PROVIDER_SQL
 connection: customer.azure # Use manage.jigx.com to configure a SQL connection
 method: execute #Use SQL stored procedure to interact with the data in SQL
@@ -106,8 +107,8 @@ parameters:
     type: string
     location: input
     required: true
-
 ```
+
 :::
 
 ### A query-based version of create-customer.jigx
@@ -118,7 +119,7 @@ The SQL **query** version of create-customer.jigx below only creates a new recor
 create-customer.jigx
 
 ```yaml
-# Jigx SQL function executing a sql query to create a new customer record in Azure SQL. 
+# Jigx SQL function executing a sql query to create a new customer record in Azure SQL.
 provider: DATA_PROVIDER_SQL
 connection: customer.azure # Use manage.jigx.com to configure a SQL connection
 method: query #Use SQL statements to interact with the data in SQL
@@ -149,7 +150,7 @@ query: |
     @ZipCode,
     @Country
   )
-# Jigx automatically replaces the tokens in the SQL query with the matching function parameters. 
+# Jigx automatically replaces the tokens in the SQL query with the matching function parameters.
 parameters:
   CustomerId:
     type: string
@@ -195,8 +196,8 @@ parameters:
     type: string
     location: input
     required: true
-
 ```
+
 :::
 
 ## Jigs
@@ -206,7 +207,7 @@ parameters:
 - The listCustomers.jigx file must be modified to include a jig-level action, allowing a new customer to be added.
 - When pressing the **Add customer** action button at the bottom of the list customers jig, Jigx will navigate to the newCustomer jig.
 - A new** customer id **is created and used as a parameter in the `GoTo` action. The `customerId` parameter is passed to the newCustomer jig. The generated id is used as the unique identifier when creating both the SQLite record and the new record in Azure SQL in the newCustomer jig.
-- The id is used across the SQlite and Azure SQL tables to ensure that the record in the local SQLite customer table and Azure SQL customer table are in sync and have the same value. 
+- The id is used across the SQlite and Azure SQL tables to ensure that the record in the local SQLite customer table and Azure SQL customer table are in sync and have the same value.
 
 :::CodeblockTabs
 listCustomers.jigx
@@ -230,7 +231,7 @@ header:
           uri: https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80
 
 # onFocus is triggered whenever the jig is displayed. The sync-entities action calls the Jigx SQL function and populates the local SQLite tables on the device with the data returned from Azure SQL.
-onFocus: 
+onFocus:
   type: action.sync-entities
   options:
     provider: DATA_PROVIDER_SQL
@@ -240,14 +241,14 @@ onFocus:
 
 # The mydata data source selects the data from the local SQLite database.
 datasources:
-  mydata: 
+  mydata:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-      
+
       entities:
         - entity: customers
-  
+
       query: |
         SELECT
           id,
@@ -263,7 +264,7 @@ datasources:
           '$.country'
         FROM
           [customers]
-        ORDER BY '$.first_name' 
+        ORDER BY '$.first_name'
 
 # The list and its list items are configured below. This is a list jig; therefore, its properties, such as data and item, are top-level properties.
 # The data property binds the list to a specific data source.
@@ -281,13 +282,13 @@ item:
         @ctx.current.item.zip_code
     label:
       title: =@ctx.current.item.country
-    leftElement: 
+    leftElement:
       element: avatar
       # The text property of the left element is specified using a JSONata expression that builds a two-letter string by concatenating the first letters of the customer's first and last names.
       text: =$substring(@ctx.current.item.first_name,0,1) & $substring(@ctx.current.item.last_name,0,1)
     divider: solid
     # A go-to action is triggered when pressing on a list item.
-    onPress: 
+    onPress:
       type: action.go-to
       options:
         # The name of the jig to navigate to when the item is pressed.
@@ -296,7 +297,7 @@ item:
           # The id column of the current item being pressed on is passed as a parameter called customerId to the viewCustomer jig.
           customerId: =@ctx.current.item.id
 
-# Add customer button to navigate to the newCustomer jig          
+# Add customer button to navigate to the newCustomer jig
 actions:
   - children:
       - type: action.go-to
@@ -305,8 +306,8 @@ actions:
           linkTo: newCustomer
           parameters:
             custId: =$uuid_v4()
-      
 ```
+
 :::
 
 ### The new customer jig
@@ -338,8 +339,8 @@ children:
   - type: component.form
     instanceId: frmNewCustomer
     options:
-      # When a form submit action is used to save the values of the controls on a form, the form will warn the user when navigating away without saving the form's content. 
-      # When any other action type is used to save the values of the controls on a form, the form is unaware of the saved state, and isDiscardChangesAlertEnabled needs to be set to false to avoid seeing the dialog even when data has been saved. 
+      # When a form submit action is used to save the values of the controls on a form, the form will warn the user when navigating away without saving the form's content.
+      # When any other action type is used to save the values of the controls on a form, the form is unaware of the saved state, and isDiscardChangesAlertEnabled needs to be set to false to avoid seeing the dialog even when data has been saved.
       isDiscardChangesAlertEnabled: false
       children:
         - type: component.field-row
@@ -374,7 +375,7 @@ children:
         - type: component.text-field
           instanceId: AddressLine2
           options:
-            label: Address Line 2           
+            label: Address Line 2
             textContentType: streetAddressLine2
             isRequired: false
         - type: component.text-field
@@ -382,7 +383,7 @@ children:
           options:
             label: City
             textContentType: addressCity
-        # A dropdown control is used to list the USA states. 
+        # A dropdown control is used to list the USA states.
         - type: component.dropdown
           instanceId: State
           options:
@@ -393,7 +394,7 @@ children:
               type: component.dropdown-item
               options:
                 title: =@ctx.current.item.name
-                value: =@ctx.current.item.code            
+                value: =@ctx.current.item.code
         - type: component.text-field
           instanceId: ZipCode
           options:
@@ -415,7 +416,7 @@ actions:
         options:
           title: Save Customer
           isSequential: true
-          actions:  
+          actions:
             # Use an execute entity action to submit the values of the controls to the Jigx function to update Azure SQL and to save the new customer to the local SQLite database.
             - type: action.execute-entity
               options:
@@ -453,13 +454,12 @@ actions:
                   City: =@ctx.components.City.state.value
                   ZipCode: =@ctx.components.ZipCode.state.value
                   State: =@ctx.components.State.state.selected.code
-                  Country: =@ctx.components.Country.state.value   
-                # Display a dialog box with a message if the new record is created successfully.    
-                onSuccess: 
+                  Country: =@ctx.components.Country.state.value
+                # Display a dialog box with a message if the new record is created successfully.
+                onSuccess:
                   description: New Customer Created Successfully
                   title: Customer Created
             - type: action.go-back
-             
 ```
-:::
 
+:::

@@ -17,7 +17,7 @@ Get a list of the next week's events on a user's calendar from Microsoft Graph u
 - [List events](https://learn.microsoft.com/en-us/graph/api/user-list-events?view=graph-rest-1.0&tabs=http) - MS Graph documentation
 - [List calendarView](https://learn.microsoft.com/en-us/graph/api/user-list-calendarview?view=graph-rest-1.0&tabs=http) - MS Graph documentation
 - [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Configuring OAuth for MS Graph]()
+- [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
@@ -50,15 +50,15 @@ name: ms-graph-demonstrator
 title: MS Graph Demonstrator
 description: A sample solution that uses the Microsoft Graph API. You can deploy and use this solution without any additional configuration.
 category: business
-home:  
+home:
     jigId: calendar-summary
     icon: home-apps-logo
     jigId: next-meeting
     when: |
-      =@ctx.datasources.next-meeting=null? false:true 
+      =@ctx.datasources.next-meeting=null? false:true
     icon: meeting-remote
 
-onFocus: 
+onFocus:
   type: action.action-list
   options:
     isSequential: true
@@ -77,8 +77,9 @@ onFocus:
               function: get-calendar-list
               functionParameters:
                 accessToken: microsoft.OAuth
-    
+
 ```
+
 :::
 
 ## Functions
@@ -122,7 +123,7 @@ continuation:
       location: header
       required: true
       type: string
-      value: microsoft.OAuth 
+      value: microsoft.OAuth
 ```
 
 get-calendar-events-next-week.jigx
@@ -161,9 +162,9 @@ continuation:
       location: header
       required: true
       type: string
-      value: microsoft.OAuth  
-
+      value: microsoft.OAuth
 ```
+
 :::
 
 ## Jigs
@@ -177,18 +178,18 @@ view-calendar-events.jigx
 title: Calendar
 type: jig.calendar
 
-header: 
+header:
   type: component.jig-header
   options:
     height: small
-    children: 
+    children:
       type: component.image
       options:
         source:
           uri: https://support.content.office.net/en-us/media/f1c4b693-4670-4e7a-8102-bbf1749e83fe.jpg
-          
+
 # sync the events for the selected calendar by calendarId
-onFocus: 
+onFocus:
   type: action.sync-entities
   options:
     provider: DATA_PROVIDER_REST
@@ -200,7 +201,7 @@ onFocus:
           calendarId: =@ctx.jig.inputs.calId
           $filter: ="start/dateTime ge '" & $fromMillis($millis()-86400000) & "' and end/dateTime le '" & $fromMillis($millis()+5184000000) & "'"
 
-onRefresh: 
+onRefresh:
   type: action.sync-entities
   options:
     provider: DATA_PROVIDER_REST
@@ -213,7 +214,7 @@ onRefresh:
           $filter: ="start/dateTime ge '" & $fromMillis($millis()-86400000) & "' and end/dateTime le '" & $fromMillis($millis()+5184000000) & "'"
 
 datasources:
-  calendarEvents: 
+  calendarEvents:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
@@ -263,7 +264,7 @@ item:
     description: =@ctx.current.item.bodyPreview
     people: "=@ctx.current.item.attendees.{'fullName': emailAddress.address, 'email': emailAddress.address}"
     buttonTitle: View Event Details
-    onPress: 
+    onPress:
       type: action.go-to
       options:
         linkTo: view-calendar-event-details-w
@@ -279,7 +280,7 @@ item:
           bodyPreview: =@ctx.current.item.bodyPreview
           attendees: =@ctx.current.item.attendees
           onlineMeetingProvider: =@ctx.current.item.onlineMeetingProvider
-          
+
 actions:
   - children:
       - type: action.go-to
@@ -287,6 +288,7 @@ actions:
           title: Create New Event
           linkTo: create-calendar-event
 ```
+
 :::
 
 ## See Also
@@ -294,4 +296,3 @@ actions:
 - [Get Calendar List](<./Get Calendar List.md>)
 - [Get Event Item](<./Get Event Item.md>)
 - [Create Event Item](<./Create Event Item.md>)
-

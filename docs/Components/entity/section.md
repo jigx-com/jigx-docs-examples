@@ -16,11 +16,12 @@ A `component.section` can be set up with the following combinations:
 4. A form component containing sections and children components for display/capturing purposes.
 5. Horizontal lists cannot be used with the [section]() components as an empty white jig will be displayed.
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### The Entity with sections, rows, and entity fields (Display only)
 
 ::::VerticalSplit{layout="left"}
@@ -86,8 +87,8 @@ children:
                     - type: component.entity-field
                       options:
                         label: Materials
-                        value: =(@ctx.datasources.repair-services-static[id=1].materials = 'True' ? true :false) 
-                        contentType: checkbox     
+                        value: =(@ctx.datasources.repair-services-static[id=1].materials = 'True' ? true :false)
+                        contentType: checkbox
 ```
 
 Section-rows-entity-fields (dynamic)
@@ -166,13 +167,13 @@ datasources:
           service: Door Installation/Repair
           time: 60
         - id: 2
-          description: Repairs to door handles 
+          description: Repairs to door handles
           hourlyRate: 40
           illustration: http://clipart-library.com/img1/1332215.jpg
           image: https://images.unsplash.com/photo-1538766017398-415434a31a5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80
           materials: true
           service: Door Handle/Lock Repairs
-          time: 60        
+          time: 60
         - id: 3
           description: Installation or repairs of tiled surfaces. Tiles have to be provided by client
           hourlyRate: 110
@@ -198,7 +199,7 @@ datasources:
           service: Bathroom Repairs
           time: 60
         - id: 6
-          description: Painting as required. Paint and tools not provided 
+          description: Painting as required. Paint and tools not provided
           hourlyRate: 70
           illustration: http://clipart-library.com/img/853166.jpg
           image: https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1431&q=80
@@ -247,10 +248,10 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_DYNAMIC
-  
+
       entities:
         - entity: default/cleaning-services
-  
+
       query: |
         SELECT 
           id, 
@@ -265,10 +266,12 @@ datasources:
           '$.time' 
         FROM [default/cleaning-services]
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Form with sections, rows, and children components (Display and input)
 
 ::::VerticalSplit{layout="left"}
@@ -326,7 +329,7 @@ children:
                       options:
                         label: Indoor
                         value: =@ctx.datasources.cleaning-services-dynamic[0]].indoor
-                     
+
               - type: component.field-row
                 options:
                   children:
@@ -353,7 +356,7 @@ children:
                       instanceId: cleaning_serv_once_tf
                       options:
                         label: Once Off Rate
-                        value: =@ctx.datasources.cleaning-services-dynamic[0].onceoffrate != null ? @ctx.datasources.cleaning-services-dynamic[0].onceoffrate :'N/A'          
+                        value: =@ctx.datasources.cleaning-services-dynamic[0].onceoffrate != null ? @ctx.datasources.cleaning-services-dynamic[0].onceoffrate :'N/A'
 ```
 
 datasources (dynamic)
@@ -383,10 +386,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL   ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Entity with sections and entity-fields (Display only)
 
 ::::VerticalSplit{layout="middle"}
@@ -438,19 +443,19 @@ children:
           options:
             title: Rates
             children:
-                    - type: component.entity-field
-                      options:
-                        label: Hourly Rate
-                        value: =@ctx.datasources.repair-services-static[id=1].hourlyRate
-                    - type: component.entity-field
-                      options:
-                        label: Time
-                        value: =@ctx.datasources.repair-services-static[id=1].time & ' minutes'
-                    - type: component.entity-field
-                      options:
-                        label: Materials
-                        value: =(@ctx.datasources.repair-services-static[id=1].materials = 'True' ? true :false) 
-                        contentType: checkbox   
+              - type: component.entity-field
+                options:
+                  label: Hourly Rate
+                  value: =@ctx.datasources.repair-services-static[id=1].hourlyRate
+              - type: component.entity-field
+                options:
+                  label: Time
+                  value: =@ctx.datasources.repair-services-static[id=1].time & ' minutes'
+              - type: component.entity-field
+                options:
+                  label: Materials
+                  value: =(@ctx.datasources.repair-services-static[id=1].materials = 'True' ? true :false)
+                  contentType: checkbox
 ```
 
 section-entity-field-compact (static)
@@ -478,19 +483,19 @@ children:
           options:
             title: Rates
             children:
-                    - type: component.entity-field
-                      options:
-                        label: Hourly Rate
-                        value: =@ctx.datasources.repair-services-static[id=1].hourlyRate
-                    - type: component.entity-field
-                      options:
-                        label: Time
-                        value: =@ctx.datasources.repair-services-static[id=1].time & ' minutes'
-                    - type: component.entity-field
-                      options:
-                        label: Materials
-                        value: =(@ctx.datasources.repair-services-static[id=1].materials = 'True' ? true :false) 
-                        contentType: checkbox   
+              - type: component.entity-field
+                options:
+                  label: Hourly Rate
+                  value: =@ctx.datasources.repair-services-static[id=1].hourlyRate
+              - type: component.entity-field
+                options:
+                  label: Time
+                  value: =@ctx.datasources.repair-services-static[id=1].time & ' minutes'
+              - type: component.entity-field
+                options:
+                  label: Materials
+                  value: =(@ctx.datasources.repair-services-static[id=1].materials = 'True' ? true :false)
+                  contentType: checkbox
 ```
 
 section-entity-field (dynamic)
@@ -605,13 +610,13 @@ datasources:
           service: Door Installation/Repair
           time: 60
         - id: 2
-          description: Repairs to door handles 
+          description: Repairs to door handles
           hourlyRate: 40
           illustration: http://clipart-library.com/img1/1332215.jpg
           image: https://images.unsplash.com/photo-1538766017398-415434a31a5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80
           materials: true
           service: Door Handle/Lock Repairs
-          time: 60        
+          time: 60
         - id: 3
           description: Installation or repairs of tiled surfaces. Tiles have to be provided by client
           hourlyRate: 110
@@ -637,7 +642,7 @@ datasources:
           service: Bathroom Repairs
           time: 60
         - id: 6
-          description: Painting as required. Paint and tools not provided 
+          description: Painting as required. Paint and tools not provided
           hourlyRate: 70
           illustration: http://clipart-library.com/img/853166.jpg
           image: https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1431&q=80
@@ -686,10 +691,10 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_DYNAMIC
-  
+
       entities:
         - entity: default/cleaning-services
-  
+
       query: |
         SELECT 
           id, 
@@ -704,10 +709,12 @@ datasources:
           '$.time' 
         FROM [default/cleaning-services] ORDER BY '$.service' ASC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Form with sections and entity-fields (Display and input)
 
 ::::VerticalSplit{layout="left"}
@@ -778,8 +785,7 @@ children:
                 instanceId: cleaning_serv_once_tf
                 options:
                   label: Once Off Rate
-                  value: =@ctx.datasources.cleaning-services-dynamic[0].onceoffrate != null ? =@ctx.datasources.cleaning-services-dynamic[0].onceoffrate :'N/A'                   
-
+                  value: =@ctx.datasources.cleaning-services-dynamic[0].onceoffrate != null ? =@ctx.datasources.cleaning-services-dynamic[0].onceoffrate :'N/A'
 ```
 
 datasources (dynamic)
@@ -790,10 +796,10 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_DYNAMIC
-  
+
       entities:
         - entity: default/cleaning-services
-  
+
       query: |
         SELECT 
           id, 
@@ -807,8 +813,8 @@ datasources:
           '$.service', 
           '$.time', 
           '$.category' 
-        FROM [default/cleaning-services] 
+        FROM [default/cleaning-services]
 ```
+
 :::
 :::::
-

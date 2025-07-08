@@ -5,7 +5,7 @@ createdAt: Tue Nov 28 2023 12:15:16 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Nov 21 2024 10:19:50 GMT+0000 (Coordinated Universal Time)
 ---
 
-Solutions can easily be translated into any language by using the `Text Locale` property and creating a translation file with the translated text in Jigx Builder. On the device, use the *Profile>Settings>Language* option and select *Device (Respects device settings). *To understand how to configure localization in Jigx see [Localization]().
+Solutions can easily be translated into any language by using the `Text Locale` property and creating a translation file with the translated text in Jigx Builder. On the device, use the _Profile>Settings>Language_ option and select *Device (Respects device settings). *To understand how to configure localization in Jigx see [Localization](https://docs.jigx.com/localization).
 
 :::hint{type="info"}
 Adding dynamic values in localized jigs use **ICU message** definitions.
@@ -14,7 +14,7 @@ Try it in the [Online ICU Message Editor](https://format-message.github.io/icu-m
 
 ## Configuration options
 
-| **Core structure** |                                                                                    |
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `text Locale`      | `id` - provide a unique identifier for the property to be translated. &#xA;`values` - create context variables with values to use in the translation file. This is useful when creating dynamic content. &#xA;`defaultMessage` - If no translation is found for the active device's language, it will either fallback to the specified `defaultMessage` or, if one is not specified, to English. |
 
@@ -34,10 +34,10 @@ See the translation file examples in [GitHub](https://github.com/jigx-com/jigx-s
 localized-form-static.jigx
 
 ```yaml
-title: 
+title:
   id: title
-  defaultMessage: New employee form 
-description: To view this jig in other languages, change your devices language settings to either German, French, or Czech  
+  defaultMessage: New employee form
+description: To view this jig in other languages, change your devices language settings to either German, French, or Czech
 type: jig.default
 icon: form
 
@@ -60,57 +60,57 @@ children:
         - type: component.text-field
           instanceId: first_name # becomes the name of the column in table
           options:
-            label: 
+            label:
               id: first_name
               defaultMessage: First Name
-     
+
         - type: component.text-field
           instanceId: last_name # becomes the name of the column in table
           options:
-            label: 
+            label:
               id: last_name
               defaultMessage: Last Name
-                
+
         - type: component.number-field
           instanceId: contact_number # becomes the name of the column in table
           options:
-            label: 
+            label:
               id: contact_number
               defaultMessage: Mobile number
-        
+
         - type: component.date-picker
           instanceId: date_of_birth # becomes the name of the column in table
           options:
-            label: 
+            label:
               id: date_of_birth
               defaultMessage: Date of birth
-        
-        - type: component.avatar-field 
+
+        - type: component.avatar-field
           instanceId: photo # becomes the name of the column in table
           options:
-            label: 
+            label:
               id: photo
               defaultMessage: My profile
-       
+
         - type: component.signature-field
           instanceId: signature # becomes the name of the column in table
           options:
-            label: 
+            label:
               id: signature
-              defaultMessage: Sign 
-        
+              defaultMessage: Sign
+
         - type: component.email-field
           instanceId: email # becomes the name of the column in table
           options:
-            label: 
+            label:
               id: email
               defaultMessage: Email address
-      
+
 actions:
-  - children: 
+  - children:
       - type: action.execute-entity
         options:
-          title: 
+          title:
             id: create
             defaultMessage: Create Record
           provider: DATA_PROVIDER_DYNAMIC
@@ -124,7 +124,7 @@ actions:
             photo: =@ctx.components.photo.state.value
             signature: =@ctx.components.signature.state.value
             email: =@ctx.components.email.state.value
-          onSuccess: 
+          onSuccess:
             type: action.go-back
 ```
 
@@ -140,7 +140,7 @@ date_of_birth: Geburtsdatum
 photo: mein Profil
 signature: Zeichen
 email: E-Mail-Adresse
-create: Mitarbeiter anlegen 
+create: Mitarbeiter anlegen
 ```
 
 fr.jigx
@@ -155,7 +155,7 @@ date_of_birth: Date de naissance
 photo: Mon profil
 signature: Signe
 email: Adresse e-mail
-create: Créer un employé    
+create: Créer un employé
 ```
 
 cs.jigx
@@ -170,8 +170,9 @@ date_of_birth: Datum narození
 photo: Můj profil
 signature: Podepsat
 email: Emailová adresa
-create: Vytvořit zaměstnance  
+create: Vytvořit zaměstnance
 ```
+
 :::
 
 ### Jig translated into German with dynamic values
@@ -188,13 +189,13 @@ See the translation file examples in [GitHub](https://github.com/jigx-com/jigx-s
 localized-activities-dynamic.jigx
 
 ```yaml
-title: 
+title:
   id: greeting
   values:
     name: =@ctx.user.displayName
     time: =$fromMillis($millis(),'[P]')
   defaultMessage: ="Welcome " & @ctx.user.displayName
-description: 
+description:
   id: activities
   defaultMessage: Today's activities
 type: jig.default
@@ -210,7 +211,7 @@ header:
           uri: https://images.unsplash.com/photo-1508614999368-9260051292e5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 
 datasources:
-  activities: 
+  activities:
     type: datasource.static
     options:
       data:
@@ -237,22 +238,22 @@ children:
       size: large
       align: center
       uri: https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXZhdGFyJTIwd29tYW58ZW58MHx8MHx8fDA%3D
-   
+
   - type: component.list
     options:
       data: =@ctx.datasources.activities
-      item: 
+      item:
         type: component.list-item
         options:
-          title: 
+          title:
             id: sport
             values:
-              name: =@ctx.current.item.name    
-          subtitle: 
+              name: =@ctx.current.item.name
+          subtitle:
             id: venues
             values:
               location: =@ctx.current.item.location
-          rightElement: 
+          rightElement:
             element: icon
             icon: =@ctx.current.item.icon
 ```
@@ -260,23 +261,18 @@ children:
 de.jigx
 
 ```yaml
-greeting: '{time, select, am {Guten Morgen} pm {Guten Nachmittag} other {Hallo}} {name}'
-activities: Die heutigen Aktivitäten 
-sport: '{name, select, Swimming {Baden} Tennis {Tennis} other {Trainieren}}'
-venues: '{location, select, Pool {Schwimmbad} Court {Tennisplatz} other {Fitnessstudio}}'
-
+greeting: "{time, select, am {Guten Morgen} pm {Guten Nachmittag} other {Hallo}} {name}"
+activities: Die heutigen Aktivitäten
+sport: "{name, select, Swimming {Baden} Tennis {Tennis} other {Trainieren}}"
+venues: "{location, select, Pool {Schwimmbad} Court {Tennisplatz} other {Fitnessstudio}}"
 ```
 
 en.jigx
 
 ```yaml
-greeting: '{time, select, am {Good Morning} pm {Good afternoon} other {Hello}} {name}'
-sport: '{name, select, Swimming {Swimming} Tennis {Tennis} other {Exercising}}'
-venues: '{location, select, Pool {Pool} Court {Court} other {Gym}}'
+greeting: "{time, select, am {Good Morning} pm {Good afternoon} other {Hello}} {name}"
+sport: "{name, select, Swimming {Swimming} Tennis {Tennis} other {Exercising}}"
+venues: "{location, select, Pool {Pool} Court {Court} other {Gym}}"
 ```
+
 :::
-
-
-
-
-

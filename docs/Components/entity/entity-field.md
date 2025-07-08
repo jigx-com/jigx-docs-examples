@@ -4,19 +4,19 @@ Entity fields display data such as text, numbers, dates, and currency from a dat
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
 | **Core structure** |                                                                                |
 | ------------------ | ------------------------------------------------------------------------------ |
 | `label`            | Add a label for the entity-field, you can add text or an expression.           |
 | `value`            | Add a value to display in the entity-field, you can add text or an expression. |
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                     |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `contentType`     | Various types of entity fields determine the visual display and behavior of the entity-field, including: &#xA;`default`<br />`checkbox`<br />`copy`<br />`date`<br />`email` - format: [*email@example.com*](mailto\:email@example.com)<br />`link`<br />`phone`- format: *1234567890* or *+001234567890* (no spaces)<br />`signature `<br />`time` |
-| `instanceId`      | The unique identifier for the entity field.                                                                                                                                                                                                                                                                                                         |
-| `rightIcon`       | A list of icons is available. See [Jigx icons]() for more information.                                                                                                                                                                                                                                                                              |
-| `style`           | The following styling set is available and works in conjunction with `rightIcon` to determine the color of the icon and the enitity-field line separator:&#xA;`isNegative`<br />`isPositive`<br />`isPrimary`<br />`isWarning`                                                                                                                      |
+| **Other options** |                                                                                                                                                                                                                                                                                                                                                    |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `contentType`     | Various types of entity fields determine the visual display and behavior of the entity-field, including: &#xA;`default`<br />`checkbox`<br />`copy`<br />`date`<br />`email` - format: [_email@example.com_](mailto:email@example.com)<br />`link`<br />`phone`- format: _1234567890_ or _+001234567890_ (no spaces)<br />`signature `<br />`time` |
+| `instanceId`      | The unique identifier for the entity field.                                                                                                                                                                                                                                                                                                        |
+| `rightIcon`       | A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.                                                                                                                                                                                                                                             |
+| `style`           | The following styling set is available and works in conjunction with `rightIcon` to determine the color of the icon and the enitity-field line separator:&#xA;`isNegative`<br />`isPositive`<br />`isPrimary`<br />`isWarning`                                                                                                                     |
 
 ## Consideration
 
@@ -28,6 +28,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Different types of entity fields
 
 ::::VerticalSplit{layout="middle"}
@@ -185,10 +186,12 @@ children:
             isMultiline: true
             contentType: default
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Entity fields with a connected datasource
 
 ::::VerticalSplit{layout="middle"}
@@ -229,7 +232,7 @@ children:
         - type: component.entity-field
           options:
             label: Service
-            value: =@ctx.datasources.repair-services-static[id=1].service 
+            value: =@ctx.datasources.repair-services-static[id=1].service
         - type: component.entity-field
           options:
             label: Hourly Rate
@@ -241,8 +244,8 @@ children:
         - type: component.entity-field
           options:
             label: Materials
-            value: =(@ctx.datasources.repair-services-static[id=1].materials = 'True' ? true :false) 
-            contentType: checkbox   
+            value: =(@ctx.datasources.repair-services-static[id=1].materials = 'True' ? true :false)
+            contentType: checkbox
         - type: component.entity-field
           options:
             label: Description
@@ -272,8 +275,8 @@ children:
         - type: component.entity-field
           options:
             label: Materials
-            value: =(@ctx.datasources.repair-services-static[id=1].materials = 'True' ? true :false) 
-            contentType: checkbox   
+            value: =(@ctx.datasources.repair-services-static[id=1].materials = 'True' ? true :false)
+            contentType: checkbox
         - type: component.entity-field
           options:
             label: Description
@@ -312,8 +315,7 @@ children:
         - type: component.entity-field
           options:
             label: Hourly Rate
-            value: =@ctx.datasources.cleaning-services-dd.hourlyrate   
-
+            value: =@ctx.datasources.cleaning-services-dd.hourlyrate
 ```
 
 entity-fields-compact (dynamic)
@@ -348,7 +350,7 @@ children:
         - type: component.entity-field
           options:
             label: Hourly Rate
-            value: =@ctx.datasources.cleaning-services-dd.hourlyrate   
+            value: =@ctx.datasources.cleaning-services-dd.hourlyrate
 ```
 
 datasources (static)
@@ -368,13 +370,13 @@ datasources:
           service: Door Installation/Repair
           time: 60
         - id: 2
-          description: Repairs to door handles 
+          description: Repairs to door handles
           hourlyRate: 40
           illustration: http://clipart-library.com/img1/1332215.jpg
           image: https://images.unsplash.com/photo-1538766017398-415434a31a5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80
           materials: true
           service: Door Handle/Lock Repairs
-          time: 60        
+          time: 60
         - id: 3
           description: Installation or repairs of tiled surfaces. Tiles have to be provided by client
           hourlyRate: 110
@@ -400,7 +402,7 @@ datasources:
           service: Bathroom Repairs
           time: 60
         - id: 6
-          description: Painting as required. Paint and tools not provided 
+          description: Painting as required. Paint and tools not provided
           hourlyRate: 70
           illustration: http://clipart-library.com/img/853166.jpg
           image: https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1431&q=80
@@ -460,10 +462,12 @@ datasources:
           '$.time' 
         FROM [default/cleaning-services] WHERE '$.service' = "Mattress Cleaning"
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Entity-fields with right icons in color
 
 ::::VerticalSplit{layout="middle"}
@@ -486,43 +490,42 @@ children:
   - type: component.entity
     options:
       children:
-      
-      - type: component.entity-field
-        options:
-          rightIcon: pin-location
-      # Change the color of the icon by adding a style property    
-          style:
-            isPrimary: true
-          label: street
-          value: 15 Jason Ave
-      - type: component.entity-field
-        options:
+        - type: component.entity-field
+          options:
+            rightIcon: pin-location
+            # Change the color of the icon by adding a style property
+            style:
+              isPrimary: true
+            label: street
+            value: 15 Jason Ave
+        - type: component.entity-field
+          options:
             label: City
             rightIcon: house-2-alternate
             style:
               isPositive: true
             value: London
-      - type: component.entity-field
-        options:
+        - type: component.entity-field
+          options:
             label: ZIP code
             rightIcon: alert-circle
             style:
               isWarning: true
-            value: 987 65    
-      - type: component.entity-field
-        options:
-          label: country
-          rightIcon: maps-pin
-          style:
-            isPrimary: true
-          value: United Kingdom
-      - type: component.entity-field
-        options:
-          label: Contact number
-          rightIcon: alert-triangle
-          style:
-            isNegative: true
-          value: "12"
+            value: 987 65
+        - type: component.entity-field
+          options:
+            label: country
+            rightIcon: maps-pin
+            style:
+              isPrimary: true
+            value: United Kingdom
+        - type: component.entity-field
+          options:
+            label: Contact number
+            rightIcon: alert-triangle
+            style:
+              isNegative: true
+            value: "12"
 ```
-:::::
 
+:::::

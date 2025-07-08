@@ -7,16 +7,17 @@ updatedAt: Fri Oct 11 2024 09:14:53 GMT+0000 (Coordinated Universal Time)
 
 JavaScript functions allow you to write modular and reusable code. By encapsulating specific functionalities within functions, you can easily reuse them across different parts of your application. This modular approach not only reduces redundancy but also makes the codebase more maintainable and scalable. For example, a function that handles user date and time can be reused in multiple components or screens, ensuring consistency and reducing the likelihood of errors.
 
-Refer to the section on [JavaScript expressions]() to learn:
+Refer to the section on [JavaScript expressions](https://docs.jigx.com/expressions#c3TG-) to learn:
 
-- [What is supported]()
-- [How and where to configure the JavaScript functions]()
+- [What is supported](https://docs.jigx.com/expressions#c_7zb)
+- [How and where to configure the JavaScript functions](https://docs.jigx.com/expressions#wH_c3)
 
 ## Examples and code snippets
 
 ## Text formatting
 
 :::::ExpandableHeading
+
 ### Return a string
 
 ::::VerticalSplit{layout="middle"}
@@ -25,12 +26,10 @@ Refer to the section on [JavaScript expressions]() to learn:
 :::
 
 :::VerticalSplitItem
-In this example, a JavaScript function called helloWorld is created to return a string showing *Hello World*  in a [text-field](./../Components/form/text-field.md). In the `value` property an expression calling the function is used.
+In this example, a JavaScript function called helloWorld is created to return a string showing _Hello World_ in a [text-field](./../Components/form/text-field.md). In the `value` property an expression calling the function is used.
 
 **Example:**
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-string.jigx).
-
-
 
 :::
 ::::
@@ -65,7 +64,7 @@ children:
           instanceId: textField
           options:
             label: Function Result
-# Use an expression and call the JavaScript file and function in the file.            
+            # Use an expression and call the JavaScript file and function in the file.
             value: =$jsfunctions.helloWorld()
 ```
 
@@ -73,18 +72,20 @@ jsfunctions.js
 
 ```javascript
 export function helloWorld() {
-  return 'Hello World'
+  return "Hello World";
 }
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Concatenate first and last name
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-Create a full name by joining a first and last name using a simple JavaScript function, but using JSONata offers a faster and more efficient approach due to its inline nature.  In the `value` property [text-field](./../Components/form/text-field.md) an expression is used that calls the function to provide the full name. The functions variables values are defined in the form's text-field components.
+Create a full name by joining a first and last name using a simple JavaScript function, but using JSONata offers a faster and more efficient approach due to its inline nature. In the `value` property [text-field](./../Components/form/text-field.md) an expression is used that calls the function to provide the full name. The functions variables values are defined in the form's text-field components.
 
 **Example:**
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-concatenate.jigx).
@@ -134,30 +135,31 @@ children:
           instanceId: fullName
           options:
             label: Full Name
-# Use an expression and call the JavaScript file and function in the file.
-# Provide the values to be used in the function by referencing components values.                        
+            # Use an expression and call the JavaScript file and function in the file.
+            # Provide the values to be used in the function by referencing components values.
             value: =$jsfunctions.getFullName(@ctx.components.firstName.state.value, @ctx.components.lastName.state.value)
             style:
               isDisabled: true
-              
 ```
 
 jsfunctions.js
 
 ```javascript
 export function getFullName(firstName, lastName) {
-  return firstName + ' ' + lastName;
+  return firstName + " " + lastName;
 }
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Capitalize job title
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Rxqd_ngkDbzh4qCeqA-kW-20240919-065058.PNG" size="70"  position="center" caption="Capatilize job title function" alt="Capatilize job title function"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Rxqd_ngkDbzh4qCeqA-kW-20240919-065058.PNG" size="70" position="center" caption="Capatilize job title function" alt="Capatilize job title function"}
 :::
 
 :::VerticalSplitItem
@@ -188,7 +190,7 @@ header:
         source:
           uri: https://miro.medium.com/v2/resize:fit:720/format:webp/1*M9cY0UHTbmlBfoPMCQwxYA.png
 
-onFocus: 
+onFocus:
   type: action.reset-state
   options:
     state: =@ctx.components.myForm.state.data
@@ -209,8 +211,8 @@ children:
           when: =@ctx.components.jobTitle.state.value != ''
           options:
             label: Capitilized Job Title
-# Use an expression and call the JavaScript file and function in the file.
-# Provide the values to be used in the function by referencing components values.                            
+            # Use an expression and call the JavaScript file and function in the file.
+            # Provide the values to be used in the function by referencing components values.
             value: =$jsfunctions.capitalizeJobTitle(@ctx.components.jobTitle.state.value)
 ```
 
@@ -219,25 +221,41 @@ jsfunctions.js
 ```javascript
 export function capitalizeJobTitle(str) {
   if (!str) {
-    return '';
+    return "";
   }
 
-  const exceptions = ['CEO', 'COO', 'CFO', 'CTO', 'CIO', 'CMO', 'CSO', 'CPO', 'CHRO', 'CDO'];
+  const exceptions = [
+    "CEO",
+    "COO",
+    "CFO",
+    "CTO",
+    "CIO",
+    "CMO",
+    "CSO",
+    "CPO",
+    "CHRO",
+    "CDO",
+  ];
 
-  return str.split(' ').map(word => {
-    if (exceptions.includes(word.toUpperCase())) {
-      return word.toUpperCase();
-    }
-    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-  }).join(' ');
+  return str
+    .split(" ")
+    .map((word) => {
+      if (exceptions.includes(word.toUpperCase())) {
+        return word.toUpperCase();
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join(" ");
 }
 ```
+
 :::
 :::::
 
 ## Numbers and dates
 
 :::::ExpandableHeading
+
 ### Calculate tax plus total
 
 ::::VerticalSplit{layout="middle"}
@@ -266,8 +284,8 @@ tax.jigx
 title: calculateTax & calculateTotal
 description: |
   The calculateTax function is designed to compute the tax amount based on a given subtotal and a specified tax rate. It takes two parameters: subtotal, which represents the pre-tax amount, and taxRate, which is the tax percentage to be applied.
-  
-  Take a look at the configuration of Total Amount. You can use a function as a parameter for another function. 
+
+  Take a look at the configuration of Total Amount. You can use a function as a parameter for another function.
 type: jig.default
 icon: dog-bark
 
@@ -306,9 +324,9 @@ children:
           instanceId: tax
           options:
             label: TAX
-# Use an expression and call the JavaScript file and functions in the file.
-# Nest functions in the expression to get the result you require
-# Provide the values to be used in the function by referencing components values.                                   
+            # Use an expression and call the JavaScript file and functions in the file.
+            # Nest functions in the expression to get the result you require
+            # Provide the values to be used in the function by referencing components values.
             value: |
               =$jsfunctions.formatCurrency(
                   $jsfunctions.calculateTax(
@@ -321,9 +339,9 @@ children:
           instanceId: totalAmount
           options:
             label: Total Amount
-# Use an expression and call the JavaScript file and functions in the file.
-# Nest functions in the expression to get the result you require
-# Provide the values to be used in the function by referencing components values.                                               
+            # Use an expression and call the JavaScript file and functions in the file.
+            # Nest functions in the expression to get the result you require
+            # Provide the values to be used in the function by referencing components values.
             value: |
               =$jsfunctions.formatCurrency(
                   $jsfunctions.calculateTotal(
@@ -349,13 +367,20 @@ export function calculateTotal(subtotal, taxRate) {
 }
 
 export function formatCurrency(amount, currencySymbol) {
-  return currencySymbol + parseFloat(amount).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+  return (
+    currencySymbol +
+    parseFloat(amount)
+      .toFixed(2)
+      .replace(/\d(?=(\d{3})+\.)/g, "$&,")
+  );
 }
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Calculate loan payment
 
 ::::VerticalSplit{layout="middle"}
@@ -382,10 +407,9 @@ loan-repayment.jigx
 title: calculateLoanPayment
 description: |
   The function calculates the monthly loan payment based on the principal amount, annual interest rate (as a percentage), and loan term in years.
-  
+
   This function is useful for financial applications that calculate monthly mortgage or loan payments based on the principal amount, annual interest rate, and loan term in years. It helps users determine their monthly payment obligations accurately.
 type: jig.default
-
 header:
   type: component.jig-header
   options:
@@ -395,8 +419,8 @@ header:
       options:
         source:
           uri: https://miro.medium.com/v2/resize:fit:720/format:webp/1*M9cY0UHTbmlBfoPMCQwxYA.png
-          
-onFocus: 
+
+onFocus:
   type: action.reset-state
   options:
     state: =@ctx.components.myForm.state.data
@@ -426,9 +450,9 @@ children:
           instanceId: loanPayment
           options:
             label: Estimated monthly payment amount
-# Use an expression and call the JavaScript file and functions in the file.
-# Nest functions in the expression to get the result you require
-# Provide the values to be used in the function by referencing components values.                                                           
+            # Use an expression and call the JavaScript file and functions in the file.
+            # Nest functions in the expression to get the result you require
+            # Provide the values to be used in the function by referencing components values.
             value: =$jsfunctions.formatCurrency($jsfunctions.calculateLoanPayment(@ctx.components.principal.state.value, @ctx.components.annualRatePercent.state.value, @ctx.components.loanDuration.state.value),'$')
             style:
               isDisabled: true
@@ -442,17 +466,27 @@ export function calculateLoanPayment(principal, annualRatePercent, years) {
   const monthlyRate = annualRate / 12;
   const numberOfPayments = years * 12; // Calculate the total number of payments
 
-  return (principal * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -numberOfPayments));
+  return (
+    (principal * monthlyRate) /
+    (1 - Math.pow(1 + monthlyRate, -numberOfPayments))
+  );
 }
 
 export function formatCurrency(amount, currencySymbol) {
-  return currencySymbol + parseFloat(amount).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+  return (
+    currencySymbol +
+    parseFloat(amount)
+      .toFixed(2)
+      .replace(/\d(?=(\d{3})+\.)/g, "$&,")
+  );
 }
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Calculate age
 
 ::::VerticalSplit{layout="middle"}
@@ -478,7 +512,7 @@ age-calculation.jigx
 title: calculateAge
 description: |
   The calculateAge function determines a person's age based on their date of birth provided in the YYYY-MM-DD format. 
-  
+
   This function is particularly useful in scenarios requiring age verification, such as user registration forms, social media profile management, or determining eligibility for age-restricted services.
 type: jig.default
 icon: dog-playing-ball
@@ -493,7 +527,7 @@ header:
         source:
           uri: https://miro.medium.com/v2/resize:fit:720/format:webp/1*M9cY0UHTbmlBfoPMCQwxYA.png
 
-onFocus: 
+onFocus:
   type: action.reset-state
   options:
     state: =@ctx.components.myForm.state.data
@@ -508,12 +542,12 @@ children:
           instanceId: dob
           options:
             label: Date of Birth
-            onChange: 
+            onChange:
               type: action.set-state
               options:
                 state: =@ctx.solution.state.age
-# Use an expression and call the JavaScript file and functions in the file and set the result in a state.
-# Provide the values to be used in the function by referencing the date picked in the component.                                                           
+                # Use an expression and call the JavaScript file and functions in the file and set the result in a state.
+                # Provide the values to be used in the function by referencing the date picked in the component.
                 value: =$jsfunctions.calculateAge(@ctx.components.dob.state.value)
         - type: component.text-field
           instanceId: result
@@ -532,27 +566,29 @@ export function calculateAge(dateOfBirth) {
   }
   // Parse the date of birth
   const dob = new Date(dateOfBirth);
-  
+
   // Get today's date
   const today = new Date();
-  
+
   // Calculate the difference in years
   let age = today.getFullYear() - dob.getFullYear();
-  
+
   // Adjust the age if the birthdate hasn't occurred yet this year
   const monthDifference = today.getMonth() - dob.getMonth();
   const dayDifference = today.getDate() - dob.getDate();
   if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
     age--;
   }
-  
+
   return age;
 }
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Distance between two cities
 
 ::::VerticalSplit{layout="middle"}
@@ -589,8 +625,8 @@ header:
       options:
         source:
           uri: https://miro.medium.com/v2/resize:fit:720/format:webp/1*M9cY0UHTbmlBfoPMCQwxYA.png
-          
-onFocus: 
+
+onFocus:
   type: action.reset-state
   options:
     state: =@ctx.components.myForm.state.data
@@ -600,7 +636,6 @@ datasources:
     type: datasource.static
     options:
       data:
-
         - "id": 1
           "name": "Atlanta"
           "state": "GA"
@@ -642,13 +677,13 @@ datasources:
           "state": "MI"
           "long": -83.0458
           "lat": 42.3314
-      
+
         - "id": 8
           "name": "Houston"
           "state": "TX"
           "long": -95.3698
           "lat": 29.7604
-      
+
         - "id": 9
           "name": "Las Vegas"
           "state": "NV"
@@ -684,7 +719,7 @@ datasources:
           "state": "FL"
           "long": -81.3792
           "lat": 28.5383
-      
+
         - "id": 15
           "name": "Philadelphia"
           "state": "PA"
@@ -696,13 +731,13 @@ datasources:
           "state": "AZ"
           "long": -112.074
           "lat": 33.4484
-      
+
         - "id": 17
           "name": "San Antonio"
           "state": "TX"
           "long": -98.4936
           "lat": 29.4241
-      
+
         - "id": 18
           "name": "San Diego"
           "state": "CA"
@@ -729,7 +764,7 @@ children:
       children:
         - type: component.field-row
           options:
-            children:      
+            children:
               - type: component.dropdown
                 instanceId: fromCity
                 options:
@@ -740,14 +775,14 @@ children:
                     options:
                       title: =@ctx.current.item.name & ' (' & @ctx.current.item.state & ')'
                       value: =@ctx.current.item.id
-                  onChange: 
+                  onChange:
                     type: action.set-state
                     options:
- # Use an expression and call the JavaScript file and functions in the file and set the result in a state.
-# Provide the values to be used in the function by referencing the dropdown component.                    
+                      # Use an expression and call the JavaScript file and functions in the file and set the result in a state.
+                      # Provide the values to be used in the function by referencing the dropdown component.
                       state: =@ctx.solution.state.distance
                       value: =$round($jsfunctions.distanceApart(@ctx.components.fromCity.state.selected.long, @ctx.components.fromCity.state.selected.lat, @ctx.components.toCity.state.selected.long, @ctx.components.toCity.state.selected.lat), 0)
-    
+
               - type: component.dropdown
                 instanceId: toCity
                 options:
@@ -758,20 +793,20 @@ children:
                     options:
                       title: =@ctx.current.item.name & ' (' & @ctx.current.item.state & ')'
                       value: =@ctx.current.item.id
-                  onChange: 
+                  onChange:
                     type: action.set-state
                     options:
                       state: =@ctx.solution.state.distance
-# Use an expression and call the JavaScript file and functions in the file and set the result in a state.
-# Provide the values to be used in the function by referencing the dropdown component.                                                                                
+                      # Use an expression and call the JavaScript file and functions in the file and set the result in a state.
+                      # Provide the values to be used in the function by referencing the dropdown component.
                       value: =$round($jsfunctions.distanceApart(@ctx.components.fromCity.state.selected.long, @ctx.components.fromCity.state.selected.lat, @ctx.components.toCity.state.selected.long, @ctx.components.toCity.state.selected.lat), 0)
-    
+
         - type: component.text-field
           instanceId: distance
           when: =@ctx.components.distance.state.value = 'NaN' ? false:true
           options:
             label: Distance (in Miles)
-# Show the value set by the js function set in the state.            
+            # Show the value set by the js function set in the state.
             value: =@ctx.solution.state.distance
             style:
               isDisabled: true
@@ -783,7 +818,7 @@ jsfunctions.js
 export function distanceApart(from_long, from_lat, to_long, to_lat) {
   // Function to convert degrees to radians
   function toRadians(degrees) {
-      return degrees * Math.PI / 180;
+    return (degrees * Math.PI) / 180;
   }
 
   // Radius of the Earth in miles
@@ -798,18 +833,20 @@ export function distanceApart(from_long, from_lat, to_long, to_lat) {
   var lat2 = toRadians(to_lat);
 
   // Haversine formula
-  var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
+  var a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   var distanceBetweenPoints = R * c;
 
   return distanceBetweenPoints;
 }
-
 ```
+
 :::
 
 :::::ExpandableHeading
+
 ### Days to next state holiday
 
 ::::VerticalSplit{layout="middle"}
@@ -847,55 +884,55 @@ header:
       options:
         source:
           uri: https://miro.medium.com/v2/resize:fit:720/format:webp/1*M9cY0UHTbmlBfoPMCQwxYA.png
-onFocus: 
+onFocus:
   type: action.reset-state
   options:
     state: =@ctx.components.myForm.state.data
 
 datasources:
-  holidays: 
+  holidays:
     type: datasource.static
     options:
       data:
-      - "name": "New Year's Day"
-        "date": "2024-01-01"
-        "description": "Celebration of the first day of the new year."
+        - "name": "New Year's Day"
+          "date": "2024-01-01"
+          "description": "Celebration of the first day of the new year."
 
-      - "name": "Valentine's Day"
-        "date": "2024-02-14"
-        "description": "A day to celebrate love and affection between intimate partners."
+        - "name": "Valentine's Day"
+          "date": "2024-02-14"
+          "description": "A day to celebrate love and affection between intimate partners."
 
-      - "name": "St. Patrick's Day"
-        "date": "2024-03-17"
-        "description": "A cultural and religious celebration held on the anniversary of Saint Patrick's death."
-    
-      - "name": "Easter"
-        "date": "2024-03-31"
-        "description": "A Christian holiday celebrating the resurrection of Jesus Christ from the dead."
-      
-      - "name": "Memorial Day"
-        "date": "2024-05-27"
-        "description": "A federal holiday in the United States for honoring and mourning the military personnel who have died in the performance of their military duties."
+        - "name": "St. Patrick's Day"
+          "date": "2024-03-17"
+          "description": "A cultural and religious celebration held on the anniversary of Saint Patrick's death."
 
-      - "name": "Independence Day"
-        "date": "2024-07-04"
-        "description": "A federal holiday in the United States commemorating the Declaration of Independence."
-      
-      - "name": "Labor Day"
-        "date": "2024-09-02"
-        "description": "A federal holiday in the United States to honor and recognize the American labor movement."
+        - "name": "Easter"
+          "date": "2024-03-31"
+          "description": "A Christian holiday celebrating the resurrection of Jesus Christ from the dead."
 
-      - "name": "Halloween"
-        "date": "2024-10-31"
-        "description": "A celebration observed in many countries on the eve of the Western Christian feast of All Hallows' Day."
+        - "name": "Memorial Day"
+          "date": "2024-05-27"
+          "description": "A federal holiday in the United States for honoring and mourning the military personnel who have died in the performance of their military duties."
 
-      - "name": "Thanksgiving"
-        "date": "2024-11-28"
-        "description": "A national holiday in the United States celebrating the harvest and other blessings of the past year."
+        - "name": "Independence Day"
+          "date": "2024-07-04"
+          "description": "A federal holiday in the United States commemorating the Declaration of Independence."
 
-      - "name": "Christmas"
-        "date": "2024-12-25"
-        "description": "An annual festival commemorating the birth of Jesus Christ observed primarily on December 25."
+        - "name": "Labor Day"
+          "date": "2024-09-02"
+          "description": "A federal holiday in the United States to honor and recognize the American labor movement."
+
+        - "name": "Halloween"
+          "date": "2024-10-31"
+          "description": "A celebration observed in many countries on the eve of the Western Christian feast of All Hallows' Day."
+
+        - "name": "Thanksgiving"
+          "date": "2024-11-28"
+          "description": "A national holiday in the United States celebrating the harvest and other blessings of the past year."
+
+        - "name": "Christmas"
+          "date": "2024-12-25"
+          "description": "An annual festival commemorating the birth of Jesus Christ observed primarily on December 25."
 
 children:
   - type: component.form
@@ -913,19 +950,19 @@ children:
               options:
                 title: =@ctx.current.item.name
                 value: =@ctx.current.item.date
-            onChange: 
+            onChange:
               type: action.set-state
               options:
                 state: =@ctx.solution.state.daysUntil
-# Use an expression and call the JavaScript file and functions in the file and set the result in a state.
-# Provide the values to be used in the function by referencing the dropdown component.                                                                                                
+                # Use an expression and call the JavaScript file and functions in the file and set the result in a state.
+                # Provide the values to be used in the function by referencing the dropdown component.
                 value: =$jsfunctions.daysUntil(@ctx.components.holiday.state.value)
         - type: component.text-field
           instanceId: days
           when: =@ctx.components.days.state.value = 'NaN' ? false:true
           options:
             label: Days to go
-# Show the value set by the js function set in the state.            
+            # Show the value set by the js function set in the state.
             value: =@ctx.solution.state.daysUntil
 ```
 
@@ -958,10 +995,12 @@ export function daysUntil(targetDate) {
   return daysDifference;
 }
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Work days left in a month
 
 ::::VerticalSplit{layout="middle"}
@@ -987,7 +1026,7 @@ work-days-month.jigx
 title: workdaysLeftInMonth
 description: |
   The workdaysLeftInMonth function calculates the number of workdays (Monday to Friday) remaining in the month from a given date.
-  
+
   This function is useful in business applications where the number of remaining workdays from a specific date is important for scheduling, project management, or payroll processing.
 type: jig.default
 icon: dog-sit
@@ -1002,7 +1041,7 @@ header:
         source:
           uri: https://miro.medium.com/v2/resize:fit:720/format:webp/1*M9cY0UHTbmlBfoPMCQwxYA.png
 
-onFocus: 
+onFocus:
   type: action.reset-state
   options:
     state: =@ctx.components.myForm.state.data
@@ -1023,8 +1062,8 @@ children:
           when: =@ctx.components.daysRemaining.state.value != 'NaN'
           options:
             label: Work days left for this month
-# Use an expression and call the JavaScript file and functions in the file 
-# Provide the values to be used in the function by referencing the date component's.                                                                                                           
+            # Use an expression and call the JavaScript file and functions in the file
+            # Provide the values to be used in the function by referencing the date component's.
             value: =$jsfunctions.workdaysLeftInMonth(@ctx.components.date.state.value)
             style:
               isDisabled: true
@@ -1041,7 +1080,7 @@ export function workdaysLeftInMonth(date) {
   const inputDate = new Date(date);
   const currentYear = inputDate.getFullYear();
   const currentMonth = inputDate.getMonth();
-  
+
   // Get the last day of the current month
   const lastDayOfMonth = new Date(currentYear, currentMonth + 1, 0);
 
@@ -1051,7 +1090,7 @@ export function workdaysLeftInMonth(date) {
   for (let day = inputDate.getDate(); day <= lastDayOfMonth.getDate(); day++) {
     const currentDate = new Date(currentYear, currentMonth, day);
     const dayOfWeek = currentDate.getDay();
-    
+
     // Check if the current day is a weekday (Monday to Friday)
     if (dayOfWeek !== 0 && dayOfWeek !== 6) {
       workdaysCount++;
@@ -1061,10 +1100,12 @@ export function workdaysLeftInMonth(date) {
   return workdaysCount;
 }
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Next work day
 
 ::::VerticalSplit{layout="middle"}
@@ -1088,7 +1129,7 @@ next-work-day
 title: getNextBusinessDay
 description: |
   The getNextBusinessDay function calculates the next business day from a given date. It returns the next valid business day in the format "Month Day, Year".
-  
+
   In a business application, this function can be used to determine the next available working day for scheduling meetings, processing orders, or planning project deadlines.
 type: jig.default
 icon: dog-sit-1
@@ -1103,7 +1144,7 @@ header:
         source:
           uri: https://miro.medium.com/v2/resize:fit:720/format:webp/1*M9cY0UHTbmlBfoPMCQwxYA.png
 
-onFocus: 
+onFocus:
   type: action.reset-state
   options:
     state: =@ctx.components.myForm.state.data
@@ -1119,19 +1160,19 @@ children:
           options:
             label: Date
             initialValue: =$now()
-            onChange: 
+            onChange:
               type: action.set-state
               options:
                 state: =@ctx.solution.state.nextBusinessDay
-# Use an expression and call the JavaScript file and functions in the file and set the result in a state.. 
-# Provide the values to be used in the function by referencing the date component's.                                                                                                                       
+                # Use an expression and call the JavaScript file and functions in the file and set the result in a state..
+                # Provide the values to be used in the function by referencing the date component's.
                 value: =$jsfunctions.getNextBusinessDay(@ctx.components.date.state.value)
         - type: component.text-field
           instanceId: result
           when: =@ctx.components.result.state.value = 'NaN' ? false:true
           options:
             label: Next business day
-# Show the value set by the js function set in the state.            
+            # Show the value set by the js function set in the state.
             value: =@ctx.solution.state.nextBusinessDay
             style:
               isDisabled: true
@@ -1140,21 +1181,23 @@ children:
 jsfunction.js
 
 ```javascript
-import { addDays, isWeekend, format } from 'date-fns';
+import { addDays, isWeekend, format } from "date-fns";
 export function getNextBusinessDay(date) {
   let nextDay = addDays(date, 1);
   while (isWeekend(nextDay)) {
     nextDay = addDays(nextDay, 1);
   }
-  return format(nextDay, 'MMMM d, yyyy');
+  return format(nextDay, "MMMM d, yyyy");
 }
 ```
+
 :::
 :::::
 
 ## If conditions
 
 :::::ExpandableHeading
+
 ### Format phone number
 
 ::::VerticalSplit{layout="middle"}
@@ -1179,7 +1222,7 @@ phone-number.jigx
 title: formatPhoneNumber
 description: |
   The formatPhoneNumber function formats a 10-digit telephone number into the (XXX) XXX-XXXX format. It removes all non-digit characters, checks if the length is correct, and then formats the cleaned number accordingly.
-  
+
   This function is useful in applications that require consistent formatting of user input for telephone numbers, such as contact forms, user profiles, or customer service systems. It ensures that telephone numbers are displayed in a standardized and readable format.
 type: jig.default
 icon: dog-sit-1
@@ -1193,7 +1236,7 @@ header:
       options:
         source:
           uri: https://miro.medium.com/v2/resize:fit:720/format:webp/1*M9cY0UHTbmlBfoPMCQwxYA.png
-onFocus: 
+onFocus:
   type: action.reset-state
   options:
     state: =@ctx.components.myForm.state.data
@@ -1208,13 +1251,13 @@ children:
           instanceId: phoneNumber
           options:
             label: Phone Number
-            initialValue: '4253892293'
+            initialValue: "4253892293"
         - type: component.text-field
           instanceId: formattedPhone
           options:
             label: Formatted Phone Number
-# Use an expression and call the JavaScript file and function in the file.
-# Provide the values to be used in the function by referencing the phone number.             
+            # Use an expression and call the JavaScript file and function in the file.
+            # Provide the values to be used in the function by referencing the phone number.
             value: =$jsfunctions.formatPhoneNumber(@ctx.components.phoneNumber.state.value)
             style:
               isDisabled: true
@@ -1225,8 +1268,8 @@ jsfunction.js
 ```javascript
 export function formatPhoneNumber(phoneNumber) {
   // Remove all non-digit characters
-  const cleaned = ('' + phoneNumber).replace(/\D/g, '');
-  
+  const cleaned = ("" + phoneNumber).replace(/\D/g, "");
+
   //console.log(cleaned)
   //console.error(cleaned)
   //console.warn(cleaned)
@@ -1235,7 +1278,7 @@ export function formatPhoneNumber(phoneNumber) {
 
   // Check if the input is of correct length
   if (cleaned.length !== 10) {
-    return 'Invalid phone number';
+    return "Invalid phone number";
   }
 
   // Format the cleaned number
@@ -1246,12 +1289,14 @@ export function formatPhoneNumber(phoneNumber) {
   return `(${part1}) ${part2}-${part3}`;
 }
 ```
+
 :::
 :::::
 
 ## Working with objects
 
 :::::ExpandableHeading
+
 ### Get employee details
 
 ::::VerticalSplit{layout="middle"}
@@ -1292,10 +1337,10 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_DYNAMIC
-  
+
       entities:
         - default/employee
-  
+
       query: |
         SELECT
           emp.id as empID,
@@ -1309,10 +1354,10 @@ datasources:
             [default/employee] as emp
         WHERE 
           empID = @empId
-        
+
       queryParameters:
-        empId: 'f03307a9-e6ab-4d78-af54-5f79c4d46ca2'
-        
+        empId: "f03307a9-e6ab-4d78-af54-5f79c4d46ca2"
+
       isDocument: true
 
 children:
@@ -1322,8 +1367,8 @@ children:
         - type: component.entity-field
           options:
             label: Function result
-# Use an expression and call the JavaScript file and function in the file.
-# Provide the values to be used in the function by referencing the datasource.                         
+            # Use an expression and call the JavaScript file and function in the file.
+            # Provide the values to be used in the function by referencing the datasource.
             value: =$jsfunctions.getEmployeeInfo(@ctx.datasources.employee)
 ```
 
@@ -1340,9 +1385,12 @@ export function calculateLoanPayment(principal, annualRatePercent, years) {
   const monthlyRate = annualRate / 12;
   const numberOfPayments = years * 12; // Calculate the total number of payments
 
-  return (principal * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -numberOfPayments));
+  return (
+    (principal * monthlyRate) /
+    (1 - Math.pow(1 + monthlyRate, -numberOfPayments))
+  );
 }
 ```
+
 :::
 :::::
-

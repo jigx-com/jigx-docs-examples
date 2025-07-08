@@ -8,14 +8,14 @@ updatedAt: Thu Mar 13 2025 07:32:35 GMT+0000 (Coordinated Universal Time)
 
 Welcome to the reference documentation for Jigx. This guide provides detailed information on the properties, actions, and states with practical code examples to help you effectively utilize our schema. This reference content is designed to be a comprehensive resource for all your needs, covering:
 
-|                                                                 |                                                                          |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------ |
-|   [Data Providers](<./Data Providers.md>)                       |  [Jig Types](<./Jig Types.md>)                                           |
-|  [Components](./Components.md)                                  |  [Actions](./Actions.md)                                                 |
-|  [Custom components (Alpha)](<./Custom components _Alpha_.md>)  |  [Custom templates](<./Custom components _Alpha_/Templates _Alpha_.md>)  |
-|  [widgets]()                                                    |  [Preview](./Preview.md)                                                 |
-|   [Expressions](./Expressions.md)                               |  [Notifications](./Notifications.md)                                     |
-|  [OpenAI integration](<./OpenAI integration.md>)                | . [Localization (Translation)](<./Localization _Translation_.md>)        |
+|                                                               |                                                                        |
+| ------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [Data Providers](<./Data Providers.md>)                       | [Jig Types](<./Jig Types.md>)                                          |
+| [Components](./Components.md)                                 | [Actions](./Actions.md)                                                |
+| [Custom components (Alpha)](<./Custom components _Alpha_.md>) | [Custom templates](<./Custom components _Alpha_/Templates _Alpha_.md>) |
+| [widgets](https://docs.jigx.com/examples/widgets)             | [Preview](./Preview.md)                                                |
+| [Expressions](./Expressions.md)                               | [Notifications](./Notifications.md)                                    |
+| [OpenAI integration](<./OpenAI integration.md>)               | . [Localization (Translation)](<./Localization _Translation_.md>)      |
 
 Our schema includes various properties that define the structure and characteristics of data entities. Each property is documented with its name, type, allowable values, and detailed description. This section ensures you have a clear understanding of how to use each property to successfully create a Jigx App.
 

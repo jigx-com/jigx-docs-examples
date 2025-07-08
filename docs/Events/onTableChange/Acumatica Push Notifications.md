@@ -13,15 +13,15 @@ The following information applies specifically to Acumatica integration.
 
 ### Push Notifications
 
-- In Acumatica, configure *push notification definitions* to send updates to a notification destination (Jigx API endpoint) when specific data changes occur. For more information on setting up push notifications in Acumatica, refer to [Acumatica's Push Notifications](https://help.acumatica.com/(W(261))/Wiki/ShowWiki.aspx?pageid=ba35054f-3485-415e-9785-da1195cb708b) documentation.
+- In Acumatica, configure _push notification definitions_ to send updates to a notification destination (Jigx API endpoint) when specific data changes occur. For more information on setting up push notifications in Acumatica, refer to [Acumatica's Push Notifications](<https://help.acumatica.com/(W(261))/Wiki/ShowWiki.aspx?pageid=ba35054f-3485-415e-9785-da1195cb708b>) documentation.
 
 ### Generic Inquiry (GI)
 
-- Create a *Generic Inquiry (GI)* in Acumatica with the following three output columns:
+- Create a _Generic Inquiry (GI)_ in Acumatica with the following three output columns:
   - \_tab = 'Customer'
   - \_del (db deleted)
   - \_mod (time)
-- Create a *push* using the GI to the Jigx API endpoint.
+- Create a _push_ using the GI to the Jigx API endpoint.
 
 ![Acumatica Generic Inquiries](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8a0TyTsRhDsD2sWCMnaZq-20250403-190245.png "Acumatica Generic Inquiries")
 
@@ -35,6 +35,7 @@ POST
 ```none
 POST {{baseUrl}}/tool/organizations/:organizationId/solutions/:solutionId/acumatica/cdc?table=<table>
 ```
+
 :::
 
 ### Base URL
@@ -49,22 +50,22 @@ Replace \{\{baseUrl}} with the appropriate URL for your region.
 
 ### Authentication
 
-- A **Personal Access Token (PAT)** is required. Get your PAT from [My Profile]() in Jigx <a href="https://manage.jigx.com" target="_blank">Management</a>.
+- A **Personal Access Token (PAT)** is required. Get your PAT from [My Profile](https://docs.jigx.com/my-profile#ytp5o) in Jigx <a href="https://manage.jigx.com" target="_blank">Management</a>.
 - Enter the PAT as an API key with the prefix BEARER, for example, BEARER XXXXXXXXXX.
 
 ### Core elements
 
 | **Element**    | **Description**                                                                                                                                         |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| organizationId | In Jigx Managementunder [Organization details]().  |
-| solutionId     | In Jigx Managementunder [Solution Details]().        |
+| organizationId | In Jigx Managementunder [Organization details](https://docs.jigx.com/organization-settings).                                                            |
+| solutionId     | In Jigx Managementunder [Solution Details](https://docs.jigx.com/solution-details).                                                                     |
 | baseURL        | Refer to the Base URL table above to find the URL for your region.                                                                                      |
-| acumatica-cdc  | cdc is a standard term for change data capture.     |
+| acumatica-cdc  | cdc is a standard term for change data capture.                                                                                                         |
 | \<table>       | The table created in Dynamic Data receives data changes pushed from Acumatica, which in turn updates the app. You can name the table whatever you like. |
 
 ### Dynamic Data
 
-The Acumatica *GI* pushes data to the Jigx API endpoint, which then updates the corresponding table in Dynamic Data in [Jigx Management > Solution > Data > <table>](https://docs.jigx.com/_5W2-data)
+The Acumatica _GI_ pushes data to the Jigx API endpoint, which then updates the corresponding table in Dynamic Data in [Jigx Management > Solution > Data > <table>](https://docs.jigx.com/_5W2-data)
 
 ![Dynamic Data](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Av2YtmfA_XiXtOkBVQmeh-20250402-091743.png "Dynamic Data")
 

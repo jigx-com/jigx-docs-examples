@@ -34,7 +34,7 @@ The following properties are required in the YAML to successfully download a fil
 
 ## Code Example
 
-The code example below provides an example of a list of invoices in the `myfiles` directory of OneDrive. To download a file from the list to your mobile device, swipe left and press the *Download* button.
+The code example below provides an example of a list of invoices in the `myfiles` directory of OneDrive. To download a file from the list to your mobile device, swipe left and press the _Download_ button.
 
 :::CodeblockTabs
 download-list.jigx
@@ -57,37 +57,37 @@ header:
 onFocus:
   type: action.sync-entities
   options:
-  # reference the OneDrive provider to sync the files metadata to the app local provider
+    # reference the OneDrive provider to sync the files metadata to the app local provider
     provider: DATA_PROVIDER_ONEDRIVE
     entities:
       - entity: myfiles
-        data: 
-          # reference the required OneDrive tokenType property 
+        data:
+          # reference the required OneDrive tokenType property
           tokenType: jigx.graph.oauth
 
 datasources:
   file-data-root:
     type: datasource.sqlite
     options:
-    # use the local data provider to store the OneDrive files metadata
+      # use the local data provider to store the OneDrive files metadata
       provider: DATA_PROVIDER_LOCAL
-      # specify the OneDrive path to the files 
+      # specify the OneDrive path to the files
       entities:
         - myfiles
-      # use a query to define what metadata must be returned to the jig  
+      # use a query to define what metadata must be returned to the jig
       query: SELECT id, '$.name' as name FROM [myfiles] ORDER BY name DESC
-    
+
 data: =@ctx.datasources.file-data-root
 item:
   type: component.list-item
   options:
     title: =@ctx.current.item.name
-    rightElement: 
+    rightElement:
       element: button
       title: Download
-      onPress: 
-      # go to a default jig to use the submit-form action
-      # to download the selected file. 
+      onPress:
+        # go to a default jig to use the submit-form action
+        # to download the selected file.
         type: action.go-to
         options:
           linkTo: download-file
@@ -114,8 +114,8 @@ header:
         source:
           uri: https://builder.jigx.com/assets/images/header.jpg
       type: component.image
-    height: medium  
-        
+    height: medium
+
 children:
   - type: component.form
     instanceId: fileDownload
@@ -132,29 +132,29 @@ children:
             initialValue: =@ctx.jig.inputs.id
             isHidden: true
             label: id
-          
+
 actions:
   - children:
       - type: action.submit-form
-        options: 
+        options:
           provider: DATA_PROVIDER_ONEDRIVE
           entity: myfiles
-          data: 
+          data:
             fileName: =@ctx.components.fileName.state.value
             tokenType: jigx.graph.oauth
             id: =@ctx.components.id.state.value
-          title: Download 
+          title: Download
           formId: fileDownload
           goBack: previous
           method: download
 ```
+
 :::
 
 ### See also
 
-- [Microsoft OneDrive]()
+- [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
 - [Create a file](<./Create a file.md>)
 - [Update/Save a file](<./Update_Save a file.md>)
 - [Delete a file](<./Delete a file.md>)
 - [List files](<./List files.md>)
-

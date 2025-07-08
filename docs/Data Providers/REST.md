@@ -5,7 +5,7 @@ createdAt: Thu Nov 16 2023 18:03:17 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon May 13 2024 14:59:54 GMT+0000 (Coordinated Universal Time)
 ---
 
-Integrating with a REST API is a key step in enhancing your mobile application, allowing it to access and interact with external data and services efficiently. Jigx app solutions integrate with REST API through the REST data provider, for more information on the provider, see [REST](), [REST Authentication](), [Local REST Calls](), [Microsoft Graph OAuth](), [REST syncing & loading local Data]() and [REST best practice]().
+Integrating with a REST API is a key step in enhancing your mobile application, allowing it to access and interact with external data and services efficiently. Jigx app solutions integrate with REST API through the REST data provider, for more information on the provider, see [REST](https://docs.jigx.com/rest), [REST Authentication](https://docs.jigx.com/rest-authentication), [Local REST Calls](https://docs.jigx.com/local-rest-calls), [Microsoft Graph OAuth](https://docs.jigx.com/microsoft-graph-oauth), [REST syncing & loading local Data](https://docs.jigx.com/rest-syncing-and-loading-local-data) and [REST best practice](https://docs.jigx.com/rest-best-practice).
 
 ## What is covered in the REST examples
 
@@ -14,17 +14,17 @@ Integrating with a REST API is a key step in enhancing your mobile application, 
   - POST
   - DELETE
   - GET
-- [Local REST Calls]()
-- &#x20;[Parameters]()
+- [Local REST Calls](https://docs.jigx.com/local-rest-calls)
+- [Parameters](https://docs.jigx.com/rest-overview#tpoXh)
   - header
   - path
-  - body&#x20;
-- [InputTransform]()
-- [outputTransform]()
-- [File handling]() - Image conversion
-- [continuation]()
+  - body
+- [InputTransform](https://docs.jigx.com/rest-overview#3tSdi)
+- [outputTransform](https://docs.jigx.com/rest-overview#OlDju)
+- [File handling](https://docs.jigx.com/file-handling) - Image conversion
+- [continuation](https://docs.jigx.com/rest-overview#T-CzO)
 - records
-- [forRowsWithValues]()
+- [forRowsWithValues](https://docs.jigx.com/rest-overview#E56NC)
 
 ## Examples
 
@@ -32,4 +32,3 @@ Integrating with a REST API is a key step in enhancing your mobile application, 
 | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Hello REST](<./REST/Create an app using REST APIs.md>) | In this section, a REST API is used to create a customers Jigx app, allowing you to add new customers and update and view customer details, location, and images. |
 | [MS Graph](<./REST/MS Graph.md>)                        | The MS Graph examples use the User, Calendar, Mail, Insights, and To-do tasks to create a powerful Jigx apps with everything you need in one app.                 |
-

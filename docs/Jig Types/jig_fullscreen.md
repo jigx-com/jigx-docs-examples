@@ -9,7 +9,6 @@ updatedAt: Tue Apr 29 2025 10:39:47 GMT+0000 (Coordinated Universal Time)
 :::VerticalSplitItem
 The `jig.full-screen` allows you to configure a component that covers the entire screen of the jig with no other elements visible. This is useful for creating a full screen of a [location](./../Components/location.md) screen.
 
-
 :::
 
 :::VerticalSplitItem
@@ -26,20 +25,22 @@ The `jig.full-screen` allows you to configure a component that covers the entire
 
 ## Configuration options
 
-Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
+Some properties are common to all jig types, see [Common jig type properties](docId:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
 
 The `jig.full-screen` can be configured in the following way in Jigx Builder.
 
-| **Core structure** |                                                                                                                                                                                  |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `component`        |  Select the component to display as a full-screen, the available components are:<br />* `component.chat`<br />* `component.custom-component`<br />* `component.location`<br />* `component.web-view` |
-| `title`            | Give the jig a title that is displayed at the top of the screen. If you do not want to show a title in a jig use `title: ' '`.                                                        |
-| `type`             | Select `jig.full-screen`                                                          |
+| **Core structure** |                                                                                                                                                                                                     |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `component`        | Select the component to display as a full-screen, the available components are:<br />_ `component.chat`<br />_ `component.custom-component`<br />_ `component.location`<br />_ `component.web-view` |
+| `title`            | Give the jig a title that is displayed at the top of the screen. If you do not want to show a title in a jig use `title: ' '`.                                                                      |
+| `type`             | Select `jig.full-screen`                                                                                                                                                                            |
 
-## Examples and code snippets 
+## Examples and code snippets
 
 :::ExpandableHeading
+
 ### Full-screen of a map
+
 :::
 
 ::::VerticalSplit{layout="middle"}
@@ -61,12 +62,12 @@ See the full code sample using dynamic data in [GitHub](https://github.com/jigx-
 location-fullscreen-dynamic.jigx
 
 ```yaml
-title: Aquarium Location 
+title: Aquarium Location
 type: jig.full-screen
 
-component: 
+component:
   type: component.location
-  options: 
+  options:
     viewPoint:
       address: 1483 Alaskan Way, Seattle, US
       zoomLevel: 15
@@ -81,7 +82,7 @@ component:
             options:
               size: medium
               color: negative
-              icon: end-marker  
+              icon: end-marker
 ```
 
 datasource (dynamic)
@@ -105,6 +106,7 @@ options:
       '$.street'
     FROM [default/location] WHERE '$.category' = "location"
 ```
+
 :::
 
 ### Chatbot in a full-screen jig
@@ -113,6 +115,5 @@ See the [chatbot with OpenAI](./../Components/chat.md) example.
 
 ## See Also
 
-- [Jigs (screens)]()
+- [Jigs (screens)](https://docs.jigx.com/jigs-screens)
 - [location](./../Components/location.md)
-

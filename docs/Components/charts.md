@@ -44,11 +44,11 @@ Chart data is structured in a way that makes it easy to display. To understand h
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UcOTckXGJkUjlVRuGnuFp_c-exceldata.png" size="80" position="center" caption="Excel data table" alt="Excel data table"}
 
-- Next we map out the same data in Jigx [Dynamic Data]() in[ Jigx Management](https://docs.jigx.com/data). Notice that the data is exactly the same as the Excel data.
+- Next we map out the same data in Jigx [Dynamic Data](https://docs.jigx.com/dynamic-data) in[ Jigx Management](https://docs.jigx.com/data). Notice that the data is exactly the same as the Excel data.
 
 ![Dynamic Data table](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jZg3JrV65OcMvWRhadDqA_c-dd-data.png "Dynamic Data table")
 
-- The same data can also exist in a **JSON** file. Using the *Download* button at the top-right of the Data-finance-data table shown above will download the data into a JSON file. The JSON is shown below.
+- The same data can also exist in a **JSON** file. Using the _Download_ button at the top-right of the Data-finance-data table shown above will download the data into a JSON file. The JSON is shown below.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dz517cISeRt0lkq-Y5v7y_c-json.png" size="80" position="center" caption="JSON data" alt="JSON data"}
 
@@ -58,14 +58,14 @@ Now that you have your data you can convert it into the YAML needed for the char
 
 ### YAML - Static data
 
-Using the *finance-data.json* it was easy to convert the data into YAML as shown below.
+Using the _finance-data.json_ it was easy to convert the data into YAML as shown below.
 
 :::CodeblockTabs
 static-data
 
 ```yaml
 datasources:
-  finance: 
+  finance:
     type: datasource.static
     options:
       data:
@@ -83,13 +83,14 @@ datasources:
           Q2: 32000
           Q3: 45000
           Q4: 86000
-          Year: "2019" 
+          Year: "2019"
 ```
+
 :::
 
 ### YAML - Dynamic Data
 
-In Jigx you can use the data from the dynamic data table, in this instance *data-Finance-data*, then create a file under datasource folder. Use the Dynamic data provider that references the finance-data table with a query selecting the data you want to use, quarters and year in this example.
+In Jigx you can use the data from the dynamic data table, in this instance _data-Finance-data_, then create a file under datasource folder. Use the Dynamic data provider that references the finance-data table with a query selecting the data you want to use, quarters and year in this example.
 
 :::CodeblockTabs
 dynamic-data
@@ -110,8 +111,9 @@ options:
       '$.Q3', 
       '$.Q4', 
       '$.Year' 
-    FROM [default/finance-data] 
+    FROM [default/finance-data]
 ```
+
 :::
 
 ### YAML - Chart&#x20;
@@ -122,7 +124,7 @@ In the YAML for charts the following keys are used:
 \- `categories`
 \- `series`
 
-In this example the *finance-data* would show as follows for each key.
+In this example the _finance-data_ would show as follows for each key.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O3Z8Q9pXGBC1kbaz-qH9s_c-yamlkey.png" size="54" position="center" caption="Chart YAML data described" alt="Chart YAML data described"}
 
@@ -133,41 +135,41 @@ Bar-chart
 
 ```yaml
 children:
-# select the BAR-CHART component and configure the x-axis and y-axis
+  # select the BAR-CHART component and configure the x-axis and y-axis
   - type: component.bar-chart
     options:
       chart:
         height: 250
       legend:
         isHidden: false
-      
-      yAxis: 
+
+      yAxis:
         max: 90000
         min: 0
-        labels:  
+        labels:
           format:
             currency: USD
             numberStyle: currency
             compactDisplay: short
             notation: compact
         tickAmount: 8
-        
-      xAxis:   
+
+      xAxis:
         categories: =@ctx.datasources.finance-data-dd.Year
-      
-      series: 
+
+      series:
         - data: =@ctx.datasources.finance-data-dd.Q1
           name: Q1
           color: color2
-          
+
         - data: =@ctx.datasources.finance-data-dd.Q2
           name: Q2
           color: color3
-         
+
         - data: =@ctx.datasources.finance-data-dd.Q3
           name: Q3
           color: color4
-          
+
         - data: =@ctx.datasources.finance-data-dd.Q4
           name: Q4
           color: color5
@@ -177,45 +179,46 @@ Line-chart
 
 ```yaml
 children:
-# select the LINE-CHART component and configure the x-axis and y-axis
+  # select the LINE-CHART component and configure the x-axis and y-axis
   - type: component.line-chart
     options:
       chart:
         height: 250
       legend:
         isHidden: false
-      
-      yAxis: 
+
+      yAxis:
         max: 90000
         min: 0
-        labels:  
+        labels:
           format:
             currency: USD
             numberStyle: currency
             compactDisplay: short
             notation: compact
         tickAmount: 8
-        
-      xAxis:   
+
+      xAxis:
         categories: =@ctx.datasources.multi.Year
-      
-      series: 
+
+      series:
         - data: =@ctx.datasources.multi.Q1
           name: Q1
           color: color2
-          
+
         - data: =@ctx.datasources.multi.Q2
           name: Q2
           color: color3
-         
+
         - data: =@ctx.datasources.multi.Q3
           name: Q3
           color: color4
-          
+
         - data: =@ctx.datasources.multi.Q4
           name: Q4
           color: color5
 ```
+
 :::
 
 ::::VerticalSplit{layout="middle"}
@@ -231,6 +234,3 @@ The `component.line-chart` in the Jigx App using the finance- data.
 ![Line chart in Jigx](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jm-81Q_XeyBlWOAAY5A4M_c-lineexample.PNG "Line chart in Jigx")
 :::
 ::::
-
-
-

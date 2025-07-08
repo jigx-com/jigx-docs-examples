@@ -16,12 +16,11 @@ Creates a new calendar event item in a user's specified calendar using the Micro
 
 - [Create event](https://learn.microsoft.com/en-us/graph/api/user-post-events?view=graph-rest-1.0&tabs=http) - MS Graph documentation
 - [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Configuring OAuth for MS Graph]()
+- [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
 Calendars.ReadWrite
-
 
 :::
 
@@ -53,8 +52,8 @@ tabs:
   calendar:
     jigId: calendar-summary
     icon: calendar
-    
-onFocus: 
+
+onFocus:
   type: action.action-list
   options:
     isSequential: true
@@ -70,7 +69,7 @@ onFocus:
             - entity: profile-picture
               function: get-profile-picture
               functionParameters:
-                accessToken: microsoft.OAuth 
+                accessToken: microsoft.OAuth
                 userId: =@ctx.user.email
             - entity: next-week-calendar-events
               function: get-calendar-events-next-week
@@ -82,8 +81,8 @@ onFocus:
               function: get-calendar-list
               functionParameters:
                 accessToken: microsoft.OAuth
-   
-onRefresh: 
+
+onRefresh:
   type: action.action-list
   options:
     isSequential: true
@@ -99,9 +98,9 @@ onRefresh:
             - entity: profile-picture
               function: get-profile-picture
               functionParameters:
-                accessToken: microsoft.OAuth 
+                accessToken: microsoft.OAuth
                 userId: =@ctx.user.email
-           
+
             - entity: next-week-calendar-events
               function: get-calendar-events-next-week
               functionParameters:
@@ -112,8 +111,8 @@ onRefresh:
               function: get-calendar-list
               functionParameters:
                 accessToken: microsoft.OAuth
-    
 ```
+
 :::
 
 ## Functions
@@ -185,8 +184,8 @@ parameters:
     type: string
     location: body
     required: true
-
 ```
+
 :::
 
 ## Jigs
@@ -206,13 +205,13 @@ header:
   type: component.jig-header
   options:
     height: small
-    children: 
+    children:
       type: component.image
       options:
         source:
           uri: https://support.content.office.net/en-us/media/f1c4b693-4670-4e7a-8102-bbf1749e83fe.jpg
 
-onRefresh: 
+onRefresh:
   type: action.sync-entities
   options:
     provider: DATA_PROVIDER_REST
@@ -224,7 +223,7 @@ onRefresh:
           userId: =@ctx.user.email
 
 datasources:
-  availableCalendars: 
+  availableCalendars:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
@@ -310,10 +309,11 @@ actions:
             endDateTime: =@ctx.components.endDateTime.state.value
             endDateTimeTimeZone: =@ctx.system.timezone.name
             location: =@ctx.components.location.state.value
-          onSuccess: 
+          onSuccess:
             description: "Event Created"
             title: "Event Created"
 ```
+
 :::
 
 ## See Also
@@ -321,4 +321,3 @@ actions:
 - [Get Event List](<./Get Event List.md>)
 - [Get Event Item](<./Get Event Item.md>)
 - [Create Event Item]()
-

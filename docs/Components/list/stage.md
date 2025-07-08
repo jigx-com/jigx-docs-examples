@@ -10,7 +10,6 @@ updatedAt: Mon Aug 05 2024 13:21:50 GMT+0000 (Coordinated Universal Time)
 :::VerticalSplitItem
 A stage is a primary container for displaying various UI components on the left and right, typically showing a start-and-end concept.
 
-
 :::
 
 :::VerticalSplitItem
@@ -20,23 +19,23 @@ A stage is a primary container for displaying various UI components on the left 
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                               |
+| **Core structure** |                                                                   |
 | ------------------ | ----------------------------------------------------------------- |
 | `left`             | Add content to the `left` element as text, or use an expression.  |
 | `right`            | Add content to the `right` element as text, or use an expression. |
 | `title`            | Add `titles` for the text on the `left` and `right` elements.     |
 
-|**Other options** |                                              |
+| **Other options** |                                                                                                                                                                      |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Add an icon to show in the `centerElement`. A list of icons is available. See [Jigx icons]() for more information.                                                   |
+| `icon`            | Add an icon to show in the `centerElement`. A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.                   |
 | `style`           | `isWaitingSync` - Will display a "Waiting sync" indicator (cloud with a line through it), a visual indicator showing that data has not been synced to the cloud yet. |
 | `subtitle`        | Add a `subtitle` to either the left or right element as text, or use an expression.                                                                                  |
 
-| **Actions** |          |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `onPress`   | The action is triggered while pressing on an item in the stage. Use IntelliSense (ctrl+space) to see the list of available actions.  |
+| **Actions** |                                                                                                                                     |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `onPress`   | The action is triggered while pressing on an item in the stage. Use IntelliSense (ctrl+space) to see the list of available actions. |
 
 ## Consideration
 
@@ -45,11 +44,12 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### List with stage
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RjT9ffFl39FHcgn4CQhU4_n-v2bpok86ynufyojh-jvlist-default-jig-with-stage-listiphone13blueportrait.png" size="80"  position="center" caption="Stage for flights" alt="Stage for flights"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RjT9ffFl39FHcgn4CQhU4_n-v2bpok86ynufyojh-jvlist-default-jig-with-stage-listiphone13blueportrait.png" size="80" position="center" caption="Stage for flights" alt="Stage for flights"}
 :::
 
 :::VerticalSplitItem
@@ -80,7 +80,7 @@ children:
   - type: component.list
     options:
       data: =@ctx.datasources.flight-schedule-static
-      item: 
+      item:
         type: component.stage
         options:
           icon: plane-1
@@ -106,7 +106,7 @@ children:
   - type: component.list
     options:
       data: =@ctx.datasources.flight-schedule-dynamic
-      item: 
+      item:
         type: component.stage
         options:
           icon: plane-1
@@ -125,7 +125,7 @@ datasources:
   flight-schedule-static:
     type: datasource.static
     options:
-      data: 
+      data:
         - id: 1
           airline: Get Stuff Done Airlines
           board: 11:30
@@ -175,12 +175,12 @@ datasources (dynamic)
 ```yaml
 datasources:
   flight-schedule-dynamic:
-    type: 'datasource.sqlite'
+    type: "datasource.sqlite"
     options:
       provider: DATA_PROVIDER_DYNAMIC
       entities:
         - entity: default/flight-schedule
-      query: | 
+      query: |
         SELECT 
           id, 
           '$.airline', 
@@ -197,15 +197,17 @@ datasources:
           '$.toabrv' 
         FROM [default/flight-schedule]
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with expander and stage as a Header
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih_dHdqqMASbcxefEw-_rxx3cpwfsmgibkcygpxznlist-with-expander.png" size="80"  position="center" caption="Stage in list with expanders" alt="Stage in list with expanders"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih_dHdqqMASbcxefEw-_rxx3cpwfsmgibkcygpxznlist-with-expander.png" size="80" position="center" caption="Stage in list with expanders" alt="Stage in list with expanders"}
 :::
 
 :::VerticalSplitItem
@@ -238,11 +240,11 @@ children:
   - type: component.list
     options:
       data: =@ctx.datasources.flight-schedule-static
-      item: 
+      item:
         type: component.expander
         options:
           header:
-            centerElement: 
+            centerElement:
               type: component.stage
               options:
                 right:
@@ -315,11 +317,11 @@ children:
   - type: component.list
     options:
       data: =@ctx.datasources.flight-schedule-dynamic
-      item: 
+      item:
         type: component.expander
         options:
           header:
-            centerElement: 
+            centerElement:
               type: component.stage
               options:
                 right:
@@ -385,7 +387,7 @@ datasources:
   flight-schedule-static:
     type: datasource.static
     options:
-      data: 
+      data:
         - id: 1
           airline: Get Stuff Done Airlines
           board: 11:30
@@ -435,12 +437,12 @@ datasources (dynamic)
 ```yaml
 datasources:
   flight-schedule-dynamic:
-    type: 'datasource.sqlite'
+    type: "datasource.sqlite"
     options:
       provider: DATA_PROVIDER_DYNAMIC
       entities:
         - entity: default/flight-schedule
-      query: | 
+      query: |
         SELECT 
           id, 
           '$.airline', 
@@ -457,6 +459,6 @@ datasources:
           '$.toabrv' 
         FROM [default/flight-schedule]
 ```
+
 :::
 :::::
-

@@ -13,9 +13,9 @@ This feature is currently in its **Alpha **stage of development.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
-:::
+  :::
 
-The *button* custom component provides predefined options for designing the UI and tap functionality for a button. For example, your requirement might be a button showing an icon and text with a background color that can be used in multiple jigs in your app.
+The _button_ custom component provides predefined options for designing the UI and tap functionality for a button. For example, your requirement might be a button showing an icon and text with a background color that can be used in multiple jigs in your app.
 
 For steps on creating a custom component, see [How to create a custom component](<./../Custom components _Alpha_.md>).&#x20;
 
@@ -25,18 +25,19 @@ You can use `when` and `instanceId` with `component.button`, add the properties 
 
 | **Options** | **Value**                                                                                                                                                                                                                                                                                                                        |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`      | `left` - select an icon from the provided list.&#xA;`right` -  select an icon from the provided list.               |
-| `isCompact` | `false `&#xA;`true`    |
-| `onPress`   | Multiple, use IntelliSense to view the list of available [actions](<./../Widgets/actions _buttons_.md>) to call. The action is called when the button is pressed.                                                          |
-| `style`     | `isBusy` - true/false&#xA;`isDisabled` - true/false                                                                      |
-| `title`     | Provide the text to display on the button. You can use [Localization]() to cater for multiple languages.            |
-| `type`      | `primary` - the main button that guides you to complete the most important action on the screen, for example, *Approve*.&#xA;`secondary` - the option that shows when the ellipsis menu is tapped, for example, *Reject*.&#xA;`tertiary` - the second option that shows when the ellipsis menu is tapped, for example, *Rework*. |
+| `icon`      | `left` - select an icon from the provided list.&#xA;`right` - select an icon from the provided list.                                                                                                                                                                                                                             |
+| `isCompact` | `false `&#xA;`true`                                                                                                                                                                                                                                                                                                              |
+| `onPress`   | Multiple, use IntelliSense to view the list of available [actions](<./../Widgets/actions _buttons_.md>) to call. The action is called when the button is pressed.                                                                                                                                                                |
+| `style`     | `isBusy` - true/false&#xA;`isDisabled` - true/false                                                                                                                                                                                                                                                                              |
+| `title`     | Provide the text to display on the button. You can use [Localization](https://docs.jigx.com/localization) to cater for multiple languages.                                                                                                                                                                                       |
+| `type`      | `primary` - the main button that guides you to complete the most important action on the screen, for example, _Approve_.&#xA;`secondary` - the option that shows when the ellipsis menu is tapped, for example, _Reject_.&#xA;`tertiary` - the second option that shows when the ellipsis menu is tapped, for example, _Rework_. |
 
 ## Example and code snippets
 
-The examples use a set of custom components called *sections*. The sections are for titles, spacing, and context. The *sections* code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+The examples use a set of custom components called _sections_. The sections are for titles, spacing, and context. The _sections_ code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
 
 :::::ExpandableHeading
+
 ### Buttons-basic
 
 ::::VerticalSplit{layout="middle"}
@@ -45,10 +46,9 @@ This example shows the custom component that uses the button's basic form. Scrol
 
 **Examples:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-1.jigx).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-basic.jigx).
-
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-1.jigx).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-basic.jigx).
 
 :::
 
@@ -61,7 +61,7 @@ This example shows the custom component that uses the button's basic form. Scrol
 button-1.jigx
 
 ```yaml
-# components/button-1.jigx   
+# components/button-1.jigx
 type: component.default
 children:
   - type: component.card
@@ -72,7 +72,7 @@ children:
           options:
             title: Primary
             type: primary
-            
+
         - type: component.button
           options:
             title: Primary with left icon
@@ -85,43 +85,43 @@ children:
             title: Primary with right icon
             type: primary
             icon:
-              right: alarm-bell        
+              right: alarm-bell
 
         - type: component.button
           options:
             title: Primary with left & right icon
             type: primary
             icon:
-              right: alarm-bell   
-              left: alarm-bell                       
-            
+              right: alarm-bell
+              left: alarm-bell
+
         # Secondary buttons
         - type: component.button
           options:
             title: Secondary
             type: secondary
-            
+
         - type: component.button
           options:
             title: Secondary with left icon
             type: secondary
             icon:
-              left: alarm-bell  
-                          
+              left: alarm-bell
+
         - type: component.button
           options:
             title: Secondary with right icon
             type: secondary
             icon:
-              right: alarm-bell   
-              
+              right: alarm-bell
+
         - type: component.button
           options:
             title: Secondary with left & right icon
             type: secondary
             icon:
-              right: alarm-bell   
-              left: alarm-bell                                  
+              right: alarm-bell
+              left: alarm-bell
 
         # Tertiary buttons
         - type: component.button
@@ -134,22 +134,22 @@ children:
             title: Tertiary with left icon
             type: tertiary
             icon:
-              left: alarm-bell    
-                        
+              left: alarm-bell
+
         - type: component.button
           options:
             title: Tertiary with right icon
             type: tertiary
             icon:
-              right: alarm-bell   
-              
+              right: alarm-bell
+
         - type: component.button
           options:
-            title: Tertiary with left & right icon 
+            title: Tertiary with left & right icon
             type: tertiary
             icon:
-              right: alarm-bell   
-              left: alarm-bell                              
+              right: alarm-bell
+              left: alarm-bell
 ```
 
 button-basic.jigx
@@ -159,22 +159,24 @@ button-basic.jigx
 title: Buttons (Basic)
 type: jig.default
 icon: button-play
- 
-children: 
-# Reference the custom component to display in the jig.
-# This custom component contains the view configuration to show the title.  
+
+children:
+  # Reference the custom component to display in the jig.
+  # This custom component contains the view configuration to show the title.
   - type: component.custom-component
     componentId: section2
     inputs:
       title: "Basic"
-# Reference the custom component to display in the jig        
+  # Reference the custom component to display in the jig
   - type: component.custom-component
     componentId: button-1
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Buttons-compact
 
 ::::VerticalSplit{layout="middle"}
@@ -187,17 +189,17 @@ This example shows the custom component that uses compact buttons using the `isC
 
 **Example:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-2.jigx).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-compact.jigx).
-:::
-::::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-2.jigx).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-compact.jigx).
+   :::
+   ::::
 
 :::CodeblockTabs
 button-2.jigx
 
 ```yaml
-# components/button-2.jigx  
+# components/button-2.jigx
 type: component.default
 children:
   - type: component.card
@@ -224,7 +226,7 @@ children:
             type: primary
             isCompact: true
             icon:
-              right: alarm-bell        
+              right: alarm-bell
 
         - type: component.button
           options:
@@ -232,40 +234,40 @@ children:
             type: primary
             isCompact: true
             icon:
-              right: alarm-bell   
-              left: alarm-bell                       
-            
+              right: alarm-bell
+              left: alarm-bell
+
         # Secondary button
         - type: component.button
           options:
             title: Secondary
             type: secondary
             isCompact: true
-            
+
         - type: component.button
           options:
             title: Secondary with left icon
             type: secondary
             isCompact: true
             icon:
-              left: alarm-bell            
-                
+              left: alarm-bell
+
         - type: component.button
           options:
             title: Secondary with right icon
             type: secondary
             isCompact: true
             icon:
-              right: alarm-bell   
-              
+              right: alarm-bell
+
         - type: component.button
           options:
             title: Secondary with left & right icon
             type: secondary
-            isCompact: true    
+            isCompact: true
             icon:
-              right: alarm-bell   
-              left: alarm-bell                                  
+              right: alarm-bell
+              left: alarm-bell
 
         # Tertiary button
         - type: component.button
@@ -280,24 +282,24 @@ children:
             type: tertiary
             isCompact: true
             icon:
-              left: alarm-bell  
-                          
+              left: alarm-bell
+
         - type: component.button
           options:
             title: Tertiary with right icon
             type: tertiary
             isCompact: true
             icon:
-              right: alarm-bell   
-              
+              right: alarm-bell
+
         - type: component.button
           options:
             title: Tertiary with left & right icon
             type: tertiary
-            isCompact: true        
+            isCompact: true
             icon:
-              right: alarm-bell   
-              left: alarm-bell                              
+              right: alarm-bell
+              left: alarm-bell
 ```
 
 buttons-compact.jigx
@@ -308,22 +310,24 @@ title: Buttons (Compact)
 type: jig.default
 icon: button-play
 
-children: 
-# Reference the custom component to display in the jig.
-# This custom component contains the view configuration to show the title.       
+children:
+  # Reference the custom component to display in the jig.
+  # This custom component contains the view configuration to show the title.
   - type: component.custom-component
     componentId: section2
     inputs:
       title: "Compact"
- # Reference the custom component to display in the jig.
- # This custom component contains the button configuration.     
+  # Reference the custom component to display in the jig.
+  # This custom component contains the button configuration.
   - type: component.custom-component
     componentId: button-2
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Buttons-busy
 
 ::::VerticalSplit{layout="middle"}
@@ -332,10 +336,10 @@ This example shows how to set buttons in a custom component to show they are bus
 
 **Examples:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-3.jigx).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-busy.jigx).
-:::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-3.jigx).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-busy.jigx).
+   :::
 
 :::VerticalSplitItem
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pQC8cHL_kv7Y_CqVZGy6t-20250224-141900.png" size="70" position="center" caption="Button busy" alt="Button busy"}
@@ -360,7 +364,7 @@ children:
             style:
         # Configure the button with a spinner to show it is busy
               isBusy: true
-            
+
         - type: component.button
           options:
             title: Primary with left icon
@@ -368,105 +372,105 @@ children:
             icon:
               left: alarm-bell
             style:
-        # Configure the button with a spinner to show it is busy   
-              isBusy: true              
+        # Configure the button with a spinner to show it is busy
+              isBusy: true
 
         - type: component.button
           options:
             title: Primary with right icon
             type: primary
             icon:
-              right: alarm-bell   
+              right: alarm-bell
             style:
-         # Configure the button with a spinner to show it is busy    
-              isBusy: true                   
+         # Configure the button with a spinner to show it is busy
+              isBusy: true
 
         - type: component.button
           options:
             title: Primary with left & right icon
             type: primary
             icon:
-              right: alarm-bell   
-              left: alarm-bell    
+              right: alarm-bell
+              left: alarm-bell
             style:
-          # Configure the button with a spinner to show it is busy   
-              isBusy: true                                 
-            
+          # Configure the button with a spinner to show it is busy
+              isBusy: true
+
         # Secondary button
         - type: component.button
           options:
             title: Secondary
             type: secondary
             style:
-        # Configure the button with a spinner to show it is busy    
-              isBusy: true               
-            
+        # Configure the button with a spinner to show it is busy
+              isBusy: true
+
         - type: component.button
           options:
             title: Secondary with left icon
             type: secondary
             icon:
-              left: alarm-bell 
+              left: alarm-bell
             style:
-          # Configure the button with a spinner to show it is busy   
-              isBusy: true       
+          # Configure the button with a spinner to show it is busy
+              isBusy: true
 
         - type: component.button
           options:
             title: Secondary with right icon
             type: secondary
             icon:
-              right: alarm-bell  
+              right: alarm-bell
             style:
-          # Configure the button with a spinner to show it is busy 
-              isBusy: true     
+          # Configure the button with a spinner to show it is busy
+              isBusy: true
 
         - type: component.button
           options:
             title: Secondary with left & right icon
             type: secondary
             icon:
-              right: alarm-bell   
-              left: alarm-bell                                  
+              right: alarm-bell
+              left: alarm-bell
             style:
-           # Configure the button with a spinner to show it is busy  
-              isBusy: true   
-              
+           # Configure the button with a spinner to show it is busy
+              isBusy: true
+
         # Tertiary button
         - type: component.button
           options:
             title: Tertiary
             type: tertiary
             style:
-          # Configure the button with a spinner to show it is busy   
-              isBusy: true               
+          # Configure the button with a spinner to show it is busy
+              isBusy: true
         - type: component.button
           options:
             title: Tertiary with left icon
             type: tertiary
             icon:
-              left: alarm-bell   
+              left: alarm-bell
             style:
-              isBusy: true                            
+              isBusy: true
         - type: component.button
           options:
             title: Tertiary with right icon
             type: tertiary
             icon:
-              right: alarm-bell  
+              right: alarm-bell
             style:
-           # Configure the button with a spinner to show it is busy  
-              isBusy: true    
+           # Configure the button with a spinner to show it is busy
+              isBusy: true
         - type: component.button
           options:
             title: Tertiary with left & right icon
             type: tertiary
             icon:
-              right: alarm-bell   
-              left: alarm-bell     
+              right: alarm-bell
+              left: alarm-bell
             style:
-           # Configure the button with a spinner to show it is busy  
-              isBusy: true                              
+           # Configure the button with a spinner to show it is busy
+              isBusy: true
 ```
 
 button-busy.jigx
@@ -478,20 +482,22 @@ type: jig.default
 icon: button-play
 
 children:
-# Reference the custom component to display in the jig.
-# This custom component contains the view configuration to show the title.    
+  # Reference the custom component to display in the jig.
+  # This custom component contains the view configuration to show the title.
   - type: component.custom-component
     componentId: section2
     inputs:
       title: "Busy"
-      
+
   - type: component.custom-component
     componentId: button-3
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Buttons-disabled
 
 ::::VerticalSplit{layout="middle"}
@@ -504,29 +510,29 @@ This example shows how to disable a button on a custom component using the `isDi
 
 **Examples:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-4.jigx).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-disabled.jigx).
-:::
-::::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-4.jigx).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-disabled.jigx).
+   :::
+   ::::
 
 :::CodeblockTabs
 button-4.jigx
 
 ```yaml
-# components/button-4.jigx  
+# components/button-4.jigx
 type: component.default
 children:
   - type: component.card
     options:
       children:
-      # Primary button
+        # Primary button
         - type: component.button
           options:
             title: Primary
             type: primary
             style:
-      # Disable the button to prevent it from being tapped.   
+              # Disable the button to prevent it from being tapped.
               isDisabled: true
 
         - type: component.button
@@ -536,109 +542,109 @@ children:
             icon:
               left: alarm-bell
             style:
-      # Disable the button to prevent it from being tapped.      
-              isDisabled: true              
+              # Disable the button to prevent it from being tapped.
+              isDisabled: true
 
         - type: component.button
           options:
             title: Primary with right icon
             type: primary
             icon:
-              right: alarm-bell   
+              right: alarm-bell
             style:
-       # Disable the button to prevent it from being tapped.     
-              isDisabled: true                   
+              # Disable the button to prevent it from being tapped.
+              isDisabled: true
 
         - type: component.button
           options:
             title: Primary with left & right icon
             type: primary
             icon:
-              right: alarm-bell   
-              left: alarm-bell    
+              right: alarm-bell
+              left: alarm-bell
             style:
-        # Disable the button to prevent it from being tapped.      
-              isDisabled: true                                 
-            
+              # Disable the button to prevent it from being tapped.
+              isDisabled: true
+
         # Secondary button
         - type: component.button
           options:
             title: Secondary
             type: secondary
             style:
-        # Disable the button to prevent it from being tapped.    
-              isDisabled: true               
-            
+              # Disable the button to prevent it from being tapped.
+              isDisabled: true
+
         - type: component.button
           options:
             title: Secondary with left icon
             type: secondary
             icon:
-              left: alarm-bell 
+              left: alarm-bell
             style:
-         # Disable the button to prevent it from being tapped.       
-              isDisabled: true   
-                                         
+              # Disable the button to prevent it from being tapped.
+              isDisabled: true
+
         - type: component.button
           options:
             title: Secondary with right icon
             type: secondary
             icon:
-              right: alarm-bell  
+              right: alarm-bell
             style:
-         # Disable the button to prevent it from being tapped.      
-              isDisabled: true      
-                          
+              # Disable the button to prevent it from being tapped.
+              isDisabled: true
+
         - type: component.button
           options:
             title: Secondary with left & right icon
             type: secondary
             icon:
-              right: alarm-bell   
-              left: alarm-bell                                  
+              right: alarm-bell
+              left: alarm-bell
             style:
-         # Disable the button to prevent it from being tapped.      
-              isDisabled: true  
+              # Disable the button to prevent it from being tapped.
+              isDisabled: true
 
-         # Tertiary button              
+          # Tertiary button
         - type: component.button
           options:
             title: Tertiary
             type: tertiary
             style:
-         # Disable the button to prevent it from being tapped.      
-              isDisabled: true      
+              # Disable the button to prevent it from being tapped.
+              isDisabled: true
 
         - type: component.button
           options:
             title: Tertiary with left icon
             type: tertiary
             icon:
-              left: alarm-bell   
+              left: alarm-bell
             style:
-         # Disable the button to prevent it from being tapped.      
-              isDisabled: true   
+              # Disable the button to prevent it from being tapped.
+              isDisabled: true
 
         - type: component.button
           options:
             title: Tertiary with right icon
             type: tertiary
             icon:
-              right: alarm-bell  
+              right: alarm-bell
             style:
-         # Disable the button to prevent it from being tapped.      
-              isDisabled: true    
-              
+              # Disable the button to prevent it from being tapped.
+              isDisabled: true
+
         - type: component.button
           options:
             title: Tertiary with left & right icon
             type: tertiary
             icon:
-              right: alarm-bell   
-              left: alarm-bell     
+              right: alarm-bell
+              left: alarm-bell
             style:
-         # Disable the button to prevent it from being tapped.      
-              isDisabled: true                              
+              # Disable the button to prevent it from being tapped.
+              isDisabled: true
 ```
 
 button-disabled.jigx
@@ -649,22 +655,23 @@ title: Buttons (Disabled)
 type: jig.default
 icon: button-play
 
-children: 
-# Reference the custom component to display in the jig.
-# This custom component contains the view configuration to show the title.   
+children:
+  # Reference the custom component to display in the jig.
+  # This custom component contains the view configuration to show the title.
   - type: component.custom-component
     componentId: section2
     inputs:
       title: "Disabled"
-# Reference the custom component to display the buttons in the jig.
+  # Reference the custom component to display the buttons in the jig.
   - type: component.custom-component
     componentId: button-4
-  
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Buttons-disabled and busy
 
 ::::VerticalSplit{layout="middle"}
@@ -673,10 +680,10 @@ This example shows a custom component with a combination of the buttons as disab
 
 **Examples:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-5.jigx).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-disabled-busy.jigx).
-:::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-5.jigx).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-disabled-busy.jigx).
+   :::
 
 :::VerticalSplitItem
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-N6w4yX5FZGhPmyRyp83cl-20250224-142236.png" size="70" position="center" caption="Buttons disabled & busy" alt="Buttons disabled & busy"}
@@ -698,11 +705,11 @@ children:
           options:
             title: Primary
             type: primary
-# Combine the style properties to indicate that the button is both busy & disabled.   
-            style:   
+            # Combine the style properties to indicate that the button is both busy & disabled.
+            style:
               isDisabled: true
               isBusy: true
-            
+
         - type: component.button
           options:
             title: Primary with left icon
@@ -710,120 +717,120 @@ children:
             icon:
               left: alarm-bell
             style:
-# Combine the style properties to indicate that the button is both busy & disabled.            
+              # Combine the style properties to indicate that the button is both busy & disabled.
               isDisabled: true
-              isBusy: true              
+              isBusy: true
 
         - type: component.button
           options:
             title: Primary with right icon
             type: primary
             icon:
-              right: alarm-bell   
+              right: alarm-bell
             style:
-# Combine the style properties to indicate that the button is both busy & disabled.            
+              # Combine the style properties to indicate that the button is both busy & disabled.
               isDisabled: true
-              isBusy: true                   
+              isBusy: true
 
         - type: component.button
           options:
             title: Primary with left & right icon
             type: primary
             icon:
-              right: alarm-bell   
-              left: alarm-bell    
+              right: alarm-bell
+              left: alarm-bell
             style:
-# Combine the style properties to indicate that the button is both busy & disabled.            
+              # Combine the style properties to indicate that the button is both busy & disabled.
               isDisabled: true
-              isBusy: true                                 
-            
+              isBusy: true
+
         # Secondary button
         - type: component.button
           options:
             title: Secondary
             type: secondary
             style:
-# Combine the style properties to indicate that the button is both busy & disabled.            
+              # Combine the style properties to indicate that the button is both busy & disabled.
               isDisabled: true
-              isBusy: true               
-            
+              isBusy: true
+
         - type: component.button
           options:
             title: Secondary with left icon
             type: secondary
             icon:
-              left: alarm-bell 
+              left: alarm-bell
             style:
-# Combine the style properties to indicate that the button is both busy & disabled.            
+              # Combine the style properties to indicate that the button is both busy & disabled.
               isDisabled: true
-              isBusy: true    
-                                        
+              isBusy: true
+
         - type: component.button
           options:
             title: Secondary with right icon
             type: secondary
             icon:
-              right: alarm-bell  
+              right: alarm-bell
             style:
-# Combine the style properties to indicate that the button is both busy & disabled.            
+              # Combine the style properties to indicate that the button is both busy & disabled.
               isDisabled: true
-              isBusy: true    
-                            
+              isBusy: true
+
         - type: component.button
           options:
             title: Secondary with left & right icon
             type: secondary
             icon:
-              right: alarm-bell   
-              left: alarm-bell                                  
+              right: alarm-bell
+              left: alarm-bell
             style:
-# Combine the style properties to indicate that the button is both busy & disabled.            
+              # Combine the style properties to indicate that the button is both busy & disabled.
               isDisabled: true
-              isBusy: true   
-              
+              isBusy: true
+
         # Tertiary button
         - type: component.button
           options:
-            title: Tertiary 
+            title: Tertiary
             type: tertiary
             style:
-# Combine the style properties to indicate that the button is both busy & disabled.            
+              # Combine the style properties to indicate that the button is both busy & disabled.
               isDisabled: true
-              isBusy: true    
+              isBusy: true
 
         - type: component.button
           options:
             title: Tertiary with left icon
             type: tertiary
             icon:
-              left: alarm-bell   
+              left: alarm-bell
             style:
-# Combine the style properties to indicate that the button is both busy & disabled.            
+              # Combine the style properties to indicate that the button is both busy & disabled.
               isDisabled: true
-              isBusy: true     
+              isBusy: true
 
         - type: component.button
           options:
             title: Tertiary with right icon
             type: tertiary
             icon:
-              right: alarm-bell  
+              right: alarm-bell
             style:
-# Combine the style properties to indicate that the button is both busy & disabled.            
+              # Combine the style properties to indicate that the button is both busy & disabled.
               isDisabled: true
-              isBusy: true    
-              
+              isBusy: true
+
         - type: component.button
           options:
             title: Tertiary with left & right icon
             type: tertiary
             icon:
-              right: alarm-bell   
-              left: alarm-bell     
+              right: alarm-bell
+              left: alarm-bell
             style:
-# Combine the style properties to indicate that the button is both busy & disabled.            
+              # Combine the style properties to indicate that the button is both busy & disabled.
               isDisabled: true
-              isBusy: true                              
+              isBusy: true
 ```
 
 buttons-disabled-busy.jigx
@@ -834,17 +841,17 @@ title: Buttons (Disabled & Busy)
 type: jig.default
 icon: button-play
 
-children:  
-# Reference the custom component to display in the jig.
-# This custom component contains the view configuration to show the title.  
+children:
+  # Reference the custom component to display in the jig.
+  # This custom component contains the view configuration to show the title.
   - type: component.custom-component
     componentId: section2
     inputs:
       title: "Disabled & Busy"
- # Reference the custom component to display the buttons in the jig.     
+  # Reference the custom component to display the buttons in the jig.
   - type: component.custom-component
     componentId: button-5
 ```
+
 :::
 :::::
-

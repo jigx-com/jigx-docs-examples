@@ -21,7 +21,7 @@ This example uses the Dynamic Data table, columns, and data records created in t
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-INvHFGW3XIisjDMFXvQ_a-20250306-083847.png" size="78" position="center" caption="Reading Dynamic Data " alt="Reading Dynamic Data "}
 
-Here is what the data table employee resembles in [Data]() in Jigx Management.
+Here is what the data table employee resembles in [Data](https://docs.jigx.com/data) in Jigx Management.
 
 ![Employee Dynamic Data](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ryCmLjukF38TWd_rs1Ayw_dd-list-mngt.png "Employee Dynamic Data")
 
@@ -42,7 +42,7 @@ header:
       options:
         source:
           uri: https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-# Use onfocus action to sync the data from the provider everytime the jig is opened  
+# Use onfocus action to sync the data from the provider everytime the jig is opened
 onFocus:
   type: action.action-list
   options:
@@ -50,32 +50,32 @@ onFocus:
     actions:
       - type: action.sync-entities
         options:
-        # The dynamic provider has the employee table and records that must sync when the jig is opened
+          # The dynamic provider has the employee table and records that must sync when the jig is opened
           provider: DATA_PROVIDER_DYNAMIC
           entities:
             - default/employee
 
 datasources:
   my-employees:
-  # Use the SQLite data source to write a select query to return the exact data from the solution's Dynamic Data employee table to be used in the jig 
+    # Use the SQLite data source to write a select query to return the exact data from the solution's Dynamic Data employee table to be used in the jig
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_DYNAMIC
-  
+
       entities:
         - default/employee
-  
+
       query: SELECT
-               id,
-               '$.first_name',
-               '$.last_name', 
-               '$.job_title',
-               '$.email',
-               '$.start_date',
-               '$.department',
-               '$.contact'
-              FROM
-               [default/employee] 
+        id,
+        '$.first_name',
+        '$.last_name',
+        '$.job_title',
+        '$.email',
+        '$.start_date',
+        '$.department',
+        '$.contact'
+        FROM
+        [default/employee]
 
 # Reference the datasource above to use as the data in the expander component
 data: =@ctx.datasources.my-employees
@@ -83,14 +83,14 @@ item:
   type: component.expander
   options:
     header:
-      centerElement: 
+      centerElement:
         type: component.titles
         options:
-        # expressions are used to combine data from two columns to show in the list
+          # expressions are used to combine data from two columns to show in the list
           title: =(@ctx.current.item.first_name & ' ' & @ctx.current.item.last_name)
           subtitle: =@ctx.current.item.job_title
           icon: person
-          
+
     children:
       - type: component.entity
         options:
@@ -113,7 +113,6 @@ item:
                 label: Email
                 value: =@ctx.current.item.email
                 contentType: email
-
 ```
 
 default.jigx
@@ -135,5 +134,5 @@ tabs:
     jigId: list-employees
     icon: home-apps-logo
 ```
-:::
 
+:::
