@@ -15,7 +15,7 @@ Welcome to the reference documentation for Jigx. This guide provides detailed in
 | [Custom components (Alpha)](<./Custom components _Alpha_.md>) | [Custom templates](<./Custom components _Alpha_/Templates _Alpha_.md>) |
 | [widgets](https://docs.jigx.com/examples/widgets)             | [Preview](./Preview.md)                                                |
 | [Expressions](./Expressions.md)                               | [Notifications](./Notifications.md)                                    |
-| [OpenAI integration](<./OpenAI integration.md>)               | . [Localization (Translation)](<./Localization _Translation_.md>)      |
+| [OpenAI integration](<./OpenAI integration.md>)               | [Localization (Translation)](<./Localization _Translation_.md>)        |
 
 Our schema includes various properties that define the structure and characteristics of data entities. Each property is documented with its name, type, allowable values, and detailed description. This section ensures you have a clear understanding of how to use each property to successfully create a Jigx App.
 
