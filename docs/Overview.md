@@ -13,7 +13,7 @@ Welcome to the reference documentation for Jigx. This guide provides detailed in
 | [Data Providers](<./Data Providers.md>)                       | [Jig Types](<./Jig Types.md>)                                          |
 | [Components](./Components.md)                                 | [Actions](./Actions.md)                                                |
 | [Custom components (Alpha)](<./Custom components _Alpha_.md>) | [Custom templates](<./Custom components _Alpha_/Templates _Alpha_.md>) |
-| [widgets](https://docs.jigx.com/examples/widgets)             | [Preview](./Preview.md)                                                |
+| widgets                                                       | [Preview](./Preview.md)                                                |
 | [Expressions](./Expressions.md)                               | [Notifications](./Notifications.md)                                    |
 | [OpenAI integration](<./OpenAI integration.md>)               | [Localization (Translation)](<./Localization _Translation_.md>)        |
 
