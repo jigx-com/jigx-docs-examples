@@ -10,7 +10,7 @@ Welcome to the reference documentation for Jigx. This guide provides detailed in
 
 |                                                               |                                                                          |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [Data Providers](Data Providers.md)                           | [Jig Types](Jig%20Types.md)                                              |
+| [Data Providers](Data%20Providers.md)                         | [Jig Types](Jig%20Types.md)                                              |
 | [Components](Components.md)                                   | [Actions](Actions.md)                                                    |
 | [Custom components (Alpha)](Custom%20components%20_Alpha_.md) | [Custom templates](Custom%20components%20_Alpha_/Templates%20_Alpha_.md) |
 | [widgets](Widgets.md)                                         | [Preview](Preview.md)                                                    |
