@@ -23,8 +23,6 @@ Reset Solution State: Resets the solution state to its initial values.
 
 Reset State: Resets the component or forms's state to its initial values.INTRO
 
-
-
 ## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
@@ -41,4 +39,3 @@ Some properties are common to all components, see [Common component properties](
 |                   |   |
 |                   |   |
 |                   |   |
-

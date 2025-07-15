@@ -12,7 +12,7 @@ For the Dynamic datasource, values will be saved under the _data_ option.
 For SQL/REST datasource, values will be saved under the _functionParameters_ option.
 
 :::hint{type="warning"}
-This action can't be used if you are using [Static Data]().
+This action can't be used if you are using [Static Data](https://docs.jigx.com/examples/static).
 :::
 
 ## Configuration options
@@ -25,7 +25,7 @@ An `execute-entity` action can be used in multiple areas:
 4. In onRefresh/onFocus
 
 :::hint{type="warning"}
-The execute-entity has a `go-back `option, which is set to on by default. That means when you run execute-entity, it will automatically return you to the previous jig.
+The execute-entity has a `go-back` option, which is set to on by default. That means when you run execute-entity, it will automatically return you to the previous jig.
 :::
 
 ## Offline remote data handling

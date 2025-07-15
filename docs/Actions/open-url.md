@@ -1,6 +1,6 @@
 # open-url
 
-This action opens a web page depending on the provided URL or [deep links](#) to an external app. open-url can be used in a list of actions, such as `swipeable` and `rightElement`, or with another action; after the main action is executed, open-url is called and opens the configured URL.
+This action opens a web page depending on the provided URL or [deep links](https://docs.jigx.com/deep-links) to an external app. open-url can be used in a list of actions, such as `swipeable` and `rightElement`, or with another action; after the main action is executed, open-url is called and opens the configured URL.
 
 ## Configuration options
 
@@ -16,9 +16,10 @@ An open-url action can be set up in various ways:
 | `title`            | Provide a title for opening the URL, you can use expressions in the title field.                                                                                                                       |
 | `url`              | Specify the URL you want opened. The following formats are supported: &#xA;https\://&#xA;https\://www. &#xA;www.&#xA;sitename.com&#xA;external app link (See the deep link to an external app example) |
 
-## Examples and code snippets&#x20;
+## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### open-url as an action
 
 ::::VerticalSplit{layout="middle"}
@@ -42,9 +43,11 @@ actions:
           title: Jigx Documentation
           url: https://docs.jigx.com/examples/open-url
 ```
+
 :::::
 
 :::::ExpandableHeading
+
 ### open-url swipeable left/right
 
 ::::VerticalSplit{layout="middle"}
@@ -84,9 +87,11 @@ item:
             options:
               url: https://docs.jigx.com/examples/open-url
 ```
+
 :::::
 
 :::::ExpandableHeading
+
 ### open-url rightElement
 
 ::::VerticalSplit{layout="middle"}
@@ -120,9 +125,11 @@ item:
         options:
           url: https://docs.jigx.com/examples/open-url
 ```
+
 :::::
 
 :::::ExpandableHeading
+
 ### open-url onSuccess
 
 ::::VerticalSplit{layout="middle"}
@@ -165,10 +172,12 @@ actions:
                         url: https://docs.jigx.com/examples
             - type: action.go-back
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Use open-url to deep link to an external app
 
 ::::VerticalSplit{layout="left"}
@@ -241,6 +250,6 @@ children:
              and is home to more than 3,700 rare and endangered animals representing approximately
              660 species and subspecies and a prominent botanical collection with more than 700,000 plants.
 ```
+
 :::
 :::::
-

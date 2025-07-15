@@ -9,12 +9,13 @@ This action can be used to sync your local database with your live database on t
 5. Dynamically sync multiple entities
 
 :::hint{type="warning"}
-[sync-entities](#) can't be used if you using [Static Data](#).
+sync-entities can't be used if you using [Static Data](https://docs.jigx.com/examples/static).
 :::
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### sync-entities in action
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy_Ed5LO5RY_5j_action-sync-entities.PNG" size="80" position="center" caption="Sync-entities action" alt="Sync-entities action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy_Ed5LO5RY_5j_action-sync-entities.PNG"}
@@ -43,10 +44,12 @@ actions:
         entities:
           - default/employees    
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### sync-entities in the action list
 
 ::::VerticalSplit{layout="middle"}
@@ -81,15 +84,17 @@ actions:
             options:
               linkTo: default-employee-detail
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### sync-entities in onPress/onChange event
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-Here is the example of [sync-entity](#) in onPress/onChange event in [list-item](#)
+Here is the example of [sync-entities](https://docs.jigx.com/examples/sync-entities) in onPress/onChange event in [list-item](https://docs.jigx.com/examples/list-item)
 
 **Example:**
 
@@ -170,10 +175,12 @@ item:
                 entities:
                   - default/employees
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### sync-entities in onRefresh/onFocus
 
 ::::VerticalSplit{layout="middle"}
@@ -214,10 +221,12 @@ onFocus:
     entities:
       - default/employees
 ```
+
 :::
 :::::
 
 ::::ExpandableHeading
+
 ### Dynamically sync multiple entities
 
 When building a solution, the number of entities to sync and the parameters for each are not always known; for example, when syncing the attachments, files, or documents for a message, there can be zero, one, or more. It is necessary to dynamically specify a list of the entities, functions, and function parameters to return from the database using an expression.
@@ -259,6 +268,7 @@ actions:
               }
             })[]
 ```
+
 :::
 
 ### Example sync-entities dynamically for calendars (full input source)
@@ -407,6 +417,7 @@ continuation:
 records: =$.value
 useLocalCall: true
 ```
+
 :::
 
 ### Example sync-entities dynamically for a selected calendar
@@ -555,6 +566,6 @@ continuation:
 records: =$.value
 useLocalCall: true
 ```
+
 :::
 ::::
-

@@ -1,6 +1,6 @@
 # set-state
 
-The `set-state` action sets the global state (also called the solution state). Multiple components and jigs can access the state's value across the solution. Effectively managing the global state ensures that all parts of the app that depend on this data are updated consistently. To understand how to use states, see [State](#).
+The `set-state` action sets the global state (also called the solution state). Multiple components and jigs can access the state's value across the solution. Effectively managing the global state ensures that all parts of the app that depend on this data are updated consistently. To understand how to use states, see [State](https://docs.jigx.com/state).
 
 ## Configuration options
 
@@ -14,6 +14,7 @@ A `set-state` action can be set up in various ways:
 ## Examples and code snippets
 
 ::::ExpandableHeading
+
 ### set-state as onFocus/onRefresh
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/biw9t9RyNz-0XOfnu92pv_set-state-onfocus.PNG" size="80" position="center" caption="Count triggers with set-sate" alt="Count triggers with set-sate" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/biw9t9RyNz-0XOfnu92pv_set-state-onfocus.PNG"}
@@ -42,10 +43,12 @@ onRefresh:
     state: =@ctx.solution.state.onRefresh-key
     value: =@ctx.solution.state.on-refresh-key +1
 ```
+
 :::
 ::::
 
 ::::ExpandableHeading
+
 ### set-state as action
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_gb30xllbsbqiIK8YENCT_set-state-action.PNG" size="80" position="center" caption="Set-state action" alt="Set-state action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_gb30xllbsbqiIK8YENCT_set-state-action.PNG"}
@@ -66,10 +69,12 @@ actions:
           state: =@ctx.solution.state.action-key
           value: =@ctx.solution.state.action-key +1
 ```
+
 :::
 ::::
 
 ::::ExpandableHeading
+
 ### set-state as onPress/onChange
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qSwlxC1hjffY06BLuvK7u_set-state-onpress.PNG" size="78" position="center" caption="Set-state onPress/onChange" alt="Set-state onPress/onChange" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qSwlxC1hjffY06BLuvK7u_set-state-onpress.PNG"}
@@ -97,7 +102,7 @@ onChange:
   options:
     state: =@ctx.solution.state.onChange-key
     value: =@ctx.solution.state.on-change-key +1
-```
-:::
-::::
 
+
+::
+::::

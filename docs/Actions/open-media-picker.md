@@ -11,7 +11,7 @@ This action lets you immediately open the media picker, enabling you to capture 
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                        |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Specify the [icon](#) to display on the action button. The icon only applies to `swipeable`, `secondary`, and [header](./../Components/jig-header.md) actions. Icon setups are not supported on primary actions.                                                                                                       |
+| `icon`            | Specify the [icon](https://docs.jigx.com/jigx-icons) to display on the action button. The icon only applies to `swipeable`, `secondary`, and [header](./../Components/jig-header.md) actions. Icon setups are not supported on primary actions.                                                                                                       |
 | `imageCropping`   | You can set any of the following with `imageCropping` :&#xA;`isEnabled` - allows you to crop an image.&#xA;`height` - maximum allowed is 5000px.&#xA;`width`- maximum allowed is 5000px.&#xA;`isFreeStyleCropEnabled` - when set to `true` it supports custom cropping to change the size or aspect ratio of an image. |
 | `imageQuality`    | Image quality after compression (from 0 to 100, where 100 is the best quality). On iOS, values larger than 80 don't produce a noticeable quality increase in most images, while a value of 80 will reduce the file size by about half or less compared to a value of 100. Default: 100 (Android)/ 80 (iOS).            |
 | `isHidden`        | When set to `true` the action button is hidden.                                                                                                                                                                                                                                                                        |
@@ -31,6 +31,7 @@ This action lets you immediately open the media picker, enabling you to capture 
 ## Examples and code snippets
 
 ::::ExpandableHeading
+
 ### Open-media-picker to capture an image
 
 In this example, the button opens the media-picker. The configuration is set to take a picture or choose from library. The image is saved to the local database.
@@ -106,5 +107,6 @@ actions:
               # Use the action's output to reference the image file.
               data: =@ctx.actions.job-photo.outputs      
 ```
+
 :::
 ::::

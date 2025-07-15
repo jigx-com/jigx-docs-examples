@@ -24,6 +24,7 @@ A go-back action associated with another action under onSuccess can only be used
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### go-back as an action
 
 ::::VerticalSplit{layout="middle"}
@@ -51,10 +52,12 @@ actions:
         options:
           title: Go back
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### go-back swipeable left/right
 
 ::::VerticalSplit{layout="middle"}
@@ -98,10 +101,12 @@ swipeable:
           onPress: 
             type: action.go-back
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### go-back rightElement
 
 ::::VerticalSplit{layout="middle"}
@@ -128,10 +133,12 @@ rightElement:
       onPress:
         type: action.go-back
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### go-back-on-success
 
 ::::VerticalSplit{layout="middle"}
@@ -193,6 +200,6 @@ children:
           options:
             label: Signature required         
 ```
+
 :::
 :::::
-

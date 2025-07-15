@@ -19,7 +19,7 @@ Some properties are common to all components, see [Common component properties](
 | `buttonText`      | Give the button a label by providing short text. The button displays as a link. If an action like `onConfirm` is configured the button displays as a button.                                                                                                                                                                                                                                                                     |
 | `description`     | Provide the text description or instructions for the user to follow. This creates the content in the info-modal. You can use text, an expression or a datasource. This can have multiple lines.                                                                                                                                                                                                                                  |
 | `element`         | The following elements can be added to the modal: &#xA;- `type` - Specify either an `icon`, `image`, `avatar`. &#xA;- When `image` is specified a `uri` is required.&#xA;- Use `color` to change the `icon` color, available colors are positive, negative, primary, warning. The default color is primary if no color is specificed.&#xA;- When using an `avatar` you can specifiy `text` or use a `uri` to show in the avatar. |
-| `icon`            | Add an icon to the info-modal, for example a dollar icon. The icon apprears on the center of the modal.  A list of icons are available. See [Jigx icons](#) for more information. This property relates to the action button at the bottom of the screen.                                                                                                                                                                        |
+| `icon`            | Add an icon to the info-modal, for example a dollar icon. The icon apprears on the center of the modal.  A list of icons are available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information. This property relates to the action button at the bottom of the screen.                                                                                                                                                                        |
 | `isHidden`        | When set to `true` the info-modal (button at the bottom of the screen) is hidden on a jig.                                                                                                                                                                                                                                                                                                                                       |
 
 | **Actions**   |                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -41,6 +41,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### info-modal with avatar
 
 ::::VerticalSplit{layout="middle"}
@@ -97,10 +98,12 @@ actions:
               text: AV
               uri: https://images.unsplash.com/photo-1546961329-78bef0414d7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### info-modal with icon
 
 ::::VerticalSplit{layout="middle"}
@@ -158,10 +161,12 @@ actions:
               icon: maps-pin
               color: primary
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### info-modal with image
 
 ::::VerticalSplit{layout="middle"}
@@ -218,10 +223,12 @@ actions:
               resizeMode: contain
               uri: https://images.unsplash.com/photo-1502085671122-2d218cd434e6?q=80&w=1226&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ```
+
 :::
 :::::
 
 ::::ExpandableHeading
+
 ### info-modal in calendar jig
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42pa6T1c-ZmK3uaq-Fb-Y_cc-infom-calendar.PNG" size="90" position="center" caption="Info-modal in a calendar jig" alt="Info-modal in a calendar jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42pa6T1c-ZmK3uaq-Fb-Y_cc-infom-calendar.PNG"}
@@ -313,10 +320,12 @@ item:
               text: CD
               uri: https://cdn1.iconfinder.com/data/icons/managers-15/488/Untitled-5-512.png
 ```
+
 :::
 ::::
 
 :::::ExpandableHeading
+
 ### info-modal in default jig
 
 ::::VerticalSplit{layout="middle"}
@@ -459,10 +468,12 @@ options:
       '$.employee-startWork' 
     FROM [default/employees] WHERE '$.category' = "employee-detail"
 ```
+
 :::
 :::::
 
 ::::ExpandableHeading
+
 ### info-modal in list jig
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gCf59HwaD_adrk5tU5b_z_cc-infom-list2.PNG" size="80" position="center" caption="Info-modal in a list jig" alt="Info-modal in a list jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gCf59HwaD_adrk5tU5b_z_cc-infom-list2.PNG"}
@@ -670,10 +681,12 @@ actions:
             description: Customer and sales information is subject to change frequently  
             buttonText: Go back
 ```
+
 :::
 ::::
 
 ::::ExpandableHeading
+
 ### info-modal in onPress action on a widget
 
 ![Info-modal on widget](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x16UEinXJlMDbA6LAMVXp_cc-infom-widget.png "Info-modal on widget")
@@ -795,6 +808,6 @@ children:
             label: Placeholder
             value: Placeholder
 ```
+
 :::
 ::::
-

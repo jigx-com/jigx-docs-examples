@@ -24,14 +24,14 @@ Some properties are common to all components, see [Common component properties](
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon](#) to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                       |
-| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
+| `icon`            | Select an [icon](https://docs.jigx.com/jigx-icons) to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).         |
+| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.               |
 | `styles`          | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
 
 ## Considerations
 
 - You can reference the local PDF file using the action's output uri in other actions or components, `=@ctx.actions.generatePDF.outputs.uri`. For example, generate the PDF file then [share](./share.md) the file.&#x20;
-- Depending on where you save and use the saved PDF, you might need to use [conversions](#).
+- Depending on where you save and use the saved PDF, you might need to use [conversions](https://docs.jigx.com/file-handling).
 - The .pdf extension is automatically added to the `fileName`.
 
 ## Examples and code snippets
@@ -150,6 +150,7 @@ datasources:
                 </body>
                 </html>
 ```
+
 :::
 
 ### Generate a pdf,  save and share&#x20;
@@ -389,6 +390,7 @@ actions:
                 message: Global Invoice 
                 subject: Invoice for January
 ```
+
 :::
 
 ### Generate pdf from JavaScript HTML function
@@ -665,5 +667,5 @@ html.js
     
   }
 ```
-:::
 
+:::

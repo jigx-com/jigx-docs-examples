@@ -3,7 +3,7 @@
 `Execute-entities` is used to modify, create, and delete **multiple rows** in a specific table in a database.
 
 :::hint{type="warning"}
-Execute-entities can't be used if you're using [Static Data](#).
+Execute-entities can't be used if you're using [Static Data](https://docs.jigx.com/examples/static).
 :::
 
 ## Configuration options
@@ -55,15 +55,17 @@ actions:
             photo: =@ctx.datasources.items.photo
             participant-group: =@ctx.datasources.items.participant-group
 ```
+
 :::
 
 ## Offline remote data handling
 
-Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](#) explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities, and provides examples and code samples.
+Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](https://docs.jigx.com/offline-remote-data-handling) explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities, and provides examples and code samples.
 
 ## Examples and code snippets&#x20;
 
 :::::ExpandableHeading
+
 ### Execute-entities in action
 
 ::::VerticalSplit{layout="middle"}
@@ -93,10 +95,12 @@ actions:
           firstname: =@ctx.datasources.employee-detail-dynamic.firstname
           lastname: =@ctx.datasources.employee-detail-dynamic.lastname
 ```
+
 :::
 :::::
 
 ::::ExpandableHeading
+
 ### Execute-entities in action list
 
 **Example:**
@@ -135,10 +139,12 @@ actions:
                   options:
                     linkTo: execute-entities-onPress
 ```
+
 :::
 ::::
 
 ::::ExpandableHeading
+
 ### Execute-entities in onPress/onChange event
 
 Here is the example of execute-entities in onPress/onChange event in [list-item](./../Components/list/list-item.md).
@@ -178,10 +184,12 @@ onChange:
       id: =@ctx.current.item.id
       modify: =$number(@ctx.current.item.modify) + 1
 ```
+
 :::
 ::::
 
 ::::ExpandableHeading
+
 ### Execute-entities in onRefresh/onFocus
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S3C6VXWWnlIVhWPXbXlXh_actioneenitiesonfocus.PNG" size="80" position="center" caption="Execute-entites" alt="Execute-entites" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S3C6VXWWnlIVhWPXbXlXh_actioneenitiesonfocus.PNG"}
@@ -215,10 +223,12 @@ onFocus:
     entity: default/employees
     data: =@ctx.datasources.employee-detail-dynamic.{'id':id, 'modify':$number(modify)+1}
 ```
+
 :::
 ::::
 
 ::::ExpandableHeading
+
 ### Deleting multiple data records using execute-entities
 
 To delete multiple data records in a Dynamic data table use the execute entities action with an expression as shown below.
@@ -243,6 +253,7 @@ actions:
           method: delete
           data: =@ctx.datasources.employee.{"id" :id}[]
 ```
+
 :::
 ::::
 

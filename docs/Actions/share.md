@@ -16,7 +16,7 @@ Some properties are common to all components, see [Common component properties](
 
 | **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `email`            | Provide an email address, this optional property allows a string or expression. &#xA;It is used to set the To address if sharing with email.&#xA;If an email is supplied the share action will automatically open up the default email app on the phone to compose and fill in the supplied details.<br />If email is not supplied, you will be able to share via other methods or apps.<br />For iOS you can only supply a single email address. If you supply more, the To field will be left blank. This is not an issue on Android but for consistency it is best to keep to one email address. |
+| `email`            | Provide an email address, this optional property allows a string or expression. &#xA;It is used to set the To address if sharing with email.&#xA;If an email is supplied the share action will automatically open up the default email app on the phone to compose and fill in the supplied details.<br>If email is not supplied, you will be able to share via other methods or apps.<br>For iOS you can only supply a single email address. If you supply more, the To field will be left blank. This is not an issue on Android but for consistency it is best to keep to one email address. |
 | `fileUri`          | Provide the uri for the file you want to share, either from a datasource, in an expression, or from an action, such as the `action.generate-pdf`. You can reference the PDF or the local uri of the PDF document using the action's output uri `=@ctx.actions.generatePDF.outputs.uri`. &#xA;The `fileUri` needs to be the full uri of the local file.                                                                                                                                                                                                                                              |
 | `message`          | Add a text message to send with the shared file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `subject`          | Add a subject when sharing the file. The subject will only appear in apps that support a subject property, such as email.                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -100,7 +100,7 @@ actions:
                   options:
                     message: =$fromMillis($toMillis($now()), '[M]/[D]/[Y]') Site photos
                     fileUri: =@ctx.components.site-photos.state.value     
-```
+
 :::
 
 ### Generate a pdf,  save and share&#x20;
@@ -351,6 +351,7 @@ options:
           </body>
           </html>
 ```
+
 :::
 
 ### Share by email&#x20;
@@ -503,5 +504,5 @@ options:
             </body>
             </html>
 ```
-:::
 
+:::

@@ -64,4 +64,3 @@ actions:
             jobTitle: =@ctx.components.jobTitle.state.value
             companyName: =@ctx.components.companyName.state.value    
 ```
-

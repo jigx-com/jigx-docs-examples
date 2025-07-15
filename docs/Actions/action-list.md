@@ -19,6 +19,7 @@ An `action list` can be set up in various ways:
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Action-list as a primary action button
 
 ::::VerticalSplit{layout="middle"}
@@ -78,10 +79,12 @@ children:
             label: Phone number
             keyboardType: decimal-pad
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Action list as onPress/onChange
 
 ::::VerticalSplit{layout="middle"}
@@ -153,10 +156,12 @@ item:
                 entities:
                   - default/employees
 ```
+
 :::
 :::::
 
 ::::ExpandableHeading
+
 ### Action list as onRefresh/onFocus
 
 In this example when we refresh the jig/jig is focused, we call set-state and sync-entities actions.
@@ -203,6 +208,6 @@ onFocus:
           entities:
             - default/employees
 ```
+
 :::
 ::::
-

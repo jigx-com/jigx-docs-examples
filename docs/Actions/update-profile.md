@@ -3,9 +3,9 @@
 This action allows users to update specific information about themselves, which is displayed on the app's profile screen.
 
 This action can be configured within a jig in various ways, such as:
-&#x9;•	An action button
-&#x9;•	A header action link or icon
-&#x9;•	An event, e.g., `onPress`
+&#x9; An action button
+&#x9; A header action link or icon
+&#x9; An event, e.g., `onPress`
 
 ## Configuration options
 
@@ -23,6 +23,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Update-profile button in a jig
 
 ::::VerticalSplit{layout="middle"}
@@ -89,10 +90,12 @@ actions:
           # Provide text that displays on the action button.
           title: Update
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Update-profile in a jig-header link
 
 ::::VerticalSplit{layout="middle"}
@@ -155,10 +158,12 @@ children:
           options:
             label: App Name    
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Update-profile in a jig-header icon
 
 ::::VerticalSplit{layout="middle"}
@@ -223,10 +228,12 @@ children:
           options:
             label: App Name    
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Update-profile with onPress event
 
 ::::VerticalSplit{layout="middle"}
@@ -299,6 +306,6 @@ datasources:
           firstName: Robert
           displayName: Rob
 ```
+
 :::
 :::::
-

@@ -19,21 +19,20 @@ A `confirm` action can be set up in various ways:
 1. You can use it as a confirmation to request confirmation before performing an action
 2. You can use it as a confirmation after an action has successfully been performed
 
-## Examples and code snippets 
+## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Confirm action with modal
-
-
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QCU14bRGTq8hi9CRQMjJC_con-hiphone13blueportrait.png)
+![Confirm](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QCU14bRGTq8hi9CRQMjJC_con-hiphone13blueportrait.png)
 
 :::
 
 :::VerticalSplitItem
-This example has a c`onfirm `action with a nested `execute-entity` action. After pressing the button 'Update employee', a modal will be displayed - here, you confirm if you wish to proceed. When confirmed, the `execute-entity` action will proceed.
+This example has a c`onfirm` action with a nested `execute-entity` action. After pressing the button 'Update employee', a modal will be displayed - here, you confirm if you wish to proceed. When confirmed, the `execute-entity` action will proceed.
 
 **Example:**
 
@@ -72,18 +71,18 @@ actions:
                   cancel: 'Cancel'
             - type: action.go-back      
 ```
-:::
 
+:::
 
 :::::
 
 :::::ExpandableHeading
+
 ### Confirm action
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
 ![Confirm action](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DIJdtpUUQiTJCb7aHzUht_img9732iphone13blueportrait.png "Confirm action")
-
 
 :::
 
@@ -133,6 +132,6 @@ actions:
                         title: ''
             - type: action.go-back
 ```
+
 :::
 :::::
-

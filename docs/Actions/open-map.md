@@ -17,11 +17,11 @@ Some properties are common to all components, see [Common component properties](
 | **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `title`            | Provide the action with a title, for example, Navigate.                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `address`          | Address of location - geocode string address to location.&#xA;Valid formats are: &#xA;- **address string - city, street**, e.g.&#xA; \`address: 20 W 34th St., New York, NY 10001, USA<br />`or in an expression calling a datasource `=@ctx.datasources.address&#xA;- **latitude and longitude**, e.g.&#xA;address: 40.759412, -73.912306\` &#xA;- DMS format&#xA;**- latitude and longitude**, e.g.&#xA;address: &#xA;     latitude: 40.74860&#xA;     longitude: "-73.98566" |
+| `address`          | Address of location - geocode string address to location.&#xA;Valid formats are: &#xA;- **address string - city, street**, e.g.&#xA; \`address: 20 W 34th St., New York, NY 10001, USA<br>`or in an expression calling a datasource` =@ctx.datasources.address&#xA;- **latitude and longitude**, e.g.&#xA;address: 40.759412, -73.912306\` &#xA;- DMS format&#xA;**- latitude and longitude**, e.g.&#xA;address: &#xA;     latitude: 40.74860&#xA;     longitude: "-73.98566" |
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon](#) to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                       |
+| `icon`            | Select an [icon](https://docs.jigx.com/jigx-icons) to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                       |
 | `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
 | `styles`          | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
 
@@ -154,7 +154,8 @@ datasources:
           name: The lighthouse
           address: "40.74789, -74.01113"
           icon: lighthouse-bird
-```
+
+
 :::
 
 ### Open the map from a secondary action button
@@ -260,6 +261,7 @@ actions:
           # Specify the address for the action button.
           address: 40.7827902614508, -73.96559413203381
 ```
+
 :::
 
 ### Jig header with open-map action icon
@@ -320,5 +322,5 @@ children:
             young professionals fill the restaurants and bars of the South Street Seaport 
             and pedestrian-only Stone Street.
 ```
-:::
 
+:::

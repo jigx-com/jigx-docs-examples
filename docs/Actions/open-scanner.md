@@ -20,6 +20,7 @@ An `open-scanner` action can be set up in various ways:
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Open-scanner action
 
 ::::VerticalSplit{layout="middle"}
@@ -34,7 +35,7 @@ An `open-scanner` action can be set up in various ways:
 
 This is an example of using the open-scanner as a stand-alone action. In this case, the button appears at the bottom, and when pressed, it accesses the camera and allows us to scan the QR code.
 **Examples**:
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-action.jigx). 
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-action.jigx).
 
 :::CodeblockTabs
 open-scanner-action.jigx
@@ -61,10 +62,12 @@ actions:
           onSuccess: 
             type: action.go-back
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Open-scanner swipeable left/right
 
 ::::VerticalSplit{layout="middle"}
@@ -116,12 +119,13 @@ item:
               onSuccess: 
                 type: action.go-back
 ```
-:::
 
+:::
 
 :::::
 
 :::::ExpandableHeading
+
 ### Open-scanner rightElement
 
 ::::VerticalSplit{layout="middle"}
@@ -163,10 +167,12 @@ item:
           onSuccess: 
             type: action.go-back
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Open-scanner onSuccess
 
 ::::VerticalSplit{layout="middle"}
@@ -225,6 +231,6 @@ children:
           options:
             label: Signature required
 ```
+
 :::
 :::::
-

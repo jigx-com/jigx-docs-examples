@@ -157,6 +157,6 @@ actions:
           title: Next appointment
           # Reference the action identifier configured in the jig.tabs.
           action: next-appointment            
-```
-:::
 
+
+:::

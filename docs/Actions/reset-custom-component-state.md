@@ -7,8 +7,6 @@ updatedAt: Thu Feb 20 2025 08:31:06 GMT+0000 (Coordinated Universal Time)
 
 INTRO
 
-
-
 ## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
@@ -25,4 +23,3 @@ Some properties are common to all components, see [Common component properties](
 |                   |   |
 |                   |   |
 |                   |   |
-
