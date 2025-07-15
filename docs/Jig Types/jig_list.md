@@ -1350,9 +1350,6 @@ See the full datasource code sample for [dynamic data](https://github.com/jigx-c
 Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
 :::
 ::::
-:::::
-
-\::::
 ::::::
 
 :::CodeblockTabs
