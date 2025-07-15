@@ -1,10 +1,9 @@
----
-title: Overview
-slug: _u2q-overview
-description: Learn how to access jigx-samples and jigx-widgets with three simple options in this document. Add the solutions to your organization from JigxManagement's Quick Start area, clone the sample projects from GitHub, or download the samples in ZIP format. Find
-createdAt: Tue Jun 07 2022 10:41:07 GMT+0000 (Coordinated Universal Time)
-updatedAt: Thu Mar 13 2025 07:32:35 GMT+0000 (Coordinated Universal Time)
----
+# Overview
+
+:::hint{type="danger"}
+🚧 **Notice: Documentation is currently unstable**
+&#x20;Due to ongoing issues with Archbee, some content may be incomplete or missing. Jigx is aware of the situation and will be transitioning to a new documentation platform soon. We appreciate your patience and understanding.
+:::
 
 Welcome to the reference documentation for Jigx. This guide provides detailed information on the properties, actions, and states with practical code examples to help you effectively utilize our schema. This reference content is designed to be a comprehensive resource for all your needs, covering:
 
