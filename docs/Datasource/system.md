@@ -1,7 +1,7 @@
 ---
 title: system
 slug: _E0A-system
-description: Learn how to utilize the system datasource in Jig UI components for efficient data management. This document outlines two methods of implementation: configuring it locally for storing data within a Jig, or setting it up globally for seamless access across
+description: Learn how to utilize the system datasource in Jig UI components for efficient data management. This document outlines two methods of implementation, configuring it locally for storing data within a Jig, or setting it up globally for seamless access across
 createdAt: Thu Jun 09 2022 18:33:57 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Feb 25 2025 10:32:26 GMT+0000 (Coordinated Universal Time)
 ---
