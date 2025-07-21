@@ -19,9 +19,10 @@ The grid component has two available configuration options:
 | `type`             | Within a grid component, the [grid-item](./grid/grid-item.md) component is used to define each of the elements in the grid layout. Within the `grid-item` a select set of components can be configured.   |
 | `data`             | Configure a datasource to call the data in the grid layout. The data property is required for the Auto Grid, but is optional for the Custom Grid selection.                                               |
 
-## Examples and code snippets 
+## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Auto grid
 
 ::::VerticalSplit{layout="middle"}
@@ -87,12 +88,13 @@ datasources:
           '$.service'  
         FROM [default/cleaning-services]
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
-  
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Custom grid
 
 ::::VerticalSplit{layout="middle"}
@@ -293,6 +295,6 @@ widgets:
             - data: =@ctx.datasources.static-data-2
               color: positive
 ```
+
 :::
 :::::
-

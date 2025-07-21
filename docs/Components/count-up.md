@@ -26,6 +26,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Count-up basic
 
 ::::VerticalSplit{layout="middle"}
@@ -68,10 +69,12 @@ children:
       # Provide the start time.
       startTimestamp: =$now()
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Count-up sizes and lables
 
 ::::VerticalSplit{layout="middle"}
@@ -130,13 +133,14 @@ children:
            # Set the component's size as medium.   
           size: medium
           # Start time defined in ISO format converted to milliseconds.
-          startTimestamp: =$toMillis('2025-03-06T23:00:00Z')
-              
+          startTimestamp: =$toMillis('2025-03-06T23:00:00Z')              
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Count-up using a datasource
 
 ::::VerticalSplit{layout="middle"}
@@ -195,12 +199,13 @@ children:
         options:
           # Start time defined in ISO format in a datasource converted to milliseconds.
           startTimestamp: =$toMillis(@ctx.datasources.time[1].timeStamp)
-
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Count-up using state in a when condition
 
 ::::VerticalSplit{layout="middle"}
@@ -290,6 +295,6 @@ children:
     options:
       startTimestamp: =$millis() - 10000
 ```
+
 :::
 :::::
-

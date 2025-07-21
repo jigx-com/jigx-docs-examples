@@ -23,13 +23,14 @@ Some properties are common to all components, see [Common component properties](
 | **Other options** |                                                                                                                                                                                                                                                                                                                        |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `isExpandable`    | Set to `true` the stepper will be expandable into steps. Set to `false` the stepper is not expandable.                                                                                                                                                                                                                 |
-| `style`           | The styling determines the color of the chart. There are three colors options. For example if the status is complete use `isPositive` to show the chart in green. If no style is specified the chart shows in blue.&#xA; are styling sets:&#xA;`isNegative` - red<br />`isPositive` -  green<br />`isWarning` - orange |
+| `style`           | The styling determines the color of the chart. There are three colors options. For example if the status is complete use `isPositive` to show the chart in green. If no style is specified the chart shows in blue.&#xA; are styling sets:&#xA;`isNegative` - red<br>`isPositive` -  green<br>`isWarning` - orange |
 | `subtitle`        | The subtitle/short description of the stepper to display under the title. You can use an expression to set the subtitle.                                                                                                                                                                                               |
 | `title`           | The title for the stepper, you can use an expression to set the title.                                                                                                                                                                                                                                                 |
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Stepper example
 
 ::::VerticalSplit{layout="left"}
@@ -166,6 +167,6 @@ datasources:
         FROM [default/steps]
         ORDER BY value
 ```
+
 :::
 :::::
-

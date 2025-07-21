@@ -171,6 +171,7 @@ children:
             label: thumbnailContentType
             value: =@ctx.datasources.receipt-ds.thumbnailContentType
 ```
+
 :::
 
 ## Downloading multiple files
@@ -200,6 +201,7 @@ download-multiple-files
                 }
               })
 ```
+
 :::
 
 ## Download a file in Jigx Management
@@ -210,4 +212,3 @@ Files can be uploaded in Management by following these steps:
 2. Browse to the required solution's **data** tab and select the record containing the file to be downloaded.
 3. Select the **File** tab in the Edit record pane.
 4. To download the file use the **Download file** link at the top of the record.
-

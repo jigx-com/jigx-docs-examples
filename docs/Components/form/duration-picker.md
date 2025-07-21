@@ -23,13 +23,13 @@ Some properties are common to all components, see [Common component properties](
 | **Core structure** |                                                                                                                                                 |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | `instanceId`       | The unique identifier for the duration-picker, and can be used in inputs in other properties or jigs, or to set a component's state.            |
-| `label`            | Provide a label/name for the duration-picker. 'Label' is displayed as a placeholder when no value is specified. [Localization](#) is supported. |
+| `label`            | Provide a label/name for the duration-picker. 'Label' is displayed as a placeholder when no value is specified. [Localization](https://docs.jigx.com/localization) is supported. |
 
 | **Other options**       |                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`                 | Sets the color of the duration-picker based on conditions by using the `when` property. First evaluated to `true` will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](#).                                                                                                                    |
-| `errorText`             | Add text, string, or expressions to show text under the duration-picker indicating an error/invalid value in the field. Text is shown in `isNegative` (red) styling.  [Localization](#) is supported.                                                                                                                                                                                                                               |
-| `helperText`            | Add text, string, or expressions to guide users by showing text under the duration-picker. Helper text is displayed only when there is no `errorText`. [Localization](#) is supported.                                                                                                                                                                                                                                              |
+| `color`                 | Sets the color of the duration-picker based on conditions by using the `when` property. First evaluated to `true` will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](https://docs.jigx.com/jigx-color-palette).                                                                                                                    |
+| `errorText`             | Add text, string, or expressions to show text under the duration-picker indicating an error/invalid value in the field. Text is shown in `isNegative` (red) styling.  [Localization](https://docs.jigx.com/localization) is supported.                                                                                                                                                                                                                               |
+| `helperText`            | Add text, string, or expressions to guide users by showing text under the duration-picker. Helper text is displayed only when there is no `errorText`. [Localization](https://docs.jigx.com/localization) is supported.                                                                                                                                                                                                                                              |
 | `hours`                 | Specify whether the duration-picker will use hours or not.&#xA;`isEnabled` - `true` is the default, `false` disables the hour selector which is greyed out.&#xA;`step` - Determine the increments in which the hours will be displayed. For example, an increment of 2 will display the hours for selection as 2, 4, 6, 8, ... 22.                                                                                                  |
 | `initialValue`          | The `initialValue` is the duration that will be displayed in the duration-picker when the form is initially loaded. Specified in seconds, for example, 1800 for 30 mins. You can use this property to preset the duration-picker with a default value so that you do not have to manually select it. For example, if most field-service appointments are 30 mins then preset the duration-picker `initialValue` property with 1800. |
 | `isHidden`              | If `true` the duration-picker will be hidden on the form. If set to `false` the field will be shown.                                                                                                                                                                                                                                                                                                                                |
@@ -60,6 +60,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Basic duration-picker
 
 ::::VerticalSplit{layout="middle"}
@@ -173,10 +174,12 @@ actions:
             duration: =@ctx.components.duration.state.value
             satisfaction: =@ctx.components.satisfaction.state.value 
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Duration-picker  with hours and steps
 
 ::::VerticalSplit{layout="middle"}
@@ -276,10 +279,12 @@ actions:
  # Save the duration selected to Dynamic Data           
             appointment-time: =@ctx.components.appointment-time.state.value
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Duration-picker  with minutes and steps
 
 ::::VerticalSplit{layout="middle"}
@@ -386,10 +391,12 @@ actions:
             patrol-duration: =@ctx.components.patrol-duration.state.value
             issues: =@ctx.components.issues.state.value
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Duration-picker  with an onChange  event
 
 ::::VerticalSplit{layout="middle"}
@@ -514,10 +521,12 @@ children:
               options:
                 linkTo: simple-list-dd
 ```
+
 :::
 :::::
 
 ::::ExpandableHeading
+
 ### Duration-picker  with initialValue&#x20;
 
 ![Duration-picker with initialValue](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Erx7M0rnyDqmU1rLYTLky-20241023-151348.PNG "Duration-picker with initialValue")
@@ -636,10 +645,12 @@ actions:
           modal:
             title: Shift hours sent for approval  
 ```
+
 :::
 ::::
 
 :::::ExpandableHeading
+
 ### Duration-picker  with color
 
 ::::VerticalSplit{layout="middle"}
@@ -756,6 +767,6 @@ actions:
 # Save the duration selected to Dynamic Data            
             inspection-time: =@ctx.components.inspection-time.state.value
 ```
+
 :::
 :::::
-

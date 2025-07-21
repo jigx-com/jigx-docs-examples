@@ -6,7 +6,7 @@
 :::VerticalSplitItem
 In this example, an expense claim form allows you to capture expense details and upload a file, such as a slip or invoice.
 
-The `media-field` is configured to accept `any` file type, with a `maximumFileSize` set to ensure files remain within acceptable limits. An `execute-entity` action creates the record in the datasource and links the uploaded file to the record by using the `create `method, with the `file` specified in the `localPath` property.
+The `media-field` is configured to accept `any` file type, with a `maximumFileSize` set to ensure files remain within acceptable limits. An `execute-entity` action creates the record in the datasource and links the uploaded file to the record by using the `create` method, with the `file` specified in the `localPath` property.
 :::
 
 :::VerticalSplitItem
@@ -87,6 +87,7 @@ actions:
                 file: 
                   localPath: =@ctx.components.expenseimage.state.value
 ```
+
 :::
 
 In Management the record is created in the **expense** dynamic data table and the file is linked to the record. The file and metadata is displayed in the file tab of the record. The file thumbnail is displayed in the system file column (use column settings to set the column to visible).

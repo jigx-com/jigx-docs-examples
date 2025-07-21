@@ -21,8 +21,8 @@ Some properties are common to all components, see [Common component properties](
 | `progress`        | Add a colorful visualization (background color of your choice) of the list item's progress. The color displays from left to right, and the range of the allowed values is from  0 to 1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `rightElement`    | Set an element to the right of the list. The following elements are available:&#xA;`amountControl`&#xA;`badge` - can be a solid colored badge or a badge with a number in it. Badges  always use the primary color.&#xA;`button`&#xA;`checkbox`&#xA;`icon`&#xA;`switch`&#xA;`value` - When using `text`, the option to change its `color` is available.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `subtitle`        | The subtitle or description should be displayed together with the title on the list-item. You can format the text of these properties if you select the `Text With Format` option in the IntelliSense (ctrl + space).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `tags`            | A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.&#xA;`text` -  The text content displayed within the tag.&#xA;`color` - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in [Jigx color palette](#). &#xA;Tags can be set up in three ways: &#xA;1) Using a dynamic expression from a datasource:&#xA;`tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}`&#xA;2) Using a dynamic expression from a list item:&#xA;`tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}`&#xA;3) Using static, predefined tags&#xA;`tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `rating`          | Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the `ratingIcon`, `color`, and accompanying descriptive `text`. By default, the rating property has only one icon showing a rating-star in the primary color.&#xA;`value`- Rating with numerical value.&#xA;The value of the rating, which can be a simple number.&#xA;The number of icons is calculated based on this value unless overridden in the icon configuration.&#xA;Configuring the `current` and `maximum` values, shows the value as a fraction, for example 7/10.&#xA;`percentage` - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%.&#xA;`ratingIcon` - By default the *rating-star* icon in the *primary* color is displayed.&#xA;`icon` - Add an icon to represent the rating. A list of icons is available. See [Jigx icons](#) for more information.&#xA;`color`- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](#).&#xA;`current` and `maximum` values - Where maximum is the number of icons to display and current the number of icons to color.&#xA;`text` - Add a descriptive text that displays next to the rating.&#xA;Ratings can set up in the following ways: &#xA;1\) Example of `value` for a product rating.&#xA;2\) Example of a user rating shown in a `percentage`.&#xA;3\)Example of `value` rating showing 2.5/5 as a rating with single star icon. |
+| `tags`            | A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.&#xA;`text` -  The text content displayed within the tag.&#xA;`color` - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in [Jigx color palette](https://docs.jigx.com/jigx-color-palette). &#xA;Tags can be set up in three ways: &#xA;1) Using a dynamic expression from a datasource:&#xA;`tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}`&#xA;2) Using a dynamic expression from a list item:&#xA;`tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}`&#xA;3) Using static, predefined tags&#xA;`tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `rating`          | Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the `ratingIcon`, `color`, and accompanying descriptive `text`. By default, the rating property has only one icon showing a rating-star in the primary color.&#xA;`value`- Rating with numerical value.&#xA;The value of the rating, which can be a simple number.&#xA;The number of icons is calculated based on this value unless overridden in the icon configuration.&#xA;Configuring the `current` and `maximum` values, shows the value as a fraction, for example 7/10.&#xA;`percentage` - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%.&#xA;`ratingIcon` - By default the *rating-star* icon in the *primary* color is displayed.&#xA;`icon` - Add an icon to represent the rating. A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.&#xA;`color`- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](https://docs.jigx.com/jigx-color-palette).&#xA;`current` and `maximum` values - Where maximum is the number of icons to display and current the number of icons to color.&#xA;`text` - Add a descriptive text that displays next to the rating.&#xA;Ratings can set up in the following ways: &#xA;1\) Example of `value` for a product rating.&#xA;2\) Example of a user rating shown in a `percentage`.&#xA;3\)Example of `value` rating showing 2.5/5 as a rating with single star icon. |
 
 :::CodeblockTabs
 product-rating-value
@@ -52,6 +52,7 @@ rating:
    ratingIcon:
       icon: rating-star
 ```
+
 :::
 
 | **Actions** |                                                                                                                                                                             |
@@ -77,6 +78,7 @@ rating:
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Simple list
 
 ::::VerticalSplit{layout="middle"}
@@ -243,6 +245,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
+
 ### Simple list with dividers
 
 ::::VerticalSplit{layout="middle"}
@@ -407,10 +410,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with colored progress bars
 
 ::::VerticalSplit{layout="middle"}
@@ -591,10 +596,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with charts
 
 ::::VerticalSplit{layout="middle"}
@@ -861,10 +868,12 @@ datasources:
         LEFT JOIN [default/finance-review-dynamic] B ON
         json_extract(A.Data, '$.year') = json_extract(B.Data, '$.year')
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with avatars
 
 ::::VerticalSplit{layout="middle"}
@@ -930,10 +939,12 @@ datasources:
             - uri: https://images.unsplash.com/photo-1542740348-39501cd6e2b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80
               text: Lucy Williams
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with left avatar
 
 ::::VerticalSplit{layout="middle"}
@@ -1104,10 +1115,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 ::::::ExpandableHeading
+
 ### List with left checkboxes
 
 :::::VerticalSplit{layout="middle"}
@@ -1280,10 +1293,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 ::::::
 
 :::::ExpandableHeading
+
 ### List with the left icons
 
 ::::VerticalSplit{layout="middle"}
@@ -1452,10 +1467,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with the left image
 
 ::::VerticalSplit{layout="middle"}
@@ -1626,10 +1643,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with left progress
 
 ::::VerticalSplit{layout="middle"}
@@ -1800,10 +1819,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Swipeable list (left)
 
 ::::VerticalSplit{layout="middle"}
@@ -2014,10 +2035,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with the right amount control
 
 ::::VerticalSplit{layout="middle"}
@@ -2207,10 +2230,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with the right badges
 
 ::::VerticalSplit{layout="middle"}
@@ -2379,10 +2404,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with right numbered badges
 
 ::::VerticalSplit{layout="middle"}
@@ -2494,10 +2521,12 @@ datasources:
           name: Medium
           icon: equal-math-symbol-circle
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with right Buttons
 
 ::::VerticalSplit{layout="middle"}
@@ -2670,10 +2699,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with the right icons
 
 ::::VerticalSplit{layout="middle"}
@@ -2842,10 +2873,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with the right switch
 
 ::::VerticalSplit{layout="middle"}
@@ -3014,10 +3047,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with the right value
 
 ::::VerticalSplit{layout="middle"}
@@ -3213,10 +3248,12 @@ options:
       '$.quantity'
     FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Swipeable list (right)
 
 ::::VerticalSplit{layout="middle"}
@@ -3428,10 +3465,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with active item
 
 This allows you to see when you are interacting with a specific list-item. Whilst interacting, the list item changes slightly making it clear which item you are interacting with.
@@ -3642,10 +3681,12 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List with sections
 
 ::::VerticalSplit{layout="middle"}
@@ -3840,18 +3881,20 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
-### List items contained in a card&#x20;
+
+### List items contained in a card
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 This example use the `isContained` property set to `true` to style each item by wrapping it in a card. The code sample below is for a vertical list. You can also wrap list items in a card for a horizontal list.  &#x20;
 
 \*\*Examples:
-\*\*See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-item-contained.jigx" target="_blank">GitHub</a>.&#x20;
+\*\*See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-item-contained.jigx).
 :::
 
 :::VerticalSplitItem
@@ -3892,10 +3935,12 @@ item:
       text: =@ctx.current.item.service
       uri: =@ctx.current.item.image
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List-item with ratings as a value
 
 ::::VerticalSplit{layout="middle"}
@@ -3903,7 +3948,7 @@ item:
 This example uses the basic `rating` configuration to display a `value` with accompanying `text`. By default, the rating shows a single star in the primary color&#x20;
 
 **Examples:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-rating/list-item-rating-value.jigx" target="_blank">GitHub</a>.
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-rating/list-item-rating-value.jigx).
 :::
 
 :::VerticalSplitItem
@@ -4061,10 +4106,12 @@ datasources:
           ratingText: Excellent service
           rating: 9
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List-item with ratings as a percentage
 
 ::::VerticalSplit{layout="middle"}
@@ -4119,7 +4166,7 @@ children:
             isDuotone: true
 ```
 
-control-stats (datasource
+control-stats (datasource)
 
 ```yaml
 datasources:
@@ -4154,10 +4201,12 @@ datasources:
           percentage: 0.9 
           icon: select   
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List-item with ratings with a percentage, minimum, maximum and icon
 
 ::::VerticalSplit{layout="middle"}
@@ -4322,10 +4371,12 @@ options:
       product: 3
       text: KL
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List-item with multiple tags
 
 ::::VerticalSplit{layout="middle"}
@@ -4337,7 +4388,7 @@ This example creates a list with multiple `tags` shown on each list-item.&#x20;
 - A product image shown as an `avatar` on the left side.
 
 **Examples:**
-See the full example in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-tags/list-item-tags-multiple.jigx" target="_blank">GitHub</a>.
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-tags/list-item-tags-multiple.jigx).
 :::
 
 :::VerticalSplitItem
@@ -4414,10 +4465,12 @@ datasources:
          
         FROM [default/tasks]
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List-item with ratings and tags
 
 ::::VerticalSplit{layout="middle"}
@@ -4528,10 +4581,12 @@ options:
       '$.rating'
     FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### List-item outside a list
 
 ::::VerticalSplit{layout="middle"}
@@ -4597,10 +4652,11 @@ children:
                         description: Bookings for groups of ten or more are charged at $20 per guest.
                         buttonText: rightBook
 ```
+
 :::::
 
 ## See also
 
 - [list](./../list.md)
 - [jig.list](<./../../Jig Types/jig_list.md>)
-- [State](#)
+- [State](https://docs.jigx.com/state)

@@ -21,10 +21,10 @@ Some properties are common to all components, see [Common component properties](
 
 | **Other options**       |                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`                 | Sets the color of the dropdown property based on conditions by using the `when` property. First evaluated to `true` will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](#).                                                                                                                                   |
+| `color`                 | Sets the color of the dropdown property based on conditions by using the `when` property. First evaluated to `true` will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](https://docs.jigx.com/jigx-color-palette).                                                                                                                                   |
 | `errorText`             | Add text, string, or expressions to show text under the dropdown indicating an error/invalid value in the field. Text is shown in `isNegative` (red) styling with a red exclamation icon on the right.                                                                                                                                                                                                                                               |
 | `helperText`            | Add text, string, or expressions to guide users by showing text under the dropdown. Helper text is displayed only when there is no errorText.                                                                                                                                                                                                                                                                                                        |
-| `icon`                  | Add an icon to the title. A list of icons is available. See [Jigx icons](#) for more information.                                                                                                                                                                                                                                                                                                                                                    |
+| `icon`                  | Add an icon to the title. A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.                                                                                                                                                                                                                                                                                                                                                    |
 | `initialValue`          | The `initialValue` is the value that will be displayed in the dropdown when the form is initially loaded. You can use this property to preset the dropdown with a default value so that you do not have to manually select it. Using the `reset-state` action with `initialValues` does not clear the dropdown field, it resets the field back to it's `initialValue`.                                                                               |
 | `isAutoFocused`         | If `true` the dropdown will get focus immediately after the form is displayed.                                                                                                                                                                                                                                                                                                                                                                       |
 | `isHidden`              | If `true` the dropdown will be hidden on the form. If set to `false` the field will be shown.                                                                                                                                                                                                                                                                                                                                                        |
@@ -36,7 +36,7 @@ Some properties are common to all components, see [Common component properties](
 | `isSearchAutoFocused`   | If set to `true` the searchable input will get focus immediately when opened.                                                                                                                                                                                                                                                                                                                                                                        |
 | `nextProperty`          | Name of the property you want to focus next in the form when you use return/next on a keyboard.                                                                                                                                                                                                                                                                                                                                                      |
 | `style`                 | The following property settings are available:&#xA;- `flex` - Flex property if rendered inside row.&#xA;- `isBusy` - Displays spinner on right side of field. It removes any  configured icon.&#xA;- `isDisabled` - disables the dropdown preventing the dropdown-items popup from displaying.&#xA;- `isPositive` - a green icon displays on the right of the dropdown field.&#xA;More than one can be true. It will be evaluated based on priority. |
-| `value`                 | The value to show in the dropdown, e.g. you can configure the first dropdown-item for be selected by default when the form loads. For example, `value: =@ctx.datasources.employees-static[0].firstName `                                                                                                                                                                                                                                             |
+| `value`                 | The value to show in the dropdown, e.g. you can configure the first dropdown-item for be selected by default when the form loads. For example, `value: =@ctx.datasources.employees-static[0].firstName`                                                                                                                                                                                                                                             |
 
 | **Other options for dropdown-item** |                                                                                                                                                                 |
 | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -59,6 +59,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Default dropdown example
 
 ::::VerticalSplit{layout="left"}
@@ -187,10 +188,12 @@ datasources:
           '$.time'
         FROM [default/employees] WHERE '$.category' = "employees" ORDER BY '$.firstname' ASC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Multiple select dropdown
 
 ::::VerticalSplit{layout="middle"}
@@ -325,10 +328,12 @@ datasources:
           '$.time'
         FROM [default/employees] WHERE '$.category' = "employees" ORDER BY '$.firstname' ASC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Search dropdown
 
 ::::VerticalSplit{layout="middle"}
@@ -466,10 +471,12 @@ datasources:
       queryParameters:
         '@search': =@ctx.components.dropdown-in.state.searchText
 ```
+
 :::
 :::::
 
 ::::ExpandableHeading
+
 ### Dropdown with a default value
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZLtcAYaEPxEK7rdQiwCCd_ddown-default-value.png" size="80" position="center" caption="Dropdown with default value" alt="dropdown with default value" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZLtcAYaEPxEK7rdQiwCCd_ddown-default-value.png"}
@@ -540,10 +547,10 @@ datasources:
           position: Marketing
           img: https://images.unsplash.com/photo-1548449112-96a38a643324?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80
 ```
+
 :::
 ::::
 
 ## See also
 
-- [State](#)
-
+- [State](https://docs.jigx.com/state)

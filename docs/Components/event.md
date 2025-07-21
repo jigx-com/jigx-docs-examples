@@ -8,8 +8,8 @@ Some properties are common to all components, see [Common component properties](
 
 | **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `from`             | Configure the starting time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;For more information about the setting of the date format/ time zones, refer to [Expressions - cheatsheet](#). |
-| `to`               | Configure the ending time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;For more information about the setting of the date format/ time zones, refer to [Expressions - cheatsheet](#).   |
+| `from`             | Configure the starting time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;For more information about the setting of the date format/ time zones, refer to [Expressions - cheatsheet](https://docs.jigx.com/expressions-cheatsheet). |
+| `to`               | Configure the ending time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;For more information about the setting of the date format/ time zones, refer to [Expressions - cheatsheet](https://docs.jigx.com/expressions-cheatsheet).   |
 | `title`            | Provide the name of the event.                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                   |
@@ -29,6 +29,7 @@ Certain actions can be executed on the event; for example, when pressing on the 
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Event of meeting
 
 ::::VerticalSplit{layout="left"}
@@ -146,12 +147,13 @@ options:
       '$.color',
       '$.category'
     FROM [default/calendar] WHERE category = "meeting"
-
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Event of training
 
 ::::VerticalSplit{layout="left"}
@@ -237,10 +239,12 @@ options:
       '$.category' 
     FROM [default/calendar] WHERE '$.category' = 'meeting-event'
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Event with action
 
 ::::VerticalSplit{layout="middle"}
@@ -502,6 +506,6 @@ children:
             label: Phone
             value: =@ctx.datasources.employee-detail-dynamic.phone
 ```
+
 :::
 :::::
-

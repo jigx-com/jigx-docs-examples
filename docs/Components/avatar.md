@@ -20,13 +20,14 @@ Some properties are common to all components, see [Common component properties](
 
 | **Other options** |                                                                                                      |
 | ----------------- | ---------------------------------------------------------------------------------------------------- |
-| `align`           | By default the avatar is aligned `left` but can be changed to:&#xA;`center`<br />`left`<br />`right` |
-| `size`            | <br />The size of the avatar can be set to:&#xA;`small`<br />`regular`<br />`large`                  |
+| `align`           | By default the avatar is aligned `left` but can be changed to:&#xA;`center`<br>`left`<br>`right` |
+| `size`            | <br>The size of the avatar can be set to:&#xA;`small`<br>`regular`<br>`large`                  |
 | `uri`             | Source of the image to display as the avatar.                                                        |
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Avatar as children of jig (profile picture)
 
 ::::VerticalSplit{layout="left"}
@@ -43,7 +44,7 @@ See the full code sample using dynamic data in [GitHub](https://github.com/jigx
 
 **Datasources:**
 See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global.jigx).
-See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/dynamic-global.jigx).. 
+See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/dynamic-global.jigx).
 :::
 ::::
 
@@ -132,10 +133,12 @@ datasources:
           '$.phone'
         FROM [default/global]
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Avatar as children of jig (initials)
 
 ::::VerticalSplit{layout="left"}
@@ -235,6 +238,6 @@ datasources:
           '$.phone'
         FROM [default/global]
 ```
+
 :::
 :::::
-

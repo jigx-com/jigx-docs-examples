@@ -10,7 +10,7 @@ The field-row component contains other components and displays them on the same 
 
 ## Considerations
 
-- Rows can contain<a href="https://docs.jigx.com/examples/entity-field" target="_blank"> [entity-field](./entity-field.md)</a> components:
+- Rows can contain [entity-field](./entity-field.md)</a> components:
   - On a [default jig](<./../../Jig Types/jig_default.md>) or children components
   - On a [form](./../form.md) component
   - Nested under [section](./section.md) components
@@ -21,6 +21,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Field-row components with entity-fields (Display only)
 
 ::::VerticalSplit{layout="left"}
@@ -240,10 +241,12 @@ datasources:
           '$.time' 
         FROM [default/cleaning-services] WHERE '$.service' = "Mattress Cleaning"
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Field-row components on form with children components (Display and input)
 
 ::::VerticalSplit{layout="left"}
@@ -342,6 +345,6 @@ datasources:
           '$.time' 
         FROM [default/cleaning-services] WHERE '$.service' = "Mattress Cleaning"
 ```
+
 :::
 :::::
-

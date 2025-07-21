@@ -27,10 +27,10 @@ Some properties are common to all components, see [Common component properties](
 
 | **Other options**                 |                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`                           | Sets the color of the email-field property based on conditions by using the `when` property. First evaluated to `true` will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](#).                                                                                                      |
+| `color`                           | Sets the color of the email-field property based on conditions by using the `when` property. First evaluated to `true` will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](https://docs.jigx.com/jigx-color-palette).                                                                                                      |
 | `errorText`                       | Add text, string, or expressions to show text under the email-field indicating an error/invalid value in the field. Text is shown in `isNegative` (red) styling with a red exclamation icon on the right.                                                                                                                                                                                                                  |
 | `helperText`                      | Add text, string, or expressions to guide users by showing text under the email-field. Helper text is displayed only when there is no errorText.                                                                                                                                                                                                                                                                           |
-| `icon`                            | Add an icon to the email-field. The icon apprears on the far right of the field.  A list of icons is available. See [Jigx icons](#) for more information.                                                                                                                                                                                                                                                                  |
+| `icon`                            | Add an icon to the email-field. The icon apprears on the far right of the field.  A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.                                                                                                                                                                                                                                                                  |
 | `initialValue`                    | The `initialValue` is the value that will be displayed in the email-field when the form is initially loaded. You can use this property to preset the field with a default email address so that you do not have to manually select it. Using the `reset-state` action with `initialValues` does not clear the field, it resets the field back to it's `initialValue`.                                                      |
 | `isAutoFocused`                   | If `true` the email-field will get focus immediately after the form is displayed.                                                                                                                                                                                                                                                                                                                                          |
 | `isHidden`                        | If `true` the email-field will be hidden on the form. If set to `false` the field will be shown.                                                                                                                                                                                                                                                                                                                           |
@@ -57,6 +57,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Email Field on Form
 
 ::::VerticalSplit{layout="middle"}
@@ -132,10 +133,10 @@ children:
             label: Email
             helperText: =@ctx.datasources.field-values.email
 ```
+
 :::
 :::::
 
 ## See also
 
-- [State](#)
-
+- [State](https://docs.jigx.com/state)

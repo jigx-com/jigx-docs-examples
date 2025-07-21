@@ -27,11 +27,11 @@ Some properties are common to all components, see [Common component properties](
 
 | **Other options**                 |                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`                           | Sets the color of the number-field property based on conditions by using the `when` property. First evaluated to `true` will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](#).                                                                                                       |
+| `color`                           | Sets the color of the number-field property based on conditions by using the `when` property. First evaluated to `true` will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](https://docs.jigx.com/jigx-color-palette).                                                                                                       |
 | `errorText`                       | Add text, string, or expressions to show text under the number-field indicating an error/invalid value in the field. Text is shown in `isNegative` (red) styling with a red exclamation icon on the right.                                                                                                                                                                                                                   |
 | `format`                          | Text Format of the value entered. Format is enabled only if field is configured to disabled.  `style: isDisabled: true`                                                                                                                                                                                                                                                                                                      |
 | `helperText`                      | Add text, string, or expressions to guide users by showing text under the number-field. Helper text is displayed only when there is no errorText.                                                                                                                                                                                                                                                                            |
-| `icon`                            | Add an icon to the number-field, for example a dollar icon. The icon apprears on the far right of the field.  A list of icons is available. See [Jigx icons](#) for more information.                                                                                                                                                                                                                                        |
+| `icon`                            | Add an icon to the number-field, for example a dollar icon. The icon apprears on the far right of the field.  A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.                                                                                                                                                                                                                                        |
 | `initialValue`                    | The `initialValue` is the value that will be displayed in the number-field when the form is initially loaded. You can use this property to preset the field with a default number so that you do not have to manually select it. Using the `reset-state` action with `initialValues` does not clear the field, it resets the field back to it's `initialValue`.                                                              |
 | `isAutoFocused`                   | If `true` the number-field will get focus immediately after the form is displayed and the number keyboard will be opened automatically.                                                                                                                                                                                                                                                                                      |
 | `isHidden`                        | If `true` the number-field will be hidden on the form. If set to `false` the field will be shown.                                                                                                                                                                                                                                                                                                                            |
@@ -61,6 +61,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 ::::ExpandableHeading
+
 ### Number Field on Form
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZehuKgdayEDjBvecia7S7_cc-numberfield.png" size="82" position="center" caption="Form with number field" alt="Form with number fields" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZehuKgdayEDjBvecia7S7_cc-numberfield.png"}
@@ -153,10 +154,10 @@ children:
             label: Number 
             helperText: =@ctx.datasources.field-values.number
 ```
+
 :::
 ::::
 
 ## See also
 
-- [State](#)
-
+- [State](https://docs.jigx.com/state)

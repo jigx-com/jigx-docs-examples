@@ -1,19 +1,20 @@
 # List a single customer (SELECT)
 
 :::hint{type="warning"}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information.
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](https://docs.jigx.com/microsoft-azure-sql) for more information.
 :::
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-# Scenario
+
+## Scenario
 
 View the customer's details by pressing on the customer in the list, which opens the customer's details in a default jig.
 
 ## Resources
 
 - Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<./Database Scripts.md>).
-- [Configuring the SQL Connection](#).
+- [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection).
 - This sample depends on [List customers (SELECT)](<./List customers _SELECT_.md>).
 
 ## Jigx Code
@@ -29,7 +30,7 @@ The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samp
 ## How it works
 
 This example selects a customer from the list and uses the CustomerId to return the customer's details to the default jig on the device, using the SQL data provider's function, where it is stored in the SQLite database. In the default jig the data is selected from the SQLite database using a SQL query in a data source which in turn is used by the  jig to render the details in entity fields.
-The functions used to return a single record use **forRowsWithMatchingIds: true. **Only records in the SQLite table with a matching id will be updated. When forRowsWithMatchingIds is false or omitted, all records in the SQLite table will be deleted, and only the records returned by the stored procedure, or query statement will be inserted.
+The functions used to return a single record use **forRowsWithMatchingIds: true**.Only records in the SQLite table with a matching id will be updated. When forRowsWithMatchingIds is false or omitted, all records in the SQLite table will be deleted, and only the records returned by the stored procedure, or query statement will be inserted.
 
 ## Functions
 
@@ -57,6 +58,7 @@ parameters:
 # One of the columns returned by the stored procedure is called id. Only records in the SQLite table with a matching id will be updated. When forRowsWithMatchingIds is false or omitted, all records in the SQLite table will be deleted, and only the records returned by the store procedure will be inserted.
 forRowsWithMatchingIds: true
 ```
+
 :::
 
 ### A query-based version of get-customer.jigx
@@ -95,6 +97,7 @@ parameters:
 # One of the columns returned by the query statement is called id. Only records in the SQLite table with a matching id will be updated. When forRowsWithMatchingIds is false or omitted, all records in the SQLite table will be deleted, and only the records returned by the query statement will be inserted.
 forRowsWithMatchingIds: true
 ```
+
 :::
 
 ## Jigs
@@ -192,6 +195,7 @@ item:
           # The id column of the current item being pressed on is passed as a parameter called customerId to the viewCustomer jig.
           customerId: =@ctx.current.item.id
 ```
+
 :::
 
 ### View customer jig
@@ -320,6 +324,7 @@ children:
             label: Zip
             value: =@ctx.datasources.mydata.zip_code                                  
 ```
+
 :::
 
 ## index
@@ -339,4 +344,5 @@ tabs:
     jigId: listCustomers
     icon: home-apps-logo
 ```
+
 :::

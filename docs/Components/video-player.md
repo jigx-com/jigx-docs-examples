@@ -8,15 +8,15 @@ Some properties are common to all components, see [Common component properties](
 
 | **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `URL`              | Specify the URL for the video. The URL format can be:&#xA;- A direct URL, for example, [https://player.vimeo.com/video/76979871&#xA;](https://player.vimeo.com/video/76979871)- An embeded URL, for example,&#xA;`<iframe src="https://player.vimeo.com/video/76979871?quality=720p"></iframe>`<br />-A URL referenced in a datasource, for example, &#xA;`url: =@ctx.datasources.video-player-dynamic.uri` |
+| `URL`              | Specify the URL for the video. The URL format can be:&#xA;- A direct URL, for example, [https://player.vimeo.com/video/76979871&#xA;](https://player.vimeo.com/video/76979871)- An embeded URL, for example,&#xA;`<iframe src="https://player.vimeo.com/video/76979871?quality=720p"></iframe>`<br>-A URL referenced in a datasource, for example, &#xA;`url: =@ctx.datasources.video-player-dynamic.uri` |
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                                          |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `autoplay`        | Set to `true` will automatically start playing the video. Set to `false` requires you to press the play button. Default setting is `false`.                                                                                                                                                                                              |
 | `loop`            | For continuous looping of the video set the property to `true`. Default setting is `false`.                                                                                                                                                                                                                                              |
 | `ratio`           | There are 2 options:&#xA;- 16:9&#xA;- 4:3                                                                                                                                                                                                                                                                                                |
-| `title`           | The title of the video.&#xA;-With a `16:9` ratio, the text overlays at the bottom left of the video. <br />-With a `4:3` ratio the text displays under the video.&#xA;`Title` and `subtitle` must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed.     |
-| `subtitle`        | The subtitle of the video. &#xA;-With a `16:9` ratio, the text overlays at the bottom left of the video. <br />-With a `4:3` ratio the text displays under the video.&#xA;`Title` and `subtitle` must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed. |
+| `title`           | The title of the video.&#xA;-With a `16:9` ratio, the text overlays at the bottom left of the video. <br>-With a `4:3` ratio the text displays under the video.&#xA;`Title` and `subtitle` must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed.     |
+| `subtitle`        | The subtitle of the video. &#xA;-With a `16:9` ratio, the text overlays at the bottom left of the video. <br>-With a `4:3` ratio the text displays under the video.&#xA;`Title` and `subtitle` must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed. |
 
 ## Considerations
 
@@ -30,6 +30,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Video player as children of the jig
 
 ::::VerticalSplit{layout="middle"}
@@ -96,10 +97,12 @@ datasources:
           '$.category'
         FROM [default/links] WHERE '$.category' = "video-player"
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Video player in header
 
 ::::VerticalSplit{layout="middle"}
@@ -171,6 +174,6 @@ datasources:
           '$.category'
         FROM [default/links] WHERE '$.category' = "video-player"
 ```
+
 :::
 :::::
-

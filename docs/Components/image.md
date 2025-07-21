@@ -23,7 +23,7 @@ Some properties are common to all components, see [Common component properties](
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `height`          | Change the height of the image in pixels. Ensure a proper `resizeMode` is used to achieve the best results on different device resolutions. The default is set at 196 pixels.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `resizeMode`      | Resize the image when the frame doesn't match the raw image dimensions.&#xA;The following options are available:&#xA;`center` - If the image is bigger than the area it is scaled down making it completely visible. The image is not scaled up.&#xA;`contain` - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or less than the corresponding dimension of the view (minus padding).<br />`cover` - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or larger than the corresponding dimension of the view (minus padding).<br />`stretch` - Scales the width and height of the image independently, This may change the aspect ratio of the `source`. |
+| `resizeMode`      | Resize the image when the frame doesn't match the raw image dimensions.&#xA;The following options are available:&#xA;`center` - If the image is bigger than the area it is scaled down making it completely visible. The image is not scaled up.&#xA;`contain` - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or less than the corresponding dimension of the view (minus padding).<br>`cover` - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or larger than the corresponding dimension of the view (minus padding).<br>`stretch` - Scales the width and height of the image independently, This may change the aspect ratio of the `source`. |
 | `subtitle`        | Adds a subtitle that is displayed on or next to the image based on image context.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `title`           | Display the text content for the title that can be displayed on or next to the image based on the image context.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `width`           | Change the width of the image in pixels. Ensure a proper `resizeMode` is used to achieve the best results on different device resolutions.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -36,16 +36,17 @@ Some properties are common to all components, see [Common component properties](
 ### Considerations
 
 - Dynamic Data cannot save images larger than 350K. Jigx does not recommend storing images in Dynamic Data or storing images as base64 in the Dynamic Data database.
-- The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline.  For more details, refer to [Assets](#).
+- The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline.  For more details, refer to [Assets](https://docs.jigx.com/assets).
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Image in Header
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kBN2nzInf6mQuzw80sqWo_l8cou8hxm5ixnzx3gtni5image-headeriphone13blueportrait.png "Image in header")
+![Image in header](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kBN2nzInf6mQuzw80sqWo_l8cou8hxm5ixnzx3gtni5image-headeriphone13blueportrait.png "Image in header")
 :::
 
 :::VerticalSplitItem
@@ -143,10 +144,12 @@ datasources:
           '$.web-link'
         FROM [default/avatar] WHERE '$.category' = "image-source"
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Image in jig/default
 
 ::::VerticalSplit{layout="left"}
@@ -155,7 +158,7 @@ datasources:
 :::
 
 :::VerticalSplitItem
-Image as a children component in `default `jig.
+Image as a children component in `default` jig.
 
 **Examples**:
 See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/static-data/default-image/default-image.jigx).
@@ -247,6 +250,6 @@ datasources:
           '$.web-link'
         FROM [default/avatar] WHERE '$.category' = "image-source"
 ```
+
 :::
 :::::
-

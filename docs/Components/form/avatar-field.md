@@ -8,7 +8,6 @@ This component allows you to upload an avatar image. You can choose a picture fr
 The `avatar-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 :::
 
-
 ::::
 
 :::VerticalSplitItem
@@ -27,11 +26,11 @@ Some properties are common to all components, see [Common component properties](
 
 | **Other options**       |                                                                                                                                                                                                                                                                                                                                          |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`                 | Sets the color of the avatar-field based on conditions by using the when property. First evaluated to true will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](#).                                |
-| `errorText`             | Add text, string, or expressions to show text under the avatar-field indicating an error/invalid value in the field. Text is shown in `isNegative` (red) styling.                                                                                                                                                                        |
-| `helperText`            | Add text, string, or expressions to guide users by showing text under the avatar-field. Helper text is displayed only when there is no errorText.                                                                                                                                                                                        |
-| `imageQuality`          | Image quality after compression (from 0 to 100, where 100 is the best quality). On iOS, values larger than 80 don't produce a noticeable quality increase in most images, while a value of 80 will reduce the file size by about half or less compared to a value of 100. Default: 100 (Android)/ 80 (iOS).                              |
-| `icon`                  | Add an icon to the title. A list of icons is available. See [Jigx icons](#) for more information.                                                                                                                                                                                                                                        |
+| `color`                 | Sets the color of the avatar-field based on conditions by using the when property. First evaluated to true will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](https://docs.jigx.com/jigx-color-palette).                                |
+| `errorText`             | Add text, string, or expressions to show text under the avatar-field indicating an error/invalid value in the field. Text is shown in `isNegative` (red) styling.   |
+| `helperText`            | Add text, string, or expressions to guide users by showing text under the avatar-field. Helper text is displayed only when there is no errorText.            |
+| `imageQuality`          | Image quality after compression (from 0 to 100, where 100 is the best quality). On iOS, values larger than 80 don't produce a noticeable quality increase in most images, while a value of 80 will reduce the file size by about half or less compared to a value of 100. Default: 100 (Android)/ 80 (iOS).                 |
+| `icon`     | Add an icon to the title. A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.                                                        |
 | `imageCropping`         | You can set the following with `imageCropping` :&#xA;`isEnabled` - allows you to crop an image if set to `true`. &#xA;`isFreeStyleCropEnabled` - when set to `true` it supports custom cropping to change the size or aspect ratio of an image.&#xA;`height` - maximum allowed is 5000px&#xA;`width`- maximum allowed is 5000px          |
 | `initialValue`          | Initial value of the relevant field. You can use this to preset value, so user doesn't need to add anything and use this "default". Using the `reset-state` action with `initialValues` does not clear the field, it resets the field back to it's `initialValue`.                                                                       |
 | `isAutoFocused`         | If `true` it will get focus immediately after it is displayed.                                                                                                                                                                                                                                                                           |
@@ -61,6 +60,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Avatar field example
 
 ::::VerticalSplit{layout="left"}
@@ -100,10 +100,10 @@ children:
             isHidden: false
             isIgnored: false
 ```
+
 :::
 :::::
 
 ## See also
 
-- [State](#)
-
+- [State](https://docs.jigx.com/state)

@@ -1,6 +1,6 @@
 # expander
 
-The expander component** **is a collapsible element that initially displays a small portion of content, such as a name. Users can tap the arrow, aligned either to the left or right, to expand the component and reveal additional details. The expander is customizable, and the content inside can be configured using components such as forms, lists, or cards. This helps keep screens clean and organized while making additional information easily accessible.
+The expander component is a collapsible element that initially displays a small portion of content, such as a name. Users can tap the arrow, aligned either to the left or right, to expand the component and reveal additional details. The expander is customizable, and the content inside can be configured using components such as forms, lists, or cards. This helps keep screens clean and organized while making additional information easily accessible.
 
 ![Expander Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xDQizxD7Vjjgr1tbdQpPr_expander.png "Expander Preview")
 
@@ -10,7 +10,7 @@ Some properties are common to all components, see [Common component properties](
 
 | **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`         | Define the content of the expander. The following components can be used in the expander:&#xA;[avatar](./avatar.md)<br />[bar-chart](./charts/bar-chart.md)<br />[entity](./entity.md)&#xA;[form](./form.md)&#xA;[interactive-image](./interactive-image.md)<br />[line-chart](./charts/line-chart.md)&#xA;[list](./list.md)<br />[location](./location.md)&#xA;[pie-chart](./charts/pie-chart.md)<br />[stepper](./stepper.md)<br />[video-player](./video-player.md)&#xA;[web-view](./web-view.md)  |
+| `children`         | Define the content of the expander. The following components can be used in the expander:&#xA;[avatar](./avatar.md)<br>[bar-chart](./charts/bar-chart.md)<br>[entity](./entity.md)&#xA;[form](./form.md)&#xA;[interactive-image](./interactive-image.md)<br>[line-chart](./charts/line-chart.md)&#xA;[list](./list.md)<br>[location](./location.md)&#xA;[pie-chart](./charts/pie-chart.md)<br>[stepper](./stepper.md)<br>[video-player](./video-player.md)&#xA;[web-view](./web-view.md)  |
 | `header`           | `centerElement` - what is initially visible in your jig. &#xA;The following options are available in `header`:&#xA;- component [stage&#xA;](https://docs.jigx.com/examples/stage)- component [titles](https://docs.jigx.com/examples/h1bm-titles)                                                                                                                                                                                                                                                     |
 
 :::Iframe{code="<ul>"}
@@ -32,6 +32,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Expander with titles in a header, entity-fields and bar-chart
 
 ::::VerticalSplit{layout="middle"}
@@ -165,10 +166,12 @@ datasources:
           '$.category' 
         FROM [default/employees] WHERE '$.firstname' = "July" AND '$.category' = 'employees'
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Expander with stage in header and entity-field
 
 ::::VerticalSplit{layout="middle"}
@@ -347,10 +350,12 @@ datasources:
           '$.toabrv' 
         FROM [default/flight-schedule]
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Expander with variant, divider & expandIcon
 
 ::::VerticalSplit{layout="middle"}
@@ -361,6 +366,7 @@ This example includes four expander components, each configured with different o
 2. Expander configured with `emphasized` variant & no divider.
 3. Expander configured with no variant and a `solid` divider.
 4. Expander configured with expandIcon aligned to the `left`, `plain` variant & no divider.
+
 :::
 
 :::VerticalSplitItem
@@ -536,9 +542,8 @@ options:
      '$.destination',
      '$.status',
      '$.expectedDelivery'
-    FROM [default/product-delivery]
-  
+    FROM [default/product-delivery] 
 ```
+
 :::
 :::::
-

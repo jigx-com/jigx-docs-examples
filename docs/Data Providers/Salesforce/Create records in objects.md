@@ -115,6 +115,7 @@ actions:
                   title: Successfully created
             - type: action.go-back
 ```
+
 :::
 
 ### Create a Salesforce Opportunity record
@@ -215,5 +216,5 @@ actions:
                   title: Successfully created
             - type: action.go-back
 ```
-:::
 
+:::

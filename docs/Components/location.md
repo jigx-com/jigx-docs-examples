@@ -54,6 +54,7 @@ path-multi-points
           longitude: -73.950694
       address: =@ctx.datasources.location[0].address
 ```
+
 :::
 
 | **Action**                                             |                                                                                                                                                                                                                                  |
@@ -72,11 +73,12 @@ path-multi-points
 ## Considerations
 
 - Test the layout of the location component when combining it with other components, as it can cause spacing issues.
-- To display a location as a full screen, use the [jig.fullscreen](<./../Jig Types/jig_fullscreen.md>) type with the `component.location`. See the <a href="https://docs.jigx.com/examples/location#autxL" target="_blank">Fullscreen location</a> example down below.
+- To display a location as a full screen, use the [jig.fullscreen](<./../Jig Types/jig_fullscreen.md>) type with the `component.location`. See the [Fullscreen location](https://docs.jigx.com/examples/location#autxL) example down below.
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Location using address
 
 ::::VerticalSplit{layout="middle"}
@@ -177,10 +179,12 @@ datasources:
           city: New York
           country: US
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Location using latitude and longitude
 
 ::::VerticalSplit{layout="middle"}
@@ -242,10 +246,12 @@ datasources:
           address: 86th St Transverse, New York, NY 10024, United States
           icon: stadium-1-building 
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Location with multiple markers
 
 ::::VerticalSplit{layout="middle"}
@@ -306,10 +312,12 @@ datasources:
         - latitude: 40.76479429122513
           longitude: -73.97429291692742    
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Location displaying paths
 
 ::::VerticalSplit{layout="middle"}
@@ -403,10 +411,12 @@ datasources:
             latitude: 40.803495
             longitude: -73.950694
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Location radius
 
 ::::VerticalSplit{layout="middle"}
@@ -467,11 +477,13 @@ datasources:
         - latitude: 40.759412
           longitude: -73.912306
 ```
+
 :::
 :::::
 
 ::::::ExpandableHeading
-### &#x20;Location full screen
+
+### Location full screen
 
 :::::VerticalSplit{layout="middle"}
 ::::VerticalSplitItem
@@ -484,7 +496,7 @@ See the example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/location.jigx).
 
 :::hint{type="success"}
-Using the code below requires data in the database, the *jigx.sample* solution has the data provided for location. You can use the location.csv file in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/location.csv" target="_blank">GitHub</a> and upload it via the [Data](#) configuration in Jigx Management.
+Using the code below requires data in the database, the *jigx.sample* solution has the data provided for location. You can use the location.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/location.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
 :::
 ::::
 
@@ -543,10 +555,12 @@ datasources:
           city: New York
           country: US  
 ```
+
 :::
 ::::::
 
 :::::ExpandableHeading
+
 ### Location as a header
 
 ::::VerticalSplit{layout="middle"}
@@ -650,10 +664,10 @@ datasources:
           address: 86th St Transverse, New York, NY 10024, United States
           icon: stadium-1-building 
 ```
+
 :::
 :::::
 
 ## See also
 
-- [State](#)
-
+- [State](https://docs.jigx.com/state)

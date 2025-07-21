@@ -27,9 +27,9 @@ Some properties are common to all components, see [Common component properties](
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `color`           | Changing color of `title` and `leftIcon` based on `when` conditions. First condition evaluated to `true` will be used. If the condition evaluates to `false` the default color (black) is used.&#xA;Choose a color from the provided color palette as well as the status colors, e.g. `isWarning`. Default color is black if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](#). |
+| `color`           | Changing color of `title` and `leftIcon` based on `when` conditions. First condition evaluated to `true` will be used. If the condition evaluates to `false` the default color (black) is used.&#xA;Choose a color from the provided color palette as well as the status colors, e.g. `isWarning`. Default color is black if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](https://docs.jigx.com/jigx-color-palette). |
 | `description`     | Provide third level of supporting text to be displayed. The position of the text is under the `subtitle` property. This property is only available with `layout` type `cart`.                                                                                                                                                                                                                                                        |
-| `leftIcon`        | Add an icon to show on the left before the `title`. A list of icons is available. See [Jigx icons](#) for more information.&#xA;`leftIcon` is only available with the `default` layout.                                                                                                                                                                                                                                              |
+| `leftIcon`        | Add an icon to show on the left before the `title`. A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.&#xA;`leftIcon` is only available with the `default` layout.                                                                                                                                                                                                                                              |
 | `subtitle`        | Provide supporting text to be displayed as a `subtitle`. The position of the subtitle text depends on the selected `layout` property.                                                                                                                                                                                                                                                                                                |
 | `value`           | The actual value in your summary configured by a string or an expression that must equal a number. This property is only available for `layout` types `cart` and `counter`.                                                                                                                                                                                                                                                          |
 
@@ -55,6 +55,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Summary - default
 
 ::::VerticalSplit{layout="middle"}
@@ -101,12 +102,13 @@ item:
         numberStyle: currency
       value: =@ctx.current.item.price
     tag: =@ctx.current.item.tag
-
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Summary - cart
 
 ::::VerticalSplit{layout="middle"}
@@ -330,10 +332,12 @@ datasources:
           toabrv: DAY
           image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Summary - counter
 
 ::::VerticalSplit{layout="middle"}
@@ -559,10 +563,12 @@ datasources:
           toabrv: DAY
           image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Summary with action
 
 ::::VerticalSplit{layout="middle"}
@@ -721,9 +727,8 @@ options:
       seat: 13F
       to: Columbus, Ohio, US
       toabrv: DAY
-      image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60
-      
+      image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60   
 ```
+
 :::
 :::::
-

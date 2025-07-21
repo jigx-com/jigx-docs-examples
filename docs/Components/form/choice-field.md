@@ -61,6 +61,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Choice-field with single selection
 
 ::::VerticalSplit{layout="middle"}
@@ -188,10 +189,12 @@ actions:
             email: =@ctx.components.email.state.value
             Address: =@ctx.components.Address.state.value
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Choice-field with multiple selection
 
 ::::VerticalSplit{layout="middle"}
@@ -337,10 +340,12 @@ actions:
             email: =@ctx.components.email.state.value
             allergies: =@ctx.components.allery.state.selected
 ```
+
 :::
 :::::
 
 ::::ExpandableHeading
+
 ### Loading of multiple selected options
 
 In this example, we want to load the patient's form that they completed in the example above, and show their selected details and allergies. Each patient can have multiple allergies, and the data would be saved as an object in the database. To deserialize the object the `jsonProperties` property is configured with the column containing the object of multiple allergies. In the `choice-field` component the `intialValue` is then configured to return the selected allergies for the specific patient. The `execute-entity` action is configured to update the patient data.
@@ -577,10 +582,12 @@ item:
           parameters:
             patientId: =@ctx.current.item.id
 ```
+
 :::
 ::::
 
 :::::ExpandableHeading
+
 ### Choice-field with 3 items per row
 
 ::::VerticalSplit{layout="middle"}
@@ -663,10 +670,12 @@ actions:
           data:
             satisfaction: =@ctx.components.satisfaction.state.value
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Choice-field with an initial selection
 
 ::::VerticalSplit{layout="middle"}
@@ -737,10 +746,12 @@ actions:
         options:
           title: Checkout
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Choice-field with onChange
 
 ::::VerticalSplit{layout="right"}
@@ -820,6 +831,6 @@ children:
                 value: =@ctx.current.item.name
                 
 ```
+
 :::
 :::::
-

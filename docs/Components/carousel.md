@@ -24,7 +24,7 @@ Some properties are common to all components, see [Common component properties](
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `counter`         | Set to `true` addes a counter to the top right corner of the carousel in the style similiar to 1/4 to indicate the number of images or cards in the carousel. set to `false` hides the counter. The counter and pagination can be used together or individually depending on the requirement.                                                               |
 | `isContained`     | Set to `true` places the content (type) in a container which creates a visually appealing frame around the content. Set to `false` the content fills the entire carousel.                                                                                                                                                                                   |
-| `pagination`      | Pagination is shown as dots at the bottom of the carousel. The following options exist:&#xA;`isContained` - created a grey container around the pagination dots improving visibility.<br />`isHidden` - `false` hides the pagination, `true` shows the pagination.<br />`position` - The pagination dots can be places `inside` or `outside` the carousel.  |
+| `pagination`      | Pagination is shown as dots at the bottom of the carousel. The following options exist:&#xA;`isContained` - created a grey container around the pagination dots improving visibility.<br>`isHidden` - `false` hides the pagination, `true` shows the pagination.<br>`position` - The pagination dots can be places `inside` or `outside` the carousel.  |
 
 ## Considerations
 
@@ -33,11 +33,12 @@ Some properties are common to all components, see [Common component properties](
 - The carousel uses the same approach as the list component when working with data, making it easy to configure using the `=@ctx.current.item.value` expression.
 - Planning the layout of the carousel before you configure the component will save time, and ensure the correct component `type` is used.
 - Consider limiting the number of images used for the carousel to have maximum effect.
-- The card component is versatile, allowing you to combine multiple components into the carousel. For an example, see the [carousel with card containing avatars, expander & location](#). 
+- The card component is versatile, allowing you to combine multiple components into the carousel. For an example, see the carousel with card containing avatars, expander & location.
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Image carousel
 
 ::::VerticalSplit{layout="middle"}
@@ -138,10 +139,12 @@ children:
             label: Call us today!
             value: 10-234-5556
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Card carousel
 
 ::::VerticalSplit{layout="middle"}
@@ -192,10 +195,12 @@ children:
       counter:
         isHidden: true
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Carousel contained
 
 ::::VerticalSplit{layout="middle"}
@@ -275,10 +280,12 @@ children:
                 source:
                   uri: =@ctx.current.item.image
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Carousel with pagination (inside & outside)
 
 ::::VerticalSplit{layout="middle"}
@@ -359,10 +366,12 @@ children:
               position: inside
               isContained: true
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Carousel with counter
 
 ::::VerticalSplit{layout="middle"}
@@ -517,10 +526,12 @@ children:
                   value: ='$ ' & $number(@ctx.datasources.cleaningServices.onceoffrate)
                   isHidden: =(@ctx.datasources.cleaningServices.onceoffrate) = null ? true:false
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Carousel with pagination (contained)
 
 ::::VerticalSplit{layout="middle"}
@@ -611,6 +622,7 @@ children:
                 isHidden: false
                 position: outside    
 ```
+
 :::
 :::::
 
@@ -673,7 +685,6 @@ children:
       pagination:
         position: outside
         isContained: true
-
 ```
-:::
 
+:::

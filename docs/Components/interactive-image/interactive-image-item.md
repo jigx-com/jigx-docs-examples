@@ -29,9 +29,10 @@ Some properties are common to all components, see [Common component properties](
 | `=@ctx.component.state.` | selected             | State is the variable of the component.                         |
 | `=@ctx.solution.state.`  | activeItemId&#xA;now | Global state variable that can be used throughout the solution. |
 
-## Examples and code snippets&#x20;
+## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Restaurant table booking example
 
 ::::VerticalSplit{layout="middle"}
@@ -268,10 +269,12 @@ datasources:
           '$.category' 
         FROM [default/interactive-image] WHERE '$.category' = 'floorplan-restaurant'
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Hot seat and meeting room booking example
 
 ::::VerticalSplit{layout="middle"}
@@ -384,10 +387,10 @@ datasources:
           isReserved: true
           group: Hot desk - reserved
 ```
+
 :::
 :::::
 
 ## See also
 
-- [State](#)
-
+- [State](https://docs.jigx.com/state)

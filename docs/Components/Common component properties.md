@@ -9,6 +9,7 @@ updatedAt: Tue Apr 29 2025 09:46:37 GMT+0000 (Coordinated Universal Time)
 Some properties are common to all Jigx components. See the details below:
 
 ::::ExpandableHeading
+
 ### When
 
 `when` - this property is used at two levels, in components to show/hide any component conditionally and in actions to execute/not execute an action.
@@ -115,10 +116,12 @@ datasources:
           - id: 5 
             meal: Flapjacks with Fresh Berries
 ```
+
 :::
 ::::
 
 ::::ExpandableHeading
+
 ### Colors
 
 **Applying colors based on specific conditions**: Colors can be configured based on specific conditions. For example, a payment amount exceeding a certain threshold can be displayed in red. However, conditional color configurations are only available in areas that support conditions, such as list items. In contrast, direct color options are more widely supported, for example, `lists` allow both conditional and direct setups, whereas `interactive-images` only support direct options. Additionally, certain areas restrict the available color choices, while UI elements support the predefined set of fourteen colors.
@@ -143,10 +146,6 @@ color (no condition)
 options:
   color: color2
 ```
+
 :::
 ::::
-
-
-
-
-

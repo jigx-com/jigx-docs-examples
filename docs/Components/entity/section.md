@@ -6,7 +6,7 @@ createdAt: Thu Jun 09 2022 19:48:21 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jul 24 2024 09:33:04 GMT+0000 (Coordinated Universal Time)
 ---
 
-The section component groups related items together under a single title. A section can be set up on a [jig.default](<./../../Jig Types/jig_default.md>) under the [entity](./../entity.md) component or on a [form](./../form.md) component as its container. The component can contain <a href="https://docs.jigx.com/examples/field-row" target="_blank">field-row</a> and [entity-field](./entity-field.md) components or children components on a [form](./../form.md) component.
+The section component groups related items together under a single title. A section can be set up on a [jig.default](<./../../Jig Types/jig_default.md>) under the [entity](./../entity.md) component or on a [form](./../form.md) component as its container. The component can contain [field-row](https://docs.jigx.com/examples/field-row) and [entity-field](./entity-field.md) components or children components on a [form](./../form.md) component.
 
 A `component.section` can be set up with the following combinations:
 
@@ -14,7 +14,7 @@ A `component.section` can be set up with the following combinations:
 2. An entity containing sections and [entity-field](./entity-field.md) for display purposes.
 3. A form component containing sections with [rows](./field-row.md) and children for display/capturing purposes.
 4. A form component containing sections and children components for display/capturing purposes.
-5. Horizontal lists cannot be used with the [section]() components as an empty white jig will be displayed.
+5. Horizontal lists cannot be used with the [section](https://docs.jigx.com/examples/section) components as an empty white jig will be displayed.
 
 Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 

@@ -13,10 +13,10 @@ Some properties are common to all components, see [Common component properties](
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `contentType`     | Various types of entity fields determine the visual display and behavior of the entity-field, including: &#xA;`default`<br />`checkbox`<br />`copy`<br />`date`<br />`email` - format: [_email@example.com_](mailto:email@example.com)<br />`link`<br />`phone`- format: _1234567890_ or _+001234567890_ (no spaces)<br />`signature `<br />`time` |
+| `contentType`     | Various types of entity fields determine the visual display and behavior of the entity-field, including: &#xA;`default`<br>`checkbox`<br>`copy`<br>`date`<br>`email` - format: [_email@example.com_](mailto:email@example.com)<br>`link`<br>`phone`- format: _1234567890_ or _+001234567890_ (no spaces)<br>`signature `<br>`time` |
 | `instanceId`      | The unique identifier for the entity field.                                                                                                                                                                                                                                                                                                        |
 | `rightIcon`       | A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.                                                                                                                                                                                                                                             |
-| `style`           | The following styling set is available and works in conjunction with `rightIcon` to determine the color of the icon and the enitity-field line separator:&#xA;`isNegative`<br />`isPositive`<br />`isPrimary`<br />`isWarning`                                                                                                                     |
+| `style`           | The following styling set is available and works in conjunction with `rightIcon` to determine the color of the icon and the enitity-field line separator:&#xA;`isNegative`<br>`isPositive`<br>`isPrimary`<br>`isWarning`                                                                                                                     |
 
 ## Consideration
 
@@ -39,7 +39,7 @@ Some properties are common to all components, see [Common component properties](
 :::
 
 :::VerticalSplitItem
-**Compact **
+**Compact**
 
 ![Entity fields compact](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/MBzXs2Ep3g7RSPFz0SD-5_en11iphone13blueportrait.png "Entity fields compact")
 :::
@@ -204,7 +204,7 @@ children:
 :::VerticalSplitItem
 **Compact**
 
-![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0-XRxNGthxp7W2jqHMZii_en22iphone13blueportrait.png "Entity fields with datasource")
+![Entity fields with datasource](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0-XRxNGthxp7W2jqHMZii_en22iphone13blueportrait.png "Entity fields with datasource")
 :::
 ::::
 

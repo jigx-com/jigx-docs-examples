@@ -26,6 +26,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Entity example
 
 ::::VerticalSplit{layout="middle"}
@@ -202,6 +203,7 @@ datasources:
           '$.time' 
         FROM [default/cleaning-services] ORDER BY '$.service' ASC
 ```
+
 :::
 :::::
 
@@ -210,4 +212,3 @@ datasources:
 - [entity-field](./entity/entity-field.md)
 - [field-row](./entity/field-row.md)
 - [section](https://docs.jigx.com/docs/jc-section")
-

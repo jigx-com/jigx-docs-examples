@@ -10,7 +10,6 @@ updatedAt: Thu Jun 06 2024 14:27:07 GMT+0000 (Coordinated Universal Time)
 :::VerticalSplitItem
 Use the progress-bar component to visually represent a task or process's current status and progression by indicating how much time or work remains until completion.
 
-
 :::
 
 :::VerticalSplitItem
@@ -49,6 +48,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Progress bar with title and subtitle
 
 ::::VerticalSplit{layout="middle"}
@@ -61,7 +61,6 @@ This example shows the different ways the `title` and `subtitle` can be configur
 
 **Example:**
 See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar).
-
 
 :::
 ::::
@@ -128,10 +127,12 @@ progress-bar-title-subtitle.jigx
             max: 10
           size: tiny
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Progress bar with error and helper text
 
 ::::VerticalSplit{layout="middle"}
@@ -185,10 +186,12 @@ children:
               max: 5         
             color: color14
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Progress bar with colors
 
 ::::VerticalSplit{layout="middle"}
@@ -245,10 +248,12 @@ children:
             color: color3
             size: small
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Progress bar sizes
 
 ::::VerticalSplit{layout="middle"}
@@ -314,10 +319,12 @@ children:
         current: 5
         max: 5       
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Progress bar with steps
 
 ::::VerticalSplit{layout="middle"}
@@ -381,10 +388,12 @@ children:
             current: 10
             max: 20    
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Progress bar with onPress
 
 ::::VerticalSplit{layout="left"}
@@ -433,10 +442,12 @@ onRefresh:
   options:
     state: =@ctx.solution.state.activeItemId
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Dynamic Progress bar
 
 ::::VerticalSplit{layout="right"}
@@ -445,7 +456,7 @@ onRefresh:
 :::
 
 :::VerticalSplitItem
-This example shows how the `component.progress-bar `steps are dynamically updated when the list-item checkbox is selected. The `errorText` property and the `helperText` property are dynamically changed using an expression.
+This example shows how the `component.progress-bar` steps are dynamically updated when the list-item checkbox is selected. The `errorText` property and the `helperText` property are dynamically changed using an expression.
 
 **Example:**
 See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-dynamic.jigx).
@@ -535,6 +546,6 @@ children:
                     state: =@ctx.solution.state.activeItemId
                     value: =@ctx.current.state.checked
 ```
+
 :::
 :::::
-

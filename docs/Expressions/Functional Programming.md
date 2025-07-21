@@ -84,10 +84,10 @@ source:
     <b>" & @ctx.datasources.html.name & "</b>
      - " & @ctx.datasources.html.email &
     "</div>
-    <br />
+    <br>
     <img src='https://chart.googleapis.com/chart?cht=qr&chl=id"&@ctx.datasources.html.itemId&"&chs=380x380&choe=UTF-8&chld=L|2' alt='qr code'>
     <a href='https://www.qr-code-generator.com' border='0' style='cursor:default'  rel='nofollow'></a>
-    <br />"  & @ctx.datasources.html.itemId
+    <br>"  & @ctx.datasources.html.itemId
 ```
 :::
 

@@ -41,6 +41,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Countdown with inputs (static, dynamic, expression, & datasource)
 
 ::::VerticalSplit{layout="middle"}
@@ -126,10 +127,12 @@ datasources:
           dateType: Books
           date: "2025-07-18 14:00"
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Countdown with alignment
 
 ::::VerticalSplit{layout="middle"}
@@ -186,10 +189,12 @@ children:
           expiresAt: =$fromMillis($toMillis($now()) + 3600000)
           align: stretch
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Countdown with different sizes
 
 ::::VerticalSplit{layout="middle"}
@@ -246,10 +251,12 @@ children:
           expiresAt: =$fromMillis($toMillis($now()) + 36000000)
           size: small
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Countdown onPress
 
 ::::VerticalSplit{layout="right"}
@@ -353,10 +360,12 @@ children:
           expiresAt: =$fromMillis($toMillis($now()) + 36000000)
           size: small
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Countdown onFinish
 
 ::::VerticalSplit{layout="left"}
@@ -387,10 +396,12 @@ count-down-onFinish.jigx
                   title: 🏖️ Holiday time!
                   buttonText: Enjoy!
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Countdown started from another jig
 
 ::::VerticalSplit{layout="right"}
@@ -502,6 +513,6 @@ item:
             packagePrice: =@ctx.current.item.Price
             packageName: =@ctx.current.item.name
 ```
+
 :::
 :::::
-

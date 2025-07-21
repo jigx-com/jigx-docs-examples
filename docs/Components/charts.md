@@ -44,7 +44,7 @@ Chart data is structured in a way that makes it easy to display. To understand h
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UcOTckXGJkUjlVRuGnuFp_c-exceldata.png" size="80" position="center" caption="Excel data table" alt="Excel data table"}
 
-- Next we map out the same data in Jigx [Dynamic Data](https://docs.jigx.com/dynamic-data) in[ Jigx Management](https://docs.jigx.com/data). Notice that the data is exactly the same as the Excel data.
+- Next we map out the same data in Jigx [Dynamic Data](https://docs.jigx.com/dynamic-data) in[Jigx Management](https://docs.jigx.com/data). Notice that the data is exactly the same as the Excel data.
 
 ![Dynamic Data table](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jZg3JrV65OcMvWRhadDqA_c-dd-data.png "Dynamic Data table")
 

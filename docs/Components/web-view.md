@@ -28,6 +28,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Web-view example (URL)
 
 ::::VerticalSplit{layout="middle"}
@@ -106,10 +107,12 @@ datasources:
           '$.category'
         FROM [default/links] WHERE '$.category' = "web-view"
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Web-view example (HTML Content)
 
 ::::VerticalSplit{layout="middle"}
@@ -143,10 +146,12 @@ children:
           </body>
         </html>
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Editable web-view content (Fullscreen)
 
 ::::VerticalSplit{layout="middle"}
@@ -230,6 +235,6 @@ datasources:
       queryParameters:
         jobNo: A1
 ```
+
 :::
 :::::
-

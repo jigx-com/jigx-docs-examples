@@ -9,12 +9,12 @@ This component enhances user experience by providing a quick and intuitive way t
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](https://docs.jigx.com/examples/common-component-properties) for a list and their configuration options.
 
 | **Core structure** |                                                                                                                                                               |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `data`             | Specify the `title` to display in each segment and a data `value`. Repeat the `title` and `value` properties to create the number of segments in the control. |
-|                    | `title` -  The label for the segment. You can use [Localization](#) in the title.                                                                             |
+|                    | `title` -  The label for the segment. You can use [Localization](https://docs.jigx.com/localization) in the title.                                                                             |
 |                    | `value` - The data value for the segment that is used to display content when toggled. Can be used in an expression or to set the `initialValue`.             |
 
 | **Other options** |                                                                                                                                           |
@@ -30,6 +30,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Basic segmented-control
 
 ::::VerticalSplit{layout="middle"}
@@ -75,13 +76,12 @@ children:
                 options:
                   label: Numbers
                   # Display the segments values in a field as you toggle the segments.                
-                  value: =@ctx.components.numbers.state.value     
-       
+                  value: =@ctx.components.numbers.state.value      
 ```
+
 :::
 :::::
 
-:::::ExpandableHeading
 ### Segmented-control with a datasource
 
 ::::VerticalSplit{layout="middle"}
@@ -144,10 +144,12 @@ datasources:
           icon: hourglass-1-alternate 
           value: ⏱️ record time spent on the job 
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Disabled segmented-control
 
 ::::VerticalSplit{layout="middle"}
@@ -186,10 +188,12 @@ children:
               - title: Clock Out
                 value: 3  
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Preselected segmented-control
 
 ::::VerticalSplit{layout="middle"}
@@ -237,10 +241,12 @@ children:
                 # Display the segments values in a field as you toggle the segments.                 
                 value: =@ctx.components.default-segment.state.value    
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Segmented-control using state
 
 ::::VerticalSplit{layout="middle"}
@@ -496,6 +502,6 @@ options:
           </body>
           </html>
 ```
+
 :::
 :::::
-

@@ -155,4 +155,4 @@ tabs:
 
 1. Open [Management](https://docs.jigx.com/management-overview) , navigate to your solution (employees).
 2. Navigate to **Data** option
-3. Click on the **employee table** and view the **data record **you just created.
+3. Click on the **employee table** and view the **data record** you just created.

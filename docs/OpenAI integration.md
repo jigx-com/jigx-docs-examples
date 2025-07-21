@@ -123,7 +123,7 @@ Jigx functions are used to configure the REST integration with AI models such as
 "completion_tokens": 12,
 "total_tokens": 21
 }
-}`<br />In the ** outputTransform** you configure the following:<br />`outputTransform: \| {
+}`<br>In the ** outputTransform** you configure the following:<br>`outputTransform: \| {
 "content": $.choices[0].message.content
 }` |
 | `inputTransform`  | Provide the AI with the information it requires to return the response/chat message.&#xA;`model` - is the name and version of the AI model.&#xA;`response_format` - the expected input type, for example, json\_object.&#xA;`message` - under this property configure the prompts to train the AI, by specifying the `role` and `content`. You can configure multiple sets.                                                                                                                                                                                                                                                                                                                                                                           |

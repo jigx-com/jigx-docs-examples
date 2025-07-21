@@ -25,11 +25,11 @@ Some properties are common to all components, see [Common component properties](
 
 | **Other options**       |                                                                                                                                                                                                                                                                                                                                      |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `color`                 | Select a color from the [Jigx color palette](#) to change the color of the field and label based on a `when` condition. First evaluated to `true` will be used.                                                                                                                                                                      |
+| `color`                 | Select a color from the [Jigx color palette](https://docs.jigx.com/jigx-color-palette) to change the color of the field and label based on a `when` condition. First evaluated to `true` will be used.                                                                                                                                                                      |
 | `errorText`             | Provide text message to display when field's value is not valid. The message is displayed in `isNegative` style (red). Use an expression to determine when to show the field.                                                                                                                                                        |
 | `format`                | Select the format of the date/time:&#xA;LT - 3:28 PM&#xA;LTS - 3:28:57 PM&#xA;LLLL - Thursday, March 3, 2024 3:28 PM&#xA;LLL - March 3, 2024 3:28 PM&#xA;LL - March 3, 2024 (default)&#xA;L - 03/03/2024&#xA;l - 3/3/2024&#xA;ll -  Mar 3, 2024&#xA;lll - Mar 3, 2024 3:28 PM&#xA;llll - Thu, Mar 3, 2024 3:28 PM&#xA;HH\:mm - 15:28 |
 | `helperText`            | `helperText` is displayed only when there is no `errorText` property configured as `errorText` takes priorty.                                                                                                                                                                                                                        |
-| `icon`                  | Add an icon to the field. See [Jigx icons](#) for more information on adding icons.                                                                                                                                                                                                                                                  |
+| `icon`                  | Add an icon to the field. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information on adding icons.                                                                                                                                                                                                                                                  |
 | `isRequired`            | The default setting is `true` making the field required, useful when used in form submission. Set to `false` the field is not required and the field is marked (optional).                                                                                                                                                           |
 | `isIgnored`             | Set to `true`, the field is ignored when submitting the form.                                                                                                                                                                                                                                                                        |
 | `isHidden`              | Set to `true`, hides the field on the form. Use an expression to determine when to hide the field.                                                                                                                                                                                                                                   |
@@ -38,7 +38,7 @@ Some properties are common to all components, see [Common component properties](
 | `isAutoFocused`         | By default this field is set to `false`, use `true` to get focus immediately after it is displayed.                                                                                                                                                                                                                                  |
 | `maximum`               | Set a maximum time range f date/ time (UTC time). For example, "2022-04-22 14:00" or "2022-04-22" or "20:00" in case of type "time".&#xA;`Maximum` on Android only works with `date` mode because TimePicker does not support this option.                                                                                           |
 | `minimum`               | Set a minimum time range for date/ time (UTC time). For example. "2022-04-22 05:00" or "2022-04-22" or "08:00" in case of type "time".&#xA;`Minimum` on Android  only works with `date` mode because  the TimePicker does not support this option.                                                                                   |
-| `mode`                  | By default the mode is set to `date`.  &#xA;Use `dateTime `to show a date and time picker.&#xA;Use `time` to only show a time picker.                                                                                                                                                                                                |
+| `mode`                  | By default the mode is set to `date`.  &#xA;Use `dateTime` to show a date and time picker.&#xA;Use `time` to only show a time picker.                                                                                                                                                                                                |
 | `nextProperty`          | Name of the next property to receive focus in the form when using submit on a virtual keyboard.                                                                                                                                                                                                                                      |
 | `style`                 | `isPositive` - field shows a positive icon (green tick)&#xA;`isBusy` - Displays a spinner in the right hand side of the field to show that the field is busy. &#xA;`isDisabled` - Set to `true` disables the date-picker field, preventing the picker screen from popping up.&#xA;`flex` - adjust the size of the field.             |
 | `value`                 | The value to display in the field. `Text` field is a controlled component, which means the internal value will be forced to match a UTC time, if it cannot an Invalid date error displays.                                                                                                                                           |
@@ -56,11 +56,12 @@ Some properties are common to all components, see [Common component properties](
 
 - The `date-picker` component requires dates to be input in an ISO format when statically specified or from a datasource.
 - The `format` property is set to show for the outputs of the field and are ready only.
-- For setting the date format taking into account time zones see [Expressions - cheatsheet](#) for example expressions.
+- For setting the date format taking into account time zones see [Expressions - cheatsheet](https://docs.jigx.com/expressions-cheatsheet) for example expressions.
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Date picker for selecting a specific date
 
 ::::VerticalSplit{layout="middle"}
@@ -91,10 +92,12 @@ children:
             label: Select a date
             format: L
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Date picker for selecting time
 
 ::::VerticalSplit{layout="middle"}
@@ -126,11 +129,13 @@ children:
             mode: time
             format: HH:mm
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
-### Date picker with a minimum and maximum date&#x20;
+
+### Date picker with a minimum and maximum date
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -160,10 +165,10 @@ children:
             format: L
             label: Select a date
 ```
+
 :::
 :::::
 
 ## See also
 
-- [State](#)
-
+- [State](https://docs.jigx.com/state)

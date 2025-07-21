@@ -7,7 +7,7 @@ updatedAt: Tue Nov 05 2024 11:36:55 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="warning"}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId:eOUi2cPYynsdRuK-TobDp) for more information.
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](https://docs.jigx.com/rest) instead. See [REST endpoints from Azure SQL](https://docs.jigx.com/microsoft-azure-sql) for more information.
 :::
 
 ::::VerticalSplit{layout="middle"}
@@ -25,7 +25,7 @@ This example uses a default jig with a form that executes an SQL command to crea
 
 ## Jigx Code
 
-The Azure SQL Docs solution is on <a href="https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs" target="_blank">GitHub.</a>
+The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs).
 :::
 
 :::VerticalSplitItem
@@ -206,7 +206,7 @@ parameters:
 
 - The listCustomers.jigx file must be modified to include a jig-level action, allowing a new customer to be added.
 - When pressing the **Add customer** action button at the bottom of the list customers jig, Jigx will navigate to the newCustomer jig.
-- A new** customer id **is created and used as a parameter in the `GoTo` action. The `customerId` parameter is passed to the newCustomer jig. The generated id is used as the unique identifier when creating both the SQLite record and the new record in Azure SQL in the newCustomer jig.
+- A new **customer id** is created and used as a parameter in the `GoTo` action. The `customerId` parameter is passed to the newCustomer jig. The generated id is used as the unique identifier when creating both the SQLite record and the new record in Azure SQL in the newCustomer jig.
 - The id is used across the SQlite and Azure SQL tables to ensure that the record in the local SQLite customer table and Azure SQL customer table are in sync and have the same value.
 
 :::CodeblockTabs

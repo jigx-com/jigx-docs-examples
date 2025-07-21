@@ -16,8 +16,8 @@ Some properties are common to all components, see [Common component properties](
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `description`     | Describe the step item that is displayed as the subtitle.                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `leftElement`     | The only available element for the step is an `icon` displayed on the left of the value. A list of icons is available. See [Jigx icons](#) for more information. If no icon is specified a checkbox is used on the left.                                                                                                                                                                                                                                                                                  |
-| `style`           | The following styling options are available:&#xA;`isActive` - Shows the step as active.<br />`isDisabled` - Shows the step `value`, `description`, and `icon` as disabled (greyed out).<br />`isNegative` - The step `description` and `icon` are shown in red.<br />`isPositive` - The `description` and `icon` are shown in green.<br />`isStrikeThrough` - The step's `value` and `description` are shown with a line through it.<br />`isWarning` - The `description` and `icon` are shown in orange. |
+| `leftElement`     | The only available element for the step is an `icon` displayed on the left of the value. A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information. If no icon is specified a checkbox is used on the left.                                                                                                                                                                                                                                                                                  |
+| `style`           | The following styling options are available:&#xA;`isActive` - Shows the step as active.<br>`isDisabled` - Shows the step `value`, `description`, and `icon` as disabled (greyed out).<br>`isNegative` - The step `description` and `icon` are shown in red.<br>`isPositive` - The `description` and `icon` are shown in green.<br>`isStrikeThrough` - The step's `value` and `description` are shown with a line through it.<br>`isWarning` - The `description` and `icon` are shown in orange. |
 
 | **Actions** |                                                                                                                             |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -25,11 +25,12 @@ Some properties are common to all components, see [Common component properties](
 
 ## Consideration
 
-- The step component can only be used inside the <a href="https://docs.jigx.com/examples/stepper" target="_blank">stepper</a> component.
+- The step component can only be used inside the [stepper](https://docs.jigx.com/examples/stepper) component.
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Step Example
 
 ::::VerticalSplit{layout="middle"}
@@ -158,6 +159,6 @@ datasources:
         FROM [default/steps]
         ORDER BY value
 ```
+
 :::
 :::::
-

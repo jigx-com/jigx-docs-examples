@@ -20,7 +20,7 @@ Some properties are common to all components, see [Common component properties](
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `amountControl`   | This property has several setup options:&#xA;`initialValue`<br />`minimum` - Set a minimum limit to the number that can be selected. Default is 0.<br />`maximum` - Set a maximum limit to the number that can be selected.<br />`step` - Set the increments/decrement. Default is 1.<br />`value` - Value of amount control.<br />`onChange` action - will be triggered when value is changed.<br />`onDelete` action - A trash symbol is displayed when the value is 1 or (min + 1). |
+| `amountControl`   | This property has several setup options:&#xA;`initialValue`<br>`minimum` - Set a minimum limit to the number that can be selected. Default is 0.<br>`maximum` - Set a maximum limit to the number that can be selected.<br>`step` - Set the increments/decrement. Default is 1.<br>`value` - Value of amount control.<br>`onChange` action - will be triggered when value is changed.<br>`onDelete` action - A trash symbol is displayed when the value is 1 or (min + 1). |
 | `discount`        | This allows you to display the discount price including the currency. Set the discount in the range 0 - 1 (1 = 100%). Discount is set in float format e.g. 0.12.                                                                                                                                                                                                                                                                                                                       |
 | `image`           | The option to add an image of your product by providing the `uri`                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `price`           | This allows you to display the base price of the product  including the currency.                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -40,6 +40,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Simple product-item with tags
 
 ::::VerticalSplit{layout="middle"}
@@ -111,13 +112,14 @@ datasources:
           '$.quantity',
           '$.category',
           '$.productId'
-          FROM [default/products] WHERE '$.category' = "product" ORDER BY '$.title'
-          
+          FROM [default/products] WHERE '$.category' = "product" ORDER BY '$.title'          
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Product-item with onChange, amountControl and search
 
 ::::VerticalSplit{layout="middle"}
@@ -194,10 +196,12 @@ datasources:
       queryParameters:
         search: =@ctx.jig.state.searchText
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Product-item with summary
 
 ::::VerticalSplit{layout="middle"}
@@ -285,10 +289,10 @@ datasources:
           discount: 0.15
           amount: 0
 ```
+
 :::
 :::::
 
 ## See also
 
-- [State](#)
-
+- [State](https://docs.jigx.com/state)

@@ -31,7 +31,7 @@ Some properties are common to all components, see [Common component properties](
 
 |**Other options** |                                                                                         |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `chart`           | `title `and `subtitle` - Name and a short description of your chart.&#xA;`height` and `width` - The parameters of the chart displayed (in pixels). |
+| `chart`           | `title` and `subtitle` - Name and a short description of your chart.&#xA;`height` and `width` - The parameters of the chart displayed (in pixels). |
 | `legend`          | `isHidden` -  The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.                             |
 | `series`          | `name` - The naming of the actual series.&#xA;`color`- select a color from the color palette.                                                      |
 
@@ -42,6 +42,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Pie chart
 
 ::::VerticalSplit{layout}
@@ -126,10 +127,12 @@ datasources:
         FROM [default/charts] WHERE '$.category' = "pie-chart"
     
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Pie chart type arch
 
 ::::VerticalSplit{layout}
@@ -215,6 +218,6 @@ datasources:
           '$.title' 
         FROM [default/charts] WHERE '$.category' = "arch-chart"
 ```
+
 :::
 :::::
-

@@ -29,7 +29,7 @@ The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samp
 :::
 
 :::VerticalSplitItem
-![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F2u40_emrBYicR6Oo1HBd_saturday-25-mar-2023-113958.PNG "Update customer")
+![Update customer](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F2u40_emrBYicR6Oo1HBd_saturday-25-mar-2023-113958.PNG "Update customer")
 :::
 ::::
 
@@ -187,7 +187,7 @@ parameters:
 ### Modify the view customer jig
 
 - The viewCustomers.jigx file must be modified to include a jig-level action, adding the **Edit a customer** button. When pressing the action button at the bottom of the viewCustomers jig, Jigx will navigate to the editCustomer jig.
-- The **customer's id** \*\*is used as a parameter in the `GoTo` action. The `custId `parameter is passed to the viewCustomer jig.
+- The **customer's id** \*\*is used as a parameter in the `GoTo` action. The `custId` parameter is passed to the viewCustomer jig.
 
 :::CodeblockTabs
 listCustomers.jigx

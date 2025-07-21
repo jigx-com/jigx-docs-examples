@@ -11,6 +11,7 @@ In this example, a list of expenses is displayed with the following:
 - A `left swipeable` action is configured with two actions:
   - The first only deletes the file associated with the record using the `execute-entity` action with the `update` method and the file property set to `null`.
   - The second deletes the entire record in the database using the `execute-entity` action with the `delete` method.
+
 :::
 
 :::VerticalSplitItem
@@ -126,6 +127,7 @@ datasources:
         FROM [default/expenses]
         ORDER BY '$.expenseitem'
 ```
+
 :::
 
 In Management the *Hotel accomodation* record is deleted in the **expense** dynamic data table and the *airplane ticket* file is deleted but the record still exists.
@@ -138,4 +140,3 @@ Files can be deleted in Management by following these steps:
 2. Browse to the required solution's **data** tab and select the record containing the file to be deleted.
 3. Select the **File** tab, and click the **x** next to file's thumbnail.
    **Caution:** Clicking the *Delete* button at the bottom of the Edit record pane deletes the entire record and file.
-

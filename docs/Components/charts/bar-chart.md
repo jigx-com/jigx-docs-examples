@@ -23,7 +23,7 @@ Some properties are common to all components, see [Common component properties](
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `chart`           | - `title `and `subtitle` - Name and a short description of your chart.&#xA;- `height` and `width` - The parameters of the graph displayed (in pixels).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `chart`           | - `title`and `subtitle` - Name and a short description of your chart.&#xA;- `height` and `width` - The parameters of the graph displayed (in pixels).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `legend`          | `isHidden` -  The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `plotBands`       | The `from` and `to` properties define the area to be filled with color. Specify the range using the from and to properties with numeric values.&#xA;`color` Sets the color of the band for the `y-axis`, choose a color from the provided color palette. Use `plotbands` to highlight specific regions or ranges on the chart, making it easier for users to interpret and analyze the data.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `plotOptions`     | `series` - Different properties available to manipulate the data shown in the bar such as width of columns, the interval between two points, option to hide markers.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -34,6 +34,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Bar-chart finance static
 
 ::::VerticalSplit{layout="middle"}
@@ -169,10 +170,12 @@ datasources:
           '$.category' 
         FROM [default/finances] WHERE '$.category' = "finance-month" ORDER BY '$.financeid' ASC
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Bar-chart multiple series
 
 ::::VerticalSplit{layout="middle"}
@@ -317,15 +320,17 @@ datasources:
         FROM [default/charts] WHERE '$.category' = "chart2" ORDER BY x
     
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Bar-chart with plot bands
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-The jig displays a bar chart with an annual overview of finances. The x-axis shows the months and the y-axis the monetary amount. The data points are easy to see as we used the `plotBands `property to add color. In this example multiple bands are defined by adding the form, to and color properties.
+The jig displays a bar chart with an annual overview of finances. The x-axis shows the months and the y-axis the monetary amount. The data points are easy to see as we used the `plotBands` property to add color. In this example multiple bands are defined by adding the form, to and color properties.
 
 \*\*Examples:
 \*\*See the full code sample  in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic/bar-charts-plotBands.jigx).
@@ -416,10 +421,12 @@ children:
       legend:
         isHidden: false
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Bar-chart using expressions
 
 ::::VerticalSplit{layout="middle"}
@@ -524,8 +531,6 @@ options:
       max: 127000
       tickAmount: 6 
 ```
+
 :::
 :::::
-
-##
-

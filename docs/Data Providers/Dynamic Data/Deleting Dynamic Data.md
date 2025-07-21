@@ -116,11 +116,12 @@ tabs:
     jigId: delete-single-record
     icon: home-apps-logo
 ```
+
 :::
 
 ### Deleting multiple data records using execute-entities
 
-To delete all employees (multiple data records) in the Dynamic Data table use the `action.execute-entities` action with an expression that as shown below. This will delete all records in the table when the* Delete all employees* button is pressed.
+To delete all employees (multiple data records) in the Dynamic Data table use the `action.execute-entities` action with an expression that as shown below. This will delete all records in the table when the *Delete all employees* button is pressed.
 
 ![Delete multiple records](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ouiryUalSNeUZaPOw03AA-20250306-091204.png "Delete multiple records")
 
@@ -241,19 +242,5 @@ tabs:
     jigId: delete-multiple-records
     icon: home-apps-logo    
 ```
+
 :::
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

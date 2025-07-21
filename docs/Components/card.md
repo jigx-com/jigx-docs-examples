@@ -15,7 +15,7 @@ Some properties are common to all components, see [Common component properties](
 
 | **Other options** |                                                                                                                                                            |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`           | Sets the color of the card. Choose a color from the provided [Jigx color palette](#). Default color is white if the property is not specified in the YAML. |
+| `color`           | Sets the color of the card. Choose a color from the provided [Jigx color palette](https://docs.jigx.com/jigx-color-palette). Default color is white if the property is not specified in the YAML. |
 | `style`           | When `isDisabled` is set to `true`, the card appears opaque, indicating that it is unavailable for selection. By default `isDisabled` is set to `false`.   |
 
 | **Actions** |                                                                                                                  |
@@ -30,6 +30,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Card containing a form
 
 ::::VerticalSplit{layout="middle"}
@@ -110,10 +111,12 @@ actions:
           onSuccess: 
             type: action.go-back                                   
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Card in a carousel
 
 ::::VerticalSplit{layout="middle"}
@@ -164,17 +167,19 @@ children:
       counter:
         isHidden: true
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Cards with color
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 This example shows three cards.
 
-1. The first card contains the `avatar`, `expander`, `entity-field` and `location` components with the` color: color3` property.
+1. The first card contains the `avatar`, `expander`, `entity-field` and `location` components with the `color: color3` property.
 2. The second card contains a `line-chart` component with the `color: color14` property set.
 3. The third card contains an `image` and `entity-field` components with the `color: color6` property set.
 
@@ -333,13 +338,14 @@ options:
       uri: https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ
       uri-text: JS
       status: Declined
-      address: 399-301 Chapel Ave, Claymont, DE 19703, USA
-            
+      address: 399-301 Chapel Ave, Claymont, DE 19703, USA   
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Card with style
 
 ::::VerticalSplit{layout="middle"}
@@ -400,10 +406,12 @@ children:
                     uri: https://images.unsplash.com/photo-1612539465222-c20af6006413?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
                 
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Card with onPress
 
 ::::VerticalSplit{layout="left"}
@@ -447,9 +455,8 @@ children:
                 options:
                   label: ''
                   value: Shop now
-                  rightIcon: arrow-button-right-1
-                
+                  rightIcon: arrow-button-right-1        
 ```
+
 :::
 :::::
-

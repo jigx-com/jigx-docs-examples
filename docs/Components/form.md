@@ -32,13 +32,13 @@ Some properties are common to all components, see [Common component properties](
 
 | **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `children`         | Define the content of the form. The following components can be used in the form:&#xA;- [avatar-field](./form/avatar-field.md)&#xA;- [choice-field](./form/choice-field.md) &#xA;- [checkbox](./form/checkbox.md)&#xA;- [date-picker](./form/date-picker.md)&#xA;- [dropdown](./form/dropdown.md)&#xA;- [duration-picker](./form/duration-picker.md) <br />-[email-field](./form/email-field.md)&#xA;- [field-row](./entity/field-row.md)&#xA;- [media-field](./form/media-field.md)&#xA;- [number-field](./form/number-field.md)&#xA;- [section](./entity/section.md)&#xA;- [signature-field](./form/signature-field.md)&#xA;- [text-field](./form/text-field.md) |
+| `children`         | Define the content of the form. The following components can be used in the form:&#xA;- [avatar-field](./form/avatar-field.md)&#xA;- [choice-field](./form/choice-field.md) &#xA;- [checkbox](./form/checkbox.md)&#xA;- [date-picker](./form/date-picker.md)&#xA;- [dropdown](./form/dropdown.md)&#xA;- [duration-picker](./form/duration-picker.md)<br>-[email-field](./form/email-field.md)&#xA;- [field-row](./entity/field-row.md)&#xA;- [media-field](./form/media-field.md)&#xA;- [number-field](./form/number-field.md)&#xA;- [section](./entity/section.md)&#xA;- [signature-field](./form/signature-field.md)&#xA;- [text-field](./form/text-field.md) |
 | `instanceId`       | The unique identifier for the form.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 | **Other options**              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `isDiscardChangesAlertEnabled` | When set to `true` the modal window preventing accidental deletion of your data without saving will pop up. &#xA;                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `initialValues`                | Specify the data to be used as `initialValues` for fields in the form. Using the `reset-state` action with `initialValues` does not clear the form, it resets the form back to it's `initialValue`. &#xA;***Tip***: For `initialValues` on a [form](#) to function&#xA; `isDocument: true` in the datasource, this way you don't have to set it up in the individual components. It is set up in one place and the form will match the components to the column names of the datasource. See the example below for Form with initialValue. |
+| `initialValues`                | Specify the data to be used as `initialValues` for fields in the form. Using the `reset-state` action with `initialValues` does not clear the form, it resets the form back to it's `initialValue`. &#xA;***Tip***: For `initialValues` on a [form](https://docs.jigx.com/examples/form) to function&#xA; `isDocument: true` in the datasource, this way you don't have to set it up in the individual components. It is set up in one place and the form will match the components to the column names of the datasource. See the example below for Form with initialValue. |
 
 | **State Configuration**  | **Key**                                   | **Notes**                                                          |
 | ------------------------ | ----------------------------------------- | ------------------------------------------------------------------ |
@@ -48,6 +48,7 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Form for creating a record
 
 ::::VerticalSplit{layout="left"}
@@ -90,10 +91,12 @@ children:
             options:
               label: Phone number
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Form for updating records
 
 ::::VerticalSplit{layout="left"}
@@ -105,7 +108,7 @@ children:
 This example shows how a form is used to update an existing records in the database. Notice that a new variable called **initialValue:** has been added, we load the data that we have stored in the database and then change it. See the [execute-entity](./../Actions/execute-entity.md) action for information on how to update a record.
 
 **Examples**:
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/form/update-form-submit.jigx). 
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/form/update-form-submit.jigx).
 
 **Datasource**:
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/form/update-form-submit.jigx).
@@ -182,10 +185,12 @@ datasources:
           '$.category'
         FROM [default/form] WHERE '$.category' = "update-form"
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Form with section and field-row
 
 ::::VerticalSplit{layout="left"}
@@ -257,15 +262,17 @@ children:
                         options:
                           label: Zip code
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Form with initialValue
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-In this example, you tap on a contact in the contact-list and the new-contact form opens with the contact's details loaded. For `initialValues` on a [form](#) to function the `isDocument: true` in the datasource is set, this way you don't have to set it up in the individual components. It is set up in one place under `InitialValue` and the form will match the components to the column names of the datasource.
+In this example, you tap on a contact in the contact-list and the new-contact form opens with the contact's details loaded. For `initialValues` on a [form](https://docs.jigx.com/examples/form) to function the `isDocument: true` in the datasource is set, this way you don't have to set it up in the individual components. It is set up in one place under `InitialValue` and the form will match the components to the column names of the datasource.
 :::
 
 :::VerticalSplitItem
@@ -424,6 +431,6 @@ item:
         parameters: 
           id: =@ctx.current.item.id
 ```
+
 :::
 :::::
-
