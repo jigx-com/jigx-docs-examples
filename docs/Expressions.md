@@ -1,8 +1,8 @@
 # Expressions
 
-An overview and explanation of using expressions in Jigx is provided in the [Expressions](#) and [Advanced Expressions](#) section in the Guide tab.
+An overview and explanation of using expressions in Jigx is provided in the [Expressions](https://docs.jigx.com/expressions) and [Advanced Expressions](https://docs.jigx.com/expressions#CEdVY) section in the Guide tab.
 
-Refer to the [Expressions - cheatsheet](#) for code snippets that can help you achieve a required result, such as creating a placeholder in a jig.
+Refer to the [Expressions - cheatsheet](https://docs.jigx.com/expressions-cheatsheet) for code snippets that can help you achieve a required result, such as creating a placeholder in a jig.
 
 In this section, examples with code snippets are provided for working with data using JSONata; these are:
 
@@ -20,5 +20,4 @@ In this section, examples with code snippets are provided for working with data 
 | [String](./Expressions/String.md)                                   | String expressions have many uses, such as concatenating two strings to display multiple data records in one row, writing numbers as strings, or selecting only a few characters from the whole string. |
 | [Advanced expressions](<./Expressions/Advanced expressions.md>)     | Advanced expressions are helpful when you need to filter an array of records to display specific data and perform expression transformations over the data.                                             |
 | [Regex +JSONata](<./Expressions/Regex expressions.md>)              | Create validation for text fields by combining JSONata and Regex expressions.                                                                                                                           |
-| [JavaScript expressions](#)                                         | JavaScript functions allow you to write modular and reusable code, by encapsulating specific functionality within JavaScript functions and calling the function in an expression.                       |
-
+| [JavaScript expressions](https://docs.jigx.com/examples/javascript-expressions)                                         | JavaScript functions allow you to write modular and reusable code, by encapsulating specific functionality within JavaScript functions and calling the function in an expression.                       |

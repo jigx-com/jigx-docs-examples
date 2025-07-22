@@ -15,6 +15,7 @@ Examples are based on test data in a Jigx demo Salesforce environment. Copying t
 :::
 
 ::::ExpandableHeading
+
 ### List of accounts
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A8Tn9KF-RKvhmVl9o_CxX_salesforce-list.PNG" size="70" position="center" caption="Search and filtering a list" alt="Search and filtering a list"}
@@ -87,10 +88,12 @@ children:
             text: SF
         
 ```
+
 :::
 ::::
 
 :::::ExpandableHeading
+
 ### List of Opportunities
 
 ::::VerticalSplit{layout="middle"}
@@ -164,10 +167,12 @@ children:
                 id: =@ctx.current.item.id
                 entity: Opportunity
 ```
+
 :::::
 
 :::::ExpandableHeading
-### Create a Stage detail jig&#x20;
+
+### Create a Stage detail jig
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -286,12 +291,7 @@ options:
     json_extract(data, '$.StageName') = 'Closed Won'
 
     and json_extract(data, '$.CloseDate') between '2020-01-01' and '2020-03-31'
-
 ```
+
 :::
 :::::
-
-### See Also
-
-- [Dashboards and charts]()
-

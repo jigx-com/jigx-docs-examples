@@ -2,7 +2,7 @@
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-You can send Notifications using Jigx Management or programmatically in your solutions, see [Notifications](#). Notifications can be configured to be sent to a single user, the entire organization, users of a specific solution, and even users of a specific jig in a specific solution.
+You can send Notifications using Jigx Management or programmatically in your solutions, see [Notifications](https://docs.jigx.com/notifications). Notifications can be configured to be sent to a single user, the entire organization, users of a specific solution, and even users of a specific jig in a specific solution.
 :::
 
 :::VerticalSplitItem
@@ -14,16 +14,16 @@ You can send Notifications using Jigx Management or programmatically in your sol
 
 | **Core structure** |                                                                                                                                                                                                                                   |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| function           | Define a function in the *Functions* folder of your solution. The function has input parameters such as the notification `title`, the notification `text` and requires a Jigx `accessToken` or [personal access token (PAT)](#) . |
+| function           | Define a function in the *Functions* folder of your solution. The function has input parameters such as the notification `title`, the notification `text` and requires a Jigx `accessToken` or [personal access token (PAT)](https://docs.jigx.com/my-profile#yepji) . |
 | jig                | jigs will invoke the function for sending notifications either via submitting form values to the function or by using an [execute-entity](./Actions/execute-entity.md) action for invoking the function.                          |
 
 ## Notification URL per region
 
 | **Region**                  | **URL**                                                                                                                                                                                                                                                                                                                                                                                                          |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| US                          | <a href="https://us-east-1.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications" target="_blank">https\://us-east-1.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications</a> [https://us-east-1.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications](https://us-east-1.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications)                     |
-| South East (e.g. Australia) | <a href="https://ap-southeast-2.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications" target="_blank">https\://ap-southeast-2.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications</a>[https://ap-southeast-2.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications](https://ap-southeast-2.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications)  |
-| Europe                      | <a href="https://eu-central-1.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications" target="_blank">https\://eu-central-1.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications</a>[https://eu-central-1.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications](https://eu-central-1.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications)          |
+| US                          | [https://us-east-1.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications](https://us-east-1.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications)                     |
+| South East (e.g. Australia) | [https://ap-southeast-2.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications](https://ap-southeast-2.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications)  |
+| Europe                      | [https://eu-central-1.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications](https://eu-central-1.api.jigx.com/v2.0/tool/organizations/\{organizationId}/notifications)          |
 
 ## Examples and code snippets
 
@@ -34,11 +34,12 @@ Click here to go there directly: [https://manage.jigx.com/settings/org-details](
 :::
 
 ::::ExpandableHeading
+
 ### Notification sent when submitting a form
 
-In this example we are using hidden form components (e.g. `organizationId`) to pass required parameters to the function. The emails field contains a comma-separated list of recipients. You could also use [Expressions](#) to create that comma-separated string dynamically at runtime.
+In this example we are using hidden form components (e.g. `organizationId`) to pass required parameters to the function. The emails field contains a comma-separated list of recipients. You could also use [Expressions](https://docs.jigx.com/expressions) to create that comma-separated string dynamically at runtime.
 
-Once you submitted the form, the recipients should receive both a push notification and an in-app notification. You can also check the delivery status of your notification in the [Notifications](#) section of the Jigx Management.
+Once you submitted the form, the recipients should receive both a push notification and an in-app notification. You can also check the delivery status of your notification in the [Notifications](https://docs.jigx.com/notifications) section of the Jigx Management.
 
 Add a function definition called *send-notification.jigx* to the *functions* folder of your solution and copy & paste the following snippet into it. Replace the \{organizationId} in the `url` with your organization's Id.
 
@@ -174,10 +175,12 @@ children:
             initialValue: jigx
             isHidden: true
 ```
+
 :::
 ::::
 
 ::::ExpandableHeading
+
 ### Send notification with execute-entity
 
 You can also send notifications using an [execute-entity](./Actions/execute-entity.md) action if you want to have more control over what's being sent to the function.
@@ -297,10 +300,12 @@ children:
           options:
             label: Text
 ```
+
 :::
 ::::
 
 :::::ExpandableHeading
+
 ### Send notification with a target jig with input parameters
 
 You can also target a specific jig with input parameters from your push notification. An example of this would be a notification about a new product promotion with the promotion detail jig as the target. When the user taps on the notification (either on the native push notification or the in-app notification), the app will navigate to the specific promotion
@@ -489,12 +494,13 @@ children:
                 numberStyle: currency
                 currency: USD            
 ```
+
 :::
 :::::
 
 :::ExpandableHeading
+
 ### Sending push notifications  using the Jigx notification  Endpoint
 
 See [External push notifications (API)](<./Notifications/External push notifications _API_.md>) for more information and examples.
 :::
-

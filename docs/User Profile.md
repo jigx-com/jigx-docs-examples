@@ -25,9 +25,9 @@ By default, the user profile in Jigx includes various menu options, such as Pers
 ## Allowing users to update their profile
 
 You can allow users to update specific information in their profile using the [action.update-profile](./Actions/update-profile.md). This action can be configured within a jig in various ways, such as:
-&#x9;•	An action button
-&#x9;•	A header action link or icon
-&#x9;•	In an event, e.g., `onPress`
+&#x9; An action button
+&#x9; A header action link or icon
+&#x9; In an event, e.g., `onPress`
 
 The following information can be updated when using the action:
 
@@ -104,6 +104,7 @@ children:
             displayName: =@ctx.components.displayName.state.value
             avatarUrl: =@ctx.components.userAvatar.state.value
 ```
+
 :::
 
 ## Customize or extend the Profile screen
@@ -221,6 +222,7 @@ profile:
       options:
         jigId: user-detail
 ```
+
 :::
 
 ### Extended Profile screen with list &#x20;
@@ -314,6 +316,7 @@ datasources:
           icon: work-from-home-computer-meeting
           color: warning   
 ```
+
 :::
 
 ### Extended Profile screen using custom components (alpha)
@@ -441,5 +444,5 @@ datasources:
           icon: global-collaboration-handshake
           color: negative
 ```
-:::
 
+:::

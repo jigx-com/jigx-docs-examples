@@ -7,12 +7,13 @@ updatedAt: Wed Mar 05 2025 19:58:43 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="danger"}
-This feature is currently in its **Alpha **stage of development.
+This feature is currently in its **Alpha** stage of development.
 
 - As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
+
   :::
 
 The icon component can be integrated into custom components to enhance their visual appeal and functionality, such as adding an icon within a [Button (Alpha)](<./Button _Alpha_.md>) , displaying it in a [Card (Alpha)](<./Card _Alpha_.md>) , or embedding it in a [View (Alpha)](<./View _Alpha_.md>) . By customizing an icon, you can adjust its size, color, and shape, and even apply animations or conditional styling, ensuring seamless alignment with your application's design system and user experience.
@@ -49,6 +50,7 @@ This example shows the `component.icon` with different icon sizes using the `siz
 1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section4.jigx).
 2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/icons/icon-sizes.jigx).
 3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons/icons-sizes.jigx).
+
    :::
 
 :::VerticalSplitItem

@@ -7,12 +7,13 @@ updatedAt: Wed Feb 12 2025 17:43:24 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="danger"}
-This feature is currently in its **Alpha **stage of development.
+This feature is currently in its **Alpha** stage of development.
 
 - As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
+
 :::
 
 Creating user-specific screens can be a breeze thanks to pre-designed templates for custom components. These templates are ready-to-use building blocks designed to streamline your workflow and save time. These templates are built to help you start fast, offering polished designs and pre-built functionality for various use cases.
@@ -35,6 +36,7 @@ Template categories include:
 - [Generic (Alpha)](<./Templates _Alpha_/Generic _Alpha_.md>)
 - [Industry Specific (Alpha)](<./Templates _Alpha_/Industry Specific _Alpha_.md>)
 - [Travel (Alpha)](<./Templates _Alpha_/Travel _Alpha_.md>)
+
 :::
 ::::
 

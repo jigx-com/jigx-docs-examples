@@ -7,12 +7,13 @@ updatedAt: Wed Mar 05 2025 19:53:32 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="danger"}
-This feature is currently in its **Alpha **stage of development.
+This feature is currently in its **Alpha** stage of development.
 
 - As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
+
 :::
 
 The *card* component adds context or highlights information in the jig. The card itself is a container with integrated padding, background, and row rules, meaning every component placed in the card will be represented as a separate row with spaces between the rows.
@@ -27,7 +28,7 @@ You can use `when` and `instanceId` with `component.card`, add the properties be
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | `color`     | Multiple, use IntelliSense to view the available list.                                                                              |
 | `direction` | `row` - creates a vertical layout in a row.&#xA;`column` - creates a horizontal layout in a column.                                 |
-| `emphasis`  | `extra-low`, `low`, `low-medium`,` medium`, `high`                                                                                  |
+| `emphasis`  | `extra-low`, `low`, `low-medium`, `medium`, `high`                                                                                  |
 | `onPress`   | Multiple, use IntelliSense to view the available list of [actions](./../Actions.md). The action is called when the card is pressed. |
 | `style`     | `isDisabled` - true or false                                                                                                        |
 
@@ -42,6 +43,7 @@ You can use `when` and `instanceId` with `component.card`, add the properties be
 ## Example and code snippets
 
 :::::ExpandableHeading
+
 ### Card
 
 ::::VerticalSplit{layout="middle"}
@@ -148,12 +150,13 @@ header:
 children:
   - type: component.custom-component
     componentId: card2
-
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Cards with images
 
 ::::VerticalSplit{layout="middle"}
@@ -462,10 +465,12 @@ children:
   - type: component.custom-component
     componentId: cards-images
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Cards in a list
 
 ::::VerticalSplit{layout="middle"}
@@ -476,6 +481,7 @@ This example shows how to use the `component.card` in a `component.list`. In the
 
 1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cards-list.jigx).
 2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-in-list.jigx).
+
 :::
 
 :::VerticalSplitItem
@@ -592,10 +598,12 @@ children:
           subtitle:  =@ctx.current.item.subtitle
           button: =@ctx.current.item.button
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Card with charts
 
 ::::VerticalSplit{layout="middle"}
@@ -610,6 +618,7 @@ This example demonstrates how to show a `line-chart` component in a `component.c
 
 1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cards-chart.jigx)
 2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-example3.jigx).
+
 :::
 ::::
 
@@ -847,10 +856,12 @@ children:
       color1:  =@ctx.datasources.chart.color1
       color2:  =@ctx.datasources.chart.color2
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Multiple horizontal cards
 
 ::::VerticalSplit{layout="middle"}
@@ -863,6 +874,7 @@ Take note of how the layout configuration is created by using the `view` compone
 
 1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cards.jigx).
 2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards3.jigx).
+
 :::
 
 :::VerticalSplitItem
@@ -1007,10 +1019,12 @@ children:
   - type: component.custom-component
     componentId: cards
 ```
+
 :::
 :::::
 
 :::ExpandableHeading
+
 ### Other card examples
 
 Explore a variety of additional code examples demonstrating the use of the card component on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/templates/cards). These examples showcase different configurations and use cases to help you get the most out of the card component.
@@ -1023,8 +1037,4 @@ Explore a variety of additional code examples demonstrating the use of the card 
 - [Cards with Case Actions](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-case-actions.jigx)
 - [Cards with Case Actions 1](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/cards/cards-case-actions1.jigx)
 
-
-
-
 :::
-

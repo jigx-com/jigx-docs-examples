@@ -1,12 +1,13 @@
 # Travel (Alpha)
 
 :::hint{type="danger"}
-This feature is currently in its **Alpha **stage of development.
+This feature is currently in its **Alpha** stage of development.
 
 - As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
+
 :::
 
 ::::LinkArray
@@ -18,6 +19,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/booking/booking-2.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/booking/booking.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -28,6 +30,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/booking/hotel-list.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/booking/booking-horizontal.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -38,6 +41,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/packages.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/booking/booking-rating.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -48,6 +52,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/facilities/horizontal-facilities.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/facilities/facilities.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -58,6 +63,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/itinerary/itinerary-day.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/itinerary/itinerary.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -68,6 +74,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/location/location.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/location/location.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -78,6 +85,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/weather/forecast.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/weather/weather.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -88,6 +96,6 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/weather/forecast-2.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/weather/weather1.jigx)
+
 :::
 ::::
-

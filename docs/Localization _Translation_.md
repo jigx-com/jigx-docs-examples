@@ -5,7 +5,7 @@ createdAt: Tue Nov 28 2023 12:15:16 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Nov 21 2024 10:19:50 GMT+0000 (Coordinated Universal Time)
 ---
 
-Solutions can easily be translated into any language by using the `Text Locale` property and creating a translation file with the translated text in Jigx Builder. On the device, use the _Profile>Settings>Language_ option and select *Device (Respects device settings). *To understand how to configure localization in Jigx see [Localization](https://docs.jigx.com/localization).
+Solutions can easily be translated into any language by using the `Text Locale` property and creating a translation file with the translated text in Jigx Builder. On the device, use the _Profile>Settings>Language_ option and select _Device (Respects device settings)_. To understand how to configure localization in Jigx see [Localization](https://docs.jigx.com/localization).
 
 :::hint{type="info"}
 Adding dynamic values in localized jigs use **ICU message** definitions.

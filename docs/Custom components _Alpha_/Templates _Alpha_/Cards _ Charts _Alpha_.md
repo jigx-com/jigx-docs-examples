@@ -7,6 +7,7 @@ This feature is currently in its **Alpha** stage of development.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
+
 :::
 
 ::::LinkArray
@@ -18,6 +19,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/business-card.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/cards/business-card.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -28,6 +30,7 @@ Get the template on GitHub:
 
 - [component]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cashback-card.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/cards/cashback-card.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -37,7 +40,8 @@ Get the template on GitHub:
 Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cashback-card2.jigx)
-- &#x20;[jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/cards/cashback-card-traveler.jigx)
+- [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/cards/cashback-card-traveler.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -48,6 +52,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/credit-card.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/cards/credit-card-vertical.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -58,6 +63,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/credit-card.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/cards/credit-card-horizontal.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -68,6 +74,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/charts/chart.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/chart/chart1.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -78,6 +85,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/charts/chart2.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/chart/chart2.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -88,6 +96,6 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/charts/chart3.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/chart/chart3.jigx)
+
 :::
 ::::
-

@@ -7,12 +7,13 @@ updatedAt: Wed Mar 05 2025 20:08:42 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="danger"}
-This feature is currently in its **Alpha **stage of development.
+This feature is currently in its **Alpha** stage of development.
 
 - As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
+
   :::
 
 The custom component _text_ allows adding text inside custom components. For example, adding text inside a [Card (Alpha)](<./Card _Alpha_.md>) or [View (Alpha)](<./View _Alpha_.md>).
@@ -45,7 +46,7 @@ The examples use a set of custom components called _sections_. The sections are 
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-dxYQtS-bNSkPWJeZxXb-h-20241113-113134.png size="70" position="center" caption="Text font size" alt="Text font size"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-dxYQtS-bNSkPWJeZxXb-h-20241113-113134.png" size="70" position="center" caption="Text font size" alt="Text font size"}
 :::
 
 :::VerticalSplitItem
@@ -56,6 +57,7 @@ This example shows the use of `component.text` with various font sizes configure
 1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-1.jigx).
 3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-font-sizes.jigx).
+
    :::
    ::::
 
@@ -134,6 +136,7 @@ This example shows how to apply strikethrough formatting to font of various size
 1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-2.jigx).
 3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-line-through.jigx).
+
    :::
 
 :::VerticalSplitItem

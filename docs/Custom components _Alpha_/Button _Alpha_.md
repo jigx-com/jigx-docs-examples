@@ -7,12 +7,13 @@ updatedAt: Wed Mar 05 2025 19:37:35 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="danger"}
-This feature is currently in its **Alpha **stage of development.
+This feature is currently in its **Alpha** stage of development.
 
 - As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
+
   :::
 
 The _button_ custom component provides predefined options for designing the UI and tap functionality for a button. For example, your requirement might be a button showing an icon and text with a background color that can be used in multiple jigs in your app.
@@ -26,7 +27,7 @@ You can use `when` and `instanceId` with `component.button`, add the properties 
 | **Options** | **Value**                                                                                                                                                                                                                                                                                                                        |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `icon`      | `left` - select an icon from the provided list.&#xA;`right` - select an icon from the provided list.                                                                                                                                                                                                                             |
-| `isCompact` | `false `&#xA;`true`                                                                                                                                                                                                                                                                                                              |
+| `isCompact` | `false`&#xA;`true`                                                                                                                                                                                                                                                                                                              |
 | `onPress`   | Multiple, use IntelliSense to view the list of available [actions](<./../Widgets/actions _buttons_.md>) to call. The action is called when the button is pressed.                                                                                                                                                                |
 | `style`     | `isBusy` - true/false&#xA;`isDisabled` - true/false                                                                                                                                                                                                                                                                              |
 | `title`     | Provide the text to display on the button. You can use [Localization](https://docs.jigx.com/localization) to cater for multiple languages.                                                                                                                                                                                       |
@@ -192,6 +193,7 @@ This example shows the custom component that uses compact buttons using the `isC
 1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-2.jigx).
 3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-compact.jigx).
+
    :::
    ::::
 
@@ -339,6 +341,7 @@ This example shows how to set buttons in a custom component to show they are bus
 1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-3.jigx).
 3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-busy.jigx).
+
    :::
 
 :::VerticalSplitItem
@@ -513,6 +516,7 @@ This example shows how to disable a button on a custom component using the `isDi
 1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-4.jigx).
 3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-disabled.jigx).
+
    :::
    ::::
 
@@ -683,6 +687,7 @@ This example shows a custom component with a combination of the buttons as disab
 1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-5.jigx).
 3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-disabled-busy.jigx).
+
    :::
 
 :::VerticalSplitItem

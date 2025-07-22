@@ -22,7 +22,6 @@ Examples are based on test data in a Jigx demo Salesforce environment. Copying t
 :::VerticalSplitItem
 This example shows how to update a Salesforce Opportunity record. From the list of opportunities using the `onPress` action the jig opens a form showing the opportunity name and amount. Edit the amount field. Using the Salesforce Providers `save` method the opportunity is updated.
 
-
 :::
 ::::
 
@@ -156,5 +155,5 @@ children:
                 id: =@ctx.current.item.id
                 entity: Opportunity
 ```
-:::
 
+:::

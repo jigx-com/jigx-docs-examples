@@ -1,15 +1,17 @@
 # Industry Specific (Alpha)
 
 :::hint{type="danger"}
-This feature is currently in its **Alpha **stage of development.
+This feature is currently in its **Alpha** stage of development.
 
 - As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
+
 :::
 
 :::::ExpandableHeading
+
 ### Health
 
 ::::LinkArray
@@ -21,6 +23,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/health/blood.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/health/blood.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -31,11 +34,13 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/health/ventilator.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/health/ventilator.jigx)
+
 :::
 ::::
 :::::
 
 :::::ExpandableHeading
+
 ### News
 
 ::::LinkArray
@@ -47,6 +52,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/news/news-categories.jigx)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/news/news.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -57,6 +63,7 @@ Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/templates/coffee)
 - [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/hospitality/coffee.jigx)
+
 :::
 
 :::LinkArrayItem{headerImage headerColor}
@@ -66,12 +73,14 @@ Get the template on GitHub:
 Get the template on GitHub:
 
 - [component](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/templates/coffee)
-- <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/templates/news/news.jigx" target="_blank">jig</a>
+- [jig](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/templates/news/news.jigx)
+
 :::
 ::::
 :::::
 
 :::::ExpandableHeading
+
 ### Field service
 
 ::::LinkArray
@@ -82,8 +91,8 @@ Get the template on GitHub:
 **Get the template on GitHub**:
 
 - [component](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/templates/plumbing)
-  \- [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/plumbing/plumbing.jigx)
+- [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/plumbing/plumbing.jigx)
+
 :::
 ::::
 :::::
-
