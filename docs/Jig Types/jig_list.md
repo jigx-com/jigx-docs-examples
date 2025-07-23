@@ -575,7 +575,7 @@ item:
       subtitle: =@ctx.current.item.board
           
 widgets:
-  2x2:
+  flights:
     type: widget.list
     options:
       data: =@ctx.datasources.flight-schedule-dynamic
