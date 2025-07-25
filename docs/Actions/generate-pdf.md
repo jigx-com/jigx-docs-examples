@@ -8,13 +8,13 @@ The URI of the generated file is returned and is available as part of the action
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif" size="60" position="center" caption="Generate a PDF file" alt="Generate a PDF file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif" size="60" position="center" caption="Generate a PDF file" alt="Generate a PDF file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
 | **Core structure** |                                                                                                                                                                                                                                                                          |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -24,8 +24,8 @@ Some properties are common to all components, see [Common component properties](
 
 | **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon](https://docs.jigx.com/jigx-icons) to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).         |
-| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.               |
+| `icon`            | Select an  to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                                |
+| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
 | `styles`          | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
 
 ## Considerations
@@ -40,7 +40,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif" size="70" position="center" caption="Generate and share PDF" alt="Generate and share PDF" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif" size="70" position="center" caption="Generate and share PDF" alt="Generate and share PDF" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
 :::
 
 :::VerticalSplitItem
@@ -150,7 +150,6 @@ datasources:
                 </body>
                 </html>
 ```
-
 :::
 
 ### Generate a pdf,  save and share&#x20;
@@ -161,7 +160,7 @@ In this example, an action list contains three actions: the first generates a PD
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" size="70" position="center" caption="Generate PDF, save & share" alt="Generate PDF, save & share" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" size="70" position="center" caption="Generate PDF, save & share" alt="Generate PDF, save & share" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
 :::
 ::::
 
@@ -372,15 +371,12 @@ actions:
                 method: create
                 data:
                   # Enter the file name for database storage.
-                  fileName: invoice-1
+                  fileName: invoice
                   date: =$now()
-                  # Use the action instance output to reference the file.
-                  file: =@ctx.actions.generate-pdf-id.outputs.uri
-                # Convert the file from local-URI to data-URI for database storage.  
-                conversions:
-                  - property: file
-                    from: local-uri
-                    to: data-uri
+                # Use the action instance output to reference the file
+                # that is saved in dynamic data files.  
+                file:
+                  localPath: =@ctx.actions.generate-pdf-id.outputs.uri
             # Third action to share the file via the device's messaging app.        
             - type: action.share
               options:
@@ -390,7 +386,6 @@ actions:
                 message: Global Invoice 
                 subject: Invoice for January
 ```
-
 :::
 
 ### Generate pdf from JavaScript HTML function
@@ -473,11 +468,13 @@ actions:
                 provider: DATA_PROVIDER_DYNAMIC
                 entity: default/documents
                 method: create
-                data: 
+                data:
                   fileName: invoice
                   date: =$now()
-                  # Use the action instance output to reference the file.
-                  file: =@ctx.actions.generate-pdf-id.outputs.uri
+                file:
+                  # Use the action instance output to reference the file
+                  # that is stored in Dynamic data files.
+                  localPath: =@ctx.actions.generate-pdf-id.outputs.uri
             # Add the second action to share out the pdf,
             # on one of the devices apps.       
             - type: action.share
@@ -667,5 +664,5 @@ html.js
     
   }
 ```
-
 :::
+

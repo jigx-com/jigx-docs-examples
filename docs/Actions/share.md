@@ -6,21 +6,21 @@ Easily share your files directly from the app with just a tap. Whether it's a do
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" size="80" position="center" caption="Share images" alt="Share images" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" size="80" position="center" caption="Share images" alt="Share images" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" width="800" height="794" darkWidth="800" darkHeight="794"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `email`            | Provide an email address, this optional property allows a string or expression. &#xA;It is used to set the To address if sharing with email.&#xA;If an email is supplied the share action will automatically open up the default email app on the phone to compose and fill in the supplied details.<br>If email is not supplied, you will be able to share via other methods or apps.<br>For iOS you can only supply a single email address. If you supply more, the To field will be left blank. This is not an issue on Android but for consistency it is best to keep to one email address. |
-| `fileUri`          | Provide the uri for the file you want to share, either from a datasource, in an expression, or from an action, such as the `action.generate-pdf`. You can reference the PDF or the local uri of the PDF document using the action's output uri `=@ctx.actions.generatePDF.outputs.uri`. &#xA;The `fileUri` needs to be the full uri of the local file.                                                                                                                                                                                                                                              |
-| `message`          | Add a text message to send with the shared file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `subject`          | Add a subject when sharing the file. The subject will only appear in apps that support a subject property, such as email.                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `title`            | Provide the action button with a title, for example, Share file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `email`            | Provide an email address, this optional property allows a string or expression. &#xA;It is used to set the To address if sharing with email.&#xA;If an email is supplied the share action will automatically open up the default email app on the phone to compose and fill in the supplied details.&#xA;If email is not supplied, you will be able to share via other methods or apps.&#xA;For iOS you can only supply a single email address. If you supply more, the To field will be left blank. This is not an issue on Android but for consistency it is best to keep to one email address. |
+| `fileUri`          | Provide the uri for the file you want to share, either from a datasource, in an expression, or from an action, such as the `action.generate-pdf`. You can reference the PDF or the local uri of the PDF document using the action's output uri `=@ctx.actions.generatePDF.outputs.uri`. &#xA;The `fileUri` needs to be the full uri of the local file.                                                                                                                                                                                                                                            |
+| `message`          | Add a text message to send with the shared file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `subject`          | Add a subject when sharing the file. The subject will only appear in apps that support a subject property, such as email.                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `title`            | Provide the action button with a title, for example, Share file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ## Considerations
 
@@ -36,7 +36,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" size="88" position="center" caption="Share images" alt="Share images" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" size="88" position="center" caption="Share images" alt="Share images" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" width="800" height="794" darkWidth="800" darkHeight="794"}
 :::
 
 :::VerticalSplitItem
@@ -94,6 +94,9 @@ actions:
                   site-photos: =@ctx.components.site-photos.state.value
                   createdBy: =@ctx.user.email
                   createdDate: =$now()
+                # Provide the image to be stored in Dynamic files 
+                file:
+                  localPath: =@ctx.components.site-photos.state.value  
                 onSuccess: 
                   # Once saved, the device's apps modal opens to send the images. 
                   type: action.share
@@ -101,17 +104,18 @@ actions:
                     message: =$fromMillis($toMillis($now()), '[M]/[D]/[Y]') Site photos
                     fileUri: =@ctx.components.site-photos.state.value     
 
+```
 :::
 
 ### Generate a pdf,  save and share&#x20;
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-In this example, an action list contains three actions: the first generates a PDF for an invoice, the second saves it to the database, and the third shares the PDF via a messaging app on the device.  When saving the file to the database the file is converted from local-uri to data-uri for storage.
+In this example, an action list contains three actions: the first generates a PDF for an invoice, the second saves it to the database, and the third shares the PDF via a messaging app on the device.  The file is saved to dynamic files.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" size="70" position="center" caption="PDF generated, saved & shared" alt="PDF generated, saved & shared" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" size="70" position="center" caption="PDF generated, saved & shared" alt="PDF generated, saved & shared" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
 :::
 ::::
 
@@ -186,13 +190,10 @@ actions:
                   # Enter the file name for database storage.
                   fileName: invoice-1
                   date: =$now()
-                  # Use the action instance output to reference the file.
-                  file: =@ctx.actions.generate-pdf-id.outputs.uri
-                # Convert the file from local-URI to data-URI for database storage.  
-                conversions:
-                  - property: file
-                    from: local-uri
-                    to: data-uri
+                  # Use the action instance output to reference the file
+                  # that is saved in Dynamic files
+                file: 
+                  localPath: =@ctx.actions.generate-pdf-id.outputs.uri
             # Third action to share the file via the device's apps.        
             - type: action.share
               options:
@@ -351,7 +352,6 @@ options:
           </body>
           </html>
 ```
-
 :::
 
 ### Share by email&#x20;
@@ -504,5 +504,5 @@ options:
             </body>
             </html>
 ```
-
 :::
+
