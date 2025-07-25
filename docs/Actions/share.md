@@ -101,7 +101,7 @@ actions:
                   # Once saved, the device's apps modal opens to send the images. 
                   type: action.share
                   options:
-                    message: =$fromMillis($toMillis($now()), '[M]/[D]/[Y]') Site photos
+                    message: =$fromMillis($toMillis($now()), '[M]/[D]/[Y]') & 'Site photos'
                     fileUri: =@ctx.components.site-photos.state.value     
 
 ```
