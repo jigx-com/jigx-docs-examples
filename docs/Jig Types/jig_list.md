@@ -30,23 +30,23 @@ The `jig.list` can be configured in the following ways within the Jigx Builder:
 - As a list shown as a [bar-chart](./../Components/charts/bar-chart.md)
 - As a list shown as a [pie-chart](./../Components/charts/pie-chart.md)
 
-Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
+Some properties are common to all jig types, see [Common jig type properties]() for a list and their configuration options.
 
-| **Other options** |           |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `badge`           | Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:&#xA;-  To display as a red dot using the `empty` value.&#xA;-  A red dot with a number using an expression to perform a count. &#xA;For example, counting the number of tasks in the list.       |
-| `filter`          | `initialValue` - Predefine the default selected tab for a filter on the list, when opening the  the default filter tab is displayed.&#xA;`data` -  define the filter tabs using:&#xA;`title` - give the filter a name. The text that will be displayed in the tab, for example, in-stock.&#xA;`value` - The value that the list filter returns. Use the following expressions to return this value:&#xA;`=@ctx.components.my-list.state.filter` (for a list in a default jig)&#xA;`=@ctx.jig.state.filter`(for a list jig)&#xA;For `true/false` values that are saved as **boolean** ensure the filter has a **boolean** value.&#xA;For `true/false` values that are saved as **string** ensure the filter has a **string** value.&#xA;When using the `value` property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.     |
-| `hasActiveItem`   | When set to `true` the list has an active item state.           |
-| `isHorizontal`    | Set to `true` displays the list horizontally, while `false` displays the list vertically. The default list is displayed vertically.     |
-| `isContained`     | Used to style the list item, `true` wraps the list item in a card, while `false` displays the item with no styling. This property can be used with vertical and horizontal lists and `component.list-item`.       |
-| `isSearchable`    | Set to `true` adds a search field to the list. The default list is displayed without a search field.        |
-| `isSelectable`    | When set to `true` the ability to select individual and multiple items in the list is available. Click the \*Select \*link in the top right of the screen. The default list is displayed without selection options.                       |
-| `leftElement`     | Set an element to the left of the list. The following elements are available:`avatar` - configure the `color`, `size`, `text`, `uri`, and `onPress` event.<br>`checkbox`<br>`icon` - the icon `size`, `color`,`shape`, `type`, `isSubtle` (low opacity), and `onPress` event is configurable.<br>`image` - the image `size`, `shape`, `resizeMode`, and `onPress` event is configurable. <br>`progress`           |
-| `rating`          | Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the `ratingIcon`, `color`, and accompanying descriptive `text`. By default, the rating property has only one icon showing a rating-star in the primary color.&#xA;`value`- Rating with numerical value.&#xA;The value of the rating, which can be a simple number.&#xA;The number of icons is calculated based on this value unless overridden in the icon configuration.&#xA;Configuring the `current` and `maximum` values, shows the value as a fraction, for example 7/10.&#xA;`percentage` - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%.&#xA;`ratingIcon` - By default the *rating-star* icon in the *primary* color is displayed.&#xA;`icon` - Add an icon to represent the rating. A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.&#xA;`color`- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](https://docs.jigx.com/jigx-color-palette).&#xA;`current` and `maximum` values - Where maximum is the number of icons to display and current the number of icons to color. &#xA;`text` - add descriptive text that displays next to rating.&#xA;Ratings can set up in the following ways: &#xA;1\) Example of `value` for a product rating. &#xA;2\) Example of a user rating shown in a `percentage`&#xA;3\) Example of `value` rating showing 2.5/5 as a rating with single star icon. |
-| `rightElement`    | Set an element to the right of the list. The following elements are available:<br>`amountControl`<br>`badge` - can be a solid colored badge or a badge with a number in it. Badges  always use the primary color.<br>`button`<br>`checkbox`<br>`icon` - the icon `size`, `color`,`shape`, `type`, `isSubtle` (low opacity), and `onPress` event is configurable.<br>`switch`<br>`value` - When using `text`, the option to change its `color` is available.<br>`text` - define up to three  lines of text with styling (color, bold, font size) applied to each line of text.    |
-| `sections`        | Used for styling a list, when set to `true` each item in the list displays in its own section, divided by a line. The default is `false`.           |
-| `tags`            | A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.&#xA;`text` -  The text content displayed within the tag.&#xA;`color` - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in [Jigx color palette](https://docs.jigx.com/jigx-color-palette). &#xA;Tags can be set up in three ways: &#xA;1\) Using a dynamic expression from a datasource:&#xA;`tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}` &#xA;2\) Using a dynamic expression from a list item:&#xA;`tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}`&#xA;3\) Using static, predefined tags&#xA;`tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'`                      |
-| `title`            | Add a `title` for the list-item. You can use an expression and datasource to set the title. Select _Line Options_ (`text`), allowing configuration of individual parts of the central element in a list-item. You can set properties such as `color`, `fontSize`, `bold`, `format`, `isSubtle` (low opacity), and `numberOfLines`, rather than applying them globally via the root.  |
+| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `badge`           | Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:&#xA;-  To display as a red dot using the `empty` value.&#xA;-  A red dot with a number using an expression to perform a count. &#xA;For example, counting the number of tasks in the list.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `filter`          | `initialValue` - Predefine the default selected tab for a filter on the list, when opening the  the default filter tab is displayed.&#xA;`data` -  define the filter tabs using:&#xA;`title` - give the filter a name. The text that will be displayed in the tab, for example, in-stock.&#xA;`value` - The value that the list filter returns. Use the following expressions to return this value:&#xA;`=@ctx.components.my-list.state.filter` (for a list in a default jig)&#xA;`=@ctx.jig.state.filter`(for a list jig)&#xA;For `true/false` values that are saved as **boolean** ensure the filter has a **boolean** value.&#xA;For `true/false` values that are saved as **string** ensure the filter has a **string** value.&#xA;When using the `value` property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `hasActiveItem`   | When set to `true` the list has an active item state.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `isHorizontal`    | Set to `true` displays the list horizontally, while `false` displays the list vertically. The default list is displayed vertically.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `isContained`     | Used to style the list item, `true` wraps the list item in a card, while `false` displays the item with no styling. This property can be used with vertical and horizontal lists and `component.list-item`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `isSearchable`    | Set to `true` adds a search field to the list. The default list is displayed without a search field.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `isSelectable`    | When set to `true` the ability to select individual and multiple items in the list is available. Click the \*Select \*link in the top right of the screen. The default list is displayed without selection options.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `leftElement`     | Set an element to the left of the list. The following elements are available:`avatar` - configure the `color`, `size`, `text`, `uri`, and `onPress` event.&#xA;`checkbox`&#xA;`icon` - the icon `size`, `color`,`shape`, `type`, `isSubtle` (low opacity), and `onPress` event is configurable.&#xA;`image` - the image `size`, `shape`, `resizeMode`, and `onPress` event is configurable. &#xA;`progress`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `rating`          | Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the `ratingIcon`, `color`, and accompanying descriptive `text`. By default, the rating property has only one icon showing a rating-star in the primary color.&#xA;`value`- Rating with numerical value.&#xA;The value of the rating, which can be a simple number.&#xA;The number of icons is calculated based on this value unless overridden in the icon configuration.&#xA;Configuring the `current` and `maximum` values, shows the value as a fraction, for example 7/10.&#xA;`percentage` - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%.&#xA;`ratingIcon` - By default the *rating-star* icon in the *primary* color is displayed.&#xA;`icon` - Add an icon to represent the rating. A list of icons is available. See  for more information.&#xA;`color`- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](https://docs.jigx.com/jigx-color-palette).&#xA;`current` and `maximum` values - Where maximum is the number of icons to display and current the number of icons to color. &#xA;`text` - add descriptive text that displays next to rating.&#xA;Ratings can set up in the following ways: &#xA;1\) Example of `value` for a product rating. &#xA;2\) Example of a user rating shown in a `percentage`&#xA;3\) Example of `value` rating showing 2.5/5 as a rating with single star icon. |
+| `rightElement`    | Set an element to the right of the list. The following elements are available:&#xA;`amountControl`&#xA;`badge` - can be a solid colored badge or a badge with a number in it. Badges  always use the primary color.&#xA;`button`&#xA;`checkbox`&#xA;`icon` - the icon `size`, `color`,`shape`, `type`, `isSubtle` (low opacity), and `onPress` event is configurable.&#xA;`switch`&#xA;`value` - When using `text`, the option to change its `color` is available.&#xA;`text` - define up to three  lines of text with styling (color, bold, font size) applied to each line of text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `sections`        | Used for styling a list, when set to `true` each item in the list displays in its own section, divided by a line. The default is `false`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `tags`            | A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.&#xA;`text` -  The text content displayed within the tag.&#xA;`color` - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in . &#xA;Tags can be set up in three ways: &#xA;1\) Using a dynamic expression from a datasource:&#xA;`tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}` &#xA;2\) Using a dynamic expression from a list item:&#xA;`tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}`&#xA;3\) Using static, predefined tags&#xA;`tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `title`           | Add a `title` for the list-item. You can use an expression and datasource to set the title. Select *Line Options* (`text`), allowing configuration of individual parts of the central element in a list-item. You can set properties such as `color`, `fontSize`, `bold`, `format`, `isSubtle` (low opacity), and `numberOfLines`, rather than applying them globally via the root.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 :::CodeblockTabs
 product-rating-value
@@ -76,23 +76,21 @@ rating:
    ratingIcon:
       icon: rating-star
 ```
-
 :::
 
 | **State Configuration** | **Key**                                                                                                                                                        | **Notes**                                                                                                                                                                        |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `=@ctx.jig.state.`      | activeItem&#xA;activeItemId&#xA;amounts&#xA;filter&#xA;isHorizontal&#xA;isRefreshing&#xA;isSelectable&#xA;isSelectActive&#xA;searchText&#xA;selected&#xA;value | State is set by the creator in the YAML.&#xA;State applies to the jig                  |
-| `=@ctx.current.state.`  | amount&#xA;checked    | Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array. |
+| `=@ctx.jig.state.`      | activeItem&#xA;activeItemId&#xA;amounts&#xA;filter&#xA;isHorizontal&#xA;isRefreshing&#xA;isSelectable&#xA;isSelectActive&#xA;searchText&#xA;selected&#xA;value | State is set by the creator in the YAML.&#xA;State applies to the jig                                                                                                            |
+| `=@ctx.current.state.`  | amount&#xA;checked                                                                                                                                             | Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array. |
 | `=@ctx.solution.state.` | activeItemId&#xA;now                                                                                                                                           | Global state variable that can be used throughout the solution.                                                                                                                  |
 
 ## Examples and code snippets
 
 :::hint{type="success"}
-The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples),</a> and follow the instructions in [Setting up your solution](docId:1gfew7GRPvkfxon-TsymP).
+The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples), and follow the instructions in [Setting up your solution]().
 :::
 
 ::::::ExpandableHeading
-
 ### Simple List
 
 :::::VerticalSplit{layout="left"}
@@ -191,12 +189,10 @@ tabs:
     jigId: simple-list-dd
     icon: home-apps-logo
 ```
-
 :::
 ::::::
 
 :::::ExpandableHeading
-
 ### Lists with styles
 
 ::::VerticalSplit{layout="left"}
@@ -378,21 +374,19 @@ tabs:
     jigId: list-with-styles-sd
     icon: home-apps-logo
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### List with Expanders (using Titles)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/euImeOtjJPJyRBl7vaWB2_cxm2r026lekr6luqt2yaexpander-list2iphone13blueportrait.png" size="82" position="center" caption="List with expander" alt="List with expander" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/euImeOtjJPJyRBl7vaWB2_cxm2r026lekr6luqt2yaexpander-list2iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/euImeOtjJPJyRBl7vaWB2_cxm2r026lekr6luqt2yaexpander-list2iphone13blueportrait.png" size="82" position="center" caption="List with expander" alt="List with expander" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/euImeOtjJPJyRBl7vaWB2_cxm2r026lekr6luqt2yaexpander-list2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/y6ucddAuEX8iWobs7D0UP_ievh5q0gqyaymx-zhxfwzexpander-list1iphone13blueportrait.png" size="80" position="center" caption="List with expander" alt="List with expander" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/y6ucddAuEX8iWobs7D0UP_ievh5q0gqyaymx-zhxfwzexpander-list1iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/y6ucddAuEX8iWobs7D0UP_ievh5q0gqyaymx-zhxfwzexpander-list1iphone13blueportrait.png" size="80" position="center" caption="List with expander" alt="List with expander" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/y6ucddAuEX8iWobs7D0UP_ievh5q0gqyaymx-zhxfwzexpander-list1iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 ::::
 
@@ -507,12 +501,10 @@ tabs:
     jigId: list-with-expander-title-dd
     icon: home-apps-logo
 ```
-
 :::
 :::::
 
 ::::::ExpandableHeading
-
 ### List with Stages
 
 :::::VerticalSplit{layout="left"}
@@ -638,12 +630,10 @@ tabs:
     jigId: list-with-stage-dd
     icon: home-apps-logo
 ```
-
 :::
 ::::::
 
 ::::::ExpandableHeading
-
 ### List with Product-items
 
 :::::VerticalSplit{layout="left"}
@@ -748,12 +738,10 @@ tabs:
     jigId: list-with-product-item-dd
     icon: home-apps-logo
 ```
-
 :::
 ::::::
 
 ::::::ExpandableHeading
-
 ### List with Avatars
 
 :::::VerticalSplit{layout="middle"}
@@ -858,12 +846,10 @@ tabs:
     jigId: list-with-avatars-dd
     icon: home-apps-logo
 ```
-
 :::
 ::::::
 
 :::::ExpandableHeading
-
 ### List with right numbered badges
 
 ::::VerticalSplit{layout="middle"}
@@ -875,7 +861,7 @@ See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VNwVsznKhmwyIFL593qRe-20241028-150758.PNG" size="72" position="center" caption="List with numbered badge" alt="List with numbered badge" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VNwVsznKhmwyIFL593qRe-20241028-150758.PNG"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VNwVsznKhmwyIFL593qRe-20241028-150758.PNG" size="72" position="center" caption="List with numbered badge" alt="List with numbered badge" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VNwVsznKhmwyIFL593qRe-20241028-150758.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 ::::
 
@@ -898,6 +884,56 @@ header:
         source:
           uri: https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRlYW0lMjBzdGF0c3xlbnwwfHwwfHx8MA%3D%3D
 
+  priority: 
+    type: datasource.static
+    options:
+      data:
+        - id: 1
+          name: Closed
+          icon: check-2-alternate
+        - id: 2
+          name: Urgent
+          icon: double-exclamation-mark-2-formatting
+        - id: 3
+          name: High
+          icon: arrow-double-up
+        - id: 4
+          name: Low
+          icon: arrow-double-down
+        - id: 4
+          name: Medium
+          icon: equal-math-symbol-circle
+              
+data: =@ctx.datasources.team-tasks    
+item:
+  type: component.list-item
+  options:
+    color:
+      - when: =@ctx.current.item.priority = 'Urgent'
+        color: negative
+      - when: =@ctx.current.item.priority = 'Medium'
+        color: primary
+      - when: =@ctx.current.item.priority = 'Low'
+        color: color6
+      - when: =@ctx.current.item.priority = 'Closed'
+        color: positive
+      - when: =@ctx.current.item.priority = 'High'
+        color: warning
+    title: =@ctx.current.item.priority
+    leftElement:
+      element: icon
+      icon: =@ctx.datasources.priority[name = @ctx.current.item.priority].icon
+      type: duotone
+    rightElement: 
+      element: badge
+# The badge will display with the number of priorities per priority,
+# the count is configured in the datasource query.      
+      value: =@ctx.current.item.taskCount
+```
+
+datasource (dynamic)
+
+```yaml
 datasources:
   team-tasks:
     type: datasource.sqlite
@@ -921,59 +957,11 @@ datasources:
         GROUP BY priority
         ORDER BY priority DESC
 
-  priority: 
-    type: datasource.static
-    options:
-      data:
-        - id: 1
-          name: Closed
-          icon: check-2-alternate
-        - id: 2
-          name: Urgent
-          icon: double-exclamation-mark-2-formatting
-        - id: 3
-          name: High
-          icon: arrow-double-up
-        - id: 4
-          name: Low
-          icon: arrow-double-down
-        - id: 4
-          name: Medium
-          icon: equal-math-symbol-circle
-              
-data: =@ctx.datasources.team-tasks
-    
-item:
-  type: component.list-item
-  options:
-    color:
-      - when: =@ctx.current.item.priority = 'Urgent'
-        color: negative
-      - when: =@ctx.current.item.priority = 'Medium'
-        color: primary
-      - when: =@ctx.current.item.priority = 'Low'
-        color: color6
-      - when: =@ctx.current.item.priority = 'Closed'
-        color: positive
-      - when: =@ctx.current.item.priority = 'High'
-        color: warning
-    title: =@ctx.current.item.priority
-    leftElement:
-      element: icon
-      icon: =@ctx.datasources.priority[name = @ctx.current.item.priority].icon
-      isDuotone: true
-    rightElement: 
-      element: badge
-# The badge will display with the number of priorities per priority,
-# the count is configured in the datasource query.      
-      value: =@ctx.current.item.taskCount
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### List with Pie Charts
 
 ::::VerticalSplit{layout="left"}
@@ -1056,17 +1044,15 @@ tabs:
     jigId: list-with-pie-charts-sd
     icon: home-apps-logo
 ```
-
 :::
 :::::
 
 ::::::ExpandableHeading
-
 ### Horizontal list
 
 :::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{alt="Horizontal list" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iAXv2THQLhsn2rID-i7pl_horizontallistdd.PNG" size="90" caption="Horizontal list" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iAXv2THQLhsn2rID-i7pl_horizontallistdd.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iAXv2THQLhsn2rID-i7pl_horizontallistdd.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iAXv2THQLhsn2rID-i7pl_horizontallistdd.PNG" size="80" width="1240" height="2500" position="center" caption="Horizontal list" alt="Horizontal list"}
 :::
 
 ::::VerticalSplitItem
@@ -1191,21 +1177,19 @@ tabs:
     jigId: list-horizontal-dd
     icon: home-apps-logo
 ```
-
 :::
 ::::::
 
 ::::::ExpandableHeading
-
 ### Lists with Search functionality
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DODQZ6_xGZsyfmm3cvsbr_oah4dtuwpgsjwjv-9jqrjlist-with-search-functionalityiphone13blueportrait.png" size="82" position="center" caption="List with search" alt="List with search" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DODQZ6_xGZsyfmm3cvsbr_oah4dtuwpgsjwjv-9jqrjlist-with-search-functionalityiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DODQZ6_xGZsyfmm3cvsbr_oah4dtuwpgsjwjv-9jqrjlist-with-search-functionalityiphone13blueportrait.png" size="82" position="center" caption="List with search" alt="List with search" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DODQZ6_xGZsyfmm3cvsbr_oah4dtuwpgsjwjv-9jqrjlist-with-search-functionalityiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jBmxLNv17xsQjkcxrXG0p_iysinzse4zenpjavdfphzlist-with-search-fuctionalitz2iphone13blueportrait.png" size="80" position="center" caption="List with search" alt="List with search" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jBmxLNv17xsQjkcxrXG0p_iysinzse4zenpjavdfphzlist-with-search-fuctionalitz2iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jBmxLNv17xsQjkcxrXG0p_iysinzse4zenpjavdfphzlist-with-search-fuctionalitz2iphone13blueportrait.png" size="80" position="center" caption="List with search" alt="List with search" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jBmxLNv17xsQjkcxrXG0p_iysinzse4zenpjavdfphzlist-with-search-fuctionalitz2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 ::::
 
@@ -1317,29 +1301,30 @@ tabs:
     jigId: list-with-search-dd
     icon: home-apps-logo
 ```
-
 :::
 ::::::
 
-:::::::ExpandableHeading
-
+::::::ExpandableHeading
 ### Lists with Filter functionality
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dWqdS3roU3WdS_abP37U4_4nbi3jyotqnlueroigqvglist-with-filter-functionalityiphone13blueportrait.png" size="80" position="center" caption="List with filter" alt="List with filter" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dWqdS3roU3WdS_abP37U4_4nbi3jyotqnlueroigqvglist-with-filter-functionalityiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dWqdS3roU3WdS_abP37U4_4nbi3jyotqnlueroigqvglist-with-filter-functionalityiphone13blueportrait.png" size="80" position="center" caption="List with filter" alt="List with filter" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dWqdS3roU3WdS_abP37U4_4nbi3jyotqnlueroigqvglist-with-filter-functionalityiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OtOK_didUSXqSV7mc5L2t_7rotb-eqnt3niy1k-bnh3list-with-filter-functionalitz2iphone13blueportrait.png" size="78" position="center" caption="List with filter" alt="List with filter" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OtOK_didUSXqSV7mc5L2t_7rotb-eqnt3niy1k-bnh3list-with-filter-functionalitz2iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OtOK_didUSXqSV7mc5L2t_7rotb-eqnt3niy1k-bnh3list-with-filter-functionalitz2iphone13blueportrait.png" size="78" position="center" caption="List with filter" alt="List with filter" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OtOK_didUSXqSV7mc5L2t_7rotb-eqnt3niy1k-bnh3list-with-filter-functionalitz2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 ::::
 
-::::::VerticalSplit{layout="left"}
-:::::VerticalSplitItem
-This example helps to categorically filter the data to create meaningful sections or split the data for ease of use for the users.
+:::::VerticalSplit{layout="left"}
+:::VerticalSplitItem
+
+:::
 
 ::::VerticalSplitItem
+This example helps to categorically filter the data to create meaningful sections or split the data for ease of use for the users.
+
 **Examples**:
 See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-label-sd.jigx) in GitHub. See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-label-dd.jigx) in GitHub.
 
@@ -1351,7 +1336,7 @@ See the full datasource code sample for [dynamic data](https://github.com/jigx-c
 Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
 :::
 ::::
-::::::
+:::::
 
 :::CodeblockTabs
 list-filter-label-dd.jigx
@@ -1380,32 +1365,6 @@ header:
       options:
         source:
           uri: https://images.unsplash.com/photo-1529220502050-f15e570c634e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1829&q=80
-
-datasources:
-  cleaning-services-dynamic:
-    type: datasource.sqlite
-    options:
-      provider: DATA_PROVIDER_DYNAMIC
-  
-      entities:
-        - entity: default/cleaning-services
-  
-      query: |
-        SELECT 
-          id, 
-          '$.area', 
-          '$.description', 
-          '$.hourlyrate', 
-          '$.illustration', 
-          '$.image', 
-          '$.indoor', 
-          '$.onceoffrate', 
-          '$.service', 
-          '$.time' 
-        FROM [default/cleaning-services] 
-        WHERE '$.indoor' LIKE @filter or @filter IS NULL
-      queryParameters:
-        filter: =@ctx.jig.state.filter
         
 data: =@ctx.datasources.cleaning-services-dynamic
 item:
@@ -1470,21 +1429,19 @@ tabs:
     jigId: list-filter-label-dd
     icon: home-apps-logo
 ```
-
 :::
-:::::::
+::::::
 
 ::::::ExpandableHeading
-
 ### Lists with Search and Filter functionality
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BH3AW-wsrBSLQtb66vQbq_v94toyltr0-k0a55pao-list-with-search-filteriphone13blueportrait.png" size="82" position="center" caption="List search and filter" alt="List search and filter" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BH3AW-wsrBSLQtb66vQbq_v94toyltr0-k0a55pao-list-with-search-filteriphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BH3AW-wsrBSLQtb66vQbq_v94toyltr0-k0a55pao-list-with-search-filteriphone13blueportrait.png" size="82" position="center" caption="List search and filter" alt="List search and filter" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BH3AW-wsrBSLQtb66vQbq_v94toyltr0-k0a55pao-list-with-search-filteriphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F_KnGZXdcC4IHTLPIrkkD_g8wxzvbcrv436umtcujzklist-with-search-filter2iphone13blueportrait.png" size="80" position="center" caption="List search and filter" alt="List search and filter" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F_KnGZXdcC4IHTLPIrkkD_g8wxzvbcrv436umtcujzklist-with-search-filter2iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F_KnGZXdcC4IHTLPIrkkD_g8wxzvbcrv436umtcujzklist-with-search-filter2iphone13blueportrait.png" size="80" position="center" caption="List search and filter" alt="List search and filter" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F_KnGZXdcC4IHTLPIrkkD_g8wxzvbcrv436umtcujzklist-with-search-filter2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 ::::
 
@@ -1535,21 +1492,6 @@ header:
       options:
         source:
           uri: https://images.unsplash.com/photo-1529220502050-f15e570c634e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1829&q=80
-
-datasources:
-  cleaning-services-dynamic:
-    type: datasource.sqlite
-    options:
-      provider: DATA_PROVIDER_DYNAMIC
-  
-      entities:
-        - entity: default/cleaning-services-dynamic
-  
-      query: SELECT id, '$.area', '$.description', '$.hourlyrate', '$.illustration', '$.image', '$.indoor', '$.onceoffrate', '$.service', '$.time' FROM [default/cleaning-services-dynamic] WHERE ('$.indoor' LIKE @filter OR @filter IS NULL) AND ('$.service' LIKE '%'||@search||'%' OR @search IS NULL)
-      queryParameters:
-        filter: =@ctx.jig.state.filter
-        search: =@ctx.jig.state.searchText
-        
   
 data: =@ctx.datasources.cleaning-services-dynamic
 item:
@@ -1604,12 +1546,10 @@ tabs:
     jigId: list-filter-search-label-dd
     icon: home-apps-logo
 ```
-
 :::
 ::::::
 
 :::::ExpandableHeading
-
 ### Filtered list with default tab set
 
 ::::VerticalSplit{layout="middle"}
@@ -1621,7 +1561,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-O9xu_TcOIeO0WfdknAWRe-20240913-143124.PNG" size="80" position="center" caption="List with default filter tab" alt="List with default filter tab" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-O9xu_TcOIeO0WfdknAWRe-20240913-143124.PNG"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-O9xu_TcOIeO0WfdknAWRe-20240913-143124.PNG" size="80" position="center" caption="List with default filter tab" alt="List with default filter tab" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-O9xu_TcOIeO0WfdknAWRe-20240913-143124.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 ::::
 
@@ -1643,29 +1583,6 @@ header:
       options:
         source:
           uri: https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-
-datasources:
-  department:
-    type: datasource.sqlite
-    options:
-      provider: DATA_PROVIDER_DYNAMIC
-      entities:
-        - entity: default/tasks
-      query: |
-        SELECT 
-          id, 
-          '$.taskAssignee',
-          '$.taskName',
-          '$.taskCost',
-          '$.taskId', 
-          '$.taskStatus',
-          '$.team', 
-          '$.Profile'
-         
-        FROM [default/tasks]
-        WHERE '$.team' LIKE @filter or @filter IS NULL
-      queryParameters:
-          filter: =@ctx.jig.state.filter
 
 filter:
 # Set the jig to open with teamB tab open as default
@@ -1695,20 +1612,45 @@ item:
       uri: =@ctx.current.item.Profile
 ```
 
+datasources
+
+```yaml
+datasources:
+  department:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+      entities:
+        - entity: default/tasks
+      query: |
+        SELECT 
+          id, 
+          '$.taskAssignee',
+          '$.taskName',
+          '$.taskCost',
+          '$.taskId', 
+          '$.taskStatus',
+          '$.team', 
+          '$.Profile'
+         
+        FROM [default/tasks]
+        WHERE '$.team' LIKE @filter or @filter IS NULL
+      queryParameters:
+          filter: =@ctx.jig.state.filter
+```
 :::
 :::::
 
 ::::::ExpandableHeading
-
 ### Selectable lists
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5UvBC2OTvvpRPUxgb6S7J_jjoyudbruwukeskhccb29list-selectableiphone13blueportrait.png" size="82" position="center" caption="Selectable list" alt="Selectable list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5UvBC2OTvvpRPUxgb6S7J_jjoyudbruwukeskhccb29list-selectableiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5UvBC2OTvvpRPUxgb6S7J_jjoyudbruwukeskhccb29list-selectableiphone13blueportrait.png" size="82" position="center" caption="Selectable list" alt="Selectable list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5UvBC2OTvvpRPUxgb6S7J_jjoyudbruwukeskhccb29list-selectableiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CC_ySWCN4silK9yP0ADIF_bghosvpxwt9dtdbfbyaxhlist-selectable2iphone13blueportrait.png" size="80" position="center" caption="Selectable list" alt="Selectable list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CC_ySWCN4silK9yP0ADIF_bghosvpxwt9dtdbfbyaxhlist-selectable2iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CC_ySWCN4silK9yP0ADIF_bghosvpxwt9dtdbfbyaxhlist-selectable2iphone13blueportrait.png" size="80" position="center" caption="Selectable list" alt="Selectable list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CC_ySWCN4silK9yP0ADIF_bghosvpxwt9dtdbfbyaxhlist-selectable2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 ::::
 
@@ -1813,21 +1755,19 @@ tabs:
     jigId: list-selectable-dd
     icon: home-apps-logo
 ```
-
 :::
 ::::::
 
 ::::::ExpandableHeading
-
 ### Lists with active items
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N-ZQxHpkRPVK1l6HZZMph_listselected.PNG" size="78" darkWidth="1240" darkHeight="2500" position="center" caption="List with active items" alt="List with active items" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N-ZQxHpkRPVK1l6HZZMph_listselected.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N-ZQxHpkRPVK1l6HZZMph_listselected.PNG" size="78" darkWidth="800" darkHeight="1613" position="center" caption="List with active items" alt="List with active items" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N-ZQxHpkRPVK1l6HZZMph_listselected.PNG" width="800" height="1613"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/WKPazW_VhKEFlU1sLBrqw_kq-c9fqjsclvjwjm23okqlist-type-active-itemiphone13blueportrait.png" size="88" position="flex-start" caption="List with active items" alt="List with active items" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/WKPazW_VhKEFlU1sLBrqw_kq-c9fqjsclvjwjm23okqlist-type-active-itemiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/WKPazW_VhKEFlU1sLBrqw_kq-c9fqjsclvjwjm23okqlist-type-active-itemiphone13blueportrait.png" size="88" position="flex-start" caption="List with active items" alt="List with active items" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/WKPazW_VhKEFlU1sLBrqw_kq-c9fqjsclvjwjm23okqlist-type-active-itemiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 ::::
 
@@ -1940,21 +1880,19 @@ tabs:
     jigId: list-with-active-item-dd
     icon: home-apps-logo
 ```
-
 :::
 ::::::
 
 ::::::ExpandableHeading
-
 ### List with Sections
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/u049kALYz_GNfmw0HxLgK_8d1mkmehpe7r4pjn43hl5list-with-sectionsiphone13blueportrait.png" size="80" position="center" caption="List with sections" alt="List with sections" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/u049kALYz_GNfmw0HxLgK_8d1mkmehpe7r4pjn43hl5list-with-sectionsiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/u049kALYz_GNfmw0HxLgK_8d1mkmehpe7r4pjn43hl5list-with-sectionsiphone13blueportrait.png" size="80" position="center" caption="List with sections" alt="List with sections" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/u049kALYz_GNfmw0HxLgK_8d1mkmehpe7r4pjn43hl5list-with-sectionsiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kzX-FtVAoLn2X_22doCAi_96zn0hzblno8u6l6ybhlmlist-with-sections2iphone13blueportrait.png" size="80" position="center" caption="List with sections" alt="List with sections" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kzX-FtVAoLn2X_22doCAi_96zn0hzblno8u6l6ybhlmlist-with-sections2iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kzX-FtVAoLn2X_22doCAi_96zn0hzblno8u6l6ybhlmlist-with-sections2iphone13blueportrait.png" size="80" position="center" caption="List with sections" alt="List with sections" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kzX-FtVAoLn2X_22doCAi_96zn0hzblno8u6l6ybhlmlist-with-sections2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 ::::
 
@@ -1973,7 +1911,7 @@ See the full datasource code sample for [static data](https://github.com/jigx-co
 See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx) in GitHub.
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub]() and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
 :::
 ::::
 :::::
@@ -2058,12 +1996,10 @@ tabs:
     jigId: list-with-sections-dd
     icon: home-apps-logo
 ```
-
 :::
 ::::::
 
 :::::ExpandableHeading
-
 ### List with items contained in a card
 
 ::::VerticalSplit{layout="middle"}
@@ -2075,7 +2011,7 @@ See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-5VXNElPVo6tg6sBSmihHT-20241025-144842.png" size="80" position="center" caption="ist-item in a card" alt="List-item in a card" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-5VXNElPVo6tg6sBSmihHT-20241025-144842.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-5VXNElPVo6tg6sBSmihHT-20241025-144842.png" size="80" position="center" caption="ist-item in a card" alt="List-item in a card" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-5VXNElPVo6tg6sBSmihHT-20241025-144842.png" width="800" height="801" darkWidth="800" darkHeight="801"}
 :::
 ::::
 
@@ -2112,12 +2048,10 @@ item:
       text: =@ctx.current.item.service
       uri: =@ctx.current.item.image
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### List with ratings as a value
 
 ::::VerticalSplit{layout="middle"}
@@ -2129,7 +2063,7 @@ See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T-SdlGk8kb3cvZ8a-BXeM-20241030-064308.png" size="70" position="center" caption="List with rating - value" alt="List with rating - value" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T-SdlGk8kb3cvZ8a-BXeM-20241030-064308.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T-SdlGk8kb3cvZ8a-BXeM-20241030-064308.png" size="70" position="center" caption="List with rating - value" alt="List with rating - value" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T-SdlGk8kb3cvZ8a-BXeM-20241030-064308.png" width="800" height="1608" darkWidth="800" darkHeight="1608"}
 :::
 ::::
 
@@ -2279,12 +2213,10 @@ datasources:
           ratingText: Excellent service
           rating: 9
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### List with ratings with a value, minimum, maximum and icon
 
 ::::VerticalSplit{layout="middle"}
@@ -2292,11 +2224,11 @@ datasources:
 Create a product review jig that provides a `rating` using a `value`, an `icon` representing the value, rating `icons` with `color`. The list is styled by wrapping the items in a card using the `isContained` property. A verified `label` is added to the right while the product image is added as an `avatar` to the left.
 
 **Examples:**
-See the full example in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-rating-value-max.jigx).
+See the full example in [GitHub]().
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cyxMwXJe2B-rFaKAPriVB-20241030-062312.png" size="70" position="center" caption="List rating with value, icons, and color" alt="List rating with value, icons, and color" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cyxMwXJe2B-rFaKAPriVB-20241030-062312.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cyxMwXJe2B-rFaKAPriVB-20241030-062312.png" size="70" position="center" caption="List rating with value, icons, and color" alt="List rating with value, icons, and color" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cyxMwXJe2B-rFaKAPriVB-20241030-062312.png" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -2441,12 +2373,10 @@ options:
       product: 3
       text: KL
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### List with ratings as a percentage
 
 ::::VerticalSplit{layout="middle"}
@@ -2458,7 +2388,7 @@ See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HiL_AAasWXGM4iXpb76p7-20241030-073308.png" size="66" position="center" caption="List with percentage rating" alt="List with percentage rating" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HiL_AAasWXGM4iXpb76p7-20241030-073308.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HiL_AAasWXGM4iXpb76p7-20241030-073308.png" size="66" position="center" caption="List with percentage rating" alt="List with percentage rating" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HiL_AAasWXGM4iXpb76p7-20241030-073308.png" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -2534,12 +2464,10 @@ datasources:
           percentage: 0.9 
           icon: select   
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### List with ratings with a percentage, minimum, maximum and icon
 
 ::::VerticalSplit{layout="middle"}
@@ -2557,7 +2485,7 @@ See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-__u0Q3gtznpmndWy5Y1dU-20241030-101047.png" size="70" position="center" caption="List with customized percentage rating" alt="List with customized percentage rating" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-__u0Q3gtznpmndWy5Y1dU-20241030-101047.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-__u0Q3gtznpmndWy5Y1dU-20241030-101047.png" size="70" position="center" caption="List with customized percentage rating" alt="List with customized percentage rating" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-__u0Q3gtznpmndWy5Y1dU-20241030-101047.png" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -2700,12 +2628,10 @@ options:
       product: 3
       text: KL
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### List with multiple tags
 
 ::::VerticalSplit{layout="middle"}
@@ -2721,7 +2647,7 @@ See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TUsCmx9L6lCnKth7jdpoI-20241030-101514.png" size="70" position="center" caption="List with multiple tags" alt="List with multiple tags" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TUsCmx9L6lCnKth7jdpoI-20241030-101514.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TUsCmx9L6lCnKth7jdpoI-20241030-101514.png" size="70" position="center" caption="List with multiple tags" alt="List with multiple tags" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TUsCmx9L6lCnKth7jdpoI-20241030-101514.png" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -2742,27 +2668,6 @@ header:
           uri: https://images.unsplash.com/photo-1590402494628-9b9acf0b90ae?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
       type: component.image
     height: medium
-
-datasources:
-  team-tasks:
-    type: datasource.sqlite
-    options:
-      provider: DATA_PROVIDER_DYNAMIC
-      entities:
-        - entity: default/tasks
-      query: |
-        SELECT 
-          id, 
-          '$.taskAssignee',
-          '$.taskName',
-          '$.taskCost',
-          '$.taskId', 
-          '$.taskStatus',
-          '$.team', 
-          '$.Profile',
-          '$.priority'
-         
-        FROM [default/tasks]
 
 data: =@ctx.datasources.team-tasks
 item:
@@ -2787,11 +2692,34 @@ item:
       uri: =@ctx.current.item.Profile
 ```
 
+datasource
+
+```yaml
+datasources:
+  team-tasks:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+      entities:
+        - entity: default/tasks
+      query: |
+        SELECT 
+          id, 
+          '$.taskAssignee',
+          '$.taskName',
+          '$.taskCost',
+          '$.taskId', 
+          '$.taskStatus',
+          '$.team', 
+          '$.Profile',
+          '$.priority'
+         
+        FROM [default/tasks]
+```
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### List with ratings and tags
 
 ::::VerticalSplit{layout="middle"}
@@ -2809,7 +2737,7 @@ See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-t21E3-6z0TBitPqdGueGP-20241030-105810.png" size="70" position="center" caption="List with rating, tags & badges" alt="List with rating, tags & badges" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-t21E3-6z0TBitPqdGueGP-20241030-105810.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-t21E3-6z0TBitPqdGueGP-20241030-105810.png" size="70" position="center" caption="List with rating, tags & badges" alt="List with rating, tags & badges" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-t21E3-6z0TBitPqdGueGP-20241030-105810.png" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -2900,7 +2828,6 @@ options:
       '$.rating'
     FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-
 :::
 :::::
 
@@ -2910,3 +2837,4 @@ options:
 - [list-item](./../Components/list/list-item.md)
 - [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/samples/jigx-samples/jigs/jig-types/jig-list)
 - [State](https://docs.jigx.com/state)
+
