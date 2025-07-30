@@ -275,7 +275,7 @@ actions:
           method: functionCall
           entity: send-notification
           function: send-notification
-          functionParameters:
+          parameters:
             deviceId: jig
             organizationId: =@ctx.organization.id 
             solutionId: =@ctx.solution.id
@@ -419,7 +419,7 @@ actions:
           method: functionCall
           entity: send-notification-target-jig
           function: send-notification-target-jig
-          functionParameters:
+          parameters:
             deviceId: jig
             organizationId: =@ctx.organization.id 
             emails: =@ctx.user.email
