@@ -290,7 +290,7 @@ actions:
           linkTo: update-profile-picture
 
 widgets:
-  "2x4":
+  profileAvatar:
     type: widget.group
     options:
       children:
@@ -305,7 +305,7 @@ widgets:
                 title: =@ctx.datasources.userProfile.displayName
                 subtitle: =@ctx.datasources.userProfile.jobTitle
 
-  "2x2":
+  profileImage:
     type: widget.image
     options:
       isContentOverlaid: true

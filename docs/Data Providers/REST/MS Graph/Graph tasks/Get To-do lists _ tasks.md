@@ -305,7 +305,7 @@ item:
         =@ctx.current.item.task_count
 
 widgets:
-  toDo:
+  taskList:
     type: widget.list
     options:
       data: =@ctx.datasources.mydata
