@@ -8,7 +8,7 @@ Add the ability to update a customer's details by pressing on the customer in th
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ag9cStah_4Z8BJQELauFL_rest-update.PNG" size="70" position="center" caption="Update customer" alt="Update customer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ag9cStah_4Z8BJQELauFL_rest-update.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ag9cStah_4Z8BJQELauFL_rest-update.PNG" size="70" position="center" caption="Update customer" alt="Update customer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ag9cStah_4Z8BJQELauFL_rest-update.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -167,7 +167,7 @@ action:
 - Add a form component to load the customer details with each field's instanceId containing the same name as the body parameters in the function.
 - For the state field configure a dropdrown with an expression to get the list of states for selection.
 - Configure an `initialValue` property for each field in the form using an expression to return the customer data for that field.
-- Add an `execute-entity` action to call the function that will update the customer record in the local table (using `method: update`) and in the REST service (`function: rest-update-customer`). Use an expression to specify the value for each of the function's parameters. Note that the customer id already exists and the expression for `id:` uses the `inputs` again to specifiy the customer record that must be updated.
+- Add an `execute-entity` action to call the function that will update the customer record in the local table (using `method: update`) and in the REST service (`function: rest-update-customer`). Use an expression to specify the value for each of the function's parameters. Note that the customer id already exists and the expression for `id:` uses the `inputs` again to specifiy the customer record that must be updated. The `parameters` updates the record in the REST service, while the `data` property updates the record in the local database.
 
 :::CodeblockTabs
 update-customer.jigx
@@ -187,7 +187,7 @@ header:
           uri: https://www.dropbox.com/scl/fi/ha9zh6wnixblrbubrfg3e/business-5475661_640.jpg?rlkey=anemjh5c9qsspvzt5ri0i9hva&raw=1
 
 datasources:
-# Use static datasource as the data is predefined and will not change.
+  # Use static datasource as the data is predefined and will not change.
   region:
     type: datasource.static
     options:
@@ -347,8 +347,8 @@ actions:
           method: update 
           # Update the record in the REST service. 
           function: rest-update-customer
-          # Define the data to be updated for the record.  
-          functionParameters: 
+          # Define the record's data to be updated in the REST service.  
+          parameters: 
             id: =@ctx.jig.inputs.customer.id
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
@@ -364,6 +364,23 @@ actions:
             state: =@ctx.components.state.state.value
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value
+          # Define the record's data to be updated in the local SQLite table.    
+          data:
+            id: =@ctx.jig.inputs.customer.id
+            firstName: =@ctx.components.firstName.state.value
+            lastName: =@ctx.components.lastName.state.value
+            companyName: =@ctx.components.companyName.state.value
+            address: =@ctx.components.address.state.value
+            city: =@ctx.components.city.state.value
+            customerType: =@ctx.components.customerType.state.value
+            email: =$lowercase(@ctx.components.email.state.value)
+            jobTitle: =@ctx.components.jobTitle.state.value
+            phone1: =@ctx.components.phone1.state.value
+            phone2: =@ctx.components.phone1.state.value
+            region: =@ctx.components.region.state.value
+            state: =@ctx.components.state.state.value
+            web: =$lowercase(@ctx.components.web.state.value)
+            zip: =@ctx.components.zip.state.value            
           onSuccess: 
             type: action.go-back  
 ```
@@ -438,7 +455,7 @@ item:
       type: action.go-to
       options:
         linkTo: update-customer
-        parameters:
+        inputs:
           customer: =@ctx.current.item
     # Add the swipeable event to the customer - list to delete customer            
     swipeable:
@@ -463,8 +480,8 @@ item:
                   # Delete the record from the REST service.
                   function: rest-delete-customer 
                   # Specifiy the function parameters required by the 
-                  #function to delete the customer, in this example custId.                 
-                  functionParameters:
+                  # function to delete the customer, in this example custId.                 
+                  parameters:
                     # id of customer record to be deleted in REST service. 
                     custId: =$number(@ctx.current.item.id)                 
                   data:  

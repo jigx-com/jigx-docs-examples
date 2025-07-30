@@ -182,10 +182,12 @@ header:
   type: component.jig-header
   options:
     height: medium
-    children: 
+    children:
       type: component.location
       options:
-        address: =@ctx.jig.inputs.customer.address & ' ' & @ctx.jig.inputs.customer.city & ', ' & @ctx.jig.inputs.customer.state & ', ' & @ctx.jig.inputs.customer.zip
+        viewPoint:
+          centerPosition: middle
+          address: =@ctx.jig.inputs.customer.address & ' ' & @ctx.jig.inputs.customer.city & ', ' & @ctx.jig.inputs.customer.state & ', ' & @ctx.jig.inputs.customer.zip
 # Define the data to use in the jig, the data has been synced by the global
 # action to the local data provider from the REST Service.
 datasources: 
@@ -275,17 +277,19 @@ onFocus:
     entities:
       - entity: customer-images
         function: rest-get-customer-images
-        functionParameters:
+        parameters:
           custId: =@ctx.jig.inputs.customer.id
 
 header:
   type: component.jig-header
   options:
     height: medium
-    children: 
+    children:
       type: component.location
       options:
-        address: =@ctx.jig.inputs.customer.address & ' ' & @ctx.jig.inputs.customer.city & ', ' & @ctx.jig.inputs.customer.state & ', ' & @ctx.jig.inputs.customer.zip
+        viewPoint:
+          centerPosition: middle
+          address: =@ctx.jig.inputs.customer.address & ' ' & @ctx.jig.inputs.customer.city & ', ' & @ctx.jig.inputs.customer.state & ', ' & @ctx.jig.inputs.customer.zip
 
 children:
   - jigId: view-customer-details
@@ -312,16 +316,15 @@ header:
       options:
         source:
           uri: https://www.dropbox.com/scl/fi/ha9zh6wnixblrbubrfg3e/business-5475661_640.jpg?rlkey=anemjh5c9qsspvzt5ri0i9hva&raw=1
-#Define the data to use in the jig, the data has been synced by the global action to the local data provider from the REST Service
+# Define the data to use in the jig, the data has been synced
+# by the global action to the local data provider from the REST Service.
 datasources:
   customers: 
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
       entities:
-        - entity: customers
-  
+        - entity: customers 
       query: |
         SELECT 
           cus.id AS id, 
@@ -374,7 +377,7 @@ item:
             options:
               parameters:
                customer: =@ctx.current.item  
-# link to the composite to see the customer details and images                 
+# link to the composite to see the customer details and images.                 
               linkTo: customer-composite
           label: View
           icon: view
@@ -386,19 +389,25 @@ item:
             options:
               isConfirmedAutomatically: false
               onConfirmed: 
-                type: action.execute-entity #action to execute the delete
+                # Action to execute the delete.
+                type: action.execute-entity 
                 options:
-#Use the REST data provider to call the delete function.                  
+                  # Use the REST data provider to call the delete function.                  
                   provider: DATA_PROVIDER_REST
                   entity: customers
-                  method: delete #Delete the record from the local SQLite table
+                  # Delete the record from the local SQLite table.
+                  method: delete 
                   goBack: stay
-                  function: rest-delete-customer #Delete the record from the REST service
-#Specifiy the function parameters required by the function to delete the customer, in this example custId                 
-                  functionParameters:
-                    custId: =$number(@ctx.current.item.id) #id of customer record to be deleted in REST service                 
+                  # Delete the record from the REST service
+                  function: rest-delete-customer 
+                  # Specifiy the parameters required by the function to delete
+                  # the customer, in this example custId.                 
+                  parameters:
+                  # id of customer record to be deleted in REST service. 
+                    custId: =$number(@ctx.current.item.id)                 
                   data:  
-                    id: =@ctx.current.item.id #id of customer to be deleted from local data provider
+                    # id of customer to be deleted from local data provider.
+                    id: =@ctx.current.item.id 
               modal:
                 title: Are you sure?
                 description: =('Press Confirm to permanently delete ' & @ctx.current.item.companyName)
