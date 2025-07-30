@@ -185,7 +185,7 @@ children:
 
 You can also send notifications using an [execute-entity](./Actions/execute-entity.md) action if you want to have more control over what's being sent to the function.
 
-In this example we are using state to access the two form fields `title` and `text`. All other function parameters are set in the execute-entity action. Note that you don't have to use form fields as you could also assign all function parameters in the action itself.
+In this example we are using state to access the two form fields `title` and `text`. All other function's parameters are set in the execute-entity action. Note that you don't have to use form fields as you could also assign all `parameters` in the action itself.
 
 ![Notification sent with execute entity](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2i6PSLJ_8e_lEs6fQxyS5_notification-execute-entity.png "Notification sent with execute entity")
 

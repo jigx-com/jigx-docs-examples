@@ -138,7 +138,7 @@ onRefresh:
           entities:
             - entity: email-messages
               function: get-email-messages
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
                 $filter: ="receivedDateTime ge " & $fromMillis($millis()-432000000)
                 $top: "200"

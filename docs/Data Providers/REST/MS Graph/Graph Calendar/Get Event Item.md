@@ -47,43 +47,95 @@ index.jigx
 ```yaml
 name: ms-graph-demonstrator
 title: MS Graph Demonstrator
-description: A sample solution that uses the Microsoft Graph API. You can deploy and use this solution without any additional configuration.
+description: A solution using Microsoft Graph APIs .
 category: business
-widgets:
-  - size: 2x2 # choose size of the widget on the home hub
-    jigId: view-user-jigx
-  - size: "2x2"
-    jigId: calendar-summary
-  - size: "4x2"
-    jigId: next-meeting
-    when: |
-      =@ctx.datasources.next-meeting=null? false:true
-  - size: "2x2"
-    jigId: list-email-messages
-  - size: "2x2"
-    jigId: list-task-lists
-  - size: "4x2"
-    jigId: items-trending
 
-onFocus:
-  type: action.action-list
+onLoad:
+  type: action.execute-action
   options:
-    isSequential: true
-    actions:
-      - type: action.sync-entities
+    action: full-sync
+
+onRefresh:
+  type: action.execute-action
+  options:
+    action: full-sync
+
+expressions:
+  today: =$substring($now(), 0, 10)
+  todayStart: =$toMillis($today)
+  weekdayStr: =$floor($todayStart/86400000)
+  weekdayNum: =($weekdayStr + 4) % 7
+  startOfWeek: =$todayStart - ($weekdayNum * 86400000)
+  thisWeek: =$startOfWeek + 604800000
+  next7: =$number($todayStart) + 604800000
+
+tabs:
+  home:
+    jigId: home
+    icon: home
+
+```
+
+:::
+
+:::CodeblockTabs
+home.jigx
+
+```yaml
+title: Home
+type: jig.grid
+
+children:
+  - type: component.grid-item
+    options:
+      size: 2x2
+      children:
+        type: component.jig-widget
         options:
-          provider: DATA_PROVIDER_REST
-          entities:
-            - entity: next-week-calendar-events
-              function: get-calendar-events-next-week
-              functionParameters:
-                accessToken: microsoft.OAuth
-                startdatetime: =$fromMillis($millis())
-                enddatetime: =$fromMillis($millis()+604800000)
-            - entity: calendars
-              function: get-calendar-list
-              functionParameters:
-                accessToken: microsoft.OAuth
+          jigId: view-user-jigx
+          widgetId: profileImage
+  - type: component.grid-item
+    options:
+      size: 2x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: calendar-summary
+          widgetId: nextDays
+  - type: component.grid-item
+    when: =$boolean(@ctx.datasources.next-meeting.locationAddress)
+    options:
+      size: 4x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: next-meeting
+          widgetId: meeting-location
+  - type: component.grid-item
+    options:
+      size: 2x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: list-email-messages
+  - type: component.grid-item
+    options:
+      size: 2x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: list-task-lists
+          widgetId: taskList
+  - type: component.grid-item
+    options:
+      size: 4x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: items-trending
+          widgetId: trending
+
+
 ```
 
 :::
@@ -130,7 +182,7 @@ forRowsWithValues:
 
 ## Jigs
 
-MS Graph Calendar Events jig in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/calendar/view-calendar-events.jigx" target="_blank">GitHub</a>.
+MS Graph Calendar Events jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/calendar/view-calendar-events.jigx)</a>.
 
 :::CodeblockTabs
 view-calendar-event-details

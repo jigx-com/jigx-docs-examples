@@ -8,8 +8,8 @@ updatedAt: Mon Nov 04 2024 15:41:43 GMT+0000 (Coordinated Universal Time)
 
 Execute-entity can save, update, or delete data in a **single row** from a database, depending on the chosen method. Each datasource type (Dynamic / SQL / REST) will have a different syntax for updating, saving, and deleting data.
 
-For the Dynamic datasource, values will be saved under the _data_ option.
-For SQL/REST datasource, values will be saved under the _functionParameters_ option.
+For the Dynamic datasource, values will be saved under the `data` option.
+For SQL/REST datasource, values will be saved under the `Parameters` option.
 
 :::hint{type="warning"}
 This action can't be used if you are using [Static Data](https://docs.jigx.com/examples/static).

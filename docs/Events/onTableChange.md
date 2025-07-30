@@ -76,6 +76,7 @@ databaseId: default
 tables:
   employees: null
 ```
+
 :::
 
 ### Multiple data tables
@@ -122,7 +123,7 @@ onTableChanged:
                   $.{
                     "entity": "events-from-calendar",
                     "function": "get-calendar-event-list",
-                    "functionParameters": {
+                    "parameters": {
                       "accessToken": "jigx.graph.oauth",
                       "calendarId": $item.id
                     }
@@ -142,6 +143,7 @@ tables:
   calendar: null
   calendarEvents: null
 ```
+
 :::
 
 ### Action data changes from one table to another table
@@ -182,5 +184,5 @@ tables:
   send-notification: null
   customer: null
 ```
-:::
 
+:::

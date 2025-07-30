@@ -278,7 +278,7 @@ action:
           entities:
             - entity: AIChat
               function: ai-chat
-              functionParameters:
+              parameters:
                 # Provide a name for your chat bot response.             
                 author: 'JIGX Chatbot'
                 user: =@ctx.user.email

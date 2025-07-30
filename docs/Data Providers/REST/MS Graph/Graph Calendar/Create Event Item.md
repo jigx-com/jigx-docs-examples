@@ -64,22 +64,22 @@ onFocus:
           entities:
             - entity: user-profile
               function: get-user-profile
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
             - entity: profile-picture
               function: get-profile-picture
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
                 userId: =@ctx.user.email
             - entity: next-week-calendar-events
               function: get-calendar-events-next-week
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
                 startdatetime: =$fromMillis($millis())
                 enddatetime: =$fromMillis($millis()+604800000)
             - entity: calendars
               function: get-calendar-list
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
 
 onRefresh:
@@ -93,23 +93,23 @@ onRefresh:
           entities:
             - entity: user-profile
               function: get-user-profile
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
             - entity: profile-picture
               function: get-profile-picture
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
                 userId: =@ctx.user.email
 
             - entity: next-week-calendar-events
               function: get-calendar-events-next-week
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
                 startdatetime: =$fromMillis($millis())
                 enddatetime: =$fromMillis($millis()+604800000)
             - entity: calendars
               function: get-calendar-list
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
 ```
 
@@ -218,7 +218,7 @@ onRefresh:
     entities:
       - entity: calendars
         function: get-calendar-list
-        functionParameters:
+        parameters:
           accessToken: microsoft.OAuth
           userId: =@ctx.user.email
 
@@ -298,7 +298,7 @@ actions:
           function: create-calendar-event
           entity: calendarEvents
           method: functionCall
-          functionParameters:
+          parameters:
             accessToken: microsoft.OAuth
             userId: =@ctx.user.email
             calendarId: =@ctx.components.calendarId.state.selected.calId
@@ -320,4 +320,3 @@ actions:
 
 - [Get Event List](<./Get Event List.md>)
 - [Get Event Item](<./Get Event Item.md>)
-- [Create Event Item]()

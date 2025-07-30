@@ -237,7 +237,7 @@ onFocus:
     entities:
       - entity: customers
         function: get-customer
-        functionParameters:
+        parameters:
           CustomerId: =@ctx.jig.inputs.customerId
 
 datasources:

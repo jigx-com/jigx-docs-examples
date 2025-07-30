@@ -94,7 +94,7 @@ continuation:
 
 ## Jigs
 
-MS Graph list trending jigs in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/jigs/general" target="_blank">GitHub</a>.
+MS Graph list trending jigs in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/jigs/general)
 
 :::CodeblockTabs
 view-calendar-list.jigx
@@ -123,7 +123,7 @@ onRefresh:
           entities:
             - entity: items-trending
               function: get-items-trending
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
 
 datasources:
@@ -226,5 +226,3 @@ source:
 ```
 
 :::
-
-##

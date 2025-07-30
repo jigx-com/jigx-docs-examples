@@ -4,7 +4,7 @@
 
 **API Rate Limits** - Many APIs enforce rate limits on the number of requests a client can make. Updating multiple records in a single call reduces the number of API requests made and avoids hitting rate limits.
 
-**Improved performance **- Updating multiple records in a single call reduces the round-trip time between the client and server, improving overall performance.
+**Improved performance** - Updating multiple records in a single call reduces the round-trip time between the client and server, improving overall performance.
 
 ## How does this work
 
@@ -52,6 +52,7 @@ actions:
           # in the datasource.          
           data: =@ctx.datasources.customers.{"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}[]           
 ```
+
 :::
 
 - The properties defined in the `data` property are determined by the REST call. This means that if the only required property is id you can simply use id, such as:
@@ -196,6 +197,7 @@ inputTransform: |
     "jobTitle": jobTitle
   }
 ```
+
 :::
 
 ## Action (global)
@@ -223,6 +225,7 @@ action:
         function: rest-get-usStates  
         
 ```
+
 :::
 
 ## Jig (screen)
@@ -339,7 +342,7 @@ actions:
           entity: customers
           method: update
           function: rest-update-customer
-          # Use functionParameters for values that must be evaluated 
+          # Use parameters for values that must be evaluated 
           # statically, across all the records. 
           # All records in the list will be updated to Bronze.          
           parameters:
@@ -348,6 +351,7 @@ actions:
           # to be updated.             
           data: =@ctx.datasources.customers.{"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}[]
 ```
+
 :::
 
 ## Index
@@ -383,5 +387,5 @@ tabs:
     jigId: list-customers
     icon: home-apps-logo
 ```
-:::
 
+:::

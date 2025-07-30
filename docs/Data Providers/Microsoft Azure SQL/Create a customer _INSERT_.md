@@ -427,7 +427,7 @@ actions:
                 # The name of the Jigx function used to save the data to Azure SQL.
                 function: create-customer
                 # Set the function parameters to values of the controls on the form.
-                functionParameters:
+                parameters:
                   CustomerId: =@ctx.jig.inputs.custId
                   FirstName: =@ctx.components.FirstName.state.value
                   LastName: =@ctx.components.LastName.state.value

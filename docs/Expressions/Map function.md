@@ -26,11 +26,10 @@ actions:
               $.{
                 "entity": "events-from-calendar"
                 "function": "get-calendar-event-list"
-                "functionParameters": {
+                "parameters": {
                   "accessToken": "jigx.graph.oauth",
                   "calendarId": $item.id
                 }
               }
             })[]
 ```
-

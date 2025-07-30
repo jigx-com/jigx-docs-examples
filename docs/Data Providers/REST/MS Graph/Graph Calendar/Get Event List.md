@@ -69,13 +69,13 @@ onFocus:
           entities:
             - entity: next-week-calendar-events
               function: get-calendar-events-next-week
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
                 startdatetime: =$fromMillis($millis())
                 enddatetime: =$fromMillis($millis()+604800000)
             - entity: calendars
               function: get-calendar-list
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
 
 ```
@@ -196,7 +196,7 @@ onFocus:
     entities:
       - entity: calendarEvents
         function: get-calendar-event-list
-        functionParameters:
+        parameters:
           accessToken: microsoft.OAuth
           calendarId: =@ctx.jig.inputs.calId
           $filter: ="start/dateTime ge '" & $fromMillis($millis()-86400000) & "' and end/dateTime le '" & $fromMillis($millis()+5184000000) & "'"
@@ -208,7 +208,7 @@ onRefresh:
     entities:
       - entity: calendarEvents
         function: get-calendar-event-list
-        functionParameters:
+        parameters:
           accessToken: microsoft.OAuth
           calendarId: =@ctx.jig.inputs.calId
           $filter: ="start/dateTime ge '" & $fromMillis($millis()-86400000) & "' and end/dateTime le '" & $fromMillis($millis()+5184000000) & "'"

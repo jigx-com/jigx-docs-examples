@@ -43,32 +43,92 @@ index.jigx
 ```yaml
 name: ms-graph-demonstrator
 title: MS Graph Demonstrator
-description: A sample solution that uses the Microsoft Graph API. You can deploy and use this solution without any additional configuration.
+description: A solution using Microsoft Graph APIs .
 category: business
+
+onLoad:
+  type: action.execute-action
+  options:
+    action: full-sync
+
+onRefresh:
+  type: action.execute-action
+  options:
+    action: full-sync
+
+expressions:
+  today: =$substring($now(), 0, 10)
+  todayStart: =$toMillis($today)
+  weekdayStr: =$floor($todayStart/86400000)
+  weekdayNum: =($weekdayStr + 4) % 7
+  startOfWeek: =$todayStart - ($weekdayNum * 86400000)
+  thisWeek: =$startOfWeek + 604800000
+  next7: =$number($todayStart) + 604800000
 
 tabs:
   home:
-    jigId: view-user-jigx
-    icon: home-apps-logo
+    jigId: home
+    icon: home
+```
 
-onFocus:
-  type: action.action-list
-  options:
-    isSequential: true
-    actions:
-      - type: action.sync-entities
+:::
+
+:::CodeblockTabs
+home.jigx
+
+```yaml
+title: Home
+type: jig.grid
+
+children:
+  - type: component.grid-item
+    options:
+      size: 2x2
+      children:
+        type: component.jig-widget
         options:
-          provider: DATA_PROVIDER_REST
-          entities:
-            - entity: user-profile
-              function: get-user-profile
-              functionParameters:
-                accessToken: microsoft.OAuth
-            - entity: profile-picture
-              function: get-profile-picture
-              functionParameters:
-                accessToken: microsoft.OAuth
-                userId: =@ctx.user.email
+          jigId: view-user-jigx
+          widgetId: profileImage
+  - type: component.grid-item
+    options:
+      size: 2x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: calendar-summary
+          widgetId: nextDays
+  - type: component.grid-item
+    when: =$boolean(@ctx.datasources.next-meeting.locationAddress)
+    options:
+      size: 4x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: next-meeting
+          widgetId: meeting-location
+  - type: component.grid-item
+    options:
+      size: 2x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: list-email-messages
+  - type: component.grid-item
+    options:
+      size: 2x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: list-task-lists
+          widgetId: taskList
+  - type: component.grid-item
+    options:
+      size: 4x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: items-trending
+          widgetId: trending
 ```
 
 :::
@@ -152,7 +212,7 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: profile-picture
           function: update-profile-picture
-          functionParameters:
+          parameters:
             accessToken: microsoft.OAuth
             Content-Type: image/jpeg
             file: =@ctx.components.profilePicture.state.value

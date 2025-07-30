@@ -132,7 +132,7 @@ query: |
       country = @Country
     WHERE
       id = @CustomerId
-# Jigx automatically replaces the tokens in the SQL query with the matching function parameters.
+# Jigx automatically replaces the tokens in the SQL query with the matching function's parameters.
 parameters:
   CustomerId:
     type: string
@@ -218,7 +218,7 @@ onFocus:
     entities:
       - entity: customers
         function: get-customer
-        functionParameters:
+        parameters:
           CustomerId: =@ctx.jig.inputs.customerId
 
 datasources:
@@ -229,10 +229,8 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-
       entities:
         - entity: customers
-
       query: |
         SELECT
           id,
@@ -356,7 +354,7 @@ onFocus:
     entities:
       - entity: customers
         function: get-customer
-        functionParameters:
+        parameters:
           CustomerId: =@ctx.jig.inputs.custId
 
 datasources:
@@ -492,8 +490,8 @@ actions:
           entity: customers
           # The name of the Jigx function used to save the data to Azure SQL.
           function: create-customer
-          # Set the function parameters to values of the controls on the form.
-          functionParameters:
+          # Set the parameters to values of the controls on the form.
+          parameters:
             CustomerId: =@ctx.jig.inputs.custId
             FirstName: =@ctx.components.FirstName.state.value
             LastName: =@ctx.components.LastName.state.value

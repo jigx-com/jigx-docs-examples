@@ -42,125 +42,93 @@ index.jigx
 ```yaml
 name: ms-graph-demonstrator
 title: MS Graph Demonstrator
-description: A sample solution that uses the Microsoft Graph API. You can deploy and use this solution without any additional configuration.
+description: A solution using Microsoft Graph APIs .
 category: business
-widgets:
-  - size: 2x2 # choose size of the widget on the home hub
-    jigId: view-user-jigx
-  - size: "2x2"
-    jigId: calendar-summary
-  - size: "4x2"
-    jigId: next-meeting
-    when: |
-      =@ctx.datasources.next-meeting=null? false:true
-  - size: "2x2"
-    jigId: list-email-messages
-  - size: "2x2"
-    jigId: list-task-lists
-  - size: "4x2"
-    jigId: items-trending
 
-onFocus:
-  type: action.action-list
+onLoad:
+  type: action.execute-action
   options:
-    isSequential: true
-    actions:
-      - type: action.sync-entities
-        options:
-          provider: DATA_PROVIDER_REST
-          entities:
-            - entity: user-profile
-              function: get-user-profile
-              functionParameters:
-                accessToken: microsoft.OAuth
-            - entity: profile-picture
-              function: get-profile-picture
-              functionParameters:
-                accessToken: microsoft.OAuth
-                userId: =@ctx.user.email
-            - entity: user-emails
-              function: get-user-emails-addresses
-              functionParameters:
-                accessToken: microsoft.OAuth
-            - entity: items-trending
-              function: get-items-trending
-              functionParameters:
-                accessToken: microsoft.OAuth
-            - entity: next-week-calendar-events
-              function: get-calendar-events-next-week
-              functionParameters:
-                accessToken: microsoft.OAuth
-                startdatetime: =$fromMillis($millis())
-                enddatetime: =$fromMillis($millis()+604800000)
-            - entity: calendars
-              function: get-calendar-list
-              functionParameters:
-                accessToken: microsoft.OAuth
-            - entity: todo-task-lists
-              function: get-task-lists
-              functionParameters:
-                accessToken: microsoft.OAuth
-            - entity: email-messages
-              function: get-email-messages
-              functionParameters:
-                accessToken: microsoft.OAuth
-                $filter: ="receivedDateTime ge " & $fromMillis($millis()-432000000)
-      - type: action.sync-entities
-        options:
-          provider: DATA_PROVIDER_REST
-          entities:
-            - entity: todo-tasks
-              function: get-all-todo-tasks
-              functionParameters:
-                accessToken: microsoft.OAuth
-                taskListIds: |
-                  ={
-                    "requests": $map(@ctx.datasources.task-lists.id, function($v, $i, $a) {
-                      {
-                        "id": $string($i + 1),
-                        "method": "GET",
-                        "url": "me/todo/lists/" & $v & "/tasks?$top100",
-                        "dependsOn": $i>0? [$string($i)]
-                      }
-                    })
-                  }
+    action: full-sync
 
 onRefresh:
-  type: action.action-list
+  type: action.execute-action
   options:
-    isSequential: true
-    actions:
-      - type: action.sync-entities
-        options:
-          provider: DATA_PROVIDER_REST
-          entities:
-            - entity: todo-task-lists
-              function: get-task-lists
-              functionParameters:
-                accessToken: microsoft.OAuth
+    action: full-sync
 
-      - type: action.sync-entities
-        options:
-          provider: DATA_PROVIDER_REST
-          entities:
-            - entity: todo-tasks
-              function: get-all-todo-tasks
-              functionParameters:
-                accessToken: microsoft.OAuth
-                taskListIds: |
-                  ={
-                    "requests": $map(@ctx.datasources.task-lists.id, function($v, $i, $a) {
-                      {
-                        "id": $string($i + 1),
-                        "method": "GET",
-                        "url": "me/todo/lists/" & $v & "/tasks?$top100",
-                        "dependsOn": $i>0? [$string($i)]
-                      }
-                    })
-                  }
+expressions:
+  today: =$substring($now(), 0, 10)
+  todayStart: =$toMillis($today)
+  weekdayStr: =$floor($todayStart/86400000)
+  weekdayNum: =($weekdayStr + 4) % 7
+  startOfWeek: =$todayStart - ($weekdayNum * 86400000)
+  thisWeek: =$startOfWeek + 604800000
+  next7: =$number($todayStart) + 604800000
+
+tabs:
+  home:
+    jigId: home
+    icon: home
 ```
 
 :::
+
+:::CodeblockTabs
+home.jigx
+
+```yaml
+title: Home
+type: jig.grid
+
+children:
+  - type: component.grid-item
+    options:
+      size: 2x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: view-user-jigx
+          widgetId: profileImage
+  - type: component.grid-item
+    options:
+      size: 2x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: calendar-summary
+          widgetId: nextDays
+  - type: component.grid-item
+    when: =$boolean(@ctx.datasources.next-meeting.locationAddress)
+    options:
+      size: 4x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: next-meeting
+          widgetId: meeting-location
+  - type: component.grid-item
+    options:
+      size: 2x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: list-email-messages
+  - type: component.grid-item
+    options:
+      size: 2x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: list-task-lists
+          widgetId: taskList
+  - type: component.grid-item
+    options:
+      size: 4x2
+      children:
+        type: component.jig-widget
+        options:
+          jigId: items-trending
+          widgetId: trending
+```
 
 ## Functions
 
@@ -267,7 +235,7 @@ onRefresh:
           entities:
             - entity: todo-task-lists
               function: get-task-lists
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
 
 datasources:

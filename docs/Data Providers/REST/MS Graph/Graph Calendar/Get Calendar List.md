@@ -28,6 +28,7 @@ Calendars.ReadWrite
 
 1. Pressing on the Calendar will navigate to [Get Event List](<./Get Event List.md>) and display the events in the selected calendar.
 2. Press on an item in the event list and view the event's details using the [Get Event Item](<./Get Event Item.md>).
+
    :::
 
 :::VerticalSplitItem
@@ -71,13 +72,13 @@ onFocus:
           entities:
             - entity: next-week-calendar-events
               function: get-calendar-events-next-week
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
                 startdatetime: =$fromMillis($millis())
                 enddatetime: =$fromMillis($millis()+604800000)
             - entity: calendars
               function: get-calendar-list
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
 
 onRefresh:
@@ -91,13 +92,13 @@ onRefresh:
           entities:
             - entity: next-week-calendar-events
               function: get-calendar-events-next-week
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
                 startdatetime: =$fromMillis($millis())
                 enddatetime: =$fromMillis($millis()+604800000)
             - entity: calendars
               function: get-calendar-list
-              functionParameters:
+              parameters:
                 accessToken: microsoft.OAuth
 
 ```
@@ -167,7 +168,7 @@ onRefresh:
     entities:
       - entity: calendars
         function: get-calendar-list
-        functionParameters:
+        parameters:
           accessToken: microsoft.OAuth
 
 datasources:

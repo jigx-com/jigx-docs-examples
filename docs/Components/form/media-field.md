@@ -1125,7 +1125,7 @@ actions:
           # Call the function containing the conversion
           # from local-uri to buffer to update the image in SQL.
           function: update-hikers
-          functionParameters:
+          parameters:
             hikersID: =@ctx.components.id.state.value
             name: =@ctx.components.name.state.value
             contact: =@ctx.components.contact.state.value

@@ -31,6 +31,7 @@ The chart widget is suitable for displaying the \<[line-chart](https://docs.jigx
 ## Examples and code snippets
 
 :::::ExpandableHeading
+
 ### Chart widget: line-chart component (2x2)
 
 ::::VerticalSplit{layout="middle"}
@@ -132,10 +133,12 @@ children:
           jigId: chart-line-1_2x2
           widgetId: line1-2x2
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Chart widget: line-chart component (2x4)
 
 ::::VerticalSplit{layout="middle"}
@@ -230,10 +233,12 @@ children:
           jigId: chart-line-1_2x4
           widgetId: line1-2x4
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Chart widget: line-chart component (4x4)
 
 ::::VerticalSplit{layout="middle"}
@@ -428,10 +433,12 @@ children:
           jigId: chart-line-2_4x4
           widgetId: line2-4x4
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Chart widget - line-chart component (4x2)
 
 ::::VerticalSplit{layout="middle"}
@@ -549,10 +556,12 @@ children:
           jigId: line-chart-widget 
           widgetId: lineChartDD-4x2
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Chart widget: line-chart component in group widget (4x4)
 
 ::::VerticalSplit{layout="middle"}
@@ -790,10 +799,12 @@ children:
           jigId: combined-chart-chart-1_4x2
           widgetId: combined-chart1-4x2
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Chart widget: bar-chart component (2x2)
 
 ::::VerticalSplit{layout="middle"}
@@ -895,10 +906,12 @@ children:
           jigId: chart-bar-1_2x2
           widgetId: line1-2x2
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Chart widget: bar-chart component (4x2)
 
 ::::VerticalSplit{layout="middle"}
@@ -986,10 +999,12 @@ children:
           jigId: chart-bar-1_4x2
           widgetId: bar1-4x2
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Chart widget: bar-chart component (4x2)
 
 ::::VerticalSplit{layout="middle"}
@@ -1101,10 +1116,12 @@ children:
           jigId: bar-chart-widget
           widgetId: barChartStatic-4x2
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Chart widget: pie-chart component (2x2)
 
 ::::VerticalSplit{layout="middle"}
@@ -1190,10 +1207,12 @@ children:
           jigId: pie-chart-widget
           widgetId: pieChartDD-2x2
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Chart widget: pie-chart component (2x4)
 
 ::::VerticalSplit{layout="middle"}
@@ -1275,10 +1294,12 @@ children:
           jigId: chart-pie-1_2x4
           widgetId: pie1-2x4
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Chart widget: pie-chart component in group widget (4x4)
 
 ::::VerticalSplit{layout="middle"}
@@ -1400,6 +1421,6 @@ children:
           jigId: combined-chart-list-1_4x2
           widgetId: chart-list1-4x2
 ```
+
 :::
 :::::
-

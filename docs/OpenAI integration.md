@@ -100,35 +100,13 @@ engaging-prompts
 
 Jigx functions are used to configure the REST integration with AI models such as ChatGPT. Once a Jigx function has been configured you can call it anywhere from your visual components. See the section on [REST](<./Data Providers/REST.md>) integration to understand how to use REST in Jigx. Below is an explanation describing how the parameters are configured to integrate Jigx and the AI model. It is important to refer to the AI model REST API you have selected to use, to ensure you have provided the required input and configured the output to return the correct response from the model.
 
-| **Parameter**     | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Parameter**     | **Description**    |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `method`          | `POST` -The POST request can be used to send training data to the server where the AI model is hosted. The server can then use this data to train the model.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `url`             | Specify the URL for the AI model's REST API. For example, the URL for ChatGPT is: [https://api.openai.com/v1/chat/completions](https://api.openai.com/v1/chat/completions)                              |
-| `outputTransform` | The ouputTransform is where you configure the AI reponse. Check the AI API response to ensure you add the correct configuration. For example, &#xA;**OpenAPI response** shows the following code:&#xA;`{
-"id": "chatcmpl-123",
-"object": "chat.completion",
-"created": 1677652288,
-"model": "gpt-3.5-turbo-0125",
-"system_fingerprint": "fp_44709d6fcb",
-"choices": [{
-"index": 0,
-"message": {
-"role": "assistant",
-"content": "\n\nHello there, how may I assist you today?",
-},
-"logprobs": null,
-"finish_reason": "stop"
-}],
-"usage": {
-"prompt_tokens": 9,
-"completion_tokens": 12,
-"total_tokens": 21
-}
-}`<br>In the ** outputTransform** you configure the following:<br>`outputTransform: \| {
-"content": $.choices[0].message.content
-}` |
-| `inputTransform`  | Provide the AI with the information it requires to return the response/chat message.&#xA;`model` - is the name and version of the AI model.&#xA;`response_format` - the expected input type, for example, json\_object.&#xA;`message` - under this property configure the prompts to train the AI, by specifying the `role` and `content`. You can configure multiple sets.                                                                                                                                                                                                                                                                                                                                                                           |
-| `parameters`      | Configure authorization and authentication depending on the AI model you using. Configure the `type`, `required` and `location` of the parameters.                 |
+| `outputTransform` | The ouputTransform is where you configure the AI reponse. Check the AI API response to ensure you add the correct configuration. For example, &#xA;**OpenAPI response** shows the following code:<br>&#xA;`{ "id": "chatcmpl-123", "object": "chat.completion", "created": 1677652288, "model": "gpt-3.5-turbo-0125", "system_fingerprint": "fp_44709d6fcb", "choices": [{ "index": 0, "message": { "role": "assistant", "content": "\n\nHello there, how may I assist you today?", }, "logprobs": null, "finish_reason": "stop" }], "usage": { "prompt_tokens": 9, "completion_tokens": 12, "total_tokens": 21 } }`<br> In the **outputTransform** you configure the following:<br>`outputTransform: \| { "content": $.choices[0].message.content}` |
+| `inputTransform`  | Provide the AI with the information it requires to return the response/chat message.&#xA;`model` - is the name and version of the AI model.&#xA;`response_format` - the expected input type, for example, json\_object.&#xA;`message` - under this property configure the prompts to train the AI, by specifying the `role` and `content`. You can configure multiple sets.  |
+| `parameters`      | Configure authorization and authentication depending on the AI model you using. Configure the `type`, `required` and `location` of the parameters.  |
 
 ## Examples and code samples
 
@@ -372,7 +350,7 @@ action:
           entities:
             - entity: AIChat
               function: ai-chat
-              functionParameters:
+              parameters:
 #Provide a name for your chat bot response             
                 author: 'JIGX Chatbot'
                 user: =@ctx.user.email
@@ -473,7 +451,7 @@ actions:
           entities:
             - entity: default/outsideCheckList
               function: ai-image-function
-              functionParameters:
+              parameters:
                 Content-Type: application/json
                 Authorization: Bearer XX #Use your own Bearer token or the token required by the openAI REST
                 image: =@ctx.components.image.state.value
@@ -494,10 +472,8 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
       entities:
         - default/outsideCheckList
-  
       query: |
         SELECT
             id,
