@@ -8,7 +8,7 @@ Add the ability to delete a customer from the list of customers by swiping left 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1_rest-delete.PNG" size="70" position="center" caption="Delete customer" alt="Delete customer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1_rest-delete.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1_rest-delete.PNG" size="70" position="center" caption="Delete customer" alt="Delete customer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1_rest-delete.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -178,7 +178,7 @@ item:
                   function: rest-delete-customer 
                   # Specifiy the function parameters required by the 
                   # function to delete the customer, in this example custId.                 
-                  functionParameters:
+                  parameters:
                     # id of customer record to be deleted in REST service.  
                     custId: =$number(@ctx.current.item.id)                 
                   data:

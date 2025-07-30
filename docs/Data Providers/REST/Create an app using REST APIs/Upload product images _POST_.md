@@ -194,8 +194,9 @@ actions:
           method: create 
           # Create the image record in the REST service.
           function: rest-upload-customer-images 
-           # Data configuration points to the collection of images with their metadata
-           # in the media-picker ensuring that the call to POST 
+           # Data configuration points to the collection of images 
+           # with their metadata.
+           # in the media-picker ensuring that the call to POST. 
            # & create is executed multiple times for each image.
             =@ctx.components.image.state.value.
             {
@@ -306,7 +307,7 @@ customer-composite.jigx
 title: Customer Details
 type: jig.composite
 # Add an onFocus to return the. images for the specific customer 
-#using the id. This is on demand syncing to limit the images returned.
+# using the id. This is on demand syncing to limit the images returned.
 onFocus: 
   type: action.sync-entities
   options:
@@ -314,17 +315,19 @@ onFocus:
     entities:
       - entity: customer-images
         function: rest-get-customer-images
-        functionParameters:
+        parameters:
           custId: =@ctx.jig.inputs.customer.id
 
 header:
   type: component.jig-header
   options:
     height: medium
-    children: 
+    children:
       type: component.location
       options:
-        address: =@ctx.jig.inputs.customer.address & ' ' & @ctx.jig.inputs.customer.city & ', ' & @ctx.jig.inputs.customer.state & ', ' & @ctx.jig.inputs.customer.zip
+        viewPoint:
+          centerPosition: middle
+          address: =@ctx.jig.inputs.customer.address & ' ' & @ctx.jig.inputs.customer.city & ', ' & @ctx.jig.inputs.customer.state & ', ' & @ctx.jig.inputs.customer.zip
 
 children:
   - jigId: view-customer-details
@@ -340,7 +343,7 @@ actions:
         options:
           title: Add images
           linkTo: add-customer-images
-          parameters:
+          inputs:
             customer: =@ctx.jig.inputs.customer
 ```
 
@@ -412,16 +415,16 @@ item:
       type: action.go-to
       options:
         linkTo: update-customer
-        parameters:
+        inputs:
           customer: =@ctx.current.item
     swipeable:
       left:
         - onPress: 
             type: action.go-to
             options:
-              parameters:
+              inputs:
                customer: =@ctx.current.item  
-# Link to the composite to see the customer details and images.                 
+              # Link to the composite to see the customer details and images.                 
               linkTo: customer-composite
           label: View
           icon: view
@@ -446,7 +449,7 @@ item:
                   function: rest-delete-customer 
                   # Specifiy the function parameters required by the
                   # function to delete the customer, in this example custId                 
-                  functionParameters:
+                  parameters:
                     # id of customer record to be deleted in REST service.
                     custId: =$number(@ctx.current.item.id)                  
                   data:  

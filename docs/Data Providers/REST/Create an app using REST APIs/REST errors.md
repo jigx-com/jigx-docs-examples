@@ -12,7 +12,7 @@ When trying to view a customer and their details or create a new customer in the
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif" size="80" position="center" caption="REST Error handling" alt="REST Error handling" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif" size="80" position="center" caption="REST Error handling" alt="REST Error handling" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif" width="652" height="1304" darkWidth="652" darkHeight="1304"}
 :::
 ::::
 
@@ -498,7 +498,7 @@ options:
 
 There are a number of options available to process items that are in an error state.
 
-1. Use the \***commandQueue**. Items that return an error from the REST endpoint will remain on the commandQueue and are not automatically processed by the queue. You must configure an action to either retry the item or delete the item from the queue. The retry executes the REST call again.
+1. Use the **commandQueue**. Items that return an error from the REST endpoint will remain on the commandQueue and are not automatically processed by the queue. You must configure an action to either retry the item or delete the item from the queue. The retry executes the REST call again.
 2. Use the ***customer\_error*** table configured in the function. Use the data from the table in a jig to allow app users to resolve the error or delete the item in error.
 
 ### Use the commandQueue
@@ -553,7 +553,7 @@ item:
       type: action.go-to
       options:
         linkTo: item
-        parameters:
+        inputs:
           commandId: =@.current.item.id
           internalRef: =@ctx.current.item.payload.data.internalRef
     # Add two actions for the items, a retry and a delete.          
@@ -586,8 +586,8 @@ inputs:
   commandId:
     type: string
     required: true
-# Configure a datasource to return the data for the selected item from the system table.
-datasources: 
+# Configure a datasource to return the data for the selected 
+# item from the system table.
 datasources:
   queued-command:
     type: datasource.sqlite
@@ -704,11 +704,9 @@ datasources:
   customer-errors:
     type: datasource.sqlite
     options:
-      provider: DATA_PROVIDER_LOCAL
-    
+      provider: DATA_PROVIDER_LOCAL 
       entities:
         - entity: customers_error
-    
       query: 
         SELECT 
           id,
@@ -1071,12 +1069,8 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-    
       entities:
-        # jigx-ignore
         - entity: customers_error
-    
-      # jigx-ignore
       query: 
         SELECT 
           id,
@@ -1092,15 +1086,12 @@ datasources:
         FROM
           [customers_error] AS err
         WHERE
-          id = @commandId
-          
+          id = @commandId          
       queryParameters:
-        commandId: =@ctx.jig.inputs.commandId
-        
+        commandId: =@ctx.jig.inputs.commandId       
       jsonProperties: 
         - body
-        - response
-      
+        - response     
       isDocument: true
 
   queued-command:
@@ -1122,11 +1113,9 @@ datasources:
         FROM 
           [_commandQueue]
         WHERE 
-          id = @id;
-      
+          id = @id;     
       queryParameters:
-        id: =@ctx.jig.inputs.commandId
-      
+        id: =@ctx.jig.inputs.commandId      
       isDocument: true
   
 children:

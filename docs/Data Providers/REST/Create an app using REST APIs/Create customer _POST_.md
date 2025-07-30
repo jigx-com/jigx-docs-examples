@@ -211,12 +211,12 @@ options:
 
 ## Jig (screen)
 
-- On the list of customers jig configure an `go-to` action that adds the *Add Customer* button to the list and links to the create-customer jig.
+- On the list of customers jig configure a `go-to` action that adds the *Add Customer* button to the list and links to the create-customer jig.
 - In a default jig add a local data provider datasource with a query to get the us\_states data. Add a query parameter to set the state of the region field once the state field is selected.
 - Add a form component to capture the customer details with each field's instanceId containing the same name as the body parameters in the function.
 - For the state field configure a dropdrown with an expression to get the list of states for selection.
 - For the region use an expression that uses the datasource `queryParameters` value. This allows the region to auto populate on the form on the state is selected in the dropdown.
-- Add an `execute-entity` action to call the function that will create the customer record in the local table (using `method: create`) and in the REST service (`function: rest-create-customer`). Use an expression to specify the value for each of the function's parameters.
+- Add an `execute-entity` action to call the function that will create the customer record in the local table (using `method: create`) and in the REST service (`function: rest-create-customer`). Use an expression to specify the value for each of the function's parameters. The `parameters` create the record in the REST service, while the `data `property creates the record in the local database.
 
 :::CodeblockTabs
 create-customers.jigx
@@ -374,8 +374,8 @@ actions:
           method: create  
           # Create the record in the REST service.
           function: rest-create-customer 
-          # Define the data to create in the record. 
-          functionParameters: 
+          # Define the record's data to be updated in the REST service. 
+          parameters: 
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
             companyName: =@ctx.components.companyName.state.value
@@ -390,6 +390,21 @@ actions:
             state: =@ctx.components.usState.state.value
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value
+          # Define the record's data to be updated in the local SQLite table.  
+          data: 
+            firstName: =@ctx.components.firstName.state.value
+            lastName: =@ctx.components.lastName.state.value
+            companyName: =@ctx.components.companyName.state.value
+            address: =@ctx.components.address.state.value
+            city: =@ctx.components.city.state.value
+            customerType: =@ctx.components.customerType.state.value
+            email: =$lowercase(@ctx.components.email.state.value)
+            jobTitle: =@ctx.components.jobTitle.state.value
+            phone1: =@ctx.components.phone1.state.value
+            phone2: =@ctx.components.phone1.state.value
+            region: =@ctx.components.region.state.value
+            state: =@ctx.components.usState.state.value
+            zip: =@ctx.components.zip.state.value          
           onSuccess: 
             type: action.go-back  
 ```
@@ -416,10 +431,8 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
       entities:
         - entity: customers
-  
       query: |
         SELECT 
           cus.id AS id, 
@@ -469,23 +482,28 @@ item:
             options:
               isConfirmedAutomatically: false
               onConfirmed: 
-                type: action.execute-entity #action to execute the delete
+                # Action to execute the delete.
+                type: action.execute-entity 
                 options:
-#Use the REST data provider to call the delete function.                  
+                  # Use the REST data provider to call the delete function.                  
                   provider: DATA_PROVIDER_REST
                   entity: customers
-                  method: delete #Delete the record from the local SQLite table
+                  # Delete the record from the local SQLite table.
+                  method: delete 
                   goBack: stay
-                  function: rest-delete-customer #Delete the record from the REST service
-#Specifiy the function parameters required by the function to delete the customer, in this example custId                 
-                  functionParameters:
+                  # Delete the record from the REST service
+                  function: rest-delete-customer 
+                  # Delete the record from the REST service using the custId.                 
+                  parameters:
                     custId: =$number(@ctx.current.item.id) #id of customer record to be deleted in REST service                 
+                  # Delete the record from the local SQLite table.
                   data:  
                     id: =@ctx.current.item.id #id of customer to be deleted from local data provider
               modal:
                 title: Are you sure?
                 description: =('Press Confirm to permanently delete ' & @ctx.current.item.companyName)
-# Add an action which adds a button to the bottom of the jig to go to the new customer form (jig)
+# Add an action which adds a button to the bottom of the jig
+# to go to the new customer form (jig)
 actions:
   - children:
       - type: action.go-to

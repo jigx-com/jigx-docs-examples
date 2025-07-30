@@ -8,7 +8,7 @@ In this scenario, records are limited to return only fifty from the REST service
 
 The REST APIs GET operator is used in a Jigx function with an `outputTransform` to specify the exact data to be returned. A `continuation` is added to return all records; the records property specifies all records in the customer's table. A global action is configured to sync the data in the app with the REST data provider calling the function. In turn, the global action is called in the index.jigx file to load the data when the app is opened. In the list jig the local data provider is used to configure the list-item component. In the view-customer jig `jsonProperties` are used for address and phone to return the nested object.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9_rest-listview.PNG" size="76" position="center" caption="List & view customer details" alt="List & view customer details" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9_rest-listview.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9_rest-listview.PNG" size="76" position="center" caption="List & view customer details" alt="List & view customer details" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9_rest-listview.PNG" width="800" height="799" darkWidth="800" darkHeight="799"}
 
 :::hint{type="info"}
 This code sample builds upon the previous [List customers (GET)](<./List customers _GET_.md>) step, to develop a complete and functional solution.
@@ -126,10 +126,12 @@ header:
   options:
     height: medium
     children: 
-      type: component.location 
+      type: component.location
       options:
-        # Use the JsonProperty to return nested objects in the REST JSON.       
-        address: =@ctx.datasources.customer.addresses[0].address & ' ' & @ctx.datasources.customer.addresses[0].city & ', ' & @ctx.datasources.customer.addresses[0].state & ', ' & @ctx.datasources.customer.addresses[0].zip
+        viewPoint: 
+          centerPosition: middle
+          # Use the JsonProperty to return nested objects in the REST JSON.
+          address: =@ctx.datasources.customer-hr2.addresses[0].address & ' ' & @ctx.datasources.customer-hr2.addresses[0].city & ', ' & @ctx.datasources.customer-hr2.addresses[0].state & ', ' & @ctx.datasources.customer-hr2.addresses[0].zip
   
 # Define the data to use in the jig, the data has been synced 
 # by the global action to the local data provider from the REST Service.
@@ -276,16 +278,18 @@ item:
       type: action.go-to
       options:
         linkTo: update-customer
-        parameters:
+        inputs:
           customer: =@ctx.current.item
+          
     swipeable:
       left:
 # Add an onPress event to view the customer's details.      
         - onPress: 
             type: action.go-to
             options:
-              parameters:
-               customer: =@ctx.current.item    
+              inputs:
+               customer: =@ctx.current.item
+               id: =@ctx.current.item.id    
               linkTo: view-customer-details
           label: View
           icon: view
@@ -310,7 +314,7 @@ item:
                   function: rest-delete-customer 
                   #Specifiy the function parameters required by the function
                   # to delete the customer, in this example custId.                 
-                  functionParameters:
+                  parameters:
                   # id of customer record to be deleted in REST service. 
                     custId: =$number(@ctx.current.item.id)                 
                   data:
