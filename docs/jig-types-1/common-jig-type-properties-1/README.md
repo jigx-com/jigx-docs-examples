@@ -1,0 +1,2 @@
+# Common jig type properties
+
