@@ -1,22 +1,13 @@
----
-title: Custom components (Alpha)
-slug: OVPG-custom
-createdAt: Mon Jun 12 2023 12:15:24 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Apr 22 2025 11:32:50 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn about custom components in Jigx, which enhance the standard UI
-  capabilities. Discover why and when to use custom components, and get a
-  step-by-step guide on creating and reusing them in Jig. Exp
----
+# Custom components (Alpha)
 
 # Custom components (Alpha)
 
-:::hint{type="danger"} This feature is currently in its **Alpha** stage of development.
+\:::hint\{type="danger"} This feature is currently in its **Alpha** stage of development.
 
-* As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
-* In this phase, the feature may contain bugs or behave unpredictably.
-* Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
-* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases. :::
+- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
+- In this phase, the feature may contain bugs or behave unpredictably.
+- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
+- We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases. :::
 
 Custom components extend the standard set of components in Jigx to provide additional UI capabilities and features. To understand what custom components are, when and why you would use them, see [Custom Components (Alpha)](https://docs.jigx.com/custom-components-alpha).
 
@@ -33,51 +24,42 @@ Custom components extend the standard set of components in Jigx to provide addit
 
 ## How to create a custom component
 
-::::WorkflowBlock :::WorkflowBlockItem In Jigx Builder in the components folder, create a new jigx file, e.g., custom-button.jigx. :::
-
-:::WorkflowBlockItem Select the `type: component.default`. All custom components require this type. :::
-
-:::WorkflowBlockItem Under the `children:` property, use IntelliSence (Ctrl+space) to see the list of available components. Select the components, e.g., `type: component.button`. :::
-
-:::WorkflowBlockItem Under the `options:` properties, create a space and use **ctrl+space** to open the IntelliSense popup\*\*.\*\* :::
-
-:::WorkflowBlockItem You can select the styling properties from the list shown. :::
-
-:::WorkflowBlockItem Configure the other properties provided in the code snippet. :::
-
-:::WorkflowBlockItem Open the jig where you want to use the custom component and reference `component.custom-component`. Use the `componentId` property to reference the name of the custom component file, e.g., `componentId: custom-button`. :::
-
-:::WorkflowBlockItem Test the jig on a mobile device to ensure the button is rendering correctly. ::: ::::
+1. In Jigx Builder in the components folder, create a new jigx file, e.g., custom-button.jigx.
+2. Select the `type: component.default`. All custom components require this type.
+3. Under the `children:` property, use IntelliSence (Ctrl+space) to see the list of available components. Select the components, e.g., `type: component.button`.
+4. Under the `options:` properties, create a space and use **ctrl+space** to open the IntelliSense popup**.**&#x20;
+5. You can select the styling properties from the list shown.
+6. Configure the other properties provided in the code snippet.
+7. Open the jig where you want to use the custom component and reference `component.custom-component`. Use the `componentId` property to reference the name of the custom component file, e.g., `componentId: custom-button`.
+8. Test the jig on a mobile device to ensure the button is rendering correctly.
 
 ### Considerations
 
-* [Localization](https://docs.jigx.com/localization) can be applied to custom components such as [Button (Alpha)](<Custom components _Alpha_/Button _Alpha_.md>) and [Text (Alpha)](<Custom components _Alpha_/Text _Alpha_.md>).
-* You can nest custom components by using `component.custom-component` and referencing the desired component in the `componentId` property.
+- [Localization](https://docs.jigx.com/localization) can be applied to custom components such as [Button (Alpha)](<Custom components _Alpha_/Button _Alpha_.md>) and [Text (Alpha)](<Custom components _Alpha_/Text _Alpha_.md>).
+- You can nest custom components by using `component.custom-component` and referencing the desired component in the `componentId` property.
+  ```yaml
+  type: component.default
+  componentId: brand-form
 
-    ```yaml
-    type: component.default
-    componentId: brand-form
+  children:
+    # Reference a custom component inside this custom component using componentId.
+    - type: component.custom-component
+      componentId: itinerary-day
+    - type: component.card
+      options:
+        children:
+          - type: component.form
+            instanceId: new-form
+            options:
+              children:
+                - type: component.text-field
+                  instanceId: company-name
+                  options:
+                    label: Company Name
+  ```
+- When using `component.image` in a custom component, the `height` property must be specified as part of the `size` property, otherwise validation errors occur, see below:
 
-    children:
-      # Reference a custom component inside this custom component using componentId.
-      - type: component.custom-component
-        componentId: itinerary-day
-      - type: component.card
-        options:
-          children:
-            - type: component.form
-              instanceId: new-form
-              options:
-                children:
-                  - type: component.text-field
-                    instanceId: company-name
-                    options:
-                      label: Company Name
-    ```
-
-* When using `component.image` in a custom component, the `height` property must be specified as part of the `size` property, otherwise validation errors occur, see below:
-
-:::CodeblockTabs Correct YAML
+&#x20;Correct YAML
 
 ```yaml
 # Correct YAML snippet for using the height property in the image component,
@@ -102,4 +84,3 @@ Incorrect YAML
               uri: https://images
 ```
 
-:::
