@@ -12,12 +12,12 @@ Refer to the [Widgets](https://docs.jigx.com/widgets) topic to understand how to
 | **Widget content**                                         | **Description**                                                                                                                                                 |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Widget content](<./Widgets/Content widget components.md>) | Components that can be added to widgets such as titles or grouping widgets into one widget.                                                                     |
-| [actions (buttons)](<./Widgets/actions _buttons_.md>)      | Configure a button with an action that executes.                                                                                                                |
-| [avatar](./Widgets/avatar.md)                              | Display an avatar on the widget.                                                                                                                                |
-| [chart](./Widgets/chart.md)                                | Configure a bar, line or pie chart to display on the widget.                                                                                                    |
-| [icons](https://docs.jigx.com/jigx-icons)                  | Choose an icon from thousands of available icons.                                                                                                               |
+| [actions (buttons)](<./Widgets/actions _buttons_.md>)      | Configure a button with an action that executes.       |
+| [avatar](./Widgets/avatar.md)                              | Display an avatar on the widget.                       |
+| [chart](./Widgets/chart.md)                                | Configure a bar, line or pie chart to display on the widget.    |
+| [icons](https://docs.jigx.com/jigx-icons)                  | Choose an icon from thousands of available icons.         |
 | [image](./Widgets/image.md)                                | Configure an image to display on the widget, consider the `size:` of the widget to ensure the image displays as expected , 1x1 is not suitable for most images. |
 | [list](./Widgets/list.md)                                  | Display a list of data in the widget with additional left and right elements if required.                                                                       |
-| [location](./Widgets/location.md)                          | Show a location in a map on the widget with markers.                                                                                                            |
+| [location](./Widgets/location.md)                          | Show a location in a map on the widget with markers.    |
 | [status](./Widgets/status.md)                              | Configure a visual representation of a status, such as goal status, or sales quartely status.                                                                   |
 | [value](./Widgets/value.md)                                | Show values and amounts on the widget, such as sales targets or the number of orders to date.                                                                   |

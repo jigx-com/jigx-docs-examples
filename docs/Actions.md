@@ -2,7 +2,7 @@
 
 Refer to the [actions](https://docs.jigx.com/actions) topic to understand concepts such as local and global actions, types of actions, as well as, how and where to configure actions in jigs, and data. The topics in this section provide code examples for each action.
 
-Adding an `icon` property in an action\* \*only applies to `swipeable`, `secondary`, and `header` actions. Primary actions do not support icon setups.
+Adding an `icon` property in an action only applies to `swipeable`, `secondary`, and `header` actions. Primary actions do not support icon setups.
 
 Here is a list of all actions and the category type the action forms part of.
 

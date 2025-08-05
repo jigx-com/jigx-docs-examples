@@ -25,7 +25,6 @@ The preview is triggered by _long-pressing_ the widget or item. The _long-press_
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `actions`          | These can be added to the preview:&#xA;[action-list](https://docs.jigx.com/examples/action-list)&#xA;[execute-entities](https://docs.jigx.com/examples/execute-entities)&#xA;[execute-entity](https://docs.jigx.com/examples/execute-entity)&#xA;[go-to](https://docs.jigx.com/examples/go-to)&#xA;[open-url](https://docs.jigx.com/examples/open-url)&#xA;[reset-state](https://docs.jigx.com/examples/reset-state)&#xA;[set-state](https://docs.jigx.com/examples/set-state)&#xA;[sync-entities](https://docs.jigx.com/examples/sync-entities)&#xA;[confirm](https://docs.jigx.com/examples/confirm) |
 | `children`         | Two components available to use in a preview mode:     |
-|                    |     |
 | `header`           | The is can be part of the displayed preview.      |
 | `isCompact`        | When set to `true` the size of the preview will be adjusted to its content.  |
 
