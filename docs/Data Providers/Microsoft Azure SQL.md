@@ -15,11 +15,11 @@ Integrating with an Azure SQL database is easy, using the SQL data provider in J
 
 In this section, an SQL database is used to create a customer Jigx app that allows you to:
 
-| **Functions & Jigs**                                                                          | **Functionality description**                                                                                                                |
+| **Functions & Jigs**                                                                          | **Functionality description**     |
 | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| [List customers (SELECT)](<./Microsoft Azure SQL/List customers _SELECT_.md>)                 | View a list of customers.                                                                                                                    |
-| [List a single customer (SELECT)](<./Microsoft Azure SQL/List a single customer _SELECT_.md>) | View a single customer.                                                                                                                      |
-| [Create a customer (INSERT)](<./Microsoft Azure SQL/Create a customer _INSERT_.md>)           | Capture new customers in a form.                                                                                                             |
+| [List customers (SELECT)](<./Microsoft Azure SQL/List customers _SELECT_.md>)                 | View a list of customers.          |
+| [List a single customer (SELECT)](<./Microsoft Azure SQL/List a single customer _SELECT_.md>) | View a single customer.    |
+| [Create a customer (INSERT)](<./Microsoft Azure SQL/Create a customer _INSERT_.md>)           | Capture new customers in a form.      |
 | [Update a customer (UPDATE)](<./Microsoft Azure SQL/Update a customer _UPDATE_.md>)           | You can update customer details by tapping the Edit customer button. This populates a form with the customer's details and an update button. |
 
 ### Before you begin
