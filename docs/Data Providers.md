@@ -9,10 +9,10 @@ Utilize the data providers available in Jigx to seamlessly integrate with data f
 
 In this section, examples with code snippets are provided for working with data using each of the providers listed below:
 
-| **Data Provider**                                                |                                                                                                                                                                                                            |
+| **Data Provider**  |                                                                                                                                                                                                            |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Dynamic Data](<./Data Providers/Dynamic Data.md>)               | Uses dynamic tables stored on our [Management](https://manage.jigx.com/) website.                                                                                               |
+| [Dynamic Data](<./Data Providers/Dynamic Data.md>)               | Uses dynamic tables stored on our [Management](https://manage.jigx.com/) website.      |
 | [Microsoft Azure SQL](<./Data Providers/Microsoft Azure SQL.md>) | Integrate with Microsoft Azure SQL through the SQL data provider, allowing you to select or insert data from an Azure SQL database. This includes Microsoft Azure SQL and Microsoft SQL Server on-premise. |
-| [Microsoft OneDrive](<./Data Providers/Microsoft OneDrive.md>)   | Uses Microsoft OneDrive to work with files.                                                                                                                                                                |
-| [REST](<./Data Providers/REST.md>)                               | Integrating with REST APIs to enhance your mobile application, allowing it to access and interact with external data and services efficiently.                                                             |
-| [Salesforce](<./Data Providers/Salesforce.md>)                   | Uses the Salesforce platform database.                                                                                                                                                                     |
+| [Microsoft OneDrive](<./Data Providers/Microsoft OneDrive.md>)   | Uses Microsoft OneDrive to work with files.   |
+| [REST](<./Data Providers/REST.md>)                               | Integrating with REST APIs to enhance your mobile application, allowing it to access and interact with external data and services efficiently.   |
+| [Salesforce](<./Data Providers/Salesforce.md>)                   | Uses the Salesforce platform database.      |
