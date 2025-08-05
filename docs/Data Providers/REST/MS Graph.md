@@ -22,10 +22,10 @@ When using the code and samples in this topic, remember that they are designed t
 
 The following examples and code snippets are provided:
 
-|                                                          |                                                                                                                                                                                                                               |
+|                                                               |
 | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Graph User Profile](<./MS Graph/Graph User Profile.md>) | Provides sample code to get a user's profile information from Microsoft Graph. It includes a [code sample](<./MS Graph/Graph User Profile/Update Profile Photo.md>) for updating a user's profile picture in Microsoft Graph. |
 | [Graph Calendar](<./MS Graph/Graph Calendar.md>)         | Provides sample code to get a list of the user's calendars and renders a calendar in a schedule view on a jig. It includes a code sample on adding calendar entries to a user's Microsoft 365 calendar in Exchange.           |
 | [Graph Mail](<./MS Graph/Graph Mail.md>)                 | Provides sample code to get a list of emails for a user and displays the emails in a list jig. Press on an email to view the content of the email.                                                                            |
-| [Graph tasks](<./MS Graph/Graph tasks.md>)               | Provides sample code to get a list of To-do tasks for a user and displays the tasks in a list jig.                                                                                                                            |
-| [Graph Insights](<./MS Graph/Graph Insights.md>)         | provides sample code to get insights that include a list of documents trending around the user and displays the list in a list jig.                                                                                           |
+| [Graph tasks](<./MS Graph/Graph tasks.md>)               | Provides sample code to get a list of To-do tasks for a user and displays the tasks in a list jig.             |
+| [Graph Insights](<./MS Graph/Graph Insights.md>)         | provides sample code to get insights that include a list of documents trending around the user and displays the list in a list jig.            |
