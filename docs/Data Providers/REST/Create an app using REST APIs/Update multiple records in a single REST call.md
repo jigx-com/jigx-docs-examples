@@ -30,7 +30,9 @@ actions:
           # All records will be updated with Bronze tag
           # CustomerType is the same (static) across all records         
           parameters:
-            customerType: Bronze    
+            customerType: Bronze 
+          data:
+            customerType: Bronze     
 ```
 
 data
@@ -49,7 +51,9 @@ actions:
           # All records will be updated dynamically per record.
           # Define the properties to be updated in the records.
           # Data must include all required properties on the record 
-          # in the datasource.          
+          # in the datasource.
+          parameters: 
+            {"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}          
           data: =@ctx.datasources.customers.{"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}[]           
 ```
 

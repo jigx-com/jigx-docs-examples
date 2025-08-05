@@ -31,7 +31,7 @@ Custom components extend the standard set of components in Jigx to provide addit
    4. [Text (Alpha)](<Custom components _Alpha_/Text _Alpha_.md>)
    5. [View (Alpha)](<Custom components _Alpha_/View _Alpha_.md>)
 
-### How to create a custom component
+## How to create a custom component
 
 ::::WorkflowBlock :::WorkflowBlockItem In Jigx Builder in the components folder, create a new jigx file, e.g., custom-button.jigx. :::
 
@@ -52,7 +52,7 @@ Custom components extend the standard set of components in Jigx to provide addit
 ### Considerations
 
 * [Localization](https://docs.jigx.com/localization) can be applied to custom components such as [Button (Alpha)](<Custom components _Alpha_/Button _Alpha_.md>) and [Text (Alpha)](<Custom components _Alpha_/Text _Alpha_.md>).
-*   You can nest custom components by using `component.custom-component` and referencing the desired component in the `componentId` property.
+* You can nest custom components by using `component.custom-component` and referencing the desired component in the `componentId` property.
 
     ```yaml
     type: component.default
@@ -74,6 +74,7 @@ Custom components extend the standard set of components in Jigx to provide addit
                     options:
                       label: Company Name
     ```
+
 * When using `component.image` in a custom component, the `height` property must be specified as part of the `size` property, otherwise validation errors occur, see below:
 
 :::CodeblockTabs Correct YAML
