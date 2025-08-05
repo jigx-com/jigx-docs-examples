@@ -2585,6 +2585,7 @@ This example demonstrates how you can create tags in a custom component. We use 
 
 1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/tags/tags.jigx).
 2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/tags/tags.jigx).
+
 :::
 ::::
 
@@ -2725,10 +2726,12 @@ children:
               when: =@ctx.inputs.title = 'Add Notes'
           isSequential: true
 ```
+
 :::
 :::::
 
 :::::ExpandableHeading
+
 ### Toggles
 
 ::::VerticalSplit{layout="middle"}
