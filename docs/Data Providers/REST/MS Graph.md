@@ -22,7 +22,7 @@ When using the code and samples in this topic, remember that they are designed t
 
 The following examples and code snippets are provided:
 
-|                                                               |
+|                                                          |                                                                                                                                                                                                                               |
 | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Graph User Profile](<./MS Graph/Graph User Profile.md>) | Provides sample code to get a user's profile information from Microsoft Graph. It includes a [code sample](<./MS Graph/Graph User Profile/Update Profile Photo.md>) for updating a user's profile picture in Microsoft Graph. |
 | [Graph Calendar](<./MS Graph/Graph Calendar.md>)         | Provides sample code to get a list of the user's calendars and renders a calendar in a schedule view on a jig. It includes a code sample on adding calendar entries to a user's Microsoft 365 calendar in Exchange.           |
