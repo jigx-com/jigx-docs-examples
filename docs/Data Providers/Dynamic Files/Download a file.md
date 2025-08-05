@@ -10,7 +10,7 @@ A `go-to` action opens a jig that displays the downloaded file in an `image` com
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" size="66" position="center" caption="Download files" alt="Download files" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" size="66" position="center" caption="Download files" alt="Download files" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
 :::
 ::::
 
@@ -35,7 +35,11 @@ header:
       options:
         source:
           uri: https://cdn.pixabay.com/photo/2023/08/22/11/57/finance-8206242_1280.jpg
-
+# The datasource allows you to use the thumbnail image URI from the server, 
+# for faster loading and lower bandwidth.
+# The full image for high-resolution, detailed viewing or editing.
+# The image is stored in the cache (localPath) to cater for offline use,
+# and repeated requests for the same image. 
 datasources:
   expenses-ds:
     type: datasource.sqlite
@@ -171,12 +175,11 @@ children:
             label: thumbnailContentType
             value: =@ctx.datasources.receipt-ds.thumbnailContentType
 ```
-
 :::
 
 ## Downloading multiple files
 
-In scenarios where multiple files must be downloaded, use the `execute-entities` action. In the `data` property, configure an expression using the `$map` JSONATA [Path Operators](docId:2mRsMRwOOFLr70HBAUWeC) to handle multiple entries.
+In scenarios where multiple files must be downloaded, use the `execute-entities` action. In the `data` property, configure an expression using the `$map` JSONATA [Path Operators]() to handle multiple entries.
 
 :::CodeblockTabs
 download-multiple-files
@@ -201,7 +204,6 @@ download-multiple-files
                 }
               })
 ```
-
 :::
 
 ## Download a file in Jigx Management
@@ -212,3 +214,4 @@ Files can be uploaded in Management by following these steps:
 2. Browse to the required solution's **data** tab and select the record containing the file to be downloaded.
 3. Select the **File** tab in the Edit record pane.
 4. To download the file use the **Download file** link at the top of the record.
+
