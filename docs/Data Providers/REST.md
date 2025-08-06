@@ -23,8 +23,26 @@ Integrating with a REST API is a key step in enhancing your mobile application, 
 
 ## Examples
 
-|                                                         |                                                                                                                                                                   |
-| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Hello REST](<./REST/Create an app using REST APIs.md>) | In this section, a REST API is used to create a customers Jigx app, allowing you to add new customers and update and view customer details, location, and images. |
-| [MS Graph](<./REST/MS Graph.md>)                        | The MS Graph examples use the User, Calendar, Mail, Insights, and To-do tasks to create a powerful Jigx apps with everything you need in one app.                 |
+<table isTableHeaderOn="false" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false">
+      <p><a href="./REST/Create%20an%20app%20using%20REST%20APIs.md">Hello REST</a></p>
+    </td>
+    <td selected="false">
+      <p>In this section, a REST API is used to create a customers Jigx app, allowing you to add new customers and update and view customer details, location, and images.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false">
+      <p><a href="./REST/MS%20Graph.md">MS Graph</a></p>
+    </td>
+    <td selected="false">
+      <p>The MS Graph examples use the User, Calendar, Mail, Insights, and To-do tasks to create a powerful Jigx apps with everything you need in one app.</p>
+    </td>
+  </tr>
+</table>
+
+
+
+
 
