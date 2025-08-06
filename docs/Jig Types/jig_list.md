@@ -32,21 +32,173 @@ The `jig.list` can be configured in the following ways within the Jigx Builder:
 
 Some properties are common to all jig types, see [Common jig type properties]() for a list and their configuration options.
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `badge`           | Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:&#xA;-  To display as a red dot using the `empty` value.&#xA;-  A red dot with a number using an expression to perform a count. &#xA;For example, counting the number of tasks in the list.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `filter`          | `initialValue` - Predefine the default selected tab for a filter on the list, when opening the  the default filter tab is displayed.&#xA;`data` -  define the filter tabs using:&#xA;`title` - give the filter a name. The text that will be displayed in the tab, for example, in-stock.&#xA;`value` - The value that the list filter returns. Use the following expressions to return this value:&#xA;`=@ctx.components.my-list.state.filter` (for a list in a default jig)&#xA;`=@ctx.jig.state.filter`(for a list jig)&#xA;For `true/false` values that are saved as **boolean** ensure the filter has a **boolean** value.&#xA;For `true/false` values that are saved as **string** ensure the filter has a **string** value.&#xA;When using the `value` property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `hasActiveItem`   | When set to `true` the list has an active item state.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `isHorizontal`    | Set to `true` displays the list horizontally, while `false` displays the list vertically. The default list is displayed vertically.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `isContained`     | Used to style the list item, `true` wraps the list item in a card, while `false` displays the item with no styling. This property can be used with vertical and horizontal lists and `component.list-item`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `isSearchable`    | Set to `true` adds a search field to the list. The default list is displayed without a search field.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `isSelectable`    | When set to `true` the ability to select individual and multiple items in the list is available. Click the \*Select \*link in the top right of the screen. The default list is displayed without selection options.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `leftElement`     | Set an element to the left of the list. The following elements are available:`avatar` - configure the `color`, `size`, `text`, `uri`, and `onPress` event.&#xA;`checkbox`&#xA;`icon` - the icon `size`, `color`,`shape`, `type`, `isSubtle` (low opacity), and `onPress` event is configurable.&#xA;`image` - the image `size`, `shape`, `resizeMode`, and `onPress` event is configurable. &#xA;`progress`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `rating`          | Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the `ratingIcon`, `color`, and accompanying descriptive `text`. By default, the rating property has only one icon showing a rating-star in the primary color.&#xA;`value`- Rating with numerical value.&#xA;The value of the rating, which can be a simple number.&#xA;The number of icons is calculated based on this value unless overridden in the icon configuration.&#xA;Configuring the `current` and `maximum` values, shows the value as a fraction, for example 7/10.&#xA;`percentage` - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%.&#xA;`ratingIcon` - By default the *rating-star* icon in the *primary* color is displayed.&#xA;`icon` - Add an icon to represent the rating. A list of icons is available. See  for more information.&#xA;`color`- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in .&#xA;`current` and `maximum` values - Where maximum is the number of icons to display and current the number of icons to color. &#xA;`text` - add descriptive text that displays next to rating.&#xA;Ratings can set up in the following ways: &#xA;1\) Example of `value` for a product rating. &#xA;2\) Example of a user rating shown in a `percentage`&#xA;3\) Example of `value` rating showing 2.5/5 as a rating with single star icon. |
-| `rightElement`    | Set an element to the right of the list. The following elements are available:&#xA;`amountControl`&#xA;`badge` - can be a solid colored badge or a badge with a number in it. Badges  always use the primary color.&#xA;`button`&#xA;`checkbox`&#xA;`icon` - the icon `size`, `color`,`shape`, `type`, `isSubtle` (low opacity), and `onPress` event is configurable.&#xA;`switch`&#xA;`value` - When using `text`, the option to change its `color` is available.&#xA;`text` - define up to three  lines of text with styling (color, bold, font size) applied to each line of text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `sections`        | Used for styling a list, when set to `true` each item in the list displays in its own section, divided by a line. The default is `false`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `tags`            | A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.&#xA;`text` -  The text content displayed within the tag.&#xA;`color` - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in . &#xA;Tags can be set up in three ways: &#xA;1\) Using a dynamic expression from a datasource:&#xA;`tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}` &#xA;2\) Using a dynamic expression from a list item:&#xA;`tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}`&#xA;3\) Using static, predefined tags&#xA;`tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `title`           | Add a `title` for the list-item. You can use an expression and datasource to set the title. Select *Line Options* (`text`), allowing configuration of individual parts of the central element in a list-item. You can set properties such as `color`, `fontSize`, `bold`, `format`, `isSubtle` (low opacity), and `numberOfLines`, rather than applying them globally via the root.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="149">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>badge</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:</p>
+      <ul>
+      <li>To display as a red dot using the <code>empty</code> value.</li>
+      <li>A red dot with a number using an expression to perform a count. For example, counting the number of tasks in the list.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>filter</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>initialValue</code> - Predefine the default selected tab for a filter on the list, when opening the  the default filter tab is displayed.
+      <code>data</code> -  define the filter tabs using:
+      <code>title</code> - give the filter a name. The text that will be displayed in the tab, for example, in-stock.
+      <code>value</code> - The value that the list filter returns. Use the following expressions to return this value:
+      <code>=@ctx.components.my-list.state.filter</code> (for a list in a default jig)
+      <code>=@ctx.jig.state.filter</code>(for a list jig)
+      For <code>true/false</code> values that are saved as <strong>boolean</strong> ensure the filter has a <strong>boolean</strong> value.
+      For <code>true/false</code> values that are saved as <strong>string</strong> ensure the filter has a <strong>string</strong> value.
+      When using the <code>value</code> property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>hasActiveItem</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>When set to <code>true</code> the list has an active item state.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isHorizontal</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set to <code>true</code> displays the list horizontally, while <code>false</code> displays the list vertically. The default list is displayed vertically.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isContained</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Used to style the list item, <code>true</code> wraps the list item in a card, while <code>false</code> displays the item with no styling. This property can be used with vertical and horizontal lists and <code>component.list-item</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isSearchable</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set to <code>true</code> adds a search field to the list. The default list is displayed without a search field.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isSelectable</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>When set to <code>true</code> the ability to select individual and multiple items in the list is available. Click the *Select *link in the top right of the screen. The default list is displayed without selection options.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>leftElement</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set an element to the left of the list. The following elements are available:</p>
+      <ul>
+      <li><code>avatar</code> - configure the <code>color</code>, <code>size</code>, <code>text</code>, <code>uri</code>, and <code>onPress</code> event.</li>
+      <li><code>checkbox</code></li>
+      <li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li>
+      <li><code>image</code> - the image <code>size</code>, <code>shape</code>, <code>resizeMode</code>, and <code>onPress</code> event is configurable. </li>
+      <li><code>progress</code></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>rating</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the <code>ratingIcon</code>, <code>color</code>, and accompanying descriptive <code>text</code>. By default, the rating property has only one icon showing a rating-star in the primary color.
+      <code>value</code>- Rating with numerical value.
+      The value of the rating, which can be a simple number.
+      The number of icons is calculated based on this value unless overridden in the icon configuration.
+      Configuring the <code>current</code> and <code>maximum</code> values, shows the value as a fraction, for example 7/10.
+      <code>percentage</code> - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%.
+      <code>ratingIcon</code> - By default the <em>rating-star</em> icon in the <em>primary</em> color is displayed.
+      <code>icon</code> - Add an icon to represent the rating. A list of icons is available. See  for more information.
+      <code>color</code>- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in .
+      <code>current</code> and <code>maximum</code> values - Where maximum is the number of icons to display and current the number of icons to color.
+      <code>text</code> - add descriptive text that displays next to rating.
+      Ratings can set up in the following ways:
+      1) Example of <code>value</code> for a product rating.
+      2) Example of a user rating shown in a <code>percentage</code>
+      3) Example of <code>value</code> rating showing 2.5/5 as a rating with single star icon.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>rightElement</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set an element to the right of the list. The following elements are available:</p>
+      <ul>
+      <li><code>amountControl</code></li>
+      <li><code>badge</code> - can be a solid colored badge or a badge with a number in it. Badges  always use the primary color.</li>
+      <li><code>button</code></li>
+      <li><code>checkbox</code></li>
+      <li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li>
+      <li><code>switch</code></li>
+      <li><code>value</code> - When using <code>text</code>, the option to change its <code>color</code> is available.</li>
+      <li><code>text</code> - define up to three  lines of text with styling (color, bold, font size) applied to each line of text.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>sections</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Used for styling a list, when set to <code>true</code> each item in the list displays in its own section, divided by a line. The default is <code>false</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>tags</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.</p>
+      <ul>
+      <li><code>text</code> -  The text content displayed within the tag.</li>
+      <li><code>color</code> - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in .
+      Tags can be set up in three ways:
+      1) Using a dynamic expression from a datasource:
+      <code>tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}</code>
+      2) Using a dynamic expression from a list item:
+      <code>tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}</code>
+      3) Using static, predefined tags
+      <code>tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'</code></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a <code>title</code> for the list-item. You can use an expression and datasource to set the title. Select <em>Line Options</em> (<code>text</code>), allowing configuration of individual parts of the central element in a list-item. You can set properties such as <code>color</code>, <code>fontSize</code>, <code>bold</code>, <code>format</code>, <code>isSubtle</code> (low opacity), and <code>numberOfLines</code>, rather than applying them globally via the root.</p>
+    </td>
+  </tr>
+</table>
 
 :::CodeblockTabs
 product-rating-value
@@ -78,11 +230,65 @@ rating:
 ```
 :::
 
-| **State Configuration** | **Key**                                                                                                                                                        | **Notes**                                                                                                                                                                        |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `=@ctx.jig.state.`      | activeItem&#xA;activeItemId&#xA;amounts&#xA;filter&#xA;isHorizontal&#xA;isRefreshing&#xA;isSelectable&#xA;isSelectActive&#xA;searchText&#xA;selected&#xA;value | State is set by the creator in the YAML.&#xA;State applies to the jig                                                                                                            |
-| `=@ctx.current.state.`  | amount&#xA;checked                                                                                                                                             | Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array. |
-| `=@ctx.solution.state.` | activeItemId&#xA;now                                                                                                                                           | Global state variable that can be used throughout the solution.                                                                                                                  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="211,137">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>State Configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.jig.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>activeItem
+      activeItemId
+      amounts
+      filter
+      isHorizontal
+      isRefreshing
+      isSelectable
+      isSelectActive
+      searchText
+      selected
+      value</p>
+    </td>
+    <td selected="false" align="left">
+      <p>State is set by the creator in the YAML.
+      State applies to the jig</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.current.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>amount
+      checked</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>activeItemId
+      now</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Global state variable that can be used throughout the solution.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 

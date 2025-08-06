@@ -6,7 +6,7 @@ The table jig displays structured data in rows and columns, allowing users to vi
 
 ## Configuration options
 
-Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
+Some properties are common to all jig types, see [Common jig type properties]() for a list and their configuration options.
 
 The table Jigx type includes multiple child components, each of which can be configured individually based on the desired table layout. The properties for each component are described below.
 
@@ -14,40 +14,153 @@ The table Jigx type includes multiple child components, each of which can be con
 
 `component.table-row`- The table jig is configured with a datasource, and a single `component.table-row` is configured and iterates through the datasource to display each row. This is a required component.
 
-| **Structure**         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `component.table-row` | This is similar in configuration to a [jig.list](./jig_list.md) where a single `table-row` is configured and iterates through the datasource.&#xA;- `instanceId` - Unique identifier of the table-row component. When defined its possible to address its state. `InstanceId:` Expects a string.&#xA;- `when` - used to determine under which conditions the table will display. If the property is set to `false`, the component won't be displayed. Default is `true`. An expression can be configured in this property. |
-| `color`               | Highlight the row(s) with a distinct background color for emphasis or status. &#xA;For example, &#xA;`color:`&#xA;`  - when: =@ctx.current.item.age > 60` &#xA;`    color: warning`                                                                                                                                                                                                                                                                                                                                        |
-| `data`                | Reference the defined datasource to use in the `component.table-row`.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `datasources`         | Configure a datasource to call the data to display in the table rows.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `onPress`             | Action that will be triggered by pressing on the table row.                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="197">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>component.table-row</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>This is similar in configuration to a  where a single <code>table-row</code> is configured and iterates through the datasource.</p>
+      <ul>
+      <li><code>instanceId</code> - Unique identifier of the table-row component. When defined its possible to address its state. <code>InstanceId:</code> Expects a string.</li>
+      <li><code>when</code> - used to determine under which conditions the table will display. If the property is set to <code>false</code>, the component won't be displayed. Default is <code>true</code>. An expression can be configured in this property.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>color</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Highlight the row(s) with a distinct background color for emphasis or status.
+      For example,
+      <code>color:</code>
+      <code>  - when: =@ctx.current.item.age > 60</code>
+      <code>    color: warning</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>data</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Reference the defined datasource to use in the <code>component.table-row</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>datasources</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure a datasource to call the data to display in the table rows.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Action that will be triggered by pressing on the table row.</p>
+    </td>
+  </tr>
+</table>
 
 ### component.table-cell
 
 This component is part of the `columnDefinition` setup, allowing reusable configurations for customizing column cells and ensuring consistent, flexible table layouts.
 
-| **structure** |                                                                                                                                                                                                                                                            |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`    | Define the cell `value` by using a [list-item](./../Components/list/list-item.md), or [component.text](<./../Custom components _Alpha_/Text _Alpha_.md>). Specify a value for the cell, this can be text that can be evaluated, translated, and formatted. |
-| `onPress`     | Action that will be triggered by pressing on the table cell for a specific column.                                                                                                                                                                         |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>children</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Define the cell <code>value</code> by using a , or <a href="./../Custom%20components%20_Alpha_/Text%20_Alpha_.md">component.text</a>. Specify a value for the cell, this can be text that can be evaluated, translated, and formatted.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Action that will be triggered by pressing on the table cell for a specific column.</p>
+    </td>
+  </tr>
+</table>
 
 ### component.table-header-cell
 
 This component is part of the `columnDefinition` setup, allowing reusable configurations for column header cells and ensuring consistent, flexible table layouts.This component targets the cells in the columns' header.
 
-| **Structure** |                                                                                                                                                                                                                                                                    |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `children`    | Define the cell value by using a [list-item](./../Components/list/list-item.md) or by using a [component.text](<./../Custom components _Alpha_/Text _Alpha_.md>). Specify a value for the cell, this can be text that can be evaluated, translated, and formatted. |
-| `onPress`     | Action that will be triggered by pressing on the text in the table header's cell for a specific column.                                                                                                                                                            |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>children</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Define the cell value by using a  or by using a <a href="./../Custom%20components%20_Alpha_/Text%20_Alpha_.md">component.text</a>. Specify a value for the cell, this can be text that can be evaluated, translated, and formatted.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Action that will be triggered by pressing on the text in the table header's cell for a specific column.</p>
+    </td>
+  </tr>
+</table>
 
 ### component.table-footer-cell
 
 This component is part of the `columnDefinition` setup, allowing reusable configurations for column footer cells and ensuring consistent, flexible table layouts.This component targets the cells in the columns' footer.
 
-| **Structure** |                                                                                                                                                                                                                                                               |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`    | Define the cell value by using a [list-item](./../Components/list/list-item.md), or by using [component.text](<./../Custom components _Alpha_/Text _Alpha_.md>). Specify a value for the cell, this can be text that can be evaluated, translated, formatted. |
-| `onPress`     | Action that will be triggered by pressing on the text in the table footer's cell for a specific column.                                                                                                                                                       |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>children</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Define the cell value by using a , or by using <a href="./../Custom%20components%20_Alpha_/Text%20_Alpha_.md">component.text</a>. Specify a value for the cell, this can be text that can be evaluated, translated, formatted.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Action that will be triggered by pressing on the text in the table footer's cell for a specific column.</p>
+    </td>
+  </tr>
+</table>
 
 ### component.table-footer
 
@@ -58,9 +171,27 @@ This component is part of the `columnDefinition` setup, allowing reusable config
     type: component.table-footer
   ```
 
-| **Structure** |                                                                                                                                                            |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`       | Add a distinct background color for emphasis or status to the table footer.  &#xA;For example, &#xA;`color:`&#xA;`  - when: true` &#xA;`    color: color4` |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>color</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a distinct background color for emphasis or status to the table footer.
+      For example,
+      <code>color:</code>
+      <code>  - when: true</code>
+      <code>    color: color4</code></p>
+    </td>
+  </tr>
+</table>
 
 ### component.table-header
 
@@ -73,15 +204,93 @@ This component is part of the `columnDefinition` setup, allowing reusable config
 
 ### columns
 
-| **Other options**  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `columns`          | Defines the structure and configuration for a single table column, either through inline definitions or by referencing a reusable column definition. Columns can also be dynamically set using a single expression for flexible configuration across all columns.&#xA;`id:`Specifies a unique identifier for the column, used to reference the column’s data.&#xA;The name must be the same as the datasource column name for the data to display.&#xA;&#xA;`columnDefinition`- a reusable configuration for a column, providing consistency across multiple columns. A `columnDefinitionId:` is required as an identifier of the column definition to be used.                                  |
-| `columnDefinition` | Defines reusable configurations for table columns, including properties like width, header, footer, and cell customization, allowing for flexible and consistent table layouts.&#xA;`Column Name`- must match the name in the `column:id`&#xA;`cell` - Sets the value for the individual cells in the column. You can use `=@ctx.current.item.`,  `=@ctx.current.column.id`, or `=@ctx.current.cell.value`&#xA;`footer` - `=@ctx.current.column.id`&#xA;`header` - `=@ctx.current.column.id`&#xA;`width` - Customizes the width of columns to improve visibility and fit specific content, offering flexibility in the table layout. Options include `large`, `regular`, `small`.                |
-| `selectionToolbar` | The `selectionToolbar` appears at the bottom of the table when rows are selected. To enable row selection, `isSelectable: true` must be set at the root level of the jig. The toolbar displays a tag with the number of selected rows, followed by the configured action. &#xA;Avoid overloading the `selectionToolbar` with too many actions or long labels, as it may compress, break layout, or disappear if space runs out.                                                                                                                                                                                                                                                                  |
-| `tableHeader`      | Define the appearance and behavior of all table headers, including `color` or `onPress` actions.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `tableFooter`      | Define the appearance and behavior of all table footers, including `color` or `onPress` actions.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `toolbar`          | The `toolbar` appears at the top of the table as a buttons. The toolbar is configured with actions, such as `got-to` or `execute-entity` to create a new row.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `sort`             | Initial sort configuration for the table. &#xA;`columnId` - Provide the column name that the sorting will be applied to.&#xA;`isDescending` - set to `true` sorts descending, set to `false` sorts ascending.&#xA;`=@ctx.jig.state.sort` is used to access the sort state within the jig. &#xA;To add sorting to a table the `jig.table` must be configured with the following:&#xA;1\) `isSortable: true` at the root level.&#xA;2\) The `data` property must be set with an expression to sort the data in the columns. See *data-yaml* code example below.&#xA;3\) The `sort` property configured at the root level to configure descending or ascending. See *sort-yaml* code example below. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="170">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>columns</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Defines the structure and configuration for a single table column, either through inline definitions or by referencing a reusable column definition. Columns can also be dynamically set using a single expression for flexible configuration across all columns.</p>
+      <ul>
+      <li><code>id:</code>Specifies a unique identifier for the column, used to reference the column’s data.
+      The name must be the same as the datasource column name for the data to display.</li>
+      <li><code>columnDefinition</code>- a reusable configuration for a column, providing consistency across multiple columns. A <code>columnDefinitionId:</code> is required as an identifier of the column definition to be used.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>columnDefinition</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Defines reusable configurations for table columns, including properties like width, header, footer, and cell customization, allowing for flexible and consistent table layouts.</p>
+      <ul>
+      <li><code>Column Name</code>- must match the name in the <code>column:id</code></li>
+      <li><code>cell</code> - Sets the value for the individual cells in the column. You can use <code>=@ctx.current.item.</code>,  <code>=@ctx.current.column.id</code>, or <code>=@ctx.current.cell.value</code></li>
+      <li><code>footer</code> - <code>=@ctx.current.column.id</code></li>
+      <li><code>header</code> - <code>=@ctx.current.column.id</code></li>
+      <li><code>width</code> - Customizes the width of columns to improve visibility and fit specific content, offering flexibility in the table layout. Options include <code>large</code>, <code>regular</code>, <code>small</code>.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>selectionToolbar</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The <code>selectionToolbar</code> appears at the bottom of the table when rows are selected. To enable row selection, <code>isSelectable: true</code> must be set at the root level of the jig. The toolbar displays a tag with the number of selected rows, followed by the configured action.
+      Avoid overloading the <code>selectionToolbar</code> with too many actions or long labels, as it may compress, break layout, or disappear if space runs out.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>tableHeader</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Define the appearance and behavior of all table headers, including <code>color</code> or <code>onPress</code> actions.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>tableFooter</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Define the appearance and behavior of all table footers, including <code>color</code> or <code>onPress</code> actions.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>toolbar</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The <code>toolbar</code> appears at the top of the table as a buttons. The toolbar is configured with actions, such as <code>got-to</code> or <code>execute-entity</code> to create a new row.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>sort</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Initial sort configuration for the table. </p>
+      <ul>
+      <li><code>columnId</code> - Provide the column name that the sorting will be applied to.</li>
+      <li><code>isDescending</code> - set to <code>true</code> sorts descending, set to <code>false</code> sorts ascending.
+      <code>=@ctx.jig.state.sort</code> is used to access the sort state within the jig.
+      To add sorting to a table the <code>jig.table</code> must be configured with the following:
+      1) <code>isSortable: true</code> at the root level.
+      2) The <code>data</code> property must be set with an expression to sort the data in the columns. See <em>data-yaml</em> code example below.
+      3) The <code>sort</code> property configured at the root level to configure descending or ascending. See <em>sort-yaml</em> code example below.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 :::CodeblockTabs
 data-yaml
@@ -105,9 +314,30 @@ sort:
 ```
 :::
 
-| **State Configuration** | **Key** | **Notes**                                      |
-| ----------------------- | ------- | ---------------------------------------------- |
-| `=@ctx.jig.state.`      | sort    | Used to access the sorting state in the table. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>State Configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.jig.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>sort</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Used to access the sorting state in the table.</p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -123,7 +353,7 @@ sort:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Q6Xuu9UZU6giW3xvBsO3A-20250410-141717.png" size="66" position="center" caption="Basic table with color" alt="Basic table with color" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Q6Xuu9UZU6giW3xvBsO3A-20250410-141717.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Q6Xuu9UZU6giW3xvBsO3A-20250410-141717.png" size="66" position="center" caption="Basic table with color" alt="Basic table with color" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Q6Xuu9UZU6giW3xvBsO3A-20250410-141717.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -206,7 +436,7 @@ This table example displays a week's shifts per technician using a `jig.table` w
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-1MvDKuZ881LLxe7MJc2Oo-20250414-095314.png" size="66" position="center" caption="Table with colored header & footer" alt="Table with colored header & footer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-1MvDKuZ881LLxe7MJc2Oo-20250414-095314.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-1MvDKuZ881LLxe7MJc2Oo-20250414-095314.png" size="66" position="center" caption="Table with colored header & footer" alt="Table with colored header & footer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-1MvDKuZ881LLxe7MJc2Oo-20250414-095314.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 ::::
 
@@ -310,7 +540,7 @@ datasources:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HQa4y6l2wh5CVhWpfLJF5-20250414-094024.png" size="66" position="center" caption="Table widths & column definitions" alt="Table widths & column definitions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HQa4y6l2wh5CVhWpfLJF5-20250414-094024.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HQa4y6l2wh5CVhWpfLJF5-20250414-094024.png" size="66" position="center" caption="Table widths & column definitions" alt="Table widths & column definitions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HQa4y6l2wh5CVhWpfLJF5-20250414-094024.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -428,7 +658,7 @@ options:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-KKLCvuvPRRcqH5KOOm2sS-20250415-101720.gif" size="66" position="center" caption="Editing the table" alt="Editing the table" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-KKLCvuvPRRcqH5KOOm2sS-20250415-101720.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-KKLCvuvPRRcqH5KOOm2sS-20250415-101720.gif" size="66" position="center" caption="Editing the table" alt="Editing the table" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-KKLCvuvPRRcqH5KOOm2sS-20250415-101720.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
 :::
 
 :::VerticalSplitItem
@@ -578,7 +808,7 @@ This example demonstrates how to delete rows from a table. The `isSelectable: tr
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4HmPM7d4fpngJ5iMCYcvY-20250415-115154.gif" size="66" position="center" caption="Delete rows in table" alt="Delete rows in table" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4HmPM7d4fpngJ5iMCYcvY-20250415-115154.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4HmPM7d4fpngJ5iMCYcvY-20250415-115154.gif" size="66" position="center" caption="Delete rows in table" alt="Delete rows in table" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4HmPM7d4fpngJ5iMCYcvY-20250415-115154.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
 :::
 ::::
 
@@ -646,7 +876,7 @@ selectionToolbar:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-DOECrBky8_6OfgxTC8tCd-20250415-112009.gif" size="66" position="center" caption="Add row to table" alt="Add row to table" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-DOECrBky8_6OfgxTC8tCd-20250415-112009.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-DOECrBky8_6OfgxTC8tCd-20250415-112009.gif" size="66" position="center" caption="Add row to table" alt="Add row to table" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-DOECrBky8_6OfgxTC8tCd-20250415-112009.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
 :::
 
 :::VerticalSplitItem

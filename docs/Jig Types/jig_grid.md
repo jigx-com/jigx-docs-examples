@@ -4,11 +4,11 @@ The `jig.grid` enables you to create grid layouts in your app, organizing conten
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" size="52" position="center" caption="Custom Grid " alt="Custom Grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" size="52" position="center" caption="Custom Grid " alt="Custom Grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" size="52" position="center" caption="Auto Grid " alt="Auto Grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" size="52" position="center" caption="Auto Grid " alt="Auto Grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 ::::
 
@@ -18,41 +18,243 @@ The `jig.grid` has two available configuration options:
 
 1. **Auto Grid** - used to create a grid layout from a datasource. This is similar in configuration to a [jig.list](./jig_list.md) where a single `grid-item` is configured and iterates through the datasource.
 2. **Custom Grid** - used to create a custom grid layout using widgets, images, or custom components in various sizes.
-   Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
+   Some properties are common to all jig types, see [Common jig type properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                      |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`            | Give the jig a title that is displayed at the top of the screen. If you do not want to show a title in a jig use `title: ' '`.                                                                                       |
-| `type`             | Select `jig.grid` for a grid layout configuration.                                                                                                                                                                   |
-| `component`        | Within a grid jig type, the [grid-item](./../Components/grid/grid-item.md) component is used to define each of the elements in the grid layout. Within the `grid-item` a select set of components can be configured. |
-| `datasources`      | Configure a datasource to call the data to display in the grid layout. The datasource property is required for the Auto Grid, but is optional for the Custom Grid selection.                                         |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="201">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Give the jig a title that is displayed at the top of the screen. If you do not want to show a title in a jig use <code>title: ' '</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>type</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Select <code>jig.grid</code> for a grid layout configuration.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>component</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Within a grid jig type, the  component is used to define each of the elements in the grid layout. Within the <code>grid-item</code> a select set of components can be configured.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>datasources</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure a datasource to call the data to display in the grid layout. The datasource property is required for the Auto Grid, but is optional for the Custom Grid selection.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options**      |                                                                                                                                                                                                                                                                                                                                                           |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `actions`              | Choose from the provided list of available actions, for example, use the `go-to` action to open a different jig.                                                                                                                                                                                                                                          |
-| `badge`                | Enhance your tabs with a badge, for instance show the number of grid-items. Add the `badge` property to the jig YAML with an expression.                                                                                                                                                                                                                  |
-| `description`          | Give the jig a description that is displayed under the `title`.                                                                                                                                                                                                                                                                                           |
-| `data`                 | Reference a global datasource to use in the jig .                                                                                                                                                                                                                                                                                                         |
-| `grid-item`            | `size` - Select either `1x1`,` 2x2`, `2x4`, `4x2`, `4x4`&#xA;`children` - Select a component from the predefined list to display in the grid. The components for selection are:&#xA;- [Custom components (Alpha)](<./../Custom components _Alpha_.md>) &#xA;- [image](./../Components/image.md)&#xA;- [widgets](#)  &#xA;- Use Template - image templates |
-| `expressions`          | Use the `expressions` property to set [expressions](./../Expressions.md) that are reusable throughout the jig.                                                                                                                                                                                                                                            |
-| `header`               | Configure a [jig-header](./../Components/jig-header.md) that displays and image, location or video at the top of the jig.                                                                                                                                                                                                                                 |
-| `icon`                 | The icon will be displayed on the [widget](#) of the jig. Start typing the name of the icon to invoke the available list in IntelliSense. See [Jigx icons](#) for information on working with icons. The `icon` property applies to `component.jig-widget` without a `widgetId`. See the considerations below for the rules governing icon behavior.      |
-| `inputs`               | Configure [inputs](#)  that allow you to receive data from other jigs and use it in the current jig.                                                                                                                                                                                                                                                      |
-| `isCollapsible`        | When the jig is used in a [jig.composite](./jig_composite.md) and this property is set to `true`, a collapse and expand icon is shown, allowing the jig to be collapsed. This is helpful if the composite jig has a number of jigs configured, making it easier to view and interact with the app.                                                        |
-| `isInitiallyCollapsed` | When the property is set to `true` and the jig is part of a composite jig, the jig will open in collapsed mode when the composite jig is launched.                                                                                                                                                                                                        |
-| `isWaitingSync`        | Displays a waiting sync indicator.                                                                                                                                                                                                                                                                                                                        |
-| `jigId`                | Give the jig a unique id that can be referenced outside the jig, for example in state expressions.                                                                                                                                                                                                                                                        |
-| `outputs`              | Configure [outputs](#) that allow you to transfer data out of the current jig and use it in another jig.                                                                                                                                                                                                                                                  |
-| `placeholders`         | Create a placeholder to show when there is no data to use yet. See <a href="https://community.jigx.com/t/tips-tricks-use-placeholders/78" target="_blank">tips and tricks -use a placeholder</a> for a placeholder example.                                                                                                                               |
-| `preview`              | Configure the [Preview](./../Preview.md) which is triggered by *long-pressing* on the grid-item.                                                                                                                                                                                                                                                          |
-| `summary`              | Add a [summary](./../Components/summary.md) component that displays at the bottom of the jig.                                                                                                                                                                                                                                                             |
-| `title`                | By default, the jig's `title` is displayed on the widget. You can override it by adding the `title` property to the `component.jig-widget` in the `grid-item`, either with a custom `title` or with `''` (a blank space) to remove the title entirely.                                                                                                    |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="205">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>actions</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Choose from the provided list of available actions, for example, use the <code>go-to</code> action to open a different jig.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>badge</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Enhance your tabs with a badge, for instance show the number of grid-items. Add the <code>badge</code> property to the jig YAML with an expression.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>description</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Give the jig a description that is displayed under the <code>title</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>data</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Reference a global datasource to use in the jig .</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>grid-item</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>size</code> - Select either <code>1x1</code>,<code> 2x2</code>, <code>2x4</code>, <code>4x2</code>, <code>4x4</code>
+      <code>children</code> - Select a component from the predefined list to display in the grid. The components for selection are:</p>
+      <ul>
+      <li><a href="./../Components/image.md">image</a></li>
+      <li><a href="">widgets</a>  </li>
+      <li>Use Template - image templates</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>expressions</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Use the <code>expressions</code> property to set  that are reusable throughout the jig.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>header</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure a  that displays and image, location or video at the top of the jig.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>icon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The icon will be displayed on the  of the jig. Start typing the name of the icon to invoke the available list in IntelliSense. See <a href="">Jigx icons</a> for information on working with icons. The <code>icon</code> property applies to <code>component.jig-widget</code> without a <code>widgetId</code>. See the considerations below for the rules governing icon behavior.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>inputs</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure   that allow you to receive data from other jigs and use it in the current jig.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isCollapsible</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>When the jig is used in a  and this property is set to <code>true</code>, a collapse and expand icon is shown, allowing the jig to be collapsed. This is helpful if the composite jig has a number of jigs configured, making it easier to view and interact with the app.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isInitiallyCollapsed</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>When the property is set to <code>true</code> and the jig is part of a composite jig, the jig will open in collapsed mode when the composite jig is launched.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isWaitingSync</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Displays a waiting sync indicator.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>jigId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Give the jig a unique id that can be referenced outside the jig, for example in state expressions.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>outputs</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure  that allow you to transfer data out of the current jig and use it in another jig.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>placeholders</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Create a placeholder to show when there is no data to use yet. See tips and tricks -use a placeholder for a placeholder example.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>preview</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure the  which is triggered by <em>long-pressing</em> on the grid-item.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>summary</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a  component that displays at the bottom of the jig.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>By default, the jig's <code>title</code> is displayed on the widget. You can override it by adding the <code>title</code> property to the <code>component.jig-widget</code> in the <code>grid-item</code>, either with a custom <code>title</code> or with <code>''</code> (a blank space) to remove the title entirely.</p>
+    </td>
+  </tr>
+</table>
 
-| **Events**  |                                                                                              |
-| ----------- | -------------------------------------------------------------------------------------------- |
-| `onFocus`   | Configure an action that executes when the jig opens, for example, `reset-solution-state`.   |
-| `onRefresh` | Configure an action that executes when the jig is pulled down, for example, `sync-entities`. |
-| `onPress`   | Add an `onPress` event to add an action directly on the grid-item, such as `open-url`.       |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="204">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Events</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onFocus</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure an action that executes when the jig opens, for example, <code>reset-solution-state</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onRefresh</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure an action that executes when the jig is pulled down, for example, <code>sync-entities</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add an <code>onPress</code> event to add an action directly on the grid-item, such as <code>open-url</code>.</p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -72,7 +274,7 @@ The `jig.grid` has two available configuration options:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" size="60" position="center" caption="Custom Grid - Delivery " alt="Custom Grid - Delivery " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" size="60" position="center" caption="Custom Grid - Delivery " alt="Custom Grid - Delivery " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -436,7 +638,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" size="60" position="center" caption="Auto Grid -Image Gallery  " alt="Auto Grid -Image Gallery  " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" size="60" position="center" caption="Auto Grid -Image Gallery  " alt="Auto Grid -Image Gallery  " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem

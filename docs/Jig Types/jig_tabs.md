@@ -6,44 +6,206 @@ Tabs allow you to navigate between different jigs with ease, enhancing the user 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E_iRppiL-20250206-182545.gif" size="66" position="center" caption="Tabs " alt="Tabs " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E_iRppiL-20250206-182545.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E_iRppiL-20250206-182545.gif" size="66" position="center" caption="Tabs " alt="Tabs " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E_iRppiL-20250206-182545.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all jig types, see [Common jig type properties](docId:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
+Some properties are common to all jig types, see [Common jig type properties]() for a list and their configuration options.
 
 The `jig.tabs` can be configured in the following way in Jigx Builder.
 
-| **Core structure** |                                                                                                                                                                                                           |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`            | Give the jig a title that is displayed at the top of the screen.                                                                                                                                          |
-| `type`             | Select `jig.tabs`.                                                                                                                                                                                        |
-| `jigId`            | Provide the `jigId` for the jig that will be displayed when the tab is active.                                                                                                                            |
-| `instanceId`       | Give the tab a unique identifier, that can be used in expressions.                                                                                                                                        |
-| `tab`              | - `title` - The text that displays as the tab name.                                                                                                                                                       |
-| `icon`             | - Add an icon to display in the tab. A list of available icons can be found in [Jigx icons](#). The `title` appears below the `icon` in the tab.                                                          |
-| `badge`            | - Add a badge to display on the tab to highlight critical information. The badge can be configured at the root level of the jig file. The badge can be configured with an `icon`, `color`, and a `value`. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="171">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Give the jig a title that is displayed at the top of the screen.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>type</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Select <code>jig.tabs</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>jigId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide the <code>jigId</code> for the jig that will be displayed when the tab is active.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>instanceId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Give the tab a unique identifier, that can be used in expressions.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>tab</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>title</code> - The text that displays as the tab name.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>icon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add an icon to display in the tab. A list of available icons can be found in . The <code>title</code> appears below the <code>icon</code> in the tab.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>badge</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a badge to display on the tab to highlight critical information. The badge can be configured at the root level of the jig file. The badge can be configured with an <code>icon</code>, <code>color</code>, and a <code>value</code>.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options**   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `areTabsScrollable` | When there are many tabs that exceed the width of the screen, set the property to `true` to scroll and view the additional obscured tabs by swiping left. Setting the property to `false` will only display the tabs that fit on the width of the screen, additional tabs will be hidden. The property is accessible using IntelliSense at the root level in the YAML. By default tabs are scrollable.&#xA;Tip: Using areTabsScrollable: false will align the tabs in the center. |
-| `inputs`            | Used to pass data between the jigs in the tabs to provide context and data. See [Passing data using inputs](#) for more information.                                                                                                                                                                                                                                                                                                                                              |
-| `instanceId`        | Give the tab a unique identifier allowing you to reference the tab in expressions in jigs.                                                                                                                                                                                                                                                                                                                                                                                        |
-| `initialTabId`      | Specify the tab to display when the jig opens. The tab's `jigId` is used as the value. This property is accessible via IntelliSense at the root level in the YAML. If not specified, the first tab is displayed by default.                                                                                                                                                                                                                                                       |
-| `isDisabled`        | If `true` you won't be able to toggle the tabs. The default value is `false`.                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `isSwipeable`       | Set to `true` allows you to navigate between tabs by swiping left and right anywhere on the jig. By default tabs are not swipeable and require you to press on the tab title for navigation.                                                                                                                                                                                                                                                                                      |
-| `when`              | This property is used to show/hide any tab based on conditions, such as true, false, or conditions set using an expression.                                                                                                                                                                                                                                                                                                                                                       |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="178">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>areTabsScrollable</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>When there are many tabs that exceed the width of the screen, set the property to <code>true</code> to scroll and view the additional obscured tabs by swiping left. Setting the property to <code>false</code> will only display the tabs that fit on the width of the screen, additional tabs will be hidden. The property is accessible using IntelliSense at the root level in the YAML. By default tabs are scrollable.
+      Tip: Using areTabsScrollable: false will align the tabs in the center.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>inputs</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Used to pass data between the jigs in the tabs to provide context and data. See  for more information.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>instanceId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Give the tab a unique identifier allowing you to reference the tab in expressions in jigs.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>initialTabId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specify the tab to display when the jig opens. The tab's <code>jigId</code> is used as the value. This property is accessible via IntelliSense at the root level in the YAML. If not specified, the first tab is displayed by default.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isDisabled</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>If <code>true</code> you won't be able to toggle the tabs. The default value is <code>false</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isSwipeable</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set to <code>true</code> allows you to navigate between tabs by swiping left and right anywhere on the jig. By default tabs are not swipeable and require you to press on the tab title for navigation.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>when</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>This property is used to show/hide any tab based on conditions, such as true, false, or conditions set using an expression.</p>
+    </td>
+  </tr>
+</table>
 
-| **Actions** |                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `actions`   | The `actions` property is a local action applicable to the specific tab. Once the tab is tapped the action will execute.&#xA;`Action Identifier` - Provide a unique name that is used to identify the action.<br>`Action Identifier` - Provide a unique name that is used to identify the action.<br>`type` - Select the [action](./../Actions.md) that is triggered in the specific tab. Use IntelliSense to see the available list of actions. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="109">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>actions</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The <code>actions</code> property is a local action applicable to the specific tab. Once the tab is tapped the action will execute.</p>
+      <ul>
+      <li><code>Action Identifier</code> - Provide a unique name that is used to identify the action.</li>
+      <li><code>type</code> - Select the  that is triggered in the specific tab. Use IntelliSense to see the available list of actions.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-| **State Configuration** | **Key**     | **Notes**                                               |
-| ----------------------- | ----------- | ------------------------------------------------------- |
-| `=@ctx.jig.state.`      | activeTabId | Applies to the active tab in the `jig.tab` type.        |
-| `=@ctx.solution.state.` | tab         | Global variable for the tab used throughout a solution. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="211,123">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>State Configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.jig.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>activeTabId</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Applies to the active tab in the <code>jig.tab</code> type.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>tab</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Global variable for the tab used throughout a solution.</p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -54,12 +216,11 @@ The `jig.tabs` can be configured in the following way in Jigx Builder.
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Basic tabs
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gXY6EX-Uq2C9RtFI5kPcb-20250206-181546.gif" size="66" position="center" caption="Basic tab jig" alt="Basic tab jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gXY6EX-Uq2C9RtFI5kPcb-20250206-181546.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gXY6EX-Uq2C9RtFI5kPcb-20250206-181546.gif" size="66" position="center" caption="Basic tab jig" alt="Basic tab jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gXY6EX-Uq2C9RtFI5kPcb-20250206-181546.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
 :::
 
 :::VerticalSplitItem
@@ -293,17 +454,15 @@ source:
   documentType: PDF
   uri: https://s28.q4cdn.com/392171258/files/doc_downloads/test.pdf
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Scrollable tabs
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-lBrVY3woIBnimDwWulEHH-20250110-093815.gif" size="66" position="center" caption="Scrollable tabs" alt="Scrollable tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-lBrVY3woIBnimDwWulEHH-20250110-093815.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-lBrVY3woIBnimDwWulEHH-20250110-093815.gif" size="66" position="center" caption="Scrollable tabs" alt="Scrollable tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-lBrVY3woIBnimDwWulEHH-20250110-093815.gif" width="366" height="730" darkWidth="366" darkHeight="730"}
 :::
 
 :::VerticalSplitItem
@@ -416,17 +575,15 @@ children:
             label: " "
             value: " "
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Swipeable tabs
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UdPtwouumvXFSZS6_4cU5-20250206-181844.gif" size="66" position="center" caption="Swipeable tabs" alt="Swipeable tabs tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UdPtwouumvXFSZS6_4cU5-20250206-181844.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UdPtwouumvXFSZS6_4cU5-20250206-181844.gif" size="66" position="center" caption="Swipeable tabs" alt="Swipeable tabs tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UdPtwouumvXFSZS6_4cU5-20250206-181844.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
 :::
 
 :::VerticalSplitItem
@@ -488,17 +645,15 @@ tabs:
     jigId: jig-tabs-swipeable
     icon: home-apps-logo
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Tabs with initialTabId
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fMURvK7rblWigmQqdUPWv-20250206-182207.png" size="66" position="center" caption="Initial tab specified" alt="Initial tab specified" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fMURvK7rblWigmQqdUPWv-20250206-182207.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fMURvK7rblWigmQqdUPWv-20250206-182207.png" size="66" position="center" caption="Initial tab specified" alt="Initial tab specified" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fMURvK7rblWigmQqdUPWv-20250206-182207.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -559,17 +714,15 @@ tabs:
     jigId: jig-tabs-initialtabid
     icon: home-apps-logo
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Tabs with icons
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E_iRppiL-20250206-182545.gif" size="66" position="center" caption="Tabs with icons" alt="Tabs with icons" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E_iRppiL-20250206-182545.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E_iRppiL-20250206-182545.gif" size="66" position="center" caption="Tabs with icons" alt="Tabs with icons" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E_iRppiL-20250206-182545.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
 :::
 
 :::VerticalSplitItem
@@ -637,21 +790,19 @@ tabs:
     jigId: jig-tabs-icons
     icon: home-apps-logo
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Tabs with inputs
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MsVwU6nEEHgimuiowkBQ7-20250206-183000.gif" size="66" position="center" caption="Tabs with inputs" alt="Tabs with inputs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MsVwU6nEEHgimuiowkBQ7-20250206-183000.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MsVwU6nEEHgimuiowkBQ7-20250206-183000.gif" size="66" position="center" caption="Tabs with inputs" alt="Tabs with inputs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MsVwU6nEEHgimuiowkBQ7-20250206-183000.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
 :::
 
 :::VerticalSplitItem
-This example demonstrates `jig.tabs` where the _Logs_ tab is configured to use a jig with inputs. The input values are set within `jig.tabs` under the `jigId` of the corresponding jig.
+This example demonstrates `jig.tabs` where the *Logs* tab is configured to use a jig with inputs. The input values are set within `jig.tabs` under the `jigId` of the corresponding jig.
 
 **Examples:**
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-inputs.jigx).
@@ -779,17 +930,15 @@ tabs:
     jigId: jig-tabs-inputs
     icon: home-apps-logo
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Set tab's content from a single jig
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-y_xWPxX2BR2mdsyMN72Ar-20250227-155626.gif" size="66" position="center" caption="Tabs using single tab" alt="Tabs using single tab" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-y_xWPxX2BR2mdsyMN72Ar-20250227-155626.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-y_xWPxX2BR2mdsyMN72Ar-20250227-155626.gif" size="66" position="center" caption="Tabs using single tab" alt="Tabs using single tab" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-y_xWPxX2BR2mdsyMN72Ar-20250227-155626.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
 :::
 
 :::VerticalSplitItem
@@ -909,6 +1058,6 @@ children:
         icon: time-clock-circle-1-alternate
         isDuotone: true
 ```
-
 :::
 :::::
+

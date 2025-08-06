@@ -1,18 +1,12 @@
----
-title: jig.fullscreen
-slug: yTA--ji
-createdAt: Thu Nov 30 2023 05:46:40 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Apr 29 2025 10:39:47 GMT+0000 (Coordinated Universal Time)
----
+# jig.fullscreen
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 The `jig.full-screen` allows you to configure a component that covers the entire screen of the jig with no other elements visible. This is useful for creating a full screen of a [location](./../Components/location.md) screen.
-
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sMnc2OSlftv__5xUbT0lS-20250221-132107.png" size="74" position="center" caption="Location in full screen" alt="Location in full screen"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sMnc2OSlftv__5xUbT0lS-20250221-132107.png" size="74" position="center" caption="Location in full screen" alt="Location in full screen" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sMnc2OSlftv__5xUbT0lS-20250221-132107.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 ::::
 
@@ -25,27 +19,59 @@ The `jig.full-screen` allows you to configure a component that covers the entire
 
 ## Configuration options
 
-Some properties are common to all jig types, see [Common jig type properties](docId:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
+Some properties are common to all jig types, see [Common jig type properties]() for a list and their configuration options.
 
 The `jig.full-screen` can be configured in the following way in Jigx Builder.
 
-| **Core structure** |                                                                                                                                                                                                     |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `component`        | Select the component to display as a full-screen, the available components are:<br>_ `component.chat`<br>_ `component.custom-component`<br>_ `component.location`<br>_ `component.web-view` |
-| `title`            | Give the jig a title that is displayed at the top of the screen. If you do not want to show a title in a jig use `title: ' '`.                                                                      |
-| `type`             | Select `jig.full-screen`                                                                                                                                                                            |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>component</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Select the component to display as a full-screen, the available components are:</p>
+      <ul>
+      <li><code>component.chat</code></li>
+      <li><code>component.custom-component</code></li>
+      <li><code>component.location</code></li>
+      <li><code>component.web-view</code></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Give the jig a title that is displayed at the top of the screen. If you do not want to show a title in a jig use <code>title: ' '</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>type</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Select <code>jig.full-screen</code></p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::ExpandableHeading
-
 ### Full-screen of a map
-
 :::
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sMnc2OSlftv__5xUbT0lS-20250221-132107.png" size="80" position="center" caption="Location in full screen" alt="Location in full screen"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sMnc2OSlftv__5xUbT0lS-20250221-132107.png" size="80" position="center" caption="Location in full screen" alt="Location in full screen" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sMnc2OSlftv__5xUbT0lS-20250221-132107.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -106,7 +132,6 @@ options:
       '$.street'
     FROM [default/location] WHERE '$.category' = "location"
 ```
-
 :::
 
 ### Chatbot in a full-screen jig
@@ -117,3 +142,4 @@ See the [chatbot with OpenAI](./../Components/chat.md) example.
 
 - [Jigs (screens)](https://docs.jigx.com/jigs-screens)
 - [location](./../Components/location.md)
+

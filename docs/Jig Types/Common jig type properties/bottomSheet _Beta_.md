@@ -28,8 +28,7 @@ The bottomSheet element slides up from the bottom of the screen to present addit
       <p><code>isPanDownToCloseEnabled</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Enable pan down gesture to close the sheet. Swiping or dragging downward while maintaining contact with the screen closes the sheet.
-      Setting this to <code>false</code> disables closing the sheet by dragging down; instead, tapping outside the sheet on the jig will close it.</p>
+      <p>Enable pan down gesture to close the sheet. Swiping or dragging downward while maintaining contact with the screen closes the sheet. Setting this to <code>false</code> disables closing the sheet by dragging down; instead, tapping outside the sheet on the jig will close it.</p>
     </td>
   </tr>
   <tr>
@@ -37,17 +36,7 @@ The bottomSheet element slides up from the bottom of the screen to present addit
       <p><code>backDrop</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The <code>backdrop</code> property controls the visibility of the jig *content displayed beneath the bottomSheet.
-      *<code>appearsOnIndex</code> - Specifies the ID of the <code>snapPoint</code> at which the <code>backdrop</code> will appear. This value is a number starting from 0 and depends on the number of <code>snapPoints</code> configured.
-      Example snapPoints configured:
-      <code>snapPoints:</code>
-      <code>- 30%</code>
-      <code>- 50%</code>
-      Example backdrop configuration:
-      <code>backdrop:</code>
-      <code> appearsOnIndex: 0</code>
-      <code> disappearsOnIndex: 1</code> <code>disappearsOnIndex</code> - Specifies the ID of the snapPoint at which the backdrop will disappear. Like <code>appearsOnIndex</code>, the value starts at 0 and corresponds to the configured snapPoints.  <code>isVisible</code> - Determines whether the backdrop is enabled.- <code>true</code> - Enables the backdrop, adding a grey overlay to the parent jig.- <code>false</code> - Disables the backdrop, rendering the parent jig without an overlay.
-      Default: <code>true</code>. <code>opacity</code> - Sets the transparency level of the jig content under the bottomSheet. Acceptable values range from 0.1 (very transparent) to 1(fully opaque).</p>
+      <p>The <code>backdrop</code> property controls the visibility of the jig content displayed beneath the bottomSheet. <code>appearsOnIndex</code> - Specifies the ID of the <code>snapPoint</code> at which the <code>backdrop</code> will appear. This value is a number starting from 0 and depends on the number of <code>snapPoints</code> configured. Example snapPoints configured: <code>snapPoints:</code> <code>- 30%</code> <code>- 50%</code> Example backdrop configuration: <code>backdrop:</code> <code>appearsOnIndex: 0</code> <code>disappearsOnIndex: 1</code> <code>disappearsOnIndex</code> - Specifies the ID of the snapPoint at which the backdrop will disappear. Like <code>appearsOnIndex</code>, the value starts at 0 and corresponds to the configured snapPoints. <code>isVisible</code> - Determines whether the backdrop is enabled.- <code>true</code> - Enables the backdrop, adding a grey overlay to the parent jig.- <code>false</code> - Disables the backdrop, rendering the parent jig without an overlay. Default: <code>true</code>. <code>opacity</code> - Sets the transparency level of the jig content under the bottomSheet. Acceptable values range from 0.1 (very transparent) to 1(fully opaque).</p>
     </td>
   </tr>
   <tr>
@@ -87,16 +76,10 @@ The bottomSheet element slides up from the bottom of the screen to present addit
       <p><code>snapPoints</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Defines the points where the bottomSheet will snap when opened. These points should be configured in ascending order, from the smallest to the largest, and are set as percentages
-      *Examples:</p>
+      <p>Defines the points where the bottomSheet will snap when opened. These points should be configured in ascending order, from the smallest to the largest, and are set as percentages.
+      Examples:</p>
       <ul>
-      <li>The <code>bottomSheet</code> covers the entire jig:
-      <code>snapPoints:</code>
-      <code>- 100%</code>
-      The <code>bottomSheet</code> covers the 30% on first snap and 60% on the second snap
-      <code>snapPoints:</code>
-      <code>- 30%</code>
-      <code>- 60%</code></li>
+      <li>The <code>bottomSheet</code> covers the entire jig: <code>snapPoints:</code> <code>- 100%</code> The <code>bottomSheet</code> covers the 30% on first snap and 60% on the second snap <code>snapPoints:</code> <code>- 30%</code> <code>- 60%</code></li>
       </ul>
     </td>
   </tr>
