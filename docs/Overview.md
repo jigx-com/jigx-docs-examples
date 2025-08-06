@@ -7,14 +7,56 @@ Due to ongoing issues with Archbee, some content may be incomplete or missing. J
 
 Welcome to the reference documentation for Jigx. This guide provides detailed information on the properties, actions, and states with practical code examples to help you effectively utilize our schema. This reference content is designed to be a comprehensive resource for all your needs, covering:
 
-|                                                               |                                                                          |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [Data Providers](Data%20Providers.md)                         | [Jig Types](Jig%20Types.md)                                              |
-| [Components](Components.md)                                   | [Actions](Actions.md)                                                    |
-| [Custom components (Alpha)](Custom%20components%20_Alpha_.md) | [Custom templates](Custom%20components%20_Alpha_/Templates%20_Alpha_.md) |
-| [widgets](Widgets.md)                                         | [Preview](Preview.md)                                                    |
-| [Expressions](Expressions.md)                                 | [Notifications](Notifications.md)                                        |
-| [OpenAI integration](OpenAI%20integration.md)                 | [Localization (Translation)](Localization%20_Translation_.md)            |
+<table isTableHeaderOn="false" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false">
+      <p><a href="Data%20Providers.md">Data Providers</a></p>
+    </td>
+    <td selected="false">
+      <p><a href="Jig%20Types.md">Jig Types</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false">
+      <p><a href="Components.md">Components</a></p>
+    </td>
+    <td selected="false">
+      <p><a href="Actions.md">Actions</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false">
+      <p><a href="Custom%20components%20_Alpha_.md">Custom components (Alpha)</a></p>
+    </td>
+    <td selected="false">
+      <p><a href="Custom%20components%20_Alpha_/Templates%20_Alpha_.md">Custom templates</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false">
+      <p><a href="Widgets.md">widgets</a></p>
+    </td>
+    <td selected="false">
+      <p><a href="Preview.md">Preview</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false">
+      <p><a href="Expressions.md">Expressions</a></p>
+    </td>
+    <td selected="false">
+      <p><a href="Notifications.md">Notifications</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false">
+      <p><a href="OpenAI%20integration.md">OpenAI integration</a></p>
+    </td>
+    <td selected="false">
+      <p><a href="Localization%20_Translation_.md">Localization (Translation)</a></p>
+    </td>
+  </tr>
+</table>
 
 Our schema includes various properties that define the structure and characteristics of data entities. Each property is documented with its name, type, allowable values, and detailed description. This section ensures you have a clear understanding of how to use each property to successfully create a Jigx App.
 

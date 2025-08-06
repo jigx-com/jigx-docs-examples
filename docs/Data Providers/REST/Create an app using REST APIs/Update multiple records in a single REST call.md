@@ -52,11 +52,9 @@ actions:
           # Define the properties to be updated in the records.
           # Data must include all required properties on the record 
           # in the datasource.
-          parameters: 
-            {"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}          
+          parameters: =@ctx.datasources.customers.{"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}[] 
           data: =@ctx.datasources.customers.{"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}[]           
 ```
-
 :::
 
 - The properties defined in the `data` property are determined by the REST call. This means that if the only required property is id you can simply use id, such as:
@@ -201,7 +199,6 @@ inputTransform: |
     "jobTitle": jobTitle
   }
 ```
-
 :::
 
 ## Action (global)
@@ -229,7 +226,6 @@ action:
         function: rest-get-usStates  
         
 ```
-
 :::
 
 ## Jig (screen)
@@ -355,7 +351,6 @@ actions:
           # to be updated.             
           data: =@ctx.datasources.customers.{"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}[]
 ```
-
 :::
 
 ## Index
@@ -391,5 +386,5 @@ tabs:
     jigId: list-customers
     icon: home-apps-logo
 ```
-
 :::
+
