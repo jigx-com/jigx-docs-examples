@@ -22,4 +22,3 @@ Extend the content surfaced on widgets further by using content widget component
 | [titles](<./Content widget components/titles.md>) | Displays a title, subtitle, comment, or any type of text content on the surface of the widget.                                          |
 | [trend](<./Content widget components/trend.md>)   | Display an increase/decrease over a period. The increment/decrement number can be formatted as a percentage, currency, or plain value.  |
 |                                                   |                                                                                                                                         |
-
