@@ -4,19 +4,95 @@ This component is used to play a video in [headers](./jig-header.md), or as comp
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `URL`              | Specify the URL for the video. The URL format can be:&#xA;- A direct URL, for example, [https://player.vimeo.com/video/76979871&#xA;](https://player.vimeo.com/video/76979871)- An embeded URL, for example,&#xA;`<iframe src="https://player.vimeo.com/video/76979871?quality=720p"></iframe>`<br>-A URL referenced in a datasource, for example, &#xA;`url: =@ctx.datasources.video-player-dynamic.uri` |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>URL</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specify the URL for the video. The URL format can be:</p>
+      <ul>
+      <li>  A direct URL, for example, - An embeded URL, for example,
+      <code>&#x3C;iframe src="https://player.vimeo.com/video/76979871?quality=720p">&#x3C;/iframe></code></li>
+      <li>A URL referenced in a datasource, for example,
+      <code>url: =@ctx.datasources.video-player-dynamic.uri</code></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                          |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `autoplay`        | Set to `true` will automatically start playing the video. Set to `false` requires you to press the play button. Default setting is `false`.                                                                                                                                                                                              |
-| `loop`            | For continuous looping of the video set the property to `true`. Default setting is `false`.                                                                                                                                                                                                                                              |
-| `ratio`           | There are 2 options:&#xA;- 16:9&#xA;- 4:3                                                                                                                                                                                                                                                                                                |
-| `title`           | The title of the video.&#xA;-With a `16:9` ratio, the text overlays at the bottom left of the video. <br>-With a `4:3` ratio the text displays under the video.&#xA;`Title` and `subtitle` must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed.     |
-| `subtitle`        | The subtitle of the video. &#xA;-With a `16:9` ratio, the text overlays at the bottom left of the video. <br>-With a `4:3` ratio the text displays under the video.&#xA;`Title` and `subtitle` must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="123">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>autoplay</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set to <code>true</code> will automatically start playing the video. Set to <code>false</code> requires you to press the play button. Default setting is <code>false</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>loop</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>For continuous looping of the video set the property to <code>true</code>. Default setting is <code>false</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>ratio</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>There are 2 options:</p>
+      <ul>
+      <li>16:9</li>
+      <li>4:3</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The title of the video.</p>
+      <ul>
+      <li>With a <code>16:9</code> ratio, the text overlays at the bottom left of the video. </li>
+      <li>With a <code>4:3</code> ratio the text displays under the video.</li>
+      </ul>
+      <p><code>Title</code> and <code>subtitle</code> must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>subtitle</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The subtitle of the video. </p>
+      <ul>
+      <li>With a <code>16:9</code> ratio, the text overlays at the bottom left of the video. </li>
+      <li>With a <code>4:3</code> ratio the text displays under the video.</li>
+      </ul>
+      <p><code>Title</code> and <code>subtitle</code> must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed.</p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -30,12 +106,11 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Video player as children of the jig
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-kpulDNlHd1-TlkW_6Hc0_cc-videoinjig.PNG" size="80" position="center" caption="video-player" alt="video-player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-kpulDNlHd1-TlkW_6Hc0_cc-videoinjig.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-kpulDNlHd1-TlkW_6Hc0_cc-videoinjig.PNG" size="80" position="center" caption="video-player" alt="video-player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-kpulDNlHd1-TlkW_6Hc0_cc-videoinjig.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -95,19 +170,18 @@ datasources:
           '$.title',
           '$.subtitle',
           '$.category'
-        FROM [default/links] WHERE '$.category' = "video-player"
+        FROM [default/links] 
+        WHERE '$.category' = "video-player"
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Video player in header
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/syc3quPN1_3GaWZtNVxPY_cc-videoinheader.PNG" size="80" position="center" caption="video - player" alt="video - player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/syc3quPN1_3GaWZtNVxPY_cc-videoinheader.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/syc3quPN1_3GaWZtNVxPY_cc-videoinheader.PNG" size="80" position="center" caption="video - player" alt="video - player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/syc3quPN1_3GaWZtNVxPY_cc-videoinheader.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -172,8 +246,9 @@ datasources:
           '$.title',
           '$.subtitle',
           '$.category'
-        FROM [default/links] WHERE '$.category' = "video-player"
+        FROM [default/links] 
+        WHERE '$.category' = "video-player"
 ```
-
 :::
 :::::
+

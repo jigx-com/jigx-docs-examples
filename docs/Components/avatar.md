@@ -6,28 +6,65 @@ Using the avatar component, display a profile photo, company logo, initials, or 
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Avatar preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jzGEzQeNzQZUvB-bk3iM__avatar.png" size="64" caption="Avatar preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jzGEzQeNzQZUvB-bk3iM__avatar.png"}
+::Image[]{alt="Avatar preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jzGEzQeNzQZUvB-bk3iM__avatar.png" size="64" caption="Avatar preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jzGEzQeNzQZUvB-bk3iM__avatar.png" width="800" height="225" darkWidth="800" darkHeight="225"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
 | **Core structure** |                                                                                                                                                                                                                                                                    |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `title`            | Add a title for the avatar, this is text displayed when the `uri` is empty. In the visual presentation, the `title` can be substituted by an image using the `uri` property. But the content of the text property has to be kept at least to the empty string: "") |
 
-| **Other options** |                                                                                                      |
-| ----------------- | ---------------------------------------------------------------------------------------------------- |
-| `align`           | By default the avatar is aligned `left` but can be changed to:&#xA;`center`<br>`left`<br>`right` |
-| `size`            | <br>The size of the avatar can be set to:&#xA;`small`<br>`regular`<br>`large`                  |
-| `uri`             | Source of the image to display as the avatar.                                                        |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>align</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>By default the avatar is aligned <code>left</code> but can be changed to:</p>
+      <ul>
+      <li><code>center</code></li>
+      <li><code>left</code></li>
+      <li><code>right</code></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>size</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The size of the avatar can be set to:</p>
+      <ul>
+      <li><code>small</code></li>
+      <li><code>regular</code></li>
+      <li><code>large</code></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>uri</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Source of the image to display as the avatar.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Avatar as children of jig (profile picture)
 
 ::::VerticalSplit{layout="left"}
@@ -133,12 +170,10 @@ datasources:
           '$.phone'
         FROM [default/global]
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Avatar as children of jig (initials)
 
 ::::VerticalSplit{layout="left"}
@@ -238,6 +273,6 @@ datasources:
           '$.phone'
         FROM [default/global]
 ```
-
 :::
 :::::
+

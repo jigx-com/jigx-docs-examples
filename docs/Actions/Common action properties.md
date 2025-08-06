@@ -26,13 +26,28 @@ Configure `actions` to display two action buttons on the jig's main screen. In t
 :::
 ::::
 
-| **Property**             | **Description**                                                                                                                                      |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `numberOfVisibleActions` | Configure this property to display multiple action buttons on the screen. The recommended number is two. A numerical value is expected, such as `2`. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="228">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Property</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Description</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>numberOfVisibleActions</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure this property to display multiple action buttons on the screen. The recommended number is two. A numerical value is expected, such as <code>2</code>.</p>
+    </td>
+  </tr>
+</table>
 
 ```yaml
 actions:
-# Number of visible buttons displayed on the jig.
+  # Number of visible buttons displayed on the jig.
   - numberOfVisibleActions: 2       
     children:
       # First action button.
@@ -64,3 +79,4 @@ actions:
             jobTitle: =@ctx.components.jobTitle.state.value
             companyName: =@ctx.components.companyName.state.value    
 ```
+

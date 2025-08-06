@@ -4,25 +4,160 @@ This action lets you immediately open the media picker, enabling you to capture 
 
 ## Configuration options
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `title`            | Provide a short title to display on the action button. You can use text, an expression or a datasource to set the title.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `mediaType`        | By default the value is set to `image`. The following options are available for selection:&#xA;1\) `any` is for files of any extension such as pdf, jpeg, png, mpeg, txt, or docx. Set to `any` allows you to take a picture, record a video, select an image or video from the library, or select a document. Using `mediaType: any` is recommended when uploading multiple media files as it caters for any file type.&#xA;2\) `csv` - select CSV files.&#xA;3\) `doc` - select DOC or DOCX files.&#xA;4\) `image` - used to take a picture or select from the image library.&#xA;5\) `imageAndVideo` - take a picture, record a video or select an  image or video from the library.&#xA;6\) `pdf` - select PDF files.&#xA;7\) `plainText` - select plain text files.&#xA;8\) `ppt` - select PPT or PPTX files.&#xA;9\) `video` - record a video or upload one from the library.&#xA;10\) `xls` -  select XLS or XLSX files.&#xA;Configure filters to restrict media types based on your app’s requirements, for example, only allow document files DOC, PDF or plain text. &#xA;`mediaType:`&#xA;      `- doc`&#xA;      `- pdf` |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="118">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide a short title to display on the action button. You can use text, an expression or a datasource to set the title.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>mediaType</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>By default the value is set to <code>image</code>. The following options are available for selection:
+      1) <code>any</code> is for files of any extension such as pdf, jpeg, png, mpeg, txt, or docx. Set to <code>any</code> allows you to take a picture, record a video, select an image or video from the library, or select a document. Using <code>mediaType: any</code> is recommended when uploading multiple media files as it caters for any file type.
+      2) <code>csv</code> - select CSV files.
+      3) <code>doc</code> - select DOC or DOCX files.
+      4) <code>image</code> - used to take a picture or select from the image library.
+      5) <code>imageAndVideo</code> - take a picture, record a video or select an  image or video from the library.
+      6) <code>pdf</code> - select PDF files.
+      7) <code>plainText</code> - select plain text files.
+      8) <code>ppt</code> - select PPT or PPTX files.
+      9) <code>video</code> - record a video or upload one from the library.
+      10) <code>xls</code> -  select XLS or XLSX files.
+      Configure filters to restrict media types based on your app’s requirements, for example, only allow document files DOC, PDF or plain text.
+      <code>mediaType:</code>
+      <code>- doc</code>
+      <code>- pdf</code></p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                        |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Specify the [icon](https://docs.jigx.com/jigx-icons) to display on the action button. The icon only applies to `swipeable`, `secondary`, and [header](./../Components/jig-header.md) actions. Icon setups are not supported on primary actions.                                                                                                       |
-| `imageCropping`   | You can set any of the following with `imageCropping` :&#xA;`isEnabled` - allows you to crop an image.&#xA;`height` - maximum allowed is 5000px.&#xA;`width`- maximum allowed is 5000px.&#xA;`isFreeStyleCropEnabled` - when set to `true` it supports custom cropping to change the size or aspect ratio of an image. |
-| `imageQuality`    | Image quality after compression (from 0 to 100, where 100 is the best quality). On iOS, values larger than 80 don't produce a noticeable quality increase in most images, while a value of 80 will reduce the file size by about half or less compared to a value of 100. Default: 100 (Android)/ 80 (iOS).            |
-| `isHidden`        | When set to `true` the action button is hidden.                                                                                                                                                                                                                                                                        |
-| `isMultiple`      | Set to `true` allows for multiple files to be added or shown. Set to `false` allows for a single file.                                                                                                                                                                                                                 |
-| `maximumFileSize` | `maximumFileSize =6 * 1024 * 1024` by default. Set the value to `none` if no size evaluations must be performed. File size format is in bytes. Applies to images and videos.                                                                                                                                           |
-| `style`           | Add styling to the action button. More than one can be set to true, evaluation is based on priority. &#xA;- `isDanger` - Change the button style to error&#xA;- `isDisabled` - Disables the button preventing it from being tapped.&#xA;- `isPrimary` - Change style of the button to primary. Default is primary.     |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="164">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>icon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specify the  to display on the action button. The icon only applies to <code>swipeable</code>, <code>secondary</code>, and <a href="./../Components/jig-header.md">header</a> actions. Icon setups are not supported on primary actions.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>imageCropping</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>You can set any of the following with <code>imageCropping</code> :</p>
+      <ul>
+      <li><code>isEnabled</code> - allows you to crop an image.</li>
+      <li><code>height</code> - maximum allowed is 5000px.</li>
+      <li><code>width</code>- maximum allowed is 5000px.</li>
+      <li><code>isFreeStyleCropEnabled</code> - when set to <code>true</code> it supports custom cropping to change the size or aspect ratio of an image.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>imageQuality</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Image quality after compression (from 0 to 100, where 100 is the best quality). On iOS, values larger than 80 don't produce a noticeable quality increase in most images, while a value of 80 will reduce the file size by about half or less compared to a value of 100. Default: 100 (Android)/ 80 (iOS).</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isHidden</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>When set to <code>true</code> the action button is hidden.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isMultiple</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set to <code>true</code> allows for multiple files to be added or shown. Set to <code>false</code> allows for a single file.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>maximumFileSize</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>maximumFileSize =6 * 1024 * 1024</code> by default. Set the value to <code>none</code> if no size evaluations must be performed. File size format is in bytes. Applies to images and videos.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>style</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add styling to the action button. More than one can be set to true, evaluation is based on priority. </p>
+      <ul>
+      <li><code>isDanger</code> - Change the button style to error</li>
+      <li><code>isDisabled</code> - Disables the button preventing it from being tapped.</li>
+      <li><code>isPrimary</code> - Change style of the button to primary. Default is primary.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-| **Outputs**                         | **Key**      | **Notes**                                                                         |
-| ----------------------------------- | ------------ | --------------------------------------------------------------------------------- |
-| `=@ctx.actions.instanceId.outputs.` | newItems     | string\[]&#xA;Used for newly added items that were successfully uploaded.         |
-| `=@ctx.actions.instanceId.outputs.` | invalidItems | string\[]&#xA;Used for options that are invalid or failed to upload successfully. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="319,109">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Outputs</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.actions.instanceId.outputs.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>newItems</p>
+    </td>
+    <td selected="false" align="left">
+      <p>string[]
+      Used for newly added items that were successfully uploaded.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.actions.instanceId.outputs.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>invalidItems</p>
+    </td>
+    <td selected="false" align="left">
+      <p>string[]
+      Used for options that are invalid or failed to upload successfully.</p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -31,7 +166,6 @@ This action lets you immediately open the media picker, enabling you to capture 
 ## Examples and code snippets
 
 ::::ExpandableHeading
-
 ### Open-media-picker to capture an image
 
 In this example, the button opens the media-picker. The configuration is set to take a picture or choose from library. The image is saved to the local database.
@@ -107,6 +241,6 @@ actions:
               # Use the action's output to reference the image file.
               data: =@ctx.actions.job-photo.outputs      
 ```
-
 :::
 ::::
+

@@ -4,19 +4,71 @@ Entity fields display data such as text, numbers, dates, and currency from a dat
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
 | **Core structure** |                                                                                |
 | ------------------ | ------------------------------------------------------------------------------ |
 | `label`            | Add a label for the entity-field, you can add text or an expression.           |
 | `value`            | Add a value to display in the entity-field, you can add text or an expression. |
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                    |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `contentType`     | Various types of entity fields determine the visual display and behavior of the entity-field, including: &#xA;`default`<br>`checkbox`<br>`copy`<br>`date`<br>`email` - format: [_email@example.com_](mailto:email@example.com)<br>`link`<br>`phone`- format: _1234567890_ or _+001234567890_ (no spaces)<br>`signature `<br>`time` |
-| `instanceId`      | The unique identifier for the entity field.                                                                                                                                                                                                                                                                                                        |
-| `rightIcon`       | A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.                                                                                                                                                                                                                                             |
-| `style`           | The following styling set is available and works in conjunction with `rightIcon` to determine the color of the icon and the enitity-field line separator:&#xA;`isNegative`<br>`isPositive`<br>`isPrimary`<br>`isWarning`                                                                                                                     |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="130">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>contentType</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Various types of entity fields determine the visual display and behavior of the entity-field, including: </p>
+      <ul>
+      <li><code>default</code></li>
+      <li><code>checkbox</code></li>
+      <li><code>copy</code></li>
+      <li><code>date</code></li>
+      <li><code>email</code> - format: <a href="mailto:name@example.com">name@example.com</a></li>
+      <li><code>link</code></li>
+      <li><code>phone</code>- format: <em>1234567890</em> or <em>+001234567890</em> (no spaces)</li>
+      <li><code>signature </code></li>
+      <li><code>time</code></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>instanceId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The unique identifier for the entity field.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>rightIcon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>A list of icons is available. See  for more information.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>style</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The following styling set is available and works in conjunction with <code>rightIcon</code> to determine the color of the icon and the enitity-field line separator:</p>
+      <ul>
+      <li><code>isNegative</code></li>
+      <li><code>isPositive</code></li>
+      <li><code>isPrimary</code></li>
+      <li><code>isWarning</code></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## Consideration
 
@@ -28,7 +80,6 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Different types of entity fields
 
 ::::VerticalSplit{layout="middle"}
@@ -186,12 +237,10 @@ children:
             isMultiline: true
             contentType: default
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Entity fields with a connected datasource
 
 ::::VerticalSplit{layout="middle"}
@@ -462,12 +511,10 @@ datasources:
           '$.time' 
         FROM [default/cleaning-services] WHERE '$.service' = "Mattress Cleaning"
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Entity-fields with right icons in color
 
 ::::VerticalSplit{layout="middle"}
@@ -479,7 +526,7 @@ See the full example using static values in [GitHub](https://github.com/jigx-com
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RtiAb3SAzNGz-QOMG3s8L_cc-entityfield-color.PNG" size="80" position="center" caption="Right icons in color" alt="Right icons in color" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RtiAb3SAzNGz-QOMG3s8L_cc-entityfield-color.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RtiAb3SAzNGz-QOMG3s8L_cc-entityfield-color.PNG" size="80" position="center" caption="Right icons in color" alt="Right icons in color" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RtiAb3SAzNGz-QOMG3s8L_cc-entityfield-color.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -527,5 +574,5 @@ children:
               isNegative: true
             value: "12"
 ```
-
 :::::
+

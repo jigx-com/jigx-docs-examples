@@ -6,25 +6,88 @@ The carousel is an interactive component that enables you to browse through a se
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pLg81p_Qw_0sw3Cpl7fOT_cc-carousel-image.gif" size="68" position="center" caption="Carousel" alt="Carousel" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pLg81p_Qw_0sw3Cpl7fOT_cc-carousel-image.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pLg81p_Qw_0sw3Cpl7fOT_cc-carousel-image.gif" size="68" position="center" caption="Carousel" alt="Carousel" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pLg81p_Qw_0sw3Cpl7fOT_cc-carousel-image.gif" width="332" height="676" darkWidth="332" darkHeight="676"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                  |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`             | The carousel requires a data source that will be used in the component to return the content, for, example, images or avatars. Any of the [Data Providers](<./../Data Providers.md>) can be referenced to return the data.                                       |
-| `instanceId`       | The unique identifier for the carousel.                                                                                                                                                                                                                          |
-| `type`             | The following components can be added in a carousel:&#xA;[image](./image.md) component can be define with `title` and `subtitle` that overlays the image.&#xA;[card](./card.md) - component allows you to add other components in a card layout in the carousel. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="130">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>data</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The carousel requires a data source that will be used in the component to return the content, for, example, images or avatars. Any of the  can be referenced to return the data.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>instanceId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The unique identifier for the carousel.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>type</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The following components can be added in a carousel:
+      component can be define with <code>title</code> and <code>subtitle</code> that overlays the image.
+      <a href="./card.md">card</a> - component allows you to add other components in a card layout in the carousel.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                             |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `counter`         | Set to `true` addes a counter to the top right corner of the carousel in the style similiar to 1/4 to indicate the number of images or cards in the carousel. set to `false` hides the counter. The counter and pagination can be used together or individually depending on the requirement.                                                               |
-| `isContained`     | Set to `true` places the content (type) in a container which creates a visually appealing frame around the content. Set to `false` the content fills the entire carousel.                                                                                                                                                                                   |
-| `pagination`      | Pagination is shown as dots at the bottom of the carousel. The following options exist:&#xA;`isContained` - created a grey container around the pagination dots improving visibility.<br>`isHidden` - `false` hides the pagination, `true` shows the pagination.<br>`position` - The pagination dots can be places `inside` or `outside` the carousel.  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="132">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>counter</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set to <code>true</code> addes a counter to the top right corner of the carousel in the style similiar to 1/4 to indicate the number of images or cards in the carousel. set to <code>false</code> hides the counter. The counter and pagination can be used together or individually depending on the requirement.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isContained</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set to <code>true</code> places the content (type) in a container which creates a visually appealing frame around the content. Set to <code>false</code> the content fills the entire carousel.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>pagination</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Pagination is shown as dots at the bottom of the carousel. The following options exist:</p>
+      <ul>
+      <li><code>isContained</code> - created a grey container around the pagination dots improving visibility.</li>
+      <li><code>isHidden</code> - <code>false</code> hides the pagination, <code>true</code> shows the pagination.</li>
+      <li><code>position</code> - The pagination dots can be places <code>inside</code> or <code>outside</code> the carousel.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -38,19 +101,18 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Image carousel
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/j-Pmuzvmaecc7tfl8Yz8q_cc-carousel-image.gif" size="80" position="center" caption="Carousel with image" alt="Carousel with image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/j-Pmuzvmaecc7tfl8Yz8q_cc-carousel-image.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/j-Pmuzvmaecc7tfl8Yz8q_cc-carousel-image.gif" size="80" position="center" caption="Carousel with image" alt="Carousel with image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/j-Pmuzvmaecc7tfl8Yz8q_cc-carousel-image.gif" width="332" height="676" darkWidth="332" darkHeight="676"}
 :::
 
 :::VerticalSplitItem
 This examples displays images in the carousel. The `image` component is used with an overlapping `title` and `subtitle`. The `paginatio`n is configured to show `outside` of the carousel. An `onPress` event is added to the image component to open an `info-modal` displaying further information, in this case to book a test-drive.
 
 **Example:**
-See the example in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/carousel/carousel-image.jigx).
+See the example in [GitHub]().
 :::
 ::::
 
@@ -139,17 +201,15 @@ children:
             label: Call us today!
             value: 10-234-5556
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Card carousel
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif" size="80" position="center" caption="Carousel with card" alt="Carousel with card" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif" size="80" position="center" caption="Carousel with card" alt="Carousel with card" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif" width="288" height="574" darkWidth="288" darkHeight="574"}
 :::
 
 :::VerticalSplitItem
@@ -195,12 +255,10 @@ children:
       counter:
         isHidden: true
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Carousel contained
 
 ::::VerticalSplit{layout="middle"}
@@ -215,7 +273,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9gbNHXGLefsRDubTljt7l_cc-carousel-contained.gif" size="80" position="center" caption="Carousel contained" alt="Carousel contained" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9gbNHXGLefsRDubTljt7l_cc-carousel-contained.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9gbNHXGLefsRDubTljt7l_cc-carousel-contained.gif" size="80" position="center" caption="Carousel contained" alt="Carousel contained" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9gbNHXGLefsRDubTljt7l_cc-carousel-contained.gif" width="288" height="578" darkWidth="288" darkHeight="578"}
 :::
 ::::
 
@@ -280,17 +338,15 @@ children:
                 source:
                   uri: =@ctx.current.item.image
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Carousel with pagination (inside & outside)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lZduG0Ik22bypmuuyutye_cc-carousel-pagination.gif" size="80" position="center" caption="Carousel with pagination" alt="Carousel with pagination" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lZduG0Ik22bypmuuyutye_cc-carousel-pagination.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lZduG0Ik22bypmuuyutye_cc-carousel-pagination.gif" size="80" position="center" caption="Carousel with pagination" alt="Carousel with pagination" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lZduG0Ik22bypmuuyutye_cc-carousel-pagination.gif" width="284" height="570" darkWidth="284" darkHeight="570"}
 :::
 
 :::VerticalSplitItem
@@ -366,12 +422,10 @@ children:
               position: inside
               isContained: true
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Carousel with counter
 
 ::::VerticalSplit{layout="middle"}
@@ -384,7 +438,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ypD9O_llX4-cvZGwXkM1L_cc-carousel-counter.gif" size="80" position="center" caption="Carousel with counter" alt="Carousel with counter" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ypD9O_llX4-cvZGwXkM1L_cc-carousel-counter.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ypD9O_llX4-cvZGwXkM1L_cc-carousel-counter.gif" size="80" position="center" caption="Carousel with counter" alt="Carousel with counter" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ypD9O_llX4-cvZGwXkM1L_cc-carousel-counter.gif" width="284" height="570" darkWidth="284" darkHeight="570"}
 :::
 ::::
 
@@ -526,12 +580,10 @@ children:
                   value: ='$ ' & $number(@ctx.datasources.cleaningServices.onceoffrate)
                   isHidden: =(@ctx.datasources.cleaningServices.onceoffrate) = null ? true:false
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Carousel with pagination (contained)
 
 ::::VerticalSplit{layout="middle"}
@@ -546,7 +598,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/sj8QxKZPoS3jYJdhiCvS7_cc-carousel-pag-contained.gif" size="80" position="center" caption="Carousel with contained pagination" alt="Carousel with contained pagination" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/sj8QxKZPoS3jYJdhiCvS7_cc-carousel-pag-contained.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/sj8QxKZPoS3jYJdhiCvS7_cc-carousel-pag-contained.gif" size="80" position="center" caption="Carousel with contained pagination" alt="Carousel with contained pagination" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/sj8QxKZPoS3jYJdhiCvS7_cc-carousel-pag-contained.gif" width="288" height="576" darkWidth="288" darkHeight="576"}
 :::
 ::::
 
@@ -622,7 +674,6 @@ children:
                 isHidden: false
                 position: outside    
 ```
-
 :::
 :::::
 
@@ -637,7 +688,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X_GIlacEm0Nc0eLOwKiTt_cc-carousel-avatar.gif" size="80" position="center" caption="Carousel with avatar" alt="Carousel with avatar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X_GIlacEm0Nc0eLOwKiTt_cc-carousel-avatar.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X_GIlacEm0Nc0eLOwKiTt_cc-carousel-avatar.gif" size="80" position="center" caption="Carousel with avatar" alt="Carousel with avatar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X_GIlacEm0Nc0eLOwKiTt_cc-carousel-avatar.gif" width="288" height="578" darkWidth="288" darkHeight="578"}
 :::
 ::::
 
@@ -686,5 +737,5 @@ children:
         position: outside
         isContained: true
 ```
-
 :::
+

@@ -6,22 +6,54 @@ The open-settings action makes this process easier and more intuitive. The actio
 
 ## Configuration options
 
-Some properties are common to all actions, see [Common action properties](docId\:xwLai--R7dO1e7HzPY8xT)  for a list and their configuration options.
+Some properties are common to all actions, see [Common action properties]()  for a list and their configuration options.
 
 | **Core structure** |                                                                      |
 | ------------------ | -------------------------------------------------------------------- |
 | `title`            | Provide the action button with a title, for example, Go to settings. |
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon](https://docs.jigx.com/jigx-icons) to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                       |
-| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
-| `style`           | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="140">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>icon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Select an  to display when the action is configured as the secondary button or in a <a href="./../Components/jig-header.md">header action</a>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isHidden</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>style</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</p>
+      <ul>
+      <li> <code>isDisabled</code> - Displays the action button as greyed out.</li>
+      <li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li>
+      <li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets&#x20;
 
 :::::ExpandableHeading
-
 ### Open-app settings
 
 ::::VerticalSplit{layout="middle"}
@@ -30,10 +62,9 @@ This example shows how to set up the `open-app-settings` action for cases where 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xQi39F4P1b8CRXDHmRtj_-20250415-085249.gif" size="66" position="center" caption="Open app settings" alt="Open app settings" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xQi39F4P1b8CRXDHmRtj_-20250415-085249.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xQi39F4P1b8CRXDHmRtj_-20250415-085249.gif" size="66" position="center" caption="Open app settings" alt="Open app settings" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xQi39F4P1b8CRXDHmRtj_-20250415-085249.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
 :::
 ::::
-:::::
 
 :::CodeblockTabs
 action-open-app-settings.jigx
@@ -129,5 +160,6 @@ datasources:
           longitude: 18.38924840500718 
           icon: end-marker
 ```
-
 :::
+:::::
+

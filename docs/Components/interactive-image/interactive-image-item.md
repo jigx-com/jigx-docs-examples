@@ -4,44 +4,161 @@ The interactive-image-item is used in the `item` property of the [interactive-im
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure**      |                                                                                                                             |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `id`                    | Provide an id for the item that is used for filtering and as a key                                                          |
-| `percentageCoordinates` | Percentage `x` and `y` coordinates are required.  Coordinates are represented as absolute percentage numbers between 0-100. |
-| `title`                 | Give a name/title for the point, for example, Table 1.                                                                      |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="211">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>id</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide an id for the item that is used for filtering and as a key</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>percentageCoordinates</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Percentage <code>x</code> and <code>y</code> coordinates are required.  Coordinates are represented as absolute percentage numbers between 0-100.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Give a name/title for the point, for example, Table 1.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                          |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`           | This allows you to set a specific color for the active/selected point (e.g., when the point is selected or active).                                                                                      |
-| `icon`            | This allows you to set a specific icon for different states (e.g., when the point is selected active or inactive).                                                                                       |
-| `index`           | Index for the initial animation.                                                                                                                                                                         |
-| `groupId`         | This property allows you to add the item to the group. The groups are created inside the [interactive-image](./../interactive-image.md) component. Effective only initial load.                          |
-| `style`           | The following style options are available:&#xA;`isActive` - shows if the point is active or available for selection.&#xA;`isDisabled` - shows if the point is disabled and is unavailable for selection. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="215">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>color</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>This allows you to set a specific color for the active/selected point (e.g., when the point is selected or active).</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>icon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>This allows you to set a specific icon for different states (e.g., when the point is selected active or inactive).</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>index</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Index for the initial animation.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>groupId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>This property allows you to add the item to the group. The groups are created inside the  component. Effective only initial load.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>style</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The following style options are available:
+      <code>isActive</code> - shows if the point is active or available for selection.
+      <code>isDisabled</code> - shows if the point is disabled and is unavailable for selection.</p>
+    </td>
+  </tr>
+</table>
 
-| **Actions** |                                                                                                                                                |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onPress`   | The action is triggered when pressing the image's marked coordinate point. Use IntelliSense (ctrl+space) to see the list of available actions. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="215">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The action is triggered when pressing the image's marked coordinate point. Use IntelliSense (ctrl+space) to see the list of available actions.</p>
+    </td>
+  </tr>
+</table>
 
-| **State Configuration**  | **Key**              | **Notes**                                                       |
-| ------------------------ | -------------------- | --------------------------------------------------------------- |
-| `=@ctx.component.state.` | selected             | State is the variable of the component.                         |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now | Global state variable that can be used throughout the solution. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="219,117">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>State Configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.component.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>selected</p>
+    </td>
+    <td selected="false" align="left">
+      <p>State is the variable of the component.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>activeItemId
+      now</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Global state variable that can be used throughout the solution.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Restaurant table booking example
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8_rest-1iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8_rest-1iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8_rest-1iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8_rest-1iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj_WAUzvJz1S_rest-2iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj_WAUzvJz1S_rest-2iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj_WAUzvJz1S_rest-2iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj_WAUzvJz1S_rest-2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 ::::
 
@@ -269,21 +386,19 @@ datasources:
           '$.category' 
         FROM [default/interactive-image] WHERE '$.category' = 'floorplan-restaurant'
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Hot seat and meeting room booking example
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ_interactive-image-1iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ_interactive-image-1iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ_interactive-image-1iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ_interactive-image-1iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ_HVAl1AUyX_interactive-image-2iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ_HVAl1AUyX_interactive-image-2iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ_HVAl1AUyX_interactive-image-2iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ_HVAl1AUyX_interactive-image-2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 ::::
 
@@ -303,7 +418,6 @@ children:
       imageHeight: 1500
       source: 
         uri:  https://i.pinimg.com/564x/b0/eb/52/b0eb52122452257e955f210e7fdb8f55.jpg
-
           
       data: =@ctx.datasources.interactive-image-office
       pointColor: color10
@@ -330,7 +444,6 @@ children:
           groupId: =@ctx.current.item.group
           style:
             isDisabled: =@ctx.current.item.isReserved = true ? true :false
-          
           percentageCoordinates:
             x: =@ctx.current.item.xCoordinate
             y: =@ctx.current.item.yCoordinate
@@ -387,10 +500,10 @@ datasources:
           isReserved: true
           group: Hot desk - reserved
 ```
-
 :::
 :::::
 
 ## See also
 
 - [State](https://docs.jigx.com/state)
+

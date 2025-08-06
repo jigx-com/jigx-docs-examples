@@ -6,24 +6,91 @@ The open map action lets you tap the on-screen button to open your device's defa
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR_gXAWqyOYxwwBly0Kx-20250217-110927.gif" size="66" position="center" caption="Open map action" alt="Open map action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR_gXAWqyOYxwwBly0Kx-20250217-110927.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR_gXAWqyOYxwwBly0Kx-20250217-110927.gif" size="66" position="center" caption="Open map action" alt="Open map action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR_gXAWqyOYxwwBly0Kx-20250217-110927.gif" width="1080" height="2167" darkWidth="1080" darkHeight="2167"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`            | Provide the action with a title, for example, Navigate.                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `address`          | Address of location - geocode string address to location.&#xA;Valid formats are: &#xA;- **address string - city, street**, e.g.&#xA; \`address: 20 W 34th St., New York, NY 10001, USA<br>or in an expression calling a datasource `=@ctx.datasources.address`&#xA;- **latitude and longitude**, e.g.&#xA;address: 40.759412, -73.912306\` &#xA;- DMS format&#xA;**- latitude and longitude**, e.g.&#xA;address: &#xA;     latitude: 40.74860&#xA;     longitude: "-73.98566" |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="128">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide the action with a title, for example, Navigate.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>address</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Address of location - geocode string address to location.
+      Valid formats are: </p>
+      <ul>
+      <li><strong>address string - city, street</strong>, e.g.
+      `address: 20 W 34th St., New York, NY 10001, USA
+      or in an expression calling a datasource <code>=@ctx.datasources.address</code></li>
+      <li><strong>latitude and longitude</strong>, e.g.
+      address: 40.759412, -73.912306` </li>
+      <li>DMS format</li>
+      <li><strong>latitude and longitude</strong>, e.g.
+      address:
+      latitude: 40.74860
+      longitude: "-73.98566"</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon](https://docs.jigx.com/jigx-icons) to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                       |
-| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
-| `styles`          | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="123">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>icon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Select an  to display when the action is configured as the secondary button or in a <a href="./../Components/jig-header.md">header action</a>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isHidden</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>styles</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</p>
+      <ul>
+      <li><code>isDisabled</code> - Displays the action button as greyed out.</li>
+      <li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li>
+      <li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
@@ -31,7 +98,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR_gXAWqyOYxwwBly0Kx-20250217-110927.gif" size="66" position="center" caption="Open an address on a map" alt="Open an address on a map" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR_gXAWqyOYxwwBly0Kx-20250217-110927.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR_gXAWqyOYxwwBly0Kx-20250217-110927.gif" size="66" position="center" caption="Open an address on a map" alt="Open an address on a map" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR_gXAWqyOYxwwBly0Kx-20250217-110927.gif" width="1080" height="2167" darkWidth="1080" darkHeight="2167"}
 :::
 
 :::VerticalSplitItem
@@ -86,7 +153,7 @@ This example includes a list of people and places in New York. Tapping the `righ
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BWuMO4jXKq6t1f05HH6E6-20250217-115630.gif" size="66" position="center" caption="Open an address from a list" alt="Open an address from a list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BWuMO4jXKq6t1f05HH6E6-20250217-115630.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BWuMO4jXKq6t1f05HH6E6-20250217-115630.gif" size="66" position="center" caption="Open an address from a list" alt="Open an address from a list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BWuMO4jXKq6t1f05HH6E6-20250217-115630.gif" width="1080" height="2167" darkWidth="1080" darkHeight="2167"}
 :::
 ::::
 
@@ -120,13 +187,15 @@ children:
           leftElement: 
             element: icon
             icon: =@ctx.current.item.icon
-          # Add a button on the right that can be tapped to open the modal with map options.  
+          # Add a button on the right that can be tapped to open the modal with
+          # map options.  
           rightElement: 
             element: button
             title: Navigate
             # Use the onPress event to trigger the action.
             onPress:
-              # Configure the action with an address derived from a datasource or static value.
+              # Configure the action with an address derived from a datasource 
+              # or static value.
               type: action.open-map
               options:
                 address: =@ctx.current.item.address
@@ -154,8 +223,7 @@ datasources:
           name: The lighthouse
           address: "40.74789, -74.01113"
           icon: lighthouse-bird
-
-
+```
 :::
 
 ### Open the map from a secondary action button
@@ -261,14 +329,13 @@ actions:
           # Specify the address for the action button.
           address: 40.7827902614508, -73.96559413203381
 ```
-
 :::
 
 ### Jig header with open-map action icon
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aOQBSERQ1zpZdhMkFOba3-20250217-132934.gif" size="66" position="center" caption="Action in jig header" alt="Action in jig header" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aOQBSERQ1zpZdhMkFOba3-20250217-132934.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aOQBSERQ1zpZdhMkFOba3-20250217-132934.gif" size="66" position="center" caption="Action in jig header" alt="Action in jig header" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aOQBSERQ1zpZdhMkFOba3-20250217-132934.gif" width="1080" height="2162" darkWidth="1080" darkHeight="2162"}
 :::
 
 :::VerticalSplitItem
@@ -322,5 +389,5 @@ children:
             young professionals fill the restaurants and bars of the South Street Seaport 
             and pedestrian-only Stone Street.
 ```
-
 :::
+

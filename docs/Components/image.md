@@ -8,30 +8,106 @@ The `image` component can be part of the [header](./jig-header.md)and as a child
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Image Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gZBreuXUNc-zSldzmyWaI_image.png" size="60" caption="Image Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gZBreuXUNc-zSldzmyWaI_image.png"}
+::Image[]{alt="Image Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gZBreuXUNc-zSldzmyWaI_image.png" size="60" caption="Image Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gZBreuXUNc-zSldzmyWaI_image.png" width="800" height="495" darkWidth="800" darkHeight="495"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                     |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `uri`              | The image source (either a remote URL or a local file resource). The currently supported formats are png, jpg, jpeg, bmp, gif, webp (Android only), psd (iOS only). |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="117">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>uri</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The image source (either a remote URL or a local file resource). The currently supported formats are png, jpg, jpeg, bmp, gif, webp (Android only), psd (iOS only).</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `height`          | Change the height of the image in pixels. Ensure a proper `resizeMode` is used to achieve the best results on different device resolutions. The default is set at 196 pixels.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `resizeMode`      | Resize the image when the frame doesn't match the raw image dimensions.&#xA;The following options are available:&#xA;`center` - If the image is bigger than the area it is scaled down making it completely visible. The image is not scaled up.&#xA;`contain` - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or less than the corresponding dimension of the view (minus padding).<br>`cover` - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or larger than the corresponding dimension of the view (minus padding).<br>`stretch` - Scales the width and height of the image independently, This may change the aspect ratio of the `source`. |
-| `subtitle`        | Adds a subtitle that is displayed on or next to the image based on image context.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `title`           | Display the text content for the title that can be displayed on or next to the image based on the image context.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `width`           | Change the width of the image in pixels. Ensure a proper `resizeMode` is used to achieve the best results on different device resolutions.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-|                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="118">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>height</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Change the height of the image in pixels. Ensure a proper <code>resizeMode</code> is used to achieve the best results on different device resolutions. The default is set at 196 pixels.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>resizeMode</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Resize the image when the frame doesn't match the raw image dimensions.
+      The following options are available:</p>
+      <ul>
+      <li><code>center</code> - If the image is bigger than the area it is scaled down making it completely visible. The image is not scaled up.</li>
+      <li><code>contain</code> - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or less than the corresponding dimension of the view (minus padding).</li>
+      <li><code>cover</code> - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or larger than the corresponding dimension of the view (minus padding).</li>
+      <li><code>stretch</code> - Scales the width and height of the image independently, This may change the aspect ratio of the <code>source</code>.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>subtitle</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Adds a subtitle that is displayed on or next to the image based on image context.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Display the text content for the title that can be displayed on or next to the image based on the image context.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>width</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Change the width of the image in pixels. Ensure a proper <code>resizeMode</code> is used to achieve the best results on different device resolutions.</p>
+    </td>
+  </tr>
+</table>
 
-| **Actions** |                                                                                                                         |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `onPress`   | The action is triggered when pressing on the image. Use IntelliSense (ctrl+space) to see the list of available actions. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="120">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The action is triggered when pressing on the image. Use IntelliSense (ctrl+space) to see the list of available actions.</p>
+    </td>
+  </tr>
+</table>
 
 ### Considerations
 
@@ -41,7 +117,6 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Image in Header
 
 ::::VerticalSplit{layout="left"}
@@ -52,14 +127,12 @@ Some properties are common to all components, see [Common component properties](
 :::VerticalSplitItem
 Image is used as a background picture in the header section.
 
-**Examples:**
-
-See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/static-data/header-image/header-image.jigx).
+**Examples:
+**See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/static-data/header-image/header-image.jigx).
 See the example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/dynamic-data/header-image/header-image-dynamic.jigx).
 
-**Datasource:**
-
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/image-static.jigx).
+**Datasource:
+**See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/image-static.jigx).
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/image.jigx).
 :::
 ::::
@@ -142,14 +215,13 @@ datasources:
           '$.title',
           '$.video',
           '$.web-link'
-        FROM [default/avatar] WHERE '$.category' = "image-source"
+        FROM [default/avatar] 
+        WHERE '$.category' = "image-source"
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Image in jig/default
 
 ::::VerticalSplit{layout="left"}
@@ -248,8 +320,9 @@ datasources:
           '$.title',
           '$.video',
           '$.web-link'
-        FROM [default/avatar] WHERE '$.category' = "image-source"
+        FROM [default/avatar] 
+        WHERE '$.category' = "image-source"
 ```
-
 :::
 :::::
+

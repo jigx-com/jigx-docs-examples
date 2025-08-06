@@ -1,10 +1,4 @@
----
-title: pie-chart
-slug: P04R-pie-chart
-description: This document provides information about a component for displaying statistics related to data records. Learn about the features and options for the Pie Chart component, along with its configuration and actions. Find code snippets, examples, and sample da
-createdAt: Thu Jun 09 2022 19:43:04 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Jul 24 2024 09:50:15 GMT+0000 (Coordinated Universal Time)
----
+# pie-chart
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -22,30 +16,101 @@ We are currently experiencing issues with the legend of the Pie Chart component.
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                    |
-| ------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `chart`            | `title`- Its `text` and `verticalAlign`.                                                                     |
-| `series`           | `data` - values to be used in the chart.&#xA;`layout` -  `Pie` or `Arch` - the availabe types of chart.  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>chart</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>title</code>- Its <code>text</code> and <code>verticalAlign</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>series</code></p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li><code>data</code> - values to be used in the chart.</li>
+      <li><code>layout</code> -  <code>Pie</code> or <code>Arch</code> - the availabe types of chart.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-|**Other options** |                                                                                         |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `chart`           | `title` and `subtitle` - Name and a short description of your chart.&#xA;`height` and `width` - The parameters of the chart displayed (in pixels). |
-| `legend`          | `isHidden` -  The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.                             |
-| `series`          | `name` - The naming of the actual series.&#xA;`color`- select a color from the color palette.                                                      |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>chart</code></p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li><code>title</code> and <code>subtitle</code> - Name and a short description of your chart.</li>
+      <li><code>height</code> and <code>width</code> - The parameters of the chart displayed (in pixels).</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>legend</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>isHidden</code> -  The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>series</code></p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li><code>name</code> - The naming of the actual series.</li>
+      <li><code>color</code>- select a color from the color palette.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-| **Actions** |  |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `onPress`   | The ability to add any of the actions (please refer to the list of  Actions). This action(s) will be triggered as a reaction to the press event. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The ability to add any of the actions (please refer to the list of  Actions). This action(s) will be triggered as a reaction to the press event.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Pie chart
 
-::::VerticalSplit{layout}
+::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 ![Pie Chart](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CAWSPzutiCMFmb4gxIrya_w40z-dj51d0ecr9n92ccvpiechartiphone13blueportrait.png "Pie Chart")
 :::
@@ -127,15 +192,13 @@ datasources:
         FROM [default/charts] WHERE '$.category' = "pie-chart"
     
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Pie chart type arch
 
-::::VerticalSplit{layout}
+::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 ![Pie chart - arch](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4-g91a_Saz9YXCiIcWHcR_bco9qdkyaolqvlk3xgf8gpie-chart-archchartiphone13blueportrait.png "Pie chart - arch")
 :::
@@ -149,6 +212,7 @@ See the full code sample using dynamic data in [GitHub](https://github.com/jigx-
 
 **Datasources:**
 See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-arch-chart-dynamic.jigx).
+:::
 ::::
 
 :::CodeblockTabs
@@ -218,6 +282,6 @@ datasources:
           '$.title' 
         FROM [default/charts] WHERE '$.category' = "arch-chart"
 ```
-
 :::
 :::::
+

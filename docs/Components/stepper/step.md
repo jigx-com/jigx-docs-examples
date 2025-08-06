@@ -2,26 +2,97 @@
 
 This component displays consecutive steps in a stepper component. You can divide the task into steps, mark them as completed, and gradually get closer to completing the entire task.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pHqn9aSU9OrBRvwBxvDw1_cc-step.png" size="66" position="center" caption="Step component" alt="Step component" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pHqn9aSU9OrBRvwBxvDw1_cc-step.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pHqn9aSU9OrBRvwBxvDw1_cc-step.png" size="66" position="center" caption="Step component" alt="Step component" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pHqn9aSU9OrBRvwBxvDw1_cc-step.png" width="800" height="800" darkWidth="800" darkHeight="800"}
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                           |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------- |
-| `title`            | Provide a title for the step item. You can use an expression to set the title.                                            |
-| `value`            | The value of the step item. The value is exposed in the jig's state, making it available for use anywhere inside the jig. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="127">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide a title for the step item. You can use an expression to set the title.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>value</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The value of the step item. The value is exposed in the jig's state, making it available for use anywhere inside the jig.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `description`     | Describe the step item that is displayed as the subtitle.                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `leftElement`     | The only available element for the step is an `icon` displayed on the left of the value. A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information. If no icon is specified a checkbox is used on the left.                                                                                                                                                                                                                                                                                  |
-| `style`           | The following styling options are available:&#xA;`isActive` - Shows the step as active.<br>`isDisabled` - Shows the step `value`, `description`, and `icon` as disabled (greyed out).<br>`isNegative` - The step `description` and `icon` are shown in red.<br>`isPositive` - The `description` and `icon` are shown in green.<br>`isStrikeThrough` - The step's `value` and `description` are shown with a line through it.<br>`isWarning` - The `description` and `icon` are shown in orange. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="131">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>description</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Describe the step item that is displayed as the subtitle.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>leftElement</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The only available element for the step is an <code>icon</code> displayed on the left of the value. A list of icons is available. See  for more information. If no icon is specified a checkbox is used on the left.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>style</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The following styling options are available:</p>
+      <ul>
+      <li><code>isActive</code> - Shows the step as active.</li>
+      <li><code>isDisabled</code> - Shows the step <code>value</code>, <code>description</code>, and <code>icon</code> as disabled (greyed out).</li>
+      <li><code>isNegative</code> - The step <code>description</code> and <code>icon</code> are shown in red.</li>
+      <li><code>isPositive</code> - The <code>description</code> and <code>icon</code> are shown in green.</li>
+      <li><code>isStrikeThrough</code> - The step's <code>value</code> and <code>description</code> are shown with a line through it.</li>
+      <li><code>isWarning</code> - The <code>description</code> and <code>icon</code> are shown in orange.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-| **Actions** |                                                                                                                             |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `onPress`   | The action is triggered when pressing on the step item. Use IntelliSense (ctrl+space) to see the list of available actions. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="133">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The action is triggered when pressing on the step item. Use IntelliSense  to see the list of available actions.</p>
+    </td>
+  </tr>
+</table>
 
 ## Consideration
 
@@ -30,7 +101,6 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Step Example
 
 ::::VerticalSplit{layout="middle"}
@@ -159,6 +229,6 @@ datasources:
         FROM [default/steps]
         ORDER BY value
 ```
-
 :::
 :::::
+

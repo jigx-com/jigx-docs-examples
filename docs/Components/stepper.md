@@ -12,30 +12,98 @@ This component displays the progress status of a task. Useful when tracking deli
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure**    |                                                                                                                                                                                                                                                                                     |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`                | Define the data to be used in the step items, you can use expressions to reference a datasource.                                                                                                                                                                                    |
-| `item`                | There is only one available option, which is [step](./stepper/step.md). The `item` property is core for the stepper component, so even if you are creating a non-expandable stepper you must configure the step component's `title` and `value` properties with an empty string: "" |
-| `completedPercentage` | Define the percentage to be displayed on the chart. Example "0.24" => 24 %. 1 represents 100% complete.                                                                                                                                                                             |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="202">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>data</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Define the data to be used in the step items, you can use expressions to reference a datasource.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>item</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>There is only one available option, which is . The <code>item</code> property is core for the stepper component, so even if you are creating a non-expandable stepper you must configure the step component's <code>title</code> and <code>value</code> properties with an empty string: ""</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>completedPercentage</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Define the percentage to be displayed on the chart. Example "0.24" => 24 %. 1 represents 100% complete.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                        |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `isExpandable`    | Set to `true` the stepper will be expandable into steps. Set to `false` the stepper is not expandable.                                                                                                                                                                                                                 |
-| `style`           | The styling determines the color of the chart. There are three colors options. For example if the status is complete use `isPositive` to show the chart in green. If no style is specified the chart shows in blue.&#xA; are styling sets:&#xA;`isNegative` - red<br>`isPositive` -  green<br>`isWarning` - orange |
-| `subtitle`        | The subtitle/short description of the stepper to display under the title. You can use an expression to set the subtitle.                                                                                                                                                                                               |
-| `title`           | The title for the stepper, you can use an expression to set the title.                                                                                                                                                                                                                                                 |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="197">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isExpandable</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set to <code>true</code> the stepper will be expandable into steps. Set to <code>false</code> the stepper is not expandable.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>style</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The styling determines the color of the chart. There are three colors options, determined by the standard colors or by your branding color configuration. For example if the status is complete use <code>isPositive</code> to show the chart in green (standard). If no style is specified the chart shows in blue (standard).
+      Available options:</p>
+      <ul>
+      <li><code>isNegative</code> - red (standard)</li>
+      <li><code>isPositive</code> -  green (standard)</li>
+      <li><code>isWarning</code> - orange (standard)</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>subtitle</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The subtitle/short description of the stepper to display under the title. You can use an expression to set the subtitle.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The title for the stepper, you can use an expression to set the title.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Stepper example
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3q5XYI9fcgYMnxTTSMBaa_xqldilpo0dsaonqcdwm8ostepperiphone13blueportrait.png" size="88" position="center" caption="Stepper for shipment status" alt="Stepper for shipment status" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3q5XYI9fcgYMnxTTSMBaa_xqldilpo0dsaonqcdwm8ostepperiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3q5XYI9fcgYMnxTTSMBaa_xqldilpo0dsaonqcdwm8ostepperiphone13blueportrait.png" size="88" position="center" caption="Stepper for shipment status" alt="Stepper for shipment status" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3q5XYI9fcgYMnxTTSMBaa_xqldilpo0dsaonqcdwm8ostepperiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
@@ -167,6 +235,6 @@ datasources:
         FROM [default/steps]
         ORDER BY value
 ```
-
 :::
 :::::
+

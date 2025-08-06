@@ -13,27 +13,166 @@ As far as the functionality goes, the same list options are available as with th
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure**     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`                 | The items you want to show in the list.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `item`                 | There is a list of components available to use:&#xA;[list-item](./list/list-item.md)&#xA;[bar-chart](./charts/bar-chart.md)&#xA;[expander](./expander.md)&#xA;[pie-chart](./charts/pie-chart.md)&#xA;[product-item](./list/product-item.md)&#xA;[stage](./list/stage.md)&#xA;If you use the list component in a [https://docs.jigx.com/examples/jigcomposite](https://docs.jigx.com/examples/jigcomposite) jig.composite  , the maximum number of displayed items is 8. If you set the `maximumItemsToRender` to a higher number, the rest of the list will display after clicking on the 'Show more' option. |
-| `maximumItemsToRender` | The number of items you would like to display in your list.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="209">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>data</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The items you want to show in the list.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>item</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>There is a list of components available to use:
+      <a href="./charts/bar-chart.md">bar-chart</a>
+      <a href="./expander.md">expander</a>
+      <a href="./charts/pie-chart.md">pie-chart</a>
+      <a href="./list/product-item.md">product-item</a>
+      <a href="./list/stage.md">stage</a>
+      If you use the list component in a <a href="https://docs.jigx.com/examples/jigcomposite">https://docs.jigx.com/examples/jigcomposite</a> jig.composite  , the maximum number of displayed items is 8. If you set the <code>maximumItemsToRender</code> to a higher number, the rest of the list will display after clicking on the 'Show more' option.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>maximumItemsToRender</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The number of items you would like to display in your list.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `badge`           | Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:&#xA;-  To display as a red dot using the `empty` value.&#xA;-  A red dot with a number using an expression to perform a count. &#xA;For example, counting the number of tasks in the list.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `filter`          | Allows you to create lists filtered by a key/value. Set the filter to open on a specific tab in a list.&#xA;`initialValue` - Predefine the default selected tab for a filter on the list, when opening the jig the default filter tab is displayed.&#xA;`data` -  define the filter tabs using:&#xA;- `title` - give the filter a name. The text that will be displayed in the tab, for example, in-stock.&#xA;- `value` - The value that the list filter returns. Use the following expressions to return this value:&#xA;- `=@ctx.components.my-list.state.filter` (for a list in a default jig)&#xA;- `=@ctx.jig.state.filter` (for a list jig)&#xA;For `true/false` values that are saved as **boolean** ensure the filter has a **boolean** value.&#xA;For `true/false` values that are saved as **string** ensure the filter has a **string** value. &#xA;When using the `value` property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value. |
-| `isHorizontal`    | The boolean value that transforms the list into a horizontal one.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `isSearchable`    | The boolean value which allows you to add a search bar on the top of your list.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `onShowMorePress` | Action to be performed when you press on the *show more* button. This is `type: action.go-to` with a `linkTo:` option.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="210">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>badge</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:</p>
+      <ul>
+      <li>To display as a red dot using the <code>empty</code> value.</li>
+      <li>A red dot with a number using an expression to perform a count.
+      For example, counting the number of tasks in the list.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>filter</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Allows you to create lists filtered by a key/value. Set the filter to open on a specific tab in a list.</p>
+      <ul>
+      <li><code>initialValue</code> - Predefine the default selected tab for a filter on the list, when opening the jig the default filter tab is displayed.</li>
+      <li><code>data</code> -  define the filter tabs using:
+      <ul>
+      <li><code>title</code> - give the filter a name. The text that will be displayed in the tab, for example, in-stock.</li>
+      <li><code>value</code> - The value that the list filter returns. Use the following expressions to return this value:
+      - <code>=@ctx.components.my-list.state.filter</code> (for a list in a default jig)
+      - <code>=@ctx.jig.state.filter</code> (for a list jig)
+      For <code>true/false</code> values that are saved as <strong>boolean</strong> ensure the filter has a <strong>boolean</strong> value.
+      For <code>true/false</code> values that are saved as <strong>string</strong> ensure the filter has a <strong>string</strong> value.
+      When using the <code>value</code> property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.</li>
+      </ul>
+      </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isHorizontal</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The boolean value that transforms the list into a horizontal one.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isSearchable</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The boolean value which allows you to add a search bar on the top of your list.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onShowMorePress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Action to be performed when you press on the <em>show more</em> button. This is <code>type: action.go-to</code> with a <code>linkTo:</code> option.</p>
+    </td>
+  </tr>
+</table>
 
-| **State Configuration**  | **Key**              | **Notes**                                                                                                                                                                        |
-| ------------------------ | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `=@ctx.current.state.`   | amount&#xA;checked   | Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array. |
-| `=@ctx.component.state.` | amount&#xA;checked   | State is the variable of the component.                                                                                                                                          |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now | Global state variable that can be used throughout the solution.                                                                                                                  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="219">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>State Configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.current.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>amount
+      checked</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.component.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>amount
+      checked</p>
+    </td>
+    <td selected="false" align="left">
+      <p>State is the variable of the component.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>activeItemId
+      now</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Global state variable that can be used throughout the solution.</p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -42,7 +181,6 @@ Some properties are common to all components, see [Common component properties](
 ## List functionality
 
 ::::::ExpandableHeading
-
 ### List with Search functionality
 
 :::::VerticalSplit{layout="left"}
@@ -77,7 +215,7 @@ children:
   - type: component.list
     instanceId: cleaning_serv_items
     options:
-# Data configured to use datasource (static)      
+      # Data configured to use datasource (static)      
       data: =$filter(@ctx.datasources.repair-services-static, function($v){$contains($string($v.service),$string(@ctx.components.cleaning_serv_items.state.searchText != null ? @ctx.components.cleaning_serv_items.state.searchText:''))})[]
       isSearchable: true
       maximumItemsToRender: 50
@@ -95,7 +233,7 @@ children:
   - type: component.list
     instanceId: cleaning_serv_items
     options:
-# Data configured to use datasource (dynamic)      
+      # Data configured to use datasource (dynamic)      
       data: =@ctx.datasources.cleaning-services-dynamic
       isSearchable: true
       maximumItemsToRender: 50
@@ -206,7 +344,7 @@ datasources:
       provider: DATA_PROVIDER_DYNAMIC
       entities:
         - entity: default/cleaning-services
-      query:
+      query: |
         SELECT
          id, 
          '$.area',
@@ -223,12 +361,10 @@ datasources:
       queryParameters:
         search: =@ctx.components.cleaning_serv_items.state.searchText
 ```
-
 :::
 ::::::
 
 :::::ExpandableHeading
-
 ### List with Filter functionality
 
 ::::VerticalSplit{layout="left"}
@@ -264,7 +400,7 @@ children:
           value: indoor
         - title: Outdoor
           value: outdoor
-# Data configured to use datasource (static)             
+      # Data configured to use datasource (static)             
       data: =$filter(@ctx.datasources.cleaning-services-static, function($v){$contains($string($v.status), $string(@ctx.components.filter-list.state.filter != null ? @ctx.components.filter-list.state.filter:'')) })[]
       item:
         type: component.list-item
@@ -286,7 +422,7 @@ children:
   - type: component.list
     instanceId: cleaning_serv_items
     options:
-# Data configured to use datasource (dynamic)     
+      # Data configured to use datasource (dynamic)     
       data: =@ctx.datasources.cleaning-services-dynamic
       maximumItemsToRender: 50
       filter: 
@@ -427,12 +563,10 @@ datasources:
       queryParameters:
           filter: =@ctx.components.cleaning_serv_items.state.filter
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Filtered list with default tab set
 
 ::::VerticalSplit{layout="middle"}
@@ -444,7 +578,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Tcoz4aCsZXsAf45JxF6ym-20240913-142629.PNG" size="80" position="center" caption="Filtered list with default tab" alt="Filtered list with default tab" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Tcoz4aCsZXsAf45JxF6ym-20240913-142629.PNG"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Tcoz4aCsZXsAf45JxF6ym-20240913-142629.PNG" size="80" position="center" caption="Filtered list with default tab" alt="Filtered list with default tab" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Tcoz4aCsZXsAf45JxF6ym-20240913-142629.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 ::::
 
@@ -483,8 +617,7 @@ datasources:
           '$.taskId', 
           '$.taskStatus',
           '$.team', 
-          '$.Profile'
-         
+          '$.Profile'       
         FROM [default/tasks]
         WHERE '$.taskStatus' LIKE @filter or @filter IS NULL
       queryParameters:
@@ -504,10 +637,8 @@ children:
         - title: In Progress
           value: In Progress
         - title: Complete
-          value: Complete  
-          
-      data: =@ctx.datasources.team-tasks
-         
+          value: Complete            
+      data: =@ctx.datasources.team-tasks         
       item:
         type: component.list-item
         options:
@@ -528,12 +659,10 @@ children:
             uri: =@ctx.current.item.Profile  
       maximumItemsToRender: 50
 ```
-
 :::
 :::::
 
 ::::::ExpandableHeading
-
 ### List with Search and Filter functionality
 
 :::::VerticalSplit{layout="left"}
@@ -575,7 +704,7 @@ children:
         - title: Outdoor
           value: outdoor
       isSearchable: true
-# Data configured to use datasource (static)       
+      # Data configured to use datasource (static)       
       data: =$filter($filter(@ctx.datasources.cleaning-services-static, function($v){$contains($string($v.service),$string(@ctx.components.search-filter-list.state.searchText != null ? @ctx.components.search-filter-list.state.searchText:'')) }), function($v){$contains($string($v.status), $string(@ctx.components.search-filter-list.state.filter != null ? @ctx.components.search-filter-list.state.filter:'')) })[]                                                                                                                                                                                                
       item:
         type: component.list-item
@@ -597,7 +726,7 @@ children:
   - type: component.list
     instanceId: cleaning_serv_items
     options:
-# Data configured to use datasource (dynamic)     
+      # Data configured to use datasource (dynamic)     
       data: =@ctx.datasources.cleaning-services-dynamic
       isSearchable: true
       maximumItemsToRender: 50
@@ -721,7 +850,7 @@ datasources:
       provider: DATA_PROVIDER_DYNAMIC
       entities:
         - entity: default/cleaning-services
-      query: 
+      query: |
         SELECT
          id, 
          '$.area',
@@ -739,12 +868,10 @@ datasources:
         filter: =@ctx.components.cleaning_serv_items.state.filter
         search: =@ctx.components.cleaning_serv_items.state.searchText
 ```
-
 :::
 ::::::
 
 ::::::ExpandableHeading
-
 ### Horizontal list
 
 :::::VerticalSplit{layout="left"}
@@ -756,7 +883,7 @@ datasources:
 This is an example of a horizontal list with UI elements such as an image and values configured. Horizontal lists are especially helpful when used on a composite jig.
 **Examples**:
 See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-horizontal-list-sd.jigx).
-See the full example using dynamic data in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-horizontal-list-dd.jigx).
+See the full example using dynamic data in [GitHub]().
 
 **Datasources**:
 See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
@@ -784,7 +911,7 @@ children:
     options:
       isHorizontal: true
       isHorizontalScrollIndicatorHidden: false
-# Data configured to use datasource (static) 
+      # Data configured to use datasource (static) 
       data: =@ctx.datasources.repair-services-static
       item: 
         type: component.list-item
@@ -814,7 +941,7 @@ children:
     options:
       isHorizontal: true
       isHorizontalScrollIndicatorHidden: false
-# Data configured to use datasource (dynamic)       
+      # Data configured to use datasource (dynamic)       
       data: =@ctx.datasources.cleaning-services-dynamic
       item: 
         type: component.list-item
@@ -944,12 +1071,13 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-
 :::
 ::::::
 
 ## See also
 
 - [State](https://docs.jigx.com/state)
+

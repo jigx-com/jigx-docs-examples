@@ -1,10 +1,4 @@
----
-title: Icon (Alpha)
-slug: rCAT-i
-description: Learn how to use the `component.icon` to enhance the style of standard or custom components with this step-by-step guide. Explore examples and code snippets for different icon sizes and styles. Create custom icon components in various shapes and sizes wit
-createdAt: Tue Jun 06 2023 13:53:41 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Mar 05 2025 19:58:43 GMT+0000 (Coordinated Universal Time)
----
+# Icon (Alpha)
 
 :::hint{type="danger"}
 This feature is currently in its **Alpha** stage of development.
@@ -13,8 +7,7 @@ This feature is currently in its **Alpha** stage of development.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
-
-  :::
+:::
 
 The icon component can be integrated into custom components to enhance their visual appeal and functionality, such as adding an icon within a [Button (Alpha)](<./Button _Alpha_.md>) , displaying it in a [Card (Alpha)](<./Card _Alpha_.md>) , or embedding it in a [View (Alpha)](<./View _Alpha_.md>) . By customizing an icon, you can adjust its size, color, and shape, and even apply animations or conditional styling, ensuring seamless alignment with your application's design system and user experience.
 
@@ -28,17 +21,16 @@ You can use `when` and `instanceId` with `component.icon`, add the properties be
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `color`     | Multiple, use IntelliSense to view the available list.                                                                                                                             |
 | `emphasis`  | Changing the color, for example, brighter, bolder, or a contrasting hue.&#xA;`extra-low`&#xA;`high`&#xA;`low`&#xA;`low-medium`&#xA;`medium`                                        |
-| `onPress`   | Multiple, use IntelliSense to view the list of available [actions](<./../Widgets/actions _buttons_.md>) to call. The action is called when the icon is pressed.                    |
+| `onPress`   | Multiple, use IntelliSense to view the list of available  to call. The action is called when the icon is pressed.                                                                  |
 | `shape`     | Determine the shape around the icon.&#xA;`circle`&#xA;`rounded` (default)&#xA;`square`                                                                                             |
 | `size`      | Enter a number value or use an expression to determine the size of the icon.                                                                                                       |
 | `type`      | Configure the icon's display as a standalone icon, within a shape, or in a duotone style. The following options are available:&#xA;`basic` (default)&#xA;`duotone`&#xA;`contained` |
 
 ## Examples and code snippets
 
-The examples use a set of custom components called _sections_. The sections are for titles, spacing, and context. The _sections_ code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+The examples use a set of custom components called *sections*. The sections are for titles, spacing, and context. The *sections* code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
 
 :::::ExpandableHeading
-
 ### Icon sizes
 
 ::::VerticalSplit{layout="middle"}
@@ -47,14 +39,13 @@ This example shows the `component.icon` with different icon sizes using the `siz
 
 **Examples:**
 
-1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section4.jigx).
-2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/icons/icon-sizes.jigx).
-3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons/icons-sizes.jigx).
-
-   :::
+1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section4.jigx).
+2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/icons/icon-sizes.jigx).
+3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons/icons-sizes.jigx).
+:::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fr7_n4lVvW220aIUVfsGR-20241113-084145.png" size="70" position="center" caption="Icon sizes" alt="Icon sizes"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fr7_n4lVvW220aIUVfsGR-20241113-084145.png" size="70" position="center" caption="Icon sizes" alt="Icon sizes" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fr7_n4lVvW220aIUVfsGR-20241113-084145.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 ::::
 
@@ -153,30 +144,29 @@ children:
   - type: component.custom-component
     componentId: icon-sizes
 ```
-
 :::
 :::::
 
 ::::ExpandableHeading
-
 ### Icon shapes & types
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qvyB3bcmZhUZFyyIrWOHN-20241113-103827.png" size="76" position="center" caption="Icon shapes" alt="Icons shapes"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qvyB3bcmZhUZFyyIrWOHN-20241113-103827.png" size="76" position="center" caption="Icon shapes" alt="Icons shapes" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qvyB3bcmZhUZFyyIrWOHN-20241113-103827.png" width="800" height="528" darkWidth="800" darkHeight="528"}
 
 These examples demonstrate the various options for using icons with rounded, square and circled shapes in a [Card (Alpha)](<./Card _Alpha_.md>). By combining the `shape`, `type`, and `size` properties, you can achieve the desired appearance.
 
 **Examples:**
 
-1. See the _custom components_ example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/basic-elements/icons) for icons-1.0.jigx to icons-3.5.jigx.
-2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons).
-3. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+1. See the *custom components* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/basic-elements/icons) for icons-1.0.jigx to icons-3.5.jigx.
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons).
+3. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
 
 :::CodeblockTabs
 icon-1.0.jigx
 
 ```yaml
 # components/icon-1.0.jigx
-# See the YAML for icon-1.1.jigx to icon-1.5.jigx in GitHub, link provided above.
+# See the YAML for icon-1.1.jigx to icon-1.5.jigx in GitHub, link provided
+# above.
 type: component.default
 children:
   - type: component.card
@@ -187,7 +177,8 @@ children:
           options:
             icon: animation
             size: extra-large
-            # Change the shape to circle or square to see the icon appearance change.
+            # Change the shape to circle or square to see the icon appearance 
+            # change.
             shape: rounded
             type: basic
 
@@ -271,12 +262,10 @@ children:
   - type: component.custom-component
     componentId: icons-1.5
 ```
-
 :::
 ::::
 
 :::::ExpandableHeading
-
 ### Icon bar
 
 ::::VerticalSplit{layout="middle"}
@@ -285,13 +274,12 @@ Create an icon bar within in a `component.card` by configuring multiple `compone
 
 **Example:**
 
-1. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/icons/icons.jigx).
-2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons/icons-bar.jigx).
-
+1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/icons/icons.jigx).
+2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons/icons-bar.jigx).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ldb9jwQQ5se9SWGcUOMRO-20241113-104500.png" size="70" position="center" caption="Icon bar" alt="Icon bar"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ldb9jwQQ5se9SWGcUOMRO-20241113-104500.png" size="70" position="center" caption="Icon bar" alt="Icon bar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ldb9jwQQ5se9SWGcUOMRO-20241113-104500.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 ::::
 
@@ -381,6 +369,6 @@ children:
   - type: component.custom-component
     componentId: icons
 ```
-
 :::
 :::::
+

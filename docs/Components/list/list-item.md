@@ -6,23 +6,174 @@ The list-item component serves as the child component whenever any list-related 
 
 Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`            | Add a `title` for the list-item. You can use an expression and datasource to set the title. Select *Line Options* (`text`), allowing configuration of individual parts of the central element in a list-item. You can set properties such as `color`, `fontSize`, `bold`, `format`, `isSubtle` (low opacity), and `numberOfLines`, rather than applying them globally via the root. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="124">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a <code>title</code> for the list-item. You can use an expression and datasource to set the title. Select <em>Line Options</em> (<code>text</code>), allowing configuration of individual parts of the central element in a list-item. You can set properties such as <code>color</code>, <code>fontSize</code>, <code>bold</code>, <code>format</code>, <code>isSubtle</code> (low opacity), and <code>numberOfLines</code>, rather than applying them globally via the root.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `color`           | The color of the list item changes based on conditions. The first evaluating to true will be used.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `description`     | The subtitle or description should be displayed with the list-item title. You can format the text of these properties if you select the "Text With Format" option in the builder help (ctrl + space) or select *Line Options* (`text`), allowing configuration of individual parts of the central element in a list-item. You can set properties such as `color`, `fontSize`, `bold`, `format`, `isSubtle` (low opacity), and `numberOfLines`, rather than applying them globally via the root. select .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `divider`         | Set the space between two items in the list.&#xA;`none` - No divider is shown between items. Set by default.&#xA;`transparent` - Sets a 1pt margin between two items.&#xA;`solid` - Displays a colored line between two items. When the list-item is contained in a card, this property will be ignored.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `isContained`     | Used to style the list item, `true` wraps the list item in a card, while `false` displays the item with no styling. This property can be used with vertical and horizontal lists.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `leftElement`     | Set an element to the left of the list. The following elements are available:&#xA;`avatar` - configure the `color`, `size`, `text`, `uri`, and `onPress` event.&#xA;`checkbox`&#xA;`icon` - the icon `size`, `color`,`shape`, `type`, `isSubtle` (low opacity), and `onPress` event is configurable.&#xA;`image` - the image `size`, `shape`, `resizeMode`, and `onPress` event is configurable. &#xA;`progress`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `numberOfLines`   | Specify the maximum number of lines for the `description` and `subtitle` properties at a global root level. Property values are:&#xA;1\)  `dynamic`- displays all lines of text.&#xA;2\) Numerical value (e.g., `2`) - Limits the `description` and `subtitle` to the specified number of lines.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `progress`        | Add a colorful visualization (background color of your choice) of the list item's progress. The color displays from left to right, and the range of the allowed values is from  0 to 1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `rating`          | Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the `ratingIcon`, `color`, and accompanying descriptive `text`. By default, the rating property has only one icon showing a rating-star in the primary color.&#xA;`value`- Rating with numerical value.&#xA;The value of the rating, which can be a simple number.&#xA;The number of icons is calculated based on this value unless overridden in the icon configuration.&#xA;Configuring the `current` and `maximum` values, shows the value as a fraction, for example 7/10.&#xA;`percentage` - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%.&#xA;`ratingIcon` - By default the *rating-star* icon in the *primary* color is displayed.&#xA;`icon` - Add an icon to represent the rating. A list of icons is available. See  for more information.&#xA;`color`- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in .&#xA;`current` and `maximum` values - Where maximum is the number of icons to display and current the number of icons to color.&#xA;`text` - Add a descriptive text that displays next to the rating.&#xA;Ratings can set up in the following ways: &#xA;1\) Example of `value` for a product rating.&#xA;2\) Example of a user rating shown in a `percentage`.&#xA;3\)Example of `value` rating showing 2.5/5 as a rating with single star icon. |
-| `rightElement`    | Set an element to the right of the list. The following elements are available:&#xA;`amountControl`&#xA;`badge` - can be a solid colored badge or a badge with a number in it. Badges  always use the primary color.&#xA;`button`&#xA;`checkbox`&#xA;`icon` - the icon `size`, `color`,`shape`, `type`, `isSubtle` (low opacity), and `onPress` event is configurable.&#xA;`switch`&#xA;`value` - When using `text`, the option to change its `color` is available.&#xA;`text` - define up to three  lines of text with styling (color, bold, font size) applied to each line of text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `subtitle`        | The subtitle or description should be displayed together with the title on the list-item. You can format the text of these properties if you select the `Text With Format` option in the IntelliSense (ctrl + space) or select *Line Options* (`text`), allowing configuration of individual parts of the central element in a list-item. You can set properties such as `color`, `fontSize`, `bold`, `format`, `isSubtle` (low opacity), and `numberOfLines`, rather than applying them globally via the root.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `tags`            | A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.&#xA;`text` -  The text content displayed within the tag.&#xA;`color` - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in . &#xA;Tags can be set up in three ways: &#xA;1\) Using a dynamic expression from a datasource:&#xA;`tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}`&#xA;2\) Using a dynamic expression from a list item:&#xA;`tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}`&#xA;3\) Using static, predefined tags&#xA;`tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="143">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>color</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The color of the list item changes based on conditions. The first evaluating to true will be used.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>description</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The subtitle or description should be displayed with the list-item title. You can format the text of these properties if you select the "Text With Format" option in the builder help (ctrl + space) or select <em>Line Options</em> (<code>text</code>), allowing configuration of individual parts of the central element in a list-item. You can set properties such as <code>color</code>, <code>fontSize</code>, <code>bold</code>, <code>format</code>, <code>isSubtle</code> (low opacity), and <code>numberOfLines</code>, rather than applying them globally via the root. select .</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>divider</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set the space between two items in the list.</p>
+      <ul>
+      <li><code>none</code> - No divider is shown between items. Set by default.</li>
+      <li><code>transparent</code> - Sets a 1pt margin between two items.</li>
+      <li><code>solid</code> - Displays a colored line between two items. When the list-item is contained in a card, this property will be ignored.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isContained</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Used to style the list item, <code>true</code> wraps the list item in a card, while <code>false</code> displays the item with no styling. This property can be used with vertical and horizontal lists.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>leftElement</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set an element to the left of the list. The following elements are available:</p>
+      <ul>
+      <li><code>avatar</code> - configure the <code>color</code>, <code>size</code>, <code>text</code>, <code>uri</code>, and <code>onPress</code> event.</li>
+      <li><code>checkbox</code></li>
+      <li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li>
+      <li><code>image</code> - the image <code>size</code>, <code>shape</code>, <code>resizeMode</code>, and <code>onPress</code> event is configurable. </li>
+      <li><code>progress</code></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>numberOfLines</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specify the maximum number of lines for the <code>description</code> and <code>subtitle</code> properties at a global root level. Property values are:</p>
+      <ul>
+      <li><code>dynamic</code>- displays all lines of text.</li>
+      <li>Numerical value (e.g., <code>2</code>) - Limits the <code>description</code> and <code>subtitle</code> to the specified number of lines.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>progress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a colorful visualization (background color of your choice) of the list item's progress. The color displays from left to right, and the range of the allowed values is from  0 to 1.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>rating</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the <code>ratingIcon</code>, <code>color</code>, and accompanying descriptive <code>text</code>. By default, the rating property has only one icon showing a rating-star in the primary color.
+      <code>value</code>- Rating with numerical value.
+      The value of the rating, which can be a simple number.
+      The number of icons is calculated based on this value unless overridden in the icon configuration.
+      Configuring the <code>current</code> and <code>maximum</code> values, shows the value as a fraction, for example 7/10.
+      <code>percentage</code> - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%.
+      <code>ratingIcon</code> - By default the <em>rating-star</em> icon in the <em>primary</em> color is displayed.
+      <code>icon</code> - Add an icon to represent the rating. A list of icons is available. See  for more information.
+      <code>color</code>- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in .
+      <code>current</code> and <code>maximum</code> values - Where maximum is the number of icons to display and current the number of icons to color.
+      <code>text</code> - Add a descriptive text that displays next to the rating.
+      Ratings can set up in the following ways:
+      1) Example of <code>value</code> for a product rating.
+      2) Example of a user rating shown in a <code>percentage</code>.
+      3)Example of <code>value</code> rating showing 2.5/5 as a rating with single star icon.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>rightElement</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set an element to the right of the list. The following elements are available:</p>
+      <ul>
+      <li><code>amountControl</code></li>
+      <li><code>badge</code> - can be a solid colored badge or a badge with a number in it. Badges  always use the primary color.</li>
+      <li><code>button</code></li>
+      <li><code>checkbox</code></li>
+      <li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li>
+      <li><code>switch</code></li>
+      <li><code>value</code> - When using <code>text</code>, the option to change its <code>color</code> is available.</li>
+      <li><code>text</code> - define up to three  lines of text with styling (color, bold, font size) applied to each line of text.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>subtitle</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The subtitle or description should be displayed together with the title on the list-item. You can format the text of these properties if you select the <code>Text With Format</code> option in the IntelliSense (ctrl + space) or select <em>Line Options</em> (<code>text</code>), allowing configuration of individual parts of the central element in a list-item. You can set properties such as <code>color</code>, <code>fontSize</code>, <code>bold</code>, <code>format</code>, <code>isSubtle</code> (low opacity), and <code>numberOfLines</code>, rather than applying them globally via the root.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>tags</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.</p>
+      <ul>
+      <li><code>text</code> -  The text content displayed within the tag.</li>
+      <li><code>color</code> - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in. </li>
+      </ul>
+      <p>Tags can be set up in three ways: </p>
+      <ol>
+      <li>Using a dynamic expression from a datasource:
+      <code>tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}</code></li>
+      <li>Using a dynamic expression from a list item:
+      <code>tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}</code></li>
+      <li>Using static, predefined tags
+      <code>tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'</code></li>
+      </ol>
+    </td>
+  </tr>
+</table>
 
 :::CodeblockTabs
 product-rating-value
@@ -54,16 +205,81 @@ rating:
 ```
 :::
 
-| **Actions** |                                                                                                                                                                             |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onPress`   | The action is available with the `swipeable` action and is triggered when pressing an item in the list. Use IntelliSense (ctrl+space) to see the list of available actions. |
-| `swipeable` | Use the `swipeable` property to add the `onPress` action. The action will appear and become pressable by swiping the list-item to the left or right.                        |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="130">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The action is available with the <code>swipeable</code> action and is triggered when pressing an item in the list. Use IntelliSense (ctrl+space) to see the list of available actions.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>swipeable</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Use the <code>swipeable</code> property to add the <code>onPress</code> action. The action will appear and become pressable by swiping the list-item to the left or right.</p>
+    </td>
+  </tr>
+</table>
 
-| **State Configuration**  | **Key**              | **Notes**                                                                                                                                                                        |
-| ------------------------ | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `=@ctx.current.state.`   | amount&#xA;checked   | Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array. |
-| `=@ctx.component.state.` | amount&#xA;checked   | State is the variable of the component.                                                                                                                                          |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now | Global state variable that can be used throughout the solution.                                                                                                                  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="221,115">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>State Configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.current.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>amount
+      checked</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.component.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>amount
+      checked</p>
+    </td>
+    <td selected="false" align="left">
+      <p>State is the variable of the component.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>activeItemId
+      now</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Global state variable that can be used throughout the solution.</p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -259,7 +475,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services]
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -308,7 +525,6 @@ item:
       fontSize: small
       isSubtle: true
       numberOfLines: 3
-
 ```
 
 list-w-divider (dynamic)
@@ -450,7 +666,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -634,7 +851,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -667,7 +885,7 @@ pie-chart-list (static)
 children:
   - type: component.list
     options:
-# Data configured to use datasource (static)     
+      # Data configured to use datasource (static)     
       data: =@ctx.datasources.components
       item:
         type: component.pie-chart
@@ -760,7 +978,8 @@ datasources:
           json_extract(data, '$.seriesx') as x, 
           '$.subtitle', 
           '$.title' 
-        FROM [default/charts] WHERE '$.category' = "pie-chart-list"
+        FROM [default/charts] 
+        WHERE '$.category' = "pie-chart-list"
 ```
 :::
 
@@ -790,7 +1009,7 @@ bar-chart-list (static)
 children:
   - type: component.list
     options:
- # Data configured to use datasource (static)    
+      # Data configured to use datasource (static)    
       data: =@ctx.datasources.list-bar
       item: 
         type: component.bar-chart
@@ -890,8 +1109,7 @@ datasources:
       provider: DATA_PROVIDER_DYNAMIC
       entities:
         - entity: default/finances
-        - entity: default/finance-review-dynamic
-    
+        - entity: default/finance-review-dynamic 
       query: |
         SELECT
           json_extract(B.Data, '$.title') as title,
@@ -926,7 +1144,7 @@ The following expression can be used if your datasource uses different names for
 `      `=@ctx.current.item.people.{"text":name,"uri":image}[]`
 
 **Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-avatars-sd.jigx)>
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-avatars-sd.jigx).
 :::
 ::::
 
@@ -1153,7 +1371,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -1335,7 +1554,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 ::::::
@@ -1517,7 +1737,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -1703,7 +1924,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -1877,7 +2099,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -1983,7 +2206,8 @@ item:
           label: Primary Action
           icon: alarm-bell
           color: primary
-          # note that the secondary action is only for demo purposes, you can stop at the primary action
+        # note that the secondary action is only for demo purposes,
+        # you can stop at the primary action
         - onPress: 
             type: action.go-to
             options:
@@ -2106,7 +2330,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -2299,7 +2524,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -2491,7 +2717,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -2801,7 +3028,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -2998,7 +3226,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -3189,7 +3418,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -3411,7 +3641,8 @@ options:
       '$.pressed', 
       '$.time',
       '$.quantity'
-    FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+    FROM [default/cleaning-services] 
+    WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -3517,7 +3748,7 @@ item:
         ? '$ ' & $number(@ctx.current.item.hourlyrate) & ' p/hr'
         :'$ ' & $number(@ctx.current.item.onceoffrate) & ' once off'
       color: color4
-   # Add two action/buttons when you swipe right to go to another screen. 
+    # Add two action/buttons when you swipe right to go to another screen. 
     swipeable:
       right:
         - onPress:
@@ -3527,7 +3758,8 @@ item:
           label: Primary Action
           icon: alarm-bell
           color: primary
-          # note that the secondary action is only for demo purposes, you can stop at the primary action
+        # note that the secondary action is only for demo purposes,
+        # you can stop at the primary action
         - onPress:
             type: action.go-to
             options:
@@ -3650,7 +3882,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -3864,7 +4097,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -3898,10 +4132,10 @@ section-list (static)
     options:
       sections:
       - title: Services incl Materials
-    # Data configured to use datasource (static)   
+        # Data configured to use datasource (static)   
         data: =@ctx.datasources.repair-services-static[materials=true]
       - title: Services excl Materials
-    # Data configured to use datasource (static) 
+        # Data configured to use datasource (static) 
         data: =@ctx.datasources.repair-services-static[materials=false]
       item:
         type: component.list-item
@@ -3932,10 +4166,10 @@ children:
     options:
       sections:
       - title: Indoor Services
-  # Data configured to use datasource (dynamic)     
+        # Data configured to use datasource (dynamic)     
         data: =@ctx.datasources.cleaning-services-dynamic[indoor='TRUE']
       - title: Outdoor Services
- # Data configured to use datasource (dynamic)      
+        # Data configured to use datasource (dynamic)      
         data: =@ctx.datasources.cleaning-services-dynamic[indoor='FALSE']
       item: 
         type: component.list-item
@@ -4064,7 +4298,8 @@ datasources:
           '$.pressed', 
           '$.time',
           '$.quantity'
-        FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+        FROM [default/cleaning-services] 
+        WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -4093,9 +4328,8 @@ title: List with items wrapped in a card
 description: A list displaying images on list items styled in a card
 type: jig.list
 icon: task-list
-# Change the list to a horizontal list by uncommenting the isHorizontal line below
-# isHorizontal: true
-
+# Change the list to a horizontal list by uncommenting the isHorizontal line
+# below. isHorizontal: true.
 header:
   type: component.jig-header
   options:
@@ -4175,8 +4409,8 @@ children:
             text: =$substring($substringBefore(@ctx.current.item.service, " "), 1, 1) &
               $substring($substringAfter(@ctx.current.item.service, " ") , 1, 1)
             uri: =@ctx.current.item.image
-# Rating uses a value from the datasource with accompanying text.
-# By default, a single rating-star icon in the primary color is shown.               
+          # Rating uses a value from the datasource with accompanying text.
+          # By default, a single rating-star icon in the primary color is shown.               
           rating: 
             value: =@ctx.current.item.rating
             text: =@ctx.current.item.ratingText
@@ -4336,8 +4570,8 @@ children:
           isContained: true
           title: =@ctx.current.item.stat
           subtitle: =@ctx.current.item.description
-# Rating uses a percentage defined in the datasource.
-# By default, a single star icon in the primary color is shown.           
+          # Rating uses a percentage defined in the datasource.
+          # By default, a single star icon in the primary color is shown.           
           rating: 
             percentage: =@ctx.current.item.percentage
           leftElement: 
@@ -4442,10 +4676,11 @@ children:
             element: avatar
             text: ""
             uri: =@ctx.current.item.productImage
-# Rating uses a percentage from the datasource, the rating icon and color is customized.
-# By configuring the maximum property sets the number of icons required.
-# By configuring the current property colors the number of icons specified in the maximum
-# property with the value to create the rating.              
+          # Rating uses a percentage from the datasource, the rating icon and 
+          # color is customized. By configuring the maximum property sets the 
+          # number of icons required. By configuring the current property colors
+          # the number of icons specified in the maximum property with the value
+          # to create the rating.              
           rating:
             percentage: =@ctx.current.item.rating
             ratingIcon:
@@ -4515,7 +4750,6 @@ options:
       thirdLine: The product stopped working after just a few weeks. The build quality
         feels cheap, and I’m not happy with the overall experience.
       title: Disappointing experience
-
 ```
 
 product-users.jigx
@@ -4601,9 +4835,9 @@ children:
           isContained: true
           title: =@ctx.current.item.taskAssignee
           subtitle: =@ctx.current.item.taskName
-# Add multiple tags to the list-items.
-# Each tag can have its own color.
-# Tags are shown in the order they configured.           
+          # Add multiple tags to the list-items.
+          # Each tag can have its own color.
+          # Tags are shown in the order they configured.           
           tags:
             - text: =@ctx.current.item.team
               color: primary
@@ -4637,8 +4871,7 @@ datasources:
           '$.taskStatus',
           '$.team', 
           '$.Profile',
-          '$.priority'
-         
+          '$.priority'         
         FROM [default/tasks]
 ```
 :::
@@ -4695,12 +4928,13 @@ children:
           title: =@ctx.current.item.service
           subtitle: ='Duration of ' & @ctx.current.item.time & ' mins'
           horizontalItemSize: large
-# Wrap each list-item in a card.          
+          # Wrap each list-item in a card.          
           isContained: true
-# Rating uses a value from the datasource, the rating icon and color is customized.
-# By configuring the maximum property sets the number of icons required.
-# By configuring the current property colors the number of icons specified in the maximum
-# property with the value to create the rating.             
+          # Rating uses a value from the datasource, the rating icon and color
+          # is customized. By configuring the maximum property sets the number 
+          # of icons required. By configuring the current property colors the 
+          # number of icons specified in the maximum property with the value to
+          # create the rating.             
           rating: 
             ratingIcon:
               icon: thumb-up-like
@@ -4708,9 +4942,9 @@ children:
             value: 
               current: =@ctx.current.item.rating
               maximum: 5 
-# Add multiple tags to the list-items.
-# Each tag can have its own color.
-# Tags are shown in the order they configured.                
+          # Add multiple tags to the list-items.
+          # Each tag can have its own color.
+          # Tags are shown in the order they configured.                
           tags:
             - text: =('$' & @ctx.current.item.hourlyrate)
               color: color14
@@ -4721,8 +4955,8 @@ children:
             text: ''
             uri: =@ctx.current.item.image
           rightElement: 
-# The badge will display with the number of service,
-# the count is configured in the datasource.           
+           # The badge will display with the number of service, the count is
+           # configured in the datasource.           
             element: badge
             value: =@ctx.current.item.quantity
 ```
@@ -4753,7 +4987,8 @@ options:
       '$.time',
       '$.quantity',
       '$.rating'
-    FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+    FROM [default/cleaning-services] 
+    WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
 :::
 :::::
@@ -4789,9 +5024,9 @@ children:
           element: text
       divider: solid
       children:
-      # Single list-item configured outside of the list.
-      # The values are static and do not rely on a datasource.
-      # Add a left and right element for the list-item.
+        # Single list-item configured outside of the list.
+        # The values are static and do not rely on a datasource.
+        # Add a left and right element for the list-item.
         - type: component.list-item
           instanceId: list-item
           options:

@@ -7,7 +7,6 @@ This feature is currently in its **Alpha** stage of development.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
-
 :::
 
 The `component.view` is an empty container similar to the \<div> element in CSS or HTML.  Use the view component for layouts. The YAML always has the `style:` property under which all style elements such as color and direction for rows and columns are located, and the `children:` property for adding other components such as avatar, text, and icons. Multiple layers of the view component can be used to create UI requirements. You can also place a `component.card` inside the view and vice versa. If you are unfamiliar with CSS or HTML, there are several resources available, such as [https://www.w3schools.com/](https://www.w3schools.com/), that can assist you when configuring a view component.
@@ -18,29 +17,314 @@ For steps on creating a custom component, see [How to create a custom component]
 
 You can use `when` and `instanceId` with `component.view`, add the properties before the `options:` property. The available list of style options is shown below.
 
-| **Options**      | **Value**                                       |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `alignContent`   | Determine how content in the view will be aligned, applies to any component contained in the view. The following options are available:&#xA;`center`&#xA;`flex-end`&#xA;`flex-start`&#xA;`space-around`&#xA;`space-between`&#xA;`stretch`   |
-| `alignItems`     | Available options include:&#xA;`baseline`&#xA;`center`&#xA;`flex-end`&#xA;`flex-start` &#xA;`stretch`           |
-| `alignSelf`      | Available options include:&#xA;`auto`&#xA;`baseline`&#xA;`center`&#xA;`flex-end`&#xA;`flex-start` &#xA;`stretch`      |
-| `background`     | `color` - multiple, use IntelliSense to view the available list. See [Jigx color palette](https://docs.jigx.com/jigx-color-palette) to view the different colors.&#xA;`emphasis` - change the brightness and boldness of the content in the view. Available options include:&#xA;- `high` &#xA;- `medium`<br>- `low`<br>- `extra-low`<br>- `low-medium`     |
-| `border`         | Configure the border using these properties:&#xA;`bottom`&#xA;`color` - multiple, use IntelliSense to view the available list.&#xA;`emphasis` - `color`, `high`, `medium`, `low`, `extra-low`, `low-medium` &#xA;`end`&#xA;`left`&#xA;`right`&#xA;`start` - `style`&#xA;`style` - `solid`, `transparent`, `true`&#xA;`top`&#xA;`width` - use a number or expression.        |
-| `bottom`         | Configure the spacing at the bottom of the view using these properties:&#xA;`large`&#xA;`medium`&#xA;`small`&#xA;`regular`&#xA;`minimal`&#xA;`none`     |
-| `emphasis`       | Change the brightness and boldness of the content in the view. Available options include:&#xA;`high`&#xA;`medium`&#xA;`low` &#xA;`extra-low`&#xA;`low-medium`     |
-| `flex`           | Available options include:&#xA;`basis`- use a number or expression.&#xA;`direction` - `column`, `column-reverse`, `row`, `row-reverse`&#xA;`grow` - use a number or expression&#xA;`shrink` - use a number or expression&#xA;`wrap` - `wrap`, `nowrap`, `wrap-reverse`&#xA;For more information on using the flex property, see [CSS-Tricks - A complete guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)                                                                                                                                          |
-| `gap`&#xA;       | Configure the gap in the view. Available options include:&#xA;`column` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`large`&#xA;`medium`&#xA;`none`&#xA;`minimal`&#xA;`regular`&#xA;`row` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`small`  |
-|`hasShadow` | A boolean property used to toggle the display of a shadow beneath the component. When set to `true`, the control renders with a subtle shadow effect, helping it stand out visually against the background. This enhances the visual hierarchy and depth in the mobile app interface. When set to `false` (or omitted), no shadow is applied. |
-| `height`         | Determine the height of the view. Available options include:&#xA;`max`&#xA;`min`&#xA;`value`         |
-| `justifyContent` | Available options include:&#xA;`center`  &#xA;`flex-end`&#xA;`flex-start`&#xA;`space-around`&#xA;`space-between`&#xA;`space-evenly`   |
-| `left`           | Available options include:&#xA;`large`&#xA;`medium`&#xA;`small`&#xA;`regular`&#xA;`minimal`&#xA;`none`        |
-| `margin`         | Configure different margins in the view, available options include:&#xA;`bottom` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`end` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`horizontal` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`large`&#xA;`left` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`medium`&#xA;`minimal`&#xA;`none`&#xA;`regular`&#xA;`right` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`small`&#xA;`start` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`top` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`vertical` - `large`, `medium`, `small`, `regular`, `minimal`, `none`   |
-| `overflow`       | Available options include:&#xA;`hidden`&#xA;`scroll`&#xA;`visible`    |
-| `padding`        | Configure different paddings in the view, available options include:&#xA;`bottom` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`end` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`horizontal` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`large`&#xA;`left` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`medium`&#xA;`minimal`&#xA;`none`&#xA;`regular`&#xA;`right` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`small`&#xA;`start` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`top` - `large`, `medium`, `small`, `regular`, `minimal`, `none`&#xA;`vertical` -  `large`, `medium`, `small`, `regular`, `minimal`, `none` |
-| `position`       | Available options include:&#xA;`absolute`&#xA;`relative`       |
-| `radius`         | Available options include:&#xA;`large`&#xA;`medium`&#xA;`regular`&#xA;`small`&#xA;`tiny`&#xA;`bottomLeft` - `large`, `medium`, `regular`, `small`, `tiny`&#xA;`bottomrRight` - `large`, `medium`, `regular`, `small`, `tiny`&#xA;`topRight` - `large`, `medium`, `regular`, `small`, `tiny`&#xA;`topLeft` - `large`, `medium`, `regular`, `small`, `tiny`                  |
-| `right`          | Available options include:&#xA;`large`&#xA;`medium`&#xA;`small`&#xA;`regular`&#xA;`minimal`&#xA;`none`                             |
-| `top`            | Available options include:&#xA;`large`&#xA;`medium`&#xA;`small`&#xA;`regular`&#xA;`minimal`&#xA;`none`                               |
-| `width`          | Available options include:&#xA;`max`&#xA;`min`&#xA;`value`      |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="150">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Options</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Value</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>alignContent</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Determine how content in the view will be aligned, applies to any component contained in the view. The following options are available:
+      <code>center</code>
+      <code>flex-end</code>
+      <code>flex-start</code>
+      <code>space-around</code>
+      <code>space-between</code>
+      <code>stretch</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>alignItems</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Available options include:
+      <code>baseline</code>
+      <code>center</code>
+      <code>flex-end</code>
+      <code>flex-start</code>
+      <code>stretch</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>alignSelf</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Available options include:
+      <code>auto</code>
+      <code>baseline</code>
+      <code>center</code>
+      <code>flex-end</code>
+      <code>flex-start</code>
+      <code>stretch</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>background</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>color</code> - multiple, use IntelliSense to view the available list. See  to view the different colors.
+      <code>emphasis</code> - change the brightness and boldness of the content in the view. Available options include:
+      - <code>high</code>
+      - <code>medium</code>
+      - <code>low</code>
+      - <code>extra-low</code>
+      - <code>low-medium</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>border</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure the border using these properties:
+      <code>bottom</code>
+      <code>color</code> - multiple, use IntelliSense to view the available list.
+      <code>emphasis</code> - <code>color</code>, <code>high</code>, <code>medium</code>, <code>low</code>, <code>extra-low</code>, <code>low-medium</code>
+      <code>end</code>
+      <code>left</code>
+      <code>right</code>
+      <code>start</code> - <code>style</code>
+      <code>style</code> - <code>solid</code>, <code>transparent</code>, <code>true</code>
+      <code>top</code>
+      <code>width</code> - use a number or expression.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>bottom</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure the spacing at the bottom of the view using these properties:
+      <code>large</code>
+      <code>medium</code>
+      <code>small</code>
+      <code>regular</code>
+      <code>minimal</code>
+      <code>none</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>emphasis</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Change the brightness and boldness of the content in the view. Available options include:
+      <code>high</code>
+      <code>medium</code>
+      <code>low</code>
+      <code>extra-low</code>
+      <code>low-medium</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>flex</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Available options include:
+      <code>basis</code>- use a number or expression.
+      <code>direction</code> - <code>column</code>, <code>column-reverse</code>, <code>row</code>, <code>row-reverse</code>
+      <code>grow</code> - use a number or expression
+      <code>shrink</code> - use a number or expression
+      <code>wrap</code> - <code>wrap</code>, <code>nowrap</code>, <code>wrap-reverse</code>
+      For more information on using the flex property, see </p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>gap</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure the gap in the view. Available options include:
+      <code>column</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>large</code>
+      <code>medium</code>
+      <code>none</code>
+      <code>minimal</code>
+      <code>regular</code>
+      <code>row</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>small</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>hasShadow</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>A boolean property used to toggle the display of a shadow beneath the component. When set to <code>true</code>, the control renders with a subtle shadow effect, helping it stand out visually against the background. This enhances the visual hierarchy and depth in the mobile app interface. When set to <code>false</code> (or omitted), no shadow is applied.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>height</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Determine the height of the view. Available options include:
+      <code>max</code>
+      <code>min</code>
+      <code>value</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>justifyContent</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Available options include:
+      <code>center</code>
+      <code>flex-end</code>
+      <code>flex-start</code>
+      <code>space-around</code>
+      <code>space-between</code>
+      <code>space-evenly</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>left</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Available options include:
+      <code>large</code>
+      <code>medium</code>
+      <code>small</code>
+      <code>regular</code>
+      <code>minimal</code>
+      <code>none</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>margin</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure different margins in the view, available options include:
+      <code>bottom</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>end</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>horizontal</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>large</code>
+      <code>left</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>medium</code>
+      <code>minimal</code>
+      <code>none</code>
+      <code>regular</code>
+      <code>right</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>small</code>
+      <code>start</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>top</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>vertical</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>overflow</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Available options include:
+      <code>hidden</code>
+      <code>scroll</code>
+      <code>visible</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>padding</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure different paddings in the view, available options include:
+      <code>bottom</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>end</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>horizontal</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>large</code>
+      <code>left</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>medium</code>
+      <code>minimal</code>
+      <code>none</code>
+      <code>regular</code>
+      <code>right</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>small</code>
+      <code>start</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>top</code> - <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code>
+      <code>vertical</code> -  <code>large</code>, <code>medium</code>, <code>small</code>, <code>regular</code>, <code>minimal</code>, <code>none</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>position</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Available options include:
+      <code>absolute</code>
+      <code>relative</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>radius</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Available options include:
+      <code>large</code>
+      <code>medium</code>
+      <code>regular</code>
+      <code>small</code>
+      <code>tiny</code>
+      <code>bottomLeft</code> - <code>large</code>, <code>medium</code>, <code>regular</code>, <code>small</code>, <code>tiny</code>
+      <code>bottomrRight</code> - <code>large</code>, <code>medium</code>, <code>regular</code>, <code>small</code>, <code>tiny</code>
+      <code>topRight</code> - <code>large</code>, <code>medium</code>, <code>regular</code>, <code>small</code>, <code>tiny</code>
+      <code>topLeft</code> - <code>large</code>, <code>medium</code>, <code>regular</code>, <code>small</code>, <code>tiny</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>right</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Available options include:
+      <code>large</code>
+      <code>medium</code>
+      <code>small</code>
+      <code>regular</code>
+      <code>minimal</code>
+      <code>none</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>top</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Available options include:
+      <code>large</code>
+      <code>medium</code>
+      <code>small</code>
+      <code>regular</code>
+      <code>minimal</code>
+      <code>none</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>width</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Available options include:
+      <code>max</code>
+      <code>min</code>
+      <code>value</code></p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -52,11 +336,8 @@ You can use `when` and `instanceId` with `component.view`, add the properties be
 
 ## Example and code samples
 
-:::ExpandableHeading
-
+:::::ExpandableHeading
 ### Itinerary using views to create columns and rows
-
-:::
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -66,11 +347,10 @@ Examples:
 
 1. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/itinerary/itinerary.jigx).
 2. See the custom component in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/itinerary/itinerary-day.jigx).
-
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SZ4HP02vO6iboL96ULZoc-20241121-141538.png" size="70" position="center" caption="Itinerary view" alt="Itinerary view" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SZ4HP02vO6iboL96ULZoc-20241121-141538.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SZ4HP02vO6iboL96ULZoc-20241121-141538.png" size="70" position="center" caption="Itinerary view" alt="Itinerary view" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SZ4HP02vO6iboL96ULZoc-20241121-141538.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 ::::
 
@@ -309,15 +589,14 @@ children:
           image3: =@ctx.current.item.image3
           extra: =@ctx.current.item.extra     
 ```
-
 :::
+:::::
 
 :::ExpandableHeading
-
 ### Other view layout examples
 
 Explore a variety of additional code examples demonstrating the use of the `view` component on GitHub. These examples showcase different configurations and use cases to help you achieve  different layouts.
 
 - [Layouts 1 - 10](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/basic-elements/layout)
-
 :::
+

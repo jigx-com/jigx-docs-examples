@@ -22,33 +22,125 @@ These extra components allow for the easy input and collection of data. Using fo
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Form Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CmFxqLjk6bGCPvquRfLsB_form.png" size="76" caption="Form Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CmFxqLjk6bGCPvquRfLsB_form.png"}
+::Image[]{alt="Form Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CmFxqLjk6bGCPvquRfLsB_form.png" size="76" caption="Form Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CmFxqLjk6bGCPvquRfLsB_form.png" width="800" height="996" darkWidth="800" darkHeight="996"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `children`         | Define the content of the form. The following components can be used in the form:&#xA;- [avatar-field](./form/avatar-field.md)&#xA;- [choice-field](./form/choice-field.md) &#xA;- [checkbox](./form/checkbox.md)&#xA;- [date-picker](./form/date-picker.md)&#xA;- [dropdown](./form/dropdown.md)&#xA;- [duration-picker](./form/duration-picker.md)<br>-[email-field](./form/email-field.md)&#xA;- [field-row](./entity/field-row.md)&#xA;- [media-field](./form/media-field.md)&#xA;- [number-field](./form/number-field.md)&#xA;- [section](./entity/section.md)&#xA;- [signature-field](./form/signature-field.md)&#xA;- [text-field](./form/text-field.md) |
-| `instanceId`       | The unique identifier for the form.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>children</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Define the content of the form. The following components can be used in the form:</p>
+      <ul>
+      <li><a href="./form/choice-field.md">choice-field</a> </li>
+      <li><a href="./form/checkbox.md">checkbox</a></li>
+      <li><a href="./form/date-picker.md">date-picker</a></li>
+      <li><a href="./form/dropdown.md">dropdown</a></li>
+      <li><a href="./form/duration-picker.md">duration-picker</a></li>
+      <li><a href="./form/email-field.md">email-field</a></li>
+      <li><a href="./entity/field-row.md">field-row</a></li>
+      <li><a href="./form/media-field.md">media-field</a></li>
+      <li><a href="./form/number-field.md">number-field</a></li>
+      <li><a href="./entity/section.md">section</a></li>
+      <li><a href="./form/signature-field.md">signature-field</a></li>
+      <li><a href="./form/text-field.md">text-field</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>instanceId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The unique identifier for the form.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options**              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `isDiscardChangesAlertEnabled` | When set to `true` the modal window preventing accidental deletion of your data without saving will pop up. &#xA;                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `initialValues`                | Specify the data to be used as `initialValues` for fields in the form. Using the `reset-state` action with `initialValues` does not clear the form, it resets the form back to it's `initialValue`. &#xA;***Tip***: For `initialValues` on a [form](https://docs.jigx.com/examples/form) to function&#xA; `isDocument: true` in the datasource, this way you don't have to set it up in the individual components. It is set up in one place and the form will match the components to the column names of the datasource. See the example below for Form with initialValue. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="273">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isDiscardChangesAlertEnabled</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>When set to <code>true</code> the modal window preventing accidental deletion of your data without saving will pop up. </p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>initialValues</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specify the data to be used as <code>initialValues</code> for fields in the form. Using the <code>reset-state</code> action with <code>initialValues</code> does not clear the form, it resets the form back to it's <code>initialValue</code>.
+      <em><strong>Tip</strong></em>: For <code>initialValues</code> on a  to function
+      <code>isDocument: true</code> in the datasource, this way you don't have to set it up in the individual components. It is set up in one place and the form will match the components to the column names of the datasource. See the example below for Form with initialValue.</p>
+    </td>
+  </tr>
+</table>
 
-| **State Configuration**  | **Key**                                   | **Notes**                                                          |
-| ------------------------ | ----------------------------------------- | ------------------------------------------------------------------ |
-| `=@ctx.component.state.` | data&#xA;isValid&#xA;isDirty&#xA;response | - State is the variable of the component.                          |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now                      | \* Global state variable that can be used throughout the solution. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="227,130">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>State Configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.component.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>data
+      isValid
+      isDirty
+      response</p>
+    </td>
+    <td selected="false" align="left">
+      <p>State is the variable of the component.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>activeItemId
+      now</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Global state variable that can be used throughout the solution.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Form for creating a record
 
 ::::VerticalSplit{layout="left"}
@@ -91,12 +183,10 @@ children:
             options:
               label: Phone number
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Form for updating records
 
 ::::VerticalSplit{layout="left"}
@@ -185,12 +275,10 @@ datasources:
           '$.category'
         FROM [default/form] WHERE '$.category' = "update-form"
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Form with section and field-row
 
 ::::VerticalSplit{layout="left"}
@@ -262,12 +350,10 @@ children:
                         options:
                           label: Zip code
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Form with initialValue
 
 ::::VerticalSplit{layout="middle"}
@@ -431,6 +517,6 @@ item:
         parameters: 
           id: =@ctx.current.item.id
 ```
-
 :::
 :::::
+

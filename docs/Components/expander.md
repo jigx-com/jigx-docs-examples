@@ -6,42 +6,137 @@ The expander component is a collapsible element that initially displays a small 
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`         | Define the content of the expander. The following components can be used in the expander:&#xA;[avatar](./avatar.md)<br>[bar-chart](./charts/bar-chart.md)<br>[entity](./entity.md)&#xA;[form](./form.md)&#xA;[interactive-image](./interactive-image.md)<br>[line-chart](./charts/line-chart.md)&#xA;[list](./list.md)<br>[location](./location.md)&#xA;[pie-chart](./charts/pie-chart.md)<br>[stepper](./stepper.md)<br>[video-player](./video-player.md)&#xA;[web-view](./web-view.md)  |
-| `header`           | `centerElement` - what is initially visible in your jig. &#xA;The following options are available in `header`:&#xA;- component [stage&#xA;](https://docs.jigx.com/examples/stage)- component [titles](https://docs.jigx.com/examples/h1bm-titles)                                                                                                                                                                                                                                                     |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>children</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Define the content of the expander. The following components can be used in the expander:
+      <a href="./charts/bar-chart.md">bar-chart</a>
+      <a href="./entity.md">entity</a>
+      <a href="./form.md">form</a>
+      <a href="./interactive-image.md">interactive-image</a>
+      <a href="./charts/line-chart.md">line-chart</a>
+      <a href="./list.md">list</a>
+      <a href="./location.md">location</a>
+      <a href="./charts/pie-chart.md">pie-chart</a>
+      <a href="./stepper.md">stepper</a>
+      <a href="./video-player.md">video-player</a>
+      <a href="./web-view.md">web-view</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>header</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>centerElement</code> - what is initially visible in your jig.
+      The following options are available in <code>header</code>:</p>
+      <ul>
+      <li><a href="./../Custom%20components%20_Alpha_.md">Custom components (Alpha)</a> </li>
+      <li><a href="https://docs.jigx.com/examples/h1bm-titles">titles</a></li>
+      <li><a href="./expander/stage.md">stage</a> </li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-:::Iframe{code="<ul>"}
+:::Iframe{iframeHeight="0" code="<ul>"}
 
 :::
 
-| **Other options**      |                                                                                                                                                          |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `divider`              | Added the ability to add a solid or transparent `divider`. Default setting is `none`.                                                                    |
-| `expandIcon`           | Allows the ability to customize the alignment of the expander button. Default setting is `right`.                                                        |
-| `isInitiallyCollapsed` | If the expander is initially collapsed. `true` is the default setting.&#xA;`false` - expanded&#xA;`true` - collapsed                                     |
-| `leftElement`          | Add a left element, for example, an ordering number or avatar.                                                                                           |
-| `variant`              | Determine the background color for header versus body using the `variant` property with `plain` or `emphasized` values. Default setting is `emphasized`. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="207">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>divider</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Added the ability to add a solid or transparent <code>divider</code>. Default setting is <code>none</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>expandIcon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Allows the ability to customize the alignment of the expander button. Default setting is <code>right</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isInitiallyCollapsed</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>If the expander is initially collapsed. <code>true</code> is the default setting.
+      <code>false</code> - expanded
+      <code>true</code> - collapsed</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>leftElement</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a left element, for example, an ordering number or avatar.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>variant</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Determine the background color for header versus body using the <code>variant</code> property with <code>plain</code> or <code>emphasized</code> values. Default setting is <code>emphasized</code>.</p>
+    </td>
+  </tr>
+</table>
 
-| **Actions**      |                                                                                                                                     |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `onContentPress` | Action triggered while pressing on the content in the expander. Use IntelliSense (ctrl+space) to see the available list of actions. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="174">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onContentPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Action triggered while pressing on the content in the expander. Use IntelliSense (ctrl+space) to see the available list of actions.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Expander with titles in a header, entity-fields and bar-chart
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XKqP3rQXzqg4vzPaen2DY_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png" size="80" position="center" caption="Expander with titles" alt="Expander with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XKqP3rQXzqg4vzPaen2DY_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XKqP3rQXzqg4vzPaen2DY_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png" size="80" position="center" caption="Expander with titles" alt="Expander with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XKqP3rQXzqg4vzPaen2DY_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A-syqy6kp5jw7sh9vGb1t_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png" size="80" position="center" caption="Expander with bar-chart & entity-fields" alt="Expander with bar-chart & entity-fields" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A-syqy6kp5jw7sh9vGb1t_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A-syqy6kp5jw7sh9vGb1t_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png" size="80" position="center" caption="Expander with bar-chart & entity-fields" alt="Expander with bar-chart & entity-fields" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A-syqy6kp5jw7sh9vGb1t_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 ::::
 
@@ -166,21 +261,19 @@ datasources:
           '$.category' 
         FROM [default/employees] WHERE '$.firstname' = "July" AND '$.category' = 'employees'
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Expander with stage in header and entity-field
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BCWgmHKWYvB2jD2gt9jHK_hs8ymbcaghjk2zqrbi6daexpander-with-stageiphone13blueportrait.png" size="80" position="center" caption="Expander with stage" alt="Expander with stage" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BCWgmHKWYvB2jD2gt9jHK_hs8ymbcaghjk2zqrbi6daexpander-with-stageiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BCWgmHKWYvB2jD2gt9jHK_hs8ymbcaghjk2zqrbi6daexpander-with-stageiphone13blueportrait.png" size="80" position="center" caption="Expander with stage" alt="Expander with stage" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BCWgmHKWYvB2jD2gt9jHK_hs8ymbcaghjk2zqrbi6daexpander-with-stageiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ANaskxsOt0saAl1DqnWtu_rsfux7yzcblgkgbnpyu-expander-stage2.png" size="80" position="center" caption="Expander with stage & entity" alt="Expander with stage & entity" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ANaskxsOt0saAl1DqnWtu_rsfux7yzcblgkgbnpyu-expander-stage2.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ANaskxsOt0saAl1DqnWtu_rsfux7yzcblgkgbnpyu-expander-stage2.png" size="80" position="center" caption="Expander with stage & entity" alt="Expander with stage & entity" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ANaskxsOt0saAl1DqnWtu_rsfux7yzcblgkgbnpyu-expander-stage2.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 ::::
 
@@ -350,12 +443,10 @@ datasources:
           '$.toabrv' 
         FROM [default/flight-schedule]
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Expander with variant, divider & expandIcon
 
 ::::VerticalSplit{layout="middle"}
@@ -366,11 +457,10 @@ This example includes four expander components, each configured with different o
 2. Expander configured with `emphasized` variant & no divider.
 3. Expander configured with no variant and a `solid` divider.
 4. Expander configured with expandIcon aligned to the `left`, `plain` variant & no divider.
-
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-LLslE6fh7WCJh3cp8G37g-20250424-093658.gif" size="66" position="center" caption="Expander options" alt="Expander options" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-LLslE6fh7WCJh3cp8G37g-20250424-093658.gif"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-LLslE6fh7WCJh3cp8G37g-20250424-093658.gif" size="66" position="center" caption="Expander options" alt="Expander options" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-LLslE6fh7WCJh3cp8G37g-20250424-093658.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
 :::
 ::::
 
@@ -544,6 +634,6 @@ options:
      '$.expectedDelivery'
     FROM [default/product-delivery] 
 ```
-
 :::
 :::::
+

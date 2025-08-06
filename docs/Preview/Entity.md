@@ -1,10 +1,4 @@
----
-title: Entity
-slug: qC1d-entity
-description: Learn how to implement a preview feature using the entity component with code snippets and examples. Discover how to display a preview after long-pressing a widget or list-item in a jig. See how the original list does not include the preview, but the onPr
-createdAt: Tue Feb 14 2023 10:08:30 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Mar 04 2025 11:09:24 GMT+0000 (Coordinated Universal Time)
----
+# Entity
 
 The entity component allows the user to use entity (sections, field-rows and entity-fields) as the preview content.
 
@@ -13,11 +7,11 @@ The entity component allows the user to use entity (sections, field-rows and ent
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pFMGQ2qp9ZXaJAlHKv_oa_img7944iphone13blueportrait.png" size="80" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pFMGQ2qp9ZXaJAlHKv_oa_img7944iphone13blueportrait.png" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pFMGQ2qp9ZXaJAlHKv_oa_img7944iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6cHqtuQMe8YvODmv628Rw_img7945iphone13blueportrait.png" size="80" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6cHqtuQMe8YvODmv628Rw_img7945iphone13blueportrait.png" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6cHqtuQMe8YvODmv628Rw_img7945iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 ::::
 
@@ -95,11 +89,11 @@ preview:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pd2CYId_2vh5WW2Uk7OtI_img7947iphone13blueportrait.png" size="80" position="center" caption="Long-press onPress" alt="Long-press onPress"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pd2CYId_2vh5WW2Uk7OtI_img7947iphone13blueportrait.png" size="80" position="center" caption="Long-press onPress" alt="Long-press onPress" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pd2CYId_2vh5WW2Uk7OtI_img7947iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g6YrQTptI9s81ccn4V5_D_img7948iphone13blueportrait.png" size="80" position="center" caption="Long-press onPress" alt}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g6YrQTptI9s81ccn4V5_D_img7948iphone13blueportrait.png" size="80" position="center" caption="Long-press onPress" alt signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g6YrQTptI9s81ccn4V5_D_img7948iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 ::::
 
@@ -107,11 +101,11 @@ This example displays a preview after long-pressing the list-item on the widget
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SIUSRSP20autIJsntlFBk_img7949iphone13blueportrait.png" size="80" position="center" caption alt="Long-press onPress"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SIUSRSP20autIJsntlFBk_img7949iphone13blueportrait.png" size="80" position="center" caption alt="Long-press onPress" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SIUSRSP20autIJsntlFBk_img7949iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O8Q4knLTs6Ph0-Jm4iYMC_img7950iphone13blueportrait.png" size="80" position="center" caption alt="Long-press onPress"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O8Q4knLTs6Ph0-Jm4iYMC_img7950iphone13blueportrait.png" size="80" position="center" caption alt="Long-press onPress" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O8Q4knLTs6Ph0-Jm4iYMC_img7950iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 ::::
 
@@ -240,7 +234,6 @@ preview:
             style:
               isDisabled: true
 
-
   children:
     - type: component.entity
       options:
@@ -266,8 +259,7 @@ preview:
                   options:
                     label: ""
                     value: Tap to see a compact entity!
-                    
-          
+                             
   header: 
     type: component.jig-header
     options:
@@ -288,13 +280,11 @@ preview:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8AC46n2hv_cJz5EWmcOcz_img7957iphone13blueportrait.png" size="80" position="center" caption}
-
-
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8AC46n2hv_cJz5EWmcOcz_img7957iphone13blueportrait.png" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8AC46n2hv_cJz5EWmcOcz_img7957iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KHyBx7y0vC9qwqUWHfdDW_img7958iphone13blueportrait.png" size="80" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KHyBx7y0vC9qwqUWHfdDW_img7958iphone13blueportrait.png" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KHyBx7y0vC9qwqUWHfdDW_img7958iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 ::::
 
@@ -302,11 +292,11 @@ This example displays a preview after long-pressing the event in the Calendar ji
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xc032ktvr1DGe43CwA7Vz_img7959iphone13blueportrait.png" size="80" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xc032ktvr1DGe43CwA7Vz_img7959iphone13blueportrait.png" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xc032ktvr1DGe43CwA7Vz_img7959iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Uap-P2OR6R5O9qQIEC8E_img7960iphone13blueportrait.png" size="80" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Uap-P2OR6R5O9qQIEC8E_img7960iphone13blueportrait.png" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Uap-P2OR6R5O9qQIEC8E_img7960iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 ::::
 
@@ -459,8 +449,7 @@ children:
                   options:
                     label: Description
                     value: =@ctx.jig.inputs.description   
-
-              
+            
 preview:
   isCompact: true
   actions:
@@ -481,7 +470,6 @@ preview:
             linkTo: placeholder
             style:
               isDisabled: true
-
 
   children:
     - type: component.entity
@@ -504,8 +492,7 @@ preview:
                   options:
                     label: Type
                     value: =@ctx.jig.inputs.type
-                    
-          
+                              
   header: 
     type: component.jig-header
     options:
@@ -518,9 +505,5 @@ preview:
             uri: https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVldGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60
 ```
 :::
-
-
 :::::
-
-
 

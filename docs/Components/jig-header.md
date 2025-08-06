@@ -8,13 +8,53 @@ The images can be preloaded and cached using the asset folder's images file. The
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`         | Specifies which component will be used inside the jig-header. There are three options:&#xA;[component.image](./image.md)&#xA;[component.location](./location.md)&#xA;[component.video player](./video-player.md)                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `height`           | Specifies the height of the header.<br>`small`<br>`medium`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `actions`          | Choose an action from the available list, such as `go-to` to open a different jig or `open-url` to navigate to a website. The selected action appears as a link in the top right corner of the header.&#xA;Set the `icon` property in the action to display the action link as an icon instead of text.<br>Styles of actions are inherited, for example, disabling the link.<br>You can add multiple action links in the header, but ensure they accommodate the jig title and overall screen design.<br>To prevent the jig `title` and header action links from overlapping while scrolling, use either one text action or up to three icon actions. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>children</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specifies which component will be used inside the jig-header. There are three options:</p>
+      <ul>
+      <li><a href="./location.md">component.location</a></li>
+      <li><a href="./video-player.md">component.video player</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>height</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specifies the height of the header.</p>
+      <ul>
+      <li><code>small</code></li>
+      <li><code>medium</code></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>actions</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Choose an action from the available list, such as <code>go-to</code> to open a different jig or <code>open-url</code> to navigate to a website. The selected action appears as a link in the top right corner of the header.
+      Set the <code>icon</code> property in the action to display the action link as an icon instead of text.
+      Styles of actions are inherited, for example, disabling the link.
+      You can add multiple action links in the header, but ensure they accommodate the jig title and overall screen design.
+      To prevent the jig <code>title</code> and header action links from overlapping while scrolling, use either one text action or up to three icon actions.</p>
+    </td>
+  </tr>
+</table>
 
 :::hint{type="warning"}
 Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K.
@@ -23,16 +63,15 @@ Jigx does not recommend storing images in Dynamic Data (via any conversion), as 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Jig-header with image
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RQPQfkwE0vOo6no2yvRYW_header-image-smalliphone13blueportrait.png" size="76" position="center" caption="Header with image" alt="Header with image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RQPQfkwE0vOo6no2yvRYW_header-image-smalliphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RQPQfkwE0vOo6no2yvRYW_header-image-smalliphone13blueportrait.png" size="76" position="center" caption="Header with image" alt="Header with image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RQPQfkwE0vOo6no2yvRYW_header-image-smalliphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TtPV4N7FAxx1F2vm-lvSH_header-image-mediumiphone13blueportrait.png" size="74" position="center" caption="Header with image" alt="Header with image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TtPV4N7FAxx1F2vm-lvSH_header-image-mediumiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TtPV4N7FAxx1F2vm-lvSH_header-image-mediumiphone13blueportrait.png" size="74" position="center" caption="Header with image" alt="Header with image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TtPV4N7FAxx1F2vm-lvSH_header-image-mediumiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 ::::
 
@@ -69,12 +108,10 @@ header:
         source:
           uri: https://builder.jigx.com/assets/images/header.jpg
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Jig-header with location
 
 ::::VerticalSplit{layout="middle"}
@@ -179,21 +216,19 @@ datasources:
           address: 86th St Transverse, New York, NY 10024, United States
           icon: stadium-1-building 
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Jig-header with video-player
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/I2ErZFzeEDrRwupEWmysV_cc-header-small.PNG" size="76" position="center" caption="Small - header with video player" alt="Header with video player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/I2ErZFzeEDrRwupEWmysV_cc-header-small.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/I2ErZFzeEDrRwupEWmysV_cc-header-small.PNG" size="76" position="center" caption="Small - header with video player" alt="Header with video player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/I2ErZFzeEDrRwupEWmysV_cc-header-small.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N468nPuSNoW9OEiZaf_EW_cc-header-medium.PNG" size="74" position="center" caption="Medium - header with video player" alt="Header with video player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N468nPuSNoW9OEiZaf_EW_cc-header-medium.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N468nPuSNoW9OEiZaf_EW_cc-header-medium.PNG" size="74" position="center" caption="Medium - header with video player" alt="Header with video player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N468nPuSNoW9OEiZaf_EW_cc-header-medium.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -232,17 +267,15 @@ header:
         title: video-player
         autoplay: false
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Jig-header with an action (text link)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ffdFGQ8eLAPkrZ5vRK48-20250224-072301.png" size="70" position="center" caption="Jig header with an action" alt="Jig header with an action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ffdFGQ8eLAPkrZ5vRK48-20250224-072301.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ffdFGQ8eLAPkrZ5vRK48-20250224-072301.png" size="70" position="center" caption="Jig header with an action" alt="Jig header with an action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ffdFGQ8eLAPkrZ5vRK48-20250224-072301.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -296,17 +329,15 @@ children:
                   label: Support
                   value: support@jigx.com            
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Jig-header with multiple actions (icons)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m2qCNX2Ka63cThTwIfJDO-20250210-134415.png" size="70" position="center" caption="Jig header with icon actions" alt="Jig header with icon actions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m2qCNX2Ka63cThTwIfJDO-20250210-134415.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m2qCNX2Ka63cThTwIfJDO-20250210-134415.png" size="70" position="center" caption="Jig header with icon actions" alt="Jig header with icon actions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m2qCNX2Ka63cThTwIfJDO-20250210-134415.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -383,12 +414,10 @@ children:
                   label: Support
                   value: support@jigx.com            
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Jig-header actions without header children
 
 ::::VerticalSplit{layout="left"}
@@ -611,9 +640,7 @@ options:
                         </td>
                         <td>
                           Invoice #: 12345
-
                           Created: January 1, 2025
-
                           Due: January 31, 2025
                         </td>
                       </tr>
@@ -627,16 +654,12 @@ options:
                       <tr>
                         <td>
                           Company Name, Inc.
-
                           12345 Street Address
-
                           City, State, Zip
                         </td>
                         <td>
                           Customer Name
-
                           Customer Company
-
                           67890 Customer Address
                         </td>
                       </tr>
@@ -679,6 +702,6 @@ options:
           </body>
           </html>
 ```
-
 :::
 :::::
+

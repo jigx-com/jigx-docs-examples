@@ -11,20 +11,44 @@ An open-url action can be set up in various ways:
 3. As `rightElement` in the list.
 4. As an associated action in the action list.
 
-| **Core structure** |                                                                                                                                                                                                        |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `title`            | Provide a title for opening the URL, you can use expressions in the title field.                                                                                                                       |
-| `url`              | Specify the URL you want opened. The following formats are supported: &#xA;https\://&#xA;https\://www. &#xA;www.&#xA;sitename.com&#xA;external app link (See the deep link to an external app example) |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="94">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide a title for opening the URL, you can use expressions in the title field.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>url</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specify the URL you want opened. The following formats are supported: </p>
+      <p>https://</p>
+      <p><a href="">www</a>.
+      sitename.com
+      external app link (See the deep link to an external app example)</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### open-url as an action
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T3ZC0Rad-LbIo-TwkAz0n_gtzweo29zg0gybp4gfc9paiphone13blueportrait.png" size="80" position="center" caption="Open URL" alt="Open URL" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T3ZC0Rad-LbIo-TwkAz0n_gtzweo29zg0gybp4gfc9paiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T3ZC0Rad-LbIo-TwkAz0n_gtzweo29zg0gybp4gfc9paiphone13blueportrait.png" size="80" position="center" caption="Open URL" alt="Open URL" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T3ZC0Rad-LbIo-TwkAz0n_gtzweo29zg0gybp4gfc9paiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -43,16 +67,14 @@ actions:
           title: Jigx Documentation
           url: https://docs.jigx.com/examples/open-url
 ```
-
 :::::
 
 :::::ExpandableHeading
-
 ### open-url swipeable left/right
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/85MfW1I1rRzJZ2nViXGqn_lwkiwhqm9jefwzaddms2sopen-url-swipeableiphone13blueportrait.png" size="78" position="center" caption="Swipe to open URL" alt="Swipe to open URL " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/85MfW1I1rRzJZ2nViXGqn_lwkiwhqm9jefwzaddms2sopen-url-swipeableiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/85MfW1I1rRzJZ2nViXGqn_lwkiwhqm9jefwzaddms2sopen-url-swipeableiphone13blueportrait.png" size="78" position="center" caption="Swipe to open URL" alt="Swipe to open URL " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/85MfW1I1rRzJZ2nViXGqn_lwkiwhqm9jefwzaddms2sopen-url-swipeableiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -87,16 +109,14 @@ item:
             options:
               url: https://docs.jigx.com/examples/open-url
 ```
-
 :::::
 
 :::::ExpandableHeading
-
 ### open-url rightElement
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYadDhjMgTy2NrPEZyzmh_udarll0iezuhktkkwiufopen-url-rightiphone13blueportrait.png" size="80" position="center" caption="Button to open URL" alt="Button to open URL" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYadDhjMgTy2NrPEZyzmh_udarll0iezuhktkkwiufopen-url-rightiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYadDhjMgTy2NrPEZyzmh_udarll0iezuhktkkwiufopen-url-rightiphone13blueportrait.png" size="80" position="center" caption="Button to open URL" alt="Button to open URL" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYadDhjMgTy2NrPEZyzmh_udarll0iezuhktkkwiufopen-url-rightiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -125,16 +145,14 @@ item:
         options:
           url: https://docs.jigx.com/examples/open-url
 ```
-
 :::::
 
 :::::ExpandableHeading
-
 ### open-url onSuccess
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w6iMDziHnqSet6KtsHYWi_scmmooymdeswthvqltsmbopen-url-onsuccessiphone13blueportrait.png" size="80" position="center" caption="Open URL onSuccess" alt="Open URL onSuccess" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w6iMDziHnqSet6KtsHYWi_scmmooymdeswthvqltsmbopen-url-onsuccessiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w6iMDziHnqSet6KtsHYWi_scmmooymdeswthvqltsmbopen-url-onsuccessiphone13blueportrait.png" size="80" position="center" caption="Open URL onSuccess" alt="Open URL onSuccess" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w6iMDziHnqSet6KtsHYWi_scmmooymdeswthvqltsmbopen-url-onsuccessiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -172,12 +190,10 @@ actions:
                         url: https://docs.jigx.com/examples
             - type: action.go-back
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Use open-url to deep link to an external app
 
 ::::VerticalSplit{layout="left"}
@@ -202,7 +218,7 @@ actions:
       - type: action.open-url #iOS
         options:
           title: Directions
-  # Add the external app's iOS deep link in the url    
+          # Add the external app's iOS deep link in the url    
           url: comgooglemaps://?center=32.7347483943,-117.150943196&zoom=14
     
 children:
@@ -250,6 +266,6 @@ children:
              and is home to more than 3,700 rare and endangered animals representing approximately
              660 species and subspecies and a prominent botanical collection with more than 700,000 plants.
 ```
-
 :::
 :::::
+

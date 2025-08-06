@@ -22,11 +22,44 @@ Some properties are common to all components, see [Common component properties](
 | `fileName`         | Give the PDF a name, this name is used as the local file name, and is referenced as part of the uri, which can be accessed via the action's instance output (`=@ctx.actions.generatePDF.outputs.uri`). &#xA;The .pdf extension is automatically added to the `fileName`. |
 | `title`            | Provide the action button with a title, for example, Invoice.                                                                                                                                                                                                            |
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an  to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                                                                |
-| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
-| `styles`          | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>icon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Select a icon to display when the action is configured as the secondary button or in a <a href="./../Components/jig-header.md">jig-header</a>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isHidden</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>styles</code></p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li>
+      <li><code>isDisabled</code> - Displays the action button as greyed out.</li>
+      <li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li>
+      <li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -363,7 +396,7 @@ actions:
                     </html>
                 # Give the pdf a name that is used when saved or shared.  
                 fileName: invoice-1
-           # Second action to save the file to the Dynamic database.   
+            # Second action to save the file to the Dynamic database.   
             - type: action.execute-entity
               options: 
                 provider: DATA_PROVIDER_DYNAMIC
@@ -513,7 +546,8 @@ datasources:
 html.js
 
 ```javascript
-// Create a JS function that generates HTML, reference the input fields from the datasource
+// Create a JS function that generates HTML, reference the input fields from
+// the datasource.
   export function generateHTML(invoiceInfo) {
      const { firstName, customerCompany, address } = invoiceInfo;
     // Specify what must be returned.

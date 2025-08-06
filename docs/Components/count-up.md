@@ -6,27 +6,71 @@ The count-up component is a display-only component that continuously updates in 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" size="60" position="center" caption="Count-up" alt="Count-up" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" size="60" position="center" caption="Count-up" alt="Count-up" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                     |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `startTimestamp`   | Add a start date, date/time or time, in milliseconds either using:&#xA;- datasource, e.g. `=@ctx.datasources.events[1].date`&#xA;- expression, e.g. `=$toMillis('2025-05-19T10:43:04.377Z')`&#xA;If `startTimestamp` is omitted or set to null, the component remains static and does not count up. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="153">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>startTimestamp</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a start date, date/time or time, in milliseconds either using:</p>
+      <ul>
+      <li>datasource, e.g. <code>=@ctx.datasources.events[1].date</code></li>
+      <li>expression, e.g. <code>=$toMillis('2025-05-19T10:43:04.377Z')</code>
+      If <code>startTimestamp</code> is omitted or set to null, the component remains static and does not count up.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `labels`          | The count-up label displays time in the format Days: Hours: Minutes: Seconds. The Days section appears only when the timer exceeds 24 hours.&#xA;Configuration options are:&#xA;- `isVisible` (default: `true`)- Controls visibility of the count-up labels. Setting it to `false` hides the labels.&#xA;- `position` - Determines whether the count-up labels (Days: Hours: Minutes: Seconds) appear at the top or bottom of the count-up display. |
-| `size`            | Choose between `extra-large` and `medium` sizes, with `extra-large` as the default if the property is not specified in the YAML.                                                                                                                                                                                                                                                                                                                    |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>labels</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The count-up label displays time in the format Days: Hours: Minutes: Seconds. The Days section appears only when the timer exceeds 24 hours.
+      Configuration options are:</p>
+      <ul>
+      <li><code>isVisible</code> (default: <code>true</code>)- Controls visibility of the count-up labels. Setting it to <code>false</code> hides the labels.</li>
+      <li><code>position</code> - Determines whether the count-up labels (Days: Hours: Minutes: Seconds) appear at the top or bottom of the count-up display.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>size</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Choose between <code>extra-large</code> and <code>medium</code> sizes, with <code>extra-large</code> as the default if the property is not specified in the YAML.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Count-up basic
 
 ::::VerticalSplit{layout="middle"}
@@ -35,7 +79,7 @@ This example shows how to set up a basic `count-up` component that starts counti
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" size="60" position="center" caption="Count-up" alt="Count-up" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" size="60" position="center" caption="Count-up" alt="Count-up" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 ::::
 
@@ -69,17 +113,15 @@ children:
       # Provide the start time.
       startTimestamp: =$now()
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Count-up sizes and lables
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png" size="60" position="center" caption="Count-up in varying sizes" alt="Count-up in varying sizes" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png" size="60" position="center" caption="Count-up in varying sizes" alt="Count-up in varying sizes" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -135,12 +177,10 @@ children:
           # Start time defined in ISO format converted to milliseconds.
           startTimestamp: =$toMillis('2025-03-06T23:00:00Z')              
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Count-up using a datasource
 
 ::::VerticalSplit{layout="middle"}
@@ -149,7 +189,7 @@ This example showcases two `count-up` components using a datasource with timesta
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T_KydUti3vw3y1gc-20250319-110401.png" size="60" position="center" caption="Start time defined in a datasource" alt="Start time defined in a datasource" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T_KydUti3vw3y1gc-20250319-110401.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T_KydUti3vw3y1gc-20250319-110401.png" size="60" position="center" caption="Start time defined in a datasource" alt="Start time defined in a datasource" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T_KydUti3vw3y1gc-20250319-110401.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 ::::
 
@@ -200,12 +240,10 @@ children:
           # Start time defined in ISO format in a datasource converted to milliseconds.
           startTimestamp: =$toMillis(@ctx.datasources.time[1].timeStamp)
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Count-up using state in a when condition
 
 ::::VerticalSplit{layout="middle"}
@@ -295,6 +333,6 @@ children:
     options:
       startTimestamp: =$millis() - 10000
 ```
-
 :::
 :::::
+

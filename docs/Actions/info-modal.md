@@ -2,29 +2,123 @@
 
 The info-modal is a pop-up window that provides additional information or context without navigating away from the current screen. It is used to display additional information and offer guidance or instructions. The modal appears as a temporary overlay on top of the current screen, dimming the background to focus your attention on the modal content. The Info-modal includes interactive elements like buttons, images, icons, or links.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GT3z8bVI4Thn1WDWMkgPB_cc-infom-intro.png" size="86" position="center" caption="Info-modal" alt="Info-modal" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GT3z8bVI4Thn1WDWMkgPB_cc-infom-intro.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GT3z8bVI4Thn1WDWMkgPB_cc-infom-intro.png" size="86" position="center" caption="Info-modal" alt="Info-modal" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GT3z8bVI4Thn1WDWMkgPB_cc-infom-intro.png" width="800" height="538" darkWidth="800" darkHeight="538"}
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                   |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| `modal`            | Modal contains the properties that will determine the button and content in the modal.                                            |
-| `instanceId`       | The unique identifier for the info-modal that can be referenced in other jigs.                                                    |
-| `title`            | Provide a short title for display at the top of the info-modal. You can use text, an expression or a datasource to set the title. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="134">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>modal</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Modal contains the properties that will determine the button and content in the modal.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>instanceId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The unique identifier for the info-modal that can be referenced in other jigs.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide a short title for display at the top of the info-modal. You can use text, an expression or a datasource to set the title.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `buttonText`      | Give the button a label by providing short text. The button displays as a link. If an action like `onConfirm` is configured the button displays as a button.                                                                                                                                                                                                                                                                     |
-| `description`     | Provide the text description or instructions for the user to follow. This creates the content in the info-modal. You can use text, an expression or a datasource. This can have multiple lines.                                                                                                                                                                                                                                  |
-| `element`         | The following elements can be added to the modal: &#xA;- `type` - Specify either an `icon`, `image`, `avatar`. &#xA;- When `image` is specified a `uri` is required.&#xA;- Use `color` to change the `icon` color, available colors are positive, negative, primary, warning. The default color is primary if no color is specificed.&#xA;- When using an `avatar` you can specifiy `text` or use a `uri` to show in the avatar. |
-| `icon`            | Add an icon to the info-modal, for example a dollar icon. The icon apprears on the center of the modal.  A list of icons are available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information. This property relates to the action button at the bottom of the screen.                                                                                                                                                                        |
-| `isHidden`        | When set to `true` the info-modal (button at the bottom of the screen) is hidden on a jig.                                                                                                                                                                                                                                                                                                                                       |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="136">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>buttonText</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Give the button a label by providing short text. The button displays as a link. If an action like <code>onConfirm</code> is configured the button displays as a button.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>description</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide the text description or instructions for the user to follow. This creates the content in the info-modal. You can use text, an expression or a datasource. This can have multiple lines.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>element</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The following elements can be added to the modal:
+      - <code>type</code> - Specify either an <code>icon</code>, <code>image</code>, <code>avatar</code>.
+      - When <code>image</code> is specified a <code>uri</code> is required.
+      - Use <code>color</code> to change the <code>icon</code> color, available colors are positive, negative, primary, warning. The default color is primary if no color is specificed.
+      - When using an <code>avatar</code> you can specifiy <code>text</code> or use a <code>uri</code> to show in the avatar.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>icon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add an icon to the info-modal, for example a dollar icon. The icon apprears on the center of the modal.  A list of icons are available. See  for more information. This property relates to the action button at the bottom of the screen.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isHidden</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>When set to <code>true</code> the info-modal (button at the bottom of the screen) is hidden on a jig.</p>
+    </td>
+  </tr>
+</table>
 
-| **Actions**   |                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onConfirmed` | The action is triggered when the button is pressed. Use IntelliSense (ctrl+space) to see the list of available actions.&#xA;Action to execute when the info-modal button is pressed. &#xA;- If the action is not defined, the info-modal will be closed.&#xA;- If defined, the info-modal closes after the action is executed.&#xA;- The button will have primary action style. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="133">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onConfirmed</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The action is triggered when the button is pressed. Use IntelliSense to see the list of available actions.
+      Action to execute when the info-modal button is pressed. </p>
+      <ul>
+      <li>If the action is not defined, the info-modal will be closed.</li>
+      <li>If defined, the info-modal closes after the action is executed.</li>
+      <li>The button will have primary action style.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -41,7 +135,6 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### info-modal with avatar
 
 ::::VerticalSplit{layout="middle"}
@@ -53,7 +146,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VJwrxIQhnivZs1hnS-Glo_cc-infom-avatar.PNG" size="70" position="center" caption="Info-modal with avatar" alt="Info-modal with avatar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VJwrxIQhnivZs1hnS-Glo_cc-infom-avatar.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VJwrxIQhnivZs1hnS-Glo_cc-infom-avatar.PNG" size="70" position="center" caption="Info-modal with avatar" alt="Info-modal with avatar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VJwrxIQhnivZs1hnS-Glo_cc-infom-avatar.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -98,17 +191,15 @@ actions:
               text: AV
               uri: https://images.unsplash.com/photo-1546961329-78bef0414d7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### info-modal with icon
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nHMaSdrD4gXN3E5WClJKO_cc-infom-icon.PNG" size="70" position="center" caption="Info-modal with icon" alt="Info-modal with icon" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nHMaSdrD4gXN3E5WClJKO_cc-infom-icon.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nHMaSdrD4gXN3E5WClJKO_cc-infom-icon.PNG" size="70" position="center" caption="Info-modal with icon" alt="Info-modal with icon" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nHMaSdrD4gXN3E5WClJKO_cc-infom-icon.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -161,17 +252,15 @@ actions:
               icon: maps-pin
               color: primary
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### info-modal with image
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7FLQDKXDKA4e1UCDKLEcx_cc-infom-image.PNG" size="70" position="center" caption="Info-modal with an image" alt="Info-modal with an image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7FLQDKXDKA4e1UCDKLEcx_cc-infom-image.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7FLQDKXDKA4e1UCDKLEcx_cc-infom-image.PNG" size="70" position="center" caption="Info-modal with an image" alt="Info-modal with an image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7FLQDKXDKA4e1UCDKLEcx_cc-infom-image.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -223,15 +312,13 @@ actions:
               resizeMode: contain
               uri: https://images.unsplash.com/photo-1502085671122-2d218cd434e6?q=80&w=1226&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ```
-
 :::
 :::::
 
 ::::ExpandableHeading
-
 ### info-modal in calendar jig
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42pa6T1c-ZmK3uaq-Fb-Y_cc-infom-calendar.PNG" size="90" position="center" caption="Info-modal in a calendar jig" alt="Info-modal in a calendar jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42pa6T1c-ZmK3uaq-Fb-Y_cc-infom-calendar.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42pa6T1c-ZmK3uaq-Fb-Y_cc-infom-calendar.PNG" size="90" position="center" caption="Info-modal in a calendar jig" alt="Info-modal in a calendar jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42pa6T1c-ZmK3uaq-Fb-Y_cc-infom-calendar.PNG" width="800" height="389" darkWidth="800" darkHeight="389"}
 
 In this example the info-modal is used four places in the jig:
 
@@ -281,25 +368,7 @@ actions:
               type: icon
               icon: calendar
               color: negative
-            
-datasources:
-  story:
-    type: datasource.static
-    options:
-      data:
-        - description: Updated the team on your progress for the week
-          from: =$fromMillis($toMillis($now()) + 3600000)
-          location: Main Boardroom
-          title: Team weekly sync
-          to: =$fromMillis($toMillis($now()) + 3600000 + 1800000)
-          active: false
-        - description: Updated the team on your progress for the week
-          from: $fromMillis($toMillis($now()) + 7200000)
-          location: break area
-          title: Social meal
-          to: $fromMillis($toMillis($now()) + 7200000 + 3600000)
-          active: false
-    
+               
 data: =@ctx.datasources.story
 item:
   type: component.event
@@ -321,16 +390,36 @@ item:
               uri: https://cdn1.iconfinder.com/data/icons/managers-15/488/Untitled-5-512.png
 ```
 
+datasource
+
+```yaml
+datasources:
+  story:
+    type: datasource.static
+    options:
+      data:
+        - description: Updated the team on your progress for the week
+          from: =$fromMillis($toMillis($now()) + 3600000)
+          location: Main Boardroom
+          title: Team weekly sync
+          to: =$fromMillis($toMillis($now()) + 3600000 + 1800000)
+          active: false
+        - description: Updated the team on your progress for the week
+          from: $fromMillis($toMillis($now()) + 7200000)
+          location: break area
+          title: Social meal
+          to: $fromMillis($toMillis($now()) + 7200000 + 3600000)
+          active: false
+```
 :::
 ::::
 
 :::::ExpandableHeading
-
 ### info-modal in default jig
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T_RsT3Q_vvFf2sJUSbFr4_cc-infom-default.PNG" size="70" position="center" caption="Info-modal on a default jig" alt="Info-modal on a default jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T_RsT3Q_vvFf2sJUSbFr4_cc-infom-default.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T_RsT3Q_vvFf2sJUSbFr4_cc-infom-default.PNG" size="70" position="center" caption="Info-modal on a default jig" alt="Info-modal on a default jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T_RsT3Q_vvFf2sJUSbFr4_cc-infom-default.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -466,17 +555,16 @@ options:
       '$.modify',
       '$.position',
       '$.employee-startWork' 
-    FROM [default/employees] WHERE '$.category' = "employee-detail"
+    FROM [default/employees] 
+    WHERE '$.category' = "employee-detail"
 ```
-
 :::
 :::::
 
 ::::ExpandableHeading
-
 ### info-modal in list jig
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gCf59HwaD_adrk5tU5b_z_cc-infom-list2.PNG" size="80" position="center" caption="Info-modal in a list jig" alt="Info-modal in a list jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gCf59HwaD_adrk5tU5b_z_cc-infom-list2.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gCf59HwaD_adrk5tU5b_z_cc-infom-list2.PNG" size="80" position="center" caption="Info-modal in a list jig" alt="Info-modal in a list jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gCf59HwaD_adrk5tU5b_z_cc-infom-list2.PNG" width="800" height="538" darkWidth="800" darkHeight="538"}
 
 In this example the info-modal is used three places in the jig:
 
@@ -515,7 +603,58 @@ onRefresh:
         type: icon
         icon: hourglass
         color: warning
-        
+
+data: =@ctx.datasources.components
+item:
+  type: component.list-item
+  options:
+    title: =@ctx.current.item.name
+    subtitle: =@ctx.current.item.reason
+    color:
+      - when: =(@ctx.current.item.result= 'Success' ? true :false)
+        color: color2
+    progress: =@ctx.current.item.progress
+    leftElement: 
+      element: checkbox
+      value: =(@ctx.current.item.status= 'Finished' ? true :false)
+    style:
+      isError: =(@ctx.current.item.result= 'Unsuccess' ? true :false)
+      isStrikeThrough: =(@ctx.current.item.status= 'Finished' ? true :false)
+    rightElement: 
+      element: value      
+      text: ="$ " & @ctx.current.item.value
+    
+    swipeable:
+      left:
+        - label: Details
+          icon: people-man-8
+          color: primary
+          onPress: 
+            type: action.info-modal
+            options:
+              modal:
+                title: Customer Details
+                buttonText: Close
+                description: =(@ctx.current.item.name & '\n' & @ctx.current.item.subtitle & '\n' & '\n$' & @ctx.current.item.value)
+                element:
+                  type: avatar
+                  text: =@ctx.current.item.avatar-text
+                  
+actions:
+  - children:
+      - type: action.info-modal
+        options:
+          title: Sales information
+          icon: chart
+          modal:
+            title: Sales information 
+            description: Customer and sales information is subject to change frequently  
+            buttonText: Go back
+```
+
+datasource
+
+```yaml
 datasources:
   components:
     type: datasource.static
@@ -632,61 +771,11 @@ datasources:
         result: Success  
         reason:   
         badge: off
-
-data: =@ctx.datasources.components
-item:
-  type: component.list-item
-  options:
-    title: =@ctx.current.item.name
-    subtitle: =@ctx.current.item.reason
-    color:
-      - when: =(@ctx.current.item.result= 'Success' ? true :false)
-        color: color2
-    progress: =@ctx.current.item.progress
-    leftElement: 
-      element: checkbox
-      value: =(@ctx.current.item.status= 'Finished' ? true :false)
-    style:
-      isError: =(@ctx.current.item.result= 'Unsuccess' ? true :false)
-      isStrikeThrough: =(@ctx.current.item.status= 'Finished' ? true :false)
-    rightElement: 
-      element: value      
-      text: ="$ " & @ctx.current.item.value
-    
-    swipeable:
-      left:
-        - label: Details
-          icon: people-man-8
-          color: primary
-          onPress: 
-            type: action.info-modal
-            options:
-              modal:
-                title: Customer Details
-                buttonText: Close
-                description: =(@ctx.current.item.name & '\n' & @ctx.current.item.subtitle & '\n' & '\n$' & @ctx.current.item.value)
-                element:
-                  type: avatar
-                  text: =@ctx.current.item.avatar-text
-                  
-actions:
-  - children:
-      - type: action.info-modal
-        options:
-          title: Sales information
-          icon: chart
-          modal:
-            
-            title: Sales information 
-            description: Customer and sales information is subject to change frequently  
-            buttonText: Go back
 ```
-
 :::
 ::::
 
 ::::ExpandableHeading
-
 ### info-modal in onPress action on a widget
 
 ![Info-modal on widget](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x16UEinXJlMDbA6LAMVXp_cc-infom-widget.png "Info-modal on widget")
@@ -705,80 +794,120 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 info-modal-widget.jigx
 
 ```yaml
-
+# Main wellness week landing screen configuration.
 title: Wellness Week
 type: jig.default
-       
-children: 
+
+children:
+  # Hero image section - calming/wellness themed background.
   - type: component.image
     options:
-      height: 300
-      resizeMode: cover
+      # Fixed height for hero image.
+      height: 300  
+      # Scale image to cover entire area.                  
+      resizeMode: cover              
       source:
         uri: https://images.unsplash.com/photo-1524901548305-08eeddc35080?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FsbXxlbnwwfHwwfHx8MA%3D%3D
- 
-  - type: component.widgets
+
+  # Grid layout containing 4 interactive widgets
+  - type: component.grid
     options:
       children:
-        - size: "1x1"
-          jigId: info-modal-placeholder-join
-          onPress: 
-            type: action.info-modal
-            options:
-              modal:
-                element: 
-                  type: icon
-                  icon: yoga
-                  color: warning
-                title: Wellness Week
-                buttonText: Join
-                description: Center your wellbeing and come join is for a week of yoga 
-              onConfirmed: 
-                type: action.go-to
-                options:
-                  linkTo: info-modal-placeholder-join
-        - size: "1x1"
-          jigId: info-modal-placeholder
-          onPress: 
-            type: action.info-modal
-            options:
-              modal:
-                element: 
-                  type: avatar
-                  text: JS
-                title: Venue
-                buttonText: Directions
-                description: Wellness week will take place at Jodi's studio in Western Avenue, Seattle
-              onConfirmed: 
-                type: action.go-to
-                options:
-                  linkTo: fullscreen-location-dd
-        - size: "1x1"
-          jigId: info-modal-placeholder-shop
-          onPress: 
-            type: action.info-modal
-            options:
-              modal:
-                element: 
-                  type: image
-                  resizeMode: contain
-                  uri: https://images.unsplash.com/31/RpgvvtYAQeqAIs1knERU_vegetables.jpg?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-                title: Healthy Products
-                buttonText: Shop
-                description: Enhance your lifestyle with our premium selection of healthy products, now available at our store 
-              onConfirmed: 
-                type: action.open-url
-                options:
-                  url: https://thrivemarket.com/?utm_source=google&utm_medium=cpc&utm_campaign=Non-Brand_SEM_Diet_Healthy&utm_content=151719993106&utm_term=healthy%20food&device=c&ccode=acq60fogwp&ccode_force=1&gad_source=1&gclid=Cj0KCQjwpNuyBhCuARIsANJqL9ODbLM28MMxGvxJ9gK9ohdecVeLkrldAriwFwYg91JDLUEBMfwvK74aAsv6EALw_wcB
-        - size: "1x1"
-          jigId: info-modal-placeholder-contact
-          onPress: 
-            type: action.info-modal
-            options:
-              modal:
-                title: About us
-                buttonText: Go Back
-                description: At our wellness center, we are dedicated to nurturing your mind, body, and spirit through holistic and personalized care                
+        # Widget 1: Yoga/Wellness Week Information
+        - type: component.grid-item
+          options:
+            # Single grid cell size
+            size: 1x1                
+            children:
+              type: component.jig-widget
+              options:
+                jigId: info-modal-placeholder
+                icon: yoga           
+                onPress:
+                  type: action.info-modal
+                  options:
+                    modal:
+                      element:
+                        type: icon
+                        icon: yoga
+                        color: warning    
+                      title: Wellness Week
+                      buttonText: Join
+                      description: Center your wellbeing and come join is for a week of yoga
+                    # Action when user taps the join button.
+                    onConfirmed:
+                      type: action.go-to
+                      options:
+                        linkTo: info-modal-placeholder
+
+        # Widget 2: Venue Information
+        - type: component.grid-item
+          options:
+            size: 1x1
+            children:
+              type: component.jig-widget
+              options:
+                jigId: info-modal-placeholder
+                icon: people-man-1-geometric    
+                onPress:
+                  type: action.info-modal
+                  options:
+                    modal:
+                      element:
+                        type: avatar
+                        text: JS      
+                      title: Venue
+                      buttonText: Directions
+                      description: Wellness week will take place at Jodi's studio in Western Avenue, Seattle
+                    # Action when user taps the venue button.
+                    onConfirmed:
+                      type: action.go-to
+                      options:
+                        linkTo: info-modal-placeholder
+
+        # Widget 3: Healthy Products Shop
+        - type: component.grid-item
+          options:
+            size: 1x1
+            children:
+              type: component.jig-widget
+              options:
+                jigId: info-modal-placeholder
+                icon: shop          
+                onPress:
+                  type: action.info-modal
+                  options:
+                    modal:
+                      element:
+                        type: image
+                        # Fit image within bounds
+                        resizeMode: contain    
+                        uri: https://images.unsplash.com/31/RpgvvtYAQeqAIs1knERU_vegetables.jpg?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                      title: Healthy Products
+                      buttonText: Shop
+                      description: Enhance your lifestyle with our premium selection of healthy products, now available at our store
+                    # Action opens external shopping website
+                    onConfirmed:
+                      type: action.open-url
+                      options:
+                        url: https://thrivemarket.com/?utm_source=google&utm_medium=cpc&utm_campaign=Non-Brand_SEM_Diet_Healthy&utm_content=151719993106&utm_term=healthy%20food&device=c&ccode=acq60fogwp&ccode_force=1&gad_source=1&gclid=Cj0KCQjwpNuyBhCuARIsANJqL9ODbLM28MMxGvxJ9gK9ohdecVeLkrldAriwFwYg91JDLUEBMfwvK74aAsv6EALw_wcB
+
+        # Widget 4: About Us Information
+        - type: component.grid-item
+          options:
+            size: 1x1
+            children:
+              type: component.jig-widget
+              options:
+                jigId: info-modal-placeholder
+                icon: content-browser-edit  
+                onPress:
+                  type: action.info-modal
+                  options:
+                    modal:
+                      title: About us
+                      buttonText: Go Back    
+                      description: At our wellness center, we are dedicated to nurturing your mind, body, and spirit through holistic and personalized care
 ```
 
 info-modal-placeholder.jigx
@@ -798,7 +927,6 @@ header:
         source:
           uri: https://images.unsplash.com/photo-1622737133809-d95047b9e673?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
           
-
 children:
   - type: component.entity
     options:
@@ -808,6 +936,6 @@ children:
             label: Placeholder
             value: Placeholder
 ```
-
 :::
 ::::
+
