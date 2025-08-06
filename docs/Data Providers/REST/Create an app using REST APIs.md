@@ -54,4 +54,3 @@ The REST data provider is used in Jigx to integrate with REST. In this section, 
 :::hint{type="success"}
 When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and REST API, which can help you integrate similar solutions into your projects more effectively.
 :::
-
