@@ -9,24 +9,87 @@ This widget allows you to add primary and/or secondary actions (buttons) to a wi
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bXQzrMgA9C2WU-VcYpOYU_wd-actions.png" size="58" position="center" caption="Action widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bXQzrMgA9C2WU-VcYpOYU_wd-actions.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bXQzrMgA9C2WU-VcYpOYU_wd-actions.png" size="58" position="center" caption="Action widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bXQzrMgA9C2WU-VcYpOYU_wd-actions.png" width="800" height="840" darkWidth="800" darkHeight="840"}
 :::
 ::::
 
 ## Configuration options
 
-| **Core structure** |                                                                        |
-| ------------------ | ---------------------------------------------------------------------- |
-| `onPress`          | Configure the action to be executed when the action button is pressed. |
-| `title`            | Display the text content for the title.                                |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="138">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure the action to be executed when the action button is pressed.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Display the text content for the title.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                       |
-| ----------------- | ----------------------------------------------------------------------------------------------------- |
-| `footer`          | Add text to the footer of the widget.                                                                 |
-| `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                   |
-| `placeholders`    | Specify a placeholder text to display if there is no data, for example - `title: No data to display`. |
-| `primary`         | Configure a `title` and onPress properties for a primary action button.                               |
-| `secondary`       | Configure a `title` and `onPress` properties for a secondary action button.                           |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="137">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>footer</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add text to the footer of the widget.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>footerAlign</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Align the footer text to <code>left</code>, <code>right</code>, <code>center</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>placeholders</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specify a placeholder text to display if there is no data, for example - <code>title: No data to display</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>primary</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure a <code>title</code> and onPress properties for a primary action button.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>secondary</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure a <code>title</code> and <code>onPress</code> properties for a secondary action button.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
@@ -35,7 +98,7 @@ This widget allows you to add primary and/or secondary actions (buttons) to a wi
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VtuoNb4XzobXvjv_YNiP9_actionsiphone13blueportrait.png" size="80" position="center" caption="Actions widget" alt="Actions widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VtuoNb4XzobXvjv_YNiP9_actionsiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VtuoNb4XzobXvjv_YNiP9_actionsiphone13blueportrait.png" size="80" position="center" caption="Actions widget" alt="Actions widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VtuoNb4XzobXvjv_YNiP9_actionsiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem

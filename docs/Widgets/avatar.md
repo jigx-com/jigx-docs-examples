@@ -6,24 +6,91 @@ The avatar widget can be used as a unique visual identifier, for example, to dis
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dfGetxkAlt3Vcv55GBnnm_wd-avatar.PNG" size="70" position="center" caption="Avatar widgets" alt="Avatar widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dfGetxkAlt3Vcv55GBnnm_wd-avatar.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dfGetxkAlt3Vcv55GBnnm_wd-avatar.PNG" size="70" position="center" caption="Avatar widgets" alt="Avatar widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dfGetxkAlt3Vcv55GBnnm_wd-avatar.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
 ## Configuration options
 
-| **Core structure** |                                                                                          |
-| ------------------ | ---------------------------------------------------------------------------------------- |
-| `text`             | Display text content on the widget surface when the URI is empty, for example, initials. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="130">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>text</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Display text content on the widget surface when the URI is empty, for example, initials.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                     |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `bottom`          | The [titles](https://docs.jigx.com/examples/titles) component will be added to the bottom of the widget.                                            |
-| `footer`          | Add text to the footer of the widget.                                                                                                               |
-| `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                                                                 |
-| `placeholders`    | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                                               |
-| `top`             | The [titles](https://docs.jigx.com/examples/titles) component will be added to the top of the widget.                                               |
-| `uri`             | Provide the `uri` for the image. The following can be used: &#xA;- https//: *imagesource*&#xA;- image from a datasource referenced in an expression |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="137">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>bottom</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The  component will be added to the bottom of the widget.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>footer</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add text to the footer of the widget.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>footerAlign</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Align the footer text to <code>left</code>, <code>right</code>, <code>center</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>placeholders</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specify a placeholder text to display if there is no data, for example - <code>title: No data to display</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>top</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The  component will be added to the top of the widget.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>uri</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide the <code>uri</code> for the image. The following can be used: </p>
+      <ul>
+      <li>https//: <em>imagesource</em></li>
+      <li>image from a datasource referenced in an expression</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
@@ -32,7 +99,7 @@ The avatar widget can be used as a unique visual identifier, for example, to dis
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2zMUlETjxsJBNeE0fHc0e_avatariphone13blueportrait.png" size="80" position="center" caption="Avatar widget" alt="Avatar widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2zMUlETjxsJBNeE0fHc0e_avatariphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2zMUlETjxsJBNeE0fHc0e_avatariphone13blueportrait.png" size="80" position="center" caption="Avatar widget" alt="Avatar widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2zMUlETjxsJBNeE0fHc0e_avatariphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -113,7 +180,7 @@ See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/bl
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_U1nDQMrehHQwSgcfmuRF_wd-avatartitle.PNG" size="74" position="center" caption="Avatar widget with title" alt="Avatar widget with title" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_U1nDQMrehHQwSgcfmuRF_wd-avatartitle.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_U1nDQMrehHQwSgcfmuRF_wd-avatartitle.PNG" size="74" position="center" caption="Avatar widget with title" alt="Avatar widget with title" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_U1nDQMrehHQwSgcfmuRF_wd-avatartitle.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -133,8 +200,7 @@ widgets:
           title: Marty Randolph
           subtitle: Product Design Lead
           align: center
-          icon: calendar                 
-   
+          icon: calendar                  
 ```
 
 grid-item
@@ -159,7 +225,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQMj-dwf5_KkhMH4AMvys_avatargroupiphone13blueportrait.png" size="80" position="center" caption="Avatar in a group widget" alt="Avatar in a group widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQMj-dwf5_KkhMH4AMvys_avatargroupiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQMj-dwf5_KkhMH4AMvys_avatargroupiphone13blueportrait.png" size="80" position="center" caption="Avatar in a group widget" alt="Avatar in a group widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQMj-dwf5_KkhMH4AMvys_avatargroupiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -257,7 +323,7 @@ See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/bl
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-52t4bV7-5EmSZicDP_BNb-20240808-080947.PNG" size="74" position="center" caption="Avatar widget in group widget" alt="Avatar widget in group widget" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-52t4bV7-5EmSZicDP_BNb-20240808-080947.PNG"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-52t4bV7-5EmSZicDP_BNb-20240808-080947.PNG" size="74" position="center" caption="Avatar widget in group widget" alt="Avatar widget in group widget" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-52t4bV7-5EmSZicDP_BNb-20240808-080947.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 ::::
 
@@ -303,8 +369,7 @@ widgets:
                 leftElement: 
                   element: avatar
                   text: =@ctx.current.item.avatar-text
-                  uri: =@ctx.current.item.avatar-uri
-                
+                  uri: =@ctx.current.item.avatar-uri                
 ```
 
 datasource

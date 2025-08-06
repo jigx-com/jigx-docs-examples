@@ -16,11 +16,11 @@ The `organization` variable is used to get information about the actual organiza
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/l9Evc2zPxdR6ZYdCJIOcm_img7983iphone13blueportrait.png" size="92" position="flex-end" caption="Organization expression" alt="Organization expression" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/l9Evc2zPxdR6ZYdCJIOcm_img7983iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/l9Evc2zPxdR6ZYdCJIOcm_img7983iphone13blueportrait.png" size="92" position="flex-end" caption="Organization expression" alt="Organization expression" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/l9Evc2zPxdR6ZYdCJIOcm_img7983iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
-This example returns the organization's `id` . Each organization configured in [Organization Settings](#) in Jigx Managementand will have a unique id.
+This example returns the organization's `id` . Each organization configured in [Organization Settings]() in Jigx Managementand will have a unique id.
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/organization.jigx).
 
 ```yaml
@@ -44,20 +44,169 @@ The system variable in an expression is used to get information about devices, f
 
 The supported variables for the system variable are:
 
-| **Variable**             | **Expression**                                                              | **Results**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ------------------------ | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| appVersion               | `=@ctx.system.appVersion`                                                   | This variable returns the current version of the installed app, which is useful for troubleshooting, crash tracing, and debugging issues.&#xA;E.g. 1.110.7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| deviceType               | `=@ctx.system.deviceType`                                                   | The variable returns the current user's device type, such as tablet or handset.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| geocodes                 | `=@ctx.system.geocodes`                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| isOffline                | `=@ctx.system.isOffline`                                                    | Boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| isOnline                 | `=@ctx.system.isOnline`                                                     | Boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| isPortrait               | `=@ctx.system.isPortrait`                                                   | The variable is set with a boolean and is used to configure the behavior of components in either portrait or landscape mode.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| locale                   | `=@ctx.system.locale`                                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| user                     | `=@ctx.user.email`&#xA;or&#xA;`=@ctx.user.id`                               | [username@jigx.com](mailto\:username@jigx.com)&#xA;or&#xA;XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| isLocationSharingEnabled | `=@ctx.system.isLocationSharingEnabled`                                     | Boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| solution                 | `=@ctx.solution.id`                                                         | XXXXXXXX-XXX-XXXX-XXXX-XXXXXXXXXXXX                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| timezone                 | `=@ctx.system.timezone.offset`                                              | Get the information about the device's timezone, it can be:&#xA;-`name`: e.g. Europe/Prague&#xA;-`offset`: e.g. +200                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| geolocation              |                                                                             |  **Accuracy: &#xA;**`=@ctx.system.geolocation.coords.accuracy`**&#xA;Altitude:&#xA;**`=@ctx.system.geolocation.coords.altitude`&#xA;**Altitude Accuracy:** `=@ctx.system.geolocation.coords.altitudeAccuracy`&#xA;**Location - Heading:** `=@ctx.system.geolocation.coords.heading`&#xA;**Location - Latitude:&#xA;**`=@ctx.system.geolocation.coords.latitude`&#xA;**Location - Longitude:**&#xA;`=@ctx.system.geolocation.coords.longitude`&#xA;**Location - Speed:&#xA;**`=@ctx.system.geolocation.coords.speed`&#xA;**Location - Timestamp:&#xA;**`=@ctx.system.geolocation.timestamp`&#xA;**Location - Entire array (All details):**&#xA;`=$string(@ctx.system.geolocation)`  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="140,270">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Variable</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Expression</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Results</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>appVersion</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.system.appVersion</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>This variable returns the current version of the installed app, which is useful for troubleshooting, crash tracing, and debugging issues.
+      E.g. 1.110.7</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>deviceType</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.system.deviceType</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The variable returns the current user's device type, such as tablet or handset.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>geocodes</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.system.geocodes</code></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>isOffline</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.system.isOffline</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Boolean</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>isOnline</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.system.isOnline</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Boolean</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>isPortrait</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.system.isPortrait</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The variable is set with a boolean and is used to configure the behavior of components in either portrait or landscape mode.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>locale</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.system.locale</code></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>user</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.user.email</code>
+      or
+      <code>=@ctx.user.id</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>or
+      XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>isLocationSharingEnabled</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.system.isLocationSharingEnabled</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Boolean</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>solution</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.id</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>XXXXXXXX-XXX-XXXX-XXXX-XXXXXXXXXXXX</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>timezone</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.system.timezone.offset</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Get the information about the device's timezone, it can be:
+      -<code>name</code>: e.g. Europe/Prague
+      -<code>offset</code>: e.g. +200</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>geolocation</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>**Accuracy:
+      <strong><code>=@ctx.system.geolocation.coords.accuracy</code></strong>
+      Altitude:
+      **<code>=@ctx.system.geolocation.coords.altitude</code>
+      <strong>Altitude Accuracy:</strong> <code>=@ctx.system.geolocation.coords.altitudeAccuracy</code>
+      <strong>Location - Heading:</strong> <code>=@ctx.system.geolocation.coords.heading</code>
+      **Location - Latitude:
+      **<code>=@ctx.system.geolocation.coords.latitude</code>
+      <strong>Location - Longitude:</strong>
+      <code>=@ctx.system.geolocation.coords.longitude</code>
+      **Location - Speed:
+      **<code>=@ctx.system.geolocation.coords.speed</code>
+      **Location - Timestamp:
+      **<code>=@ctx.system.geolocation.timestamp</code>
+      <strong>Location - Entire array (All details):</strong>
+      <code>=$string(@ctx.system.geolocation)</code></p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
@@ -235,11 +384,40 @@ The *user* is used to get information about the logged-in user, for example, nam
 
 ## Configuration
 
-| **Result** | **Expression**           |
-| ---------- | ------------------------ |
-| Name       | `=@ctx.user.displayName` |
-| Email      | `=@ctx.user.email`       |
-| id         | `=@ctx.user.id`          |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="126">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Result</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Expression</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Name</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.user.displayName</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Email</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.user.email</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>id</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.user.id</code></p>
+    </td>
+  </tr>
+</table>
 
 :::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
@@ -276,15 +454,44 @@ children:
 
 # Solution
 
-The `solution` variable is used to get information about the specific Jigx solution, for example, name, and id. [Custom variables](#) can be set in [Solution Settings](#) in Jigx Management, and the variable value referenced in the solution expression.
+The `solution` variable is used to get information about the specific Jigx solution, for example, name, and id. [Custom variables]() can be set in [Solution Settings]() in Jigx Management, and the variable value referenced in the solution expression.
 
 ## Configuration
 
-| **Result**     | **Expression**                                |
-| -------------- | --------------------------------------------- |
-| name           | `=@ctx.solution.name`                         |
-| id             | `=@ctx.solution.id`                           |
-| variable value | `=@ctx.solution.settings.custom.variableName` |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Result</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Expression</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>name</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.name</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>id</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.id</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>variable value</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.settings.custom.variableName</code></p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
@@ -325,7 +532,7 @@ children:
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG" size="86" position="center" caption="Showing variable value" alt="Showing variable value" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG" size="86" position="center" caption="Showing variable value" alt="Showing variable value" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 ::::
 

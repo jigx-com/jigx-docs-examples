@@ -1,63 +1,140 @@
----
-title: image
-slug: XtQx-image
-description: Learn about the powerful "image" widget in Jig and its various configuration options in this comprehensive document. Discover how to display and style images, preload and cache for offline viewing, add titles and descriptions, and much more. Get inspired
-createdAt: Thu Jun 09 2022 20:14:59 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Mar 10 2025 09:33:23 GMT+0000 (Coordinated Universal Time)
----
+# image
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
 The image widget is set up primarily for displaying an image on the Home Hub or jig.
-
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BNwALszoXt-3CorKq-BBL_img3836.PNG" size="40" position="center" caption="Image widgets with title component" alt="Image widgets with title component"}
-
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BNwALszoXt-3CorKq-BBL_img3836.PNG" size="40" position="center" caption="Image widgets with title component" alt="Image widgets with title component" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BNwALszoXt-3CorKq-BBL_img3836.PNG" width="800" height="1732" darkWidth="800" darkHeight="1732"}
 :::
 ::::
 
-::::VerticalSplit{layout}
+::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5UxSksZMj2iwk5GzfoX_G_img3834.PNG" size="44" position="center" caption="Image widgets" alt="Image widgets"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5UxSksZMj2iwk5GzfoX_G_img3834.PNG" size="44" position="center" caption="Image widgets" alt="Image widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5UxSksZMj2iwk5GzfoX_G_img3834.PNG" width="800" height="1732" darkWidth="800" darkHeight="1732"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ANtYLUJTB1Wl5FkVYHIrE_img3837.PNG" size="40" position="center" caption alt="Image widgets with title component"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ANtYLUJTB1Wl5FkVYHIrE_img3837.PNG" size="40" position="center" caption alt="Image widgets with title component" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ANtYLUJTB1Wl5FkVYHIrE_img3837.PNG" width="800" height="1732" darkWidth="800" darkHeight="1732"}
 :::
 ::::
 
 :::hint{type="info"}
-The images can be preloaded and cached using the asset folder's _images_ file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/assets).
+The images can be preloaded and cached using the asset folder's *images* file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/assets).
 :::
 
 ## Configuration options
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `source`           | For the URL of the image. The following can be used: &#xA;- https//: _imagesource_&#xA;- image from a datasource referenced in an expression &#xA;The image source (either a remote URL or a local file resource).This property can contain several remote URLs, specified together with their `width` and `height` and `scale`.The native side will then choose the best uri to display based on the measured size of the image container. A `cache` property can be added to control how network requests interact with the local cache. Supported formats are png, jpg, jpeg, bmp, gif, webp (Android only), psd (iOS only). |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="172">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>source</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>For the URL of the image. The following can be used:
+      - https//: <em>imagesource</em>
+      - image from a datasource referenced in an expression
+      The image source (either a remote URL or a local file resource).This property can contain several remote URLs, specified together with their <code>width</code> and <code>height</code> and <code>scale</code>.The native side will then choose the best uri to display based on the measured size of the image container. A <code>cache</code> property can be added to control how network requests interact with the local cache. Supported formats are png, jpg, jpeg, bmp, gif, webp (Android only), psd (iOS only).</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options**   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `bottom`            | The [titles](https://docs.jigx.com/examples/titles) component will be added to the bottom of the widget.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `footer`            | Add text to the footer of the widget.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `footerAlign`       | Align the footer text to `left`, `right`, `center`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `height`            | Change constraints of an image's height. Use a proper `resizeMode` to achieve the best results in all different device resolutions.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `isContentOverlaid` | Specifiy if the [titles](<./Content widget components/titles.md>) component and description should overlay the image or placed above/ below the image. Use `true` for overlay, `false` for above or below.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `placeholders`      | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `resizeMode`        | Determines how to resize the image when the frame doesn't match the raw image dimensions. &#xA;- `cover:` Scale the image uniformly (maintain the image's aspect ratio)so that both dimensions (width and height) of the image will be equal to or larger than the corresponding dimension of the view (minus padding).&#xA;- `contain:` Scale the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or less than the corresponding dimension of the view (minus padding).&#xA;- `stretch:` Scale width and height independently, This may change the aspect ratio of the source.&#xA;- `center:` Scale the image down so that it is completely visible, if bigger than the area of the view. The image will not be scaled up. |
-| `top`               | The [titles](https://docs.jigx.com/examples/titles) component will be added to the top of the widget.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="178">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>bottom</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The  component will be added to the bottom of the widget.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>footer</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add text to the footer of the widget.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>footerAlign</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Align the footer text to <code>left</code>, <code>right</code>, <code>center</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>height</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Change constraints of an image's height. Use a proper <code>resizeMode</code> to achieve the best results in all different device resolutions.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isContentOverlaid</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specifiy if the  component and description should overlay the image or placed above/ below the image. Use <code>true</code> for overlay, <code>false</code> for above or below.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>placeholders</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specify a placeholder text to display if there is no data, for example - <code>title: No data to display</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>resizeMode</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Determines how to resize the image when the frame doesn't match the raw image dimensions. </p>
+      <ul>
+      <li><code>cover:</code> Scale the image uniformly (maintain the image's aspect ratio)so that both dimensions (width and height) of the image will be equal to or larger than the corresponding dimension of the view (minus padding).</li>
+      <li><code>contain:</code> Scale the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or less than the corresponding dimension of the view (minus padding).</li>
+      <li><code>stretch:</code> Scale width and height independently, This may change the aspect ratio of the source.</li>
+      <li><code>center:</code> Scale the image down so that it is completely visible, if bigger than the area of the view. The image will not be scaled up.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>top</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The  component will be added to the top of the widget.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Image widget 2x2
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IvjeY42pnn7Fwh6zp_bzb_wd-image22.PNG" size="80" position="center" caption="Image widget " alt="Image widget 2x2"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IvjeY42pnn7Fwh6zp_bzb_wd-image22.PNG" size="80" position="center" caption="Image widget " alt="Image widget 2x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IvjeY42pnn7Fwh6zp_bzb_wd-image22.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -65,12 +142,11 @@ An `image` widget using 2x2 size with `component.titles` at the `bottom` to add 
 
 **Examples**:
 See the complete example using in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/image-2_2x2.jigx).
-
 :::
 ::::
 
 :::CodeblockTabs
-image-2_2x2.jigx
+image-2\_2x2.jigx
 
 ```yaml
 widgets:
@@ -102,12 +178,10 @@ children:
           jigId: image-2_2x2
           widgetId: image2-2x2
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Image widget 2x4
 
 ::::VerticalSplit{layout="middle"}
@@ -119,12 +193,12 @@ See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/bl
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qi0EVHoh4A4-Gv7lgFHo__wd-image24.PNG" size="80" position="center" caption="Image widget 2x4" alt="Image widget 2x4"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qi0EVHoh4A4-Gv7lgFHo__wd-image24.PNG" size="80" position="center" caption="Image widget 2x4" alt="Image widget 2x4" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qi0EVHoh4A4-Gv7lgFHo__wd-image24.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
 :::CodeblockTabs
-image-1_2x4.jigx
+image-1\_2x4.jigx
 
 ```yaml
 widgets:
@@ -157,17 +231,15 @@ children:
           jigId: image-1_2x4
           widgetId: image1-2x4
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Image widget 4x2
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/45b1aY0d9UNmxrtFAC8wl_wd-image42.PNG" size="80" position="center" caption="Image widget 4x2" alt="Image widget 4x2"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/45b1aY0d9UNmxrtFAC8wl_wd-image42.PNG" size="80" position="center" caption="Image widget 4x2" alt="Image widget 4x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/45b1aY0d9UNmxrtFAC8wl_wd-image42.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -175,12 +247,11 @@ An `image` widget using 4x2 size with `component.titles` at the `bottom` to add 
 
 **Example:**
 See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/image-2_4x2.jigx).
-
 :::
 ::::
 
 :::CodeblockTabs
-image-2_4x2
+image-2\_4x2
 
 ```yaml
 widgets:
@@ -214,17 +285,15 @@ children:
           jigId: image-2_4x2
           widgetId: image2-4x2
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Image widget in group widget 4x2
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/c34eu2ef8d_IEH5l4Ydno_wd-imagegroup.PNG" size="80" position="center" caption="Group image widget 4x2" alt="Group image widget 4x2"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/c34eu2ef8d_IEH5l4Ydno_wd-imagegroup.PNG" size="80" position="center" caption="Group image widget 4x2" alt="Group image widget 4x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/c34eu2ef8d_IEH5l4Ydno_wd-imagegroup.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -236,7 +305,7 @@ See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/bl
 ::::
 
 :::CodeblockTabs
-combined-image-image-1_4x2
+combined-image-image-1\_4x2
 
 ```yaml
 widgets:
@@ -284,22 +353,19 @@ children:
           jigId: combined-image-image-1_4x2
           widgetId: combined-image1-4x2
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Image widget in group widget 4x4
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 The 4x4 `image` widget in this example is a simple widget with just an image shown. This is great when you want to combine the widget in another jig.
-
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/D_FnGdR1a4YduCE4mOwd1_wd-image44.PNG" size="80" position="center" caption="Image widget 4x4" alt="Image widget 4x4"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/D_FnGdR1a4YduCE4mOwd1_wd-image44.PNG" size="80" position="center" caption="Image widget 4x4" alt="Image widget 4x4" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/D_FnGdR1a4YduCE4mOwd1_wd-image44.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -329,6 +395,6 @@ children:
           jigId: image-widget 4x4
           widgetId: imageWidget4x4
 ```
-
 :::
 :::::
+

@@ -1,30 +1,123 @@
----
-title: Date & Time
-slug: p6OO-date
-description: Learn how to manipulate date and time expressions using JSONata Date/Time functions with this comprehensive document. Discover configuration examples to retrieve the current timestamp in different formats like ISO 8601, milliseconds, date, time, and more.
-createdAt: Thu Jul 27 2023 13:16:08 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue May 14 2024 12:00:54 GMT+0000 (Coordinated Universal Time)
----
+# Date & Time
 
-Date and time expressions use the <a href="https://docs.jsonata.org/date-time-functions" target="_blank">JSONata Date/Time functions</a> to return various formats of date/time, date, or time. These expressions are used to get the current timestamp in ISO 8601 formatted string, use an expression over the timestamp to convert the timestamp into a specific format.
+Date and time expressions use the [https://docs.jsonata.org/date-time-functions](https://docs.jsonata.org/date-time-functions)JSONata Date/Time functions to return various formats of date/time, date, or time. These expressions are used to get the current timestamp in ISO 8601 formatted string, use an expression over the timestamp to convert the timestamp into a specific format.
 
 ## Configuration
 
-| **Result**                                                     | **Expression**                                                             |
-| -------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| Current timestamp as ISO 8601                                  | `=$now()`                                                                  |
-| Current datetime in milliseconds                               | `=$toMillis($now())`                                                       |
-| Current date \[M]/\[D]/\[Y]                                    | `=$fromMillis($toMillis($now()), '[M]/[D]/[Y]')`                           |
-| Current date \[M01]/\[D01]/\[Y0001]                            | `=$fromMillis($toMillis($now()), '[M01]/[D01]/[Y0001]')`                   |
-| Current datetime '\[M01]/\[D01]/\[Y0001] \[H01]:\[m01]:\[s01]' | `=$fromMillis($toMillis($now()), '[M01]/[D01]/[Y0001] [H01]:[m01]:[s01]')` |
-| Current date \[MI]/\[DI]/\[YI]                                 | `=$fromMillis($toMillis($now()), '[MI]/[DI]/[YI]')`                        |
-| Current date \[D1o] \[MNn] \[Y]                                | `=$fromMillis($toMillis($now()), '[D1o] [MNn] [Y]')`                       |
-| Current day                                                    | `=$fromMillis($toMillis($now()), '[FNn]')`                                 |
-| Current time                                                   | `=$fromMillis($toMillis($now()), '[H01]:[m01]:[s01]')`                     |
-| Current time am/pm                                             | `=$fromMillis($toMillis($now()), '[h#1]:[m01][P]')`                        |
-| Current time '\[H01]:\[m01]:\[s01] \[z]', '-0500'              | `=$fromMillis($toMillis($now()), '[H01]:[m01]:[s01] [z]', '-0500')`        |
-| Convert UTC to milliseconds                                    | `=$toMillis()`                                                             |
-| Convert millisecond to UTC                                     | `=$fromMillis()`                                                           |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="313">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Result</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Expression</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Current timestamp as ISO 8601</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$now()</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Current datetime in milliseconds</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$toMillis($now())</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Current date [M]/[D]/[Y]</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$fromMillis($toMillis($now()), '[M]/[D]/[Y]')</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Current date [M01]/[D01]/[Y0001]</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$fromMillis($toMillis($now()), '[M01]/[D01]/[Y0001]')</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Current datetime '[M01]/[D01]/[Y0001] [H01]:[m01]:[s01]'</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$fromMillis($toMillis($now()), '[M01]/[D01]/[Y0001] [H01]:[m01]:[s01]')</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Current date [MI]/[DI]/[YI]</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$fromMillis($toMillis($now()), '[MI]/[DI]/[YI]')</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Current date [D1o] [MNn] [Y]</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$fromMillis($toMillis($now()), '[D1o] [MNn] [Y]')</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Current day</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$fromMillis($toMillis($now()), '[FNn]')</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Current time</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$fromMillis($toMillis($now()), '[H01]:[m01]:[s01]')</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Current time am/pm</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$fromMillis($toMillis($now()), '[h#1]:[m01][P]')</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Current time '[H01]:[m01]:[s01] [z]', '-0500'</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$fromMillis($toMillis($now()), '[H01]:[m01]:[s01] [z]', '-0500')</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Convert UTC to milliseconds</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$toMillis()</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Convert millisecond to UTC</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$fromMillis()</code></p>
+    </td>
+  </tr>
+</table>
 
 ## Consideration
 
@@ -59,13 +152,11 @@ onFocus:
 Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.
 :::
 
-## Examples and code snippets 
+## Examples and code snippets
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-
-
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rLyfpAJd6UWubCCOtnOx8_img6600iphone13blueportrait.png" size="72" position="center" caption="Date & time expressions" alt="Date & time expressions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rLyfpAJd6UWubCCOtnOx8_img6600iphone13blueportrait.png" size="72" position="center" caption="Date & time expressions" alt="Date & time expressions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rLyfpAJd6UWubCCOtnOx8_img6600iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem

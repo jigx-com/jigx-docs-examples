@@ -4,10 +4,32 @@ You can use [JSONata Functional programming](https://docs.jsonata.org/programmin
 
 ## Configuration
 
-| **Result**                                                        | **Expression**                                                                                                                          |
-| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Determine if the value is bigger or smaller than a certain number | `"=@ctx.datasources.mydata.number2 > 10 ? 'Number is bigger':'Number is lower'"`                                                        |
-| Variables                                                         | `="<div style='font-size: 40px'>Welcome on board <b>" & @ctx.datasources.html.name & "</b> - " & @ctx.datasources.html.email & "</div>` |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="209">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Result</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Expression</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Determine if the value is bigger or smaller than a certain number</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>"=@ctx.datasources.mydata.number2 > 10 ? 'Number is bigger':'Number is lower'"</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Variables</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>="&#x3C;div style='font-size: 40px'>Welcome on board &#x3C;b>" &#x26; @ctx.datasources.html.name &#x26; "&#x3C;/b> - " &#x26; @ctx.datasources.html.email &#x26; "&#x3C;/div></code></p>
+    </td>
+  </tr>
+</table>
 
 :::hint{type="warning"}
 Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.

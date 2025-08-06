@@ -2,31 +2,98 @@
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-This widget visually represents a status using a combination of icons and colors. The status widget can be used alone or combined with another widget inside a <a href="https://docs.jigx.com/examples/group" target="_blank">widget/group</a>.
+This widget visually represents a status using a combination of icons and colors. The status widget can be used alone or combined with another widget inside a [group]() widget.
 
-The status returned is based on a boolean condition.
+The status returned is based on a Boolean condition.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tXAcZO-9QGzYEwDiMbZNh_img3839.PNG" size="74" position="center" caption="Status widget" alt="Status widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tXAcZO-9QGzYEwDiMbZNh_img3839.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tXAcZO-9QGzYEwDiMbZNh_img3839.PNG" size="74" position="center" caption="Status widget" alt="Status widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tXAcZO-9QGzYEwDiMbZNh_img3839.PNG" width="800" height="1732" darkWidth="800" darkHeight="1732"}
 :::
 ::::
 
 ## Configuration options
 
-| **Core options** |                                                                                                                                                                                                                                              |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `statuses`       | Define at least one or more statuses based on conditions. First evaluated to true will be used.&#xA;The `statuses` property includes:<br>* `when` - the condition when the status should be shown
-* `icon` - the icon that should be shown |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="118">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>statuses</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Define at least one or more statuses based on conditions. First evaluated to true will be used.
+      The <code>statuses</code> property includes:</p>
+      <ul>
+      <li><code>when</code> - the condition when the status should be shown</li>
+      <li><code>icon</code> - the icon that should be shown</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                            |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `bottom`          | The [titles](https://docs.jigx.com/examples/titles) component will be added to the bottom of the widget.                                   |
-| `color`           | Choose a color from the provided [color palette](#) for the icon. The default color is black if the property is not specified in the YAML. |
-| `footer`          | Add text to the footer of the widget.                                                                                                      |
-| `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                                                        |
-| `placeholder`     | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                                      |
-| `top`             | The [titles](https://docs.jigx.com/examples/titles) component will be added to the top of the widget.                                      |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="142">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>bottom</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The  component will be added to the bottom of the widget.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>color</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Choose a color from the provided  for the icon. The default color is black if the property is not specified in the YAML.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>footer</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add text to the footer of the widget.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>footerAlign</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Align the footer text to <code>left</code>, <code>right</code>, <code>center</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>placeholder</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specify a placeholder text to display if there is no data, for example - <code>title: No data to display</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>top</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The  component will be added to the top of the widget.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
@@ -35,7 +102,7 @@ The status returned is based on a boolean condition.
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tnCD7-eQIE_OqJABIWIRi_statusiphone13blueportrait.png" size="74" position="center" caption="Status widget" alt="Status widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tnCD7-eQIE_OqJABIWIRi_statusiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tnCD7-eQIE_OqJABIWIRi_statusiphone13blueportrait.png" size="74" position="center" caption="Status widget" alt="Status widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tnCD7-eQIE_OqJABIWIRi_statusiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -148,7 +215,7 @@ See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/bl
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WTumYhYzqm5kEe-lKlCCK-20240808-084743.PNG" size="74" position="center" caption="Status widget 2x4" alt="Status widget 2x4" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WTumYhYzqm5kEe-lKlCCK-20240808-084743.PNG"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WTumYhYzqm5kEe-lKlCCK-20240808-084743.PNG" size="74" position="center" caption="Status widget 2x4" alt="Status widget 2x4" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WTumYhYzqm5kEe-lKlCCK-20240808-084743.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 ::::
 
@@ -258,7 +325,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7VYbPDMKaVncUxzZOFVTz_wd-status4x2.PNG" size="74" position="center" caption="Status Widget 4x2" alt="Status Widget 4x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7VYbPDMKaVncUxzZOFVTz_wd-status4x2.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7VYbPDMKaVncUxzZOFVTz_wd-status4x2.PNG" size="74" position="center" caption="Status Widget 4x2" alt="Status Widget 4x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7VYbPDMKaVncUxzZOFVTz_wd-status4x2.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem

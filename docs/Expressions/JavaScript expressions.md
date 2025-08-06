@@ -1,9 +1,4 @@
----
-title: JavaScript expressions
-slug: fRwc-me
-createdAt: Wed May 22 2024 12:31:51 GMT+0000 (Coordinated Universal Time)
-updatedAt: Fri Oct 11 2024 09:14:53 GMT+0000 (Coordinated Universal Time)
----
+# JavaScript expressions
 
 JavaScript functions allow you to write modular and reusable code. By encapsulating specific functionalities within functions, you can easily reuse them across different parts of your application. This modular approach not only reduces redundancy but also makes the codebase more maintainable and scalable. For example, a function that handles user date and time can be reused in multiple components or screens, ensuring consistency and reducing the likelihood of errors.
 
@@ -17,20 +12,18 @@ Refer to the section on [JavaScript expressions](https://docs.jigx.com/expressio
 ## Text formatting
 
 :::::ExpandableHeading
-
 ### Return a string
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sS6PAehgDxXFhL9p0MOSe-20240919-062431.PNG" size="70" position="center" caption="JavaScript function returning a string" alt="JavaScript function returning a string"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sS6PAehgDxXFhL9p0MOSe-20240919-062431.PNG" size="70" position="center" caption="JavaScript function returning a string" alt="JavaScript function returning a string" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sS6PAehgDxXFhL9p0MOSe-20240919-062431.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 
 :::VerticalSplitItem
-In this example, a JavaScript function called helloWorld is created to return a string showing _Hello World_ in a [text-field](./../Components/form/text-field.md). In the `value` property an expression calling the function is used.
+In this example, a JavaScript function called helloWorld is created to return a string showing *Hello World* in a [text-field](./../Components/form/text-field.md). In the `value` property an expression calling the function is used.
 
 **Example:**
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-string.jigx).
-
 :::
 ::::
 
@@ -64,7 +57,8 @@ children:
           instanceId: textField
           options:
             label: Function Result
-            # Use an expression and call the JavaScript file and function in the file.
+            # Use an expression and call the JavaScript file and function in the
+            # file.
             value: =$jsfunctions.helloWorld()
 ```
 
@@ -75,12 +69,10 @@ export function helloWorld() {
   return "Hello World";
 }
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Concatenate first and last name
 
 ::::VerticalSplit{layout="middle"}
@@ -92,7 +84,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--3XKaQJ8QzDJviYHr82mq-20240919-064930.PNG" size="70" position="center" caption="Concatenate JavaScript Function " alt="Concatenate JavaScript Function "}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--3XKaQJ8QzDJviYHr82mq-20240919-064930.PNG" size="70" position="center" caption="Concatenate JavaScript Function " alt="Concatenate JavaScript Function " signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--3XKaQJ8QzDJviYHr82mq-20240919-064930.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 ::::
 
@@ -135,8 +127,9 @@ children:
           instanceId: fullName
           options:
             label: Full Name
-            # Use an expression and call the JavaScript file and function in the file.
-            # Provide the values to be used in the function by referencing components values.
+            # Use an expression and call the JavaScript file and function in the
+            # file. Provide the values to be used in the function by referencing 
+            # components values.
             value: =$jsfunctions.getFullName(@ctx.components.firstName.state.value, @ctx.components.lastName.state.value)
             style:
               isDisabled: true
@@ -149,17 +142,15 @@ export function getFullName(firstName, lastName) {
   return firstName + " " + lastName;
 }
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Capitalize job title
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Rxqd_ngkDbzh4qCeqA-kW-20240919-065058.PNG" size="70" position="center" caption="Capatilize job title function" alt="Capatilize job title function"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Rxqd_ngkDbzh4qCeqA-kW-20240919-065058.PNG" size="70" position="center" caption="Capatilize job title function" alt="Capatilize job title function" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Rxqd_ngkDbzh4qCeqA-kW-20240919-065058.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 
 :::VerticalSplitItem
@@ -211,8 +202,9 @@ children:
           when: =@ctx.components.jobTitle.state.value != ''
           options:
             label: Capitilized Job Title
-            # Use an expression and call the JavaScript file and function in the file.
-            # Provide the values to be used in the function by referencing components values.
+            # Use an expression and call the JavaScript file and function in the
+            # file. Provide the values to be used in the function by referencing
+            # components values.
             value: =$jsfunctions.capitalizeJobTitle(@ctx.components.jobTitle.state.value)
 ```
 
@@ -248,14 +240,12 @@ export function capitalizeJobTitle(str) {
     .join(" ");
 }
 ```
-
 :::
 :::::
 
 ## Numbers and dates
 
 :::::ExpandableHeading
-
 ### Calculate tax plus total
 
 ::::VerticalSplit{layout="middle"}
@@ -273,7 +263,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-KAFfpDrBMtsqtzdjsS6d0-20240919-065231.PNG" size="70" position="center" caption="Function calculating tax" alt="Function calculating tax"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-KAFfpDrBMtsqtzdjsS6d0-20240919-065231.PNG" size="70" position="center" caption="Function calculating tax" alt="Function calculating tax" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-KAFfpDrBMtsqtzdjsS6d0-20240919-065231.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 ::::
 
@@ -284,7 +274,6 @@ tax.jigx
 title: calculateTax & calculateTotal
 description: |
   The calculateTax function is designed to compute the tax amount based on a given subtotal and a specified tax rate. It takes two parameters: subtotal, which represents the pre-tax amount, and taxRate, which is the tax percentage to be applied.
-
   Take a look at the configuration of Total Amount. You can use a function as a parameter for another function.
 type: jig.default
 icon: dog-bark
@@ -324,9 +313,10 @@ children:
           instanceId: tax
           options:
             label: TAX
-            # Use an expression and call the JavaScript file and functions in the file.
-            # Nest functions in the expression to get the result you require
-            # Provide the values to be used in the function by referencing components values.
+            # Use an expression and call the JavaScript file and functions in the 
+            # file. Nest functions in the expression to get the result you require  
+            # Provide the values to be used in the function by referencing 
+            # components values.
             value: |
               =$jsfunctions.formatCurrency(
                   $jsfunctions.calculateTax(
@@ -339,9 +329,10 @@ children:
           instanceId: totalAmount
           options:
             label: Total Amount
-            # Use an expression and call the JavaScript file and functions in the file.
-            # Nest functions in the expression to get the result you require
-            # Provide the values to be used in the function by referencing components values.
+            # Use an expression and call the JavaScript file and functions in the 
+            # file. Nest functions in the expression to get the result you require
+            # Provide the values to be used in the function by referencing 
+            # components values.
             value: |
               =$jsfunctions.formatCurrency(
                   $jsfunctions.calculateTotal(
@@ -375,17 +366,15 @@ export function formatCurrency(amount, currencySymbol) {
   );
 }
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Calculate loan payment
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Fpz7MLSFjObQEogI1-XhE-20240919-070345.PNG" size="70" position="center" caption="Calulate loan payment function" alt="Calulate loan payment function"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Fpz7MLSFjObQEogI1-XhE-20240919-070345.PNG" size="70" position="center" caption="Calulate loan payment function" alt="Calulate loan payment function" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Fpz7MLSFjObQEogI1-XhE-20240919-070345.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 
 :::VerticalSplitItem
@@ -407,7 +396,6 @@ loan-repayment.jigx
 title: calculateLoanPayment
 description: |
   The function calculates the monthly loan payment based on the principal amount, annual interest rate (as a percentage), and loan term in years.
-
   This function is useful for financial applications that calculate monthly mortgage or loan payments based on the principal amount, annual interest rate, and loan term in years. It helps users determine their monthly payment obligations accurately.
 type: jig.default
 header:
@@ -450,9 +438,10 @@ children:
           instanceId: loanPayment
           options:
             label: Estimated monthly payment amount
-            # Use an expression and call the JavaScript file and functions in the file.
-            # Nest functions in the expression to get the result you require
-            # Provide the values to be used in the function by referencing components values.
+            # Use an expression and call the JavaScript file and functions in the
+            # file.Nest functions in the expression to get the result you require
+            # Provide the values to be used in the function by referencing 
+            # components values.
             value: =$jsfunctions.formatCurrency($jsfunctions.calculateLoanPayment(@ctx.components.principal.state.value, @ctx.components.annualRatePercent.state.value, @ctx.components.loanDuration.state.value),'$')
             style:
               isDisabled: true
@@ -481,12 +470,10 @@ export function formatCurrency(amount, currencySymbol) {
   );
 }
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Calculate age
 
 ::::VerticalSplit{layout="middle"}
@@ -501,7 +488,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-v8Gc91Be3cfzuVlTQwVU0-20240919-070438.PNG" size="70" position="center" caption="Function to calulate age" alt="Function to calulate age"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-v8Gc91Be3cfzuVlTQwVU0-20240919-070438.PNG" size="70" position="center" caption="Function to calulate age" alt="Function to calulate age" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-v8Gc91Be3cfzuVlTQwVU0-20240919-070438.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 ::::
 
@@ -546,8 +533,10 @@ children:
               type: action.set-state
               options:
                 state: =@ctx.solution.state.age
-                # Use an expression and call the JavaScript file and functions in the file and set the result in a state.
-                # Provide the values to be used in the function by referencing the date picked in the component.
+                # Use an expression and call the JavaScript file and functions 
+                # in the file and set the result in a state.
+                # Provide the values to be used in the function by referencing 
+                # the date picked in the component.
                 value: =$jsfunctions.calculateAge(@ctx.components.dob.state.value)
         - type: component.text-field
           instanceId: result
@@ -583,12 +572,10 @@ export function calculateAge(dateOfBirth) {
   return age;
 }
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Distance between two cities
 
 ::::VerticalSplit{layout="middle"}
@@ -601,10 +588,9 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-34cdIrfKMEk4HmN3eBiOo-20240919-070527.PNG" size="70" position="center" caption="Function to calculate distance" alt="Function to calculate distance"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-34cdIrfKMEk4HmN3eBiOo-20240919-070527.PNG" size="70" position="center" caption="Function to calculate distance" alt="Function to calculate distance" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-34cdIrfKMEk4HmN3eBiOo-20240919-070527.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 ::::
-:::::
 
 :::CodeblockTabs
 distance.jigx
@@ -778,8 +764,10 @@ children:
                   onChange:
                     type: action.set-state
                     options:
-                      # Use an expression and call the JavaScript file and functions in the file and set the result in a state.
-                      # Provide the values to be used in the function by referencing the dropdown component.
+                      # Use an expression and call the JavaScript file and 
+                      # functions in the file and set the result in a state.
+                      # Provide the values to be used in the function by 
+                      # referencing the dropdown component.
                       state: =@ctx.solution.state.distance
                       value: =$round($jsfunctions.distanceApart(@ctx.components.fromCity.state.selected.long, @ctx.components.fromCity.state.selected.lat, @ctx.components.toCity.state.selected.long, @ctx.components.toCity.state.selected.lat), 0)
 
@@ -797,8 +785,10 @@ children:
                     type: action.set-state
                     options:
                       state: =@ctx.solution.state.distance
-                      # Use an expression and call the JavaScript file and functions in the file and set the result in a state.
-                      # Provide the values to be used in the function by referencing the dropdown component.
+                      # Use an expression and call the JavaScript file and 
+                      # functions in the file and set the result in a state.
+                      # Provide the values to be used in the function by 
+                      # referencing the dropdown component.
                       value: =$round($jsfunctions.distanceApart(@ctx.components.fromCity.state.selected.long, @ctx.components.fromCity.state.selected.lat, @ctx.components.toCity.state.selected.long, @ctx.components.toCity.state.selected.lat), 0)
 
         - type: component.text-field
@@ -842,16 +832,15 @@ export function distanceApart(from_long, from_lat, to_long, to_lat) {
   return distanceBetweenPoints;
 }
 ```
-
 :::
+:::::
 
 :::::ExpandableHeading
-
 ### Days to next state holiday
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-zdFI128LpCKcf65Goy_tI-20240919-070950.PNG" size="70" position="center" caption="Function calculating dates" alt="Function calculating dates"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-zdFI128LpCKcf65Goy_tI-20240919-070950.PNG" size="70" position="center" caption="Function calculating dates" alt="Function calculating dates" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-zdFI128LpCKcf65Goy_tI-20240919-070950.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 
 :::VerticalSplitItem
@@ -861,7 +850,6 @@ Use a `dropdown` to select holiday. When a selection is made the `onChange` sets
 
 **Example:**
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-days-until.jigx).
-
 :::
 ::::
 
@@ -954,8 +942,10 @@ children:
               type: action.set-state
               options:
                 state: =@ctx.solution.state.daysUntil
-                # Use an expression and call the JavaScript file and functions in the file and set the result in a state.
-                # Provide the values to be used in the function by referencing the dropdown component.
+                # Use an expression and call the JavaScript file and functions in
+                # the file and set the result in a state.
+                # Provide the values to be used in the function by referencing 
+                # the dropdown component.
                 value: =$jsfunctions.daysUntil(@ctx.components.holiday.state.value)
         - type: component.text-field
           instanceId: days
@@ -995,12 +985,10 @@ export function daysUntil(targetDate) {
   return daysDifference;
 }
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Work days left in a month
 
 ::::VerticalSplit{layout="middle"}
@@ -1011,11 +999,10 @@ A `date-picker` is used to select the current date. An expression with the funct
 
 **Example:**
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-work-days.jigx).
-
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Pva5AwlWD10wNpLtoKIJv-20240919-071234.PNG" size="70" position="center" caption="Function calulating dates" alt="Function calulating dates"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Pva5AwlWD10wNpLtoKIJv-20240919-071234.PNG" size="70" position="center" caption="Function calulating dates" alt="Function calulating dates" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Pva5AwlWD10wNpLtoKIJv-20240919-071234.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 ::::
 
@@ -1062,8 +1049,9 @@ children:
           when: =@ctx.components.daysRemaining.state.value != 'NaN'
           options:
             label: Work days left for this month
-            # Use an expression and call the JavaScript file and functions in the file
-            # Provide the values to be used in the function by referencing the date component's.
+            # Use an expression and call the JavaScript file and functions in the
+            # file. Provide the values to be used in the function by referencing 
+            # the date component's.
             value: =$jsfunctions.workdaysLeftInMonth(@ctx.components.date.state.value)
             style:
               isDisabled: true
@@ -1100,17 +1088,15 @@ export function workdaysLeftInMonth(date) {
   return workdaysCount;
 }
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Next work day
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T89tiGP1BRtcfVbTCfH4i-20240919-071417.PNG" size="70" position="center" caption="Function calulating dates" alt="Function calulating dates"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T89tiGP1BRtcfVbTCfH4i-20240919-071417.PNG" size="70" position="center" caption="Function calulating dates" alt="Function calulating dates" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T89tiGP1BRtcfVbTCfH4i-20240919-071417.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 
 :::VerticalSplitItem
@@ -1129,7 +1115,6 @@ next-work-day
 title: getNextBusinessDay
 description: |
   The getNextBusinessDay function calculates the next business day from a given date. It returns the next valid business day in the format "Month Day, Year".
-
   In a business application, this function can be used to determine the next available working day for scheduling meetings, processing orders, or planning project deadlines.
 type: jig.default
 icon: dog-sit-1
@@ -1164,8 +1149,10 @@ children:
               type: action.set-state
               options:
                 state: =@ctx.solution.state.nextBusinessDay
-                # Use an expression and call the JavaScript file and functions in the file and set the result in a state..
-                # Provide the values to be used in the function by referencing the date component's.
+                # Use an expression and call the JavaScript file and functions in
+                # the file and set the result in a state.
+                # Provide the values to be used in the function by referencing 
+                # the date component's.
                 value: =$jsfunctions.getNextBusinessDay(@ctx.components.date.state.value)
         - type: component.text-field
           instanceId: result
@@ -1190,19 +1177,17 @@ export function getNextBusinessDay(date) {
   return format(nextDay, "MMMM d, yyyy");
 }
 ```
-
 :::
 :::::
 
 ## If conditions
 
 :::::ExpandableHeading
-
 ### Format phone number
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BIw_ynmL8VIQBmMbPevzB-20240919-071457.PNG" size="70" position="center" caption="Function to format numbers" alt="Function to format numbers"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BIw_ynmL8VIQBmMbPevzB-20240919-071457.PNG" size="70" position="center" caption="Function to format numbers" alt="Function to format numbers" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BIw_ynmL8VIQBmMbPevzB-20240919-071457.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 
 :::VerticalSplitItem
@@ -1256,8 +1241,9 @@ children:
           instanceId: formattedPhone
           options:
             label: Formatted Phone Number
-            # Use an expression and call the JavaScript file and function in the file.
-            # Provide the values to be used in the function by referencing the phone number.
+            # Use an expression and call the JavaScript file and function in the
+            # file. Provide the values to be used in the function by referencing 
+            # the phone number.
             value: =$jsfunctions.formatPhoneNumber(@ctx.components.phoneNumber.state.value)
             style:
               isDisabled: true
@@ -1289,14 +1275,12 @@ export function formatPhoneNumber(phoneNumber) {
   return `(${part1}) ${part2}-${part3}`;
 }
 ```
-
 :::
 :::::
 
 ## Working with objects
 
 :::::ExpandableHeading
-
 ### Get employee details
 
 ::::VerticalSplit{layout="middle"}
@@ -1309,7 +1293,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JoQEp6Les6BrVKrp2oBmq-20240919-072252.PNG" size="70" position="center" caption="Function returning an object" alt="Function returning an object"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JoQEp6Les6BrVKrp2oBmq-20240919-072252.PNG" size="70" position="center" caption="Function returning an object" alt="Function returning an object" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JoQEp6Les6BrVKrp2oBmq-20240919-072252.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 ::::
 
@@ -1367,8 +1351,9 @@ children:
         - type: component.entity-field
           options:
             label: Function result
-            # Use an expression and call the JavaScript file and function in the file.
-            # Provide the values to be used in the function by referencing the datasource.
+            # Use an expression and call the JavaScript file and function in the
+            # file. Provide the values to be used in the function by referencing 
+            # the datasource.
             value: =$jsfunctions.getEmployeeInfo(@ctx.datasources.employee)
 ```
 
@@ -1391,6 +1376,6 @@ export function calculateLoanPayment(principal, annualRatePercent, years) {
   );
 }
 ```
-
 :::
 :::::
+

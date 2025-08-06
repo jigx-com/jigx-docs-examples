@@ -1,35 +1,85 @@
----
-title: titles
-slug: YU2a-titles
-description: Learn how to use the titles component in Jigx widgets to display titles, subtitles, and comments. This document covers the available widgets, configuration options, and includes examples and code snippets for integrating the titles component in the image 
-createdAt: Thu Jun 09 2022 19:55:14 GMT+0000 (Coordinated Universal Time)
-updatedAt: Fri Mar 07 2025 14:09:31 GMT+0000 (Coordinated Universal Time)
----
+# titles
 
 This component displays a title, subtitle, comment, or any type of text content. As the titles component is always part of a widget, this text will be displayed on the widget.
 
 Titles are available in the following content widgets:
 
-- <a href="https://docs.jigx.com/examples/I4a9-avatar" target="_blank">avatar</a>
-- <a href="https://docs.jigx.com/examples/chart" target="_blank">chart</a>
-- <a href="https://docs.jigx.com/examples/XtQx-image" target="_blank">image</a>
-- <a href="https://docs.jigx.com/examples/zOQa-location" target="_blank">location</a>
-- <a href="https://docs.jigx.com/examples/status" target="_blank">status</a>
-- <a href="https://docs.jigx.com/examples/value" target="_blank">value</a>
+- [avatar](./../avatar.md)&#x20;
+- [chart](./../chart.md)&#x20;
+- [image](./../image.md)&#x20;
+- [location](./../location.md)&#x20;
+- [status](./../status.md)&#x20;
+- [value](./../value.md)&#x20;
 
 ## Configuration options
 
-| **Core structure** |                                    |
-| ------------------ | --------------------------------------- |
-| `title`            | Display the text content for the title. |
-| `subtitle`         | Add a subtitle under the title text.    |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="142">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Display the text content for the title.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>subtitle</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a subtitle under the title text.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                            |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `align`           | `center`, `left`, `right`                                                                                                                  |
-| `icon`            | icon used in the widget.                                                                                                                   |
-| `iconColor`       | Sets the icon's color. Choose a color from the provided palette. If the property is not specified in the YAML, the default color is black. |
-| `style`           | Properties used for component styling.                                                                                                     |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="135">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>align</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>center</code>, <code>left</code>, <code>right</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>icon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>icon used in the widget.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>iconColor</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Sets the icon's color. Choose a color from the provided palette. If the property is not specified in the YAML, the default color is black.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>style</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Properties used for component styling.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
@@ -38,7 +88,7 @@ Titles are available in the following content widgets:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qzUhfHOAIhwl4ruMOw20K_title-imgiphone13blueportrait.png" size="78" position="center" caption="Image widget with titles" alt="Image widget with titles"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qzUhfHOAIhwl4ruMOw20K_title-imgiphone13blueportrait.png" size="78" position="center" caption="Image widget with titles" alt="Image widget with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qzUhfHOAIhwl4ruMOw20K_title-imgiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -120,7 +170,8 @@ options:
       '$.locationtitle',
       '$.locationsubtitle',
       '$.category'
-    FROM [default/location] WHERE '$.category' = "titles"
+    FROM [default/location] 
+    WHERE '$.category' = "titles"
 ```
 
 grid-item
@@ -145,7 +196,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ShMgsX1bPDxAhXNfPFuo1_title-locationiphone13blueportrait.png" size="80" position="center" caption="Location widget with titles" alt="Location widget with titles"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ShMgsX1bPDxAhXNfPFuo1_title-locationiphone13blueportrait.png" size="80" position="center" caption="Location widget with titles" alt="Location widget with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ShMgsX1bPDxAhXNfPFuo1_title-locationiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -158,13 +209,11 @@ See the full example using dynamic data in [GitHub](https://github.com/jigx-com/
 **Datasource**:
 See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles-static.jigx).
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles.jigx).
-
-
 :::
 ::::
 
 :::CodeblockTabs
-titles-location (static)
+titles-widget-location.jigx
 
 ```yaml
 widgets:
@@ -181,7 +230,7 @@ widgets:
           align: left
 ```
 
-titles-location (dynamic)
+titles-widget-location-dd.jigx
 
 ```yaml
 widgets:
@@ -196,6 +245,8 @@ widgets:
           title: =@ctx.datasources.titles.locationtitle
           subtitle: =@ctx.datasources.titles.locationsubtitle
 ```
+
+grid-item
 
 ```yaml
 # Grid-item for the static jig.

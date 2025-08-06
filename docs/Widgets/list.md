@@ -1,17 +1,17 @@
 # list
 
-Whenever a list jig is configured either in the  , or <a href="https://docs.jigx.com/examples/list-item" target="_blank">list-item </a>component, the list is automatically populated on the surface of the widget without needing additional configuration.
+Whenever a list jig is configured either in the [list](./../Components/list.md) , or [list-item](./../Components/list/list-item.md) component, the list is automatically populated on the surface of the widget without needing additional configuration.
 There is also the option to extend the list widget by using the `Extend List Widget` property, which reuses the list jig configuration and its data to extend or override some of the properties in the widget. The item data is called from `=@ctx.current.item.value`.
 
 There are, instances when you want to create a list widget on a jig that is not a list jig, such as a `jig.default`. This is primarily where the list widget is used.
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x_tcUv7lpa0tsER9sVivd_img3900.PNG" size="74" position="center" caption="List widgets" alt="List widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x_tcUv7lpa0tsER9sVivd_img3900.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x_tcUv7lpa0tsER9sVivd_img3900.PNG" size="74" position="center" caption="List widgets" alt="List widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x_tcUv7lpa0tsER9sVivd_img3900.PNG" width="800" height="1732" darkWidth="800" darkHeight="1732"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/U6BPOZ0OYlFedss3Z_mND_img3901.PNG" size="74" position="center" caption="List widgets" alt="List widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/U6BPOZ0OYlFedss3Z_mND_img3901.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/U6BPOZ0OYlFedss3Z_mND_img3901.PNG" size="74" position="center" caption="List widgets" alt="List widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/U6BPOZ0OYlFedss3Z_mND_img3901.PNG" width="800" height="1732" darkWidth="800" darkHeight="1732"}
 :::
 ::::
 
@@ -19,33 +19,174 @@ There are, instances when you want to create a list widget on a jig that is not 
 
 A list widget can be used on any type of jig, i.e. list, default, composite, calendar and document.
 
-| **Core options** |                                                                                                                                                                                                                                |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `item`           | The `item` property includes the setup options of:&#xA;[Stage&#xA;](https://docs.jigx.com/examples/stage)[Product-item&#xA;](https://docs.jigx.com/examples/product-item)[List-item](https://docs.jigx.com/examples/list-item) |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="135">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>item</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The <code>item</code> property includes the setup options of:
+      <a href="https://docs.jigx.com/examples/product-item">Product-item
+      </a><a href="https://docs.jigx.com/examples/list-item">List-item</a></p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `badge`           | Add a badge to the list widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:&#xA;-  To display as a red dot using the `empty` value.&#xA;-  A red dot with a number using an expression to perform a count. &#xA;For example, counting the number of tasks in the list. |
-| `bottom`          | The [titles](https://docs.jigx.com/examples/titles) component will be added to the bottom of the widget.                                                                                                                                                                                                                                                                                                                                 |
-| `data`            | Provide the datasource for the list. For example:&#xA;`data: =@ctx.datasources.tasklist`                                                                                                                                                                                                                                                                                                                                                 |
-| `footer`          | Add text to the footer of the widget.                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `footerAlign`     | Align the footer text to `left`, `right`, `center`.                                                                                                                                                                                                                                                                                                                                                                                      |
-| `placeholders`    | Specify a placeholder text to display if there is no data, for example - `title: No data to display`.                                                                                                                                                                                                                                                                                                                                    |
-| `top`             | The [titles](https://docs.jigx.com/examples/titles) component will be added to the top of the widget.                                                                                                                                                                                                                                                                                                                                    |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="138">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>badge</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a badge to the list widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:</p>
+      <ul>
+      <li>To display as a red dot using the <code>empty</code> value.</li>
+      <li>A red dot with a number using an expression to perform a count.
+      For example, counting the number of tasks in the list.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>bottom</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The  component will be added to the bottom of the widget.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>data</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide the datasource for the list. For example:
+      <code>data: =@ctx.datasources.tasklist</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>footer</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add text to the footer of the widget.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>footerAlign</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Align the footer text to <code>left</code>, <code>right</code>, <code>center</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>placeholders</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specify a placeholder text to display if there is no data, for example - <code>title: No data to display</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>top</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The  component will be added to the top of the widget.</p>
+    </td>
+  </tr>
+</table>
 
-| **State Configuration**  | **Key**              | **Notes**                                                                                                                                                                        |
-| ------------------------ | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `=@ctx.current.state.`   | amount&#xA;checked   | Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array. |
-| `=@ctx.component.state.` | amount&#xA;checked   | State is the variable of the component.                                                                                                                                          |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now | Global state variable that can be used throughout the solution.                                                                                                                  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="231,124">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>State Configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.current.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>amount
+      checked</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.component.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>amount
+      checked</p>
+    </td>
+    <td selected="false" align="left">
+      <p>State is the variable of the component.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>activeItemId
+      now</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Global state variable that can be used throughout the solution.</p>
+    </td>
+  </tr>
+</table>
 
 ## Configuration options for extended list widget
 
 The `Extended List Widget` can only be used on a list jig . The purpose of using this widget is to customize what shows in the widget on the Home Hub rather than showing its automatic list display.  The `Extended List Widget` must be configured with a size 2x2 or greater. Reuse the data in the list jig , for example, `=@ctx.datasources.users.title` or `=@ctx.current.item.value`.
 
-| **Core options** |                                                                                                                                                                                                                                                                                                                                                                                      |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `item`           | The `item` property includes the setup options of:&#xA;[bar-chart](./../Components/charts/bar-chart.md)&#xA;[expander](./../Components/expander.md)&#xA;[Stage](https://docs.jigx.com/examples/stage)&#xA;[Product-item&#xA;](https://docs.jigx.com/examples/product-item)[List-item&#xA;](https://docs.jigx.com/examples/list-item)[pie-chart](./../Components/charts/pie-chart.md) |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="126">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>item</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The <code>item</code> property includes the setup options of:
+      <a href="./../Components/expander.md">expander</a>
+      <a href="https://docs.jigx.com/examples/stage">Stage</a>
+      <a href="https://docs.jigx.com/examples/product-item">Product-item
+      </a><a href="https://docs.jigx.com/examples/list-item">List-item
+      </a><a href="./../Components/charts/pie-chart.md">pie-chart</a></p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
@@ -64,7 +205,7 @@ In this example,  the list on the widget is the same as the `jig.list` once the 
 
 **Examples**:
 See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-left-elements/list-with-left-checkbox-sd.jigx).
-See the complete example using dynamic data in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-left-elements/list-with-left-avatar-dd.jigx).
+See the complete example using dynamic data in [GitHub]().
 
 **Datasources**:
 See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
@@ -264,7 +405,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmVasJ9L4i3NPUtt8l722_listproductiphone13blueportrait.png" size="80" position="center" caption="2x2 product-item list widget" alt="2x2 product-item list widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmVasJ9L4i3NPUtt8l722_listproductiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmVasJ9L4i3NPUtt8l722_listproductiphone13blueportrait.png" size="80" position="center" caption="2x2 product-item list widget" alt="2x2 product-item list widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmVasJ9L4i3NPUtt8l722_listproductiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -343,7 +484,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rZCv7iRFImXiqOzMsjRK-_listsdiphone13blueportrait.png" size="76" position="center" caption="2x2 list-item basic widget" alt="2x2 list-item basic widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rZCv7iRFImXiqOzMsjRK-_listsdiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rZCv7iRFImXiqOzMsjRK-_listsdiphone13blueportrait.png" size="76" position="center" caption="2x2 list-item basic widget" alt="2x2 list-item basic widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rZCv7iRFImXiqOzMsjRK-_listsdiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -417,7 +558,7 @@ children:
 ::::ExpandableHeading
 ### Extended list widget 2x4, 4x2, 4x4
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/s4ML69T6TZa5bCeOaYjKr_widget-extend.PNG" size="80" position="center" caption="Extended list widget" alt="Extended list widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/s4ML69T6TZa5bCeOaYjKr_widget-extend.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/s4ML69T6TZa5bCeOaYjKr_widget-extend.PNG" size="80" position="center" caption="Extended list widget" alt="Extended list widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/s4ML69T6TZa5bCeOaYjKr_widget-extend.PNG" width="800" height="785" darkWidth="800" darkHeight="785"}
 
 This example shows how the `Extend List Widget` reuses the data from a single `jig.list` to customize the widget's appearance.  In the image above:
 
@@ -584,12 +725,12 @@ children:
 
 See the following examples under groups:
 
-- <a href="https://docs.jigx.com/examples/group#utr1x" target="_blank">Group with chart and list (size: 4x4, split: horizontal)</a>
-- <a href="https://docs.jigx.com/examples/group#Lk_2j" target="_blank">Group with chart and list (size: 4x4, split: vertical)</a>
-- <a href="https://docs.jigx.com/examples/group#3Wi36" target="_blank">Group with avatar and list (size: 4x2)</a>
-- <a href="https://docs.jigx.com/examples/group#VWndb" target="_blank">Group with value and bar-chart (size: 2x4)</a>
+- :Link[Group with chart and list]{href="https://docs.jigx.com/examples/group#utr1x" newTab="true" hasDisabledNofollow="false"} (size: 4x4, split: horizontal)
+- :Link[Group with chart and list]{href="https://docs.jigx.com/examples/group#Lk_2j" newTab="true" hasDisabledNofollow="false"} (size: 4x4, split: vertical)
+- :Link[Group with avatar and list]{href="https://docs.jigx.com/examples/group#3Wi36" newTab="true" hasDisabledNofollow="false"} (size: 4x2)
+- :Link[Group with value and bar-chart]{href="https://docs.jigx.com/examples/group#VWndb" newTab="true" hasDisabledNofollow="false"} (size: 2x4)
 
 ## See also
 
-- [State](#)
+- [State]()
 

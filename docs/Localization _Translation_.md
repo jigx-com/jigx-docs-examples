@@ -1,11 +1,6 @@
----
-title: Localization (Translation)
-slug: oBpD-loca
-createdAt: Tue Nov 28 2023 12:15:16 GMT+0000 (Coordinated Universal Time)
-updatedAt: Thu Nov 21 2024 10:19:50 GMT+0000 (Coordinated Universal Time)
----
+# Localization (Translation)
 
-Solutions can easily be translated into any language by using the `Text Locale` property and creating a translation file with the translated text in Jigx Builder. On the device, use the _Profile>Settings>Language_ option and select _Device (Respects device settings)_. To understand how to configure localization in Jigx see [Localization](https://docs.jigx.com/localization).
+Solutions can easily be translated into any language by using the `Text Locale` property and creating a translation file with the translated text in Jigx Builder. On the device, use the *Profile>Settings>Language* option and select *Device (Respects device settings)*. To understand how to configure localization in Jigx see [Localization](https://docs.jigx.com/localization).
 
 :::hint{type="info"}
 Adding dynamic values in localized jigs use **ICU message** definitions.
@@ -14,9 +9,27 @@ Try it in the [Online ICU Message Editor](https://format-message.github.io/icu-m
 
 ## Configuration options
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `text Locale`      | `id` - provide a unique identifier for the property to be translated. &#xA;`values` - create context variables with values to use in the translation file. This is useful when creating dynamic content. &#xA;`defaultMessage` - If no translation is found for the active device's language, it will either fallback to the specified `defaultMessage` or, if one is not specified, to English. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="138">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>text Locale</code></p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li><code>id</code> - provide a unique identifier for the property to be translated. </li>
+      <li><code>values</code> - create context variables with values to use in the translation file. This is useful when creating dynamic content. </li>
+      <li><code>defaultMessage</code> - If no translation is found for the active device's language, it will either fallback to the specified <code>defaultMessage</code> or, if one is not specified, to English.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
@@ -53,7 +66,8 @@ header:
 
 children:
   - type: component.form
-    instanceId: form-employee # used in the submit-form action to get context to the property instanceId
+  # Used in the submit-form action to get context to the property instanceId.
+    instanceId: form-employee 
     options:
       isDiscardChangesAlertEnabled: false
       children:
@@ -172,14 +186,13 @@ signature: Podepsat
 email: Emailová adresa
 create: Vytvořit zaměstnance
 ```
-
 :::
 
 ### Jig translated into German with dynamic values
 
 In this example, a jigwith today's activites is translated into German. The translation is configured dynamically agains the `Text Locale` values. To see the form in each of the languages change your device language setting to one of the configured languages.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoK-35uG5y6FomN9LyI0s_trans-dynamic.PNG" size="82" position="center" caption="One jig in two languages" alt="One jig in two languages"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoK-35uG5y6FomN9LyI0s_trans-dynamic.PNG" size="82" position="center" caption="One jig in two languages" alt="One jig in two languages" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoK-35uG5y6FomN9LyI0s_trans-dynamic.PNG" width="800" height="787" darkWidth="800" darkHeight="787"}
 
 **Examples**:
 See the jig example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-localization/localized-activities-dynamic.jigx).
@@ -274,5 +287,5 @@ greeting: "{time, select, am {Good Morning} pm {Good afternoon} other {Hello}} {
 sport: "{name, select, Swimming {Swimming} Tennis {Tennis} other {Exercising}}"
 venues: "{location, select, Pool {Pool} Court {Court} other {Gym}}"
 ```
-
 :::
+
