@@ -1,9 +1,4 @@
----
-title: print
-slug: 6DlO-print
-createdAt: Mon Feb 10 2025 17:00:57 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Apr 23 2025 07:03:06 GMT+0000 (Coordinated Universal Time)
----
+# print
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -17,18 +12,51 @@ This feature enables you to generate hard copies of invoices, receipts, articles
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
 | **Core structure** |                                                                                                                                                                                                                                                    |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `title`            | Provide the action button with a title, for example, Print.                                                                                                                                                                                        |
 | `html`             | Use standard HTML elements to ensure optimal formatting and compatibility when rendering content for printing, for example, \<html>\<body>Invoices are provided monthly.\</body\</html>.&#xA;The HTML can be built up using JSONata or JavaScript. |
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon](https://docs.jigx.com/jigx-icons) to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                        |
-| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
-| `styles`          | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>icon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Select an  to display when the action is configured as the secondary button or in a <a href="./../Components/jig-header.md">header action</a>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isHidden</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>styles</code></p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li>
+      <li><code>isDisabled</code> - Displays the action button as greyed out.</li>
+      <li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li>
+      <li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -134,7 +162,6 @@ actions:
             </body>
             </html>
 ```
-
 :::
 
 ### Print with web-view component
@@ -254,7 +281,6 @@ actions:
           title: Print demo form
           html: =@ctx.components.demo.state.content
 ```
-
 :::
 
 ### Document jig with print action
@@ -566,7 +592,6 @@ actions:
               </body>
               </html>
 ```
-
 :::
 
 ### Print action in a jig header
@@ -597,8 +622,8 @@ header:
       options:
         source:
           uri: https://images.unsplash.com/photo-1531736275454-adc48d079ce9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGxpZ2h0JTIwY29sb3IlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww
-    # Add the print action in the header, this displays at the top right of the screen.
-    # Add a print icon to the action rather than a link.
+    # Add the print action in the header, this displays at the top right of the 
+    # screen. Add a print icon to the action rather than a link.
     actions:
       - type: action.print
         options:
@@ -701,5 +726,5 @@ datasources:
         - id: 3
           option: 🏃fun walk
 ```
-
 :::
+

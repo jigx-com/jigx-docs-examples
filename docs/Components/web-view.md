@@ -8,18 +8,67 @@ You can also use the [jig.document](<./../Jig Types/jig_document.md>) type to di
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                 |
-| ------------------ | --------------------------------------------------------------- |
-| `uri`              | The source to be displayed in the web-view, for example, a URL. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="285">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>uri</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The source to be displayed in the web-view, for example, a URL.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options**                |                                                                                                                                                                                                                                                                          |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `content`                        | HTML to render in the web-view.                                                                                                                                                                                                                                          |
-| `height`                         | The height of the web-view.                                                                                                                                                                                                                                              |
-| `isEditable`                     | A very basic implementation, if set to `true`, the web-view `content` becomes editable. This works only with `content`, not with a `uri`. The `isEditable` property is only available when using the web-view in a [jig.fullscreen](<./../Jig Types/jig_fullscreen.md>). |
-| `isTrackingTransparencyRequired` | If set to `true` tracking transparency permission modal is shown before opening the URL. The default setting is `true`.                                                                                                                                                  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="291">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>content</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>HTML to render in the web-view.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>height</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The height of the web-view.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isEditable</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>A very basic implementation, if set to <code>true</code>, the web-view <code>content</code> becomes editable. This works only with <code>content</code>, not with a <code>uri</code>. The <code>isEditable</code> property is only available when using the web-view in a .</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isTrackingTransparencyRequired</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>If set to <code>true</code> tracking transparency permission modal is shown before opening the URL. The default setting is <code>true</code>.</p>
+    </td>
+  </tr>
+</table>
 
 ## Consideration
 
@@ -28,12 +77,11 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Web-view example (URL)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE_SLn_img9582iphone13blueportrait.png" size="80" position="center" caption="Web-view with URL " alt="Web-view with URL " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE_SLn_img9582iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE_SLn_img9582iphone13blueportrait.png" size="80" position="center" caption="Web-view with URL " alt="Web-view with URL " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE_SLn_img9582iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
@@ -105,19 +153,18 @@ datasources:
         SELECT
           '$.uri',
           '$.category'
-        FROM [default/links] WHERE '$.category' = "web-view"
+        FROM [default/links] 
+        WHERE '$.category' = "web-view"
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Web-view example (HTML Content)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv_img9581iphone13blueportrait.png" size="80" position="center" caption="Web-view with HTML content" alt="Web-view with HTML content" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv_img9581iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv_img9581iphone13blueportrait.png" size="80" position="center" caption="Web-view with HTML content" alt="Web-view with HTML content" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv_img9581iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
@@ -146,12 +193,10 @@ children:
           </body>
         </html>
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Editable web-view content (Fullscreen)
 
 ::::VerticalSplit{layout="middle"}
@@ -235,6 +280,6 @@ datasources:
       queryParameters:
         jobNo: A1
 ```
-
 :::
 :::::
+

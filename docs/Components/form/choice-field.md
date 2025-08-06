@@ -8,11 +8,11 @@ The choice-field component allows you to select one or more options from a prede
 The `choice-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 :::
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-bBqh_WETCy6CgvD8nBr8c-20240826-164834.png" size="80" position="center" caption="Choice-field" alt="Choice-field" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-bBqh_WETCy6CgvD8nBr8c-20240826-164834.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-bBqh_WETCy6CgvD8nBr8c-20240826-164834.png" size="80" position="center" caption="Choice-field" alt="Choice-field" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-bBqh_WETCy6CgvD8nBr8c-20240826-164834.png" width="800" height="498" darkWidth="800" darkHeight="498"}
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
 | **Core structure for choice-field** |                                                                                                   |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -21,35 +21,201 @@ Some properties are common to all components, see [Common component properties](
 | `data`                              | Use an expression that evaluates to an array of options.                                          |
 | `item`                              | The `item` property uses the component of `choice-field-item` that includes: `title` and `value`. |
 
-| **Other options**       |                                                                                                                                                                                                                                                                                                            |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `errorText`             | Add text, string, or expressions to show text under the choice-field indicating an error/invalid value in the field. Text is shown in `isNegative` (red) styling.                                                                                                                                          |
-| `helperText`            | Add text, string, or expressions to guide users by showing text under the choice-field. Helper text is displayed only when there is no errorText.                                                                                                                                                          |
-| `initialValue`          | The `initialValue` is the value that will be displayed in the choice-field when the form is initially loaded. You can use this property to preset the choice-field with a default value so that you do not have to manually select it, for example, on a yes/no choice the initial value can be set to no. |
-| `isHidden`              | If `true` the choice-field will be hidden on the form. If set to `false` the field will be shown.                                                                                                                                                                                                          |
-| `isIgnored`             | When `true`, the field will be ignored when submitting the form and the content will not be stored.                                                                                                                                                                                                        |
-| `isMultiple`            | Set to `true` allows you to select multiple items inside the choice-field. Set to `false` only allows a single selection in the choice-field.                                                                                                                                                              |
-| `isOptionalLabelHidden` | If the field is optional you can turn off the "(optional)" label by setting this field to `true`. This property works in combination with `isRequired: false`.                                                                                                                                             |
-| `isRequired`            | Set to `true` when the field is required. Useful when you use it in form submission. Set to `false` the choice-field is optional and will have (optional) in the label.                                                                                                                                    |
-| `itemsPerRow`           | Number of choice boxes to show in each row. Supports multiline text.                                                                                                                                                                                                                                       |
-| `nextProperty`          | Name of the property you want to focus next in the form when you use return/next on a keyboard.                                                                                                                                                                                                            |
-| `style`                 | `isDisabled` - disables the choice-field preventing the selection of any of the choice-fields.                                                                                                                                                                                                             |
-| `value`                 | The value that the choice-field will output as its state.                                                                                                                                                                                                                                                  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="210">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>errorText</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add text, string, or expressions to show text under the choice-field indicating an error/invalid value in the field. Text is shown in <code>isNegative</code> (red) styling.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>helperText</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add text, string, or expressions to guide users by showing text under the choice-field. Helper text is displayed only when there is no errorText.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>initialValue</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The <code>initialValue</code> is the value that will be displayed in the choice-field when the form is initially loaded. You can use this property to preset the choice-field with a default value so that you do not have to manually select it, for example, on a yes/no choice the initial value can be set to no.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isHidden</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>If <code>true</code> the choice-field will be hidden on the form. If set to <code>false</code> the field will be shown.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isIgnored</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>When <code>true</code>, the field will be ignored when submitting the form and the content will not be stored.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isMultiple</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set to <code>true</code> allows you to select multiple items inside the choice-field. Set to <code>false</code> only allows a single selection in the choice-field.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isOptionalLabelHidden</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>If the field is optional you can turn off the "(optional)" label by setting this field to <code>true</code>. This property works in combination with <code>isRequired: false</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isRequired</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set to <code>true</code> when the field is required. Useful when you use it in form submission. Set to <code>false</code> the choice-field is optional and will have (optional) in the label.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>itemsPerRow</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Number of choice boxes to show in each row. Supports multiline text.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>nextProperty</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Name of the property you want to focus next in the form when you use return/next on a keyboard.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>style</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>isDisabled</code> - disables the choice-field preventing the selection of any of the choice-fields.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>value</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The value that the choice-field will output as its state.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options for choice-field-item** |                                                                                                                                                                                                                                                                                       |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `instanceId`                            | The unique identifier for the choice-field-item component.                                                                                                                                                                                                                            |
-| `title`                                 | Text displayed on the choice-field item. You can add text, expressions or Text with Format in the field. Text with format includes, currency, decimal, dateTime and more. In most instances an expression similar to `=@ctx.current.item.option` is used to reference the datasource. |
-| `value`                                 | The value of the item. It has to be unique for each item and is usually the ID of the record from the datasource.                                                                                                                                                                     |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="168">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options for choice-field-item</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>instanceId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The unique identifier for the choice-field-item component.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Text displayed on the choice-field item. You can add text, expressions or Text with Format in the field. Text with format includes, currency, decimal, dateTime and more. In most instances an expression similar to <code>=@ctx.current.item.option</code> is used to reference the datasource.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>value</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The value of the item. It has to be unique for each item and is usually the ID of the record from the datasource.</p>
+    </td>
+  </tr>
+</table>
 
-| **Actions** |                                                                                                                                                     |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onChange`  | The action is triggered when the content in the `choice-field-item` is changed. Use IntelliSense (ctrl+space) to see the list of available actions. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onChange</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The action is triggered when the content in the <code>choice-field-item</code> is changed. Use IntelliSense (ctrl+space) to see the list of available actions.</p>
+    </td>
+  </tr>
+</table>
 
-| **State Configuration**  | **Key**              | **Notes**                                                          |
-| ------------------------ | -------------------- | ------------------------------------------------------------------ |
-| `=@ctx.component.state.` | selected&#xA;value   | - State is the variable of the component.                          |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now | \* Global state variable that can be used throughout the solution. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="225,128">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>State Configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.component.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>selected
+      value</p>
+    </td>
+    <td selected="false" align="left">
+      <p>State is the variable of the component.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>activeItemId
+      now</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Global state variable that can be used throughout the solution.</p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -61,7 +227,6 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Choice-field with single selection
 
 ::::VerticalSplit{layout="middle"}
@@ -126,7 +291,7 @@ children:
     when: =@ctx.components.new-customer.state.value ='Yes' ? true:false
     options:
       children:
- # If yes is selected in the choice-field the form displays.       
+        # If yes is selected in the choice-field the form displays.       
         - type: component.text-field
           instanceId: firstName
           options:
@@ -150,15 +315,14 @@ children:
           instanceId: Address
           options:
             label: Address
-            isMultiline: true
-              
-# if yes go to online-store
+            isMultiline: true              
+# If yes go to online-store.
 actions:
   - children:
       - type: action.action-list
         options:
-# Hide the button until the No option is selected.
-# Then show the button and go to the order jig.        
+          # Hide the button until the No option is selected.
+          # Then show the button and go to the order jig.        
           isHidden: =@ctx.components.new-customer.state.value ='No' ? false:true
           title: Place order
           isSequential: true
@@ -169,11 +333,11 @@ actions:
       - type: action.execute-entity 
         options:
           style:
-# Disable the button until all fields in the form are filled in.           
+            # Disable the button until all fields in the form are filled in.           
             isDisabled: =$not(@ctx.components.register.state.isValid)
-# Hide the button until the Yes option is selected.
-# Then show the button, register the customer in Dymanica Data
-# Go to the order jig.            
+          # Hide the button until the Yes option is selected.
+          # Then show the button, register the customer in Dymanica Data
+          # Go to the order jig.            
           isHidden: =@ctx.components.new-customer.state.value = 'Yes' ? false:true
           title: Register
           provider: DATA_PROVIDER_DYNAMIC
@@ -189,12 +353,10 @@ actions:
             email: =@ctx.components.email.state.value
             Address: =@ctx.components.Address.state.value
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Choice-field with multiple selection
 
 ::::VerticalSplit{layout="middle"}
@@ -302,11 +464,11 @@ children:
             - type: component.choice-field
               instanceId: allery
               options:
-            # isMultiple allows for multiple selection
+                # isMultiple allows for multiple selection
                 isMultiple: true
                 isRequired: true
                 errorText: Required
-            # Place the choice items two in a row     
+                # Place the choice items two in a row     
                 itemsPerRow: 2
                 label: Patient Allergies
                 data: =@ctx.datasources.allergies
@@ -340,17 +502,15 @@ actions:
             email: =@ctx.components.email.state.value
             allergies: =@ctx.components.allery.state.selected
 ```
-
 :::
 :::::
 
 ::::ExpandableHeading
-
 ### Loading of multiple selected options
 
 In this example, we want to load the patient's form that they completed in the example above, and show their selected details and allergies. Each patient can have multiple allergies, and the data would be saved as an object in the database. To deserialize the object the `jsonProperties` property is configured with the column containing the object of multiple allergies. In the `choice-field` component the `intialValue` is then configured to return the selected allergies for the specific patient. The `execute-entity` action is configured to update the patient data.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-92ZKPcpsy9TZXXSufKGm--20250318-105534.png" size="70" position="center" caption="Load multiple choices" alt="Load multiple choices" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-92ZKPcpsy9TZXXSufKGm--20250318-105534.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-92ZKPcpsy9TZXXSufKGm--20250318-105534.png" size="70" position="center" caption="Load multiple choices" alt="Load multiple choices" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-92ZKPcpsy9TZXXSufKGm--20250318-105534.png" width="800" height="790" darkWidth="800" darkHeight="790"}
 
 :::CodeblockTabs
 update-patient-details.jigx
@@ -407,18 +567,16 @@ datasources:
           option: Yes
         - id: 2
           option: No
-# The datasource used to return the patient details.
-# queryParameter references the patientId input from the list
-# jsonProperties is specified to deserialize the allergies object,
-# allowing it to be loaded in the choice field as an initialValue       
+  # The datasource used to return the patient details.
+  # queryParameter references the patientId input from the list
+  # jsonProperties is specified to deserialize the allergies object,
+  # allowing it to be loaded in the choice field as an initialValue       
   patient:
     type: datasource.sqlite
     options:
-      provider: DATA_PROVIDER_DYNAMIC
-  
+      provider: DATA_PROVIDER_DYNAMIC  
       entities:
-        - default/patient
-  
+        - default/patient  
       query: 
         SELECT 
         id, 
@@ -460,9 +618,10 @@ children:
         - type: component.choice-field
           instanceId: select
           options:
-# For this choice-field we do not save the value in the datasource, 
-# Using an expression we can see if there are allergies for the patient,
-# if allergies column contains data, then the Yes choice-field is populated.         
+            # For this choice-field we do not save the value in the datasource, 
+            # using an expression we can see if there are allergies for the 
+            # patient, if allergies column contains data,
+            # then the Yes choice-field is populated.         
             initialValue: =$exists(@ctx.datasources.patient.allergies) ? 'Yes':'No'
             itemsPerRow: 2
             label: Do you have Allergies 
@@ -480,7 +639,7 @@ children:
             - type: component.choice-field
               instanceId: allergy       
               options:
-# Show the selected patient's allergies using initialValue
+                # Show the selected patient's allergies using initialValue.
                 initialValue: =@ctx.datasources.patient.allergies.id
                 isMultiple: true
                 isRequired: true
@@ -493,7 +652,7 @@ children:
                   options:
                     title: =@ctx.current.item.allergen 
                     value: =@ctx.current.item.id
-# Set up the action to update the patient's details and allergies          
+# Set up the action to update the patient's details and allergies.          
 actions:
   - children:
       - type: action.execute-entity
@@ -552,11 +711,9 @@ datasources:
   patient-list: 
     type: datasource.sqlite
     options:
-      provider: DATA_PROVIDER_DYNAMIC
-  
+      provider: DATA_PROVIDER_DYNAMIC  
       entities:
-        - default/patient
-  
+        - default/patient 
       query: 
         SELECT 
         id, 
@@ -582,17 +739,15 @@ item:
           parameters:
             patientId: =@ctx.current.item.id
 ```
-
 :::
 ::::
 
 :::::ExpandableHeading
-
-### Choice-field with 3 items per row
+### Choice-field with three items per row
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-24aUnSddX6OuZIUtlEQRX-20240827-101917.PNG" size="70" position="center" caption="Items per row" alt="Items per row" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-24aUnSddX6OuZIUtlEQRX-20240827-101917.PNG"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-24aUnSddX6OuZIUtlEQRX-20240827-101917.PNG" size="70" position="center" caption="Items per row" alt="Items per row" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-24aUnSddX6OuZIUtlEQRX-20240827-101917.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 
 :::VerticalSplitItem
@@ -670,12 +825,10 @@ actions:
           data:
             satisfaction: =@ctx.components.satisfaction.state.value
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Choice-field with an initial selection
 
 ::::VerticalSplit{layout="middle"}
@@ -683,11 +836,11 @@ actions:
 In this example of the choice-field component the form opens with an option already selected. This is configured using an expression in the  `initialValue` property. You can change the property. Note that the `onRefresh` event used to reset the form, resets the `choice-field` back to it's orginial state with the `initialValue`selected.
 
 **Examples:**
-See the full example in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/choice-field/choice-field-initialvalue.jigx).
+See the full example in [GitHub]().
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-GapegBAIHUNysuq5uSO2n-20240826-145351.PNG" size="70" position="center" caption="Choice-field" alt="Choice-field" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-GapegBAIHUNysuq5uSO2n-20240826-145351.PNG"}
+::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-GapegBAIHUNysuq5uSO2n-20240826-145351.PNG" size="70" position="center" caption="Choice-field" alt="Choice-field" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-GapegBAIHUNysuq5uSO2n-20240826-145351.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
 :::
 ::::
 
@@ -697,7 +850,7 @@ choice-field-initialvalue.jigx
 ```yaml
 title: choice-field with initial value selected
 type: jig.default
-
+# Header section with medium-height image.
 header:
   type: component.jig-header
   options:
@@ -712,46 +865,54 @@ onRefresh:
   type: action.reset-state
   options:
     state: =@ctx.jig.components.shipping-method.state.value
-
+# Data configuration - fetch shipping options from Dynamic Data database
 datasources:
   shipping: 
     type: datasource.sqlite
     options:
-      provider: DATA_PROVIDER_DYNAMIC
-  
+      provider: DATA_PROVIDER_DYNAMIC  
       entities:
-        - default/shipping
-  
-      query: SELECT id, '$.method', '$.cost' FROM [default/shipping]
-
+        - default/shipping  
+      query: |
+        SELECT 
+        id, 
+        '$.method', 
+        '$.cost'
+        FROM [default/shipping]
+# Main UI structure.
 children:
   - type: component.form
     instanceId: delivery
     options:
       children:
+       # Choice field for shipping method selection.
         - type: component.choice-field
           instanceId: shipping-method
           options:
+            # Pre-selected the first shipping method from the database.
             initialValue: =@ctx.datasources.shipping[0].method
             label: Choose your shipping method 
+            # Bind data from shipping datasource.
             data: =@ctx.datasources.shipping
             item:
               type: component.choice-field-item
               options:
+                # Display format: "method cost" (e.g., "Express $15.99").
                 title: =(@ctx.current.item.method & ' ' &  @ctx.current.item.cost)
+                # The actual value stored when this option is selected.
                 value: =@ctx.current.item.method
+# Action buttons section.
 actions:
   - children:
+      # Navigation button to go back to previous screen.
       - type: action.go-back
         options:
           title: Checkout
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Choice-field with onChange
 
 ::::VerticalSplit{layout="right"}
@@ -763,7 +924,7 @@ actions:
 In this example, when the `choice-field-item` is selected and `onChange` event triggers a `open-url` action providing the information on the holiday packages.
 
 **Examples:**
-See the full example in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/choice-field/choice-field-onchange.jigx).
+See the full example in [GitHub]().
 :::
 ::::
 
@@ -773,7 +934,7 @@ choice-field-onchange/jigx
 ```yaml
 title: Choice-field with onChange
 type: jig.default
-
+# Header section with medium-height travel-themed image.
 header:
   type: component.jig-header
   options:
@@ -783,7 +944,7 @@ header:
       options:
         source:
           uri: https://images.unsplash.com/photo-1618245318763-a15156d6b23c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-
+# Static datasource containing vacation package information.
 datasources:
   packages:
     type: datasource.static
@@ -809,28 +970,35 @@ datasources:
           description: "15 days all inclusive experience"
           Price: "$ 3760"
           url: https://www.clubmed.co.za/d/asia/indonesia
-
+# Main UI structure.
 children:
   - type: component.form
     instanceId: island-holiday
     options:
       children:
+        # Choice field for vacation package selection.
         - type: component.choice-field
           instanceId: select-package
           options:
+            # Action triggered when user selects an option.
             onChange: 
               type: action.open-url
               options:
+                # Open the URL of the selected package in browser/new tab.
                 url: =@ctx.components.select-package.state.selected.url
             label: Select an island package
+            # Bind data from the packages datasource.
             data: =@ctx.datasources.packages
+            # Configure how the choice options are displayed.
             item:
               type: component.choice-field-item
               options:
+                # Display format: "Destination starting from Price" 
+                # (e.g., "Seychelles starting from $ 1500")
                 title: =(@ctx.current.item.name & ' ' & 'starting from' & ' ' & @ctx.current.item.Price)
                 value: =@ctx.current.item.name
                 
 ```
-
 :::
 :::::
+

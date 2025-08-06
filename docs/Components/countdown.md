@@ -6,28 +6,99 @@ The countdown component functionality counts down from a date, date/time, and ti
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                    |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `expiresAt`        | Add a date, date/time or time when the countdown must expire/stop, either using:&#xA;- datasource, e.g. `=@ctx.datasources.events.date`&#xA;- expression, e.g. `=$fromMillis($toMillis($now()) + 50000)`&#xA;- string, e.g. `"2023-09-20 18:00"`, or `"2023-07-25T17:30:00+02:00"` |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>expiresAt</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a date, date/time or time when the countdown must expire/stop, either using:</p>
+      <ul>
+      <li>datasource, e.g. <code>=@ctx.datasources.events.date</code></li>
+      <li>expression, e.g. <code>=$fromMillis($toMillis($now()) + 50000)</code></li>
+      <li>string, e.g. <code>"2025-09-20 18:00"</code>, or <code>"2025-07-25T17:30:00+02:00"</code></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                              |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `align`           | `center`, `left`, `right`, and `stretch`, with `center` as the default if the property is not specified in the YAML.                                                                                                                         |
-| `labels`          | `isVisible` - `true` or `false` with `true` as the default. Setting `false` will hide the countdown component.&#xA;`position` - The countdown labels of Days : Hours : Minutes: Seconds are shown at the `bottom` or `top` of the countdown. |
-| `size`            | Choose from `extra-large`, `large`, `medium`, `small`, with `large` being the default if the property is not specified in the YAML.                                                                                                          |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>align</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>center</code>, <code>left</code>, <code>right</code>, and <code>stretch</code>, with <code>center</code> as the default if the property is not specified in the YAML.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>labels</code></p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li><code>isVisible</code> - <code>true</code> or <code>false</code> with <code>true</code> as the default. Setting <code>false</code> will hide the countdown component.</li>
+      <li><code>position</code> - The countdown labels of Days : Hours : Minutes: Seconds are shown at the <code>bottom</code> or <code>top</code> of the countdown.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>size</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Choose from <code>extra-large</code>, <code>large</code>, <code>medium</code>, <code>small</code>, with <code>large</code> being the default if the property is not specified in the YAML.</p>
+    </td>
+  </tr>
+</table>
 
-| **Actions** |                                                                                                                  |
-| ----------- | ---------------------------------------------------------------------------------------------------------------- |
-| `onPress`   | Choose from the provided list of available actions, for example, use the `go-to` action to open a different jig. |
-| `onFinish`  | Choose from the provided list of available actions. For example, `go-back` action.                               |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Choose from the provided list of available actions, for example, use the <code>go-to</code> action to open a different jig.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onFinish</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Choose from the provided list of available actions. For example, <code>go-back</code> action.</p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -41,12 +112,11 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Countdown with inputs (static, dynamic, expression, & datasource)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -127,12 +197,10 @@ datasources:
           dateType: Books
           date: "2025-07-18 14:00"
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Countdown with alignment
 
 ::::VerticalSplit{layout="middle"}
@@ -144,7 +212,7 @@ See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6_cd-alignl.PNG" size="80" position="center" caption="Aligning countdown" alt="Aligning countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6_cd-alignl.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6_cd-alignl.PNG" size="80" position="center" caption="Aligning countdown" alt="Aligning countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6_cd-alignl.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -189,17 +257,15 @@ children:
           expiresAt: =$fromMillis($toMillis($now()) + 3600000)
           align: stretch
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Countdown with different sizes
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp_cd-sizel.PNG" size="80" position="center" caption="Size variations" alt="Size variations" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp_cd-sizel.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp_cd-sizel.PNG" size="80" position="center" caption="Size variations" alt="Size variations" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp_cd-sizel.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -251,12 +317,10 @@ children:
           expiresAt: =$fromMillis($toMillis($now()) + 36000000)
           size: small
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Countdown onPress
 
 ::::VerticalSplit{layout="right"}
@@ -360,12 +424,10 @@ children:
           expiresAt: =$fromMillis($toMillis($now()) + 36000000)
           size: small
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Countdown onFinish
 
 ::::VerticalSplit{layout="left"}
@@ -396,12 +458,10 @@ count-down-onFinish.jigx
                   title: 🏖️ Holiday time!
                   buttonText: Enjoy!
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Countdown started from another jig
 
 ::::VerticalSplit{layout="right"}
@@ -513,6 +573,6 @@ item:
             packagePrice: =@ctx.current.item.Price
             packageName: =@ctx.current.item.name
 ```
-
 :::
 :::::
+

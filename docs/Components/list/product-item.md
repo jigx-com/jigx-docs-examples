@@ -6,41 +6,155 @@ The product item component is suitable for a list of products and should be used
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ydImhfWqF3Ei8FmcgBdc6_product-item.png" size="78" position="center" caption="Product Item Preview" alt="Product Item Preview" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ydImhfWqF3Ei8FmcgBdc6_product-item.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ydImhfWqF3Ei8FmcgBdc6_product-item.png" size="78" position="center" caption="Product Item Preview" alt="Product Item Preview" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ydImhfWqF3Ei8FmcgBdc6_product-item.png" width="800" height="536" darkWidth="800" darkHeight="536"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
 | **Core structure** |                                                                                                        |
 | ------------------ | ------------------------------------------------------------------------------------------------------ |
 | `title`            | Add a `title` for the for the product-item. You can use an expression and datasource to set the title. |
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `amountControl`   | This property has several setup options:&#xA;`initialValue`<br>`minimum` - Set a minimum limit to the number that can be selected. Default is 0.<br>`maximum` - Set a maximum limit to the number that can be selected.<br>`step` - Set the increments/decrement. Default is 1.<br>`value` - Value of amount control.<br>`onChange` action - will be triggered when value is changed.<br>`onDelete` action - A trash symbol is displayed when the value is 1 or (min + 1). |
-| `discount`        | This allows you to display the discount price including the currency. Set the discount in the range 0 - 1 (1 = 100%). Discount is set in float format e.g. 0.12.                                                                                                                                                                                                                                                                                                                       |
-| `image`           | The option to add an image of your product by providing the `uri`                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `price`           | This allows you to display the base price of the product  including the currency.                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `style`           | `isWaitingSync` - Displays a Waiting sync indicator.                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `tag`             | The option to add a tag to your item. Add a tag title for example max amount, the tag can be configured with an expression to determine when it should be displayed.&#xA;`tag: =@ctx.current.state.amount =10 ? 'max amount':''`                                                                                                                                                                                                                                                       |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="149">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>amountControl</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>This property has several setup options:</p>
+      <ul>
+      <li><code>initialValue</code></li>
+      <li><code>minimum</code> - Set a minimum limit to the number that can be selected. Default is 0.</li>
+      <li><code>maximum</code> - Set a maximum limit to the number that can be selected.</li>
+      <li><code>step</code> - Set the increments/decrement. Default is 1.</li>
+      <li><code>value</code> - Value of amount control.</li>
+      <li><code>onChange</code> action - will be triggered when value is changed.</li>
+      <li><code>onDelete</code> action - A trash symbol is displayed when the value is 1 or (min + 1).</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>discount</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>This allows you to display the discount price including the currency. Set the discount in the range 0 - 1 (1 = 100%). Discount is set in float format e.g. 0.12.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>image</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The option to add an image of your product by providing the <code>uri</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>price</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>This allows you to display the base price of the product  including the currency.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>style</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>isWaitingSync</code> - Displays a Waiting sync indicator.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>tag</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The option to add a tag to your item. Add a tag title for example max amount, the tag can be configured with an expression to determine when it should be displayed.
+      <code>tag: =@ctx.current.state.amount =10 ? 'max amount':''</code></p>
+    </td>
+  </tr>
+</table>
 
-| **Actions** |                                                                                                                                           |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `onPress`   | The action is triggered while pressing on a product item in the list. Use IntelliSense (ctrl+space) to see the list of available actions. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="145">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The action is triggered while pressing on a product item in the list. Use IntelliSense (ctrl+space) to see the list of available actions.</p>
+    </td>
+  </tr>
+</table>
 
-| **State Configuration**  | **Key**              | **Notes**                                                                                                                                                                        |
-| ------------------------ | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `=@ctx.current.state.`   | amount&#xA;          | Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array. |
-| `=@ctx.component.state.` | amount&#xA;          | State is the variable of the component.                                                                                                                                          |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now | Global state variable that can be used throughout the solution.                                                                                                                  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="218,121">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>State Configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.current.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>amount</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.component.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>amount</p>
+    </td>
+    <td selected="false" align="left">
+      <p>State is the variable of the component.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>activeItemId
+      now</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Global state variable that can be used throughout the solution.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Simple product-item with tags
 
 ::::VerticalSplit{layout="middle"}
@@ -52,7 +166,7 @@ See the full example using dynamic data in [GitHub](https://github.com/jigx-com/
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/didhCaT9vWYQmsSdxiZXT_cc-product-item-simple.PNG" size="80" position="center" caption="Product-item with tags" alt="Product-item with tags" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/didhCaT9vWYQmsSdxiZXT_cc-product-item-simple.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/didhCaT9vWYQmsSdxiZXT_cc-product-item-simple.PNG" size="80" position="center" caption="Product-item with tags" alt="Product-item with tags" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/didhCaT9vWYQmsSdxiZXT_cc-product-item-simple.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -88,7 +202,6 @@ item:
       format:
         numberStyle: currency
     tag: =@ctx.current.item.tag
-
 ```
 
 datasource (dynamic)
@@ -112,14 +225,13 @@ datasources:
           '$.quantity',
           '$.category',
           '$.productId'
-          FROM [default/products] WHERE '$.category' = "product" ORDER BY '$.title'          
+        FROM [default/products]
+        WHERE '$.category' = "product" ORDER BY '$.title'          
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Product-item with onChange, amountControl and search
 
 ::::VerticalSplit{layout="middle"}
@@ -192,16 +304,14 @@ datasources:
           '$.quantity',
           '$.category',
           '$.productId'
-          FROM [default/products] WHERE '$.title' LIKE '%'||@search||'%' AND '$.category' = "product" OR @search IS NULL AND '$.category' = "product" ORDER BY '$.title'
+        FROM [default/products] WHERE '$.title' LIKE '%'||@search||'%' AND '$.category' = "product" OR @search IS NULL AND '$.category' = "product" ORDER BY '$.title'
       queryParameters:
         search: =@ctx.jig.state.searchText
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Product-item with summary
 
 ::::VerticalSplit{layout="middle"}
@@ -213,7 +323,7 @@ See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/m
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/V6T6Og9SB2WN43MPrH8Dw_cc-productitemsummary.PNG" size="80" position="center" caption="Product-item with summary" alt="Product-item with summary" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/V6T6Og9SB2WN43MPrH8Dw_cc-productitemsummary.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/V6T6Og9SB2WN43MPrH8Dw_cc-productitemsummary.PNG" size="80" position="center" caption="Product-item with summary" alt="Product-item with summary" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/V6T6Og9SB2WN43MPrH8Dw_cc-productitemsummary.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -259,7 +369,6 @@ summary:
       layout: cart
       title: Items in your cart
       value: =$sum(@ctx.jig.state.amounts.amount)
-
 ```
 
 datasource (static)
@@ -289,10 +398,10 @@ datasources:
           discount: 0.15
           amount: 0
 ```
-
 :::
 :::::
 
 ## See also
 
 - [State](https://docs.jigx.com/state)
+

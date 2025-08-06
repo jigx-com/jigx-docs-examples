@@ -4,18 +4,97 @@ The location component enables users to display a location on a map within a jig
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Options**                   |                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `address`                     | The actual address of the location.&#xA;Valid formats are: &#xA;- **address string - city, street**, e.g.&#xA; `address: 20 W 34th St., New York, NY 10001, USA`&#xA;or in an expression calling a datasource `=@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`&#xA;- **latitude and longitude**, e.g. &#xA;`address: 40.759412, -73.912306` |
-| `is AnimationDisabled`        | `true` or `false` to determine if map animation is disabled.                                                                                                                                                                                                                                                                                                                                                 |
-| `isFollowUserLocationEnabled` | When enabled, the `viewPoint` will be centred on the user’s real-time location.                                                                                                                                                                                                                                                                                                                              |
-| `markers`                     | Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map. See *multi-markers* code example below. &#xA;You can use an expression to provide the latitude and longitude points from a datasource. See *multi-datasource* code example below.                                                                                                             |
-| `marker-item`                 | `anchorTo:` - Anchor the marker to a specific point, either `bottom-center` or `center`&#xA;`radius` - Display a circle around the marker. In the radius you can configure the `color`, `unit` (Default is kilometres)&#xA;`icon` - Choose an icon for the markers. You can style the icon `color`, `emphasis`, `type`, `shape` and `size`.                                                                  |
-| `paths`                       | Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map.&#xA;See *path-multi-points* code example below.                                                                                                                                                                                          |
-| `viewPoint`                   | Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation.&#xA;Options include:&#xA;`centerPosition:` `middle` or `top`                                                                                                                                                                                                                       |
-| `zoomLevel`                   | Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.                                                                                                                                                                                                                                                   |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="261">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>address</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The actual address of the location.
+      Valid formats are: </p>
+      <ul>
+      <li><strong>address string - city, street</strong>, e.g.
+      <code>address: 20 W 34th St., New York, NY 10001, USA</code>
+      or in an expression calling a datasource <code>=@ctx.datasources.address.street &#x26; ',' &#x26; @ctx.datasources.address.city &#x26; ',' &#x26; @ctx.datasources.address.country</code></li>
+      <li><strong>latitude and longitude</strong>, e.g.
+      <code>address: 40.759412, -73.912306</code></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>is AnimationDisabled</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>true</code> or <code>false</code> to determine if map animation is disabled.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isFollowUserLocationEnabled</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>When enabled, the <code>viewPoint</code> will be centred on the user’s real-time location.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>markers</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map. See <em>multi-markers</em> code example below.
+      You can use an expression to provide the latitude and longitude points from a datasource. See <em>multi-datasource</em> code example below.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>marker-item</code></p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li><code>anchorTo:</code> - Anchor the marker to a specific point, either <code>bottom-center</code> or <code>center</code>.</li>
+      <li><code>radius</code> - Display a circle around the marker. In the radius you can configure the <code>color</code>, <code>unit</code> (Default is kilometres).</li>
+      <li><code>icon</code> - Choose an icon for the markers. You can style the icon <code>color</code>, <code>emphasis</code>, <code>type</code>, <code>shape</code> and <code>size</code>.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>paths</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map.
+      See <em>path-multi-points</em> code example below.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>viewPoint</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation.
+      Options include:
+      <code>centerPosition:</code> <code>middle</code> or <code>top</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>zoomLevel</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.</p>
+    </td>
+  </tr>
+</table>
 
 :::CodeblockTabs
 multiple-markers
@@ -54,21 +133,84 @@ path-multi-points
           longitude: -73.950694
       address: =@ctx.datasources.location[0].address
 ```
-
 :::
 
-| **Action**                                             |                                                                                                                                                                                                                                  |
-| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [open-map](./../Actions/open-map.md)                   | The `action.open-map` lets you open your device's default map app (e.g., Google Maps, Apple Maps, or Waze) with the provided destination address. If multiple map apps are available, they will be listed for you to select one. |
-| [open-app-settings](./../Actions/open-app-settings.md) | The `action.open-app-settings` can be configured to show when location tracking permission is not granted. Tapping the action opens the device’s settings screen.                                                                |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="252">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Action</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><a href="./../Actions/open-map.md">open-map</a> </p>
+    </td>
+    <td selected="false" align="left">
+      <p>The <code>action.open-map</code> lets you open your device's default map app (e.g., Google Maps, Apple Maps, or Waze) with the provided destination address. If multiple map apps are available, they will be listed for you to select one.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><a href="./../Actions/open-app-settings.md">open-app-settings</a> </p>
+    </td>
+    <td selected="false" align="left">
+      <p>The <code>action.open-app-settings</code> can be configured to show when location tracking permission is not granted. Tapping the action opens the device’s settings screen.</p>
+    </td>
+  </tr>
+</table>
 
-| **State Configuration**  | **Key**  | **Notes**                               |
-| ------------------------ | -------- | --------------------------------------- |
-| `=@ctx.component.state.` | location | State is the variable of the component. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="255">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>State Configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.component.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>location</p>
+    </td>
+    <td selected="false" align="left">
+      <p>State is the variable of the component.</p>
+    </td>
+  </tr>
+</table>
 
-| **System variable Configuration** | **Key**              | **Notes**                                                               |
-| --------------------------------- | -------------------- | ----------------------------------------------------------------------- |
-| `=@ctx.system.geolocation.`       | coords&#xA;timestamp | See [System geolocation](<./../Expressions/Jigx Variables.md>) example. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="257,106">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>System variable Configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.system.geolocation.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>coords
+      timestamp</p>
+    </td>
+    <td selected="false" align="left">
+      <p>See  example.</p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -78,12 +220,11 @@ path-multi-points
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Location using address
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UFZdb7OyH1n4qiLOUrfKR-20250221-065903.png" size="80" position="center" caption="Location from address" alt="Location from address" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UFZdb7OyH1n4qiLOUrfKR-20250221-065903.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UFZdb7OyH1n4qiLOUrfKR-20250221-065903.png" size="80" position="center" caption="Location from address" alt="Location from address" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UFZdb7OyH1n4qiLOUrfKR-20250221-065903.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -164,7 +305,8 @@ datasources:
           '$.category',  
           '$.lat',
           '$.lng'
-        FROM [default/location] WHERE '$.category' = "location"
+        FROM [default/location] 
+        WHERE '$.category' = "location"
 ```
 
 datasources (static)
@@ -179,17 +321,15 @@ datasources:
           city: New York
           country: US
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Location using latitude and longitude
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SNmxyLzQ0Z2t6OnyCEYDv-20250221-075843.png" size="80" position="center" caption="Address - Latitude & Longitude" alt="Address - Latitude & Longitude" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SNmxyLzQ0Z2t6OnyCEYDv-20250221-075843.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SNmxyLzQ0Z2t6OnyCEYDv-20250221-075843.png" size="80" position="center" caption="Address - Latitude & Longitude" alt="Address - Latitude & Longitude" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SNmxyLzQ0Z2t6OnyCEYDv-20250221-075843.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -246,17 +386,15 @@ datasources:
           address: 86th St Transverse, New York, NY 10024, United States
           icon: stadium-1-building 
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Location with multiple markers
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_G08LkK_JYJE7lY18vhAQ-20250221-073344.png" size="80" position="center" caption="Multiple markers" alt="Multiple markers" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_G08LkK_JYJE7lY18vhAQ-20250221-073344.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_G08LkK_JYJE7lY18vhAQ-20250221-073344.png" size="80" position="center" caption="Multiple markers" alt="Multiple markers" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_G08LkK_JYJE7lY18vhAQ-20250221-073344.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -312,17 +450,15 @@ datasources:
         - latitude: 40.76479429122513
           longitude: -73.97429291692742    
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Location displaying paths
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HyprtOZYo43vA857u8iYz-20250221-074256.png" size="80" position="center" caption="Location paths" alt="Location paths" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HyprtOZYo43vA857u8iYz-20250221-074256.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HyprtOZYo43vA857u8iYz-20250221-074256.png" size="80" position="center" caption="Location paths" alt="Location paths" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HyprtOZYo43vA857u8iYz-20250221-074256.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -411,12 +547,10 @@ datasources:
             latitude: 40.803495
             longitude: -73.950694
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Location radius
 
 ::::VerticalSplit{layout="middle"}
@@ -425,7 +559,7 @@ This example demonstrates how to add a circular `radius` around the specified lo
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cDA1fuYtVPJqgPh81VW6l-20250226-085626.png" size="66" position="center" caption="Location with a radius" alt="Location with a radius" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cDA1fuYtVPJqgPh81VW6l-20250226-085626.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cDA1fuYtVPJqgPh81VW6l-20250226-085626.png" size="66" position="center" caption="Location with a radius" alt="Location with a radius" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cDA1fuYtVPJqgPh81VW6l-20250226-085626.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 ::::
 
@@ -477,12 +611,10 @@ datasources:
         - latitude: 40.759412
           longitude: -73.912306
 ```
-
 :::
 :::::
 
 ::::::ExpandableHeading
-
 ### Location full screen
 
 :::::VerticalSplit{layout="middle"}
@@ -501,7 +633,7 @@ Using the code below requires data in the database, the *jigx.sample* solution h
 ::::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RV6o93L_kcfzE1pfggkwo-20250221-082705.png" size="68" position="center" caption="Fullscreen location" alt="Fullscreen location" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RV6o93L_kcfzE1pfggkwo-20250221-082705.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RV6o93L_kcfzE1pfggkwo-20250221-082705.png" size="68" position="center" caption="Fullscreen location" alt="Fullscreen location" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RV6o93L_kcfzE1pfggkwo-20250221-082705.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 :::::
 
@@ -555,17 +687,15 @@ datasources:
           city: New York
           country: US  
 ```
-
 :::
 ::::::
 
 :::::ExpandableHeading
-
 ### Location as a header
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cQZEvoQcr1J_SDuWosHd7-20250221-091813.png" size="98" position="center" caption="Location in header" alt="Location in header" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cQZEvoQcr1J_SDuWosHd7-20250221-091813.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cQZEvoQcr1J_SDuWosHd7-20250221-091813.png" size="98" position="center" caption="Location in header" alt="Location in header" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cQZEvoQcr1J_SDuWosHd7-20250221-091813.png" width="800" height="788" darkWidth="800" darkHeight="788"}
 :::
 
 :::VerticalSplitItem
@@ -664,10 +794,10 @@ datasources:
           address: 86th St Transverse, New York, NY 10024, United States
           icon: stadium-1-building 
 ```
-
 :::
 :::::
 
 ## See also
 
 - [State](https://docs.jigx.com/state)
+

@@ -1,25 +1,18 @@
----
-title: stage
-slug: _6vp-stage
-description: Learn how to implement a versatile component for items with left and right elements. This document offers customization options for icons and actions, along with practical code snippets and examples. Discover how to integrate the component with both stati
-createdAt: Thu Jun 09 2022 19:58:34 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Aug 05 2024 13:21:50 GMT+0000 (Coordinated Universal Time)
----
+# stage
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 A stage is a primary container for displaying various UI components on the left and right, typically showing a start-and-end concept.
-
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yWymE6Po4TH-JLyB7xKK2_cc-list-stage.png" size="88" position="center" caption="Stage in a list" alt="Stage in a list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yWymE6Po4TH-JLyB7xKK2_cc-list-stage.png" size="88" position="center" caption="Stage in a list" alt="Stage in a list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yWymE6Po4TH-JLyB7xKK2_cc-list-stage.png" width="800" height="531" darkWidth="800" darkHeight="531"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
 | **Core structure** |                                                                   |
 | ------------------ | ----------------------------------------------------------------- |
@@ -27,15 +20,57 @@ Some properties are common to all components, see [Common component properties](
 | `right`            | Add content to the `right` element as text, or use an expression. |
 | `title`            | Add `titles` for the text on the `left` and `right` elements.     |
 
-| **Other options** |                                                                                                                                                                      |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Add an icon to show in the `centerElement`. A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.                   |
-| `style`           | `isWaitingSync` - Will display a "Waiting sync" indicator (cloud with a line through it), a visual indicator showing that data has not been synced to the cloud yet. |
-| `subtitle`        | Add a `subtitle` to either the left or right element as text, or use an expression.                                                                                  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="137">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>icon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add an icon to show in the <code>centerElement</code>. A list of icons is available. See  for more information.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>style</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>isWaitingSync</code> - Will display a "Waiting sync" indicator (cloud with a line through it), a visual indicator showing that data has not been synced to the cloud yet.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>subtitle</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a <code>subtitle</code> to either the left or right element as text, or use an expression.</p>
+    </td>
+  </tr>
+</table>
 
-| **Actions** |                                                                                                                                     |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `onPress`   | The action is triggered while pressing on an item in the stage. Use IntelliSense (ctrl+space) to see the list of available actions. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="135">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The action is triggered while pressing on an item in the stage. Use IntelliSense (ctrl+space) to see the list of available actions.</p>
+    </td>
+  </tr>
+</table>
 
 ## Consideration
 
@@ -44,12 +79,11 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### List with stage
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RjT9ffFl39FHcgn4CQhU4_n-v2bpok86ynufyojh-jvlist-default-jig-with-stage-listiphone13blueportrait.png" size="80" position="center" caption="Stage for flights" alt="Stage for flights"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RjT9ffFl39FHcgn4CQhU4_n-v2bpok86ynufyojh-jvlist-default-jig-with-stage-listiphone13blueportrait.png" size="80" position="center" caption="Stage for flights" alt="Stage for flights" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RjT9ffFl39FHcgn4CQhU4_n-v2bpok86ynufyojh-jvlist-default-jig-with-stage-listiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
@@ -197,17 +231,15 @@ datasources:
           '$.toabrv' 
         FROM [default/flight-schedule]
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### List with expander and stage as a Header
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih_dHdqqMASbcxefEw-_rxx3cpwfsmgibkcygpxznlist-with-expander.png" size="80" position="center" caption="Stage in list with expanders" alt="Stage in list with expanders"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih_dHdqqMASbcxefEw-_rxx3cpwfsmgibkcygpxznlist-with-expander.png" size="80" position="center" caption="Stage in list with expanders" alt="Stage in list with expanders" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih_dHdqqMASbcxefEw-_rxx3cpwfsmgibkcygpxznlist-with-expander.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
@@ -300,7 +332,9 @@ children:
                             value: =@ctx.current.item.seat
             - type: component.location
               options:
-                address: =@ctx.current.item.to
+                viewPoint: 
+                  centerPosition: middle
+                  address: =@ctx.current.item.to
 ```
 
 list-expander (dynamic)
@@ -377,7 +411,9 @@ children:
                             value: =@ctx.current.item.seat
             - type: component.location
               options:
-                address: =@ctx.current.item.to
+                viewPoint: 
+                  centerPosition: middle
+                  address: =@ctx.current.item.to
 ```
 
 datasources (static)
@@ -459,6 +495,6 @@ datasources:
           '$.toabrv' 
         FROM [default/flight-schedule]
 ```
-
 :::
 :::::
+

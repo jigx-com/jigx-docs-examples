@@ -16,41 +16,252 @@ The `date-picker` component can be used independently or within a `form` compone
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                        |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `instanceId`       | The unique identifier for the date-picker field that can be referenced elsewhere. This is useful when saving the date to a datasource. |
-| `label`            | Provide a label to guide people on the what they selecting, for example, date of birth or start date.                                  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="132">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>instanceId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The unique identifier for the date-picker field that can be referenced elsewhere. This is useful when saving the date to a datasource.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>label</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide a label to guide people on the what they selecting, for example, date of birth or start date.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options**       |                                                                                                                                                                                                                                                                                                                                      |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `color`                 | Select a color from the [Jigx color palette](https://docs.jigx.com/jigx-color-palette) to change the color of the field and label based on a `when` condition. First evaluated to `true` will be used.                                                                                                                                                                      |
-| `errorText`             | Provide text message to display when field's value is not valid. The message is displayed in `isNegative` style (red). Use an expression to determine when to show the field.                                                                                                                                                        |
-| `format`                | Select the format of the date/time:&#xA;LT - 3:28 PM&#xA;LTS - 3:28:57 PM&#xA;LLLL - Thursday, March 3, 2024 3:28 PM&#xA;LLL - March 3, 2024 3:28 PM&#xA;LL - March 3, 2024 (default)&#xA;L - 03/03/2024&#xA;l - 3/3/2024&#xA;ll -  Mar 3, 2024&#xA;lll - Mar 3, 2024 3:28 PM&#xA;llll - Thu, Mar 3, 2024 3:28 PM&#xA;HH\:mm - 15:28 |
-| `helperText`            | `helperText` is displayed only when there is no `errorText` property configured as `errorText` takes priorty.                                                                                                                                                                                                                        |
-| `icon`                  | Add an icon to the field. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information on adding icons.                                                                                                                                                                                                                                                  |
-| `isRequired`            | The default setting is `true` making the field required, useful when used in form submission. Set to `false` the field is not required and the field is marked (optional).                                                                                                                                                           |
-| `isIgnored`             | Set to `true`, the field is ignored when submitting the form.                                                                                                                                                                                                                                                                        |
-| `isHidden`              | Set to `true`, hides the field on the form. Use an expression to determine when to hide the field.                                                                                                                                                                                                                                   |
-| `initialValue`          | Initial value for the field. You can use this to preset the value, so user do not need to change the value and can use this as the default. Using the `reset-state` action with `initialValues` does not clear the field, it resets the date back to it's `initialValue`.                                                            |
-| `isOptionalLabelHidden` | If the field is optional (by setting `isRequired` to `false`) , setting the `isOptionalLabelHidden` property to `true` turns off/removes the (optional) text in the label.This property works in combination with `isRequired: false`.                                                                                               |
-| `isAutoFocused`         | By default this field is set to `false`, use `true` to get focus immediately after it is displayed.                                                                                                                                                                                                                                  |
-| `maximum`               | Set a maximum time range f date/ time (UTC time). For example, "2022-04-22 14:00" or "2022-04-22" or "20:00" in case of type "time".&#xA;`Maximum` on Android only works with `date` mode because TimePicker does not support this option.                                                                                           |
-| `minimum`               | Set a minimum time range for date/ time (UTC time). For example. "2022-04-22 05:00" or "2022-04-22" or "08:00" in case of type "time".&#xA;`Minimum` on Android  only works with `date` mode because  the TimePicker does not support this option.                                                                                   |
-| `mode`                  | By default the mode is set to `date`.  &#xA;Use `dateTime` to show a date and time picker.&#xA;Use `time` to only show a time picker.                                                                                                                                                                                                |
-| `nextProperty`          | Name of the next property to receive focus in the form when using submit on a virtual keyboard.                                                                                                                                                                                                                                      |
-| `style`                 | `isPositive` - field shows a positive icon (green tick)&#xA;`isBusy` - Displays a spinner in the right hand side of the field to show that the field is busy. &#xA;`isDisabled` - Set to `true` disables the date-picker field, preventing the picker screen from popping up.&#xA;`flex` - adjust the size of the field.             |
-| `value`                 | The value to display in the field. `Text` field is a controlled component, which means the internal value will be forced to match a UTC time, if it cannot an Invalid date error displays.                                                                                                                                           |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="213">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>color</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Select a color from the  to change the color of the field and label based on a <code>when</code> condition. First evaluated to <code>true</code> will be used.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>errorText</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide text message to display when field's value is not valid. The message is displayed in <code>isNegative</code> style (red). Use an expression to determine when to show the field.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>format</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Select the format of the date/time:
+      LT - 3:28 PM
+      LTS - 3:28:57 PM
+      LLLL - Thursday, March 3, 2024 3:28 PM
+      LLL - March 3, 2024 3:28 PM
+      LL - March 3, 2024 (default)
+      L - 03/03/2024
+      l - 3/3/2024
+      ll -  Mar 3, 2024
+      lll - Mar 3, 2024 3:28 PM
+      llll - Thu, Mar 3, 2024 3:28 PM
+      HH:mm - 15:28</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>helperText</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>helperText</code> is displayed only when there is no <code>errorText</code> property configured as <code>errorText</code> takes priorty.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>icon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add an icon to the field. See  for more information on adding icons.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isRequired</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The default setting is <code>true</code> making the field required, useful when used in form submission. Set to <code>false</code> the field is not required and the field is marked (optional).</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isIgnored</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set to <code>true</code>, the field is ignored when submitting the form.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isHidden</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set to <code>true</code>, hides the field on the form. Use an expression to determine when to hide the field.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>initialValue</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Initial value for the field. You can use this to preset the value, so user do not need to change the value and can use this as the default. Using the <code>reset-state</code> action with <code>initialValues</code> does not clear the field, it resets the date back to it's <code>initialValue</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isOptionalLabelHidden</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>If the field is optional (by setting <code>isRequired</code> to <code>false</code>) , setting the <code>isOptionalLabelHidden</code> property to <code>true</code> turns off/removes the (optional) text in the label.This property works in combination with <code>isRequired: false</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isAutoFocused</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>By default this field is set to <code>false</code>, use <code>true</code> to get focus immediately after it is displayed.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>maximum</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set a maximum time range f date/ time (UTC time). For example, "2022-04-22 14:00" or "2022-04-22" or "20:00" in case of type "time".
+      <code>Maximum</code> on Android only works with <code>date</code> mode because TimePicker does not support this option.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>minimum</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set a minimum time range for date/ time (UTC time). For example. "2022-04-22 05:00" or "2022-04-22" or "08:00" in case of type "time".
+      <code>Minimum</code> on Android  only works with <code>date</code> mode because  the TimePicker does not support this option.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>mode</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>By default the mode is set to <code>date</code>.
+      Use <code>dateTime</code> to show a date and time picker.
+      Use <code>time</code> to only show a time picker.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>nextProperty</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Name of the next property to receive focus in the form when using submit on a virtual keyboard.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>style</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>isPositive</code> - field shows a positive icon (green tick)
+      <code>isBusy</code> - Displays a spinner in the right hand side of the field to show that the field is busy.
+      <code>isDisabled</code> - Set to <code>true</code> disables the date-picker field, preventing the picker screen from popping up.
+      <code>flex</code> - adjust the size of the field.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>value</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The value to display in the field. <code>Text</code> field is a controlled component, which means the internal value will be forced to match a UTC time, if it cannot an Invalid date error displays.</p>
+    </td>
+  </tr>
+</table>
 
-| **Action** |                                                                                 |
-| ---------- | ------------------------------------------------------------------------------- |
-| `onChange` | Select an action to execute when the date-picker component's  value is changed. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Action</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onChange</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Select an action to execute when the date-picker component's  value is changed.</p>
+    </td>
+  </tr>
+</table>
 
-| **State Configuration**  | **Key**              | **Notes**                                                       |
-| ------------------------ | -------------------- | --------------------------------------------------------------- |
-| `=@ctx.component.state.` | value                | State is the variable of the component.                         |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now | Global state variable that can be used throughout the solution. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="218,120">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>State Configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.component.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>value</p>
+    </td>
+    <td selected="false" align="left">
+      <p>State is the variable of the component.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>activeItemId
+      now</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Global state variable that can be used throughout the solution.</p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -61,7 +272,6 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Date picker for selecting a specific date
 
 ::::VerticalSplit{layout="middle"}
@@ -92,12 +302,10 @@ children:
             label: Select a date
             format: L
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Date picker for selecting time
 
 ::::VerticalSplit{layout="middle"}
@@ -129,12 +337,10 @@ children:
             mode: time
             format: HH:mm
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Date picker with a minimum and maximum date
 
 ::::VerticalSplit{layout="middle"}
@@ -143,7 +349,7 @@ This example shows how to set a specific date range using the `minimum` and `max
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EVYL9aHItYCcYfcSj2J1T_cc-date-min-max.PNG" size="60" position="center" caption="Date range with minimum & maximum" alt="Date range with minimum & maximum" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EVYL9aHItYCcYfcSj2J1T_cc-date-min-max.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EVYL9aHItYCcYfcSj2J1T_cc-date-min-max.PNG" size="60" position="center" caption="Date range with minimum & maximum" alt="Date range with minimum & maximum" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EVYL9aHItYCcYfcSj2J1T_cc-date-min-max.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -165,10 +371,10 @@ children:
             format: L
             label: Select a date
 ```
-
 :::
 :::::
 
 ## See also
 
 - [State](https://docs.jigx.com/state)
+

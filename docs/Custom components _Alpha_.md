@@ -2,12 +2,14 @@
 
 # Custom components (Alpha)
 
-\:::hint\{type="danger"} This feature is currently in its **Alpha** stage of development.
+:::hint{type="danger"}
+This feature is currently in its **Alpha** stage of development.
 
 - As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
-- We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases. :::
+- We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.&#x20;
+:::
 
 Custom components extend the standard set of components in Jigx to provide additional UI capabilities and features. To understand what custom components are, when and why you would use them, see [Custom Components (Alpha)](https://docs.jigx.com/custom-components-alpha).
 
@@ -59,7 +61,8 @@ Custom components extend the standard set of components in Jigx to provide addit
   ```
 - When using `component.image` in a custom component, the `height` property must be specified as part of the `size` property, otherwise validation errors occur, see below:
 
-&#x20;Correct YAML
+:::CodeblockTabs
+Correct YAML
 
 ```yaml
 # Correct YAML snippet for using the height property in the image component,
@@ -83,4 +86,5 @@ Incorrect YAML
             source:
               uri: https://images
 ```
+:::
 

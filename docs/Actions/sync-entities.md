@@ -15,10 +15,9 @@ sync-entities can't be used if you using [Static Data](https://docs.jigx.com/exa
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### sync-entities in action
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy_Ed5LO5RY_5j_action-sync-entities.PNG" size="80" position="center" caption="Sync-entities action" alt="Sync-entities action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy_Ed5LO5RY_5j_action-sync-entities.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy_Ed5LO5RY_5j_action-sync-entities.PNG" size="80" position="center" caption="Sync-entities action" alt="Sync-entities action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy_Ed5LO5RY_5j_action-sync-entities.PNG" width="800" height="791" darkWidth="800" darkHeight="791"}
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -44,17 +43,15 @@ actions:
         entities:
           - default/employees    
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### sync-entities in the action list
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mvmPcSbReereFrlWFAo8t_syncent-actionlist.PNG" size="80" position="center" caption="Sync-entities action" alt="sync-entities action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mvmPcSbReereFrlWFAo8t_syncent-actionlist.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mvmPcSbReereFrlWFAo8t_syncent-actionlist.PNG" size="80" position="center" caption="Sync-entities action" alt="sync-entities action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mvmPcSbReereFrlWFAo8t_syncent-actionlist.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -84,12 +81,10 @@ actions:
             options:
               linkTo: default-employee-detail
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### sync-entities in onPress/onChange event
 
 ::::VerticalSplit{layout="middle"}
@@ -103,7 +98,7 @@ The full example of sync-entities in onPress you can find in [GitHub](https://gi
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fSEBZHTaBdKmnRfeiOWlH_syncent-onpress.PNG" size="80" position="center" caption="Sync-entities action with onPress" alt="sync-entities action with onPress" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fSEBZHTaBdKmnRfeiOWlH_syncent-onpress.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fSEBZHTaBdKmnRfeiOWlH_syncent-onpress.PNG" size="80" position="center" caption="Sync-entities action with onPress" alt="sync-entities action with onPress" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fSEBZHTaBdKmnRfeiOWlH_syncent-onpress.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -175,17 +170,15 @@ item:
                 entities:
                   - default/employees
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### sync-entities in onRefresh/onFocus
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v-diCoJjp-AGG2UGwZn9n_syncent-inchange.PNG" size="80" position="center" caption="sync-entities action with onRefresh" alt="sync-entities action with onRefresh" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v-diCoJjp-AGG2UGwZn9n_syncent-inchange.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v-diCoJjp-AGG2UGwZn9n_syncent-inchange.PNG" size="80" position="center" caption="sync-entities action with onRefresh" alt="sync-entities action with onRefresh" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v-diCoJjp-AGG2UGwZn9n_syncent-inchange.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -221,12 +214,10 @@ onFocus:
     entities:
       - default/employees
 ```
-
 :::
 :::::
 
 ::::ExpandableHeading
-
 ### Dynamically sync multiple entities
 
 When building a solution, the number of entities to sync and the parameters for each are not always known; for example, when syncing the attachments, files, or documents for a message, there can be zero, one, or more. It is necessary to dynamically specify a list of the entities, functions, and function parameters to return from the database using an expression.
@@ -268,14 +259,13 @@ actions:
               }
             })[]
 ```
-
 :::
 
 ### Example sync-entities dynamically for calendars (full input source)
 
 To return all records from the input source use `$item.id`. In this example, a jig has two lists; the first list shows all the user's calendars, and the second list uses the `ids` from the first list to return all the events for all the calendars. A summary component shows a count of the number of events.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GmLSc1g6aMLAAgchgPdQK_jb-dyn-sync-cals.png" size="70" position="center" caption="Sync calendars and events" alt="Sync calendars and events" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GmLSc1g6aMLAAgchgPdQK_jb-dyn-sync-cals.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GmLSc1g6aMLAAgchgPdQK_jb-dyn-sync-cals.png" size="70" position="center" caption="Sync calendars and events" alt="Sync calendars and events" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GmLSc1g6aMLAAgchgPdQK_jb-dyn-sync-cals.png" width="800" height="796" darkWidth="800" darkHeight="796"}
 
 :::CodeblockTabs
 full-calendar-list
@@ -304,7 +294,8 @@ onRefresh:
 
 actions:
   - children:  
-    # dynamically list all calendars using REST using the sync-dynamic-ds-rest global action with and the full datasource
+    # dynamically list all calendars using REST using the sync-dynamic-ds-rest
+    # global action with and the full datasource.
       - type: action.execute-action
         options:
           title: Sync all calendar events
@@ -319,7 +310,7 @@ children:
       children:
         - type: component.list
           options:
-          # use the list-calendars-rest to return the list of calendars
+          # use the list-calendars-rest to return the list of calendars.
             data: =@ctx.datasources.list-calendars-rest
             maximumItemsToRender: 8
             item: 
@@ -333,7 +324,7 @@ children:
       children:
         - type: component.list
           options:
-          # use the list-calendars-rest to return the list events by calendar
+          # use the list-calendars-rest to return the list events by calendar.
             data: =@ctx.datasources.list-events-by-calendar
             maximumItemsToRender: 8
             item: 
@@ -346,10 +337,9 @@ summary:
     type: component.summary
     options: 
       layout: counter
- # Expression to count the number of events across all calendars     
+ # Expression to count the number of events across all calendars.     
       value: =$count(@ctx.datasources.list-events-by-calendar)
       title: Total events 
-        
 ```
 
 sync-dynamic-ds-rest
@@ -360,7 +350,8 @@ action:
   type: action.sync-entities
   options:
     provider: DATA_PROVIDER_REST
-# Add the expression for the dynamic sync-entities in the specified format. The array uses the full datasource    
+# Add the expression for the dynamic sync-entities in the specified format. 
+# The array uses the full datasource.    
     entities: |
       =$map(@ctx.action.parameters.datasource, function($item) {
         $.{
@@ -417,14 +408,13 @@ continuation:
 records: =$.value
 useLocalCall: true
 ```
-
 :::
 
 ### Example sync-entities dynamically for a selected calendar
 
 To return all records for a selected calendar use `=$map(@ctx.action.parameters.selected, function($item)` in the global action. In this example, a jig has a dropdown to select the calendar and a *Show events* button syncs the entries in the selected calendar. A summary component shows a count of the number of events in the selected calendar.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-9e6Q31g_zJYZw9ARJCXw_jb-dyn-sync-cal2.png" size="78" position="center" caption="Sync events for the birthday calendar" alt="Sync events for the birthday calendar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-9e6Q31g_zJYZw9ARJCXw_jb-dyn-sync-cal2.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-9e6Q31g_zJYZw9ARJCXw_jb-dyn-sync-cal2.png" size="78" position="center" caption="Sync events for the birthday calendar" alt="Sync events for the birthday calendar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-9e6Q31g_zJYZw9ARJCXw_jb-dyn-sync-cal2.png" width="800" height="803" darkWidth="800" darkHeight="803"}
 
 :::CodeblockTabs
 my-events.jigx
@@ -453,7 +443,8 @@ onRefresh:
 
 actions:
   - children: 
-  # return events for a selected calendar by passing the selected array in the parameters
+  # return events for a selected calendar by passing the selected array in the 
+  # parameters.
       - type: action.execute-action
         options:
           title: Show events
@@ -504,7 +495,8 @@ summary:
 sync-dynamic-selected-rest
 
 ```yaml
-# add the global action under actions folder and use selected in the array mapping 
+# Add the global action under actions folder and use selected in the array
+# mapping. 
 action: 
   type: action.sync-entities
   options:
@@ -520,7 +512,8 @@ action:
           }
         }
       })[]
-# If using a single value as your input source your mapping would be "calendarId": $item
+# If using a single value as your input source your mapping would be 
+# "calendarId": $item
 parameters:
   selected: 
     type: object 
@@ -566,6 +559,6 @@ continuation:
 records: =$.value
 useLocalCall: true
 ```
-
 :::
 ::::
+

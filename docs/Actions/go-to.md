@@ -1,10 +1,4 @@
----
-title: go-to
-slug: om2t-go-to
-description: Learn how to effectively use the "go-to" action in your website or application. Redirect users to their desired pages or components with this versatile action that can be used alone or in combination with other actions. Get hands-on examples and code snip
-createdAt: Thu Jun 09 2022 18:22:52 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Feb 25 2025 08:38:01 GMT+0000 (Coordinated Universal Time)
----
+# go-to
 
 This action redirects you to another jig. The `go-to` action can be used with elements like `swipeable` and `rightElement` or combined with another action. When paired with another action, it is triggered after the main action to navigate to a specified screen, for example, saving a date in a form and then opening a list of customers. `go-to` helps configure navigation, ensuring a seamless app flow. See [Navigation](https://docs.jigx.com/navigation) for more information.
 
@@ -32,12 +26,11 @@ A go-to action can be set up in various ways:
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### go-to as an action
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MFStH4Yrw_PUJ4y5tc7Cj-20250225-070717.png" size="80" position="center" caption="go-to action" alt="go-to action"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MFStH4Yrw_PUJ4y5tc7Cj-20250225-070717.png" size="80" position="center" caption="go-to action" alt="go-to action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MFStH4Yrw_PUJ4y5tc7Cj-20250225-070717.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -60,12 +53,10 @@ actions:
           title: Go to
           linkTo: default-employee-detail
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### go-to swipeable left/right
 
 ::::VerticalSplit{layout="middle"}
@@ -76,8 +67,8 @@ actions:
 :::VerticalSplitItem
 This example uses the go-to action as a swipeable property. We can choose the swipe direction left or right. After pressing the button, it will redirect to the details of the person.
 
-**Examples left:
-**See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-swipeable/go-to-swipeable-left.jigx).
+\*\*Examples left:
+\*\*See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-swipeable/go-to-swipeable-left.jigx).
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-swipeable/go-to-left-dynamic.jigx).
 
 **Examples right:**
@@ -129,17 +120,15 @@ item:
             options:
               linkTo: default-employee-detail
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### go-to right button element
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TVkSZkXqMnIyfLztOYUmk-20250225-071246.png" size="80" position="center" caption="go-to button" alt="go-to button"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TVkSZkXqMnIyfLztOYUmk-20250225-071246.png" size="80" position="center" caption="go-to button" alt="go-to button" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TVkSZkXqMnIyfLztOYUmk-20250225-071246.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -172,17 +161,15 @@ item:
         options:
           linkTo: default-employee-detail
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### go-to onSuccess
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-o3gCYRbZdD4iyLoJ-oCNJ-20250225-071422.png" size="82" position="center" caption="Go to onSuccess" alt="go-to onSuccess"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-o3gCYRbZdD4iyLoJ-oCNJ-20250225-071422.png" size="82" position="center" caption="Go to onSuccess" alt="go-to onSuccess" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-o3gCYRbZdD4iyLoJ-oCNJ-20250225-071422.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -220,12 +207,10 @@ actions:
                         linkTo: default-employee-detail
             - type: action.go-back
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### go-to open a jig as a modal
 
 ::::VerticalSplit{layout="middle"}
@@ -388,7 +373,8 @@ options:
       '$.category', 
       '$.photo',
       '$.time'
-    FROM [default/employees] WHERE '$.category' = "employees" ORDER BY '$.firstname' ASC
+    FROM [default/employees] 
+    WHERE '$.category' = "employees" ORDER BY '$.firstname' ASC
 ```
 
 quartal.jigx
@@ -426,23 +412,21 @@ options:
         - y: 100
           color: transparent
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### go-to using new & existing behaviour
 
 In this example, three jigs are configured to create a stack of data for each guest, including their Name, Age, and Address. Each jig's `go-to` action is set with the `behaviour` property as `new`, enabling new guest details to be pushed into the app history. In the final jig, a secondary `go-to` action is added. This action introduces a button to review each guest's data by setting the `behaviour` property to `existing` and linking to the first jig in the stack via the `linkTo` property. The review process will cycle through each guest's details in the stack before completing.
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07_99i4UGP-20250225-083249.gif" signedSrc size="60" position="center" caption="Go-to new guest" alt="Go-to new guest "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07_99i4UGP-20250225-083249.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07_99i4UGP-20250225-083249.gif" size="60" position="center" caption="Go-to new guest" alt="Go-to new guest " width="681" height="1377" darkWidth="681" darkHeight="1377"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc_azd0-20250225-083738.gif" size="60" position="center" caption="Review guests" alt="Review guests"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc_azd0-20250225-083738.gif" size="60" position="center" caption="Review guests" alt="Review guests" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc_azd0-20250225-083738.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
 :::
 ::::
 
@@ -557,7 +541,8 @@ actions:
             # this allows you to capture the next jig's data in the stack.
             - type: action.go-to
               options:
-                # Set the parameters to use the input value passed from the first jig in the stack.
+                # Set the parameters to use the input value passed from the 
+                # first jig in the stack.
                 inputs:
                   fullName: =@ctx.jig.inputs.fullName
                 # Select new to push the jig into the app history,
@@ -613,12 +598,13 @@ actions:
           # Select new to push the jig into the app history,
           # this allows you to capture the next set of data for a new stack.
           behaviour: new
-          # Open the first jig in the stack to start capturing the new stack of data.
+          # Open the first jig in the stack to start capturing the new stack 
+          # of data.
           linkTo: jig-a
       # Add a second go-to action that will create a secondary button,
       # allowing you to review the existing data set in the stack.
-      # Add existing to behaviour which will cycle through all the jigs in the history,
-      # showing the jig with the data for each jig.
+      # Add existing to behaviour which will cycle through all the jigs in 
+      # the history, showing the jig with the data for each jig.
       # Note the jigs will cycle through the screens for each capture,
       # meaning if you captured 3 sets in the stack, all 3 stacks are shown.
       - type: action.go-to
@@ -631,6 +617,6 @@ actions:
           # for each stack captured.
           linkTo: jig-a
 ```
-
 :::
 :::::
+

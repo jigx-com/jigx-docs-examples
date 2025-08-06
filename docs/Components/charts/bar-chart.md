@@ -6,35 +6,114 @@ The component can display statistics related to data records (categorical variab
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Bar Chart Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNwqF58yNsXcKrMxDsANE_bar-chart.png" size="86" caption="Bar Chart Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNwqF58yNsXcKrMxDsANE_bar-chart.png"}
+::Image[]{alt="Bar Chart Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNwqF58yNsXcKrMxDsANE_bar-chart.png" size="86" caption="Bar Chart Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNwqF58yNsXcKrMxDsANE_bar-chart.png" width="800" height="604" darkWidth="800" darkHeight="604"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
 | **Core structure** |                                                                                                                                                                              |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `series`           | - `color` - defines the color of the bar used in the chart.                                                                                                                  |
-| `data`             | - values to be used in the chart. &#xA;                                                                                                                                      |
+| `series`           | `color` - defines the color of the bar used in the chart.                                                                                                                    |
+| `data`             | values to be used in the chart. &#xA;                                                                                                                                        |
 | `yAxis`            | `min` and `max` values that display on the y-axis. The `max` property doesn't have to be defined, in this case, it will  automatically be calculated depending on your data. |
 | `xAxis`            | `categories` to display on the x-axis                                                                                                                                        |
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `chart`           | - `title`and `subtitle` - Name and a short description of your chart.&#xA;- `height` and `width` - The parameters of the graph displayed (in pixels).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `legend`          | `isHidden` -  The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `plotBands`       | The `from` and `to` properties define the area to be filled with color. Specify the range using the from and to properties with numeric values.&#xA;`color` Sets the color of the band for the `y-axis`, choose a color from the provided color palette. Use `plotbands` to highlight specific regions or ranges on the chart, making it easier for users to interpret and analyze the data.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `plotOptions`     | `series` - Different properties available to manipulate the data shown in the bar such as width of columns, the interval between two points, option to hide markers.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `series`          | `name` - The naming of the actual series.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `xAxis`           | \* `isFirstLabelHidden` value is either `true` to hide the first label or `false` to display the first label. The property doesn't have to be defined, by default the first label is shown.&#xA;\* `isFirstTickHidden` value is either true/false. Set to `true` hides the whole axis.&#xA;\* `isHidden` value is either true/false.&#xA;\* `isLastLabelHidden` value is either `true` to hide the last label or `false` to display the last label. The property doesn't have to be defined, by default the last label are shown.&#xA;\* `isLastTickHidden` value is either `true` to hide the last line and label or `false` to display the last line and label. The property doesn't have to be defined, by default the last label  and line are shown.&#xA;\* `labels` - Label of axis, a selection of different formats such as `dateFormat`, `currency`, `unit`, and `signDisplay` are available.&#xA;\* `min` and `max` - Minimum and maximum values that should be displayed on the x-axis.&#xA;\* `minPadding` - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).&#xA;\* `tickAmount` - The number of ticks to display on the x-axis. The final amount doesn't have to be exactly the same number as you pass into it. Round up to 6 to give the chart a good set of numbers 0, 20, 40, 60, 80, 100. Set ticks to 3 will be honored and shows 0, 50, and 100.                                           |
-| `yAxis`           | - `isFirstLabelHidden` value is either true/false. Set to `true` hides the first label. The property doesn't have to be defined, by default the first label is shown.&#xA;- `isFirstTickHidden` value is either true/false. Set to `true` hides the whole axis.&#xA;- `isHidden` value is either true/false. Set to `true` the last label is hidden.&#xA;- `isLastLabelHidden` value is either `true` to hide the last label and line or `false` to display the last label and line. The property doesn't have to be defined, by default the last label and line are shown.&#xA;- `isLastTickHidden` value is either `true` to hide the last line and label or `false` to display the last line and label. The property doesn't have to be defined, by default the last label  and line are shown.&#xA;- `labels` - Label of axis, a selection of different formats such as `currency`, `numberStyle`, `compactDisplay` and `notation` is available.&#xA;- `minPadding` - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).&#xA;- `min` and `max` - Minimum and maximum values that should be displayed on the y-axis.&#xA;- `tickAmount` - The number of ticks to display on the x-axis. The final amount doesn't have to be exactly the same number as you pass into it. Round up to 6 to give the chart a good set of numbers 0, 20, 40, 60, 80, 100. Set ticks to 3 will be honored and shows 0, 50, and 100 |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="129">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>chart</code></p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li><code>title</code>and <code>subtitle</code> - Name and a short description of your chart.</li>
+      <li><code>height</code> and <code>width</code> - The parameters of the graph displayed (in pixels).</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>legend</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>isHidden</code> -  The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>plotBands</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The <code>from</code> and <code>to</code> properties define the area to be filled with color. Specify the range using the from and to properties with numeric values.
+      <code>color</code> Sets the color of the band for the <code>y-axis</code>, choose a color from the provided color palette. Use <code>plotbands</code> to highlight specific regions or ranges on the chart, making it easier for users to interpret and analyze the data.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>plotOptions</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>series</code> - Different properties available to manipulate the data shown in the bar such as width of columns, the interval between two points, option to hide markers.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>series</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>name</code> - The naming of the actual series.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>xAxis</code></p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li><code>isFirstLabelHidden</code> value is either <code>true</code> to hide the first label or <code>false</code> to display the first label. The property doesn't have to be defined, by default the first label is shown.</li>
+      <li><code>isFirstTickHidden</code> value is either true/false. Set to <code>true</code> hides the whole axis.</li>
+      <li><code>isHidden</code> value is either true/false.</li>
+      <li><code>isLastLabelHidden</code> value is either <code>true</code> to hide the last label or <code>false</code> to display the last label. The property doesn't have to be defined, by default the last label are shown.</li>
+      <li><code>isLastTickHidden</code> value is either <code>true</code> to hide the last line and label or <code>false</code> to display the last line and label. The property doesn't have to be defined, by default the last label  and line are shown.</li>
+      <li><code>labels</code> - Label of axis, a selection of different formats such as <code>dateFormat</code>, <code>currency</code>, <code>unit</code>, and <code>signDisplay</code> are available.</li>
+      <li><code>min</code> and <code>max</code> - Minimum and maximum values that should be displayed on the x-axis.</li>
+      <li><code>minPadding</code> - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).</li>
+      <li><code>tickAmount</code> - The number of ticks to display on the x-axis. The final amount doesn't have to be exactly the same number as you pass into it. Round up to 6 to give the chart a good set of numbers 0, 20, 40, 60, 80, 100. Set ticks to 3 will be honored and shows 0, 50, and 100.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>yAxis</code></p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li><code>isFirstLabelHidden</code> value is either true/false. Set to <code>true</code> hides the first label. The property doesn't have to be defined, by default the first label is shown.</li>
+      <li><code>isFirstTickHidden</code> value is either true/false. Set to <code>true</code> hides the whole axis.</li>
+      <li><code>isHidden</code> value is either true/false. Set to <code>true</code> the last label is hidden.</li>
+      <li><code>isLastLabelHidden</code> value is either <code>true</code> to hide the last label and line or <code>false</code> to display the last label and line. The property doesn't have to be defined, by default the last label and line are shown.</li>
+      <li><code>isLastTickHidden</code> value is either <code>true</code> to hide the last line and label or <code>false</code> to display the last line and label. The property doesn't have to be defined, by default the last label  and line are shown.</li>
+      <li><code>labels</code> - Label of axis, a selection of different formats such as <code>currency</code>, <code>numberStyle</code>, <code>compactDisplay</code> and <code>notation</code> is available.</li>
+      <li><code>minPadding</code> - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).</li>
+      <li><code>min</code> and <code>max</code> - Minimum and maximum values that should be displayed on the y-axis.</li>
+      <li><code>tickAmount</code> - The number of ticks to display on the x-axis. The final amount doesn't have to be exactly the same number as you pass into it. Round up to 6 to give the chart a good set of numbers 0, 20, 40, 60, 80, 100. Set ticks to 3 will be honored and shows 0, 50, and 100</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Bar-chart finance static
 
 ::::VerticalSplit{layout="middle"}
@@ -170,17 +249,15 @@ datasources:
           '$.category' 
         FROM [default/finances] WHERE '$.category' = "finance-month" ORDER BY '$.financeid' ASC
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Bar-chart multiple series
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y0mOpU1tdF-6Q5inYOHBx_c-barmultiseries.PNG" size="80" position="center" caption="Multiple series" alt="Multiple series" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y0mOpU1tdF-6Q5inYOHBx_c-barmultiseries.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y0mOpU1tdF-6Q5inYOHBx_c-barmultiseries.PNG" size="80" position="center" caption="Multiple series" alt="Multiple series" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y0mOpU1tdF-6Q5inYOHBx_c-barmultiseries.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -320,12 +397,10 @@ datasources:
         FROM [default/charts] WHERE '$.category' = "chart2" ORDER BY x
     
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Bar-chart with plot bands
 
 ::::VerticalSplit{layout="middle"}
@@ -337,7 +412,7 @@ The jig displays a bar chart with an annual overview of finances. The x-axis sho
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EP5F4QeY_kyU4tfa_QRG-_charts-bar-plotbands.PNG" size="80" position="center" caption="Bar chart with plot bands" alt="Bar chart with plot bands" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EP5F4QeY_kyU4tfa_QRG-_charts-bar-plotbands.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EP5F4QeY_kyU4tfa_QRG-_charts-bar-plotbands.PNG" size="80" position="center" caption="Bar chart with plot bands" alt="Bar chart with plot bands" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EP5F4QeY_kyU4tfa_QRG-_charts-bar-plotbands.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -421,17 +496,15 @@ children:
       legend:
         isHidden: false
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Bar-chart using expressions
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QoIeM_NRC-TWN5R079CYy_cc-barchartexpression.PNG" size="74" position="center" caption="Bar-chart using expressions" alt="Bar-chart using expressions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QoIeM_NRC-TWN5R079CYy_cc-barchartexpression.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QoIeM_NRC-TWN5R079CYy_cc-barchartexpression.PNG" size="74" position="center" caption="Bar-chart using expressions" alt="Bar-chart using expressions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QoIeM_NRC-TWN5R079CYy_cc-barchartexpression.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -531,6 +604,6 @@ options:
       max: 127000
       tickAmount: 6 
 ```
-
 :::
 :::::
+

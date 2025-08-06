@@ -17,16 +17,29 @@ The entity component is a container for the following components:
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Other options** |                                                                                                                                                                                                                                                                                                               |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `isCompact`       | When this property is set to `true` the entity-field will cover the entire row. This compact variant does not allow usage of field-row components. By default, a label is at the top and the value below. `isCompact` will place the label on the left and the value on the right. Columns are not supported. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="121">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isCompact</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>When this property is set to <code>true</code> the entity-field will cover the entire row. This compact variant does not allow usage of field-row components. By default, a label is at the top and the value below. <code>isCompact</code> will place the label on the left and the value on the right. Columns are not supported.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Entity example
 
 ::::VerticalSplit{layout="middle"}
@@ -44,7 +57,7 @@ Some properties are common to all components, see [Common component properties](
 ::::
 
 **Examples**:
-**Basic** - See the full example using static data in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-row-entity-example-sd.jigx).
+**Basic** - See the full example using static data in [GitHub]().
 **Compact** - See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd-compact.jigx).
 
 :::CodeblockTabs
@@ -203,7 +216,6 @@ datasources:
           '$.time' 
         FROM [default/cleaning-services] ORDER BY '$.service' ASC
 ```
-
 :::
 :::::
 
@@ -212,3 +224,4 @@ datasources:
 - [entity-field](./entity/entity-field.md)
 - [field-row](./entity/field-row.md)
 - [section](https://docs.jigx.com/docs/jc-section")
+

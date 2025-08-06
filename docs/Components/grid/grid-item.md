@@ -4,17 +4,17 @@ The grid-item component serves as the child component whenever any grid componen
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                            |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `size`             | Select the size that the grid-item will be displayed in, the options are `1x1`,`2x2`, `2x4`, `4x2`, `4x4`.                                                                 |
-| `children`         | The following components can be used in the grid-item:&#xA;[Custom components (Alpha)](<./../../Custom components _Alpha_.md>)&#xA;[image](./../image.md)&#xA;[widgets](https://docs.jigx.com/widgets) |
+| **Core structure** |                                                                                                                                     |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `size`             | Select the size that the grid-item will be displayed in, the options are `1x1`,`2x2`, `2x4`, `4x2`, `4x4`.                          |
+| `children`         | The following components can be used in the grid-item:&#xA;&#xA;[image](./../image.md)&#xA;[widgets](https://docs.jigx.com/widgets) |
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                      |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | The icon will be displayed on the [widget](https://docs.jigx.com/widgets) of the jig. Start typing the name of the icon to invoke the available list in IntelliSense. See [Jigx icons](https://docs.jigx.com/jigx-icons) for information on working with icons. The `icon` property applies to `component.jig-widget` without a `widgetId`. See the considerations below for the rules governing icon behavior. |
-| `title`           | By default, the jig's title is displayed. You can override it by adding the `title` property to the `grid-item`, either with a custom `title` or with `''` (a blank space) to remove the title entirely.                                                                                                                                             |
+| **Other options** |                                                                                                                                                                                                                                                                                                                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `icon`            | The icon will be displayed on the  of the jig. Start typing the name of the icon to invoke the available list in IntelliSense. See [Jigx icons](https://docs.jigx.com/jigx-icons) for information on working with icons. The `icon` property applies to `component.jig-widget` without a `widgetId`. See the considerations below for the rules governing icon behavior. |
+| `title`           | By default, the jig's title is displayed. You can override it by adding the `title` property to the `grid-item`, either with a custom `title` or with `''` (a blank space) to remove the title entirely.                                                                                                                                                                 |
 
 ## Considerations
 
@@ -30,12 +30,11 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Grid-item with image and widget
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-swPsNWBEeUaZR5ulp043w-20250203-103644.png" size="66" position="center" caption="Grid-items" alt="Grid-items" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-swPsNWBEeUaZR5ulp043w-20250203-103644.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-swPsNWBEeUaZR5ulp043w-20250203-103644.png" size="66" position="center" caption="Grid-items" alt="Grid-items" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-swPsNWBEeUaZR5ulp043w-20250203-103644.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
@@ -44,7 +43,6 @@ In this example, three grid-items are configured, each with a different size and
 1. Grid-item using an image component with a size specified of 4x2.
 2. Grid-item using a list widget with a size specified as 2x2. The grid-item automatically shows the list.
 3. Grid-item using a chart widget with a size of 2x2.
-
 :::
 ::::
 
@@ -67,7 +65,7 @@ children:
                 options:
                   source:
                     uri: https://images.unsplash.com/photo-1488509082528-cefbba5ad692?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJvb2tpbmd8ZW58MHx8MHx8fDA%3D 
-         # Second grid-item adds a list widget to the grid.
+          # Second grid-item adds a list widget to the grid.
           # Specify the grid-item size to apply to the item.
           - type: component.grid-item
             options:
@@ -202,12 +200,10 @@ widgets:
             - data: =@ctx.datasources.static-data-2
               color: positive
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Grid-item options
 
 ::::VerticalSplit{layout="middle"}
@@ -218,7 +214,6 @@ This example shows the various configurations available to customize a `grid-ite
 - Customized `icons`.
 - Overridden or hidden titles using the `title` property.
 - `onPress` actions for interactive behavior.
-
 :::
 
 :::VerticalSplitItem
@@ -357,6 +352,6 @@ children:
             label: Placeholder
             value: Placeholder
 ```
-
 :::
 :::::
+

@@ -8,13 +8,46 @@ This action allows the app to execute a SQL statement during local SQLite execut
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `entities`         | The entities/tables affected by the statements. Before executing the statements, a check ensures that the tables exist.&#xA;After execution any datasources that use these entities will be notified that the database was changed.                   |
 | `statements`       | List of statements to execute in sequence. Multiple statements can be configured to execute in sequence.&#xA;`statement` - the SQL statement to execute against the solution database.&#xA;`parameters` - The parameters used in the above statement. |
-| `title`            | Provide the action button with a title, for example, _Delete record_.                                                                                                                                                                                 |
+| `title`            | Provide the action button with a title, for example, *Delete record*.                                                                                                                                                                                 |
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an [icon](https://docs.jigx.com/jigx-icons) to display when the action is configured as the secondary button or in a [header action](./../Components/jig-header.md).                                                                                                                                                                                                                                                        |
-| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                       |
-| `style`           | `isDanger` - Styles the action button in red or your brand's designated danger color.&#xA;`isDisabled` - Displays the action button as greyed out.&#xA;`isPrimary` - Styles the action button in blue or your brand's designated primary color.&#xA;`isSecondary` - Sets the action as a secondary button, accessible via the ellipsis. The `icon` property can be used when the action button is displayed as a secondary button. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>icon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Select an  to display when the action is configured as the secondary button or in a <a href="./../Components/jig-header.md">header action</a>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isHidden</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>style</code></p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li>
+      <li><code>isDisabled</code> - Displays the action button as greyed out.</li>
+      <li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li>
+      <li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -25,7 +58,7 @@ This action allows the app to execute a SQL statement during local SQLite execut
 
 ### Execute SQL statements to update & delete
 
-This example shows a list with an `onPress` event that executes a SQL statement to update the _Tags_ table in the local database. A `swipeable` event is configured to delete the list item record from the local database.
+This example shows a list with an `onPress` event that executes a SQL statement to update the *Tags* table in the local database. A `swipeable` event is configured to delete the list item record from the local database.
 
 :::CodeblockTabs
 create-tag.jigx
@@ -168,7 +201,6 @@ datasources:
          '$.count'
         FROM [tags]
 ```
-
 :::
 
 ### Execute SQL statements to create indexes
@@ -336,7 +368,6 @@ actions:
             description: =@ctx.components.description.state.value
             assignedTo: =@ctx.components.assignedTo.state.value
             name: =@ctx.components.name.state.value
-
 # Use the defined jig inputs to populate the form fields,
 # with the current records details.
 children:
@@ -389,5 +420,5 @@ options:
   queryParameters:
     assignedTo: =@ctx.user.email
 ```
-
 :::
+

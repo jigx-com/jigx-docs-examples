@@ -6,28 +6,106 @@ Experience seamless communication on the go with our chat-message component, kee
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WqoBhXkDyLGY8so3dYBHO-20240806-111124.png" size="78" position="center" caption="Chat" alt="Chat" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WqoBhXkDyLGY8so3dYBHO-20240806-111124.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WqoBhXkDyLGY8so3dYBHO-20240806-111124.png" size="78" position="center" caption="Chat" alt="Chat" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WqoBhXkDyLGY8so3dYBHO-20240806-111124.png" width="800" height="1575" darkWidth="800" darkHeight="1575"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core Structure** |                                                                                                                                                                                                                                                             |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `instanceId`       | Used to reference the message data in the action's expression, for example, `=@ctx.components.instanceId.state.message`.                                                                                                                                    |
-| `data`             | The array of items you want to display in the chat component.                                                                                                                                                                                               |
-| `message`          | The field property used to add the text message in. Referenced for example, `=@ctx.current.item.message`                                                                                                                                                    |
-| `sender`           | The `name` property requires the name of the person sending the message and displays at the top of the chat bubble. Expressions can be used to determine the sender, e.g., `=@ctx.current.item.senderName`                                                  |
-| `sentAt`           | Provides the date and time the message was sent at in the format defined by your datasource configuration. For example,&#xA; 2024-01-08T06:01:29.863Z. If the `sentAt` property is not configured no date and time shown in the chat bubbles.               |
-| `onSend`           | Configure the actions to execute when the send button is tapped in the chat text-editor. The action to send the message data to the database table must be included under `onSend`; usually, the `action: execute-entity` with the `create` method is used. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="130">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core Structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>instanceId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Used to reference the message data in the action's expression, for example, <code>=@ctx.components.instanceId.state.message</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>data</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The array of items you want to display in the chat component.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>message</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The field property used to add the text message in. Referenced for example, <code>=@ctx.current.item.message</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>sender</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The <code>name</code> property requires the name of the person sending the message and displays at the top of the chat bubble. Expressions can be used to determine the sender, e.g., <code>=@ctx.current.item.senderName</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>sentAt</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provides the date and time the message was sent at in the format defined by your datasource configuration. For example,
+      2024-01-08T06:01:29.863Z. If the <code>sentAt</code> property is not configured no date and time shown in the chat bubbles.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onSend</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure the actions to execute when the send button is tapped in the chat text-editor. The action to send the message data to the database table must be included under <code>onSend</code>; usually, the <code>action: execute-entity</code> with the <code>create</code> method is used.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                         |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `isAuthor`        | Used to visually distinguish between the chat participants. When set to `true`, the chat bubble is blue, when set to `false` the bubble is set to white.                                                                                |
-| `onPress`         | Configure an action that executes when you press on one of the chat bubbles, for example, `action.go-to`                                                                                                                                |
-| `onRefresh`       | Use the `onRefresh` to sync new chat messages to the mobile device by swiping **up (**⬆️) on the screen as new messages load at the bottom of the screen. The `onRefresh` is a jig configuration and is not part of the chat component. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="128">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isAuthor</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Used to visually distinguish between the chat participants. When set to <code>true</code>, the chat bubble is blue, when set to <code>false</code> the bubble is set to white.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure an action that executes when you press on one of the chat bubbles, for example, <code>action.go-to</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onRefresh</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Use the <code>onRefresh</code> to sync new chat messages to the mobile device by swiping <strong>up (</strong>⬆️) on the screen as new messages load at the bottom of the screen. The <code>onRefresh</code> is a jig configuration and is not part of the chat component.</p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -289,5 +367,5 @@ action:
                 # Configure a unique id for the chatbot message.                
                 mId: =$uuid()
 ```
-
 :::
+

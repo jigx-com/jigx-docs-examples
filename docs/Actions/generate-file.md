@@ -6,16 +6,75 @@ This action generates files such as PDFs, CSVs, or text files. It accepts conten
 
 Some properties are common to all components, see [Common component properties](https://docs.jigx.com/examples/common-component-properties) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                             |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `content`          | The content to be included in the file. You can use datasources, expressions, or text.                                                                                                                                                                                                      |
-| `fileName`         | Give the file a name, this name is used as the local file name, and is referenced as part of the uri, which can be accessed via the action's instance output (`=@ctx.actions.generateFile.outputs.uri`). &#xA;The file extension must be included in the `fileName`, e.g., Application.txt. |
-| `instanceId`       | Provide a unique identifier for the action, which provides access to the action's state.                                                                                                                                                                                                    |
-| `title`            | Provide the action button with a title, for example, Create Application.                                                                                                                                                                                                                    |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="125">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>content</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The content to be included in the file. You can use datasources, expressions, or text.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>fileName</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Give the file a name, this name is used as the local file name, and is referenced as part of the uri, which can be accessed via the action's instance output (<code>=@ctx.actions.generateFile.outputs.uri</code>).
+      The file extension must be included in the <code>fileName</code>, e.g., Application.txt.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>instanceId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide a unique identifier for the action, which provides access to the action's state.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide the action button with a title, for example, Create Application.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `encoding`        | The `encoding` parameter specifies how an already encoded file should be interpreted when it is read. It does not encode the file itself but rather determines how the provided file content is decoded.&#xA;Accepted encoding options:&#xA; `utf8` - default&#xA;`ascii`&#xA;`base64` - All three encoding types are supported and will return errors if the provided file content is incompatible with the selected encoding.&#xA;If a plain text string (e.g., "Hello World") is supplied with base64 encoding, the file will appear empty because it is not a valid base64-encoded string.&#xA;When a valid base64 string (e.g., "SGVsbG8sIFdvcmx" for "Hello World") is provided, it will be decoded correctly, resulting in a readable file with the expected content.&#xA;After reading the file, [conversion](https://docs.jigx.com/file-handling) can be configured if needed. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>encoding</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The <code>encoding</code> parameter specifies how an already encoded file should be interpreted when it is read. It does not encode the file itself but rather determines how the provided file content is decoded.
+      Accepted encoding options:</p>
+      <ul>
+      <li><code>utf8</code> - default</li>
+      <li><code>ascii</code></li>
+      <li><code>base64</code> - All three encoding types are supported and will return errors if the provided file content is incompatible with the selected encoding.
+      If a plain text string (e.g., "Hello World") is supplied with base64 encoding, the file will appear empty because it is not a valid base64-encoded string.
+      When a valid base64 string (e.g., "SGVsbG8sIFdvcmx" for "Hello World") is provided, it will be decoded correctly, resulting in a readable file with the expected content.
+      After reading the file,  can be configured if needed.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -113,5 +172,5 @@ actions:
                 message: =@ctx.components.firstName.state.value & ' ' & 'Details'
                 subject: =@ctx.components.firstName.state.value & ' ' & 'Details'
 ```
-
 :::
+

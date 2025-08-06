@@ -18,37 +18,217 @@ The `duration-picker` component can be used independently or within a `form` com
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                 |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `instanceId`       | The unique identifier for the duration-picker, and can be used in inputs in other properties or jigs, or to set a component's state.            |
-| `label`            | Provide a label/name for the duration-picker. 'Label' is displayed as a placeholder when no value is specified. [Localization](https://docs.jigx.com/localization) is supported. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="136">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>instanceId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The unique identifier for the duration-picker, and can be used in inputs in other properties or jigs, or to set a component's state.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>label</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide a label/name for the duration-picker. 'Label' is displayed as a placeholder when no value is specified.  is supported.</p>
+    </td>
+  </tr>
+</table>
 
-| **Other options**       |                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`                 | Sets the color of the duration-picker based on conditions by using the `when` property. First evaluated to `true` will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](https://docs.jigx.com/jigx-color-palette).                                                                                                                    |
-| `errorText`             | Add text, string, or expressions to show text under the duration-picker indicating an error/invalid value in the field. Text is shown in `isNegative` (red) styling.  [Localization](https://docs.jigx.com/localization) is supported.                                                                                                                                                                                                                               |
-| `helperText`            | Add text, string, or expressions to guide users by showing text under the duration-picker. Helper text is displayed only when there is no `errorText`. [Localization](https://docs.jigx.com/localization) is supported.                                                                                                                                                                                                                                              |
-| `hours`                 | Specify whether the duration-picker will use hours or not.&#xA;`isEnabled` - `true` is the default, `false` disables the hour selector which is greyed out.&#xA;`step` - Determine the increments in which the hours will be displayed. For example, an increment of 2 will display the hours for selection as 2, 4, 6, 8, ... 22.                                                                                                  |
-| `initialValue`          | The `initialValue` is the duration that will be displayed in the duration-picker when the form is initially loaded. Specified in seconds, for example, 1800 for 30 mins. You can use this property to preset the duration-picker with a default value so that you do not have to manually select it. For example, if most field-service appointments are 30 mins then preset the duration-picker `initialValue` property with 1800. |
-| `isHidden`              | If `true` the duration-picker will be hidden on the form. If set to `false` the field will be shown.                                                                                                                                                                                                                                                                                                                                |
-| `isIgnored`             | When `true`, the field will be ignored when submitting the form and the content will not be stored.                                                                                                                                                                                                                                                                                                                                 |
-| `isOptionalLabelHidden` | If the field is optional you can turn off the "(optional)" label by setting this field to `true`. This property works in combination with `isRequired: false`.                                                                                                                                                                                                                                                                      |
-| `isRequired`            | Set to `true` when the duration-picker is required. Useful when you use it in form submission. Set to `false` the duration-picker is optional and will have (optional) in the label.                                                                                                                                                                                                                                                |
-| `minutes`               | Specify whether the duration-picker will use minutes or not.&#xA;`isEnabled` - `true` is the default, `false` disables the minute selector which is greyed out.&#xA;`step` - Determine the increments in which the minutes will be displayed. For example, an increment of 15 will display the minutes for selection as 15 and 30.                                                                                                  |
-| `nextProperty`          | Name of the property you want to focus next in the form when you use return/next on a keyboard.                                                                                                                                                                                                                                                                                                                                     |
-| `style`                 | The following property settings are available:&#xA;`flex` - Flex property if rendered inside row.&#xA;`isBusy` - Displays spinner on right side of field. It removes any icon.&#xA;`isDisabled` - disables the duration-picker preventing any time selection.&#xA;`isPositive` - a green icon displays on the right of the duration-picker.&#xA;More than one can be `true`. It will be evaluated based on priority.                |
-| `value`                 | The value that the duration-picker will output as its state. Specified in seconds, for example, 1800 for 30 mins.                                                                                                                                                                                                                                                                                                                   |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="216">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>color</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Sets the color of the duration-picker based on conditions by using the <code>when</code> property. First evaluated to <code>true</code> will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in .</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>errorText</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add text, string, or expressions to show text under the duration-picker indicating an error/invalid value in the field. Text is shown in <code>isNegative</code> (red) styling.   is supported.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>helperText</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add text, string, or expressions to guide users by showing text under the duration-picker. Helper text is displayed only when there is no <code>errorText</code>.  is supported.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>hours</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specify whether the duration-picker will use hours or not.</p>
+      <ul>
+      <li><code>isEnabled</code> - <code>true</code> is the default, <code>false</code> disables the hour selector which is greyed out.</li>
+      <li><code>step</code> - Determine the increments in which the hours will be displayed. For example, an increment of 2 will display the hours for selection as 2, 4, 6, 8, ... 22.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>initialValue</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The <code>initialValue</code> is the duration that will be displayed in the duration-picker when the form is initially loaded. Specified in seconds, for example, 1800 for 30 mins. You can use this property to preset the duration-picker with a default value so that you do not have to manually select it. For example, if most field-service appointments are 30 mins then preset the duration-picker <code>initialValue</code> property with 1800.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isHidden</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>If <code>true</code> the duration-picker will be hidden on the form. If set to <code>false</code> the field will be shown.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isIgnored</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>When <code>true</code>, the field will be ignored when submitting the form and the content will not be stored.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isOptionalLabelHidden</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>If the field is optional you can turn off the "(optional)" label by setting this field to <code>true</code>. This property works in combination with <code>isRequired: false</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isRequired</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Set to <code>true</code> when the duration-picker is required. Useful when you use it in form submission. Set to <code>false</code> the duration-picker is optional and will have (optional) in the label.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>minutes</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specify whether the duration-picker will use minutes or not.
+      <code>isEnabled</code> - <code>true</code> is the default, <code>false</code> disables the minute selector which is greyed out.
+      <code>step</code> - Determine the increments in which the minutes will be displayed. For example, an increment of 15 will display the minutes for selection as 15 and 30.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>nextProperty</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Name of the property you want to focus next in the form when you use return/next on a keyboard.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>style</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The following property settings are available:</p>
+      <ul>
+      <li><code>flex</code> - Flex property if rendered inside row.</li>
+      <li><code>isBusy</code> - Displays spinner on right side of field. It removes any icon.</li>
+      <li><code>isDisabled</code> - disables the duration-picker preventing any time selection.</li>
+      <li><code>isPositive</code> - a green icon displays on the right of the duration-picker.
+      More than one can be <code>true</code>. It will be evaluated based on priority.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>value</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The value that the duration-picker will output as its state. Specified in seconds, for example, 1800 for 30 mins.</p>
+    </td>
+  </tr>
+</table>
 
-| **Actions** |                                                                                                                                              |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onChange`  | The action is triggered when the time in the duration-picker is changed. Use IntelliSense (ctrl+space) to see the list of available actions. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="142">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onChange</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The action is triggered when the time in the duration-picker is changed. Use IntelliSense (ctrl+space) to see the list of available actions.</p>
+    </td>
+  </tr>
+</table>
 
-| **State Configuration**  | **Key**              | **Notes**                                                                                                                                                           |
-| ------------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `=@ctx.component.state.` | value                | State is the variable of the component.&#xA;When used in the `initialValue`, its set as a string.&#xA;When the value of the component changes, its set as a number. |
-| `=@ctx.solution.state.`  | activeItemId&#xA;now | Global state variable that can be used throughout the solution.                                                                                                     |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="220,122">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>State Configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Notes</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.component.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>value</p>
+    </td>
+    <td selected="false" align="left">
+      <p>State is the variable of the component.
+      When used in the <code>initialValue</code>, its set as a string.
+      When the value of the component changes, its set as a number.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>=@ctx.solution.state.</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>activeItemId
+      now</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Global state variable that can be used throughout the solution.</p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -60,7 +240,6 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Basic duration-picker
 
 ::::VerticalSplit{layout="middle"}
@@ -138,8 +317,9 @@ children:
           instanceId: call-date
           options:
             label: Select date of engagement
-# Add the duration-picker in the form component, 
-# basic configuration automatically defaults with hours and minutes and does not require configuration            
+        # Add the duration-picker in the form component, basic configuration
+        # automatically defaults with hours and minutes and does not require 
+        #configuration.            
         - type: component.duration-picker
           instanceId: duration
           options:
@@ -170,16 +350,14 @@ actions:
             email: =@ctx.components.email.state.value
             contact:  =@ctx.components.contact.state.value    
             call-date: =@ctx.components.call-date.state.value
-# Save the duration selected to Dynamic Data            
+             # Save the duration selected to Dynamic Data.            
             duration: =@ctx.components.duration.state.value
             satisfaction: =@ctx.components.satisfaction.state.value 
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Duration-picker  with hours and steps
 
 ::::VerticalSplit{layout="middle"}
@@ -250,9 +428,8 @@ children:
           instanceId: appointment-date
           options:
             label: Book an appointment date
-# Add the duration-picker in the form component, 
-# configure hours to allow selections in 2 hour intervals. 
-# Disable minutes.            
+        # Add the duration-picker in the form component, configure hours to 
+        # allow selections in 2 hour intervals. Disable minutes.            
         - type: component.duration-picker
           instanceId: appointment-time
           options:
@@ -276,15 +453,13 @@ actions:
             email: =@ctx.components.email.state.value
             contact:  =@ctx.components.contact.state.value    
             appointment-date: =@ctx.components.appointment-date.state.value
- # Save the duration selected to Dynamic Data           
+             # Save the duration selected to Dynamic Data.           
             appointment-time: =@ctx.components.appointment-time.state.value
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Duration-picker  with minutes and steps
 
 ::::VerticalSplit{layout="middle"}
@@ -296,7 +471,7 @@ actions:
 In this example, a security patrol officer records the security check-ins for different patrol areas. In the form the duration of the patrol is recorded. The `duration-picker` is configured to only allow the selection of `minutes` in intervals (`steps`) of 10 minutes. Hours have been disabled.
 
 **Examples:**
-See the full example in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/duration-picker/duration-picker-min-steps.jigx).
+See the full example in [GitHub]().
 :::
 ::::
 
@@ -360,9 +535,8 @@ children:
               options:
                 title: =@ctx.current.item.Description
                 value: =@ctx.current.item.Description
-# Add the duration-picker in the form component, 
-# configure minutes to allow selections in 10 minute intervals. 
-# Disable hours.                
+        # Add the duration-picker in the form component, configure minutes to 
+        # allow selections in 10 minute intervals. Disable hours.                
         - type: component.duration-picker
           instanceId: patrol-duration
           options: 
@@ -387,16 +561,14 @@ actions:
           method: create
           data:
             patrol-area: =@ctx.components.patrol-area.state.value
-# Save the duration selected to Dynamic Data              
+            # Save the duration selected to Dynamic Data.              
             patrol-duration: =@ctx.components.patrol-duration.state.value
             issues: =@ctx.components.issues.state.value
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Duration-picker  with an onChange  event
 
 ::::VerticalSplit{layout="middle"}
@@ -444,26 +616,22 @@ datasources:
           description: Installation or repairs for doors. Doors to be provided by client
           hourlyRate: 70
           materials: Door
-          service: Door Installation/Repair
-      
+          service: Door Installation/Repair    
         - id: 2
           description: Repairs to door handles 
           hourlyRate: 40
           materials: double lock system
-          service: Door Handle/Lock Repairs
-                
+          service: Door Handle/Lock Repairs              
         - id: 3
           description: Installation or repairs of tiled surfaces. Tiles have to be provided by client
           hourlyRate: 110
           materials: Tiles
-          service: Tile Installation/Repair
-         
+          service: Tile Installation/Repair        
         - id: 4
           description: Installation or repairs of dry-wall surfaces
           hourlyRate: 80
           materials: Drywall & screws
-          service: Drywall Installation/Repair
-          
+          service: Drywall Installation/Repair          
         - id: 5
           description: Repairs to bathroom rails, toilets, etc
           hourlyRate: 90
@@ -504,8 +672,8 @@ children:
     instanceId: repair-form
     options:
       children:
-# Add the duration-picker in the form component, 
-# configure hours and disable minutes.    
+        # Add the duration-picker in the form component, configure hours and 
+        # disable minutes.    
         - type: component.duration-picker
           instanceId: repair-time
           options:
@@ -515,18 +683,17 @@ children:
               step: 1
             minutes:
               isEnabled: false
-# Configure an event to go to another jig when the duration-picker field changes                       
+            # Configure an event to go to another jig when the duration-picker 
+            #field changes.                       
             onChange: 
               type: action.go-to
               options:
                 linkTo: simple-list-dd
 ```
-
 :::
 :::::
 
 ::::ExpandableHeading
-
 ### Duration-picker  with initialValue&#x20;
 
 ![Duration-picker with initialValue](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Erx7M0rnyDqmU1rLYTLky-20241023-151348.PNG "Duration-picker with initialValue")
@@ -590,17 +757,16 @@ children:
             label: Contact number
         - type: component.field-row
           options:
-            children:
-              
+            children:  
               - type: component.date-picker
                 instanceId: shift-date
                 options:
                   label: Select shift date 
-# Add the duration-picker in the form component, 
-# configure hours and minutes with steps.
-# Add the initialValue to prepopulate the form when opened.
-# Add helperText to inform the app user that 4 hrs is the expected input.
-# Add errortext when input is more that 4 hrs.                       
+             # Add the duration-picker in the form component, configure hours
+             # and minutes with steps. Add the initialValue to prepopulate the
+             # form when opened. Add helperText to inform the app user that
+             # 4 hrs is the expected input. Add errortext when input is more 
+             # that 4 hrs.                       
               - type: component.duration-picker
                 instanceId: shift-duration
                 options:
@@ -629,10 +795,10 @@ actions:
             email: =@ctx.components.email.state.value
             contact:  =@ctx.components.contact.state.value
             shift-date: =@ctx.components.shift-date.state.value
-# Save the duration to Dynamic data if the input is 4 hrs.            
+            # Save the duration to Dynamic data if the input is 4 hrs.            
             shift-duration: =@ctx.components.shift-duration.state.value  
       - type: action.confirm
-# If the duration input is more than 4hrs send form for approval      
+        # If the duration input is more than 4hrs send form for approval.      
         when: =@ctx.components.shift-duration.state.value > 14400
         options:
           title: Send for approval
@@ -645,12 +811,10 @@ actions:
           modal:
             title: Shift hours sent for approval  
 ```
-
 :::
 ::::
 
 :::::ExpandableHeading
-
 ### Duration-picker  with color
 
 ::::VerticalSplit{layout="middle"}
@@ -731,12 +895,11 @@ children:
           instanceId: inspection-date
           options:
             label: Inspection date 
-# Add the duration-picker in the form component, 
-# configure minutes to allow selection in 30 minute intervals, 
-# and hours in 2 hour intervals.
-# Color the field yellow to let the inspector know that theaverage time is 2 hours.
-# Prepopulate the field with 2h using the initialValue property.
-# HelperText provides additional information to the component.            
+        # Add the duration-picker in the form component, configure minutes to 
+        # allow selection in 30 minute intervals, and hours in 2 hour intervals.
+        # Color the field yellow to let the inspector know that theaverage time
+        # is 2 hours.Prepopulate the field with 2h using the initialValue 
+        # property. HelperText provides additional information to the component.            
         - type: component.duration-picker
           instanceId: inspection-time
           options:
@@ -764,9 +927,9 @@ actions:
             manager: =@ctx.components.manager.state.value
             type: =@ctx.components.type.state.value
             inspection-date: =@ctx.components.inspection-date.state.value
-# Save the duration selected to Dynamic Data            
+            # Save the duration selected to Dynamic Data.            
             inspection-time: =@ctx.components.inspection-time.state.value
 ```
-
 :::
 :::::
+

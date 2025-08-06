@@ -9,21 +9,69 @@ This action can be configured within a jig in various ways, such as:
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                          |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `instanceId`       | Provide the action with an `instanceId`.                                                                                                 |
-| `avatarUrl`        | Configure the property with an expression, datasource, or input to update the user's avatar.                                             |
-| `displayName`      | Configure the property with an expression, datasource, or input to update the user's preferred name, for example, Rob instead of Robert. |
-| `firstName`        | Configure the property with an expression, datasource, or input to update the user's last name (surname).                                |
-| `lastName`         | Configure the property with an expression, datasource or input to update the user's name.                                                |
-| `title`            | Defines the title for the action button, such as Update your details.                                                                    |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="136">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>instanceId</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide the action with an <code>instanceId</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>avatarUrl</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure the property with an expression, datasource, or input to update the user's avatar.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>displayName</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure the property with an expression, datasource, or input to update the user's preferred name, for example, Rob instead of Robert.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>firstName</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure the property with an expression, datasource, or input to update the user's last name (surname).</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>lastName</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure the property with an expression, datasource or input to update the user's name.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Defines the title for the action button, such as Update your details.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Update-profile button in a jig
 
 ::::VerticalSplit{layout="middle"}
@@ -90,12 +138,10 @@ actions:
           # Provide text that displays on the action button.
           title: Update
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Update-profile in a jig-header link
 
 ::::VerticalSplit{layout="middle"}
@@ -158,12 +204,10 @@ children:
           options:
             label: App Name    
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Update-profile in a jig-header icon
 
 ::::VerticalSplit{layout="middle"}
@@ -196,7 +240,8 @@ header:
     actions:
       - type: action.update-profile
         options: 
-          # Add an icon to display in the header that the user can tap to execute the action.
+          # Add an icon to display in the header that the user can tap to 
+          # execute the action.
           icon: upload-bottom
           title: Profile update
           lastName: =@ctx.components.LastName.state.value
@@ -228,12 +273,10 @@ children:
           options:
             label: App Name    
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Update-profile with onPress event
 
 ::::VerticalSplit{layout="middle"}
@@ -306,6 +349,6 @@ datasources:
           firstName: Robert
           displayName: Rob
 ```
-
 :::
 :::::
+

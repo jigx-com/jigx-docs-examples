@@ -85,7 +85,7 @@ children:
     componentId: section2
     inputs:
       title: STANDARD COMPONENTS
-# Standard countdown component.      
+  # Standard countdown component.      
   - type: component.countdown
     options:
       expiresAt: =$fromMillis($toMillis($now()) + (14 * 24 * 60 * 60 * 1000))
@@ -101,28 +101,31 @@ children:
     componentId: section2
     inputs:
       title: Small
-# Custom countdown component contained in a card, aligned left, & size set to small.      
+  # Custom countdown component contained in a card, aligned left, & size set
+  #  to small.      
   - type: component.custom-component
     componentId: countdown
   - type: component.custom-component
     componentId: section2
     inputs:
       title: Medium
-# Custom countdown component contained in a card with a color & size set to medium.         
+  # Custom countdown component contained in a card with a color & size set to
+  #  medium.         
   - type: component.custom-component
     componentId: countdown2
   - type: component.custom-component
     componentId: section2
     inputs:
       title: Large   
-# Custom countdown component contained in a card with color & size set to large.      
+  # Custom countdown component contained in a card with color & size set to large.      
   - type: component.custom-component
     componentId: countdown3
   - type: component.custom-component
     componentId: section2
     inputs:
       title: Extra Large   
-# Custom countdown component contained in a card with color & size set to X-large.        
+  # Custom countdown component contained in a card with color & size set to 
+  # X-large.        
   - type: component.custom-component
     componentId: countdown4
 ```
@@ -133,12 +136,12 @@ countdown.jigx&#x20;
 # components/countdown.jigx 
 type: component.default
 children:
-# Custom card component contains the standard countdown component.
+  # Custom card component contains the standard countdown component.
   - type: component.card
     options:
       direction: column
       children:
-# Standard countdown component.       
+        # Standard countdown component.       
         - type: component.countdown
           options:
             expiresAt: =$fromMillis($toMillis($now()) + (14 * 24 * 60 * 60 * 1000))
@@ -155,12 +158,12 @@ countdown2.jigx
 # components/countdown2.jigx 
 type: component.default
 children:
-# Custom card component contains the standard countdown component.
+  # Custom card component contains the standard countdown component.
   - type: component.card
     options:
       color: color3
       children:
-# Standard countdown component.      
+        # Standard countdown component.      
         - type: component.countdown
           options:
             expiresAt: =$fromMillis($toMillis($now()) + (14 * 24 * 60 * 60 * 1000))
@@ -175,12 +178,12 @@ countdown3.jigx
 # components/countdown3.jigx 
 type: component.default
 children:
-# Custom card component contains the standard countdown component.
+  # Custom card component contains the standard countdown component.
   - type: component.card
     options:
       color: color4
       children:
-# Standard countdown component.       
+        # Standard countdown component.       
         - type: component.countdown
           options:
             expiresAt: =$fromMillis($toMillis($now()) + (14 * 24 * 60 * 60 * 1000))
@@ -195,12 +198,12 @@ countdown4.jigx
 # components/countdown4.jigx 
 type: component.default
 children:
-# Custom card component contains the standard countdown component.
+  # Custom card component contains the standard countdown component.
   - type: component.card
     options:
       color: color5
       children:
-# Standard countdown component.      
+        # Standard countdown component.      
         - type: component.countdown
           options:
             expiresAt: =$fromMillis($toMillis($now()) + (14 * 24 * 60 * 60 * 1000))
@@ -250,11 +253,11 @@ header:
           uri: https://images.unsplash.com/photo-1607434472257-d9f8e57a643d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGNvbWluZyUyMHNvb24lMjBsb2FkaW5nfGVufDB8fDB8fHww
 
 children:
-# Three progress bars customized by placing them in cards, 
-# using views to create the correct layout using gaps.
+  # Three progress bars customized by placing them in cards, using views to
+  # create the correct layout using gaps.
   - type: component.custom-component
     componentId: progress-sample-1
-# Icons create the stars and text.    
+  # Icons create the stars and text.    
   - type: component.custom-component
     componentId: progress-sample-2
 ```
@@ -265,7 +268,7 @@ progress-sample-1.jigx
 # components/progress-sample1.jigx 
 type: component.default
 children:
-# Custom component used to contain the standard progress-bar component.
+  # Custom component used to contain the standard progress-bar component.
   - type: component.view
     options:
       style:
@@ -274,7 +277,7 @@ children:
         - type: component.card
           options:
             children:
-# Standard progress-bar component.            
+              # Standard progress-bar component.            
               - type: component.progress-bar
                 options:
                   value:
@@ -288,11 +291,11 @@ children:
                     value: Subtitle
                     align: left
                     position: bottom    
-# Custom card component contains the standard component.
+        # Custom card component contains the standard component.
         - type: component.card
           options:
             children:
-# Standard progress-bar component.            
+              # Standard progress-bar component.            
               - type: component.progress-bar
                 options:
                   value:
@@ -307,7 +310,7 @@ children:
                     value: Subtitle
                     align: right
                     position: bottom                      
-# Custom card component contains the standard component.
+        # Custom card component contains the standard component.
         - type: component.card
           options:
             children:
@@ -317,7 +320,7 @@ children:
                     background:
                       color: color12
                   children:
- # Standard progress-bar component.                 
+                    # Standard progress-bar component.                 
                     - type: component.progress-bar
                       options:
                         value:
@@ -616,7 +619,7 @@ children:
     options:
       title: stars
       children:
-# Custom component created using view & text components.     
+        # Custom component created using view & text components.     
         - type: component.custom-component
           componentId: rating-1
 
@@ -624,7 +627,7 @@ children:
     options:
       title: stars with statistics
       children:
-# Custom component created using view & text components.          
+        # Custom component created using view & text components.          
         - type: component.custom-component
           componentId: rating-2
           inputs: 
@@ -635,7 +638,7 @@ children:
     options:
       title: Statistics
       children:
-# Custom component created using view & text components.          
+        # Custom component created using view & text components.          
         - type: component.custom-component
           componentId: rating-3
           inputs: 
@@ -646,7 +649,7 @@ children:
     options:
       title: Emoji rating - emphasis
       children:
-# Custom component created using view & text components.          
+        # Custom component created using view & text components.          
         - type: component.custom-component
           componentId: rating-4
 
@@ -654,7 +657,7 @@ children:
     options:
       title: Emoji rating - background
       children:
-# Custom component created using view & text components.          
+        # Custom component created using view & text components.          
         - type: component.custom-component
           componentId: rating-5
 ```
@@ -665,7 +668,7 @@ rating-1.jigx
 # components/rating-1.jigx 
 type: component.default
 children:
-# Custom component created using view & text components. 
+  # Custom component created using view & text components. 
   - type: component.view
     options:
       style:
@@ -676,8 +679,8 @@ children:
         - type: component.text
           options:
             align: center
-# Adding an onPress event sets the rating icons with the configured color & emphasis,
-# when pressed.            
+            # Adding an onPress event sets the rating icons with the configured
+            # color & emphasis, when pressed.            
             onPress:
               type: action.set-state
               options:
@@ -690,8 +693,8 @@ children:
         - type: component.text
           options:
             align: center
-# Adding an onPress event sets the rating icons with the configured color & emphasis,
-# when pressed.              
+            # Adding an onPress event sets the rating icons with the configured
+            # color & emphasis, when pressed.              
             onPress:
               type: action.set-state
               options:
@@ -704,8 +707,8 @@ children:
         - type: component.text
           options:
             align: center
-# Adding an onPress event sets the rating icons with the configured color & emphasis,
-# when pressed.              
+            # Adding an onPress event sets the rating icons with the configured
+            # color & emphasis, when pressed.              
             onPress:
               type: action.set-state
               options:
@@ -718,8 +721,8 @@ children:
         - type: component.text
           options:
             align: center
-# Adding an onPress event sets the rating icons with the configured color & emphasis,
-# when pressed.             
+            # Adding an onPress event sets the rating icons with the configured
+            # color & emphasis,when pressed.             
             onPress:
               type: action.set-state
               options:
@@ -732,8 +735,8 @@ children:
         - type: component.text
           options:
             align: center
-# Adding an onPress event sets the rating icons with the configured color & emphasis,
-# when pressed.              
+            # Adding an onPress event sets the rating icons with the configured
+            # color & emphasis, when pressed.              
             onPress:
               type: action.set-state
               options:
@@ -742,8 +745,7 @@ children:
             size: extra-large
             color: =$number(@ctx.solution.state.rating) > 4 ? 'warning':'element'
             emphasis: =$number(@ctx.solution.state.rating) > 4 ? '':'low'
-            value: ★
-            
+            value: ★            
 ```
 
 rating-2.jigx
@@ -752,7 +754,7 @@ rating-2.jigx
 # components/rating-2.jigx 
 type: component.default
 children:
-# Custom component created using view & text components. 
+  # Custom component created using view & text components. 
   - type: component.view
     options:
       style:
@@ -760,7 +762,7 @@ children:
         alignItems: center
         gap: small
       children:
-# The rating value is set in the text component.           
+        # The rating value is set in the text component.           
         - type: component.text
           options:
             value: =@ctx.inputs.rating-number & 'K' & ' RATINGS'
@@ -823,7 +825,7 @@ rating-3.jigx
 # components/rating-3.jigx 
 type: component.default
 children:
-# View component determines the layout of the custom component. 
+  # View component determines the layout of the custom component. 
   - type: component.view
     options:
       style:
@@ -831,7 +833,7 @@ children:
         alignItems: center
         gap: small
       children:
-# The rating value is set in the text component.      
+        # The rating value is set in the text component.      
         - type: component.text
           options:
             value: =@ctx.inputs.rating-number & 'K' & ' RATINGS'
@@ -866,7 +868,7 @@ rating-4.jigx
 # components/rating-4.jigx 
 type: component.default
 children:
-# View component determines the layout of the custom component. 
+  # View component determines the layout of the custom component. 
   - type: component.view
     options:
       style:
@@ -880,7 +882,7 @@ children:
         - type: component.view
           options:
             style: {}
-# Adding an onPress event sets the state when pressed.            
+            # Adding an onPress event sets the state when pressed.            
             onPress:
               type: action.set-state
               options:
@@ -891,14 +893,15 @@ children:
                 options:
                   align: center
                   size: extra-large
-# When the rating value is pressed the background is highlighted in a color.                   
+                  # When the rating value is pressed the background is 
+                  # highlighted in a color.                   
                   emphasis: =$number(@ctx.solution.state.rating) = 1 ? '':'medium'
-# The rating value is set to use an emoji instead of an icon.                      
+                  # The rating value is set to use an emoji instead of an icon.                      
                   value: 😭
         - type: component.view
           options:
             style: {}
-# Adding an onPress event sets the state when pressed to the value.             
+            # Adding an onPress event sets the state when pressed to the value.             
             onPress:
               type: action.set-state
               options:
@@ -910,7 +913,7 @@ children:
                   align: center
                   size: extra-large
                   emphasis: =$number(@ctx.solution.state.rating) = 2 ? '':'medium'
-# The rating value is set to use an emoji instead of an icon.                      
+                  # The rating value is set to use an emoji instead of an icon.                      
                   value: ☹️
         - type: component.view
           options:
@@ -965,7 +968,7 @@ rating-5.jigx
 # components/rating-5.jigx 
 type: component.default
 children:
-# View component determines the layout of the custom component. 
+  # View component determines the layout of the custom component. 
   - type: component.view
     options:
       style:
@@ -984,17 +987,18 @@ children:
               height: 60
               width: 60
               radius: large
-# When the rating icon is pressed the background is highlighted in a color.               
+              # When the rating icon is pressed the background is highlighted
+              # in a color.               
               background:
                 color: =$number(@ctx.solution.state.rating) = 1 ? 'color3':''
-# Adding an onPress event sets the state when pressed.                 
+            # Adding an onPress event sets the state when pressed.                 
             onPress:
               type: action.set-state
               options:
                 state: =@ctx.solution.state.rating
                 value: 1
             children:
-# The rating value is set to use an emoji instead of an icon.          
+              # The rating value is set to use an emoji instead of an icon.          
               - type: component.text
                 options:
                   align: center
@@ -1083,7 +1087,7 @@ children:
                 options:
                   align: center
                   size: extra-large
-                  value: 😍
+                  value: 😍 
 ```
 :::
 :::::
@@ -1120,8 +1124,8 @@ children:
     options:
       title: Greeting 1
       children:
-# Custom component created using view, icon & text components. 
-# Inputs are used to add the required data in the custom component.          
+        # Custom component created using view, icon & text components. 
+        # Inputs are used to add the required data in the custom component.          
         - type: component.custom-component
           componentId: greetings
           inputs:
@@ -1134,8 +1138,8 @@ children:
     options:
       title: Greeting with date
       children:
-# Custom component created using view, icon & text components. 
-# Inputs are used to add the required data in the custom component.          
+        # Custom component created using view, icon & text components. 
+        # Inputs are used to add the required data in the custom component.          
         - type: component.custom-component
           componentId: greetings
           inputs:
@@ -1149,8 +1153,8 @@ children:
     options:
       title: Greeting with date and large avatar
       children:
-# Custom component created using view, icon & text components. 
-# Inputs are used to add the required data in the custom component.         
+        # Custom component created using view, icon & text components. 
+        # Inputs are used to add the required data in the custom component.         
         - type: component.custom-component
           componentId: greetings
           inputs:
@@ -1164,8 +1168,8 @@ children:
     options:
       title: Greeting with date and icon
       children:
-# Custom component created using view, icon & text components. 
-# Inputs are used to add the required data in the custom component.          
+        # Custom component created using view, icon & text components. 
+        # Inputs are used to add the required data in the custom component.          
         - type: component.custom-component
           componentId: greetings
           inputs:
@@ -1174,7 +1178,8 @@ children:
             date: =$fromMillis($toMillis($now()), '[FNn], [D]. [M]. [Y]')
             linkTo: link-here
             name: John
-# The configuration of the right-icon inputs displays the right blue pencil icon.             
+            # The configuration of the right-icon inputs displays the right
+            # blue pencil icon.             
             right-icon: pencil
             right-icon-color: color9
             right-icon-link: link-here
@@ -1183,8 +1188,8 @@ children:
     options:
       title: Greeting with date and icon and large avatar
       children:
-# Custom component created using view, icon & text components. 
-# Inputs are used to add the required data in the custom component.         
+        # Custom component created using view, icon & text components. 
+        # Inputs are used to add the required data in the custom component.         
         - type: component.custom-component
           componentId: greetings
           inputs:
@@ -1192,7 +1197,8 @@ children:
             avatar-size: large
             date: =$fromMillis($toMillis($now()), '[FNn], [D]. [M]. [Y]')
             name: John
-# The configuration of the right-icon inputs displays the right blue pencil icon.             
+            # The configuration of the right-icon inputs displays the right
+            # blue pencil icon.             
             right-icon: pencil
             right-icon-color: color9
             welcome-message: Hello
@@ -1206,8 +1212,8 @@ greetings.jigx
 # components/greetings.jigx 
 type: component.default
 children:
-# Custom component created using view & text components. 
-# View determines the layout.
+  # Custom component created using view & text components. 
+  # View determines the layout.
   - type: component.view
     options:
       style:
@@ -1215,25 +1221,26 @@ children:
         flex:
           direction: row
         gap: small
-# Standard avatar component.  
+      # Standard avatar component.  
       children:
         - type: component.avatar
           options:
             title: =@ctx.inputs.name
             size: =@ctx.inputs.avatar-size
             uri: =@ctx.inputs.avatar
-# View is used to set the gap between the avatar and text.         
+        # View is used to set the gap between the avatar and text.         
         - type: component.view
           options:
             style:
               flex:
                 grow: 1
               gap: =@ctx.inputs.avatar-size = 'large' ? 'small':''
-# Custom component text adds the message text. 
+            # Custom component text adds the message text. 
             children:
               - type: component.text
                 options:
-# Configure the text message to use inputs that is configured in the jig.                
+                  # Configure the text message to use inputs that is configured
+                  # in the jig.                
                   size: =@ctx.inputs.avatar-size = 'large' ? 'large':'medium'
                   value: =@ctx.inputs.welcome-message & ', ' & @ctx.inputs.name
                   weight: semi-bold
@@ -1248,7 +1255,8 @@ children:
                       options:
                         emphasis: high
                         size: small
- # Configure the text message to use a date input that is configured in the jig.                       
+                        # Configure the text message to use a date input that
+                        # is configured in the jig.                       
                         value: ="It's" & ' ' & @ctx.inputs.date
 
         - type: component.view
@@ -1256,7 +1264,8 @@ children:
           options:
             style: {}
             children:
-# Custom component icon dynamically set with inputs and styled with options.             
+              # Custom component icon dynamically set with inputs and styled 
+              # with options.             
               - type: component.icon
                 options:
                   color: =@ctx.inputs.right-icon-color
@@ -1264,12 +1273,14 @@ children:
                   shape: circle
                   size: small
                   type: duotone
-# Add an onPress event to go to another jig that is dynamically set in the jig using inputs.                
+            # Add an onPress event to go to another jig that is dynamically set
+            # in the jig using inputs.                
             onPress:
               type: action.go-to
               options:
                 linkTo: =@ctx.inputs.right-icon-link
-# Add an onPress event to go to another jig that is dynamically set in the jig using inputs.              
+      # Add an onPress event to go to another jig that is dynamically set in 
+      # the jig using inputs.              
       onPress:
         type: action.go-to
         options:
@@ -1325,9 +1336,9 @@ children:
         - currentStep: 1-6
       linkTo: stepper-style1-variations
       link: variations
-# Custom component created using the view component. 
-# Inputs are used to determine the number of steps and current step,
-# in the custom component.      
+  # Custom component created using the view component. 
+  # Inputs are used to determine the number of steps and current step,
+  # in the custom component.      
   - type: component.custom-component
     componentId: stepper1
     inputs:
@@ -1357,7 +1368,6 @@ children:
     inputs:
       numberOfSteps: 2
       currentStep: 2
-
   - type: component.custom-component
     componentId: section2
     inputs:
@@ -1402,8 +1412,6 @@ children:
     inputs:
       numberOfSteps: 4
       currentStep: 4     
-
-
   - type: component.custom-component
     componentId: section2
     inputs:
@@ -1433,8 +1441,6 @@ children:
     inputs:
       numberOfSteps: 5
       currentStep: 5     
-
-
   - type: component.custom-component
     componentId: section2
     inputs:
@@ -1488,7 +1494,7 @@ inputs:
     type: number
 
 children:
-# Use view to set the layout in the component.
+  # Use view to set the layout in the component.
   # Stepper
   - type: component.view
     options:
@@ -1500,7 +1506,7 @@ children:
         justifyContent: center
         
       children: 
-# Configure the first blue point in the stepper.
+        # Configure the first blue point in the stepper.
         - type: component.view
           options:
             style:
@@ -1510,7 +1516,7 @@ children:
               height: 24
               width: 24
             children: []
-# Configure the blue line between the points in the stepper.
+        # Configure the blue line between the points in the stepper.
         - type: component.view
           when: =$number(@ctx.inputs.numberOfSteps) >= 2
           options:
@@ -1525,7 +1531,7 @@ children:
                 min: 8
                 max: 40                  
             children: []                        
-# Configure the second blue point in the stepper.
+        # Configure the second blue point in the stepper.
         - type: component.view
           when: =$number(@ctx.inputs.numberOfSteps) >= 2
           options:
@@ -1537,7 +1543,7 @@ children:
               height: 24
               width: 24
             children: []  
-# Configure the blue line between the points in the stepper.
+        # Configure the blue line between the points in the stepper.
         - type: component.view
           when: =$number(@ctx.inputs.numberOfSteps) >= 3
           options:
@@ -1552,7 +1558,7 @@ children:
                 min: 8
                 max: 40                  
             children: []                                                
-# Configure the third blue point in the stepper.
+        # Configure the third blue point in the stepper.
         - type: component.view
           when: =$number(@ctx.inputs.numberOfSteps) >= 3
           options:
@@ -1564,7 +1570,7 @@ children:
               height: 24
               width: 24
             children: []   
-# Configure the blue line between the points in the stepper.
+        # Configure the blue line between the points in the stepper.
         - type: component.view
           when: =$number(@ctx.inputs.numberOfSteps) >= 4
           options:
@@ -1579,7 +1585,7 @@ children:
                 min: 8
                 max: 40                  
             children: []                          
-# Configure the fourth blue point in the stepper.
+        # Configure the fourth blue point in the stepper.
         - type: component.view
           when: =$number(@ctx.inputs.numberOfSteps) >= 4
           options:
@@ -1591,7 +1597,7 @@ children:
               height: 24
               width: 24
             children: []  
-# Configure the blue line between the points in the stepper.
+        # Configure the blue line between the points in the stepper.
         - type: component.view
           when: =$number(@ctx.inputs.numberOfSteps) >= 5
           options:
@@ -1606,7 +1612,7 @@ children:
                 min: 8
                 max: 40                  
             children: []                          
-# Configure the fifth blue point in the stepper.
+        # Configure the fifth blue point in the stepper.
         - type: component.view
           when: =$number(@ctx.inputs.numberOfSteps) >= 5
           options:
@@ -1618,7 +1624,7 @@ children:
               height: 24
               width: 24
             children: []   
-# Configure the blue line between the points in the stepper.
+        # Configure the blue line between the points in the stepper.
         - type: component.view
           when: =$number(@ctx.inputs.numberOfSteps) >= 6
           options:
@@ -1633,7 +1639,7 @@ children:
                 min: 8
                 max: 40                  
             children: []                           
-# Configure the sixth blue point in the stepper.
+        # Configure the sixth blue point in the stepper.
         - type: component.view
           when: =$number(@ctx.inputs.numberOfSteps) >= 6 
           options:
@@ -1722,8 +1728,8 @@ children:
     options:
       title: Static tabs - Center Align
       children:
-# Custom component created using the view component. 
-# Inputs are used to determine tab name, value, alignment and indicator.
+        # Custom component created using the view component. 
+        # Inputs are used to determine tab name, value, alignment and indicator.
         - type: component.custom-component
           componentId: tabs
           inputs:
@@ -1745,8 +1751,9 @@ children:
     options:
       title: Static tabs - Left Align
       children:
-# Same custom component reused as above using the view component. 
-# Using inputs you can change the appearance of the same custom component.
+        # Same custom component reused as above using the view component. 
+        # Using inputs you can change the appearance of the same custom
+        # component.
         - type: component.custom-component
           componentId: tabs
           inputs:
@@ -1767,8 +1774,8 @@ children:
     options:
       title: Stretched static tabs
       children:
-# Custom component created using the view component. 
-# Inputs are used to determine tab name, value, and indicator.   
+        # Custom component created using the view component. 
+        # Inputs are used to determine tab name, value, and indicator.   
         - type: component.custom-component
           componentId: tabs-stretched
           inputs:
@@ -1806,9 +1813,10 @@ children:
             isHorizontal: true
             isHorizontalScrollIndicatorHidden: true
             item:
-# Custom component created using the view component.
-# Custom component added inside a standard list-item cpmponent. 
-# Inputs are used to determine tab name, and value in th custom component.            
+              # Custom component created using the view component.
+              # Custom component added inside a standard list-item component. 
+              # Inputs are used to determine tab name, and value in th custom 
+              # component.            
               type: component.custom-component
               componentId: list-item-tabs
               inputs:
@@ -1891,7 +1899,7 @@ children:
         margin:
           vertical: medium
       children:
-# Configure tab 1 using the view and text components.
+        # Configure tab 1 using the view and text components.
         - type: component.view
           when: =@ctx.inputs.tabValue1 != null
           options:
@@ -1917,7 +1925,7 @@ children:
                             direction: row
                           gap: minimal
                           justifyContent: center
-# Use the text component to create the tab names.                          
+                                 # Use the text component to create the tab names.                          
                         children:             
                           - type: component.text
                             options:
@@ -1934,7 +1942,8 @@ children:
                           flex:
                             grow: 1
                           height: 2
-# Configure the view to show a red dot as an indicator next to the tab name.                                     
+              # Configure the view to show a red dot as an indicator next to 
+              # the tab name.                                     
               - type: component.view
                 when: =@ctx.inputs.tabIndicator1 = true
                 options:
@@ -1951,13 +1960,13 @@ children:
                           height: 6
                           radius: large
                           width: 6
-# Configure the onPress event to switch tabs when pressed.                      
+            # Configure the onPress event to switch tabs when pressed.                      
             onPress:
               type: action.set-state
               options:
                 state: =@ctx.solution.state.tab
                 value: =@ctx.inputs.tabValue1
-# Configure tab 2 using the view and text components.
+        # Configure tab 2 using the view and text components.
         - type: component.view
           when: =@ctx.inputs.tabValue2 != null
           options:
@@ -2017,13 +2026,13 @@ children:
                           height: 6
                           radius: large
                           width: 6
-# Configure the onPress event to switch tabs when pressed.     
+            # Configure the onPress event to switch tabs when pressed.     
             onPress:
               type: action.set-state
               options:
                 state: =@ctx.solution.state.tab
                 value: =@ctx.inputs.tabValue2
-# Configure tab 3 using the view and text components.
+        # Configure tab 3 using the view and text components.
         - type: component.view
           when: =@ctx.inputs.tabValue3 != null
           options:
@@ -2084,13 +2093,13 @@ children:
                           height: 6
                           radius: large
                           width: 6
-# Configure the onPress event to switch tabs when pressed.     
+            # Configure the onPress event to switch tabs when pressed.     
             onPress:
               options:
                 state: =@ctx.solution.state.tab
                 value: =@ctx.inputs.tabValue3
               type: action.set-state
-# Configure tab 4 using the view and text components.
+        # Configure tab 4 using the view and text components.
         - type: component.view
           when: =@ctx.inputs.tabValue4 != null
           options:
@@ -2147,7 +2156,7 @@ children:
                           height: 6
                           radius: large
                           width: 6
-# Configure the onPress event to switch tabs when pressed.     
+            # Configure the onPress event to switch tabs when pressed.     
             onPress:
               type: action.set-state
               options:
@@ -2211,7 +2220,7 @@ children:
           grow: 1
         margin:
           vertical: medium
-# Configure tab 1 using the view and text components.
+     # Configure tab 1 using the view and text components.
       children:
         - type: component.view
           when: =@ctx.inputs.tabValue1 != null
@@ -2239,13 +2248,14 @@ children:
                           gap: minimal
                           justifyContent: center
                         children:
-# Use the text component to create the tab name.                        
+                          # Use the text component to create the tab name.                        
                           - type: component.text
                             options:
                               emphasis: =@ctx.solution.state.tab = @ctx.inputs.tabValue1 ? "":"medium"
                               value: =@ctx.inputs.tabName1
                               weight: bold   
-# Configure the view to show a red dot as an indicator next to the tab name.                                                      
+                          # Configure the view to show a red dot as an indicator
+                          # next to the tab name.                                                      
                           - type: component.view
                             when: =@ctx.inputs.tabIndicator1 = true
                             options:
@@ -2266,13 +2276,13 @@ children:
                           flex:
                             grow: 1
                           height: 2
-# Configure the onPress event to switch tabs when pressed. 
+            # Configure the onPress event to switch tabs when pressed. 
             onPress:
               type: action.set-state
               options:
                 state: =@ctx.solution.state.tab
                 value: =@ctx.inputs.tabValue1
- # Configure tab 2 using the view and text components.             
+        # Configure tab 2 using the view and text components.             
         - type: component.view
           when: =@ctx.inputs.tabValue2 != null
           options:
@@ -2298,14 +2308,15 @@ children:
                             grow: 1
                           gap: minimal
                           justifyContent: center
-# Use the text component to create the tab name. 
+                        # Use the text component to create the tab name. 
                         children:
                           - type: component.text
                             options:
                               emphasis: =@ctx.solution.state.tab = @ctx.inputs.tabValue2 ? "":"medium"
                               value: =@ctx.inputs.tabName2
                               weight: bold
-# Configure the view to show a red dot as an indicator next to the tab name.                            
+                          # Configure the view to show a red dot as an indicator
+                          # next to the tab name.                            
                           - type: component.view
                             when: =@ctx.inputs.tabIndicator2 = true
                             options:
@@ -2325,13 +2336,13 @@ children:
                               "element":"transparent"
                           flex: 
                             grow: 1
-# Configure the onPress event to switch tabs when pressed. 
+            # Configure the onPress event to switch tabs when pressed. 
             onPress:
               type: action.set-state
               options:
                 state: =@ctx.solution.state.tab
                 value: =@ctx.inputs.tabValue2
-# Configure tab 3 using the view and text components.                        
+        # Configure tab 3 using the view and text components.                        
         - type: component.view
           when: =@ctx.inputs.tabValue3 != null
           options:
@@ -2357,14 +2368,15 @@ children:
                             grow: 1
                           gap: minimal
                           justifyContent: center
-# Use the text component to create the tab name. 
+                        # Use the text component to create the tab name. 
                         children:
                           - type: component.text
                             options:
                               emphasis: =@ctx.solution.state.tab = @ctx.inputs.tabValue3 ? "":"medium"
                               value: =@ctx.inputs.tabName3
                               weight: bold 
-# Configure the view to show a red dot as an indicator next to the tab name.                                                         
+                          # Configure the view to show a red dot as an indicator
+                          # next to the tab name.                                                         
                           - type: component.view
                             when: =@ctx.inputs.tabIndicator3 = true
                             options:
@@ -2385,13 +2397,13 @@ children:
                           flex:
                             grow: 1
                           height: 2
-# Configure the onPress event to switch tabs when pressed. 
+            # Configure the onPress event to switch tabs when pressed. 
             onPress:
               type: action.set-state
               options:
                 state: =@ctx.solution.state.tab
                 value: =@ctx.inputs.tabValue3
-# Configure tab 4 using the view and text components.
+        # Configure tab 4 using the view and text components.
         - type: component.view
           when: =@ctx.inputs.tabValue4 != null
           options:
@@ -2417,14 +2429,15 @@ children:
                             grow: 1
                           gap: minimal
                           justifyContent: center
-# Use the text component to create the tab name.                         
+                        # Use the text component to create the tab name.                         
                         children:
                           - type: component.text
                             options:
                               emphasis: =@ctx.solution.state.tab = @ctx.inputs.tabValue4 ? "":"medium"
                               value: =@ctx.inputs.tabName4
                               weight: bold
-# Configure the view to show a red dot as an indicator next to the tab name.                             
+                          # Configure the view to show a red dot as an 
+                          # indicator next to the tab name.                             
                           - type: component.view
                             when: =@ctx.inputs.tabIndicator4 = true
                             options:
@@ -2446,7 +2459,7 @@ children:
                           flex:
                             grow: 1
                           height: 2
-# Configure the onPress event to switch tabs when pressed. 
+            # Configure the onPress event to switch tabs when pressed. 
             onPress:
               type: action.set-state
               options:
@@ -2498,7 +2511,7 @@ children:
                     gap: minimal
                     justifyContent: center
                   children:
-# Configure the tab name.                 
+                    # Configure the tab name.                 
                     - type: component.text
                       options:
                         emphasis: =@ctx.solution.state.tab = @ctx.inputs.tabValue ? "":"medium"
@@ -2514,7 +2527,8 @@ children:
                     flex:
                       grow: 1
                     height: 2
-# Configure the view to show a red dot as an indicator next to the tab name. 
+        # Configure the view to show a red dot as an indicator next to the tab 
+        # name. 
         - type: component.view
           when: =@ctx.inputs.tabIndicator = true
           options:
@@ -2531,7 +2545,7 @@ children:
                     height: 6
                     radius: large
                     width: 6
-# Configure the onPress event to switch tabs when pressed. 
+      # Configure the onPress event to switch tabs when pressed. 
       onPress:
         type: action.set-state
         options:
@@ -2609,15 +2623,15 @@ children:
       isHorizontal: true
       isHorizontalScrollIndicatorHidden: true
       item:
-# Custom component created using the view and text components.
-# Custom component added inside a standard list-item component. 
-# Inputs are used to determine tag color and text value.       
+        # Custom component created using the view and text components.
+        # Custom component added inside a standard list-item component. 
+        # Inputs are used to determine tag color and text value.       
         type: component.custom-component
         componentId: view-todo-tags
         inputs:
           info: =@ctx.current.item
-# Custom component created using the view and card components.
-# Inputs are used to determine the onPress action's title.
+  # Custom component created using the view and card components.
+  # Inputs are used to determine the onPress action's title.
   - type: component.custom-component
     when: =@ctx.datasources.mydata.tags = null
     componentId: add-button
@@ -2631,7 +2645,7 @@ view-todo-tags.jigx
 # components/view-todo-tags.jigx
 type: component.default
 children:
-# Use the view component to create the layout.
+  # Use the view component to create the layout.
   - type: component.view
     options:
       style:
@@ -2646,7 +2660,7 @@ children:
           topLeft: tiny
           topRight: large
       children:
-# Configure the text on the tags using inputs.      
+        # Configure the text on the tags using inputs.      
         - type: component.text
           options:
             value: =@ctx.inputs.info.title
@@ -2670,7 +2684,7 @@ children:
                   emphasis: medium
                   icon: add
                   size: small
-# Use the text component to add a title on the button link.                
+              # Use the text component to add a title on the button link.                
               - type: component.text
                 options:
                   emphasis: medium
@@ -2682,7 +2696,7 @@ children:
               gap: small
               justifyContent: center
               padding: minimal
-# Configure the action to call when the button link is pressed.           
+      # Configure the action to call when the button link is pressed.           
       onPress:
         type: action.action-list
         options:
@@ -2768,15 +2782,14 @@ children:
             data: =@ctx.datasources.categories
             isHorizontal: true
             item:
-# Custom component created using the view and text components.
-# Custom component added inside a standard list component. 
-# Inputs are used to determine toggle name and text value.            
+              # Custom component created using the view and text components.
+              # Custom component added inside a standard list component. 
+              # Inputs are used to determine toggle name and text value.            
               type: component.custom-component
               componentId: list-item-switch
               inputs:
                 switchName: =@ctx.current.item.category-name
                 switchValue: =@ctx.current.item.state-value
-
 
   - type: component.section
     options:
@@ -2798,8 +2811,9 @@ children:
       title: Switch - Highlighted
       children:
             item:
-# Custom component created using the view and text components.
-# Inputs are used to determine toggle name, and text value and highlighting.
+        # Custom component created using the view and text components.
+        # Inputs are used to determine toggle name, and text value and
+        # highlighting.
         - type: component.custom-component
           componentId: switch
           inputs:
@@ -2831,8 +2845,9 @@ children:
     options:
       title: Switch with counters - Highlighted
       children:
-# Custom component created using the view and text components.
-# Inputs are used to determine toggle name, and text value and highlighting.
+        # Custom component created using the view and text components.
+        # Inputs are used to determine toggle name, and text value and 
+        # highlighting.
         - type: component.custom-component
           componentId: switch
           inputs:
@@ -2899,7 +2914,7 @@ children:
           top: none
         padding: minimal
         radius: large
-# Configure the first switch/toggle.
+      # Configure the first switch/toggle.
       children:
         - type: component.view
           when: =@ctx.inputs.switchName1 != null
@@ -2920,7 +2935,7 @@ children:
                 vertical: small
               radius: large
             children:
-# Configure the first switch/toggle's name.            
+              # Configure the first switch/toggle's name.            
               - type: component.text
                 options:
                   align: center
@@ -2953,13 +2968,14 @@ children:
                         emphasis: medium
                         size: tiny
                         value: =@ctx.inputs.switchCount1
-# Configure the onPress event to toggle between switches when pressed.                       
+            # Configure the onPress event to toggle between switches when
+            # pressed.                       
             onPress:
               type: action.set-state
               options:
                 state: =@ctx.solution.state.switch
                 value: =@ctx.inputs.switchValue1
-# Configure the second switch/toggle.                       
+        # Configure the second switch/toggle.                       
         - type: component.view
           when: =@ctx.inputs.switchName2 != null
           options:
@@ -2978,7 +2994,7 @@ children:
                 horizontal: medium
                 vertical: small
               radius: large
-# Configure the second switch/toggle's name.
+            # Configure the second switch/toggle's name.
             children:
               - type: component.text
                 options:
@@ -3011,13 +3027,14 @@ children:
                         emphasis: medium
                         size: tiny
                         value: =@ctx.inputs.switchCount2
-# Configure the onPress event to toggle between switches when pressed.   
+            # Configure the onPress event to toggle between switches when 
+            # pressed.   
             onPress:
               type: action.set-state
               options:
                 state: =@ctx.solution.state.switch
                 value: =@ctx.inputs.switchValue2
-# Configure the third's switch/toggle.                       
+        # Configure the third's switch/toggle.                       
         - type: component.view
           when: =@ctx.inputs.switchName3 != null
           options:
@@ -3036,7 +3053,7 @@ children:
                 horizontal: medium
                 vertical: small
               radius: large
-# Configure the third switch/toggle's name.
+            # Configure the third switch/toggle's name.
             children:
               - type: component.text
                 options:
@@ -3069,7 +3086,8 @@ children:
                         emphasis: medium
                         size: tiny
                         value: =@ctx.inputs.switchCount3
-# Configure the onPress event to toggle between switches when pressed.                         
+            # Configure the onPress event to toggle between switches when
+            # pressed.                         
             onPress:
               type: action.set-state
               options:
@@ -3108,14 +3126,14 @@ children:
           horizontal: medium
           vertical: small
         radius: large
-# Configure the switch/toggle's name.        
+      # Configure the switch/toggle's name.        
       children:
         - type: component.text
           options:
             color: =@ctx.solution.state.list-item-switch = @ctx.inputs.switchValue ?
               "":"element"
             value: =@ctx.inputs.switchName
-# Configure the onPress event to toggle between switches when pressed.             
+      # Configure the onPress event to toggle between switches when pressed.             
       onPress:
         type: action.set-state
         options:

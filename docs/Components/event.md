@@ -4,32 +4,91 @@ The component can only be used in the [jig.calendar](<./../Jig Types/jig_calenda
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `from`             | Configure the starting time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;For more information about the setting of the date format/ time zones, refer to [Expressions - cheatsheet](https://docs.jigx.com/expressions-cheatsheet). |
-| `to`               | Configure the ending time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;For more information about the setting of the date format/ time zones, refer to [Expressions - cheatsheet](https://docs.jigx.com/expressions-cheatsheet).   |
-| `title`            | Provide the name of the event.                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `from`             | Configure the starting time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;For more information about the setting of the date format/ time zones, refer to . |
+| `to`               | Configure the ending time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;For more information about the setting of the date format/ time zones, refer to.    |
+| `title`            | Provide the name of the event.                                                                                                                                                                                                                                                                                                                                                                                                  |
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                   |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `description`     | The general description of the event.                                                                                                                                                                                                                                                                                                             |
-| `location`        | The event's location, for example, a meeting room or conference center.                                                                                                                                                                                                                                                                           |
-| `people`          | The list of invitees/attendees for the event. Use an expression to configure the property, for example, &#xA;`people: =@ctx.current.item.attendees.emailAddress`.                                                                                                                                                                                 |
-| `tags`            | Displays a list of `tags` for the event, such as meeting, interview, or social. The `tags` array can contain the *color* and *title* for each tag. &#xA;`"=[{'title': @ctx.current.item.type, 'color': @ctx.current.item.color}]"`&#xA;or define the tag in a datasource whihc is referenced in the property.&#xA;`tags: =@ctx.current.item.tags` |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="130">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>description</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The general description of the event.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>location</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The event's location, for example, a meeting room or conference center.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>people</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The list of invitees/attendees for the event. Use an expression to configure the property, for example,
+      <code>people: =@ctx.current.item.attendees.emailAddress</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>tags</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Displays a list of <code>tags</code> for the event, such as meeting, interview, or social. The <code>tags</code> array can contain the <em>color</em> and <em>title</em> for each tag.
+      <code>"=[{'title': @ctx.current.item.type, 'color': @ctx.current.item.color}]"</code>
+      or define the tag in a datasource whihc is referenced in the property.
+      <code>tags: =@ctx.current.item.tags</code></p>
+    </td>
+  </tr>
+</table>
 
 Certain actions can be executed on the event; for example, when pressing on the event opens the URL of the advertised event.
 
-| **Actions**     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onButtonPress` | You can set any action in this property just like in the `onPress` property. The difference is that if only `onButtonPress` is configured, after pressing on the event, a modal window with the event's details opens. The modal contains a button for the action configured in the `onButtonPress` property. When `isHidden` is used with `when:false` , the `isHidden` property is automatically overwritten on the mobile device and set to `isHidden:true` and the button automatically hides. |
-| `onPress`       | When pressing on the event an action executes. Use IntelliSense to select an action or refer to the list of available [Actions](./../Actions.md). When the `onPress` is configured, the `onButtonPress` configuration is ignored.                                                                                                                                                                                                                                                                  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="146">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onButtonPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>You can set any action in this property just like in the <code>onPress</code> property. The difference is that if only <code>onButtonPress</code> is configured, after pressing on the event, a modal window with the event's details opens. The modal contains a button for the action configured in the <code>onButtonPress</code> property. When <code>isHidden</code> is used with <code>when:false</code> , the <code>isHidden</code> property is automatically overwritten on the mobile device and set to <code>isHidden:true</code> and the button automatically hides.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>onPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>When pressing on the event an action executes. Use IntelliSense to select an action or refer to the list of available . When the <code>onPress</code> is configured, the <code>onButtonPress</code> configuration is ignored.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Event of meeting
 
 ::::VerticalSplit{layout="left"}
@@ -46,7 +105,7 @@ See the full example using dynamic data in [GitHub](https://github.com/jigx-com/
 
 **Datasources**:
 See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-training.jigx)
-See the full datasource for dynamic data in [GitHub]("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-training-dynamic.jigx)
+See the full datasource for dynamic data in [GitHub]()
 :::
 ::::
 
@@ -148,12 +207,10 @@ options:
       '$.category'
     FROM [default/calendar] WHERE category = "meeting"
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Event of training
 
 ::::VerticalSplit{layout="left"}
@@ -239,12 +296,10 @@ options:
       '$.category' 
     FROM [default/calendar] WHERE '$.category' = 'meeting-event'
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Event with action
 
 ::::VerticalSplit{layout="middle"}
@@ -506,6 +561,6 @@ children:
             label: Phone
             value: =@ctx.datasources.employee-detail-dynamic.phone
 ```
-
 :::
 :::::
+

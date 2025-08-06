@@ -14,29 +14,120 @@ The summary is fixed and displays even when the screen is scrolled. Make the sum
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `layout`           | There are three types to choose from:&#xA;1\) `default` - used to display information. This is the default layout, allowing you to specify what must be shown.&#xA;2\) `cart` - useful for an online shopping app to show the number of items in a cart. The `value` is shown to the right of the `title`.&#xA;3\) `counter` - useful for showing a count, for example, the number of sales made in a month. The `value` is shown to the left of the `title`. |
-| `title`            | The main text to display on the component.                                                                                                                                                                                                                                                                                                                                                                                                                    |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>layout</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>There are three types to choose from:</p>
+      <ol>
+      <li><code>default</code> - used to display information. This is the default layout, allowing you to specify what must be shown.</li>
+      <li><code>cart</code> - useful for an online shopping app to show the number of items in a cart. The <code>value</code> is shown to the right of the <code>title</code>.</li>
+      <li><code>counter</code> - useful for showing a count, for example, the number of sales made in a month. The <code>value</code> is shown to the left of the <code>title</code>.</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The main text to display on the component.</p>
+    </td>
+  </tr>
+</table>
 
 :::Iframe{code="<be />"}
 
 :::
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `color`           | Changing color of `title` and `leftIcon` based on `when` conditions. First condition evaluated to `true` will be used. If the condition evaluates to `false` the default color (black) is used.&#xA;Choose a color from the provided color palette as well as the status colors, e.g. `isWarning`. Default color is black if the property is not specified in the YAML. See the list of available colors in [Jigx color palette](https://docs.jigx.com/jigx-color-palette). |
-| `description`     | Provide third level of supporting text to be displayed. The position of the text is under the `subtitle` property. This property is only available with `layout` type `cart`.                                                                                                                                                                                                                                                        |
-| `leftIcon`        | Add an icon to show on the left before the `title`. A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.&#xA;`leftIcon` is only available with the `default` layout.                                                                                                                                                                                                                                              |
-| `subtitle`        | Provide supporting text to be displayed as a `subtitle`. The position of the subtitle text depends on the selected `layout` property.                                                                                                                                                                                                                                                                                                |
-| `value`           | The actual value in your summary configured by a string or an expression that must equal a number. This property is only available for `layout` types `cart` and `counter`.                                                                                                                                                                                                                                                          |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="136">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>color</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Changing color of <code>title</code> and <code>leftIcon</code> based on <code>when</code> conditions. First condition evaluated to <code>true</code> will be used. If the condition evaluates to <code>false</code> the default color (black) is used.
+      Choose a color from the provided color palette as well as the status colors, e.g. <code>isWarning</code>. Default color is black if the property is not specified in the YAML. See the list of available colors in .</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>description</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide third level of supporting text to be displayed. The position of the text is under the <code>subtitle</code> property. This property is only available with <code>layout</code> type <code>cart</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>leftIcon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add an icon to show on the left before the <code>title</code>. A list of icons is available. See  for more information.
+      <code>leftIcon</code> is only available with the <code>default</code> layout.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>subtitle</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide supporting text to be displayed as a <code>subtitle</code>. The position of the subtitle text depends on the selected <code>layout</code> property.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>value</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The actual value in your summary configured by a string or an expression that must equal a number. This property is only available for <code>layout</code> types <code>cart</code> and <code>counter</code>.</p>
+    </td>
+  </tr>
+</table>
 
-| **Actions**                |                                                                                                                                                                                                                                                                                                                             |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OnPress`                  | The action is triggered while pressing on the `LeftIcon` in the summary. Use IntelliSense (ctrl+space) to see the available list of actions.                                                                                                                                                                                |
-| [Actions](./../Actions.md) | By using the summary component along with actions, you can unlock a powerful feature that enables you to take necessary actions based on the information available from the summary. For instance, adding a sales opportunity. This feature can significantly enhance the usability of your jig and make it more efficient. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Actions</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>OnPress</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The action is triggered while pressing on the <code>LeftIcon</code> in the summary. Use IntelliSense (ctrl+space) to see the available list of actions.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><a href="./../Actions.md">Actions</a> </p>
+    </td>
+    <td selected="false" align="left">
+      <p>By using the summary component along with actions, you can unlock a powerful feature that enables you to take necessary actions based on the information available from the summary. For instance, adding a sales opportunity. This feature can significantly enhance the usability of your jig and make it more efficient.</p>
+    </td>
+  </tr>
+</table>
 
 ## Consideration
 
@@ -55,7 +146,6 @@ Some properties are common to all components, see [Common component properties](
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Summary - default
 
 ::::VerticalSplit{layout="middle"}
@@ -103,12 +193,10 @@ item:
       value: =@ctx.current.item.price
     tag: =@ctx.current.item.tag
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Summary - cart
 
 ::::VerticalSplit{layout="middle"}
@@ -332,12 +420,10 @@ datasources:
           toabrv: DAY
           image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Summary - counter
 
 ::::VerticalSplit{layout="middle"}
@@ -360,7 +446,6 @@ summary-counter-product-item
 ```yaml
 title: Products
 type: jig.list
-
 # Add the summary to show there are two items.  
 summary:
   children:
@@ -563,12 +648,10 @@ datasources:
           toabrv: DAY
           image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Summary with action
 
 ::::VerticalSplit{layout="middle"}
@@ -729,6 +812,6 @@ options:
       toabrv: DAY
       image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60   
 ```
-
 :::
 :::::
+
