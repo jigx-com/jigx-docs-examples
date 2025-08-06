@@ -6,24 +6,61 @@ The composite jig is a jig made up of several parts or elements. In this case, a
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Jig Composite Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ_xkWBnn-yCDc_composite.png" size="90" caption="Jig Composite Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ_xkWBnn-yCDc_composite.png"}
+::Image[]{alt="Jig Composite Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ_xkWBnn-yCDc_composite.png" size="90" caption="Jig Composite Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ_xkWBnn-yCDc_composite.png" width="800" height="996" darkWidth="800" darkHeight="996"}
 :::
 ::::
 
 ## Configuration options
 
-Some properties are common to all jig types, see [Common jig type properties](docId\:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
+Some properties are common to all jig types, see [Common jig type properties]() for a list and their configuration options.
 
 | **Core Structure** |                                                                                                |
 | ------------------ | ---------------------------------------------------------------------------------------------- |
-| `jigId`            | The core structure includes: `jigId` 2x or more (depends on how many jigs you are connecting). |
+| `jigId`            | The core structure includes two `jigId` or more (depends on how many jigs you are connecting). |
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `icon`            | The icon will be displayed on the [widget](#) of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See [Jigx icons](#) for information on worknig with icons.                                                                                                                                                                                                   |
-| `inputs`          | If you are setting up a `jig.composite` where jigs rely on input to display or otherwise interact with very specific data, you'll need to use `inputs`. Here you set the data you would like to transfer to the composite jig. There are 2 options to make data available for input:&#xA;1\) Set them in `output` inside the jig.&#xA;2\) Set them as a `global` variable by using `set-state action`. |
-| `isTitleHidden`   | The boolean value allows you to hide the title of your jig in the composite jig. Even if the jig's title is set to `true` , because the title is a mandatory property.                                                                                                                                                                                                                                 |
-| `when`            | The ability to include or exclude a jig for display on a composite jig. If set to `true` the jig is included, if set to `false` the jig will not appear on the composite jig. Dynamically set this property by using expressions.                                                                                                                                                                      |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="154">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Other options</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>icon</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The icon will be displayed on the  of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See <a href="">Jigx icons</a> for information on worknig with icons.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>inputs</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>If you are setting up a <code>jig.composite</code> where jigs rely on input to display or otherwise interact with very specific data, you'll need to use <code>inputs</code>. Here you set the data you would like to transfer to the composite jig. There are 2 options to make data available for input:
+      1) Set them in <code>output</code> inside the jig.
+      2) Set them as a <code>global</code> variable by using <code>set-state action</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isTitleHidden</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The boolean value allows you to hide the title of your jig in the composite jig. Even if the jig's title is set to <code>true</code> , because the title is a mandatory property.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>when</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The ability to include or exclude a jig for display on a composite jig. If set to <code>true</code> the jig is included, if set to <code>false</code> the jig will not appear on the composite jig. Dynamically set this property by using expressions.</p>
+    </td>
+  </tr>
+</table>
 
 ## Considerations
 
@@ -88,7 +125,7 @@ actions:
 ## Examples and code snippets
 
 :::hint{type="success"}
-The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples) and follow the instructions in [Setting up your solution](docId:1gfew7GRPvkfxon-TsymP).
+The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples) and follow the instructions in [Setting up your solution]().
 :::
 
 :::::ExpandableHeading
@@ -295,7 +332,7 @@ See the datasource code sample in [GitHub](https://github.com/jigx-com/jigx-samp
 See the default.jigx code snippet with the database table defined below.
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](#) configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data]() configuration in Jigx Management.
 :::
 
 :::CodeblockTabs
@@ -531,6 +568,6 @@ tabs:
 
 ## See also
 
-- [Jigs (screens)](#)
+- [Jigs (screens)]()
 - [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-composite)
 

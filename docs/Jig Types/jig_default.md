@@ -1,10 +1,4 @@
----
-title: jig.default
-slug: rTom-jigdefault
-description: Learn about the "Jig.default" type and discover how to use it as a Form and List with code snippets and examples. This document includes a default form widget and emphasizes the importance of having data in the database. Explore YAML code for a visually a
-createdAt: Wed Jun 08 2022 06:27:45 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Apr 29 2025 10:39:06 GMT+0000 (Coordinated Universal Time)
----
+# jig.default
 
 ::::VerticalSplit{layout="right"}
 :::VerticalSplitItem
@@ -16,7 +10,6 @@ Type` jig.default` is the most versatile jig allowing you to create a jig with v
 - Used with a combination of different components and actions.
 
 ##
-
 :::
 
 :::VerticalSplitItem
@@ -26,12 +19,12 @@ Type` jig.default` is the most versatile jig allowing you to create a jig with v
 
 ## Configuration options
 
-Some properties are common to all jig types, see [Common jig type properties](docId:AvbKAkPpRDHkZ8I8iSTkF) for a list and their configuration options.
+Some properties are common to all jig types, see [Common jig type properties]() for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                 |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`         | Add the UI elements ([Components](./../Components.md)) under the children property, for example, `component.form`. Use Intellisense (ctrl+space) to select a component from the available list. |
-| `title`            | Provide the name of the screen. If you do not want to show a title in a jig use `title: ' '` or add an expression.                                                                              |
+| **Core structure** |                                                                                                                                                                 |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `children`         | Add the UI elements () under the children property, for example, `component.form`. Use Intellisense (ctrl+space) to select a component from the available list. |
+| `title`            | Provide the name of the screen. If you do not want to show a title in a jig use `title: ' '` or add an expression.                                              |
 
 ### Other options
 
@@ -40,11 +33,10 @@ The jig.default is the most versatile jig available allowing you to create a var
 ## Examples and code snippets
 
 :::hint{type="success"}
-The code below is an extract from the full _jigx-samples_ solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full _jigx-samples_ project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples), and follow the instructions in [Setting up your solution](docId:1gfew7GRPvkfxon-TsymP).
+The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples), and follow the instructions in [Setting up your solution]().
 :::
 
 :::::ExpandableHeading
-
 ### Jig.default as a Form
 
 ::::VerticalSplit{layout="left"}
@@ -57,7 +49,6 @@ The code below is an extract from the full _jigx-samples_ solution. The code sni
 See the full default-form.jigx code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-form.jigx).
 **Datasource:**
 See the full datasource code example for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-form.jigx).
-
 :::
 ::::
 
@@ -174,12 +165,10 @@ tabs:
     jigId: defaut-form
     icon: home-apps-logo
 ```
-
 :::
 :::::
 
 ::::::ExpandableHeading
-
 ### Jig.default as a List
 
 :::::VerticalSplit{layout="left"}
@@ -302,12 +291,10 @@ databaseId: default
 tables:
   products: null
 ```
-
 :::
 ::::::
 
 ::::::ExpandableHeading
-
 ### Other examples of jig.default
 
 :::::VerticalSplit{layout="left"}
@@ -496,7 +483,6 @@ databaseId: default
 tables:
   employees: null
 ```
-
 :::
 
 :::::VerticalSplit{layout="left"}
@@ -505,7 +491,6 @@ tables:
 :::
 
 ::::VerticalSplitItem
-
 **Examples:**
 
 See full code sample with static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-product-detail.jigx)
@@ -723,7 +708,6 @@ tabs:
     jigId: defaut-product-detail-dynamic
     icon: home-apps-logo
 ```
-
 :::
 ::::::
 
@@ -731,3 +715,4 @@ tabs:
 
 - [Jigs (screens)](https://docs.jigx.com/jigs-screens)
 - [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-default)
+
