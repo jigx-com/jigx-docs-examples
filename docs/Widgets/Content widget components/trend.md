@@ -1,37 +1,78 @@
----
-title: trend
-slug: ps5D-trend
-description: This document provides an in-depth analysis of the trend component in Jigx widgets, such as the Chart, List, and Value widgets. Learn how this component helps display changes over a specified period in different formats like percentage, currency, or plain
-createdAt: Thu Jun 09 2022 19:58:36 GMT+0000 (Coordinated Universal Time)
-updatedAt: Fri Mar 07 2025 14:13:19 GMT+0000 (Coordinated Universal Time)
----
+# trend
 
 The trend component displays an increase or decrease over a period. The increment or decrement number can be formatted as a percentage, currency, or plain value.
 
 Trend is available in the following content widgets:
 
-- <a href="https://docs.jigx.com/examples/chart" target="_blank">Chart widget</a>
-- <a href="https://docs.jigx.com/examples/list" target="_blank">List widget</a>
-- <a href="https://docs.jigx.com/examples/value" target="_blank">Value widget</a>
+- [chart](./../chart.md)
+- [list](./../list.md)&#x20;
+- [value](./../value.md)&#x20;
 
 ## Configuration options
 
-| **Core structure** |                 |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `value`            | Positive or negative numeric value.                                                                                           |
-| `format`           | A selection of formats is available for the main value of the widget, for example, currency.                                 |
-| `title`            | Display a `title` for the trend.                                                                                            |
-| `subtitle`         | Add a subtitle under the title text. Note: this text won't be displayed if `isValueBottom` is set to `true`                   |
-| `style`            | Properties used for component styling.&#xA;- `isValueBottom` - By default, the value is on the right of the text.  Set the property to `true` to move it underneath the text.&#xA;- `isValueHidden` - hides the number and only shows an icon indicating an up or down trend.&#xA;- `isAlignRight` - aligns everything to the right. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="110">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>value</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Positive or negative numeric value.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>format</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>A selection of formats is available for the main value of the widget, for example, currency.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Display a <code>title</code> for the trend.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>subtitle</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a subtitle under the title text. Note: this text won't be displayed if <code>isValueBottom</code> is set to <code>true</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>style</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Properties used for component styling.</p>
+      <ul>
+      <li><code>isValueBottom</code> - By default, the value is on the right of the text.  Set the property to <code>true</code> to move it underneath the text.</li>
+      <li><code>isValueHidden</code> - hides the number and only shows an icon indicating an up or down trend.</li>
+      <li><code>isAlignRight</code> - aligns everything to the right.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-## Examples and code snippets 
+## Examples and code snippets
 
 :::::ExpandableHeading
 ### Trend on value widget
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YIaF_yhQk7REdnMJBJB10_trend-valueiphone13blueportrait.png" size="76" position="center" caption="Upward trend" alt="Upward trend"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YIaF_yhQk7REdnMJBJB10_trend-valueiphone13blueportrait.png" size="76" position="center" caption="Upward trend" alt="Upward trend" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YIaF_yhQk7REdnMJBJB10_trend-valueiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -129,8 +170,6 @@ This example shows finance statistics. The trend component, indicates an increas
 **Examples**:
 See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/trend/static-data/trend-in-chart-widget/trend-in-chart-widget.jigx).
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/trend/dynamic-data/trend-in-chart-widget/trend-in-chart-dynamic.jigx).
-
-
 :::
 ::::
 
@@ -257,7 +296,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/D7VqLAmAop15HaURF_Dlk_trend-listiphone13blueportrait.png" size="84" position="center" caption="Patient trend over a period" alt="Patient trend over a period"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/D7VqLAmAop15HaURF_Dlk_trend-listiphone13blueportrait.png" size="84" position="center" caption="Patient trend over a period" alt="Patient trend over a period" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/D7VqLAmAop15HaURF_Dlk_trend-listiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -325,6 +364,8 @@ widgets:
             text: =$substring(@ctx.current.item.firstname, 0, 1) & $substring(@ctx.current.item.lastname, 0, 1)
             uri: =@ctx.current.item.photo
 ```
+
+grid-item
 
 ```yaml
 # Grid-item for the static jig.

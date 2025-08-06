@@ -75,7 +75,6 @@ engaging-prompts
     ]
   }
 ```
-
 :::
 
 ## How to integrate with OpenAI
@@ -84,14 +83,14 @@ engaging-prompts
 - Configure the [REST API](<./Data Providers/REST.md>) integration.
 - Show it in your Jigx mobile app.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W-o_ZWcHkRq83E4Yj4YA5_ai-diagram.png" size="66" position="center" caption="OpenAI integration " alt="OpenAI integration " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W-o_ZWcHkRq83E4Yj4YA5_ai-diagram.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W-o_ZWcHkRq83E4Yj4YA5_ai-diagram.png" size="66" position="center" caption="OpenAI integration " alt="OpenAI integration " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W-o_ZWcHkRq83E4Yj4YA5_ai-diagram.png" width="800" height="256" darkWidth="800" darkHeight="256"}
 
 ### High-level steps
 
 1. Open Jigx Builder in VS Code and create a Jigx solution.
 2. Under the functions folder create a function.jigx file to configure the OpenAI [REST](https://docs.jigx.com/examples/rest) API. For more information on configuring a REST function see [REST Overview](https://docs.jigx.com/rest-overview).
 3. In the functions file configure the [REST Authentication](https://docs.jigx.com/rest-authentication) required by the REST API.
-4. Configure the [prompts]((https://docs.jigx.com/examples/openai-integration#8G9Da)) to tell AI what it should do and how it must act in the `messages` >`"content:"` property in the `inputTransform` in the functions file.
+4. Configure the [prompts]() to tell AI what it should do and how it must act in the `messages` >`"content:"` property in the `inputTransform` in the functions file.
 5. Create a [Jigs (screens)](https://docs.jigx.com/jigs-screens) under the jigs folder.
 6. Add [Components (controls)](https://docs.jigx.com/components-controls) to the jig and configure accordingly.
 7. Configure an [action](https://docs.jigx.com/actions) to call the OpenAI function. In most instances a [sync-entities](./Actions/sync-entities.md) action is configured to return the reponse from the AI server.
@@ -100,18 +99,67 @@ engaging-prompts
 
 Jigx functions are used to configure the REST integration with AI models such as ChatGPT. Once a Jigx function has been configured you can call it anywhere from your visual components. See the section on [REST](<./Data Providers/REST.md>) integration to understand how to use REST in Jigx. Below is an explanation describing how the parameters are configured to integrate Jigx and the AI model. It is important to refer to the AI model REST API you have selected to use, to ensure you have provided the required input and configured the output to return the correct response from the model.
 
-| **Parameter**     | **Description**    |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `method`          | `POST` -The POST request can be used to send training data to the server where the AI model is hosted. The server can then use this data to train the model.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `url`             | Specify the URL for the AI model's REST API. For example, the URL for ChatGPT is: [https://api.openai.com/v1/chat/completions](https://api.openai.com/v1/chat/completions)                              |
-| `outputTransform` | The ouputTransform is where you configure the AI reponse. Check the AI API response to ensure you add the correct configuration. For example, &#xA;**OpenAPI response** shows the following code:<br>&#xA;`{ "id": "chatcmpl-123", "object": "chat.completion", "created": 1677652288, "model": "gpt-3.5-turbo-0125", "system_fingerprint": "fp_44709d6fcb", "choices": [{ "index": 0, "message": { "role": "assistant", "content": "\n\nHello there, how may I assist you today?", }, "logprobs": null, "finish_reason": "stop" }], "usage": { "prompt_tokens": 9, "completion_tokens": 12, "total_tokens": 21 } }`<br> In the **outputTransform** you configure the following:<br>`outputTransform: \| { "content": $.choices[0].message.content}` |
-| `inputTransform`  | Provide the AI with the information it requires to return the response/chat message.&#xA;`model` - is the name and version of the AI model.&#xA;`response_format` - the expected input type, for example, json\_object.&#xA;`message` - under this property configure the prompts to train the AI, by specifying the `role` and `content`. You can configure multiple sets.  |
-| `parameters`      | Configure authorization and authentication depending on the AI model you using. Configure the `type`, `required` and `location` of the parameters.  |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="165">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Parameter</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Description</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>method</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>POST</code> -The POST request can be used to send training data to the server where the AI model is hosted. The server can then use this data to train the model.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>url</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specify the URL for the AI model's REST API. For example, the URL for ChatGPT is: <a href="https://api.openai.com/v1/chat/completions">https://api.openai.com/v1/chat/completions</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>outputTransform</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The ouputTransform is where you configure the AI reponse. Check the AI API response to ensure you add the correct configuration. For example,
+      <strong>OpenAPI response</strong> shows the following code:
+      <code>{ "id": "chatcmpl-123", "object": "chat.completion", "created": 1677652288, "model": "gpt-3.5-turbo-0125", "system_fingerprint": "fp_44709d6fcb", "choices": [{ "index": 0, "message": { "role": "assistant", "content": "\n\nHello there, how may I assist you today?", }, "logprobs": null, "finish_reason": "stop" }], "usage": { "prompt_tokens": 9, "completion_tokens": 12, "total_tokens": 21 } }</code>
+      In the <strong>outputTransform</strong> you configure the following:
+      <code>outputTransform: | { "content": $.choices[0].message.content}</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>inputTransform</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide the AI with the information it requires to return the response/chat message.
+      <code>model</code> - is the name and version of the AI model.
+      <code>response_format</code> - the expected input type, for example, json_object.
+      <code>message</code> - under this property configure the prompts to train the AI, by specifying the <code>role</code> and <code>content</code>. You can configure multiple sets.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>parameters</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Configure authorization and authentication depending on the AI model you using. Configure the <code>type</code>, <code>required</code> and <code>location</code> of the parameters.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code samples
 
 ::::ExpandableHeading
-
 ### Chatbot with OpenAI
 
 In this example, you set up an AI chat experience using the Jigx chatbot visual component configured to integrate with the OpenAI ChatGPT REST endpoint - [https://api.openai.com/v1/chat/completions](https://api.openai.com/v1/chat/completions). The REST API is configured in the ai-function.jigx and the chat component in the ai-chat.jigx file.
@@ -245,7 +293,6 @@ parameters:
     location: body
     required: true
 
-
 forRowsWithMatchingIds: true
 ```
 
@@ -300,8 +347,8 @@ component:
           name: =@ctx.current.item.author
         isAuthor: =$lowercase(@ctx.current.item.author) = $lowercase(@ctx.user.email)
         sentAt: =@ctx.current.item.messageTime
-# Configure the action to call a global action.
-# Pass the user message/question as a parameter.  
+    # Configure the action to call a global action.
+    # Pass the user message/question as a parameter.  
     onSend:
       type: action.execute-action
       options:
@@ -328,7 +375,7 @@ action:
   type: action.action-list
   options:
     isSequential: true
-#Save chat messages to the local data provider on the device.         
+    # Save chat messages to the local data provider on the device.         
     actions:
       - type: action.execute-entity
         options:
@@ -342,8 +389,8 @@ action:
             question: =@ctx.action.parameters.question
             message: =@ctx.action.parameters.question
             messageTime: =$toMillis($now())
-#Configure an action to call the AI response (outputTransformer).
-#Called from the REST ai-function.
+      # Configure an action to call the AI response (outputTransformer).
+      # Called from the REST ai-function.
       - type: action.sync-entities
         options:
           provider: DATA_PROVIDER_REST
@@ -351,21 +398,20 @@ action:
             - entity: AIChat
               function: ai-chat
               parameters:
-#Provide a name for your chat bot response             
+                # Provide a name for your chat bot response.             
                 author: 'JIGX Chatbot'
                 user: =@ctx.user.email
-#Use your own Bearer token or the token required by the openAI REST                
+                # Use your own Bearer token or the token required by the 
+                # openAI REST.                
                 Authorization: Bearer 
                 question: =@ctx.action.parameters.question
- #Configure a unique id for the chatbot message                
+                # Configure a unique id for the chatbot message                
                 mId: =$uuid()
 ```
-
 :::
 ::::
 
 ::::ExpandableHeading
-
 ### Anaylze images with OpenAI
 
 In this example, an image is analyzed  by integrating with the OpenAI ChatGPT REST service to analyze the image to provide a general reponse. An image is uploaded in a jig using the [media-field](./Components/form/media-field.md) component. When the *Analyze image* button is pressed a [sync-entities](./Actions/sync-entities.md) action is configured which calls the function to execute the OpenAI REST API call. The result returned from the OpenAI call is used to add a description for the image in an [entity-field](./Components/entity/entity-field.md) component.
@@ -432,7 +478,6 @@ conversions:
   - property: image
     from: local-uri
     to: base64
-
 ```
 
 ai-image.jigx
@@ -441,7 +486,8 @@ ai-image.jigx
 title: Capture the moment
 type: jig.default
 
-#Configure an action to call the AI response (outputTransformer) from the REST ai-function.          
+# Configure an action to call the AI response (outputTransformer) from the REST
+# ai-function.          
 actions:
   - children:
       - type: action.sync-entities
@@ -453,10 +499,11 @@ actions:
               function: ai-image-function
               parameters:
                 Content-Type: application/json
-                Authorization: Bearer XX #Use your own Bearer token or the token required by the openAI REST
+                # Use your own Bearer token or the token required by the openAI 
+                # REST.
+                Authorization: Bearer XXX 
                 image: =@ctx.components.image.state.value
                 
-
 header:
   type: component.jig-header
   options:
@@ -496,17 +543,15 @@ children:
           instanceId: check
           options:
             label: =@ctx.jig.components.image.state.value
-            
-            
+                    
   - type: component.entity
     options:
       children:
         - type: component.entity-field
           options:
             label: Description
-            value: =@ctx.datasources.outSideTasks.content
-            
+            value: =@ctx.datasources.outSideTasks.content         
 ```
-
 :::
 ::::
+

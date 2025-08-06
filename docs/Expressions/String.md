@@ -1,6 +1,6 @@
 # String
 
-In <a href="https://docs.jsonata.org/string-functions" target="_blank">JSONata String Functions,</a> you can concat two strings to display multiple data records in one row or write numbers as strings, or select only a few characters from the whole string, for example, to display a person's initials.
+In :Link[JSONata String Functions]{href="https://docs.jsonata.org/string-functions" newTab="true" hasDisabledNofollow="false"}, you can concat two strings to display multiple data records in one row, or write numbers as strings, or select only a few characters from the whole string, for example, to display a person's initials.
 
 ## String functions
 
@@ -30,19 +30,105 @@ The string functions include:
 
 ## Configuration
 
-| **Result**                        | **Expression**                                                                                                                                             |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| String concat expression          | `=@ctx.datasources.mydata.name & ' ' & @ctx.datasources.mydata.title`                                                                                      |
-| String length                     | `=$length(@ctx.datasources.mydata.name)`                                                                                                                   |
-| Substring                         | `=$substring(@ctx.datasources.mydata.name, 3, 5)`                                                                                                          |
-| Substring before                  | `=$substringBefore(@ctx.datasources.mydata.name, " ")`                                                                                                     |
-| Substring after                   | `=$substringAfter(@ctx.datasources.mydata.name, " ")`                                                                                                      |
-| Upper case                        | `=$uppercase(@ctx.datasources.mydata.name)`                                                                                                                |
-| Lower case                        | `=$lowercase(@ctx.datasources.mydata.name)`                                                                                                                |
-| Evaluate PathsData                | `=$eval(@ctx.current.item.pathsData)`                                                                                                                      |
-| base64                            | `"data:image/png;base64," & @ctx.datasources.mydata.data`                                                                                                  |
-| String to number                  | `($number(@ctx.datasources.tmra-graph.Total) >= 5)`&#xA;`($number(@ctx.datasources.tmra-graph.Total) < 8) ? true : false`                                  |
-| Two-letter placeholder for avatar | `=$uppercase($substring($substringBefore(@ctx.current.item.firstName, " "), 0, 1) & $substring($substringAfter(@ctx.current.item.lastName, " ") , 0, 1) )` |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="144">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Result</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Expression</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>String concat expression</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=@ctx.datasources.mydata.name &#x26; ' ' &#x26; @ctx.datasources.mydata.title</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>String length</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$length(@ctx.datasources.mydata.name)</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Substring</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$substring(@ctx.datasources.mydata.name, 3, 5)</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Substring before</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$substringBefore(@ctx.datasources.mydata.name, " ")</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Substring after</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$substringAfter(@ctx.datasources.mydata.name, " ")</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Upper case</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$uppercase(@ctx.datasources.mydata.name)</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Lower case</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$lowercase(@ctx.datasources.mydata.name)</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Evaluate PathsData</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$eval(@ctx.current.item.pathsData)</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>base64</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>"data:image/png;base64," &#x26; @ctx.datasources.mydata.data</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>String to number</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>($number(@ctx.datasources.tmra-graph.Total) >= 5)</code>
+      <code>($number(@ctx.datasources.tmra-graph.Total) &#x3C; 8) ? true : false</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Two-letter placeholder for avatar</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>=$uppercase($substring($substringBefore(@ctx.current.item.firstName, " "), 0, 1) &#x26; $substring($substringAfter(@ctx.current.item.lastName, " ") , 0, 1) )</code></p>
+    </td>
+  </tr>
+</table>
 
 :::hint{type="warning"}
 Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.
@@ -56,7 +142,7 @@ Be careful when using complex expressions, such as expressions that iterate one 
 :::
 
 :::VerticalSplitItem
-This example shows how you can use various string functions to return data.See the full code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx" target="_blank">GitHub</a>.
+This example shows how you can use various string functions to return data.See the full code sample in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx" newTab="true" hasDisabledNofollow="false"}.
 :::
 ::::
 
