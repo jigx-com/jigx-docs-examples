@@ -105,7 +105,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-\::Image\[]\{src="[https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hSkErBLejyQpuODS8-\_4p\_xukzynxiz0pfnomjm8eyostepiphone13blueportrait.png](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hSkErBLejyQpuODS8-_4p_xukzynxiz0pfnomjm8eyostepiphone13blueportrait.png)" size="80" "position="center" caption="Step inside a stepper component" alt="Step inside a stepper component"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hSkErBLejyQpuODS8-\_4p\_xukzynxiz0pfnomjm8eyostepiphone13blueportrait.png" size="80" "position="center" caption="Step inside a stepper component" alt="Step inside a stepper component"}
 :::
 
 :::VerticalSplitItem
