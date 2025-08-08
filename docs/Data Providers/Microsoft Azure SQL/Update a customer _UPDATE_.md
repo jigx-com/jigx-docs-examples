@@ -1,23 +1,16 @@
----
-title: Update a customer (UPDATE)
-slug: bm53-updating-a-record
-description: Learn how to use a default jig with a form to execute SQL commands and update customer records. This document highlights the importance of updating data in both the local SQLite database and the backend system for optimal user experience. It also includes
-createdAt: Wed Mar 15 2023 12:45:29 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Nov 05 2024 11:40:00 GMT+0000 (Coordinated Universal Time)
----
+# Update a customer (UPDATE)
 
 :::hint{type="warning"}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId:eOUi2cPYynsdRuK-TobDp) for more information.
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST]() instead. See [REST endpoints from Azure SQL]() for more information.
 :::
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-
-## **Scenario**
+## Scenario
 
 This example uses a default jig with a form that executes an SQL command to update a customer record.
 
-## **Resources**
+## Resources
 
 - Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<./Database Scripts.md>).
 - [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection)
@@ -102,7 +95,6 @@ parameters:
     location: input
     required: true
 ```
-
 :::
 
 ### A query-based version of update-customer.jigx
@@ -179,7 +171,6 @@ parameters:
     location: input
     required: true
 ```
-
 :::
 
 ## Jigs
@@ -187,7 +178,7 @@ parameters:
 ### Modify the view customer jig
 
 - The viewCustomers.jigx file must be modified to include a jig-level action, adding the **Edit a customer** button. When pressing the action button at the bottom of the viewCustomers jig, Jigx will navigate to the editCustomer jig.
-- The **customer's id** \*\*is used as a parameter in the `GoTo` action. The `custId` parameter is passed to the viewCustomer jig.
+- The **customer's id** is used as a parameter in the `GoTo` action. The `custId` parameter is passed to the viewCustomer jig.
 
 :::CodeblockTabs
 listCustomers.jigx
@@ -317,7 +308,6 @@ actions:
           parameters:
             custId: =@ctx.datasources.mydata.id
 ```
-
 :::
 
 ### The update customer jig
@@ -479,15 +469,19 @@ children:
               isDisabled: true
 actions:
   - children:
-      # Use an execute entity action to submit the values of the controls to the Jigx function to update Azure SQL and to save the new customer to the local SQLite database.
+      # Use an execute entity action to submit the controls values to the function
+      # to update Azure SQL & to save the new customer to the local SQLite database.
       - type: action.execute-entity
         options:
           # The title of the save button.
           title: Update Customer
-          # The data provider to use for the remote data. This solution uses Azure SQL.
+          # The data provider to use for the remote data (Azure SQL). 
           provider: DATA_PROVIDER_SQL
-          # The name of the local SQLite database that the new record will be created in.
+          # The name of the local SQLite database that the new record will be
+          # created in.
           entity: customers
+          # The command type to be executed on the local SQLite database.
+          method: update
           # The name of the Jigx function used to save the data to Azure SQL.
           function: create-customer
           # Set the parameters to values of the controls on the form.
@@ -503,12 +497,8 @@ actions:
             ZipCode: =@ctx.components.ZipCode.state.value
             State: =@ctx.components.State.state.selected.code
             Country: =@ctx.components.Country.state.value
-          # The command type to be executed on the local SQLite database.
-          method: update
-          # Navigate to the previous screen after the action has been performed.
-          onSuccess:
-            type: action.go-back
-          # Set the column values of the new record that will be created in the local SQLite Customers table.
+          # Set the column values of the new record that will be created 
+          # in the local SQLite Customers table.
           data:
             id: =@ctx.jig.inputs.custId
             FirstName: =@ctx.components.FirstName.state.value
@@ -520,12 +510,12 @@ actions:
             City: =@ctx.components.City.state.value
             ZipCode: =@ctx.components.ZipCode.state.value
             State: =@ctx.components.State.state.selected.code
-            Country: =@ctx.components.Country.state.value
-          # Display a dialog box with a message if the new record is created successfully.
+            Country: =@ctx.components.Country.state.value  
+          # Display a dialog box with a message if the new record is created 
+          # successfully.
           onSuccess:
             description: Customer Updated Successfully
             title: Updated Created
-
 ```
-
 :::
+
