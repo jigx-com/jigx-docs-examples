@@ -1,18 +1,18 @@
 # avatar-field
 
-:::::VerticalSplit{layout="middle"}
-::::VerticalSplitItem
+::::VerticalSplit{layout="middle"}
+:::VerticalSplitItem
 This component allows you to upload an avatar image. You can choose a picture from your device or use your camera to capture one.
-
-:::hint{type="info"}
-The `avatar-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 :::
-::::
 
 :::VerticalSplitItem
 ::Image[]{alt="Avatar Field Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-_UiZpMFDyAN1buxUcz3m_avatar-field.png" size="72" caption="Avatar Field Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-_UiZpMFDyAN1buxUcz3m_avatar-field.png" width="800" height="463" darkWidth="800" darkHeight="463"}
 :::
-:::::
+::::
+
+:::hint{type="info"}
+The `avatar-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
+:::
 
 ## Configuration options
 
@@ -89,7 +89,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>icon</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Add an icon to the title. A list of icons is available. See  for more information.</p>
+      <p>Add an icon to the title. A list of icons is available. See for more information.</p>
     </td>
   </tr>
   <tr>
@@ -99,7 +99,7 @@ Some properties are common to all components, see [Common component properties](
     <td selected="false" align="left">
       <p>You can set the following with <code>imageCropping</code> :</p>
       <ul>
-      <li><code>isEnabled</code> - allows you to crop an image if set to <code>true</code>. </li>
+      <li><code>isEnabled</code> - allows you to crop an image if set to <code>true</code>.</li>
       <li><code>isFreeStyleCropEnabled</code> - when set to <code>true</code> it supports custom cropping to change the size or aspect ratio of an image.</li>
       <li><code>height</code> - maximum allowed is 5000px</li>
       <li><code>width</code>- maximum allowed is 5000px</li>
@@ -178,7 +178,7 @@ Some properties are common to all components, see [Common component properties](
       <p>The following property settings are available:</p>
       <ul>
       <li><code>flex</code> - Flex property if rendered inside row.</li>
-      <li><code>isBusy</code> - Displays a spinner. </li>
+      <li><code>isBusy</code> - Displays a spinner.</li>
       <li><code>isDisabled</code> - disables the avatar-field preventing the image selection popup from displaying.</li>
       <li><code>isPositive</code></li>
       </ul>
@@ -241,8 +241,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>=@ctx.solution.state.</code></p>
     </td>
     <td selected="false" align="left">
-      <p>activeItemId
-      now</p>
+      <p>activeItemId now</p>
     </td>
     <td selected="false" align="left">
       <p>Global state variable that can be used throughout the solution.</p>
@@ -299,6 +298,4 @@ children:
 ```
 :::
 :::::
-
-
 

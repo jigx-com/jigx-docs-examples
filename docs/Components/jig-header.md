@@ -47,11 +47,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>actions</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Choose an action from the available list, such as <code>go-to</code> to open a different jig or <code>open-url</code> to navigate to a website. The selected action appears as a link in the top right corner of the header.
-      Set the <code>icon</code> property in the action to display the action link as an icon instead of text.
-      Styles of actions are inherited, for example, disabling the link.
-      You can add multiple action links in the header, but ensure they accommodate the jig title and overall screen design.
-      To prevent the jig <code>title</code> and header action links from overlapping while scrolling, use either one text action or up to three icon actions.</p>
+      <p>Choose an action from the available list, such as <code>go-to</code> to open a different jig or <code>open-url</code> to navigate to a website. The selected action appears as a link in the top right corner of the header. Set the <code>icon</code> property in the action to display the action link as an icon instead of text. Styles of actions are inherited, for example, disabling the link. You can add multiple action links in the header, but ensure they accommodate the jig title and overall screen design. To prevent the jig <code>title</code> and header action links from overlapping while scrolling, use either one text action or up to three icon actions.</p>
     </td>
   </tr>
 </table>
@@ -342,8 +338,6 @@ children:
 
 :::VerticalSplitItem
 This example demonstrates a `component.jig-header` configured with three `open-url` actions, displayed as icons in the top right corner of the header. Styling is applied to two of the icons to ensure visibility. Make sure the actions are not obscured by the header image/video or the jig `title` when scrolling. The `open-url` actions open various Jigx websites.
-
-***
 :::
 ::::
 

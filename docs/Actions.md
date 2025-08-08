@@ -228,24 +228,16 @@ Here is a list of all actions and the category type the action forms part of.
       <p>Actions that execute after a user or device performs a trigger.</p>
     </td>
     <td selected="false" align="left">
-      <p>- onRefresh
-      - onFocus
-      - onPress
-      - onLoad (only on index.jigx)
-      - onChange
-      - onDelete
-      - onButtonPress (only on calendar jigs)
-      - <a href="./Events/onTableChange.md">onTableChange</a> (only on index.jigx)</p>
+      <p>- onRefresh - onFocus - onPress - onLoad (only on index.jigx) - onChange - onDelete - onButtonPress (only on calendar jigs) - <a href="./Events/onTableChange.md">onTableChange</a> (only on index.jigx)</p>
     </td>
   </tr>
   <tr>
     <td selected="false" align="left">
-      <p>Reuse </p>
+      <p>Reuse</p>
       <p>(<a href="https://docs.jigx.com/actions#OUnpg">global-actions</a>)</p>
     </td>
     <td selected="false" align="left">
-      <p>Using the <code>execute-action</code> action provides greater control and enables reuse when the same logic needs to be performed in multiple places. For example, <code>action.sync-entities</code> might be called during app initialization, again when data changes, or when only a specific subset of data needs to be synced. By using
-      <code>execute-action</code>, you can easily reuse the granular actions that handle the actual work, reducing duplication and improving maintainability.</p>
+      <p>Using the <code>execute-action</code> action provides greater control and enables reuse when the same logic needs to be performed in multiple places. For example, <code>action.sync-entities</code> might be called during app initialization, again when data changes, or when only a specific subset of data needs to be synced. By using <code>execute-action</code>, you can easily reuse the granular actions that handle the actual work, reducing duplication and improving maintainability.</p>
     </td>
     <td selected="false" align="left">
       <p>excute-actions</p>

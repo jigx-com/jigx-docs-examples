@@ -55,8 +55,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>resizeMode</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Resize the image when the frame doesn't match the raw image dimensions.
-      The following options are available:</p>
+      <p>Resize the image when the frame doesn't match the raw image dimensions. The following options are available:</p>
       <ul>
       <li><code>center</code> - If the image is bigger than the area it is scaled down making it completely visible. The image is not scaled up.</li>
       <li><code>contain</code> - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or less than the corresponding dimension of the view (minus padding).</li>
@@ -127,12 +126,12 @@ Some properties are common to all components, see [Common component properties](
 :::VerticalSplitItem
 Image is used as a background picture in the header section.
 
-**Examples:
-**See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/static-data/header-image/header-image.jigx).
+**Examples:**
+See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/static-data/header-image/header-image.jigx).
 See the example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/dynamic-data/header-image/header-image-dynamic.jigx).
 
-**Datasource:
-**See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/image-static.jigx).
+**Datasource:**
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/image-static.jigx).
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/image.jigx).
 :::
 ::::

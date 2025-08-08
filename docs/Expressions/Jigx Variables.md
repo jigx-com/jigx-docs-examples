@@ -64,8 +64,7 @@ The supported variables for the system variable are:
       <p><code>=@ctx.system.appVersion</code></p>
     </td>
     <td selected="false" align="left">
-      <p>This variable returns the current version of the installed app, which is useful for troubleshooting, crash tracing, and debugging issues.
-      E.g. 1.110.7</p>
+      <p>This variable returns the current version of the installed app, which is useful for troubleshooting, crash tracing, and debugging issues. E.g. 1.110.7</p>
     </td>
   </tr>
   <tr>
@@ -137,13 +136,10 @@ The supported variables for the system variable are:
       <p>user</p>
     </td>
     <td selected="false" align="left">
-      <p><code>=@ctx.user.email</code>
-      or
-      <code>=@ctx.user.id</code></p>
+      <p><code>=@ctx.user.email</code> or <code>=@ctx.user.id</code></p>
     </td>
     <td selected="false" align="left">
-      <p>or
-      XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</p>
+      <p>or XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</p>
     </td>
   </tr>
   <tr>
@@ -176,9 +172,7 @@ The supported variables for the system variable are:
       <p><code>=@ctx.system.timezone.offset</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Get the information about the device's timezone, it can be:
-      -<code>name</code>: e.g. Europe/Prague
-      -<code>offset</code>: e.g. +200</p>
+      <p>Get the information about the device's timezone, it can be: -<code>name</code>: e.g. Europe/Prague -<code>offset</code>: e.g. +200</p>
     </td>
   </tr>
   <tr>
@@ -188,22 +182,17 @@ The supported variables for the system variable are:
     <td selected="false" align="left">
     </td>
     <td selected="false" align="left">
-      <p>**Accuracy:
-      <strong><code>=@ctx.system.geolocation.coords.accuracy</code></strong>
-      Altitude:
-      **<code>=@ctx.system.geolocation.coords.altitude</code>
-      <strong>Altitude Accuracy:</strong> <code>=@ctx.system.geolocation.coords.altitudeAccuracy</code>
-      <strong>Location - Heading:</strong> <code>=@ctx.system.geolocation.coords.heading</code>
-      **Location - Latitude:
-      **<code>=@ctx.system.geolocation.coords.latitude</code>
-      <strong>Location - Longitude:</strong>
-      <code>=@ctx.system.geolocation.coords.longitude</code>
-      **Location - Speed:
-      **<code>=@ctx.system.geolocation.coords.speed</code>
-      **Location - Timestamp:
-      **<code>=@ctx.system.geolocation.timestamp</code>
-      <strong>Location - Entire array (All details):</strong>
-      <code>=$string(@ctx.system.geolocation)</code></p>
+      <ul>
+      <li>**Accuracy: **<code>=@ctx.system.geolocation.coords.accuracy</code> </li>
+      <li>**Altitude: **<code>=@ctx.system.geolocation.coords.altitude</code> </li>
+      <li><strong>Altitude Accuracy:</strong> <code>=@ctx.system.geolocation.coords.altitudeAccuracy</code> </li>
+      <li><strong>Location - Heading:</strong> <code>=@ctx.system.geolocation.coords.heading</code> </li>
+      <li><strong>Location - Latitude:</strong> <code>=@ctx.system.geolocation.coords.latitude</code> </li>
+      <li><strong>Location - Longitude:</strong> <code>=@ctx.system.geolocation.coords.longitude</code> </li>
+      <li><strong>Location - Speed:</strong> <code>=@ctx.system.geolocation.coords.speed</code> </li>
+      <li><strong>Location - Timestamp:</strong> <code>=@ctx.system.geolocation.timestamp</code></li>
+      <li><strong>Location - Entire array (All details):</strong> <code>=$string(@ctx.system.geolocation)</code></li>
+      </ul>
     </td>
   </tr>
 </table>

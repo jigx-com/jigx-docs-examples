@@ -27,7 +27,7 @@ The table Jigx type includes multiple child components, each of which can be con
       <p><code>component.table-row</code></p>
     </td>
     <td selected="false" align="left">
-      <p>This is similar in configuration to a  where a single <code>table-row</code> is configured and iterates through the datasource.</p>
+      <p>This is similar in configuration to a where a single <code>table-row</code> is configured and iterates through the datasource.</p>
       <ul>
       <li><code>instanceId</code> - Unique identifier of the table-row component. When defined its possible to address its state. <code>InstanceId:</code> Expects a string.</li>
       <li><code>when</code> - used to determine under which conditions the table will display. If the property is set to <code>false</code>, the component won't be displayed. Default is <code>true</code>. An expression can be configured in this property.</li>
@@ -39,11 +39,7 @@ The table Jigx type includes multiple child components, each of which can be con
       <p><code>color</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Highlight the row(s) with a distinct background color for emphasis or status.
-      For example,
-      <code>color:</code>
-      <code>  - when: =@ctx.current.item.age > 60</code>
-      <code>    color: warning</code></p>
+      <p>Highlight the row(s) with a distinct background color for emphasis or status. For example, <code>color:</code> <code>- when: =@ctx.current.item.age > 60</code> <code>color: warning</code></p>
     </td>
   </tr>
   <tr>
@@ -119,7 +115,7 @@ This component is part of the `columnDefinition` setup, allowing reusable config
       <p><code>children</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Define the cell value by using a  or by using a <a href="./../Custom%20components%20_Alpha_/Text%20_Alpha_.md">component.text</a>. Specify a value for the cell, this can be text that can be evaluated, translated, and formatted.</p>
+      <p>Define the cell value by using a or by using a <a href="./../Custom%20components%20_Alpha_/Text%20_Alpha_.md">component.text</a>. Specify a value for the cell, this can be text that can be evaluated, translated, and formatted.</p>
     </td>
   </tr>
   <tr>
@@ -184,11 +180,7 @@ This component is part of the `columnDefinition` setup, allowing reusable config
       <p><code>color</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Add a distinct background color for emphasis or status to the table footer.
-      For example,
-      <code>color:</code>
-      <code>  - when: true</code>
-      <code>    color: color4</code></p>
+      <p>Add a distinct background color for emphasis or status to the table footer. For example, <code>color:</code> <code>- when: true</code> <code>color: color4</code></p>
     </td>
   </tr>
 </table>
@@ -219,8 +211,7 @@ This component is part of the `columnDefinition` setup, allowing reusable config
     <td selected="false" align="left">
       <p>Defines the structure and configuration for a single table column, either through inline definitions or by referencing a reusable column definition. Columns can also be dynamically set using a single expression for flexible configuration across all columns.</p>
       <ul>
-      <li><code>id:</code>Specifies a unique identifier for the column, used to reference the column’s data.
-      The name must be the same as the datasource column name for the data to display.</li>
+      <li><code>id:</code>Specifies a unique identifier for the column, used to reference the column’s data. The name must be the same as the datasource column name for the data to display.</li>
       <li><code>columnDefinition</code>- a reusable configuration for a column, providing consistency across multiple columns. A <code>columnDefinitionId:</code> is required as an identifier of the column definition to be used.</li>
       </ul>
     </td>
@@ -233,7 +224,7 @@ This component is part of the `columnDefinition` setup, allowing reusable config
       <p>Defines reusable configurations for table columns, including properties like width, header, footer, and cell customization, allowing for flexible and consistent table layouts.</p>
       <ul>
       <li><code>Column Name</code>- must match the name in the <code>column:id</code></li>
-      <li><code>cell</code> - Sets the value for the individual cells in the column. You can use <code>=@ctx.current.item.</code>,  <code>=@ctx.current.column.id</code>, or <code>=@ctx.current.cell.value</code></li>
+      <li><code>cell</code> - Sets the value for the individual cells in the column. You can use <code>=@ctx.current.item.</code>, <code>=@ctx.current.column.id</code>, or <code>=@ctx.current.cell.value</code></li>
       <li><code>footer</code> - <code>=@ctx.current.column.id</code></li>
       <li><code>header</code> - <code>=@ctx.current.column.id</code></li>
       <li><code>width</code> - Customizes the width of columns to improve visibility and fit specific content, offering flexibility in the table layout. Options include <code>large</code>, <code>regular</code>, <code>small</code>.</li>
@@ -245,8 +236,7 @@ This component is part of the `columnDefinition` setup, allowing reusable config
       <p><code>selectionToolbar</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The <code>selectionToolbar</code> appears at the bottom of the table when rows are selected. To enable row selection, <code>isSelectable: true</code> must be set at the root level of the jig. The toolbar displays a tag with the number of selected rows, followed by the configured action.
-      Avoid overloading the <code>selectionToolbar</code> with too many actions or long labels, as it may compress, break layout, or disappear if space runs out.</p>
+      <p>The <code>selectionToolbar</code> appears at the bottom of the table when rows are selected. To enable row selection, <code>isSelectable: true</code> must be set at the root level of the jig. The toolbar displays a tag with the number of selected rows, followed by the configured action. Avoid overloading the <code>selectionToolbar</code> with too many actions or long labels, as it may compress, break layout, or disappear if space runs out.</p>
     </td>
   </tr>
   <tr>
@@ -278,15 +268,10 @@ This component is part of the `columnDefinition` setup, allowing reusable config
       <p><code>sort</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Initial sort configuration for the table. </p>
+      <p>Initial sort configuration for the table.</p>
       <ul>
       <li><code>columnId</code> - Provide the column name that the sorting will be applied to.</li>
-      <li><code>isDescending</code> - set to <code>true</code> sorts descending, set to <code>false</code> sorts ascending.
-      <code>=@ctx.jig.state.sort</code> is used to access the sort state within the jig.
-      To add sorting to a table the <code>jig.table</code> must be configured with the following:
-      1) <code>isSortable: true</code> at the root level.
-      2) The <code>data</code> property must be set with an expression to sort the data in the columns. See <em>data-yaml</em> code example below.
-      3) The <code>sort</code> property configured at the root level to configure descending or ascending. See <em>sort-yaml</em> code example below.</li>
+      <li><code>isDescending</code> - set to <code>true</code> sorts descending, set to <code>false</code> sorts ascending. <code>=@ctx.jig.state.sort</code> is used to access the sort state within the jig. To add sorting to a table the <code>jig.table</code> must be configured with the following: 1) <code>isSortable: true</code> at the root level. 2) The <code>data</code> property must be set with an expression to sort the data in the columns. See <em>data-yaml</em> code example below. 3) The <code>sort</code> property configured at the root level to configure descending or ascending. See <em>sort-yaml</em> code example below.</li>
       </ul>
     </td>
   </tr>
@@ -358,6 +343,9 @@ sort:
 
 :::VerticalSplitItem
 This example demonstrates a basic `jig.table` configuration using a static datasource to display construction project data. Row colors are dynamically set using a `when` condition based on the project's status ("Complete" or "Delayed").
+
+**Example:**
+See the full code example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-table/jig-table-basic.jigx" newTab="true" hasDisabledNofollow="false"}.
 :::
 ::::
 
@@ -433,6 +421,9 @@ columns:
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 This table example displays a week's shifts per technician using a `jig.table` with Dynamic Data. The table is set up with a colored `header` and `footer`, and sorting is configured in descending order on the Technician Name column.
+
+**Example:**
+See the full code example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-table/jig-table-header-footer-sorting.jigx" newTab="true" hasDisabledNofollow="false"}.
 :::
 
 :::VerticalSplitItem
@@ -545,6 +536,9 @@ datasources:
 
 :::VerticalSplitItem
 In this example, a table summarizes the sale of products for the month. In the `columnDefinition`, the `width`, `footer`,  and `cell:format` is configured. The `tableHeader` and tableFooter's appearance is enhanced by adding a color.
+
+**Example:**
+See the full code example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-table/jig-table-columndef-width.jigx" newTab="true" hasDisabledNofollow="false"}.
 :::
 ::::
 
@@ -665,6 +659,9 @@ options:
 In this example, a table displays delivery items and their current status. The status `column` is editable to reflect delivery progress.  The `component.table-row` is configured with an `onPress` event that triggers a `go-to` action. This action uses `isModal: true` to open a jig as a bottom modal. `Inputs` are passed to this jig, including the row’s id and status.
 
 The modal jig includes a `form` component with a `text-field` that displays the `initialValue` using the status passed from the `onPress` event. An `execute-entity` action is used to update the status, and a `goBack: previous` closes the modal, returning to the table with the updated status shown.
+
+**Example:**
+See the full code example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-table/jig-table-onpress-edit.jigx" newTab="true" hasDisabledNofollow="false"}.
 :::
 ::::
 
@@ -805,6 +802,9 @@ options:
 This example demonstrates how to delete rows from a table. The `isSelectable: true` property is set at the root level of the jig, allowing rows to be selected. The `selectableToolbar` is configured to execute an action that deletes the selected data from the datasource, which also removes it from the table.
 
 **Note:** The `selectableToolbar` only appears when rows are selected. Avoid overloading the `selectionToolbar` with too many actions or long labels, as it may compress, break layout, or disappear if space runs out.
+
+**Example:**
+See the full code example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-table/jig-table-delete-select-toolbar.jigx" newTab="true" hasDisabledNofollow="false"}.
 :::
 
 :::VerticalSplitItem
@@ -881,6 +881,9 @@ selectionToolbar:
 
 :::VerticalSplitItem
 In this example, a table displays recorded sales. An action button in the top `toolbar` allows users to add a new row to the table. Tapping the button opens a jig as a bottom modal using `isModal: true`. The modal contains a `component.form` and an `execute-entity` action to create the new row. Once submitted, the `goBack: previous` property closes the modal, and the table updates to show the newly added row at the bottom.
+
+**Example:**
+See the full code example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-table/table-add-row.jigx" newTab="true" hasDisabledNofollow="false"}.
 :::
 ::::
 

@@ -4,11 +4,42 @@ This action allows the app to execute a SQL statement during local SQLite execut
 
 ## Configuration options
 
-| **Core structure** |                                                                                                                                                                                                                                                       |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `entities`         | The entities/tables affected by the statements. Before executing the statements, a check ensures that the tables exist.&#xA;After execution any datasources that use these entities will be notified that the database was changed.                   |
-| `statements`       | List of statements to execute in sequence. Multiple statements can be configured to execute in sequence.&#xA;`statement` - the SQL statement to execute against the solution database.&#xA;`parameters` - The parameters used in the above statement. |
-| `title`            | Provide the action button with a title, for example, *Delete record*.                                                                                                                                                                                 |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="126">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>entities</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The entities/tables affected by the statements. Before executing the statements, a check ensures that the tables exist.
+      After execution any datasources that use these entities will be notified that the database was changed.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>statements</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>List of statements to execute in sequence. Multiple statements can be configured to execute in sequence.
+      <code>statement</code> - the SQL statement to execute against the solution database.
+      <code>parameters</code> - The parameters used in the above statement.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>title</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide the action button with a title, for example, <em>Delete record</em>.</p>
+    </td>
+  </tr>
+</table>
 
 <table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
   <tr>
@@ -23,7 +54,7 @@ This action allows the app to execute a SQL statement during local SQLite execut
       <p><code>icon</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Select an  to display when the action is configured as the secondary button or in a <a href="./../Components/jig-header.md">header action</a>.</p>
+      <p>Select an to display when the action is configured as the secondary button or in a <a href="./../Components/jig-header.md">header action</a>.</p>
     </td>
   </tr>
   <tr>

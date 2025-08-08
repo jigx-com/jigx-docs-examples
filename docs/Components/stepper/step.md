@@ -55,7 +55,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>leftElement</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The only available element for the step is an <code>icon</code> displayed on the left of the value. A list of icons is available. See  for more information. If no icon is specified a checkbox is used on the left.</p>
+      <p>The only available element for the step is an <code>icon</code> displayed on the left of the value. A list of icons is available. See for more information. If no icon is specified a checkbox is used on the left.</p>
     </td>
   </tr>
   <tr>
@@ -89,7 +89,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>onPress</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The action is triggered when pressing on the step item. Use IntelliSense  to see the list of available actions.</p>
+      <p>The action is triggered when pressing on the step item. Use IntelliSense to see the list of available actions.</p>
     </td>
   </tr>
 </table>
@@ -105,7 +105,7 @@ Some properties are common to all components, see [Common component properties](
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hSkErBLejyQpuODS8-\_4p\_xukzynxiz0pfnomjm8eyostepiphone13blueportrait.png" size="80" "position="center" caption="Step inside a stepper component" alt="Step inside a stepper component"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hSkErBLejyQpuODS8-_4p_xukzynxiz0pfnomjm8eyostepiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hSkErBLejyQpuODS8-_4p_xukzynxiz0pfnomjm8eyostepiphone13blueportrait.png" size="70" width="1570" height="2932" position="center" caption="Step in Stepper" alt="Step in Stepper"}
 :::
 
 :::VerticalSplitItem

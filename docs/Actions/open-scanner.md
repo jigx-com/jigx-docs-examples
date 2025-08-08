@@ -1,10 +1,4 @@
----
-title: open-scanner
-slug: _l02-open-scanner
-description: Learn how to efficiently scan QR codes using the "open-scanner" action. This versatile action can be utilized independently, as a swipeable action, a rightElement in a list, or as an associated action. Explore numerous usage scenarios with detailed code s
-createdAt: Tue Feb 14 2023 12:36:28 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Apr 23 2025 07:02:38 GMT+0000 (Coordinated Universal Time)
----
+# open-scanner
 
 This action is used to scan a QR code. The `open-scanner` can be used in a list of actions, such as the swipe action and the right element, or with another action where the `open-scanner` action is invoked after the main action is performed, opening access to the camera.
 
@@ -20,16 +14,15 @@ An `open-scanner` action can be set up in various ways:
 ## Examples and code snippets
 
 :::::ExpandableHeading
-
 ### Open-scanner action
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v3Bc3PbWnemwhWHwoukqp_qriphone13blueportrait.png" size="80" position="center" caption="Open scanner" alt="Open scanner"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v3Bc3PbWnemwhWHwoukqp_qriphone13blueportrait.png" size="80" position="center" caption="Open scanner" alt="Open scanner" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v3Bc3PbWnemwhWHwoukqp_qriphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nhr5pFPGp-1uzLA36zhrQ_qr2iphone13blueportrait.png" size="80" position="center" caption="Open Scanner" alt="Open scanner"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nhr5pFPGp-1uzLA36zhrQ_qr2iphone13blueportrait.png" size="80" position="center" caption="Open Scanner" alt="Open scanner" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nhr5pFPGp-1uzLA36zhrQ_qr2iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 ::::
 
@@ -62,17 +55,15 @@ actions:
           onSuccess: 
             type: action.go-back
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Open-scanner swipeable left/right
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S7_-YinLbOlXYVMqu2jN7_open-scanner-swipeableiphone13blueportrait.png" size="80" position="center" caption="Swipe to open scanner" alt="Swipe to open scanner"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S7_-YinLbOlXYVMqu2jN7_open-scanner-swipeableiphone13blueportrait.png" size="80" position="center" caption="Swipe to open scanner" alt="Swipe to open scanner" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S7_-YinLbOlXYVMqu2jN7_open-scanner-swipeableiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -119,25 +110,22 @@ item:
               onSuccess: 
                 type: action.go-back
 ```
-
 :::
-
 :::::
 
 :::::ExpandableHeading
-
 ### Open-scanner rightElement
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rr130IXx_ih2HdFw_K3le_open-scanner-rightelementiphone13blueportrait.png" size="80"  position="center" caption="Button to open scanner" alt="Button to open scanner"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rr130IXx_ih2HdFw_K3le_open-scanner-rightelementiphone13blueportrait.png" size="80" position="center" caption="Button to open scanner" alt="Button to open scanner" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rr130IXx_ih2HdFw_K3le_open-scanner-rightelementiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
 In this example, we use the open-scanner action as the rightElement in the list-item component. There is a button for each item.
 
-**Examples:
-**See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-rightElement.jigx).
+**Examples:**
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-rightElement.jigx).
 :::
 ::::
 
@@ -167,17 +155,15 @@ item:
           onSuccess: 
             type: action.go-back
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Open-scanner onSuccess
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_srtmYTzi7GHJ9ectDHSA_open-scanner-onsuccer3iphone13blueportrait.png" size="82"  position="center" caption="Open scanner onSuccess" alt="Open scanner onSuccess"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_srtmYTzi7GHJ9ectDHSA_open-scanner-onsuccer3iphone13blueportrait.png" size="82" position="center" caption="Open scanner onSuccess" alt="Open scanner onSuccess" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_srtmYTzi7GHJ9ectDHSA_open-scanner-onsuccer3iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
 :::
 
 :::VerticalSplitItem
@@ -231,6 +217,6 @@ children:
           options:
             label: Signature required
 ```
-
 :::
 :::::
+

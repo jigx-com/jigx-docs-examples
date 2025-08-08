@@ -45,7 +45,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>legend</code></p>
     </td>
     <td selected="false" align="left">
-      <p><code>isHidden</code> -  The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.</p>
+      <p><code>isHidden</code> - The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.</p>
     </td>
   </tr>
   <tr>
@@ -53,8 +53,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>plotBands</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The <code>from</code> and <code>to</code> properties define the area to be filled with color. Specify the range using the from and to properties with numeric values.
-      <code>color</code> Sets the color of the band for the <code>y-axis</code>, choose a color from the provided color palette. Use <code>plotbands</code> to highlight specific regions or ranges on the chart, making it easier for users to interpret and analyze the data.</p>
+      <p>The <code>from</code> and <code>to</code> properties define the area to be filled with color. Specify the range using the from and to properties with numeric values. <code>color</code> Sets the color of the band for the <code>y-axis</code>, choose a color from the provided color palette. Use <code>plotbands</code> to highlight specific regions or ranges on the chart, making it easier for users to interpret and analyze the data.</p>
     </td>
   </tr>
   <tr>
@@ -83,7 +82,7 @@ Some properties are common to all components, see [Common component properties](
       <li><code>isFirstTickHidden</code> value is either true/false. Set to <code>true</code> hides the whole axis.</li>
       <li><code>isHidden</code> value is either true/false.</li>
       <li><code>isLastLabelHidden</code> value is either <code>true</code> to hide the last label or <code>false</code> to display the last label. The property doesn't have to be defined, by default the last label are shown.</li>
-      <li><code>isLastTickHidden</code> value is either <code>true</code> to hide the last line and label or <code>false</code> to display the last line and label. The property doesn't have to be defined, by default the last label  and line are shown.</li>
+      <li><code>isLastTickHidden</code> value is either <code>true</code> to hide the last line and label or <code>false</code> to display the last line and label. The property doesn't have to be defined, by default the last label and line are shown.</li>
       <li><code>labels</code> - Label of axis, a selection of different formats such as <code>dateFormat</code>, <code>currency</code>, <code>unit</code>, and <code>signDisplay</code> are available.</li>
       <li><code>min</code> and <code>max</code> - Minimum and maximum values that should be displayed on the x-axis.</li>
       <li><code>minPadding</code> - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).</li>
@@ -101,7 +100,7 @@ Some properties are common to all components, see [Common component properties](
       <li><code>isFirstTickHidden</code> value is either true/false. Set to <code>true</code> hides the whole axis.</li>
       <li><code>isHidden</code> value is either true/false. Set to <code>true</code> the last label is hidden.</li>
       <li><code>isLastLabelHidden</code> value is either <code>true</code> to hide the last label and line or <code>false</code> to display the last label and line. The property doesn't have to be defined, by default the last label and line are shown.</li>
-      <li><code>isLastTickHidden</code> value is either <code>true</code> to hide the last line and label or <code>false</code> to display the last line and label. The property doesn't have to be defined, by default the last label  and line are shown.</li>
+      <li><code>isLastTickHidden</code> value is either <code>true</code> to hide the last line and label or <code>false</code> to display the last line and label. The property doesn't have to be defined, by default the last label and line are shown.</li>
       <li><code>labels</code> - Label of axis, a selection of different formats such as <code>currency</code>, <code>numberStyle</code>, <code>compactDisplay</code> and <code>notation</code> is available.</li>
       <li><code>minPadding</code> - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).</li>
       <li><code>min</code> and <code>max</code> - Minimum and maximum values that should be displayed on the y-axis.</li>
@@ -407,8 +406,8 @@ datasources:
 :::VerticalSplitItem
 The jig displays a bar chart with an annual overview of finances. The x-axis shows the months and the y-axis the monetary amount. The data points are easy to see as we used the `plotBands` property to add color. In this example multiple bands are defined by adding the form, to and color properties.
 
-\*\*Examples:
-\*\*See the full code sample  in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic/bar-charts-plotBands.jigx).
+**Examples:**
+See the full code sample  in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic/bar-charts-plotBands.jigx).
 :::
 
 :::VerticalSplitItem

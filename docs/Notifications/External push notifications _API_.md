@@ -25,11 +25,11 @@ POST {{baseURL}}/tool/organizations/{{orgId}}/notifications
 
 Replace \{\{baseUrl}} with the appropriate URL for your region.
 
-| **Region**                  | **URL**                                                                                                                                                                                               |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| US                          | <a href="https://us-east-1.api.jigx.com/v2.0" target="_blank">https\://us-east-1.api.jigx.com/v2.0</a> [https://us-east-1.api.jigx.com/v2.0](https://us-east-1.api.jigx.com/v2.0)                     |
-| South East (e.g. Australia) | <a href="https://ap-southeast-2.api.jigx.com/v2.0" target="_blank">https\://ap-southeast-2.api.jigx.com/v2.0</a>[https://ap-southeast-2.api.jigx.com/v2.0](https://ap-southeast-2.api.jigx.com/v2.0)  |
-| Europe                      | <a href="https://eu-central-1.api.jigx.com/v2.0" target="_blank">https\://eu-central-1.api.jigx.com/v2.0</a>[https://eu-central-1.api.jigx.com/v2.0](https://eu-central-1.api.jigx.com/v2.0)          |
+| **Region**                  | **URL**                                                                              |
+| --------------------------- | ------------------------------------------------------------------------------------ |
+| US                          |  [https://us-east-1.api.jigx.com/v2.0](https://us-east-1.api.jigx.com/v2.0)          |
+| South East (e.g. Australia) | [https://ap-southeast-2.api.jigx.com/v2.0](https://ap-southeast-2.api.jigx.com/v2.0) |
+| Europe                      | [https://eu-central-1.api.jigx.com/v2.0](https://eu-central-1.api.jigx.com/v2.0)     |
 
 ## Functional Areas
 
@@ -39,7 +39,7 @@ Replace \{\{baseUrl}} with the appropriate URL for your region.
 
 ## Authentication
 
-- A **Personal Access Token (PAT)** is required. Get your PAT from [My profile](docId\:PCpYqHu9kr0rFKl8V-kTw) in Jigx <a href="https://manage.jigx.com" target="_blank">Management</a>.
+- A **Personal Access Token (PAT)** is required. Get your PAT from [My profile]() in Jigx [https://manage.jigx.com](https://manage.jigx.com)Management.
 - Enter the PAT as an API key with the prefix BEARER, for example, BEARER XXXXXXXXXX.
 
 ## Responses
@@ -49,18 +49,99 @@ Replace \{\{baseUrl}} with the appropriate URL for your region.
 
 ## JSON elements
 
-| **Element**    | **Where to find it**                                                                                                                                                                                                                                                         |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| organizationId | In Jigx Management under [Organization details](#).                                                                                                                                                                                                                          |
-| solutionId     | In Jigx Management under [Solution Details](#).                                                                                                                                                                                                                              |
-| baseURL        | Refer to the Base URL table above to find the URL for your region.                                                                                                                                                                                                           |
-| scope          | - **USR** – Target specific individual users.&#xA;- **SLN** – Notify all users within a particular solution.&#xA;- **SLN\_GRP** – Send messages to predefined groups within a solution.&#xA;- **ORG** – Broadcast notifications to all users across the entire organization. |
-| jigId          | Target a specific jig with input parameters.When the user taps on the notification (either on the native push notification or the in-app notification), the app will navigate to the specific jig.                                                                           |
-| screen         | Default value = "jig"                                                                                                                                                                                                                                                        |
-| title          | Title that shows in the notification message.                                                                                                                                                                                                                                |
-| text           | Subtitle text displays under the title in the notification message.                                                                                                                                                                                                          |
-| inputs         | Provide the input parameters to send into the jig specified in the jigId property.                                                                                                                                                                                           |
-| emails         | Specific the users' email addresses (array) to send the notification to.                                                                                                                                                                                                     |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="140">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Element</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Where to find it</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>organizationId</p>
+    </td>
+    <td selected="false" align="left">
+      <p>In Jigx Management under </p><div>organization settings</div>.<p></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>solutionId</p>
+    </td>
+    <td selected="false" align="left">
+      <p>In Jigx Management under </p><div>solution settings</div>.<p></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>baseURL</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Refer to the Base URL table above to find the URL for your region.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>scope</p>
+    </td>
+    <td selected="false" align="left">
+      <p>- <strong>USR</strong> – Target specific individual users.
+      - <strong>SLN</strong> – Notify all users within a particular solution.
+      - <strong>SLN_GRP</strong> – Send messages to predefined groups within a solution.
+      - <strong>ORG</strong> – Broadcast notifications to all users across the entire organization.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>jigId</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Target a specific jig with input parameters.When the user taps on the notification (either on the native push notification or the in-app notification), the app will navigate to the specific jig.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>screen</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Default value = "jig"</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>title</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Title that shows in the notification message.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>text</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Subtitle text displays under the title in the notification message.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>inputs</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide the input parameters to send into the jig specified in the jigId property.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>emails</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Specific the users' email addresses (array) to send the notification to.</p>
+    </td>
+  </tr>
+</table>
 
 ## Examples and code snippets
 

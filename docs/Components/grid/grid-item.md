@@ -214,6 +214,9 @@ This example shows the various configurations available to customize a `grid-ite
 - Customized `icons`.
 - Overridden or hidden titles using the `title` property.
 - `onPress` actions for interactive behavior.
+
+**Examples:**
+See the full code example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/grid-item/grid-item-auto.jigx" newTab="true" hasDisabledNofollow="false"}.
 :::
 
 :::VerticalSplitItem

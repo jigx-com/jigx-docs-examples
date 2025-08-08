@@ -21,18 +21,20 @@ Some properties are common to all components, see [Common component properties](
       <p><code>children</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Define the content of the expander. The following components can be used in the expander:
-      <a href="./charts/bar-chart.md">bar-chart</a>
-      <a href="./entity.md">entity</a>
-      <a href="./form.md">form</a>
-      <a href="./interactive-image.md">interactive-image</a>
-      <a href="./charts/line-chart.md">line-chart</a>
-      <a href="./list.md">list</a>
-      <a href="./location.md">location</a>
-      <a href="./charts/pie-chart.md">pie-chart</a>
-      <a href="./stepper.md">stepper</a>
-      <a href="./video-player.md">video-player</a>
-      <a href="./web-view.md">web-view</a></p>
+      <p>Define the content of the expander. The following components can be used in the expander:</p>
+      <ul>
+      <li><a href="./charts/bar-chart.md">bar-chart</a></li>
+      <li><a href="./entity.md">entity</a></li>
+      <li><a href="./form.md">form</a></li>
+      <li><a href="./interactive-image.md">interactive-image</a></li>
+      <li><a href="./charts/line-chart.md">line-chart</a></li>
+      <li><a href="./list.md">list</a></li>
+      <li><a href="./location.md">location</a></li>
+      <li><a href="./charts/pie-chart.md">pie-chart</a></li>
+      <li><a href="./stepper.md">stepper</a></li>
+      <li><a href="./video-player.md">video-player</a></li>
+      <li><a href="./web-view.md">web-view</a></li>
+      </ul>
     </td>
   </tr>
   <tr>
@@ -40,20 +42,15 @@ Some properties are common to all components, see [Common component properties](
       <p><code>header</code></p>
     </td>
     <td selected="false" align="left">
-      <p><code>centerElement</code> - what is initially visible in your jig.
-      The following options are available in <code>header</code>:</p>
+      <p><code>centerElement</code> - what is initially visible in your jig. The following options are available in <code>header</code>:</p>
       <ul>
-      <li><a href="./../Custom%20components%20_Alpha_.md">Custom components (Alpha)</a> </li>
+      <li><a href="./../Custom%20components%20_Alpha_.md">Custom components (Alpha)</a></li>
       <li><a href="https://docs.jigx.com/examples/h1bm-titles">titles</a></li>
-      <li><a href="./expander/stage.md">stage</a> </li>
+      <li><a href="./expander/stage.md">stage</a></li>
       </ul>
     </td>
   </tr>
 </table>
-
-:::Iframe{iframeHeight="0" code="<ul>"}
-
-:::
 
 <table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="207">
   <tr>
@@ -84,9 +81,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>isInitiallyCollapsed</code></p>
     </td>
     <td selected="false" align="left">
-      <p>If the expander is initially collapsed. <code>true</code> is the default setting.
-      <code>false</code> - expanded
-      <code>true</code> - collapsed</p>
+      <p>If the expander is initially collapsed. <code>true</code> is the default setting. <code>false</code> - expanded <code>true</code> - collapsed</p>
     </td>
   </tr>
   <tr>
