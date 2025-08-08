@@ -39,7 +39,7 @@ Replace \{\{baseUrl}} with the appropriate URL for your region.
 
 ## Authentication
 
-- A **Personal Access Token (PAT)** is required. Get your PAT from [My profile]() in Jigx [https://manage.jigx.com](https://manage.jigx.com)Management.
+- A **Personal Access Token (PAT)** is required. Get your PAT from [My profile](https://docs.jigx.com/my-profile#ZKZwc) in Jigx Management.
 - Enter the PAT as an API key with the prefix BEARER, for example, BEARER XXXXXXXXXX.
 
 ## Responses
@@ -63,7 +63,7 @@ Replace \{\{baseUrl}} with the appropriate URL for your region.
       <p>organizationId</p>
     </td>
     <td selected="false" align="left">
-      <p>In Jigx Management under </p><div>organization settings</div>.<p></p>
+      <p>In Jigx Management under <a href="https://docs.jigx.com/organization-settings">organization settings.</a></p>
     </td>
   </tr>
   <tr>
@@ -71,7 +71,7 @@ Replace \{\{baseUrl}} with the appropriate URL for your region.
       <p>solutionId</p>
     </td>
     <td selected="false" align="left">
-      <p>In Jigx Management under </p><div>solution settings</div>.<p></p>
+      <p>In Jigx Management under <a href="https://docs.jigx.com/solution-details">solution settings</a></p>
     </td>
   </tr>
   <tr>
