@@ -32,9 +32,7 @@ A list widget can be used on any type of jig, i.e. list, default, composite, cal
       <p><code>item</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The <code>item</code> property includes the setup options of:
-      <a href="https://docs.jigx.com/examples/product-item">Product-item
-      </a><a href="https://docs.jigx.com/examples/list-item">List-item</a></p>
+      <p>The <code>item</code> property includes the setup options of: <a href="https://docs.jigx.com/examples/product-item">Product-item </a><a href="https://docs.jigx.com/examples/list-item">List-item</a></p>
     </td>
   </tr>
 </table>
@@ -55,8 +53,7 @@ A list widget can be used on any type of jig, i.e. list, default, composite, cal
       <p>Add a badge to the list widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:</p>
       <ul>
       <li>To display as a red dot using the <code>empty</code> value.</li>
-      <li>A red dot with a number using an expression to perform a count.
-      For example, counting the number of tasks in the list.</li>
+      <li>A red dot with a number using an expression to perform a count. For example, counting the number of tasks in the list.</li>
       </ul>
     </td>
   </tr>
@@ -65,7 +62,7 @@ A list widget can be used on any type of jig, i.e. list, default, composite, cal
       <p><code>bottom</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The  component will be added to the bottom of the widget.</p>
+      <p>The component will be added to the bottom of the widget.</p>
     </td>
   </tr>
   <tr>
@@ -73,8 +70,7 @@ A list widget can be used on any type of jig, i.e. list, default, composite, cal
       <p><code>data</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Provide the datasource for the list. For example:
-      <code>data: =@ctx.datasources.tasklist</code></p>
+      <p>Provide the datasource for the list. For example: <code>data: =@ctx.datasources.tasklist</code></p>
     </td>
   </tr>
   <tr>
@@ -106,7 +102,7 @@ A list widget can be used on any type of jig, i.e. list, default, composite, cal
       <p><code>top</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The  component will be added to the top of the widget.</p>
+      <p>The component will be added to the top of the widget.</p>
     </td>
   </tr>
 </table>
@@ -128,8 +124,7 @@ A list widget can be used on any type of jig, i.e. list, default, composite, cal
       <p><code>=@ctx.current.state.</code></p>
     </td>
     <td selected="false" align="left">
-      <p>amount
-      checked</p>
+      <p>amount checked</p>
     </td>
     <td selected="false" align="left">
       <p>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</p>
@@ -140,8 +135,7 @@ A list widget can be used on any type of jig, i.e. list, default, composite, cal
       <p><code>=@ctx.component.state.</code></p>
     </td>
     <td selected="false" align="left">
-      <p>amount
-      checked</p>
+      <p>amount checked</p>
     </td>
     <td selected="false" align="left">
       <p>State is the variable of the component.</p>
@@ -152,8 +146,7 @@ A list widget can be used on any type of jig, i.e. list, default, composite, cal
       <p><code>=@ctx.solution.state.</code></p>
     </td>
     <td selected="false" align="left">
-      <p>activeItemId
-      now</p>
+      <p>activeItemId now</p>
     </td>
     <td selected="false" align="left">
       <p>Global state variable that can be used throughout the solution.</p>
@@ -178,12 +171,14 @@ The `Extended List Widget` can only be used on a list jig . The purpose of using
       <p><code>item</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The <code>item</code> property includes the setup options of:
-      <a href="./../Components/expander.md">expander</a>
-      <a href="https://docs.jigx.com/examples/stage">Stage</a>
-      <a href="https://docs.jigx.com/examples/product-item">Product-item
-      </a><a href="https://docs.jigx.com/examples/list-item">List-item
-      </a><a href="./../Components/charts/pie-chart.md">pie-chart</a></p>
+      <p>The <code>item</code> property includes the setup options of:</p>
+      <ul>
+      <li> <a href="./../Components/expander.md">expander</a></li>
+      <li><a href="https://docs.jigx.com/examples/stage">Stage</a></li>
+      <li><a href="https://docs.jigx.com/examples/product-item">Product-item</a></li>
+      <li><a href="https://docs.jigx.com/examples/list-item">List-item</a></li>
+      <li><a href="./../Components/charts/pie-chart.md">pie-chart</a></li>
+      </ul>
     </td>
   </tr>
 </table>
@@ -725,10 +720,10 @@ children:
 
 See the following examples under groups:
 
-- :Link[Group with chart and list]{href="https://docs.jigx.com/examples/group#utr1x" newTab="true" hasDisabledNofollow="false"} (size: 4x4, split: horizontal)
-- :Link[Group with chart and list]{href="https://docs.jigx.com/examples/group#Lk_2j" newTab="true" hasDisabledNofollow="false"} (size: 4x4, split: vertical)
-- :Link[Group with avatar and list]{href="https://docs.jigx.com/examples/group#3Wi36" newTab="true" hasDisabledNofollow="false"} (size: 4x2)
-- :Link[Group with value and bar-chart]{href="https://docs.jigx.com/examples/group#VWndb" newTab="true" hasDisabledNofollow="false"} (size: 2x4)
+- :Link[Group with chart and list]{href="https://docs.jigx.com/examples/group#utr1x" newTab="true"} (size: 4x4, split: horizontal)
+- :Link[Group with chart and list]{href="https://docs.jigx.com/examples/group#Lk_2j" newTab="true"} (size: 4x4, split: vertical)
+- :Link[Group with avatar and list]{href="https://docs.jigx.com/examples/group#3Wi36" newTab="true"} (size: 4x2)
+- :Link[Group with value and bar-chart]{href="https://docs.jigx.com/examples/group#VWndb" newTab="true"} (size: 2x4)
 
 ## See also
 

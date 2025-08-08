@@ -1,14 +1,8 @@
----
-title: Content widget components
-slug: 2Yo2-content-of-widgets
-description: Explore the remarkable details of our cutting-edge widgets preview image in this comprehensive document. Unlock the potential of these innovative widgets, meticulously captured to enhance your understanding and inspire creativity. Delve into this valuable
-createdAt: Wed Oct 12 2022 07:38:25 GMT+0000 (Coordinated Universal Time)
-updatedAt: Fri May 31 2024 06:52:59 GMT+0000 (Coordinated Universal Time)
----
+# Content widget components
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/o7ShYcfumRSpJdQIzJi-9_wd-widgetcompoment.png" size="80" position="center" caption="Content widgets components" alt="Content widgets components"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/o7ShYcfumRSpJdQIzJi-9_wd-widgetcompoment.png" size="80" position="center" caption="Content widgets components" alt="Content widgets components" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/o7ShYcfumRSpJdQIzJi-9_wd-widgetcompoment.png" width="800" height="1296" darkWidth="800" darkHeight="1296"}
 :::
 
 :::VerticalSplitItem
@@ -16,9 +10,10 @@ Extend the content surfaced on widgets further by using content widget component
 :::
 ::::
 
-| **Properties**                                   | **Description**                                                                                                                         |
-| ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [group](<./Content widget components/group.md>)   | Combine widgets to display as one widget.                                                                                               |
-| [titles](<./Content widget components/titles.md>) | Displays a title, subtitle, comment, or any type of text content on the surface of the widget.                                          |
-| [trend](<./Content widget components/trend.md>)   | Display an increase/decrease over a period. The increment/decrement number can be formatted as a percentage, currency, or plain value.  |
-|                                                   |                                                                                                                                         |
+| **Properties**                                       | **Description**                                                                                                                                              |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [group](<./Content widget components/group.md>)      | Combine widgets to display as one widget.                                                                                                                    |
+| [titles](<./Content widget components/titles.md>)    | Displays a title, subtitle, comment, or any type of text content on the surface of the widget.                                                               |
+| [trend](<./Content widget components/trend.md>)      | Display an increase/decrease over a period. The increment/decrement number can be formatted as a percentage, currency, or plain value.                       |
+| [onPress](<./Content widget components/onPress.md>)  | The onPress event adds an action directly on the widget. This is particularly helpful in scenarios where you do not want to open a jig to perform an action. |
+

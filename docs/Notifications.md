@@ -38,7 +38,7 @@ You can send Notifications using Jigx Management or programmatically in your sol
   </tr>
   <tr>
     <td selected="false" align="left">
-      <p>South East </p>
+      <p>South East</p>
       <p>(e.g. Australia)</p>
     </td>
     <td selected="false" align="left">

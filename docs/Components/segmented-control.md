@@ -32,7 +32,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>title</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The label for the segment. You can use  in the title.</p>
+      <p>The label for the segment. You can use in the title.</p>
     </td>
   </tr>
   <tr>
@@ -40,7 +40,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>value</code></p>
     </td>
     <td selected="false" align="left">
-      <p> The data value for the segment that is used to display content when toggled. Can be used in an expression or to set the <code>initialValue</code>.</p>
+      <p>The data value for the segment that is used to display content when toggled. Can be used in an expression or to set the <code>initialValue</code>.</p>
     </td>
   </tr>
 </table>
@@ -99,8 +99,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>=@ctx.solution.state.</code></p>
     </td>
     <td selected="false" align="left">
-      <p>activeItemId
-      now</p>
+      <p>activeItemId now</p>
     </td>
     <td selected="false" align="left">
       <p>Global state variable that can be used throughout the solution.</p>
@@ -121,8 +120,8 @@ Some properties are common to all components, see [Common component properties](
 :::VerticalSplitItem
 This examples displays a basic segmented-control - A `segmented-control` with four segments. When a segment is tapped, its corresponding `value` is displayed in an `entity-field`.
 
-**Example:
-**See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-basic.jigx" newTab="true" hasDisabledNofollow="false"}.
+**Example**:
+See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-basic.jigx" newTab="true"}.
 :::
 ::::
 
@@ -176,8 +175,8 @@ children:
 :::VerticalSplitItem
 This examples displays a segmented-control with a datasource - This `segmented-control` dynamically retrieves its `titles` and `values` from a datasource. It consists of three segments, when a segment is tapped, its `value` is displayed in an `entity-field`.
 
-**Example:
-**See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-datasource.jigx" newTab="true" hasDisabledNofollow="false"}.
+**Example:**
+See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-datasource.jigx" newTab="true"}.
 :::
 ::::
 
@@ -245,8 +244,8 @@ datasources:
 :::VerticalSplitItem
 This examples displays a disabled segmented-control - A `segmented-control` with three segments that is set to a disabled state, preventing user interaction.
 
-**Example:
-**See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-disabled.jigx" newTab="true" hasDisabledNofollow="false"}.
+**Example:**
+See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-disabled.jigx" newTab="true"}.
 :::
 ::::
 
@@ -290,8 +289,8 @@ children:
 :::VerticalSplitItem
 This examples displays a preselected segmented-control - A `segmented-control` with three segments, where the second segment is set as active by default when the jig opens. When a segment is tapped, its `value` is displayed in an `entity-field`.
 
-**Example:
-**See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-preselected.jigx" newTab="true" hasDisabledNofollow="false"}.
+**Example:**
+See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-preselected.jigx" newTab="true"}.
 :::
 ::::
 
@@ -340,8 +339,8 @@ children:
 :::VerticalSplitItem
 This example demonstrates how to configure the `entity-field` and `form` component state to display the relevant content based on the segment tapped. The value entered in the `form` when the *Email* segment is displayed is used to generate a PDF and share it via email.
 
-**Example:
-**See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-state.jigx" newTab="true" hasDisabledNofollow="false"}.
+**Example:**
+See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-state.jigx" newTab="true"}.
 :::
 
 :::VerticalSplitItem

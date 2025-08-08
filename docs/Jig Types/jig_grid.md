@@ -49,7 +49,7 @@ The `jig.grid` has two available configuration options:
       <p><code>component</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Within a grid jig type, the  component is used to define each of the elements in the grid layout. Within the <code>grid-item</code> a select set of components can be configured.</p>
+      <p>Within a grid jig type, the component is used to define each of the elements in the grid layout. Within the <code>grid-item</code> a select set of components can be configured.</p>
     </td>
   </tr>
   <tr>
@@ -107,11 +107,10 @@ The `jig.grid` has two available configuration options:
       <p><code>grid-item</code></p>
     </td>
     <td selected="false" align="left">
-      <p><code>size</code> - Select either <code>1x1</code>,<code> 2x2</code>, <code>2x4</code>, <code>4x2</code>, <code>4x4</code>
-      <code>children</code> - Select a component from the predefined list to display in the grid. The components for selection are:</p>
+      <p><code>size</code> - Select either <code>1x1</code>,<code> 2x2</code>, <code>2x4</code>, <code>4x2</code>, <code>4x4</code> <code>children</code> - Select a component from the predefined list to display in the grid. The components for selection are:</p>
       <ul>
       <li><a href="./../Components/image.md">image</a></li>
-      <li><a href="">widgets</a>  </li>
+      <li><a href="">widgets</a></li>
       <li>Use Template - image templates</li>
       </ul>
     </td>
@@ -121,7 +120,7 @@ The `jig.grid` has two available configuration options:
       <p><code>expressions</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Use the <code>expressions</code> property to set  that are reusable throughout the jig.</p>
+      <p>Use the <code>expressions</code> property to set that are reusable throughout the jig.</p>
     </td>
   </tr>
   <tr>
@@ -129,7 +128,7 @@ The `jig.grid` has two available configuration options:
       <p><code>header</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Configure a  that displays and image, location or video at the top of the jig.</p>
+      <p>Configure a that displays and image, location or video at the top of the jig.</p>
     </td>
   </tr>
   <tr>
@@ -137,7 +136,7 @@ The `jig.grid` has two available configuration options:
       <p><code>icon</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The icon will be displayed on the  of the jig. Start typing the name of the icon to invoke the available list in IntelliSense. See <a href="">Jigx icons</a> for information on working with icons. The <code>icon</code> property applies to <code>component.jig-widget</code> without a <code>widgetId</code>. See the considerations below for the rules governing icon behavior.</p>
+      <p>The icon will be displayed on the of the jig. Start typing the name of the icon to invoke the available list in IntelliSense. See <a href="">Jigx icons</a> for information on working with icons. The <code>icon</code> property applies to <code>component.jig-widget</code> without a <code>widgetId</code>. See the considerations below for the rules governing icon behavior.</p>
     </td>
   </tr>
   <tr>
@@ -145,7 +144,7 @@ The `jig.grid` has two available configuration options:
       <p><code>inputs</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Configure   that allow you to receive data from other jigs and use it in the current jig.</p>
+      <p>Configure that allow you to receive data from other jigs and use it in the current jig.</p>
     </td>
   </tr>
   <tr>
@@ -153,7 +152,7 @@ The `jig.grid` has two available configuration options:
       <p><code>isCollapsible</code></p>
     </td>
     <td selected="false" align="left">
-      <p>When the jig is used in a  and this property is set to <code>true</code>, a collapse and expand icon is shown, allowing the jig to be collapsed. This is helpful if the composite jig has a number of jigs configured, making it easier to view and interact with the app.</p>
+      <p>When the jig is used in a and this property is set to <code>true</code>, a collapse and expand icon is shown, allowing the jig to be collapsed. This is helpful if the composite jig has a number of jigs configured, making it easier to view and interact with the app.</p>
     </td>
   </tr>
   <tr>
@@ -185,7 +184,7 @@ The `jig.grid` has two available configuration options:
       <p><code>outputs</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Configure  that allow you to transfer data out of the current jig and use it in another jig.</p>
+      <p>Configure that allow you to transfer data out of the current jig and use it in another jig.</p>
     </td>
   </tr>
   <tr>
@@ -201,7 +200,7 @@ The `jig.grid` has two available configuration options:
       <p><code>preview</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Configure the  which is triggered by <em>long-pressing</em> on the grid-item.</p>
+      <p>Configure the which is triggered by <em>long-pressing</em> on the grid-item.</p>
     </td>
   </tr>
   <tr>
@@ -209,7 +208,7 @@ The `jig.grid` has two available configuration options:
       <p><code>summary</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Add a  component that displays at the bottom of the jig.</p>
+      <p>Add a component that displays at the bottom of the jig.</p>
     </td>
   </tr>
   <tr>
@@ -1978,6 +1977,10 @@ actions:
 
 :::VerticalSplitItem
 This example demonstrates that setting the `title` property in the `component.widget` `grid-item` overrides the default jig `title`. Custom icons are also configured in the `component.widget` of the grid jig for each widget. For image widgets, the title configured in the `component.image` of the `grid-item` overlays the image.
+
+**Examples:**
+See the full code sample in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-custom-icons-titles.jigx" newTab="true" hasDisabledNofollow="false"}.
+Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-grid).
 :::
 ::::
 

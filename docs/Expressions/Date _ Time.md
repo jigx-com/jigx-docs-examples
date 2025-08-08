@@ -1,6 +1,6 @@
 # Date & Time
 
-Date and time expressions use the [https://docs.jsonata.org/date-time-functions](https://docs.jsonata.org/date-time-functions)JSONata Date/Time functions to return various formats of date/time, date, or time. These expressions are used to get the current timestamp in ISO 8601 formatted string, use an expression over the timestamp to convert the timestamp into a specific format.
+Date and time expressions use the :Link[JSONata Date/Time functions]{href="https://docs.jsonata.org/date-time-functions" newTab="true" hasDisabledNofollow="false"} to return various formats of date/time, date, or time. These expressions are used to get the current timestamp in ISO 8601 formatted string, use an expression over the timestamp to convert the timestamp into a specific format.
 
 ## Configuration
 

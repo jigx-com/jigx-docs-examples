@@ -2,7 +2,7 @@
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-The calendar jig displays an agenda calendar view. `jig.calendar` contains data with an [https://docs.jigx.com/docs/jc-event](https://docs.jigx.com/docs/jc-event)event component, which adds functionality to the calendar and provides a convenient overview of your scheduled events.
+The calendar jig displays an agenda calendar view. `jig.calendar` contains data with an :Link[event]{href="https://docs.jigx.com/docs/jc-event" newTab="true" hasDisabledNofollow="false"} component, which adds functionality to the calendar and provides a convenient overview of your scheduled events.
 :::
 
 :::VerticalSplitItem
@@ -41,7 +41,7 @@ Some properties are common to all jig types, see [Common jig type properties]() 
       <p><code>icon</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The icon will be displayed on the  of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See <a href="">Jigx icons</a> for information on worknig with icons.</p>
+      <p>The icon will be displayed on the of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See <a href="">Jigx icons</a> for information on worknig with icons.</p>
     </td>
   </tr>
   <tr>
@@ -49,8 +49,7 @@ Some properties are common to all jig types, see [Common jig type properties]() 
       <p><code>people</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The list of invitees/attendees for the event. Use an expression to configure the property, for example,
-      <code>people: =@ctx.current.item.attendees.emailAddress</code>.</p>
+      <p>The list of invitees/attendees for the event. Use an expression to configure the property, for example, <code>people: =@ctx.current.item.attendees.emailAddress</code>.</p>
     </td>
   </tr>
   <tr>
@@ -66,10 +65,7 @@ Some properties are common to all jig types, see [Common jig type properties]() 
       <p><code>tags</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Displays a list of <code>tags</code> for the event, such as meeting, interview, or social. The <code>tags</code> array can contain the <em>color</em> and <em>title</em> for each tag.
-      <code>"=[{'title': @ctx.current.item.type, 'color': @ctx.current.item.color}]"</code>
-      or define the tag in a datasource whihc is referenced in the property.
-      <code>tags: =@ctx.current.item.tags</code></p>
+      <p>Displays a list of <code>tags</code> for the event, such as meeting, interview, or social. The <code>tags</code> array can contain the <em>color</em> and <em>title</em> for each tag. <code>"=[{'title': @ctx.current.item.type, 'color': @ctx.current.item.color}]"</code> or define the tag in a datasource whihc is referenced in the property. <code>tags: =@ctx.current.item.tags</code></p>
     </td>
   </tr>
 </table>
@@ -105,7 +101,7 @@ Certain actions can be executed on the event; for example, when pressing on the 
 ## Examples and code snippets
 
 :::hint{type="success"}
-The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from [https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples)GitHub, and follow the instructions in [Setting up your solution]().
+The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples" newTab="true" hasDisabledNofollow="false"}, and follow the instructions in [Setting up your solution]().
 :::
 
 ### Calendar jig

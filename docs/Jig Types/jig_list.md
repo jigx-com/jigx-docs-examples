@@ -57,15 +57,7 @@ Some properties are common to all jig types, see [Common jig type properties]() 
       <p><code>filter</code></p>
     </td>
     <td selected="false" align="left">
-      <p><code>initialValue</code> - Predefine the default selected tab for a filter on the list, when opening the  the default filter tab is displayed.
-      <code>data</code> -  define the filter tabs using:
-      <code>title</code> - give the filter a name. The text that will be displayed in the tab, for example, in-stock.
-      <code>value</code> - The value that the list filter returns. Use the following expressions to return this value:
-      <code>=@ctx.components.my-list.state.filter</code> (for a list in a default jig)
-      <code>=@ctx.jig.state.filter</code>(for a list jig)
-      For <code>true/false</code> values that are saved as <strong>boolean</strong> ensure the filter has a <strong>boolean</strong> value.
-      For <code>true/false</code> values that are saved as <strong>string</strong> ensure the filter has a <strong>string</strong> value.
-      When using the <code>value</code> property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.</p>
+      <p><code>initialValue</code> - Predefine the default selected tab for a filter on the list, when opening the the default filter tab is displayed. <code>data</code> - define the filter tabs using: <code>title</code> - give the filter a name. The text that will be displayed in the tab, for example, in-stock. <code>value</code> - The value that the list filter returns. Use the following expressions to return this value: <code>=@ctx.components.my-list.state.filter</code> (for a list in a default jig) <code>=@ctx.jig.state.filter</code>(for a list jig) For <code>true/false</code> values that are saved as <strong>boolean</strong> ensure the filter has a <strong>boolean</strong> value. For <code>true/false</code> values that are saved as <strong>string</strong> ensure the filter has a <strong>string</strong> value. When using the <code>value</code> property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.</p>
     </td>
   </tr>
   <tr>
@@ -118,7 +110,7 @@ Some properties are common to all jig types, see [Common jig type properties]() 
       <li><code>avatar</code> - configure the <code>color</code>, <code>size</code>, <code>text</code>, <code>uri</code>, and <code>onPress</code> event.</li>
       <li><code>checkbox</code></li>
       <li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li>
-      <li><code>image</code> - the image <code>size</code>, <code>shape</code>, <code>resizeMode</code>, and <code>onPress</code> event is configurable. </li>
+      <li><code>image</code> - the image <code>size</code>, <code>shape</code>, <code>resizeMode</code>, and <code>onPress</code> event is configurable.</li>
       <li><code>progress</code></li>
       </ul>
     </td>
@@ -128,21 +120,7 @@ Some properties are common to all jig types, see [Common jig type properties]() 
       <p><code>rating</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the <code>ratingIcon</code>, <code>color</code>, and accompanying descriptive <code>text</code>. By default, the rating property has only one icon showing a rating-star in the primary color.
-      <code>value</code>- Rating with numerical value.
-      The value of the rating, which can be a simple number.
-      The number of icons is calculated based on this value unless overridden in the icon configuration.
-      Configuring the <code>current</code> and <code>maximum</code> values, shows the value as a fraction, for example 7/10.
-      <code>percentage</code> - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%.
-      <code>ratingIcon</code> - By default the <em>rating-star</em> icon in the <em>primary</em> color is displayed.
-      <code>icon</code> - Add an icon to represent the rating. A list of icons is available. See  for more information.
-      <code>color</code>- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in .
-      <code>current</code> and <code>maximum</code> values - Where maximum is the number of icons to display and current the number of icons to color.
-      <code>text</code> - add descriptive text that displays next to rating.
-      Ratings can set up in the following ways:
-      1) Example of <code>value</code> for a product rating.
-      2) Example of a user rating shown in a <code>percentage</code>
-      3) Example of <code>value</code> rating showing 2.5/5 as a rating with single star icon.</p>
+      <p>Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the <code>ratingIcon</code>, <code>color</code>, and accompanying descriptive <code>text</code>. By default, the rating property has only one icon showing a rating-star in the primary color. <code>value</code>- Rating with numerical value. The value of the rating, which can be a simple number. The number of icons is calculated based on this value unless overridden in the icon configuration. Configuring the <code>current</code> and <code>maximum</code> values, shows the value as a fraction, for example 7/10. <code>percentage</code> - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%. <code>ratingIcon</code> - By default the <em>rating-star</em> icon in the <em>primary</em> color is displayed. <code>icon</code> - Add an icon to represent the rating. A list of icons is available. See for more information. <code>color</code>- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in . <code>current</code> and <code>maximum</code> values - Where maximum is the number of icons to display and current the number of icons to color. <code>text</code> - add descriptive text that displays next to rating. Ratings can set up in the following ways: 1) Example of <code>value</code> for a product rating. 2) Example of a user rating shown in a <code>percentage</code> 3) Example of <code>value</code> rating showing 2.5/5 as a rating with single star icon.</p>
     </td>
   </tr>
   <tr>
@@ -153,13 +131,13 @@ Some properties are common to all jig types, see [Common jig type properties]() 
       <p>Set an element to the right of the list. The following elements are available:</p>
       <ul>
       <li><code>amountControl</code></li>
-      <li><code>badge</code> - can be a solid colored badge or a badge with a number in it. Badges  always use the primary color.</li>
+      <li><code>badge</code> - can be a solid colored badge or a badge with a number in it. Badges always use the primary color.</li>
       <li><code>button</code></li>
       <li><code>checkbox</code></li>
       <li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li>
       <li><code>switch</code></li>
       <li><code>value</code> - When using <code>text</code>, the option to change its <code>color</code> is available.</li>
-      <li><code>text</code> - define up to three  lines of text with styling (color, bold, font size) applied to each line of text.</li>
+      <li><code>text</code> - define up to three lines of text with styling (color, bold, font size) applied to each line of text.</li>
       </ul>
     </td>
   </tr>
@@ -178,15 +156,8 @@ Some properties are common to all jig types, see [Common jig type properties]() 
     <td selected="false" align="left">
       <p>A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.</p>
       <ul>
-      <li><code>text</code> -  The text content displayed within the tag.</li>
-      <li><code>color</code> - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in .
-      Tags can be set up in three ways:
-      1) Using a dynamic expression from a datasource:
-      <code>tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}</code>
-      2) Using a dynamic expression from a list item:
-      <code>tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}</code>
-      3) Using static, predefined tags
-      <code>tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'</code></li>
+      <li><code>text</code> - The text content displayed within the tag.</li>
+      <li><code>color</code> - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in . Tags can be set up in three ways: 1) Using a dynamic expression from a datasource: <code>tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}</code> 2) Using a dynamic expression from a list item: <code>tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}</code> 3) Using static, predefined tags <code>tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'</code></li>
       </ul>
     </td>
   </tr>
@@ -247,21 +218,10 @@ rating:
       <p><code>=@ctx.jig.state.</code></p>
     </td>
     <td selected="false" align="left">
-      <p>activeItem
-      activeItemId
-      amounts
-      filter
-      isHorizontal
-      isRefreshing
-      isSelectable
-      isSelectActive
-      searchText
-      selected
-      value</p>
+      <p>activeItem activeItemId amounts filter isHorizontal isRefreshing isSelectable isSelectActive searchText selected value</p>
     </td>
     <td selected="false" align="left">
-      <p>State is set by the creator in the YAML.
-      State applies to the jig</p>
+      <p>State is set by the creator in the YAML. State applies to the jig</p>
     </td>
   </tr>
   <tr>
@@ -269,8 +229,7 @@ rating:
       <p><code>=@ctx.current.state.</code></p>
     </td>
     <td selected="false" align="left">
-      <p>amount
-      checked</p>
+      <p>amount checked</p>
     </td>
     <td selected="false" align="left">
       <p>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</p>
@@ -281,8 +240,7 @@ rating:
       <p><code>=@ctx.solution.state.</code></p>
     </td>
     <td selected="false" align="left">
-      <p>activeItemId
-      now</p>
+      <p>activeItemId now</p>
     </td>
     <td selected="false" align="left">
       <p>Global state variable that can be used throughout the solution.</p>
@@ -950,7 +908,8 @@ tabs:
 ::::VerticalSplitItem
 This example displays the list items in a way that allows for impact yet does not require intricate setups. Avatars are displayed for each list item.
 
-\*\*Examples\*See the full code samples using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-avatars-sd.jigx) in GitHub.
+**Examples:**
+See the full code samples using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-avatars-sd.jigx) in GitHub.
 See the full code samples using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-avatars-dd.jigx) in GitHub.
 
 **Datasource**:
@@ -1378,7 +1337,7 @@ tabs:
 :::
 ::::::
 
-::::::ExpandableHeading
+:::::ExpandableHeading
 ### Lists with Search functionality
 
 ::::VerticalSplit{layout="middle"}
@@ -1391,24 +1350,24 @@ tabs:
 :::
 ::::
 
-:::::VerticalSplit{layout="left"}
+::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
 This example displays the search functionality of a basic List Jig that allows the user to filter a list with tons of data instantaneously based on certain keywords they have entered.
 :::
 
-::::VerticalSplitItem
+:::VerticalSplitItem
 **Examples**:
 See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-search-sd.jigx) in GitHub. See the full code sample  using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-search-dd.jigx) in GitHub.
 
 **Datasources**:
 See the full datasource code sample for[static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-search-sd.jigx) in GitHub.
 See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx) in GitHub.
+:::
+::::
 
 :::hint{type="success"}
 Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
 :::
-::::
-:::::
 
 :::CodeblockTabs
 list-with-search-dd.jigx
@@ -1500,9 +1459,9 @@ tabs:
     icon: home-apps-logo
 ```
 :::
-::::::
+:::::
 
-::::::ExpandableHeading
+:::::ExpandableHeading
 ### Lists with Filter functionality
 
 ::::VerticalSplit{layout="middle"}
@@ -1515,26 +1474,24 @@ tabs:
 :::
 ::::
 
-:::::VerticalSplit{layout="left"}
+::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-
+This example helps to categorically filter the data to create meaningful sections or split the data for ease of use for the users.
 :::
 
-::::VerticalSplitItem
-This example helps to categorically filter the data to create meaningful sections or split the data for ease of use for the users.
-
+:::VerticalSplitItem
 **Examples**:
 See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-label-sd.jigx) in GitHub. See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-label-dd.jigx) in GitHub.
 
 **Datasources**:
 See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-label-sd.jigx) in GitHub.
 See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-label-dd.jigx).
+:::
+::::
 
 :::hint{type="success"}
 Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
 :::
-::::
-:::::
 
 :::CodeblockTabs
 list-filter-label-dd.jigx
@@ -1628,9 +1585,9 @@ tabs:
     icon: home-apps-logo
 ```
 :::
-::::::
+:::::
 
-::::::ExpandableHeading
+:::::ExpandableHeading
 ### Lists with Search and Filter functionality
 
 ::::VerticalSplit{layout="middle"}
@@ -1643,24 +1600,24 @@ tabs:
 :::
 ::::
 
-:::::VerticalSplit{layout="left"}
+::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
 To further enhance the search and filter capabilities for the user, there is also an option to combine the search and filter functionality as can be seen in this example.
 :::
 
-::::VerticalSplitItem
+:::VerticalSplitItem
 **Examples**:
 See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-search-label-sd.jigx) in GitHub. See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-search-label-dd.jigx) in GitHub.
 
 **Datasources**:
 See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-search-label-sd.jigx) in GitHub.
 See the full datasource for code sample [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-search-label-dd.jigx) in GitHub.
+:::
+::::
 
 :::hint{type="success"}
 Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
 :::
-::::
-:::::
 
 :::CodeblockTabs
 list-filter-search-label-dd.jigx
@@ -1745,7 +1702,7 @@ tabs:
     icon: home-apps-logo
 ```
 :::
-::::::
+:::::
 
 :::::ExpandableHeading
 ### Filtered list with default tab set

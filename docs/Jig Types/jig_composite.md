@@ -31,7 +31,7 @@ Some properties are common to all jig types, see [Common jig type properties]() 
       <p><code>icon</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The icon will be displayed on the  of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See <a href="">Jigx icons</a> for information on worknig with icons.</p>
+      <p>The icon will be displayed on the of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See <a href="">Jigx icons</a> for information on worknig with icons.</p>
     </td>
   </tr>
   <tr>
@@ -39,9 +39,7 @@ Some properties are common to all jig types, see [Common jig type properties]() 
       <p><code>inputs</code></p>
     </td>
     <td selected="false" align="left">
-      <p>If you are setting up a <code>jig.composite</code> where jigs rely on input to display or otherwise interact with very specific data, you'll need to use <code>inputs</code>. Here you set the data you would like to transfer to the composite jig. There are 2 options to make data available for input:
-      1) Set them in <code>output</code> inside the jig.
-      2) Set them as a <code>global</code> variable by using <code>set-state action</code>.</p>
+      <p>If you are setting up a <code>jig.composite</code> where jigs rely on input to display or otherwise interact with very specific data, you'll need to use <code>inputs</code>. Here you set the data you would like to transfer to the composite jig. There are 2 options to make data available for input: 1) Set them in <code>output</code> inside the jig. 2) Set them as a <code>global</code> variable by using <code>set-state action</code>.</p>
     </td>
   </tr>
   <tr>
@@ -142,7 +140,7 @@ This example shows the simplest way in which a `Composite Jig` can be set up - r
 **Examples:**
 
 See the compsite jig code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/jig-composite.jigx").
-See the [location](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/location/static-data/location-with-address.jigx) code and[country list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/country-list-sd.jigx) code examples in GitHub.
+See the [location](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/location/static-data/location-with-address.jigx) code and [country list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/country-list-sd.jigx) code examples in GitHub.
 See the static country datasource code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/country-data-static.jigx).
 See the index.jigx code below to add the jig to the Home Hub.
 :::

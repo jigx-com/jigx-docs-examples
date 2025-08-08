@@ -313,7 +313,7 @@ See the full datasource code sample for static data in [GitHub](https://github.c
 See the full datasource code samples for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products-dynamic.jigx)
 
 :::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for employees. You can use the employee.csv file in[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/employees.csv) and upload it via the [Data](https://docs.jigx.com/S_SB-data) configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for employees. You can use the employee.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/employees.csv) and upload it via the [Data](https://docs.jigx.com/S_SB-data) configuration in Jigx Management.
 :::
 ::::
 :::::

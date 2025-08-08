@@ -74,7 +74,7 @@ Some properties are common to all jig types, see [Common jig type properties]() 
       <p><code>icon</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The icon will be displayed on the  of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See <a href="">Jigx icons</a> for information on worknig with icons.</p>
+      <p>The icon will be displayed on the of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See <a href="">Jigx icons</a> for information on worknig with icons.</p>
     </td>
   </tr>
   <tr>
@@ -82,7 +82,7 @@ Some properties are common to all jig types, see [Common jig type properties]() 
       <p><code>placeholders</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Create a placeholder to show when there is no data to use yet. See tips and tricks -use a placeholder  for a placeholder example.</p>
+      <p>Create a placeholder to show when there is no data to use yet. See tips and tricks -use a placeholder for a placeholder example.</p>
     </td>
   </tr>
 </table>
@@ -90,7 +90,7 @@ Some properties are common to all jig types, see [Common jig type properties]() 
 ## Examples and code snippets
 
 :::hint{type="success"}
-The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from [https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples)GitHub, and follow the instructions in [Setting up your solution]().
+The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples" newTab="true" hasDisabledNofollow="false"}, and follow the instructions in [Setting up your solution]().
 :::
 
 ::::::ExpandableHeading

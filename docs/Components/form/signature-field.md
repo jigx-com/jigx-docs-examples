@@ -1,18 +1,18 @@
 # signature-field
 
-:::::VerticalSplit{layout="middle"}
-::::VerticalSplitItem
+::::VerticalSplit{layout="middle"}
+:::VerticalSplitItem
 Simply draw your signature on your mobile screen to approve and proceed. This component can only be used in a [jig.default](<./../../Jig Types/jig_default.md>) inside of a [form](./../form.md) component for the input of a signature. It provides the experience of creating, uploading, and saving your eSignature in a few easy steps.
-
-:::hint{type="info"}
-The `signature-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 :::
-::::
 
 :::VerticalSplitItem
 ![Signature Field Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xFXGhidiImIpwwIhQy4kU_signature.png "Signature Field Preview")
 :::
-:::::
+::::
+
+:::hint{type="info"}
+The `signature-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
+:::
 
 ## Configuration options
 
@@ -65,7 +65,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>errorText</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Add text, string, or expressions to show text under the signature-field  indicating an error/invalid value in the field. Text is shown in <code>isNegative</code> (red) styling with a red exclamation icon on the right.</p>
+      <p>Add text, string, or expressions to show text under the signature-field indicating an error/invalid value in the field. Text is shown in <code>isNegative</code> (red) styling with a red exclamation icon on the right.</p>
     </td>
   </tr>
   <tr>
@@ -81,7 +81,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>icon</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Add an icon to the signature-field, for example a pen icon. The icon apprears on the far right of the field.  A list of icons is available. See  for more information.</p>
+      <p>Add an icon to the signature-field, for example a pen icon. The icon apprears on the far right of the field. A list of icons is available. See for more information.</p>
     </td>
   </tr>
   <tr>
@@ -148,7 +148,7 @@ Some properties are common to all components, see [Common component properties](
       <p>The following property settings are available:</p>
       <ul>
       <li><code>flex</code> - Flex property if rendered inside row.</li>
-      <li><code>isBusy</code> - Displays spinner on right side of field. It removes any  configured icon.</li>
+      <li><code>isBusy</code> - Displays spinner on right side of field. It removes any configured icon.</li>
       <li><code>isDisabled</code> - disables the signature property preventing any input.</li>
       <li><code>isPositive</code> - a green icon displays on the right of the signature.</li>
       </ul>
@@ -211,8 +211,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>=@ctx.solution.state.</code></p>
     </td>
     <td selected="false" align="left">
-      <p>activeItemId
-      now</p>
+      <p>activeItemId now</p>
     </td>
     <td selected="false" align="left">
       <p>Global state variable that can be used throughout the solution.</p>
