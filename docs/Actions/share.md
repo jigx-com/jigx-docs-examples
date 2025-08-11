@@ -41,6 +41,9 @@ Some properties are common to all components, see [Common component properties](
 
 :::VerticalSplitItem
 In this example, a foreman takes multiple images of the job and saves the images to Dynamic Data. When the images are successfully saved the images are shared via the devices message sharing apps.
+
+**Example:**&#x20;
+See the full code sample in GitHub.
 :::
 ::::
 
@@ -112,6 +115,9 @@ actions:
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 In this example, an action list contains three actions: the first generates a PDF for an invoice, the second saves it to the database, and the third shares the PDF via a messaging app on the device.  The file is saved to dynamic files.
+
+**Example:**&#x20;
+See the full code sample in GitHub.
 :::
 
 :::VerticalSplitItem
@@ -120,10 +126,10 @@ In this example, an action list contains three actions: the first generates a PD
 ::::
 
 :::CodeblockTabs
-action-generate-pdf-save-share.jigx
+action-share-pdf.jigx
 
 ```yaml
-title: Monthly invoicing
+title: Monthly invoices
 description: Provide you details
 type: jig.default
 
@@ -363,6 +369,9 @@ options:
 
 ::::VerticalSplitItem
 In this example, we demonstrate using the `action.share` to send an `email` to a customer with an attachment. The `message`, `subject` and `email` (To) properties are configured as part of the action.&#x20;
+
+**Example:**&#x20;
+See the full code sample in GitHub.
 
 :::hint{type="info"}
 For best results, share files that are stored locally (e.g., images or PDFs). Files stored in a datasource as base64, data URI, or buffers will be returned as unreadable binary (.bin) files.

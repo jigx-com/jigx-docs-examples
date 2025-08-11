@@ -78,6 +78,9 @@ Some properties are common to all components, see [Common component properties](
 
 :::VerticalSplitItem
 In this example, an action list contains two actions: the first generates a PDF of a checklist, the second shares the PDF via a messaging app on the device.
+
+**Example:**&#x20;
+See the full code sample in GitHub.
 :::
 ::::
 
@@ -190,6 +193,9 @@ datasources:
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 In this example, an action list contains three actions: the first generates a PDF for an invoice, the second saves it to the database, and the third shares the PDF via a messaging app on the device.  When saving the file to the database the file is converted from local-uri to data-uri for storage.
+
+**Example:**&#x20;
+See the full code sample in GitHub.
 :::
 
 :::VerticalSplitItem
@@ -425,6 +431,9 @@ actions:
 
 This example demonstrates how to use a JavaScript function to generate an HTML invoice. The invoice is populated with customer details retrieved from a Dynamic Data datasource named invoices. The JavaScript function is referenced in an expression used by `action.generate-pdf`, after which the invoice is shared using the `action.share` via the device's apps.
 
+**Example:**&#x20;
+See the full code sample in GitHub.
+
 ![PDF from JavaScript function](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wZMGFJvxtv3534txsjD9R-20250228-132836.png "PDF from JavaScript function")
 
 :::CodeblockTabs
@@ -531,16 +540,16 @@ datasources:
       isDocument: true
       entities:
         - default/invoices
-  
       query: |
-       SELECT id,
-        '$.firstName',
-        '$.email', 
-        '$.phoneNumber',
-        '$.customerCompany',
-        '$.address'
-       FROM [default/invoices] 
-       WHERE firstName = 'John Smith'
+        SELECT 
+          id,
+          '$.firstName',
+          '$.email', 
+          '$.phoneNumber',
+          '$.customerCompany',
+          '$.address'
+        FROM [default/invoices] 
+        WHERE firstName = 'John Smith'
 ```
 
 html.js
@@ -548,155 +557,155 @@ html.js
 ```javascript
 // Create a JS function that generates HTML, reference the input fields from
 // the datasource.
-  export function generateHTML(invoiceInfo) {
-     const { firstName, customerCompany, address } = invoiceInfo;
-    // Specify what must be returned.
-    return `
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Invoice</title>
-        <style>
-              body {
-                font-family: 'Arial', sans-serif;
-                margin: 0;
-                padding: 20px;
-                background-color: #f6f6f6;
-              }
-              .invoice-box {
-                max-width: 800px;
-                margin: auto;
-                padding: 30px;
-                border: 1px solid #eee;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-                background-color: #fff;
-                color: #555;
-              }
-              .invoice-box table {
-                width: 100%;
-                line-height: 1.6;
-                text-align: left;
-                border-collapse: collapse;
-              }
-              .invoice-box table td {
-                padding: 5px;
-                vertical-align: top;
-              }
-              .invoice-box table tr td:nth-child(2) {
-                text-align: right;
-              }
-              .invoice-box table tr.top table td {
-                padding-bottom: 20px;
-              }
-              .invoice-box table tr.information table td {
-                padding-bottom: 40px;
-              }
-              .invoice-box table tr.heading td {
-                background: #eee;
-                border-bottom: 1px solid #ddd;
-                font-weight: bold;
-              }
-              .invoice-box table tr.details td {
-                padding-bottom: 20px;
-              }
-              .invoice-box table tr.item td {
-                border-bottom: 1px solid #eee;
-              }
-              .invoice-box table tr.item.last td {
-                border-bottom: none;
-              }
-              .invoice-box table tr.total td:nth-child(2) {
-                border-top: 2px solid #eee;
-                font-weight: bold;
-              }
-              h2, h3 {
-                margin: 0;
-              }
-            </style>
-      </head>
-      <body>
-        <div class="invoice-box">
-          <table cellpadding="0" cellspacing="0">
-            <!-- Invoice Header -->
-            <tr class="top">
-              <td colspan="2">
-                <table>
-                  <tr>
-                    <td class="title">
-                      <h2>Global Inc</h2>
-                    </td>
-                    <td>
-                      Invoice #: 12345<br>
-                      Created: January 1, 2025<br>
-                      Due: January 31, 2025
-                    </td>
-                  </tr>
-                </table>
-              </td>
+export function generateHTML(invoiceInfo) {
+    const { firstName, customerCompany, address } = invoiceInfo;
+// Specify what must be returned.
+return `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+            body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f6f6f6;
+            }
+            .invoice-box {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #eee;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+            background-color: #fff;
+            color: #555;
+            }
+            .invoice-box table {
+            width: 100%;
+            line-height: 1.6;
+            text-align: left;
+            border-collapse: collapse;
+            }
+            .invoice-box table td {
+            padding: 5px;
+            vertical-align: top;
+            }
+            .invoice-box table tr td:nth-child(2) {
+            text-align: right;
+            }
+            .invoice-box table tr.top table td {
+            padding-bottom: 20px;
+            }
+            .invoice-box table tr.information table td {
+            padding-bottom: 40px;
+            }
+            .invoice-box table tr.heading td {
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+            }
+            .invoice-box table tr.details td {
+            padding-bottom: 20px;
+            }
+            .invoice-box table tr.item td {
+            border-bottom: 1px solid #eee;
+            }
+            .invoice-box table tr.item.last td {
+            border-bottom: none;
+            }
+            .invoice-box table tr.total td:nth-child(2) {
+            border-top: 2px solid #eee;
+            font-weight: bold;
+            }
+            h2, h3 {
+            margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+        <!-- Invoice Header -->
+        <tr class="top">
+            <td colspan="2">
+            <table>
+                <tr>
+                <td class="title">
+                    <h2>Global Inc</h2>
+                </td>
+                <td>
+                    Invoice #: 12345<br>
+                    Created: January 1, 2025<br>
+                    Due: January 31, 2025
+                </td>
+                </tr>
+            </table>
+            </td>
+        </tr>
+        <!-- Company & Customer Information -->
+        <tr class="information">
+            <td colspan="2">
+            <table>
+                <tr>
+                <!-- Specify the inputs from the datasource -->
+                <td>
+                    ${firstName || ''}<br>
+                    ${customerCompany || ''}<br>
+                    ${address || ''}<br>
+                </td>
+                <td>
+                    Global Inc<br>
+                    67890 First Avenue,<br>
+                    New York,<br>
+                    34567
+                </td>
+                </tr>
+            </table>
+            </td>
+        </tr>
+        <!-- Remaining HTML content -->
+        <!-- Payment Method Details -->
+            <tr class="heading">
+                <td>Payment Method</td>
+                <td>Check #</td>
             </tr>
-            <!-- Company & Customer Information -->
-            <tr class="information">
-              <td colspan="2">
-                <table>
-                  <tr>
-                  <!-- Specify the inputs from the datasource -->
-                    <td>
-                      ${firstName || ''}<br>
-                      ${customerCompany || ''}<br>
-                      ${address || ''}<br>
-                    </td>
-                    <td>
-                      Global Inc<br>
-                      67890 First Avenue,<br>
-                      New York,<br>
-                      34567
-                    </td>
-                  </tr>
-                </table>
-              </td>
+            <tr class="details">
+                <td>Check</td>
+                <td>1001</td>
             </tr>
-            <!-- Remaining HTML content -->
-            <!-- Payment Method Details -->
-                <tr class="heading">
-                  <td>Payment Method</td>
-                  <td>Check #</td>
-                </tr>
-                <tr class="details">
-                  <td>Check</td>
-                  <td>1001</td>
-                </tr>
-                <!-- Itemized List of Services/Products -->
-                <tr class="heading">
-                  <td>Item</td>
-                  <td>Price</td>
-                </tr>
-                <tr class="item">
-                  <td>Website Design</td>
-                  <td>$300.00</td>
-                </tr>
-                <tr class="item">
-                  <td>Hosting (3 months)</td>
-                  <td>$75.00</td>
-                </tr>
-                <tr class="item last">
-                  <td>Domain Registration (1 year)</td>
-                  <td>$10.00</td>
-                </tr>
-                <!-- Total -->
-                <tr class="total">
-                  <td></td>
-                  <td>Total: $385.00</td>
-                </tr>
-              </table>
-          </table>
-        </div>
-      </body>
-      </html>
-    `;
-    
-  }
+            <!-- Itemized List of Services/Products -->
+            <tr class="heading">
+                <td>Item</td>
+                <td>Price</td>
+            </tr>
+            <tr class="item">
+                <td>Website Design</td>
+                <td>$300.00</td>
+            </tr>
+            <tr class="item">
+                <td>Hosting (3 months)</td>
+                <td>$75.00</td>
+            </tr>
+            <tr class="item last">
+                <td>Domain Registration (1 year)</td>
+                <td>$10.00</td>
+            </tr>
+            <!-- Total -->
+            <tr class="total">
+                <td></td>
+                <td>Total: $385.00</td>
+            </tr>
+            </table>
+        </table>
+    </div>
+    </body>
+    </html>
+`;
+
+}
 ```
 :::
 
