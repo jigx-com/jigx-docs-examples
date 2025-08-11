@@ -19,14 +19,10 @@ Some properties are common to all components, see [Common component properties](
       <p><code>address</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The actual address of the location.
-      Valid formats are: </p>
+      <p>The actual address of the location. Valid formats are:</p>
       <ul>
-      <li><strong>address string - city, street</strong>, e.g.
-      <code>address: 20 W 34th St., New York, NY 10001, USA</code>
-      or in an expression calling a datasource <code>=@ctx.datasources.address.street &#x26; ',' &#x26; @ctx.datasources.address.city &#x26; ',' &#x26; @ctx.datasources.address.country</code></li>
-      <li><strong>latitude and longitude</strong>, e.g.
-      <code>address: 40.759412, -73.912306</code></li>
+      <li><strong>address string - city, street</strong>, e.g. <code>address: 20 W 34th St., New York, NY 10001, USA</code> or in an expression calling a datasource <code>=@ctx.datasources.address.street &#x26; ',' &#x26; @ctx.datasources.address.city &#x26; ',' &#x26; @ctx.datasources.address.country</code></li>
+      <li><strong>latitude and longitude</strong>, e.g. <code>address: 40.759412, -73.912306</code></li>
       </ul>
     </td>
   </tr>
@@ -51,8 +47,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>markers</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map. See <em>multi-markers</em> code example below.
-      You can use an expression to provide the latitude and longitude points from a datasource. See <em>multi-datasource</em> code example below.</p>
+      <p>Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map. See <em>multi-markers</em> code example below. You can use an expression to provide the latitude and longitude points from a datasource. See <em>multi-datasource</em> code example below.</p>
     </td>
   </tr>
   <tr>
@@ -72,8 +67,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>paths</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map.
-      See <em>path-multi-points</em> code example below.</p>
+      <p>Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map. See <em>path-multi-points</em> code example below.</p>
     </td>
   </tr>
   <tr>
@@ -81,9 +75,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>viewPoint</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation.
-      Options include:
-      <code>centerPosition:</code> <code>middle</code> or <code>top</code></p>
+      <p>Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation. Options include: <code>centerPosition:</code> <code>middle</code> or <code>top</code></p>
     </td>
   </tr>
   <tr>
@@ -145,7 +137,7 @@ path-multi-points
   </tr>
   <tr>
     <td selected="false" align="left">
-      <p><a href="./../Actions/open-map.md">open-map</a> </p>
+      <p><a href="./../Actions/open-map.md">open-map</a></p>
     </td>
     <td selected="false" align="left">
       <p>The <code>action.open-map</code> lets you open your device's default map app (e.g., Google Maps, Apple Maps, or Waze) with the provided destination address. If multiple map apps are available, they will be listed for you to select one.</p>
@@ -153,7 +145,7 @@ path-multi-points
   </tr>
   <tr>
     <td selected="false" align="left">
-      <p><a href="./../Actions/open-app-settings.md">open-app-settings</a> </p>
+      <p><a href="./../Actions/open-app-settings.md">open-app-settings</a></p>
     </td>
     <td selected="false" align="left">
       <p>The <code>action.open-app-settings</code> can be configured to show when location tracking permission is not granted. Tapping the action opens the device’s settings screen.</p>
@@ -203,11 +195,10 @@ path-multi-points
       <p><code>=@ctx.system.geolocation.</code></p>
     </td>
     <td selected="false" align="left">
-      <p>coords
-      timestamp</p>
+      <p>coords timestamp</p>
     </td>
     <td selected="false" align="left">
-      <p>See  example.</p>
+      <p>See example.</p>
     </td>
   </tr>
 </table>
@@ -556,6 +547,9 @@ datasources:
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 This example demonstrates how to add a circular `radius` around the specified location. Determine whether it is in `kilometers` or `miles` and set its size (`value`). Then, select the `color` of the radius.
+
+**Examples:**
+See the full code example in GitHub.
 :::
 
 :::VerticalSplitItem
