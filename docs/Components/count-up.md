@@ -30,8 +30,7 @@ Some properties are common to all components, see [Common component properties](
       <p>Add a start date, date/time or time, in milliseconds either using:</p>
       <ul>
       <li>datasource, e.g. <code>=@ctx.datasources.events[1].date</code></li>
-      <li>expression, e.g. <code>=$toMillis('2025-05-19T10:43:04.377Z')</code>
-      If <code>startTimestamp</code> is omitted or set to null, the component remains static and does not count up.</li>
+      <li>expression, e.g. <code>=$toMillis('2025-05-19T10:43:04.377Z')</code> If <code>startTimestamp</code> is omitted or set to null, the component remains static and does not count up.</li>
       </ul>
     </td>
   </tr>
@@ -50,8 +49,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>labels</code></p>
     </td>
     <td selected="false" align="left">
-      <p>The count-up label displays time in the format Days: Hours: Minutes: Seconds. The Days section appears only when the timer exceeds 24 hours.
-      Configuration options are:</p>
+      <p>The count-up label displays time in the format Days: Hours: Minutes: Seconds. The Days section appears only when the timer exceeds 24 hours. Configuration options are:</p>
       <ul>
       <li><code>isVisible</code> (default: <code>true</code>)- Controls visibility of the count-up labels. Setting it to <code>false</code> hides the labels.</li>
       <li><code>position</code> - Determines whether the count-up labels (Days: Hours: Minutes: Seconds) appear at the top or bottom of the count-up display.</li>
@@ -76,6 +74,9 @@ Some properties are common to all components, see [Common component properties](
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 This example shows how to set up a basic `count-up` component that starts counting from the current moment.
+
+**Examples:**
+See the full code example in GitHub.
 :::
 
 :::VerticalSplitItem
@@ -101,17 +102,17 @@ header:
           uri: https://cdn.pixabay.com/photo/2024/10/02/18/24/ai-generated-9091889_640.jpg
 
 children:
- - type: component.count-up
-    options:
-      # Set labels showing hours, minutes and seconds to visible.
-      labels:
-        isVisible: true
-        # Position the labels under the count-up component.
-        position: bottom
-      # Set the required size of the component.  
-      size: extra-large
-      # Provide the start time.
-      startTimestamp: =$now()
+- type: component.count-up
+  options:
+    # Set labels showing hours, minutes and seconds to visible.
+    labels:
+      isVisible: true
+      # Position the labels under the count-up component.
+      position: bottom
+    # Set the required size of the component.  
+    size: extra-large
+    # Provide the start time.
+    startTimestamp: =$now()
 ```
 :::
 :::::
@@ -126,6 +127,9 @@ children:
 
 :::VerticalSplitItem
 This example displays two `count-up` components of different sizes. The first is `extra-large`, with `labels` `positioned` above it, while the second is `medium`-sized with `labels` below.
+
+**Examples:**
+See the full code example in GitHub.
 :::
 ::::
 
@@ -186,6 +190,9 @@ children:
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 This example showcases two `count-up` components using a datasource with timestamp records in ISO format and milliseconds. The first component uses the millisecond timestamp, while the second uses the ISO format timestamp.
+
+**Examples:**
+See the full code example in GitHub.
 :::
 
 :::VerticalSplitItem
@@ -253,6 +260,9 @@ children:
 
 :::VerticalSplitItem
 This example demonstrates how to use the jig `state` in a `when` property to initially hide the `count-up` component and reveal it when a start `button` is pressed within a `list-item`.
+
+**Examples:**
+See the full code example in GitHub.
 :::
 ::::
 
@@ -299,13 +309,13 @@ children:
       leftElement: 
         element: icon
         color: color4
-        isContained: true
+        type: contained
         icon: hammer
       # Configure a button with the onPress event to,
       # start the job by setting the state to 'In Progress'.  
       rightElement: 
         element: button
-        title: =@ctx.jig.state.start
+        title: =@ctx.jig.state.startTime
         onPress: 
          type: action.set-jig-state
          options:
@@ -319,7 +329,7 @@ children:
       leftElement: 
         element: icon
         color: color9
-        isContained: true
+        type: contained
         icon: fan
       tags:
         - text: Complete
@@ -329,7 +339,7 @@ children:
     instanceId: workTime
     # Set the when condition to determine when the count-up is visible.
     # The count-up starts using the timestamp provided once it is visible.
-    when:  =@ctx.jig.state.start = "In progress"
+    when:  =@ctx.jig.state.startTime = "In progress"
     options:
       startTimestamp: =$millis() - 10000
 ```
