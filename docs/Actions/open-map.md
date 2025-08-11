@@ -35,19 +35,12 @@ Some properties are common to all components, see [Common component properties](
       <p><code>address</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Address of location - geocode string address to location.
-      Valid formats are: </p>
+      <p>Address of location - geocode string address to location. Valid formats are:</p>
       <ul>
-      <li><strong>address string - city, street</strong>, e.g.
-      `address: 20 W 34th St., New York, NY 10001, USA
-      or in an expression calling a datasource <code>=@ctx.datasources.address</code></li>
-      <li><strong>latitude and longitude</strong>, e.g.
-      address: 40.759412, -73.912306` </li>
+      <li><strong>address string - city, street</strong>, e.g. `address: 20 W 34th St., New York, NY 10001, USA or in an expression calling a datasource <code>=@ctx.datasources.address</code></li>
+      <li><strong>latitude and longitude</strong>, e.g. address: 40.759412, -73.912306`</li>
       <li>DMS format</li>
-      <li><strong>latitude and longitude</strong>, e.g.
-      address:
-      latitude: 40.74860
-      longitude: "-73.98566"</li>
+      <li><strong>latitude and longitude</strong>, e.g. address: latitude: 40.74860 longitude: "-73.98566"</li>
       </ul>
     </td>
   </tr>
@@ -66,7 +59,7 @@ Some properties are common to all components, see [Common component properties](
       <p><code>icon</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Select an  to display when the action is configured as the secondary button or in a <a href="./../Components/jig-header.md">header action</a>.</p>
+      <p>Select an to display when the action is configured as the secondary button or in a <a href="./../Components/jig-header.md">header action</a>.</p>
     </td>
   </tr>
   <tr>
@@ -103,8 +96,14 @@ Some properties are common to all components, see [Common component properties](
 
 :::VerticalSplitItem
 In this example, a button at the bottom of the screen uses the `action.open-map` to open a modal listing the available map apps on the device. Select your preferred app to navigate to the specified address.
+
+**Example:**
+See the full code example in GitHub.
 :::
 ::::
+
+:::CodeblockTabs
+open-map-action
 
 ```yaml
 title: New York
@@ -124,17 +123,19 @@ header:
             &ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bmV3JTIweW9ya3xlbnwwfHwwfHx8MA%3D%3D
 
 children:
-  - type: component.entity-field
-  options:
-    isMultiline: true
-    label: ' '
-    value: >
-      New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean.
-      At its core is Manhattan, a densely populated borough that’s among the world’s major commercial,
-      financial, and cultural centers.
-      Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park.
-      Broadway theater is staged in neon-lit Times Square.
-
+  - type: component.entity
+    options:
+      children:
+        - type: component.entity-field
+          options:
+            isMultiline: true
+            label: ' '
+            value: >
+              New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean.
+              At its core is Manhattan, a densely populated borough that’s among the world’s major commercial,
+              financial, and cultural centers.
+              Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park.
+              Broadway theater is staged in neon-lit Times Square.
 actions:
   - children:
       # Add the action to open the modal to select the map app on the device,
@@ -144,12 +145,16 @@ actions:
           title: Go to New York
           address: New York, US
 ```
+:::
 
 ### Open map from a list (onPress)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 This example includes a list of people and places in New York. Tapping the `rightElement` button opens a modal, displaying available map apps on the device. Select your preferred app to navigate to the specified `address`. The addresses are defined in a datasource in various formats, including text strings, latitude, and longitude.
+
+**Example:**
+See the full code example in GitHub.
 :::
 
 :::VerticalSplitItem
@@ -158,7 +163,7 @@ This example includes a list of people and places in New York. Tapping the `righ
 ::::
 
 :::CodeblockTabs
-open-map.jigx
+open-map-onpress.jigx
 
 ```yaml
 title: Open map
@@ -235,6 +240,9 @@ datasources:
 
 :::VerticalSplitItem
 This example describes Central Park in New York. Tapping the ellipsis opens the secondary action button, which is configured with an `icon` displayed to the left of the `title`. When tapped, a modal opens, listing available map apps on the device. Select your preferred app to navigate to the specified `address`, defined by latitude and longitude.
+
+**Example:**
+See the full code example in GitHub.
 :::
 ::::
 
@@ -253,55 +261,11 @@ header:
       type: component.image
       options:
         source:
-          uri: >
-            https://images.unsplash.com/photo-1631729779674-1f369e1116b4
-            ?w=800&auto=format&fit=crop&q=60
-            &ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2VudHJhbCUyMHBhcmt8ZW58MHx8MHx8fDA%3D
-
+          uri: https://images.unsplash.com/photo-1631729779674-1f369e1116b4?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2VudHJhbCUyMHBhcmt8ZW58MHx8MHx8fDA%3D
+      
 children:
   - type: component.entity
     options:
-      children:
-      - type: component.entity-field
-        options:
-          isMultiline: true
-          label: ' '
-          value: >
-            A green oasis amidst the towering skyscrapers, 
-            Central Park spans 843 acres. 
-            This park is a microcosm of New York City itself.
-actions:
-  - children:
-     # Primary action button
-      - type: action.go-to
-        options:  
-          title: Book trip
-          linkTo: booking
-      # Secondary action button, use the ellipsis to see the button on the screen.
-      # The action.open-map opens the modal to select a map app on the device.   
-      - type: action.open-map
-        options:
-          style:
-            isSecondary: true
-          # Add an icon that displays in the left of the title.  
-          icon: end-marker
-          # Give the action button a name.
-          title: Navigate
-          # Specify the address for the action button.
-          address: 40.7827902614508, -73.96559413203381
-children:
-  - type: component.entity
-    header:
-  type: component.jig-header
-  options:
-    height: small
-    children: 
-      type: component.image
-      options:
-        source:
-          uri: https://images.unsplash.com/photo-1631729779674-1f369e1116b4?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2VudHJhbCUyMHBhcmt8ZW58MHx8MHx8fDA%3D
-
-       options:
       children:
       - type: component.entity-field
         options:
@@ -311,18 +275,18 @@ children:
         
 actions:
   - children:
-     # Primary action button
+      # Primary action button
       - type: action.go-to
         options:  
           title: Book trip
           linkTo: booking
       # Secondary action button, use the ellipsis to see the button on the screen.
-      # The action.open-map opens the modal to select a map app on the device.   
+      # The action.open-map opens the modal to select a map app on the device.    
       - type: action.open-map
         options:
           style:
             isSecondary: true
-          # Add an icon that displays in the left of the title.  
+           # Add an icon that displays in the left of the title.  
           icon: end-marker
           # Give the action button a name.
           title: Navigate
@@ -340,6 +304,9 @@ actions:
 
 :::VerticalSplitItem
 In this example, the `action.open-map` is configured in the `jig.header` action to open a modal listing the available map apps on the device. Select your preferred app to navigate to the specified address. The action is configured with an icon rather than a button.
+
+**Example:**
+See the full code example in GitHub.
 :::
 ::::
 

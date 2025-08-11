@@ -25,21 +25,7 @@ This action lets you immediately open the media picker, enabling you to capture 
       <p><code>mediaType</code></p>
     </td>
     <td selected="false" align="left">
-      <p>By default the value is set to <code>image</code>. The following options are available for selection:
-      1) <code>any</code> is for files of any extension such as pdf, jpeg, png, mpeg, txt, or docx. Set to <code>any</code> allows you to take a picture, record a video, select an image or video from the library, or select a document. Using <code>mediaType: any</code> is recommended when uploading multiple media files as it caters for any file type.
-      2) <code>csv</code> - select CSV files.
-      3) <code>doc</code> - select DOC or DOCX files.
-      4) <code>image</code> - used to take a picture or select from the image library.
-      5) <code>imageAndVideo</code> - take a picture, record a video or select an  image or video from the library.
-      6) <code>pdf</code> - select PDF files.
-      7) <code>plainText</code> - select plain text files.
-      8) <code>ppt</code> - select PPT or PPTX files.
-      9) <code>video</code> - record a video or upload one from the library.
-      10) <code>xls</code> -  select XLS or XLSX files.
-      Configure filters to restrict media types based on your app’s requirements, for example, only allow document files DOC, PDF or plain text.
-      <code>mediaType:</code>
-      <code>- doc</code>
-      <code>- pdf</code></p>
+      <p>By default the value is set to <code>image</code>. The following options are available for selection: 1) <code>any</code> is for files of any extension such as pdf, jpeg, png, mpeg, txt, or docx. Set to <code>any</code> allows you to take a picture, record a video, select an image or video from the library, or select a document. Using <code>mediaType: any</code> is recommended when uploading multiple media files as it caters for any file type. 2) <code>csv</code> - select CSV files. 3) <code>doc</code> - select DOC or DOCX files. 4) <code>image</code> - used to take a picture or select from the image library. 5) <code>imageAndVideo</code> - take a picture, record a video or select an image or video from the library. 6) <code>pdf</code> - select PDF files. 7) <code>plainText</code> - select plain text files. 8) <code>ppt</code> - select PPT or PPTX files. 9) <code>video</code> - record a video or upload one from the library. 10) <code>xls</code> - select XLS or XLSX files. Configure filters to restrict media types based on your app’s requirements, for example, only allow document files DOC, PDF or plain text. <code>mediaType:</code> <code>- doc</code> <code>- pdf</code></p>
     </td>
   </tr>
 </table>
@@ -57,7 +43,7 @@ This action lets you immediately open the media picker, enabling you to capture 
       <p><code>icon</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Specify the  to display on the action button. The icon only applies to <code>swipeable</code>, <code>secondary</code>, and <a href="./../Components/jig-header.md">header</a> actions. Icon setups are not supported on primary actions.</p>
+      <p>Specify the to display on the action button. The icon only applies to <code>swipeable</code>, <code>secondary</code>, and <a href="./../Components/jig-header.md">header</a> actions. Icon setups are not supported on primary actions.</p>
     </td>
   </tr>
   <tr>
@@ -111,7 +97,7 @@ This action lets you immediately open the media picker, enabling you to capture 
       <p><code>style</code></p>
     </td>
     <td selected="false" align="left">
-      <p>Add styling to the action button. More than one can be set to true, evaluation is based on priority. </p>
+      <p>Add styling to the action button. More than one can be set to true, evaluation is based on priority.</p>
       <ul>
       <li><code>isDanger</code> - Change the button style to error</li>
       <li><code>isDisabled</code> - Disables the button preventing it from being tapped.</li>
@@ -141,8 +127,7 @@ This action lets you immediately open the media picker, enabling you to capture 
       <p>newItems</p>
     </td>
     <td selected="false" align="left">
-      <p>string[]
-      Used for newly added items that were successfully uploaded.</p>
+      <p>string[] Used for newly added items that were successfully uploaded.</p>
     </td>
   </tr>
   <tr>
@@ -153,8 +138,7 @@ This action lets you immediately open the media picker, enabling you to capture 
       <p>invalidItems</p>
     </td>
     <td selected="false" align="left">
-      <p>string[]
-      Used for options that are invalid or failed to upload successfully.</p>
+      <p>string[] Used for options that are invalid or failed to upload successfully.</p>
     </td>
   </tr>
 </table>
@@ -169,6 +153,8 @@ This action lets you immediately open the media picker, enabling you to capture 
 ### Open-media-picker to capture an image
 
 In this example, the button opens the media-picker. The configuration is set to take a picture or choose from library. The image is saved to the local database.
+**Example:**
+See the full code example in GitHub.
 
 ![Action open media-picker](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a3B29qbky6oi4N7auiU5F-20250220-173914.png "Action open media-picker")
 
@@ -188,9 +174,9 @@ header:
       options:
         source:
           uri: >
-       https://images.unsplash.com/photo-1640682841767-cdfce3aea6e0
-       ?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3
-       &ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBsdW1iZXJ8ZW58MHx8MHx8fDA%3D
+            https://images.unsplash.com/photo-1640682841767-cdfce3aea6e0
+            ?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3
+            &ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBsdW1iZXJ8ZW58MHx8MHx8fDA%3D
 
 children:
   - type: component.form
