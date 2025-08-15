@@ -1,33 +1,38 @@
 ---
 title: Reading Dynamic Data
 slug: KNt_-reading-dynamic-data-tables
-description: Learn how to display employee data on a mobile device using Jigx. This document covers creating a Jig to list employees, configuring the YAML for data source and query, customizing list item display, publishing the solution, and includes a helpful screens
 createdAt: Wed Jul 13 2022 10:22:47 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Mar 06 2025 08:38:51 GMT+0000 (Coordinated Universal Time)
+description: >-
+  Learn how to display employee data on a mobile device using Jigx. This
+  document covers creating a Jig to list employees, configuring the YAML for
+  data source and query, customizing list item display,
 ---
 
-In this example, we **read** the employee data records we created in the employee Dynamic Data table ([Creating Dynamic Data](<./Creating Dynamic Data.md>)), to create a list of the employees and their details.
+# Reading Dynamic Data
 
-## Datasources, jig & component
+In this example, we **read** the employee data records we created in the employee Dynamic Data table ([Creating Dynamic Data](<Creating Dynamic Data.md>)), to create a list of the employees and their details.
+
+### Datasources, jig & component
 
 1. **default.jigx** is the database where the Dynamic Data table is defined.
-2. [sqlite](./../../Datasource/sqlite.md) datasource calls the Dynamic Data provider, using an SQL query to return the data.
-3. [jig.list](<./../../Jig Types/jig_list.md>) is the type of jig we will use to list the data.
-4. [expander](./../../Components/expander.md) component to show the Dynamic Data in.
+2. [sqlite](../../Datasource/sqlite.md) datasource calls the Dynamic Data provider, using an SQL query to return the data.
+3. [jig.list](<../../Jig Types/jig_list.md>) is the type of jig we will use to list the data.
+4. [expander](../../Components/expander.md) component to show the Dynamic Data in.
 
-## Examples and code snippets
+### Examples and code snippets
 
-This example uses the Dynamic Data table, columns, and data records created in the [Creating Dynamic Data](<./Creating Dynamic Data.md>) example to create a list of employees with their details.
+This example uses the Dynamic Data table, columns, and data records created in the [Creating Dynamic Data](<Creating Dynamic Data.md>) example to create a list of employees with their details.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-INvHFGW3XIisjDMFXvQ_a-20250306-083847.png" size="78" position="center" caption="Reading Dynamic Data " alt="Reading Dynamic Data "}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-INvHFGW3XIisjDMFXvQ\_a-20250306-083847.png" size="78" position="center" caption="Reading Dynamic Data " alt="Reading Dynamic Data "}
 
 Here is what the data table employee resembles in [Data](https://docs.jigx.com/data) in Jigx Management.
 
-![Employee Dynamic Data](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ryCmLjukF38TWd_rs1Ayw_dd-list-mngt.png "Employee Dynamic Data")
+![Employee Dynamic Data](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ryCmLjukF38TWd_rs1Ayw_dd-list-mngt.png)
 
-:::CodeblockTabs
-list-employees.jigx
-
+{% tabs %}
+{% tab title="list-employees.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 title: Employee list
 type: jig.list
@@ -114,25 +119,27 @@ item:
                 value: =@ctx.current.item.email
                 contentType: email
 ```
+{% endcode %}
+{% endtab %}
 
-default.jigx
-
+{% tab title=" default.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 tables:
   employee: null
 ```
+{% endcode %}
+{% endtab %}
 
-index.jigx
-
-```yaml
-ame: employees
-title: Employees
+{% tab title="index.jigx" %}
+<pre class="language-yaml" data-full-width="true"><code class="lang-yaml"><strong>name: employees
+</strong>title: Employees
 category: business
 
 tabs:
   home:
     jigId: list-employees
     icon: home-apps-logo
-```
-
-:::
+</code></pre>
+{% endtab %}
+{% endtabs %}
