@@ -1,10 +1,15 @@
 ---
 title: Setting up your solution
 slug: 1gfe-setting-up-your-solution
-description: Learn how to publish and use a sample solution with JigxBuilder in this comprehensive document. Discover the step-by-step instructions for publishing and viewing the solution in JigxManagement, as well as assigning users to it. Take advantage of dynamic d
 createdAt: Mon Jun 13 2022 19:39:00 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Jan 18 2024 14:09:17 GMT+0000 (Coordinated Universal Time)
+description: >-
+  Learn how to publish and use a sample solution with JigxBuilder in this
+  comprehensive document. Discover the step-by-step instructions for publishing
+  and viewing the solution in JigxManagement, as wel
 ---
+
+# Setting up your solution
 
 With the sample solution in your possession, you are now equipped with all the necessary tools to assist you on your journey toward becoming an extraordinary Jigx Builder.
 
@@ -17,9 +22,9 @@ To see the samples in the Jigx App, and experience the functionality first-hand,
 3. Now publish the solution as per [publishing your solutions](https://docs.jigx.com/publishing-a-solution).
 4. Navigate to the solutions in Jigx Management to view the solution.
 
-:::hint{type="warning"}
+{% hint style="warning" %}
 The solution will not be visible in Jigx Management until the solution is published.
-:::
+{% endhint %}
 
 ### **Assigning users to the solution**
 
@@ -28,9 +33,9 @@ Now that the solution has been published, the right people need access.
 1. Once the solution has been published, the creator that performed the publishing will be listed as the `Owner` of the solution and will automatically have Owner rights
 2. You can adjust these rights or assign additional users to this solution. Refer to [Users](https://docs.jigx.com/users) for more information on this.
 
-:::hint{type="success"}
-If at any time you don't want the sample solution visible in the application, you can set your rights to Deny.
-:::
+{% hint style="success" %}
+&#x20;If at any time you don't want the sample solution visible in the application, you can set your rights to Deny.
+{% endhint %}
 
 ### Uploading databases
 
