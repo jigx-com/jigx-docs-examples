@@ -1,29 +1,29 @@
 ---
 title: Updating Dynamic Data
 slug: P4l1-updating-dynamic-data-records
-description: Learn how to update Dynamic Data in Jigx with this comprehensive guide. Discover how to configure onPress events and pass employee forms for specific employees. Find out how to populate forms with employee data and add hidden fields for employee IDs. Expl
 createdAt: Wed Jul 13 2022 10:22:51 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Mar 06 2025 08:57:54 GMT+0000 (Coordinated Universal Time)
 ---
 
-The employee's details are updated using the Dynamic Data provider's **update** method in this example. The same employee list ([Reading Dynamic Data](<./Reading Dynamic Data.md>)) is used to select the employee and then populate the employee form ([Creating Dynamic Data](<./Creating Dynamic Data.md>)) with the employee's existing details. Edit the required details and update the record in the Dynamic Data table.
+# Updating Dynamic Data
 
-## Datasources, jigs, components & actions
+The employee's details are updated using the Dynamic Data provider's **update** method in this example. The same employee list ([Reading Dynamic Data](<Reading Dynamic Data.md>)) is used to select the employee and then populate the employee form ([Creating Dynamic Data](<Creating Dynamic Data.md>)) with the employee's existing details. Edit the required details and update the record in the Dynamic Data table.
+
+### Datasources, jigs, components & actions
 
 1. **default.jigx** is the database where the Dynamic Data table is defined.
-2. [sqlite](./../../Datasource/sqlite.md) datasource calls the Dynamic Data provider, using an SQL query to return the data.
-3. [jig.list](<./../../Jig Types/jig_list.md>) is the type of jig used to list the data in an [expander](./../../Components/expander.md) component with an `onContentPress` action with `parameters` to transfer the selected employee's details to the form.
-4. [form](./../../Components/form.md) is the component used with `initialValue` properties to populate the employee data into the form fields.
-5. [submit-form](./../../Actions/submit-form.md) is the action that executes the **update** method of the Dynamic Dataprovider with the `recordId` property configured to identify the record in the table that must be updated
+2. [sqlite](../../Datasource/sqlite.md) datasource calls the Dynamic Data provider, using an SQL query to return the data.
+3. [jig.list](<../../Jig Types/jig_list.md>) is the type of jig used to list the data in an [expander](../../Components/expander.md) component with an `onContentPress` action with `parameters` to transfer the selected employee's details to the form.
+4. [form](../../Components/form.md) is the component used with `initialValue` properties to populate the employee data into the form fields.
+5. [submit-form](../../Actions/submit-form.md) is the action that executes the **update** method of the Dynamic Dataprovider with the `recordId` property configured to identify the record in the table that must be updated
 
-## Examples and code snippets
+### Examples and code snippets
 
-![Update Dynamic Data record](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-PwrJAGWRqJ1-VCbSPSb7N-20250306-085704.png "Update Dynamic Data record")
+![Update Dynamic Data record](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-PwrJAGWRqJ1-VCbSPSb7N-20250306-085704.png)
 
-Use the employee list with `component.expanders` add the `onContentPress` action that will open the employee form,  add `parameters` to transfer the employee details to the form.
+Use the employee list with `component.expanders` add the `onContentPress` action that will open the employee form, add `parameters` to transfer the employee details to the form.
 
-:::CodeblockTabs
-list-employees.jigx
+:::CodeblockTabs list-employees.jigx
 
 ```yaml
 title: Employee list
@@ -140,14 +140,11 @@ tabs:
 
 :::
 
-In the pre-populate *Update Employee* form add the `action.submit-form` using theDynamic Data provider with the **update** method to update the data record.
+In the pre-populate _Update Employee_ form add the `action.submit-form` using theDynamic Data provider with the **update** method to update the data record.
 
-:::hint{type="info"}
-The record is updated intstantly and the new employee details are shown in the list
-:::
+:::hint{type="info"} The record is updated intstantly and the new employee details are shown in the list :::
 
-:::CodeblockTabs
-update-employee.jigx
+:::CodeblockTabs update-employee.jigx
 
 ```yaml
 title: Update Employee
@@ -264,4 +261,4 @@ tabs:
 
 Navigate to the solution's Data option in Jigx Management and view the updated Dynamic Data employee table and record.
 
-![Updated Dynamic Data record](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/V3ZS4IyJ8RJ78mKGJdRJ2_dd-update-mngt.png "Updated Dynamic Data record")
+![Updated Dynamic Data record](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/V3ZS4IyJ8RJ78mKGJdRJ2_dd-update-mngt.png)
