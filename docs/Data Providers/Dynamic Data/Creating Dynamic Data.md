@@ -1,53 +1,51 @@
 ---
 title: Creating Dynamic Data
 slug: 4lPS-creating-data-using-a-form
-description: Learn how to create a form using the default Jig type and save employee data with this comprehensive document. Follow the step-by-step instructions to define form fields, configure the Jig, and add YAML code. Discover how to create an action for data savi
 createdAt: Wed Jul 13 2022 10:20:52 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Mar 06 2025 08:30:25 GMT+0000 (Coordinated Universal Time)
 ---
 
+# Creating Dynamic Data
+
 Creating Dynamic Data can be achieved in several ways, one of which is by using a form. In this example, we will demonstrate how to create a new employee form that will create the employee table, columns, and data record in the Dynamic Data database when the form is submitted.
 
-## Data provider, jig, component & action
+### Data provider, jig, component & action
 
 1. **default.jigx** is the database where the Dynamic Data table is defined.
-2. [jig.default](<./../../Jig Types/jig_default.md>) is the type of jig we will use to contain the form.
-3. [form](./../../Components/form.md) is the component used with text and date fields.
-4. [submit-form](./../../Actions/submit-form.md) is the action that executes the create method of the Dynamic Dataprovider
+2. [jig.default](<../../Jig Types/jig_default.md>) is the type of jig we will use to contain the form.
+3. [form](../../Components/form.md) is the component used with text and date fields.
+4. [submit-form](../../Actions/submit-form.md) is the action that executes the create method of the Dynamic Dataprovider
 
-## Examples and code snippets
+### Examples and code snippets
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-i6ehWvPp7BFJyRJURpPe2-20250306-083004.png" size="66" position="center" caption="Form creating Dynamic Data" alt="Form creating Dynamic Data"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-i6ehWvPp7BFJyRJURpPe2-20250306-083004.png" size="66" position="center" caption="Form creating Dynamic Data" alt="Form creating Dynamic Data"}
 
-![Dynamic data database ](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BBlDwFNCg9r4DSlmAFOO8_dd-employee-mngt.png "Dynamic data database ")
+![Dynamic data database](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BBlDwFNCg9r4DSlmAFOO8_dd-employee-mngt.png)
 
 ### Create the Dynamic Data table
 
-:::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 In Jigx Builder under the databases folder in the **default.jigx** file the employee table is added. This will create the table in Dynamic Data.
-:::
+{% endcolumn %}
 
-::::VerticalSplitItem
-:::CodeblockTabs
-default.jigx
-
+{% column %}
+{% code title="default.jigx" %}
 ```yaml
 tables:
   employee: null
 ```
-
-:::
-::::
-:::::
+{% endcode %}
+{% endcolumn %}
+{% endcolumns %}
 
 ### Create the jig, form and action
 
 The code example below is for the `jig.default` with the `component.form` that uses `componet.text` and `component.date-picker` to create the fields on the form. The `action.submit-form` executes the `DATA_PROVIDER_DYNAMIC` that uses the `save/create` method to create columns and data records.
 
-:::CodeblockTabs
-new-employee-form.jigx
-
+{% tabs %}
+{% tab title="new-employee-form.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 title: New Employee
 description: Employee form
@@ -70,7 +68,7 @@ children:
     options:
       title: Personal Information
       children:
-        # add the form component with fields to capture the dynamic data record
+        # add the form component with fields to capture the dynamic data         record
         - type: component.form
           # The id is used in the action for context to the fields which crete the columns and data
           instanceId: form-employee
@@ -135,9 +133,10 @@ actions:
           onSuccess:
             type: action.go-back
 ```
+{% endcode %}
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: employees
 title: Employees
@@ -148,8 +147,8 @@ tabs:
     jigId: new-employee-form
     icon: home-apps-logo
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### View the Dynamic Data in Jigx Management
 
