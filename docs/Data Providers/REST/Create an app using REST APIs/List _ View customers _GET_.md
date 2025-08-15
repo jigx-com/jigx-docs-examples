@@ -1,33 +1,28 @@
 # List & View customers (GET)
 
-## Scenario
+### Scenario
 
-In this scenario, records are limited to return only fifty from the REST service. Continuation is used to ensure all customer records are returned. By pressing on the customer in the [list of customers](<./List customers _GET_.md>) loads that specific customer's details in a form.
+In this scenario, records are limited to return only fifty from the REST service. Continuation is used to ensure all customer records are returned. By pressing on the customer in the [list of customers](<List customers _GET_.md>) loads that specific customer's details in a form.
 
 ### How does this work
 
 The REST APIs GET operator is used in a Jigx function with an `outputTransform` to specify the exact data to be returned. A `continuation` is added to return all records; the records property specifies all records in the customer's table. A global action is configured to sync the data in the app with the REST data provider calling the function. In turn, the global action is called in the index.jigx file to load the data when the app is opened. In the list jig the local data provider is used to configure the list-item component. In the view-customer jig `jsonProperties` are used for address and phone to return the nested object.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9_rest-listview.PNG" size="76" position="center" caption="List & view customer details" alt="List & view customer details" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9_rest-listview.PNG" width="800" height="799" darkWidth="800" darkHeight="799"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9\_rest-listview.PNG" size="76" position="center" caption="List & view customer details" alt="List & view customer details" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9\_rest-listview.PNG" width="800" height="799" darkWidth="800" darkHeight="799"}
 
-:::hint{type="info"}
-This code sample builds upon the previous [List customers (GET)](<./List customers _GET_.md>) step, to develop a complete and functional solution.
-:::
+{% hint style="info" %}
+This code sample builds upon the previous [List customers (GET)](<List customers _GET_.md>) step, to develop a complete and functional solution.
+{% endhint %}
 
-## REST API
+### REST API
 
-| **REST**         | **Detail**                                    |
-| ---------------- | --------------------------------------------- |
-| URL              | https\://\[your\_rest\_service]/api/customers |
-| Operation/Method | GET                                           |
+<table data-header-hidden><thead><tr><th width="180.8515625">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/customers</td></tr><tr><td>Operation/Method</td><td>GET</td></tr></tbody></table>
 
-## Function
+### Function
 
 Specify the REST API url and operation (method), parameters to include authentication in the header and in the `outputTransform` define the data properties to be returned. Add a `continuation` and `record` cofiguartion to return all records from the customers table.
 
-:::CodeblockTabs
-rest-get-customer-cont.jigx
-
+{% code title="rest-get-customer-cont.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 # Fetches data from the REST Service.
@@ -78,15 +73,13 @@ outputTransform: |
     "next_link": next_link
   }
 ```
-:::
+{% endcode %}
 
-## Action (global)
+### Action (global)
 
-Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or  is in focus on the device.
+Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or is in focus on the device.
 
-:::CodeblockTabs
-load-data.jigx
-
+{% code title="load-data.jigx" %}
 ```yaml
 # The sync-entities action is used to get the data from the REST data
 # provider using the function. The global action can be referenced 
@@ -103,20 +96,19 @@ action:
         function: rest-get-usStates  
         
 ```
-:::
+{% endcode %}
 
-## Jig (screen)
+### Jig (screen)
 
-- Use a list jig type to configure a list of customers.
-- Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured with a query to provide the data for use in the list.
-- Add an `onPress` to link to the view-customer jig.
-- In the datasource query of the view-customer jig use `jsonProperties` to return the complex structure for address and phone.
-- configure a `queryParameter` using `inputs` to return the customer details by id.
-- Expressions are used to reference the exact data property required in each component.
+* Use a list jig type to configure a list of customers.
+* Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured with a query to provide the data for use in the list.
+* Add an `onPress` to link to the view-customer jig.
+* In the datasource query of the view-customer jig use `jsonProperties` to return the complex structure for address and phone.
+* configure a `queryParameter` using `inputs` to return the customer details by id.
+* Expressions are used to reference the exact data property required in each component.
 
-:::CodeblockTabs
-view-customer-details.jigx
-
+{% tabs %}
+{% tab title="view-customer-details.jigx" %}
 ```yaml
 title: Customer Details
 type: jig.default
@@ -207,11 +199,11 @@ children:
           options:
             contentType: link
             label: Web
-            value: =@ctx.datasources.customer.web                   
+            value: =@ctx.datasources.customer.web      
 ```
+{% endtab %}
 
-list-customers.jigx
-
+{% tab title="list-customers.jigx" %}
 ```yaml
 title: Global Customers
 type: jig.list
@@ -331,15 +323,14 @@ actions:
           title: Add Customer
           linkTo: new-customer
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-## Index
+### Index
 
-For performance and offline support the data is synced from the REST service as soon as the app is opened or recieves focus. This is achieved by calling the global action in the `OnFocus` and `onLoad` events.
+For performance and offline support the data is synced from the REST service as soon as the app is opened or receives focus. This is achieved by calling the global action in the `OnFocus` and `onLoad` events.
 
-:::CodeblockTabs
-index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 name: hello-rest-example
 title: Hello REST Solution
@@ -366,5 +357,4 @@ tabs:
     jigId: list-customers
     icon: home-apps-logo
 ```
-:::
-
+{% endcode %}

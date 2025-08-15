@@ -38,7 +38,7 @@ The Jigx function is listed twice, once for executing a stored procedure and onc
 
 #### A store procedure-based version of get-customer.jigx
 
-{% code title="get-customer.jigx" fullWidth="true" %}
+{% code title="get-customer.jigx" fullWidth="false" %}
 ```yaml
 # Jigx SQL function executing a stored procedure to select only a single customer. 
 provider: DATA_PROVIDER_SQL
@@ -58,7 +58,7 @@ forRowsWithMatchingIds: true
 
 #### A query-based version of get-customer.jigx
 
-{% code title="get-customers.jigx" fullWidth="true" %}
+{% code title="get-customers.jigx" fullWidth="false" %}
 ```yaml
 # Jigx SQL function executing a stored procedure to select only a single customer. 
 provider: DATA_PROVIDER_SQL
@@ -100,7 +100,7 @@ The listCustomers.jigx file must be modified to include an onPress action. When 
 
 Add the onPress code to the bottom of the listCustomers.jigx file:
 
-{% code title=" listCustomers.jigx" fullWidth="true" %}
+{% code title=" listCustomers.jigx" fullWidth="false" %}
 ```yaml
 # A sample list jig that uses a SQL function to return and display a list of customers from Azure SQL.
 title: List Customers
@@ -197,7 +197,7 @@ The data on the jig displays using an `entity` and `entity- fields` component. I
 
 The YAML for viewing the selected customer is:
 
-{% code title="viewCustomer.jigx" fullWidth="true" %}
+{% code title="viewCustomer.jigx" fullWidth="false" %}
 ```yaml
 # A sample jig that uses a SQL function to return and display a customer's details from Azure SQL.
 # The title property uses a JSONata expression to concatenate the customer's first and last names as the title of the jig.
@@ -314,7 +314,7 @@ children:
 
 Add the list of customers jig to the home screen.
 
-{% code title="index.jigx" fullWidth="true" %}
+{% code title="index.jigx" fullWidth="false" %}
 ```yaml
 name: azure-sql-docs
 title: Azure SQL Docs

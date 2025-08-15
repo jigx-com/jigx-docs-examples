@@ -1,39 +1,34 @@
 # Update customer details (PUT)
 
-## Scenario
+### Scenario
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-Add the ability to update a customer's details by pressing on the customer in the [list of customers](<./List customers _GET_.md>) which loads that specific customer's details in a form. You can edit the fields and press the *Update Customer* button.
-:::
+{% columns %}
+{% column %}
+Add the ability to update a customer's details by pressing on the customer in the [list of customers](<List customers _GET_.md>) which loads that specific customer's details in a form. You can edit the fields and press the _Update Customer_ button.
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ag9cStah_4Z8BJQELauFL_rest-update.PNG" size="70" position="center" caption="Update customer" alt="Update customer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ag9cStah_4Z8BJQELauFL_rest-update.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ag9cStah\_4Z8BJQELauFL\_rest-update.PNG" size="70" position="center" caption="Update customer" alt="Update customer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ag9cStah\_4Z8BJQELauFL\_rest-update.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+{% endcolumn %}
+{% endcolumns %}
 
 ### How does this work
 
-The customer details are loaded using the customer id as the `inputs` from the list-customer jig.  An update function to call the REST APIs PUT operation is configured. The function and function parameters are referenced in the `execute-entity` action in the jig, which will update the customer's details when the *Update Customer* button is pressed on the form. A Post operation is performed in the REST service.
+The customer details are loaded using the customer id as the `inputs` from the list-customer jig. An update function to call the REST APIs PUT operation is configured. The function and function parameters are referenced in the `execute-entity` action in the jig, which will update the customer's details when the _Update Customer_ button is pressed on the form. A Post operation is performed in the REST service.
 
-:::hint{type="info"}
-This code sample builds upon the previous [List customers (GET)](<./List customers _GET_.md>) step, to develop a complete and functional solution.
-:::
+{% hint style="info" %}
+This code sample builds upon the previous [List customers (GET)](<List customers _GET_.md>) step, to develop a complete and functional solution.
+{% endhint %}
 
-## REST API
+### REST API
 
-| **REST**         | **Detail**                                    |
-| ---------------- | --------------------------------------------- |
-| URL              | https\://\[your\_rest\_service]/api/customers |
-| Operation/Method | PUT                                           |
+<table><thead><tr><th width="177.6328125">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/customers</td></tr><tr><td>Operation/Method</td><td>PUT</td></tr></tbody></table>
 
-## Function
+### Function
 
 The REST APIs PUT operator is used in a Jigx function with body parameters to specify the exact columns to be updated for the record. The `inputTransform` specifies how the data should be structured or formatted when being sent to the REST service. This transformation process ensures that the data adheres to the expected schema or format required by the REST service for processing the request.
 
-:::CodeblockTabs
-rest-update-customer.jigx
-
+{% code title="rest-update-customer.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 # Updates data in the REST Service.
@@ -134,15 +129,13 @@ inputTransform: |
     "jobTitle": jobTitle
   }
 ```
-:::
+{% endcode %}
 
-## Action (global)
+### Action (global)
 
-Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or  is in focus on the device.
+Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or is in focus on the device.
 
-:::CodeblockTabs
-load-data.jigx
-
+{% code title="load-data.jigx" %}
 ```yaml
 # The sync-entities action is used to get the data from the REST data
 # provider using the function. The global action can be referenced throughout
@@ -159,19 +152,18 @@ action:
         function: rest-get-usStates  
         
 ```
-:::
+{% endcode %}
 
-## Jig (screen)
+### Jig (screen)
 
-- On the list of customers jig configure an `on-press` action in the `swipable: left` event that adds the *View* button to the list and links to the update-customer jig.
-- Add a form component to load the customer details with each field's instanceId containing the same name as the body parameters in the function.
-- For the state field configure a dropdrown with an expression to get the list of states for selection.
-- Configure an `initialValue` property for each field in the form using an expression to return the customer data for that field.
-- Add an `execute-entity` action to call the function that will update the customer record in the local table (using `method: update`) and in the REST service (`function: rest-update-customer`). Use an expression to specify the value for each of the function's parameters. Note that the customer id already exists and the expression for `id:` uses the `inputs` again to specifiy the customer record that must be updated. The `parameters` updates the record in the REST service, while the `data` property updates the record in the local database.
+* On the list of customers jig configure an `on-press` action in the `swipable: left` event that adds the _View_ button to the list and links to the update-customer jig.
+* Add a form component to load the customer details with each field's instanceId containing the same name as the body parameters in the function.
+* For the state field configure a dropdrown with an expression to get the list of states for selection.
+* Configure an `initialValue` property for each field in the form using an expression to return the customer data for that field.
+* Add an `execute-entity` action to call the function that will update the customer record in the local table (using `method: update`) and in the REST service (`function: rest-update-customer`). Use an expression to specify the value for each of the function's parameters. Note that the customer id already exists and the expression for `id:` uses the `inputs` again to specifiy the customer record that must be updated. The `parameters` updates the record in the REST service, while the `data` property updates the record in the local database.
 
-:::CodeblockTabs
-update-customer.jigx
-
+{% tabs %}
+{% tab title="update-customer.jigx" %}
 ```yaml
 title: Update Customer
 type: jig.default
@@ -382,11 +374,11 @@ actions:
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value            
           onSuccess: 
-            type: action.go-back  
+            type: action.go-back
 ```
+{% endtab %}
 
-list-customers.jigx
-
+{% tab title="list-customers.jigx" %}
 ```yaml
 title: Global Customers
 type: jig.list
@@ -490,15 +482,14 @@ item:
                 title: Are you sure?
                 description: =('Press Confirm to permanently delete ' & @ctx.current.item.companyName)
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-## Index
+### Index
 
 For performance and offline support the data is synced from the REST service as soon as the app is opened or receives focus. This is achieved by calling the global action in the `OnFocus` and `onLoad` events.
 
-:::CodeblockTabs
-index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 name: hello-rest-example
 title: Hello REST Solution
@@ -525,5 +516,4 @@ tabs:
     jigId: list-customers
     icon: home-apps-logo
 ```
-:::
-
+{% endcode %}

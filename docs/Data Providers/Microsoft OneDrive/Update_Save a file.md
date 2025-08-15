@@ -41,7 +41,7 @@ To upload a file use the `media-field` component to select the file. Use the `im
 
 The code below provides an example of a list of invoices in the `myfiles` directory of OneDrive. When selecting the file in the dropdown list, the file name is displayed and the media picker is used to uploade the updated file. Pressing the _Update Invoice_ button updates the file on OneDrive.
 
-{% code title="update-file.jigx" fullWidth="true" %}
+{% code title="update-file.jigx" fullWidth="false" %}
 ```yaml
 title: Update Invoice
 description: Update monthly invoices
@@ -59,7 +59,7 @@ header:
 onFocus:
   type: action.sync-entities
   options:
-    #use the OneDrive provider to sync the file metadata to the local provider
+    #use the OneDrive provider to sync the file metadata to the local provider.
     provider: DATA_PROVIDER_ONEDRIVE
     entities:
       - entity: myfiles
@@ -92,13 +92,13 @@ children:
                 title: =@ctx.current.item.name
                 value: =@ctx.current.item.name
         - type: component.text-field
-          # reference the required OneDrive fileName property as the instanceId
+          # reference the required OneDrive fileName property as the instanceId.
           instanceId: FileName
           options:
             label: Invoice Name
             initialValue: =@ctx.components.SelectFile.state.selected.name
         - type: component.media-field
-          # reference the required OneDrive file property as the instanceId
+          # reference the required OneDrive file property as the instanceId.
           instanceId: File
           options:
             label: Updated Invoice
@@ -117,7 +117,8 @@ actions:
                 onConfirmed:
                   type: action.execute-entity
                   options:
-                    # Use the OneDrive provider with the update method to update the file on OneDrive
+                    # Use the OneDrive provider with the update method to update the
+                    # file on OneDrive.
                     provider: DATA_PROVIDER_ONEDRIVE
                     entity: myfiles
                     method: update
@@ -136,7 +137,7 @@ actions:
 
 Example of a `modal` message that can be displayed when overwriting an existing file.
 
-{% code title="Modal" fullWidth="true" %}
+{% code title="Modal" fullWidth="false" %}
 ```yaml
 modal:
   title: This will overwrite the existing file, are you sure you want to proceed?

@@ -54,7 +54,7 @@ The Jigx function is listed twice, once for executing a stored procedure and onc
 
 The following Jigx function uses a stored procedure to fetch a list of data from Azure SQL.
 
-{% code title="get-customers.jigx" fullWidth="true" %}
+{% code title="get-customers.jigx" fullWidth="false" %}
 ```yaml
 # Jigx SQL function executing a stored procedure to select all customers from a table.
 provider: DATA_PROVIDER_SQL
@@ -68,7 +68,7 @@ procedure: sp_GetAllCustomers
 
 The following Jigx function uses a SQL query to fetch a list of data from Azure SQL.
 
-{% code title="get-customers.jigx" fullWidth="true" %}
+{% code title="get-customers.jigx" fullWidth="false" %}
 ```yaml
 # Jigx SQL function executing a query to select all customers from a table.
 provider: DATA_PROVIDER_SQL
@@ -98,7 +98,7 @@ query: |
 * Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured with a query to provide the data for use in the list.
 * Expressions are used to reference the exact data property required in each component.
 
-{% code title="listCustomers.jigx" fullWidth="true" %}
+{% code title="listCustomers.jigx" fullWidth="false" %}
 ```yaml
 # A sample list jig that uses a SQL function to return and display a list of customers from Azure SQL.
 title: List Customers
@@ -180,7 +180,7 @@ item:
 
 Add the list of customers jig to the home screen.
 
-{% code title=" index.jigx" fullWidth="true" %}
+{% code title=" index.jigx" fullWidth="false" %}
 ```yaml
 name: azure-sql-docs
 title: Azure SQL Docs

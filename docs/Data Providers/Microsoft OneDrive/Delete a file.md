@@ -30,7 +30,7 @@ The following properties are required in the YAML:
 
 The code example below provides an example of a list of invoices in the `myfiles` directory of OneDrive. When swiping left and pressing the _Delete_ button deletes the file on OneDrive.
 
-{% code title="deleting-file.jigx" fullWidth="true" %}
+{% code title="deleting-file.jigx" fullWidth="false" %}
 ```yaml
 title: Delete Invoice
 description: Delete a specific invoice
@@ -49,7 +49,8 @@ header:
 onFocus:
   type: action.sync-entities
   options:
-    # reference the OneDrive provider to sync the folder meta data to the local data provider
+    # reference the OneDrive provider to sync the folder meta data to the local data
+    # provider.
     provider: DATA_PROVIDER_ONEDRIVE
     entities:
       - entity: myfiles

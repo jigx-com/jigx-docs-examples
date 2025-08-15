@@ -32,7 +32,7 @@ There are a number of elements that can be used to display the file(s), for exam
 
 The code example below provides an example of a list of invoices in the `myfiles` directory of OneDrive.
 
-{% code title="list-files.jigx" fullWidth="true" %}
+{% code title="list-files.jigx" fullWidth="false" %}
 ```yaml
 title: List Monthly Invoices
 description: List all monthly invoices

@@ -36,7 +36,7 @@ To create a file use the `media-field` component to select the file. Use the `im
 
 The code below provides an example for creating an invoice in the `myfiles` directory of OneDrive.
 
-{% code title="create-file.jigx" fullWidth="true" %}
+{% code title="create-file.jigx" fullWidth="false" %}
 ```yaml
 title: Create Monthly Invoice
 description: 2 Submit your monthly invoices
@@ -62,7 +62,9 @@ children:
           instanceId: fileName
           options:
             label: Month
-        # reference the file required property as the instanceId and use the media field to add the physical file, use any mediaType to allow files of different formats to be selected
+        # reference the file required property as the instanceId and use the media 
+        # field to add the physical file, use any mediaType to allow files of 
+        # different formats to be selected.
         - type: component.media-field
           instanceId: file
           options:
@@ -93,7 +95,7 @@ actions:
 
 Example of a `modal` message that can be displayed when creating a file with an existing file name. The full code snippet is shown:
 
-{% code title="Modal" fullWidth="true" %}
+{% code title="Modal" fullWidth="false" %}
 ```yaml
 title: Create Invoice
 description: Create monthly invoices
@@ -140,7 +142,9 @@ children:
           options:
             label: Month
 
-        # reference the file required property as the instanceId and use the media field to add the physical file, use any mediaType to allow files of different formats to be selected
+        # reference the file required property as the instanceId and use the media 
+        # field to add the physical file, use any mediaType to allow files of 
+        # different formats to be selected
         - type: component.media-field
           instanceId: file
           options:

@@ -39,7 +39,7 @@ The code example below provides an example of a list of invoices in the `myfiles
 
 {% tabs %}
 {% tab title="download-list.jigx" %}
-{% code fullWidth="true" %}
+{% code fullWidth="false" %}
 ```yaml
 title: Download Invoice
 description: Download a specific invoice
@@ -58,24 +58,25 @@ header:
 onFocus:
   type: action.sync-entities
   options:
-    # reference the OneDrive provider to sync the files metadata to the app local provider
+    # reference the OneDrive provider to sync the files metadata to the app
+    # local provider.
     provider: DATA_PROVIDER_ONEDRIVE
     entities:
       - entity: myfiles
         data:
-          # reference the required OneDrive tokenType property
+          # reference the required OneDrive tokenType property.
           tokenType: jigx.graph.oauth
 
 datasources:
   file-data-root:
     type: datasource.sqlite
     options:
-      # use the local data provider to store the OneDrive files metadata
+      # use the local data provider to store the OneDrive files metadata.
       provider: DATA_PROVIDER_LOCAL
-      # specify the OneDrive path to the files
+      # specify the OneDrive path to the files.
       entities:
         - myfiles
-      # use a query to define what metadata must be returned to the jig
+      # use a query to define what metadata must be returned to the jig.
       query: SELECT id, '$.name' as name FROM [myfiles] ORDER BY name DESC
 
 data: =@ctx.datasources.file-data-root
@@ -87,13 +88,13 @@ item:
       element: button
       title: Download
       onPress:
-        # go to a default jig to use the submit-form action
+        # go to a default jig to use the submit-form action.
         # to download the selected file.
         type: action.go-to
         options:
           linkTo: download-file
-          # In the inputs use the OneDrive required properties
-          # of the selected file from the list to pass to the default jig
+          # In the inputs use the OneDrive required properties.
+          # of the selected file from the list to pass to the default jig.
           inputs:
             fileName: =@ctx.current.item.name
             id: =@ctx.current.item.id
@@ -103,7 +104,7 @@ item:
 {% endtab %}
 
 {% tab title="download-file.jigx" %}
-{% code fullWidth="true" %}
+{% code fullWidth="false" %}
 ```yaml
 title: Download File
 description: 1 download

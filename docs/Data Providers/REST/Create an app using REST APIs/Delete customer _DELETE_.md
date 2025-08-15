@@ -1,39 +1,34 @@
 # Delete customer (DELETE)
 
-## Scenario
+### Scenario
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-Add the ability to delete a customer from the list of customers by swiping left on the customer in the list-item and tapping the *Delete* button.
-:::
+{% columns %}
+{% column %}
+Add the ability to delete a customer from the list of customers by swiping left on the customer in the list-item and tapping the _Delete_ button.
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1_rest-delete.PNG" size="70" position="center" caption="Delete customer" alt="Delete customer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1_rest-delete.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1\_rest-delete.PNG" size="70" position="center" caption="Delete customer" alt="Delete customer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1\_rest-delete.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+{% endcolumn %}
+{% endcolumns %}
 
 ### How does this work
 
 A delete function is configured to call the REST APIs DELETE operation and identify the record to delete using the customer Id (CustID). The function is referenced in the `execute-entity` action which will delete the customer from the list and from the datasource via the REST API when the Delete button is pressed.
 
-:::hint{type="info"}
-This code sample builds upon the previous [List customers (GET)](<./List customers _GET_.md>) step, to develop a complete and functional solution.
-:::
+{% hint style="info" %}
+This code sample builds upon the previous [List customers (GET)](<List customers _GET_.md>) step, to develop a complete and functional solution.&#x20;
+{% endhint %}
 
-## REST API
+### REST API
 
-| **REST**         | **Detail**                                                 |
-| ---------------- | ---------------------------------------------------------- |
-| URL              | https\://\[your\_rest\_service]/api/customers?id=\{custId} |
-| Operation/Method | DELETE                                                     |
+<table><thead><tr><th width="213.92578125">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/customers?id={custId}</td></tr><tr><td>Operation/Method</td><td>DELETE</td></tr></tbody></table>
 
-## Function
+### Function
 
 Specify the REST API url and operation (method), parameters to include authentication in the header and the customer id (custId) to use as the identification of the record to delete.
 
-:::CodeblockTabs
-rest-delete-customer.jigx
-
+{% code title="rest-delete-customer.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 # Deletes data from the REST Service.
@@ -57,15 +52,13 @@ parameters:
     location: query
     required: true
 ```
-:::
+{% endcode %}
 
-## Action (global)
+### Action (global)
 
 Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or is in focus on the device.
 
-:::CodeblockTabs
-load-data.jigx
-
+{% code title="load-data.jigx" %}
 ```yaml
 # The sync-entities action is used to get the data from the REST data 
 # provider using the function. The global action can be referenced 
@@ -79,18 +72,16 @@ action:
       - entity: customers
         function: rest-get-customers
 ```
-:::
+{% endcode %}
 
-## Jig (screen)
+### Jig (screen)
 
-- Use a list jig type to configure a list of customers.
-- Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured using the local provider with a query to provide the data for use in the list.
-- Expressions are used to reference the exact data property required in each component.
-- A `swipeable: left` event is configured for the delete with an `execute-entity` action that calls the delete function and uses the custId to identify the record to delete.
+* Use a list jig type to configure a list of customers.
+* Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured using the local provider with a query to provide the data for use in the list.
+* Expressions are used to reference the exact data property required in each component.
+* A `swipeable: left` event is configured for the delete with an `execute-entity` action that calls the delete function and uses the custId to identify the record to delete.
 
-:::CodeblockTabs
-list-customers.jigx
-
+{% code title="list-customers.jigx" %}
 ```yaml
 title: Global Customers
 type: jig.list
@@ -188,15 +179,13 @@ item:
                 title: Are you sure?
                 description: =('Press Confirm to permanently delete ' & @ctx.current.item.companyName)
 ```
-:::
+{% endcode %}
 
-## Index
+### Index
 
 For performance and offline support the data is synced from the REST service as soon as the app is opened or receives focus. This is achieved by calling the global action in the `OnFocus` and `onLoad` events.
 
-:::CodeblockTabs
-index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 name: hello-rest-example
 title: Hello REST Solution
@@ -223,5 +212,4 @@ tabs:
     jigId: list-customers
     icon: home-apps-logo
 ```
-:::
-
+{% endcode %}

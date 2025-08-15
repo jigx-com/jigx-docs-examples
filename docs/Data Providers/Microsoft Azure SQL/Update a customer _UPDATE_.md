@@ -41,14 +41,15 @@ The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samp
 
 The **stored procedure** was designed to create a new record in Azure SQL if no matching id is found. If the id already exists, the Azure SQL record is updated. The same stored procedure is used for creating a new customer and updating a customer.
 
-{% code title="update-customer.jigx" fullWidth="true" %}
+{% code title="update-customer.jigx" fullWidth="false" %}
 ```yaml
 # Jigx SQL function executing a stored procedure to create a new customer record.
 provider: DATA_PROVIDER_SQL
 connection: customer.azure # Use manage.jigx.com to configure a SQL connection
 method: execute #Use SQL stored procedure to interact with the data in SQL
 procedure: sp_InsertOrUpdateCustomer
-# The stored procedure parameters are automatically populated by Jigx with the matching function parameters.
+# The stored procedure parameters are automatically populated by Jigx with the 
+# matching function parameters.
 parameters:
   CustomerId:
     type: string
@@ -101,7 +102,7 @@ parameters:
 
 The **SQL query** version of create-customer.jigx below only creates a new record. It does not contain update like like the stored procedure above. The only reason for this difference is to provide an alternative example and SQL logic.
 
-{% code title="create-customer.jigx" fullWidth="true" %}
+{% code title="create-customer.jigx" fullWidth="false" %}
 ```yaml
 # Jigx SQL function executing a sql query to update a customer record in Azure SQL.
 provider: DATA_PROVIDER_SQL
@@ -122,7 +123,8 @@ query: |
       country = @Country
     WHERE
       id = @CustomerId
-# Jigx automatically replaces the tokens in the SQL query with the matching function's parameters.
+# Jigx automatically replaces the tokens in the SQL query with the matching 
+# function's parameters.
 parameters:
   CustomerId:
     type: string
@@ -178,10 +180,11 @@ parameters:
 * The viewCustomers.jigx file must be modified to include a jig-level action, adding the **Edit a customer** button. When pressing the action button at the bottom of the viewCustomers jig, Jigx will navigate to the editCustomer jig.
 * The **customer's id** is used as a parameter in the `GoTo` action. The `custId` parameter is passed to the viewCustomer jig.
 
-{% code title="listCustomers.jigx" fullWidth="true" %}
+{% code title="listCustomers.jigx" fullWidth="false" %}
 ```yaml
-# A sample jig that uses a SQL function to return and display a customer's details from Azure SQL.
-# The title property uses a JSONata expression to concatenate the customer's first and last names as the title of the jig.
+# A sample jig that uses a SQL function to return and display a customer's details 
+# from Azure SQL. The title property uses a JSONata expression to concatenate the 
+# customer's first and last names as the title of the jig.
 title: =@ctx.datasources.mydata.first_name & ' ' & @ctx.datasources.mydata.last_name
 description: View customer details from Azure SQL
 type: jig.default
@@ -197,7 +200,9 @@ header:
         source:
           uri: https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80
 
-# onFocus is triggered whenever the jig is displayed. The sync-entities action calls the Jigx SQL function and populates the local SQLite tables on the device with the data returned from Azure SQL.
+# onFocus is triggered whenever the jig is displayed. The sync-entities action calls 
+# the Jigx SQL function and populates the local SQLite tables on the device with the
+# data returned from Azure SQL.
 onFocus:
   type: action.sync-entities
   options:
@@ -210,8 +215,11 @@ onFocus:
 
 datasources:
   # The mydata data source selects the data from the local SQLite database.
-  # The where clause in the query contains a token for a parameter called customerId that is defined in queryParameters and is passed to the viewCustomer jig as an input from the listCustomer jig.
-  # The isDocument property for the mydata datasource is set to true. As a result, the data source will return as a single record to be displayed on a form instead of an array of records.
+  # The where clause in the query contains a token for a parameter called customerId 
+  # that is defined in queryParameters and is passed to the viewCustomer jig as an 
+  # input from the listCustomer jig. The isDocument property for the mydata
+  # datasource is set to true. As a result, the data source will return as a single
+  # record to be displayed on a form instead of an array of records.
   mydata:
     type: datasource.sqlite
     options:
@@ -240,7 +248,9 @@ datasources:
       isDocument: true
 
 children:
-  # The data on the jig is displayed using an entity control and entity fields. If the data source returns an array, an entity control will automatically show the first record.
+  # The data on the jig is displayed using an entity control and entity fields.
+  # If the data source returns an array, an entity control will automatically show 
+  # the first record.
   - type: component.entity
     options:
       children:
@@ -312,7 +322,7 @@ actions:
 * When the `execute-entity` action type is used to save the values of the controls on a form, the form is unaware of the saved state, and **isDiscardChangesAlertEnabled** needs to be set to `false` to avoid seeing the dialog even when data has been saved.
 * Set the components on the form's value properties to the values from the `mydata` data source to display the existing values of the customer.
 
-{% code title="newCustomer.jigx" fullWidth="true" %}
+{% code title="newCustomer.jigx" fullWidth="false" %}
 ```yaml
 title: ='Update ' & @ctx.datasources.mydata.first_name & ' ' & @ctx.datasources.mydata.last_name
 description: Update a customer's information and save it to SQL Azure.
@@ -329,8 +339,11 @@ header:
         source:
           uri: https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80
 
-# Ensure we have the latest information for the customer by syncing the customer's data from Azure SQL
-# onFocus is triggered whenever the jig is displayed. The sync-entities action calls the Jigx SQL function and populates the local SQLite tables on the device with the data returned from Azure SQL.
+# Ensure we have the latest information for the customer by syncing the customer's
+# data from Azure SQL
+# onFocus is triggered whenever the jig is displayed. The sync-entities action calls
+# the Jigx SQL function and populates the local SQLite tables on the device with the
+# data returned from Azure SQL.
 onFocus:
   type: action.sync-entities
   options:
@@ -343,8 +356,11 @@ onFocus:
 
 datasources:
 # The mydata data source selects the data from the local SQLite database.
-# The where clause in the query contains a token for a parameter called customerId that is defined in queryParameters and is passed to the viewCustomer jig as an input from the listCustomer jig.
-# The isDocument property for the mydata datasource is set to true. As a result, the data source will return as a single record to be displayed on a form instead of an array of records.
+# The where clause in the query contains a token for a parameter called customerId 
+# that is defined in queryParameters and is passed to the viewCustomer jig as an 
+# input from the listCustomer jig.The isDocument property for the mydata datasource 
+# is set to true. As a result, the data source will return as a single record to be
+# displayed on a form instead of an array of records.
   mydata:
     type: datasource.sqlite
     options:
@@ -372,14 +388,19 @@ datasources:
         CustomerId: =@ctx.jig.inputs.custId
       isDocument: true
 
-# A form control with input controls are used to capture the changes to the customer's information.
-#The values from mydata is set to the value property of each control when the form loads.
+# A form control with input controls are used to capture the changes to the 
+# customer's information. The values from mydata is set to the value property of each
+# control when the form loads.
 children:
   - type: component.form
     instanceId: frmNewCustomer
     options:
-      # When a form submit action is used to save the values of the controls on a form, the form will warn the user when navigating away without saving the form's content.
-      # When any other action type is used to save the values of the controls on a form, the form is unaware of the saved state, and isDiscardChangesAlertEnabled needs to be set to false to avoid seeing the dialog even when data has been saved.
+      # When a form submit action is used to save the values of the controls on a 
+      # form, the form will warn the user when navigating away without saving the
+      # form's content.When any other action type is used to save the values of the 
+      # controls on a form, the form is unaware of the saved state, and 
+      # isDiscardChangesAlertEnabled needs to be set to false to avoid seeing the
+      # dialog even when data has been saved.
       isDiscardChangesAlertEnabled: false
       children:
         - type: component.field-row
@@ -389,7 +410,8 @@ children:
                 instanceId: FirstName
                 options:
                   label: First Name
-                  #set the value property of the control to the value returned from the mydata datasource.
+                  #set the value property of the control to the value returned from
+                  # the mydata datasource.
                   value: =@ctx.datasources.mydata.first_name
               - type: component.text-field
                 instanceId: LastName
@@ -409,7 +431,8 @@ children:
             label: Phone Number
             value: =@ctx.datasources.mydata.phone_number
             keyboardType: phone-pad
-            # Set the type of text for this field. This will enforce a regex for this field of the type it is set to.
+            # Set the type of text for this field. This will enforce a regex for this
+            # field of the type it is set to.
             textContentType: telephoneNumber
         - type: component.text-field
           instanceId: AddressLine1
@@ -435,7 +458,8 @@ children:
           instanceId: State
           options:
             label: State
-            # The data source for the dropdown options is a static datasource defined in usa-states.jigx.
+            # The data source for the dropdown options is a static datasource defined
+            # in usa-states.jigx.
             data: =@ctx.datasources.usa-states
             value: =@ctx.datasources.mydata.state
             item:
@@ -457,7 +481,8 @@ children:
             value: =@ctx.datasources.mydata.country
             style:
               # The dropdown only contains USA states.
-              # Set the control to read only so the value cannot be changed to an unsupported country.
+              # Set the control to read only so the value cannot be changed to an 
+              # unsupported country.
               isDisabled: true
 actions:
   - children:

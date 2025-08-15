@@ -1,36 +1,31 @@
 # Create customer (POST)
 
-## Scenario
+### Scenario
 
-Press the *Add Customer* button in the customer list to create a customer. Complete the new customer form and press the *Create* button.
+Press the _Add Customer_ button in the customer list to create a customer. Complete the new customer form and press the _Create_ button.
 
-![Add new customer](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xB26YdYV_JeG1GzllmXLh_rest-create.PNG "Add new customer")
+![Add new customer](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xB26YdYV_JeG1GzllmXLh_rest-create.PNG)
 
 ### How does this work
 
 A function to call the REST API's POST operation is configured, allowing the record to be created in the backend. The function is referenced in the `execute-entity` action on the form. The customer is created using the REST data provider with a create method which creates the record in the local data provider with a temp\_id, calling the rest-create-customer function and providing the parameters for the data values to be created in the REST service. Specifying the id in the `ouputTransform` in the function enables the local data provider temp\_id to be automatically updated with the REST id once it is created in the datastore.
 
-:::hint{type="info"}
-This code sample builds upon the previous [List customers (GET)](<./List customers _GET_.md>) step, to develop a complete and functional solution.
-:::
+{% hint style="info" %}
+This code sample builds upon the previous [List customers (GET)](<List customers _GET_.md>) step, to develop a complete and functional solution.
+{% endhint %}
 
-## REST API
+### REST API
 
-| **REST**         | **Detail**                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------ |
-| URL              | https\://\[your\_rest\_service]/api/customers                                                          |
-| URL              | https\://\[your\_rest\_service]/api/us\_states&#xA;(To get a list of states for selection in the form) |
-| Operation/Method | POST                                                                                                   |
+<table><thead><tr><th width="162.53515625">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/customers</td></tr><tr><td>URL</td><td>https://[your_rest_service]/api/us_states (To get a list of states for selection in the form)</td></tr><tr><td>Operation/Method</td><td>POST</td></tr></tbody></table>
 
-## Function
+### Function
 
 The REST APIs POST operator is used in a Jigx function with body parameters to specify the exact columns to be created for the record. The `inputTransform` specifies how the data should be structured or formatted when being sent to the REST service. This transformation process ensures that the data adheres to the expected schema or format required by the REST service for processing the request. In the `outputTransform` the id and status are configured to ensure that the properties are automatically returned once the record is created and the local provider's temp\_id is updated with the actual id and status.
 
 Making the form completion easier the REST API GET opertaion is used on the us\_states table to return the state name, region and abbreviation in the dropdown field.
 
-:::CodeblockTabs
-rest-create-customer.jigx
-
+{% tabs %}
+{% tab title="rest-create-customer.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 # Creates new record in the backend.
@@ -130,9 +125,9 @@ outputTransform: |
     "status": status
   }
 ```
+{% endtab %}
 
-rest-get-usStates.jigx
-
+{% tab title="rest-get-usStates.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: GET
@@ -155,15 +150,14 @@ parameters:
 outputTransform: |
   $
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-## Action (global)
+### Action (global)
 
-Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or  is in focus on the device.
+Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or is in focus on the device.
 
-:::CodeblockTabs
-load-data.jigx
-
+{% code title="load-data.jigx" %}
 ```yaml
 # The sync-entities action is used to get the data from the REST data 
 # provider using the function.The global action can be referenced throughout
@@ -177,15 +171,13 @@ action:
       - entity: us-states
         function: rest-get-usStates  
 ```
-:::
+{% endcode %}
 
-## Datasource
+### Datasource
 
 Add a file under the datasource folder to configure the local data provider with the data to return from the us-states table.
 
-:::CodeblockTabs
-us-states.jigx
-
+{% code title="us-states.jigx" %}
 ```yaml
 # Define a global datasource for the local data provider containing
 # the State data synced from the REST service with the global action. 
@@ -207,20 +199,19 @@ options:
     ORDER BY
       '$.state'
 ```
-:::
+{% endcode %}
 
-## Jig (screen)
+### Jig (screen)
 
-- On the list of customers jig configure a `go-to` action that adds the *Add Customer* button to the list and links to the create-customer jig.
-- In a default jig add a local data provider datasource with a query to get the us\_states data. Add a query parameter to set the state of the region field once the state field is selected.
-- Add a form component to capture the customer details with each field's instanceId containing the same name as the body parameters in the function.
-- For the state field configure a dropdrown with an expression to get the list of states for selection.
-- For the region use an expression that uses the datasource `queryParameters` value. This allows the region to auto populate on the form on the state is selected in the dropdown.
-- Add an `execute-entity` action to call the function that will create the customer record in the local table (using `method: create`) and in the REST service (`function: rest-create-customer`). Use an expression to specify the value for each of the function's parameters. The `parameters` create the record in the REST service, while the `data `property creates the record in the local database.
+* On the list of customers jig configure a `go-to` action that adds the _Add Customer_ button to the list and links to the create-customer jig.
+* In a default jig add a local data provider datasource with a query to get the us\_states data. Add a query parameter to set the state of the region field once the state field is selected.
+* Add a form component to capture the customer details with each field's instanceId containing the same name as the body parameters in the function.
+* For the state field configure a dropdrown with an expression to get the list of states for selection.
+* For the region use an expression that uses the datasource `queryParameters` value. This allows the region to auto populate on the form on the state is selected in the dropdown.
+* Add an `execute-entity` action to call the function that will create the customer record in the local table (using `method: create`) and in the REST service (`function: rest-create-customer`). Use an expression to specify the value for each of the function's parameters. The `parameters` create the record in the REST service, while the `data` property creates the record in the local database.
 
-:::CodeblockTabs
-create-customers.jigx
-
+{% tabs %}
+{% tab title="create-customers.jigx" %}
 ```yaml
 title: New Customer
 type: jig.default
@@ -406,11 +397,11 @@ actions:
             state: =@ctx.components.usState.state.value
             zip: =@ctx.components.zip.state.value          
           onSuccess: 
-            type: action.go-back  
+            type: action.go-back 
 ```
+{% endtab %}
 
-list-customer.jigx
-
+{% tab title="list-customer.jigx" %}
 ```yaml
 title: Global Customers
 type: jig.list
@@ -511,15 +502,14 @@ actions:
           title: Add Customer
           linkTo: new-customer
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-## Index
+### Index
 
 For performance and offline support the data is synced from the REST service as soon as the app is opened or receives focus. This is achieved by calling the global action in the `OnFocus` and `onLoad` events.
 
-:::CodeblockTabs
-index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 name: hello-rest-example
 title: Hello REST Solution
@@ -546,5 +536,4 @@ tabs:
     jigId: list-customers
     icon: home-apps-logo
 ```
-:::
-
+{% endcode %}

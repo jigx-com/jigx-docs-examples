@@ -19,7 +19,7 @@ In this section, an SQL database is used to create a customer Jigx app that allo
 
 <table><thead><tr><th width="276.41796875">Functions &#x26; Jigs</th><th>Functionality description</th></tr></thead><tbody><tr><td><a href="Microsoft Azure SQL/List customers _SELECT_.md">List customers (SELECT)</a></td><td>View a list of customers.</td></tr><tr><td><a href="Microsoft Azure SQL/List a single customer _SELECT_.md">List a single customer (SELECT)</a></td><td>View a single customer.</td></tr><tr><td><a href="Microsoft Azure SQL/Create a customer _INSERT_.md">Create a customer (INSERT)</a></td><td>Capture new customers in a form.</td></tr><tr><td><a href="Microsoft Azure SQL/Update a customer _UPDATE_.md">Update a customer (UPDATE)</a></td><td>You can update customer details by tapping the Edit customer button. This populates a form with the customer's details and an update button.</td></tr></tbody></table>
 
-#### Before you begin
+### Before you begin
 
 We have simplified the process by providing [database scripts](<Microsoft Azure SQL/Database Scripts.md>) to create the Customer SQL database on which the example is based.
 
