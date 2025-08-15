@@ -1,20 +1,20 @@
 # Status of a file
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example demonstrates how to track the upload status of a file and retry uploads for any that fail. The `_fileStatus` system table, along with the `expense` Dynamic Data table, are used as datasources to display upload progress.
 
 Progress is shown in a `list-item` using `color`, `progress`, and a status `label`. If a file fails to upload, swipe left and use the `action.retry-queue-command` to attempt the upload again.
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2z-QoO-_f4ZycKRz0uWo-20250521-115828.gif" size="66" position="center" caption="File status" alt="File status" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2z-QoO-_f4ZycKRz0uWo-20250521-115828.gif"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2z-QoO-\_f4ZycKRz0uWo-20250521-115828.gif" size="66" position="center" caption="File status" alt="File status" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2z-QoO-\_f4ZycKRz0uWo-20250521-115828.gif"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-file-expense-create.jigx
-
+{% tabs %}
+{% tab title="file-expense-create.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 # Use this jig to upload a file. 
 title: Expense Claim
@@ -100,9 +100,11 @@ actions:
                   expenseId: =@ctx.jig.inputs.expenseId
                   fileName: =@ctx.components.fileName.state.value
 ```
+{% endcode %}
+{% endtab %}
 
-expense-file-upload-status.jigx
-
+{% tab title="expense-file-upload-status.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 title: Expense file upload status
 type: jig.default
@@ -203,5 +205,6 @@ children:
                         options:
                           id: =@ctx.current.item.commandId
 ```
-
-:::
+{% endcode %}
+{% endtab %}
+{% endtabs %}

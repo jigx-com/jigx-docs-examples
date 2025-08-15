@@ -1,22 +1,22 @@
 # Upload a file
 
-## Upload file in a jig
+### Upload file in a jig
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 In this example, an expense claim form allows you to capture expense details and upload a file, such as a slip or invoice.
 
-The `media-field` is configured to accept `any` file type, with a `maximumFileSize` set to ensure files remain within acceptable limits. An `execute-entity` action creates the record in the datasource and links the uploaded file to the record by using the `create` method, with the `file` specified in the `localPath` property.
-:::
+The `media-field` is configured to accept `any` file type, with a `maximumFileSize` set to ensure files remain within acceptable limits. An `execute-entity` action creates the record in the datasource and links the uploaded file to the record by using the `create` method, with the `file` specified in the `localPath` property.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uCb0bqIVvxwoDdMihP0My-20250519-074426.gif" size="66" position="center" caption="Upload file" alt="Upload file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uCb0bqIVvxwoDdMihP0My-20250519-074426.gif"}
-:::
-::::
+{% column %}
+&#x20;::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uCb0bqIVvxwoDdMihP0My-20250519-074426.gif" size="66" position="center" caption="Upload file" alt="Upload file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uCb0bqIVvxwoDdMihP0My-20250519-074426.gif"}&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-file-create-expense.jigx
-
+{% tabs %}
+{% tab title="file-create-expense.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 title: Expense Claim
 description: Expense
@@ -87,12 +87,13 @@ actions:
                 file: 
                   localPath: =@ctx.components.expenseimage.state.value
 ```
-
-:::
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 In Management the record is created in the **expense** dynamic data table and the file is linked to the record. The file and metadata is displayed in the file tab of the record. The file thumbnail is displayed in the system file column (use column settings to set the column to visible).
 
-![Files in Management](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--_meerV3mLUQB6DlK4OWi-20250519-075245.gif "Files in Management")
+![Files in Management](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--_meerV3mLUQB6DlK4OWi-20250519-075245.gif)
 
 ## Upload a file in Jigx Management
 

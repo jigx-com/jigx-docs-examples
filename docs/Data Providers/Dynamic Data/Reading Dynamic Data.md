@@ -3,10 +3,6 @@ title: Reading Dynamic Data
 slug: KNt_-reading-dynamic-data-tables
 createdAt: Wed Jul 13 2022 10:22:47 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Mar 06 2025 08:38:51 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to display employee data on a mobile device using Jigx. This
-  document covers creating a Jig to list employees, configuring the YAML for
-  data source and query, customizing list item display,
 ---
 
 # Reading Dynamic Data

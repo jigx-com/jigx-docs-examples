@@ -1,30 +1,33 @@
 ---
 title: Deleting Dynamic Data
 slug: NpAf-deleting-dynamic-data-records
-description: Learn how to delete employee data using a swipeable function in a Jig app. Our document includes the YAML code for configuring the swipeable function to delete employees from the database. Follow our step-by-step instructions to test and verify successful
 createdAt: Wed Jul 13 2022 10:22:54 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Mar 06 2025 09:13:20 GMT+0000 (Coordinated Universal Time)
 ---
 
-With the ability to create and update data, you must be able to delete data that is no longer needed.  This example shows how to delete a single row of data and then how to delete multiple rows of data from a jig.
+# Deleting Dynamic Data
 
-## Datasources, jigs, component & actions
+With the ability to create and update data, you must be able to delete data that is no longer needed. This example shows how to delete a single row of data and then how to delete multiple rows of data from a jig.
+
+### Datasources, jigs, component & actions
 
 1. **default.jigx** is the database where the Dynamic Data table is defined.
-2. [sqlite](./../../Datasource/sqlite.md) datasource calls the Dynamic Data provider, using an SQL query to return the data.
-3. [jig.list](<./../../Jig Types/jig_list.md>) is the type of jig used to list the data with a `swipeable: left` action that uses the Dynamic Dataprovider's `delete` method.
+2. [sqlite](../../Datasource/sqlite.md) datasource calls the Dynamic Data provider, using an SQL query to return the data.
+3. [jig.list](<../../Jig Types/jig_list.md>) is the type of jig used to list the data with a `swipeable: left` action that uses the Dynamic Data provider's `delete` method.
 
-## Examples and code snippets
+### Examples and code snippets
 
-### Delete a single data record using execute-entity
+#### Delete a single data record using execute-entity
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-XPJP9o-8X4H2sF2LWszkR-20250306-090646.png" size="80" position="center" caption="Deleting Dynamic Data" alt="Deleting Dynamic Data"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-XPJP9o-8X4H2sF2LWszkR-20250306-090646.png" size="80" position="center" caption="Deleting Dynamic Data" alt="Deleting Dynamic Data"}
 
-![Record deleted from table](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_lcLIwWpStnfpqS5WnizS_dd-sng-delete-mngt.png "Record deleted from table")
+![Record deleted from table](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_lcLIwWpStnfpqS5WnizS_dd-sng-delete-mngt.png)
 
-:::CodeblockTabs
-delete-single-record.jigx
+:::CodeblockTabs&#x20;
 
+{% tabs %}
+{% tab title="delete-single-record.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 title: list
 type: jig.list
@@ -96,16 +99,20 @@ item:
               onSuccess: 
                 type: action.go-back
 ```
+{% endcode %}
+{% endtab %}
 
-default.jigx
-
+{% tab title="default.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 tables:
   employee: null
 ```
+{% endcode %}
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 name: employees
 title: Employees
@@ -116,20 +123,21 @@ tabs:
     jigId: delete-single-record
     icon: home-apps-logo
 ```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
-:::
+#### Deleting multiple data records using execute-entities
 
-### Deleting multiple data records using execute-entities
+To delete all employees (multiple data records) in the Dynamic Data table use the `action.execute-entities` action with an expression that as shown below. This will delete all records in the table when the _Delete all employees_ button is pressed.
 
-To delete all employees (multiple data records) in the Dynamic Data table use the `action.execute-entities` action with an expression that as shown below. This will delete all records in the table when the *Delete all employees* button is pressed.
+![Delete multiple records](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ouiryUalSNeUZaPOw03AA-20250306-091204.png)
 
-![Delete multiple records](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ouiryUalSNeUZaPOw03AA-20250306-091204.png "Delete multiple records")
+![All records deleted from table](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BjDuEwPyRfOyPy83390NK_dd-multi-delete-mngt.png)
 
-![All records deleted from table](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BjDuEwPyRfOyPy83390NK_dd-multi-delete-mngt.png "All records deleted from table")
-
-:::CodeblockTabs
-delete-multiple-records.jigx
-
+{% tabs %}
+{% tab title="delete-multiple-records.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 title: list
 type: jig.list
@@ -222,16 +230,20 @@ actions:
           modal:
             title: Are you sure you want to delete ALL?
 ```
+{% endcode %}
+{% endtab %}
 
-default.jigx
-
+{% tab title="default.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 tables:
   employee: null
 ```
+{% endcode %}
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 name: employees
 title: Employees
@@ -242,5 +254,6 @@ tabs:
     jigId: delete-multiple-records
     icon: home-apps-logo    
 ```
-
-:::
+{% endcode %}
+{% endtab %}
+{% endtabs %}

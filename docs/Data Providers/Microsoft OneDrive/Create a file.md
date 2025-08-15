@@ -1,43 +1,42 @@
 ---
 title: Create a file
 slug: VOFr-creating-a
-description: Learn how to create a file in OneDrive using the JigxApp solution with this comprehensive document. Discover the necessary properties, like file, fileName, entity, tokenType, and method, and understand the usage of the media-field component
 createdAt: Mon May 29 2023 08:23:33 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 13:53:04 GMT+0000 (Coordinated Universal Time)
 ---
 
-You can create a file in OneDrive from a solution in the Jigx App. Use the [media-field](./../../Components/form/media-field.md) component in a form to upload a file or image, then use the OneDrive Data Provider, its create method. and required properties for successful file creation.
+# Create a file
 
-![Create a fle in OneDrive](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-B7GW14UgkHNegydoHOqrQ-20250305-135300.png "Create a fle in OneDrive")
+You can create a file in OneDrive from a solution in the Jigx App. Use the [media-field](../../Components/form/media-field.md) component in a form to upload a file or image, then use the OneDrive Data Provider, its create method. and required properties for successful file creation.
 
-## Properties
+![Create a fle in OneDrive](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-B7GW14UgkHNegydoHOqrQ-20250305-135300.png)
+
+### Properties
 
 The following properties are required in the YAML:
 
-- `file` - reference the physical file
-- `fileName` - add the file name with the extension, e.g. Invoice.pdf
-- `entity` - file path in OneDrive
-- `tokenType` - OAuth token credentials name
-- `method: create`
+* `file` - reference the physical file
+* `fileName` - add the file name with the extension, e.g. Invoice.pdf
+* `entity` - file path in OneDrive
+* `tokenType` - OAuth token credentials name
+* `method: create`
 
-## Component
+### Component
 
 To create a file use the `media-field` component to select the file. Use the `image`, or `any` property in the `media-field` component to specify the `mediaType`.
 
-## Considerations
+### Considerations
 
-- The create method does not allow you to create a file with a filename that already exists and an error will occur. To ensure the cause of the error is understood Jigx recommends you build in logic using a `modal` to show a message that the filename is already in use.
-- A new file is created even when an `id` is specified.
-- Using the `method: save` will create a new file if the filename does not exist, otherwise the save will function as an update method.
-- A delay or time lag of several minutes could be experienced when files are syncing between the device and OneDrive.
+* The create method does not allow you to create a file with a filename that already exists and an error will occur. To ensure the cause of the error is understood Jigx recommends you build in logic using a `modal` to show a message that the filename is already in use.
+* A new file is created even when an `id` is specified.
+* Using the `method: save` will create a new file if the filename does not exist, otherwise the save will function as an update method.
+* A delay or time lag of several minutes could be experienced when files are syncing between the device and OneDrive.
 
-## Code example
+### Code example
 
 The code below provides an example for creating an invoice in the `myfiles` directory of OneDrive.
 
-:::CodeblockTabs
-create-file.jigx
-
+{% code title="create-file.jigx" fullWidth="true" %}
 ```yaml
 title: Create Monthly Invoice
 description: 2 Submit your monthly invoices
@@ -90,14 +89,11 @@ actions:
                   title: Successfully created
             - type: action.go-back
 ```
-
-:::
+{% endcode %}
 
 Example of a `modal` message that can be displayed when creating a file with an existing file name. The full code snippet is shown:
 
-:::CodeblockTabs
-Modal
-
+{% code title="Modal" fullWidth="true" %}
 ```yaml
 title: Create Invoice
 description: Create monthly invoices
@@ -177,13 +173,12 @@ actions:
             cancel: Cancel
             confirm: Continue
 ```
+{% endcode %}
 
-:::
+#### See also
 
-### See also
-
-- [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
-- [Update/Save a file](<./Update_Save a file.md>)
-- [Delete a file](<./Delete a file.md>)
-- [List files](<./List files.md>)
-- [Download a file](<./Download a file.md>)
+* [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
+* [Update/Save a file](<Update_Save a file.md>)
+* [Delete a file](<Delete a file.md>)
+* [List files](<List files.md>)
+* [Download a file](<Download a file.md>)

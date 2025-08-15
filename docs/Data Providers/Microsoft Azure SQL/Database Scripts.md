@@ -1,25 +1,24 @@
 ---
 title: Database Scripts
 slug: jQ3e-database-scripts
-description: Looking for Microsoft Azure SQL sample code? This document offers a collection of scripts to create a customer table, insert sample records, and create stored procedures for selecting and updating customer records. Access to a Microsoft Azure subscription
 createdAt: Wed Mar 15 2023 12:32:13 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue May 21 2024 10:42:03 GMT+0000 (Coordinated Universal Time)
 ---
 
-:::hint{type="warning"}
+# Database Scripts
+
+{% hint style="warning" %}
 Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](https://docs.jigx.com/rest) instead. See [REST endpoints from Azure SQL](https://docs.jigx.com/microsoft-azure-sql) for more information.
-:::
+{% endhint %}
 
 The following Azure SQL scripts create the customer table and store the procedures used in the examples in this section. These scripts should be executed against an existing database in your Azure SQL environment.
 
-## Create Customer Table
+### Create Customer Table
 
 The following script creates a sample customer table in Microsoft Azure SQL.
 
-:::CodeblockTabs
-createCustomers.sql
-
-```pgsql
+{% code title="createCustomers.sql" fullWidth="true" %}
+```sql
 CREATE TABLE customers (
     id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
     first_name NVARCHAR(50) NOT NULL,
@@ -33,20 +32,15 @@ CREATE TABLE customers (
     zip_code CHAR(5) NOT NULL,
     country NVARCHAR(50) NOT NULL DEFAULT 'USA'
 );
-
 ```
+{% endcode %}
 
-:::
-
-## Insert sample records in the Customer table
+### Insert sample records in the Customer table
 
 The following script inserts sample customers into the table.
 
-:::CodeblockTabs
-insertCustomer.sql
-
+{% code title="insertCustomer.sql" fullWidth="true" %}
 ```sql
-
 INSERT INTO customers (first_name, last_name, email, phone_number, address_line1, address_line2, city, zip_code)
 VALUES
     ('John', 'Doe', 'john.doe@example.com', '206-555-0101', '123 Main St', 'Apt 4B', 'Seattle', '98101'),
@@ -67,16 +61,13 @@ VALUES
     ('Matthew', 'Hall', 'matthew.hall@example.com', '206-555-0116', '734 Cedarwood Dr', NULL, 'Seattle', '98104'),
     ('Madison', 'Allen', 'madison.allen@example.com', '360-555-0117', '349 Pineview Ln', 'Apt 5C', 'Bellevue', '98007');
 ```
+{% endcode %}
 
-:::
-
-## Stored procedure for selecting a list of customers
+### Stored procedure for selecting a list of customers
 
 The following script creates a store procedure that will return all the customers in the customer table.
 
-:::CodeblockTabs
-sp\_GetAllCustomers.sql
-
+{% code title="sp_GetAllCustomers.sql" fullWidth="true" %}
 ```sql
 CREATE PROCEDURE sp_GetAllCustomers
 AS
@@ -97,16 +88,13 @@ BEGIN
         customers;
 END;
 ```
+{% endcode %}
 
-:::
-
-## Stored procedure for selecting one customer&#x20;
+### Stored procedure for selecting one customer
 
 The following script will create a store procedure to return a single customer record for the provided customer id.
 
-:::CodeblockTabs
-sp\_GetCustomerById.sql
-
+{% code title="sp_GetCustomerById.sql" fullWidth="true" %}
 ```sql
 CREATE PROCEDURE sp_GetCustomerById
     @CustomerId UNIQUEIDENTIFIER
@@ -130,16 +118,13 @@ BEGIN
         id = @CustomerId;
 END;
 ```
+{% endcode %}
 
-:::
-
-## Stored procedure for creating or updating a customer record&#x20;
+### Stored procedure for creating or updating a customer record
 
 The following script creates a stored procedure that will add a new customer record if the customer id does not exist. It will update an existing customer if the id does exist.
 
-:::CodeblockTabs
-sp\_InsertOrUpdateCustomer.sql
-
+{% code title="sp_InsertOrUpdateCustomer.sql" fullWidth="true" %}
 ```sql
 CREATE PROCEDURE sp_InsertOrUpdateCustomer
     @CustomerId UNIQUEIDENTIFIER = NULL,
@@ -203,5 +188,4 @@ BEGIN
     END;
 END;
 ```
-
-:::
+{% endcode %}

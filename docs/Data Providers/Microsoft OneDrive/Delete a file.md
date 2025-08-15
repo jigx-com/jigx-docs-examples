@@ -1,37 +1,36 @@
 ---
 title: Delete a file
 slug: aNSm-del
-description: Learn how to quickly delete files in OneDrive using the {{JigxApp}} solution. Follow the step-by-step instructions to select and delete a file, including the necessary YAML properties. Get a code example to make the process even smoother.
 createdAt: Mon May 29 2023 08:24:57 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 13:56:25 GMT+0000 (Coordinated Universal Time)
 ---
 
+# Delete a file
+
 You can delete existing files in OneDrive from a solution in the Jigx App. This can be used to remove incorrect files or files that are no longer required. First, you must return the files available in OneDrive, for example, in a list, select the file to be deleted by configuring a button or swipeable element, then use the OneDrive Data Provider, its delete method, and required properties.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RwA-cRtkXvu6a5LEzIOJZ-20250305-135621.png" size="60" position="center" caption="Delete file n OneDrive" alt="Delete file n OneDrive"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RwA-cRtkXvu6a5LEzIOJZ-20250305-135621.png" size="60" position="center" caption="Delete file n OneDrive" alt="Delete file n OneDrive"}
 
-## Properties
+### Properties
 
 The following properties are required in the YAML:
 
-- `entity`- file path in OneDrive
-- `id` - reference the physical file by its `id`
-- `tokenType` - OAuth token credentials name
-- `method: delete`
+* `entity`- file path in OneDrive
+* `id` - reference the physical file by its `id`
+* `tokenType` - OAuth token credentials name
+* `method: delete`
 
-## Considerations
+### Considerations
 
-- The path `entity` is not used in the deletion process
-- Files are deleted in all folders as expected, even when the incorrect folder is specified as the delete method uses `id`
-- A delay or time lag of several minutes could be experienced when files are syncing between the device and OneDrive
+* The path `entity` is not used in the deletion process
+* Files are deleted in all folders as expected, even when the incorrect folder is specified as the delete method uses `id`
+* A delay or time lag of several minutes could be experienced when files are syncing between the device and OneDrive
 
-## Code Example
+### Code Example
 
 The code example below provides an example of a list of invoices in the `myfiles` directory of OneDrive. When swiping left and pressing the _Delete_ button deletes the file on OneDrive.
 
-:::CodeblockTabs
-deleting-file.jigx
-
+{% code title="deleting-file.jigx" fullWidth="true" %}
 ```yaml
 title: Delete Invoice
 description: Delete a specific invoice
@@ -99,13 +98,12 @@ item:
               modal:
                 title: Are you sure you want to delete this file?
 ```
+{% endcode %}
 
-:::
+#### See also
 
-### See also
-
-- [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
-- [Create a file](<./Create a file.md>)
-- [Update/Save a file](<./Update_Save a file.md>)
-- [List files](<./List files.md>)
-- [Download a file](<./Download a file.md>)
+* [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
+* [Create a file](<Create a file.md>)
+* [Update/Save a file](<Update_Save a file.md>)
+* [List files](<List files.md>)
+* [Download a file](<Download a file.md>)

@@ -1,27 +1,26 @@
 # Delete a file
 
-## Delete a file in a jig
+### Delete a file in a jig
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 In this example, a list of expenses is displayed with the following:
 
-- The `subtitle` displays the `filename`.
-- A `label` is configured with `color` and text to display the status of the file.
-- A `left swipeable` action is configured with two actions:
-  - The first only deletes the file associated with the record using the `execute-entity` action with the `update` method and the file property set to `null`.
-  - The second deletes the entire record in the database using the `execute-entity` action with the `delete` method.
+* The `subtitle` displays the `filename`.
+* A `label` is configured with `color` and text to display the status of the file.
+* A `left swipeable` action is configured with two actions:
+  * The first only deletes the file associated with the record using the `execute-entity` action with the `update` method and the file property set to `null`.
+  * The second deletes the entire record in the database using the `execute-entity` action with the `delete` method.
+{% endcolumn %}
 
-:::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JG8sn10\_wFTyXLGp\_QSAS-20250519-125130.gif" size="66" position="center" caption="Delete record or file" alt="Delete record or file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JG8sn10\_wFTyXLGp\_QSAS-20250519-125130.gif"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JG8sn10_wFTyXLGp_QSAS-20250519-125130.gif" size="66" position="center" caption="Delete record or file" alt="Delete record or file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JG8sn10_wFTyXLGp_QSAS-20250519-125130.gif"}
-:::
-::::
-
-:::CodeblockTabs
-file-expense-list.jigx
-
+{% tabs %}
+{% tab title="file-expense-list.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 title: Expense Categories
 description: List of Expenses
@@ -103,11 +102,13 @@ actions:
       - type: action.go-to
         options:
           title: Create Expense
-          linkTo: files-create-expense    
+          linkTo: files-create-expense 
 ```
+{% endcode %}
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
+{% code fullWidth="true" %}
 ```yaml
 datasources:
   expenses-ds:
@@ -127,10 +128,11 @@ datasources:
         FROM [default/expenses]
         ORDER BY '$.expenseitem'
 ```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
-:::
-
-In Management the *Hotel accomodation* record is deleted in the **expense** dynamic data table and the *airplane ticket* file is deleted but the record still exists.
+In Management the _Hotel accomodation_ record is deleted in the **expense** dynamic data table and the _airplane ticket_ file is deleted but the record still exists.
 
 ## Delete a file in Jigx Management
 
@@ -138,5 +140,4 @@ Files can be deleted in Management by following these steps:
 
 1. Log in to [https://manage.jigx.com](https://manage.jigx.com).
 2. Browse to the required solution's **data** tab and select the record containing the file to be deleted.
-3. Select the **File** tab, and click the **x** next to file's thumbnail.
-   **Caution:** Clicking the *Delete* button at the bottom of the Edit record pane deletes the entire record and file.
+3. Select the **File** tab, and click the **x** next to file's thumbnail. **Caution:** Clicking the _Delete_ button at the bottom of the Edit record pane deletes the entire record and file.

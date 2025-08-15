@@ -1,22 +1,20 @@
 # Download a file
 
-## Download a file in jig
+### Download a file in jig
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example displays a department's expenses in a list. The expense receipt is downloaded by tapping the button to the right of the expense. A jig opens, displaying the receipt and its metadata.
-To `download` the receipt to a `localPath`, the `execute-entity`'s `download` method is configured.
-A `go-to` action opens a jig that displays the downloaded file in an `image` component and the file's metadata in `entity-fields`.
-:::
+{% columns %}
+{% column %}
+This example displays a department's expenses in a list. The expense receipt is downloaded by tapping the button to the right of the expense. A jig opens, displaying the receipt and its metadata. To `download` the receipt to a `localPath`, the `execute-entity`'s `download` method is configured. A `go-to` action opens a jig that displays the downloaded file in an `image` component and the file's metadata in `entity-fields`.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" size="66" position="center" caption="Download files" alt="Download files" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" size="66" position="center" caption="Download files" alt="Download files" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-file-download-receipts.jigx
-
+{% tabs %}
+{% tab title="file-download-receipts.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 title: Department Expense list
 description: List of Expenses
@@ -104,9 +102,11 @@ actions:
           title: Create Expense
           linkTo: files-create-expense
 ```
+{% endcode %}
+{% endtab %}
 
-expense-receipt-details.jigx
-
+{% tab title="expense-receipt-details.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 title: Receipt Details
 type: jig.default
@@ -175,15 +175,15 @@ children:
             label: thumbnailContentType
             value: =@ctx.datasources.receipt-ds.thumbnailContentType
 ```
-:::
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
-## Downloading multiple files
+### Downloading multiple files
 
-In scenarios where multiple files must be downloaded, use the `execute-entities` action. In the `data` property, configure an expression using the `$map` JSONATA [Path Operators]() to handle multiple entries.
+In scenarios where multiple files must be downloaded, use the `execute-entities` action. In the `data` property, configure an expression using the `$map`  JSONATA [Path Operators](<Download a file.md>) to handle multiple entries.
 
-:::CodeblockTabs
-download-multiple-files
-
+{% code title="download-multiple-files" fullWidth="true" %}
 ```yaml
  actions:
   - children:
@@ -204,9 +204,9 @@ download-multiple-files
                 }
               })
 ```
-:::
+{% endcode %}
 
-## Download a file in Jigx Management
+### Download a file in Jigx Management
 
 Files can be uploaded in Management by following these steps:
 
@@ -214,4 +214,3 @@ Files can be uploaded in Management by following these steps:
 2. Browse to the required solution's **data** tab and select the record containing the file to be downloaded.
 3. Select the **File** tab in the Edit record pane.
 4. To download the file use the **Download file** link at the top of the record.
-

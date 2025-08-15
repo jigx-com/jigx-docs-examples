@@ -23,8 +23,9 @@ The employee's details are updated using the Dynamic Data provider's **update** 
 
 Use the employee list with `component.expanders` add the `onContentPress` action that will open the employee form, add `parameters` to transfer the employee details to the form.
 
-:::CodeblockTabs list-employees.jigx
-
+{% tabs %}
+{% tab title="list-employees.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 title: Employee list
 type: jig.list
@@ -117,35 +118,40 @@ item:
         inputs:
           employee-detail: =@ctx.current.item
 ```
+{% endcode %}
+{% endtab %}
 
-default.jigx
-
+{% tab title="default.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 tables:
   employee: null
 ```
+{% endcode %}
+{% endtab %}
 
-index.jigx
-
-```yaml
-name: employees
-title: Employees
+{% tab title="index.jigx" %}
+<pre class="language-yaml" data-full-width="true"><code class="lang-yaml"><strong>name: employees
+</strong>title: Employees
 category: business
 
 tabs:
   home:
     jigId: list-employees
-    icon: home-apps-logo
-```
+    icon: home-apps-logo          
+</code></pre>
+{% endtab %}
+{% endtabs %}
 
-:::
+In the pre-populate _Update Employee_ form add the `action.submit-form` using the Dynamic Data provider with the **update** method to update the data record.
 
-In the pre-populate _Update Employee_ form add the `action.submit-form` using theDynamic Data provider with the **update** method to update the data record.
+{% hint style="info" %}
+The record is updated instantly and the new employee details are shown in the list
+{% endhint %}
 
-:::hint{type="info"} The record is updated intstantly and the new employee details are shown in the list :::
-
-:::CodeblockTabs update-employee.jigx
-
+{% tabs %}
+{% tab title="update-employee.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 title: Update Employee
 type: jig.default
@@ -240,9 +246,10 @@ actions:
           onSuccess: 
             type: action.go-back
 ```
+{% endcode %}
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: employees
 title: Employees
@@ -256,8 +263,8 @@ tabs:
     jigId: update-employee-form
     icon: upload-button-alternate 
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 Navigate to the solution's Data option in Jigx Management and view the updated Dynamic Data employee table and record.
 

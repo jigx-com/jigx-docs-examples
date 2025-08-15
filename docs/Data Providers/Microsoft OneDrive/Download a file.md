@@ -1,44 +1,45 @@
 ---
 title: Download a file
 slug: Aqij-download
-description: Learn how to download files from a specific location in OneDrive to your mobile device using the OneDrive Data Provider and download method.
 createdAt: Mon May 29 2023 08:25:27 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 15:00:27 GMT+0000 (Coordinated Universal Time)
 ---
 
+# Download a file
+
 In a Jigx you can download a file from a specific location in OneDrive to your mobile device. This is useful when your device is offline, and you want to view the document or file. Use the OneDrive Data Provider with the download method. The file is downloaded to the mobile device's storage.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ehxypx4yEeuHUfThDB-R-20250305-135933.png" size="70" position="center" caption="Download a file from OneDrive" alt="Download a file from OneDrive"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ehxypx4yEeuHUfThDB-R-20250305-135933.png" size="70" position="center" caption="Download a file from OneDrive" alt="Download a file from OneDrive"}
 
-## Device storage location
+### Device storage location
 
 OneDrive downloads are stored in the following location depending on the device's operating system.
 
-- **Android** - File apps/Internal Storage/Documents
-- **iOS** - File apps/On My iPhone/Jigx/
+* **Android** - File apps/Internal Storage/Documents
+* **iOS** - File apps/On My iPhone/Jigx/
 
-## Properties
+### Properties
 
 The following properties are required in the YAML to successfully download a file:
 
-- `fileName` - Add the file name with the extension, e.g. Invoice.pdf
-- `entity` - file path in OneDrive
-- `tokenType` - OAuth token credentials name
-- `method: download`
+* `fileName` - Add the file name with the extension, e.g. Invoice.pdf
+* `entity` - file path in OneDrive
+* `tokenType` - OAuth token credentials name
+* `method: download`
 
-## Considerations
+### Considerations
 
-- Downloading a file that already exists in the device's storage will overwrite the existing file based on the file name.
-- Downloading large files will impact the storage on the device.
-- A delay or time lag of several minutes could be experienced when files are syncing between the device and OneDrive.
+* Downloading a file that already exists in the device's storage will overwrite the existing file based on the file name.
+* Downloading large files will impact the storage on the device.
+* A delay or time lag of several minutes could be experienced when files are syncing between the device and OneDrive.
 
-## Code Example
+### Code Example
 
 The code example below provides an example of a list of invoices in the `myfiles` directory of OneDrive. To download a file from the list to your mobile device, swipe left and press the _Download_ button.
 
-:::CodeblockTabs
-download-list.jigx
-
+{% tabs %}
+{% tab title="download-list.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 title: Download Invoice
 description: Download a specific invoice
@@ -98,9 +99,11 @@ item:
             id: =@ctx.current.item.id
             entity: myfiles
 ```
+{% endcode %}
+{% endtab %}
 
-download-file.jigx
-
+{% tab title="download-file.jigx" %}
+{% code fullWidth="true" %}
 ```yaml
 title: Download File
 description: 1 download
@@ -148,13 +151,14 @@ actions:
           goBack: previous
           method: download
 ```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
-:::
+#### See also
 
-### See also
-
-- [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
-- [Create a file](<./Create a file.md>)
-- [Update/Save a file](<./Update_Save a file.md>)
-- [Delete a file](<./Delete a file.md>)
-- [List files](<./List files.md>)
+* [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
+* [Create a file](<Create a file.md>)
+* [Update/Save a file](<Update_Save a file.md>)
+* [Delete a file](<Delete a file.md>)
+* [List files](<List files.md>)

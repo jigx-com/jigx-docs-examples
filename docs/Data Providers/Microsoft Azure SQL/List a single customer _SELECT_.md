@@ -1,48 +1,44 @@
 # List a single customer (SELECT)
 
-:::hint{type="warning"}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](https://docs.jigx.com/microsoft-azure-sql) for more information.
-:::
+{% hint style="warning" %}
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](https://docs.jigx.com/microsoft-azure-sql) for more information.&#x20;
+{% endhint %}
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-
-## Scenario
+{% columns %}
+{% column %}
+### Scenario
 
 View the customer's details by pressing on the customer in the list, which opens the customer's details in a default jig.
 
-## Resources
+### Resources
 
-- Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<./Database Scripts.md>).
-- [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection).
-- This sample depends on [List customers (SELECT)](<./List customers _SELECT_.md>).
+* Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<Database Scripts.md>).
+* [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection).
+* This sample depends on [List customers (SELECT)](<List customers _SELECT_.md>).
 
-## Jigx Code
+### Jigx Code
 
-The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs)
-:::
+The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-![List & view customer detail](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eb8nMUangvEbz5PSFP_Cm_thursday-23-mar-2023-151127.PNG "List & view customer detail")
-:::
-::::
+{% column %}
+&#x20;<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eb8nMUangvEbz5PSFP_Cm_thursday-23-mar-2023-151127.PNG" alt="List &#x26; view customer detail" data-size="original">
+{% endcolumn %}
+{% endcolumns %}
 
-## How it works
+### How it works
 
-This example selects a customer from the list and uses the CustomerId to return the customer's details to the default jig on the device, using the SQL data provider's function, where it is stored in the SQLite database. In the default jig the data is selected from the SQLite database using a SQL query in a data source which in turn is used by the  jig to render the details in entity fields.
-The functions used to return a single record use **forRowsWithMatchingIds: true**.Only records in the SQLite table with a matching id will be updated. When forRowsWithMatchingIds is false or omitted, all records in the SQLite table will be deleted, and only the records returned by the stored procedure, or query statement will be inserted.
+This example selects a customer from the list and uses the CustomerId to return the customer's details to the default jig on the device, using the SQL data provider's function, where it is stored in the SQLite database. In the default jig the data is selected from the SQLite database using a SQL query in a data source which in turn is used by the jig to render the details in entity fields. The functions used to return a single record use **forRowsWithMatchingIds: true**. Only records in the SQLite table with a matching id will be updated. When forRowsWithMatchingIds is false or omitted, all records in the SQLite table will be deleted, and only the records returned by the stored procedure, or query statement will be inserted.
 
-## Functions
+### Functions
 
-:::hint{type="info"}
+{% hint style="info" %}
 The Jigx function is listed twice, once for executing a stored procedure and once for executing a query.
-:::
+{% endhint %}
 
-### A store procedure-based version of get-customer.jigx
+#### A store procedure-based version of get-customer.jigx
 
-:::CodeblockTabs
-get-customer.jigx
-
+{% code title="get-customer.jigx" fullWidth="true" %}
 ```yaml
 # Jigx SQL function executing a stored procedure to select only a single customer. 
 provider: DATA_PROVIDER_SQL
@@ -58,14 +54,11 @@ parameters:
 # One of the columns returned by the stored procedure is called id. Only records in the SQLite table with a matching id will be updated. When forRowsWithMatchingIds is false or omitted, all records in the SQLite table will be deleted, and only the records returned by the store procedure will be inserted.
 forRowsWithMatchingIds: true
 ```
+{% endcode %}
 
-:::
+#### A query-based version of get-customer.jigx
 
-### A query-based version of get-customer.jigx
-
-:::CodeblockTabs
-get-customers.jigx
-
+{% code title="get-customers.jigx" fullWidth="true" %}
 ```yaml
 # Jigx SQL function executing a stored procedure to select only a single customer. 
 provider: DATA_PROVIDER_SQL
@@ -97,20 +90,17 @@ parameters:
 # One of the columns returned by the query statement is called id. Only records in the SQLite table with a matching id will be updated. When forRowsWithMatchingIds is false or omitted, all records in the SQLite table will be deleted, and only the records returned by the query statement will be inserted.
 forRowsWithMatchingIds: true
 ```
+{% endcode %}
 
-:::
+### Jigs
 
-## Jigs
-
-### Modifying the list customers jig
+#### Modifying the list customers jig
 
 The listCustomers.jigx file must be modified to include an onPress action. When pressing on a list item in the customer list, Jigx will navigate to the viewCustomer.jigx. **customerId** is specified as a `parameter` that should be passed to the viewCustomer.jigx, where it is used in the WHERE clause of the SQLite query to load the selected customer.
 
 Add the onPress code to the bottom of the listCustomers.jigx file:
 
-:::CodeblockTabs
-listCustomers.jigx
-
+{% code title=" listCustomers.jigx" fullWidth="true" %}
 ```yaml
 # A sample list jig that uses a SQL function to return and display a list of customers from Azure SQL.
 title: List Customers
@@ -195,22 +185,19 @@ item:
           # The id column of the current item being pressed on is passed as a parameter called customerId to the viewCustomer jig.
           customerId: =@ctx.current.item.id
 ```
+{% endcode %}
 
-:::
-
-### View customer jig
+#### View customer jig
 
 The WHERE clause in the query contains a token for a `parameter` called `customerId` that is defined in `queryParameters` and is passed to the viewCustomer jig as an input from the listCustomer jig.
 
 The `isDocument` property for the mydata datasource is set to `true`. As a result, the data source will return as a single record to be displayed on a form instead of an array of records.
 
-The data on the jig displays using an `entity` and `entity- fields` component.  If the data source returns an array, an entity component will automatically show the first record.
+The data on the jig displays using an `entity` and `entity- fields` component. If the data source returns an array, an entity component will automatically show the first record.
 
 The YAML for viewing the selected customer is:
 
-:::CodeblockTabs
-viewCustomer.jigx
-
+{% code title="viewCustomer.jigx" fullWidth="true" %}
 ```yaml
 # A sample jig that uses a SQL function to return and display a customer's details from Azure SQL.
 # The title property uses a JSONata expression to concatenate the customer's first and last names as the title of the jig.
@@ -248,10 +235,8 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
       entities:
         - entity: customers
-  
       query: |
         SELECT
           id,
@@ -273,7 +258,6 @@ datasources:
         CustomerId: =@ctx.jig.inputs.customerId
       isDocument: true
 
- 
 children:
 # The data on the jig is displayed using an entity control and entity fields. If the data source returns an array, an entity control will automatically show the first record.
   - type: component.entity
@@ -324,16 +308,13 @@ children:
             label: Zip
             value: =@ctx.datasources.mydata.zip_code                                  
 ```
+{% endcode %}
 
-:::
-
-## index
+### index
 
 Add the list of customers jig to the home screen.
 
-:::CodeblockTabs
-index.jigx
-
+{% code title="index.jigx" fullWidth="true" %}
 ```yaml
 name: azure-sql-docs
 title: Azure SQL Docs
@@ -344,5 +325,4 @@ tabs:
     jigId: listCustomers
     icon: home-apps-logo
 ```
-
-:::
+{% endcode %}

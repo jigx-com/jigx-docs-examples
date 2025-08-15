@@ -1,59 +1,59 @@
 ---
 title: Create a customer (INSERT)
 slug: G9nH-creating-a-record
-description: Learn how to use a default jig with a form to execute SQL commands for creating new customer records. This document provides code snippets, examples, and links to related resources for saving data from a form to a database or backend system. Discover the
 createdAt: Wed Mar 15 2023 12:45:50 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 11:36:55 GMT+0000 (Coordinated Universal Time)
 ---
 
-:::hint{type="warning"}
+# Create a customer (INSERT)
+
+{% hint style="warning" %}
 Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](https://docs.jigx.com/rest) instead. See [REST endpoints from Azure SQL](https://docs.jigx.com/microsoft-azure-sql) for more information.
-:::
+{% endhint %}
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-
-## Scenario
+{% columns %}
+{% column %}
+### Scenario
 
 This example uses a default jig with a form that executes an SQL command to create a new customer record.
 
-## **Resources**
+### **Resources**
 
-- Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<./Database Scripts.md>).
-- [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection).
-- This sample depends on [List customers (SELECT)](<./List customers _SELECT_.md>).
+* Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<Database Scripts.md>).
+* [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection).
+* This sample depends on [List customers (SELECT)](<List customers _SELECT_.md>).
 
-## Jigx Code
+### Jigx Code
 
 The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs).
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-![Add new customer](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/o9bX3Ee2RDGzscd4uSnnW_thursday-23-mar-2023-155109.PNG "Add new customer")
-:::
-::::
+{% column %}
+&#x20;![Add new customer](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/o9bX3Ee2RDGzscd4uSnnW_thursday-23-mar-2023-155109.PNG)
 
-## How it works&#x20;
 
-- The `execute-entity` action allows you to specify the function parameters and their values, as well as the data properties for the SQLite table. You have more granular control over the values being saved and can include expressions.
-- The example below uses an `execute-entity` action and maps both the `parameters` of the jig function and the SQLite data in the action's configuration.
-- To improve the user experience, data displayed after it has been created or updated should be updated in the local SQLite database and the backend system in the same action.
-- If the data is only submitted to the backend system, it must be synced back to the device before the local tables are updated, and the information can be displayed. This can cause a significant lag and latency in the user's experience.
-- The example below updates the data in Azure SQL and the SQLite database on the device when the user presses the Save button. This is the best practice for building responsive user experiences when working with remote data. See the [Data lifecycles in Jigx](https://docs.jigx.com/data-lifecycles-in-jigx) section of the documentation for a detailed explanation.
+{% endcolumn %}
+{% endcolumns %}
 
-## Functions
+### How it works
 
-:::hint{type="info"}
+* The `execute-entity` action allows you to specify the function parameters and their values, as well as the data properties for the SQLite table. You have more granular control over the values being saved and can include expressions.
+* The example below uses an `execute-entity` action and maps both the `parameters` of the jig function and the SQLite data in the action's configuration.
+* To improve the user experience, data displayed after it has been created or updated should be updated in the local SQLite database and the backend system in the same action.
+* If the data is only submitted to the backend system, it must be synced back to the device before the local tables are updated, and the information can be displayed. This can cause a significant lag and latency in the user's experience.
+* The example below updates the data in Azure SQL and the SQLite database on the device when the user presses the Save button. This is the best practice for building responsive user experiences when working with remote data. See the [Data lifecycles in Jigx](https://docs.jigx.com/data-lifecycles-in-jigx) section of the documentation for a detailed explanation.
+
+### Functions
+
+{% hint style="info" %}
 The Jigx function below is listed twice, once for executing a stored procedure and once for executing a query.
-:::
+{% endhint %}
 
-### A store procedure-based version of create-customer.jigx
+#### A store procedure-based version of create-customer.jigx
 
 The **stored procedure** in the example was designed to create a new record in Azure SQL if no matching id is found. If the id already exists, the Azure SQL record is updated. The same stored procedure is used for creating a new customer and updating a customer.
 
-:::CodeblockTabs
-create-customer.jigx
-
+{% code title="create-customer.jigx" fullWidth="true" %}
 ```yaml
 # Jigx SQL function executing a stored procedure to create a new customer record.
 provider: DATA_PROVIDER_SQL
@@ -108,16 +108,13 @@ parameters:
     location: input
     required: true
 ```
+{% endcode %}
 
-:::
-
-### A query-based version of create-customer.jigx
+#### A query-based version of create-customer.jigx
 
 The SQL **query** version of create-customer.jigx below only creates a new record. It does not contain update like the stored procedure above. The only reason for this difference is to provide an alternative example and SQL logic.
 
-:::CodeblockTabs
-create-customer.jigx
-
+{% code title="create-customer.jigx" fullWidth="true" %}
 ```yaml
 # Jigx SQL function executing a sql query to create a new customer record in Azure SQL.
 provider: DATA_PROVIDER_SQL
@@ -197,21 +194,18 @@ parameters:
     location: input
     required: true
 ```
+{% endcode %}
 
-:::
+### Jigs
 
-## Jigs
+#### Modify the list customers jig
 
-### Modify the list customers jig
+* The listCustomers.jigx file must be modified to include a jig-level action, allowing a new customer to be added.
+* When pressing the **Add customer** action button at the bottom of the list customers jig, Jigx will navigate to the newCustomer jig.
+* A new **customer id** is created and used as a parameter in the `GoTo` action. The `customerId` parameter is passed to the newCustomer jig. The generated id is used as the unique identifier when creating both the SQLite record and the new record in Azure SQL in the newCustomer jig.
+* The id is used across the SQlite and Azure SQL tables to ensure that the record in the local SQLite customer table and Azure SQL customer table are in sync and have the same value.
 
-- The listCustomers.jigx file must be modified to include a jig-level action, allowing a new customer to be added.
-- When pressing the **Add customer** action button at the bottom of the list customers jig, Jigx will navigate to the newCustomer jig.
-- A new **customer id** is created and used as a parameter in the `GoTo` action. The `customerId` parameter is passed to the newCustomer jig. The generated id is used as the unique identifier when creating both the SQLite record and the new record in Azure SQL in the newCustomer jig.
-- The id is used across the SQlite and Azure SQL tables to ensure that the record in the local SQLite customer table and Azure SQL customer table are in sync and have the same value.
-
-:::CodeblockTabs
-listCustomers.jigx
-
+{% code title="listCustomers.jigx" fullWidth="true" %}
 ```yaml
 # A sample list jig that uses a SQL function to return and display a list of customers from Azure SQL.
 title: List Customers
@@ -307,17 +301,14 @@ actions:
           parameters:
             custId: =$uuid_v4()
 ```
+{% endcode %}
 
-:::
+#### The new customer jig
 
-### The new customer jig
+* Use an `execute- entity` action to submit the values of the components to the SQL stored procedure and save the new customer to the local SQLite database.
+* To save the values of the components on a form, the form is unaware of the saved state, and **isDiscardChangesAlertEnabled** needs to be set to `false` to avoid seeing the dialog even when data has been saved.
 
-- Use an `execute- entity` action to submit the values of the components to the SQL stored procedure and save the new customer to the local SQLite database.
-- To save the values of the components on a form, the form is unaware of the saved state, and **isDiscardChangesAlertEnabled** needs to be set to `false` to avoid seeing the dialog even when data has been saved.
-
-:::CodeblockTabs
-newCustomer.jigx
-
+{% code title="newCustomer.jigx" fullWidth="true" %}
 ```yaml
 title: New Customer
 description: Add a new customer and save it to SQL Azure.
@@ -461,5 +452,4 @@ actions:
                   title: Customer Created
             - type: action.go-back
 ```
-
-:::
+{% endcode %}

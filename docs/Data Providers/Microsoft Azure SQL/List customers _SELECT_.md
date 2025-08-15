@@ -1,54 +1,60 @@
 ---
 title: List customers (SELECT)
 slug: NVJB-selecting-a-list-of-records
-description: Learn how to execute SQL commands to retrieve a list of customers from an Azure SQL database and display it in a list jig. This document includes detailed Jigx code examples for executing stored procedures and SQL queries, as well as code for creating a l
 createdAt: Wed Mar 15 2023 12:43:45 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 12:51:55 GMT+0000 (Coordinated Universal Time)
+description: >-
+  Learn how to execute SQL commands to retrieve a list of customers from an
+  Azure SQL database and display it in a list jig. This document includes
+  detailed Jigx code examples for executing stored proce
 ---
 
-:::hint{type="warning"}
+# List customers (SELECT)
+
+{% hint style="warning" %}
 Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId:eOUi2cPYynsdRuK-TobDp) for more information.
-:::
+{% endhint %}
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-
-## Scenario
+{% columns %}
+{% column %}
+### Scenario
 
 Create a list of customers showing their names, email addresses, and locations. On the left is an avatar, and on the right is the country the customer resides in.
 
-## Resources
+### Resources
 
-- Scripts for creating Azure SQL tables and stored procedures [Database Scripts](<./Database Scripts.md>)
-- [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection)
+* Scripts for creating Azure SQL tables and stored procedures [Database Scripts](<Database Scripts.md>)
+* [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection)
 
-## Jigx Code
+### Jigx Code
 
 The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs)
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-![List of customers](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/avKe9CnCia3_gDoxfz7Jf_sunday-19-mar-2023-122036.PNG "List of customers")
-:::
-::::
+{% column %}
+<figure><img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/avKe9CnCia3_gDoxfz7Jf_sunday-19-mar-2023-122036.PNG" alt=""><figcaption></figcaption></figure>
 
-## How it works
+### &#x20;&#x20;
+
+
+{% endcolumn %}
+{% endcolumns %}
+
+### How it works
 
 This example selects a list of data from a customer table in an Azure SQL database and returns it to the Jigx solution on the device using the SQL data provider's function, where it is stored in the SQLite database. In the list jig the data is selected from the SQLite database using a SQL query in a data source which in turn is used by the list jig to render the items.
 
-## Functions
+### Functions
 
-:::hint{type="info"}
-The Jigx function is listed twice, once for executing a stored procedure and once for executing a query.
-:::
+{% hint style="info" %}
+The Jigx function is listed twice, once for executing a stored procedure and once for executing a query.&#x20;
+{% endhint %}
 
-### A store procedure-based version of get-customers.jigx
+#### A store procedure-based version of get-customers.jigx
 
 The following Jigx function uses a stored procedure to fetch a list of data from Azure SQL.
 
-:::CodeblockTabs
-get-customers.jigx
-
+{% code title="get-customers.jigx" fullWidth="true" %}
 ```yaml
 # Jigx SQL function executing a stored procedure to select all customers from a table.
 provider: DATA_PROVIDER_SQL
@@ -56,16 +62,13 @@ connection: customer.azure # Use manage.jigx.com to configure a SQL connection
 method: execute #Use SQL stored procedure to interact with the data in SQL
 procedure: sp_GetAllCustomers
 ```
+{% endcode %}
 
-:::
-
-### A query-based version of get-customers.jigx
+#### A query-based version of get-customers.jigx
 
 The following Jigx function uses a SQL query to fetch a list of data from Azure SQL.
 
-:::CodeblockTabs
-get-customers.jigx
-
+{% code title="get-customers.jigx" fullWidth="true" %}
 ```yaml
 # Jigx SQL function executing a query to select all customers from a table.
 provider: DATA_PROVIDER_SQL
@@ -87,18 +90,15 @@ query: |
   FROM
     customers
 ```
+{% endcode %}
 
-:::
+### jig (screen)
 
-## jig (screen)
+* Use a list type to configure a list of customers.
+* Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured with a query to provide the data for use in the list.
+* Expressions are used to reference the exact data property required in each component.
 
-- Use a list type to configure a list of customers.
-- Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured with a query to provide the data for use in the list.
-- Expressions are used to reference the exact data property required in each component.
-
-:::CodeblockTabs
-listCustomers.jigx
-
+{% code title="listCustomers.jigx" fullWidth="true" %}
 ```yaml
 # A sample list jig that uses a SQL function to return and display a list of customers from Azure SQL.
 title: List Customers
@@ -172,18 +172,15 @@ item:
       element: avatar
       # The text property of the left element is specified using a JSONata expression that builds a two-letter string by concatenating the first letters of the customer's first and last names.
       text: =$substring(@ctx.current.item.first_name,0,1) & $substring(@ctx.current.item.last_name,0,1)
-    divider: solid
+    divider: solid  
 ```
+{% endcode %}
 
-:::
-
-## index
+### index
 
 Add the list of customers jig to the home screen.
 
-:::CodeblockTabs
-index.jigx
-
+{% code title=" index.jigx" fullWidth="true" %}
 ```yaml
 name: azure-sql-docs
 title: Azure SQL Docs
@@ -194,5 +191,4 @@ tabs:
     jigId: listCustomers
     icon: home-apps-logo
 ```
-
-:::
+{% endcode %}
