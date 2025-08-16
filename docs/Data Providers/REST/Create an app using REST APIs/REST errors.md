@@ -1,39 +1,35 @@
 # REST errors
 
-## Scenario
+### Scenario
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 When trying to view a customer and their details or create a new customer in the app, the app can fail to retrieve or create the required data, and various errors are returned. In this example, we add error handling to the REST endpoint function to cater for the following errors:
 
-- 401 Unauthorized
-- 403 Forbidden
-- Unexpected error
-:::
+* 401 Unauthorized
+* 403 Forbidden
+* Unexpected error&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif" size="80" position="center" caption="REST Error handling" alt="REST Error handling" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif" width="652" height="1304" darkWidth="652" darkHeight="1304"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif" size="80" position="center" caption="REST Error handling" alt="REST Error handling" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif" width="652" height="1304" darkWidth="652" darkHeight="1304"}
+{% endcolumn %}
+{% endcolumns %}
 
 ### How does this work
 
-An `error` section is added to the REST endpoint functions for creating customers (POST), viewing customers (GET), and updating customers (PUT). In this section, the `when` property is configured with an expression that returns the response status from the endpoint, for example, `=@ctx.response.status = 403`. There are multiple `when` properties configured to catch a 401 and 403 error; all other response statuses are caught in the Unexpected error. Each `when` property has a `title`, `icon`, and `description`, which provides a user-friendly explanation of the error. Errors are written to the customers\_error `table`, and the data written to the table is configured in the `transform` property. The `table,` in conjunction with the `commandQueue` is used to troubleshoot the error and create jigs that allows you to retry the REST call or delete the error from the `commandQueue`. See [REST error handling]() for more information.
+An `error` section is added to the REST endpoint functions for creating customers (POST), viewing customers (GET), and updating customers (PUT). In this section, the `when` property is configured with an expression that returns the response status from the endpoint, for example, `=@ctx.response.status = 403`. There are multiple `when` properties configured to catch a 401 and 403 error; all other response statuses are caught in the Unexpected error. Each `when` property has a `title`, `icon`, and `description`, which provides a user-friendly explanation of the error. Errors are written to the customers\_error `table`, and the data written to the table is configured in the `transform` property. The `table,` in conjunction with the `commandQueue` is used to troubleshoot the error and create jigs that allows you to retry the REST call or delete the error from the `commandQueue`. See [REST error handling](<REST errors.md>) for more information.
 
-## REST API
+### REST API
 
-| **REST**         | **Detail**                                    |
-| ---------------- | --------------------------------------------- |
-| URL              | https\://\[your\_rest\_service]/api/customers |
-| Operation/Method | POST,GET,PUT                                  |
+<table><thead><tr><th width="216.125">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/customers</td></tr><tr><td>Operation/Method</td><td>POST,GET,PUT</td></tr></tbody></table>
 
-## Function
+### Function
 
 In each of the REST function files (GET, POST, PUT), add an `error` section and configure the YAML to cater for a 401 and 403 error, and a section to cater for all other response errors.
 
-:::CodeblockTabs
-rest-create-customer.jigx
-
+{% tabs %}
+{% tab title="rest-create-customer.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 # Create new record in the backend
@@ -197,10 +193,10 @@ error:
       "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
       "entity": @ctx.entity, "correlationId": @ctx.correlationId}'
 ```
+{% endtab %}
 
-rest-get-customers.jigx
-
-```yaml
+{% tab title="rest-get-customers.jigx" %}
+```python
 provider: DATA_PROVIDER_REST
 # Returns records from the backend
 method: GET
@@ -303,9 +299,9 @@ error:
       "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
       "entity": @ctx.entity, "correlationId": @ctx.correlationId}'
 ```
+{% endtab %}
 
-rest-update-customer.jigx
-
+{% tab title="rest-update-customer.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 # Update the customer data
@@ -462,15 +458,14 @@ error:
       "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
       "entity": @ctx.entity, "correlationId": @ctx.correlationId}'
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-## Datasources
+### Datasources
 
 Add a file under the datasource folder to configure the local data provider with the data returned from the customers\_error table. This data is used to provide detail of the error in a jig and to configure actions allowing the item to be retried or deleted.
 
-:::CodeblockTabs
-customer-errors.jigx
-
+{% code title="customer-errors.jigx" %}
 ```yaml
 type: datasource.sqlite
 options:
@@ -492,22 +487,21 @@ options:
     FROM 
       [customers_error] AS error
 ```
-:::
+{% endcode %}
 
-## Jigs (screens)
+### Jigs (screens)
 
 There are a number of options available to process items that are in an error state.
 
 1. Use the **commandQueue**. Items that return an error from the REST endpoint will remain on the commandQueue and are not automatically processed by the queue. You must configure an action to either retry the item or delete the item from the queue. The retry executes the REST call again.
-2. Use the ***customer\_error*** table configured in the function. Use the data from the table in a jig to allow app users to resolve the error or delete the item in error.
+2. Use the _**customer\_error**_ table configured in the function. Use the data from the table in a jig to allow app users to resolve the error or delete the item in error.
 
 ### Use the commandQueue
 
-Create two jigs to work with the items in the [commandQueue](). This is helpful for the solution owner or administrator to take action and `delete` errors in the queue or possibly `retry` the REST call to process the items in the queue that are in an error state. Configure a list jig containing all items in the commandQueue, add a left `swipeable` action to cater for the delete and retry actions, also add an `onPress` event to go to view the payload details of the item in error.
+Create two jigs to work with the items in the [commandQueue](<REST errors.md>). This is helpful for the solution owner or administrator to take action and `delete` errors in the queue or possibly `retry` the REST call to process the items in the queue that are in an error state. Configure a list jig containing all items in the commandQueue, add a left `swipeable` action to cater for the delete and retry actions, also add an `onPress` event to go to view the payload details of the item in error.
 
-:::CodeblockTabs
-list-command-queue.jigx
-
+{% tabs %}
+{% tab title="list-command-queue.jigx" %}
 ```yaml
 title: CommandQ
 description: List of commands in the queue
@@ -573,9 +567,9 @@ item:
             options:
               id: =@.current.item.id
 ```
+{% endtab %}
 
-view-command-queue.jigx
-
+{% tab title="view-command-queue.jigx" %}
 ```yaml
 title: View Queue Command
 type: jig.default
@@ -673,16 +667,16 @@ actions:
           title: Delete
           id: =@ctx.jig.inputs.commandId
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Use the customers\_error table
 
 Create a list jig to list the records in the customers\_error table. Provide detail of the error in the `title` and `subtitle` properties.
 
-:::CodeblockTabs
-list-customer-errors.jigx
-
-```yaml
+{% tabs %}
+{% tab title="list-customer-errors.jigx" %}
+```javascript
 title: Issues
 description: A list of customer records that failed to be created successfully and need manual intervention for resolution.
 type: jig.list
@@ -755,9 +749,9 @@ widgets:
         - when: true
           icon: on-error-1
 ```
+{% endtab %}
 
-customer-error-401.jigx
-
+{% tab title="customer-error-401.jigx" %}
 ```yaml
 title: Resolve Issue
 type: jig.default
@@ -906,9 +900,9 @@ actions:
               options:
                 id: =@ctx.jig.inputs.commandId
 ```
+{% endtab %}
 
-customer-error-403.jigx
-
+{% tab title="customer-error-403.jigx" %}
 ```yaml
 title: Resolve Issue
 type: jig.default
@@ -1052,9 +1046,9 @@ actions:
               options:
                 id: =@ctx.jig.inputs.commandId
 ```
+{% endtab %}
 
-customer-error-500.jigx
-
+{% tab title="customer-error-500.jigx" %}
 ```yaml
 title: Resolve Issue
 type: jig.default
@@ -1158,17 +1152,15 @@ children:
             label: Web
             value: =@ctx.datasources.customer-errors.body.web
             contentType: link
-                  
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-## Index
+### Index
 
 For performance and offline support the data is synced from the REST service as soon as the app is opened or receives focus. This is achieved by calling the global action in the `onFocus` events. The `action.sync-entities` action will delete any items from the local data provider that were deleted from the commandQueue.
 
-:::CodeblockTabs
-index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 name: hello-rest-example
 title: Hello REST Solution
@@ -1197,5 +1189,4 @@ tabs:
     jigId: list
     icon: list  
 ```
-:::
-
+{% endcode %}

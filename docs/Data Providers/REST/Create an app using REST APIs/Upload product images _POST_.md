@@ -1,39 +1,36 @@
 # Upload product images (POST)
 
-## Scenario
+### Scenario
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-From the [view customer ](<./List _ View customers _GET_.md>) On the screen, tap the *Add Images* button, which will direct you to a screen that allows you to upload multiple images of products for each customer.
-:::
+{% columns %}
+{% column width="41.66666666666667%" %}
+From the [view customer ](<List _ View customers _GET_.md>)On the screen, tap the _Add Images_ button, which will direct you to a screen that allows you to upload multiple images of products for each customer.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-![Upload images using REST](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9JpcY3lPb4m2WL0w-v4il_rest-image.PNG "Upload images using REST")
-:::
-::::
+{% column width="58.33333333333333%" %}
+![Upload images using REST](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9JpcY3lPb4m2WL0w-v4il_rest-image.PNG)&#x20;
+
+
+{% endcolumn %}
+{% endcolumns %}
 
 ### How does this work
 
 The REST APIs POST operator for the images table is used in a Jigx function with an `inputTransform` to capture the image metadata. configuring the `conversion` property ensures that the images are uploaded in the correct format to the REST service. Specifying the id in the `ouputTransform` in the function enables the local data provider temp\_id to be automatically updated with the REST id once the images are created in the datastore. The `media-field` takes a photo or selects from existing images on the device.
 
-:::hint{type="info"}
-This code sample builds upon the previous [List customers (GET)](<./List customers _GET_.md>) step, to develop a complete and functional solution.
-:::
+{% hint style="info" %}
+This code sample builds upon the previous [List customers (GET)](<List customers _GET_.md>) step, to develop a complete and functional solution.
+{% endhint %}
 
-## REST API
+### REST API
 
-| **REST**         | **Detail**                                 |
-| ---------------- | ------------------------------------------ |
-| URL              | https\://\[your\_rest\_service]/api/images |
-| Operation/Method | POST                                       |
+<table data-header-hidden><thead><tr><th width="192.49609375">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/images</td></tr><tr><td>Operation/Method</td><td>POST</td></tr></tbody></table>
 
-## Function
+### Function
 
 The REST APIs POST operator is used in a Jigx function with body parameters to specify the exact columns to be created for the image record. The `inputTransform` specifies the image metadata that is sent to the REST service. This transformation process ensures that the data adheres to the expected schema or format required by the REST service for processing the request. In the `outputTransform` the id is configured to ensure that the properties are automatically returned once the image is created and the local provider's temp\_id is updated with the actual id. The customer images are stored in the REST service in base64, Jigx stores the iamges in local-uri format for display. A `conversion` is configured in the function to change the images from local-uri to base64.
 
-:::CodeblockTabs
-rest-upload-customer-images.jigx
-
+{% code title="rest-upload-customer-images.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 # Creates data in the backend.
@@ -96,17 +93,15 @@ conversions:
     from: local-uri
     to: base64
 ```
-:::
+{% endcode %}
 
-## Action (global)&#x20;
+### Action (global)
 
-Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or  is in focus on the device.
+Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or is in focus on the device.
 
-The *rest-get-customers-images* function is NOT added to the `sync-entities` action due to the large number of images that will be returned. Rather the images are returned on demand in the jig per customer which reduces the number of images loaded on the device ensuring that the performance is not affected.
+The _rest-get-customers-images_ function is NOT added to the `sync-entities` action due to the large number of images that will be returned. Rather the images are returned on demand in the jig per customer which reduces the number of images loaded on the device ensuring that the performance is not affected.
 
-:::CodeblockTabs
-load-data.jigx
-
+{% code title="load-data.jigx" %}
 ```yaml
 # The sync-entities action is used to get the data from the REST
 # data provider using the function.
@@ -125,18 +120,17 @@ action:
         function: rest-get-usStates  
         
 ```
-:::
+{% endcode %}
 
-## Jig (screen)
+### Jig (screen)
 
-- On the customer-composite jig add a `go-to` action to add a button that links to the add-customer-images jig.
-- Add parameters to the `go-to` action to use the customer id as `inputs`.
-- Use a default jig with the `media-picker` component to capture or select images.
-- Add an `execute-entities` action to call the rest-upload-customer-images function and use the `media-field`'s state to configure the metadata to be uploaded for the image.
+* On the customer-composite jig add a `go-to` action to add a button that links to the add-customer-images jig.
+* Add parameters to the `go-to` action to use the customer id as `inputs`.
+* Use a default jig with the `media-picker` component to capture or select images.
+* Add an `execute-entities` action to call the rest-upload-customer-images function and use the `media-field`'s state to configure the metadata to be uploaded for the image.
 
-:::CodeblockTabs
-add-customer-images.jigx
-
+{% tabs %}
+{% tab title="add-customer-images.jigx" %}
 ```yaml
 title: Upload images
 type: jig.default
@@ -209,9 +203,9 @@ actions:
           onSuccess: 
               type: action.go-back  
 ```
+{% endtab %}
 
-view-customer-details.jigx
-
+{% tab title="view-customer-details.jigx" %}
 ```yaml
 title: Customer Details
 type: jig.default
@@ -300,9 +294,9 @@ children:
             label: Web
             value: =@ctx.datasources.customer.web
 ```
+{% endtab %}
 
-customer-composite.jigx
-
+{% tab title="customer-composite.jigx" %}
 ```yaml
 title: Customer Details
 type: jig.composite
@@ -346,9 +340,9 @@ actions:
           inputs:
             customer: =@ctx.jig.inputs.customer
 ```
+{% endtab %}
 
-list-customers.jigx
-
+{% tab title="list-customers.jigx" %}
 ```yaml
 title: Global Customers
 type: jig.list
@@ -466,15 +460,14 @@ actions:
           title: Add Customer
           linkTo: new-customer
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-## &#x20;Index
+### Index
 
 For performance and offline support the data is synced from the REST service as soon as the app is opened or receives focus. This is achieved by calling the global action in the `OnFocus` and `onLoad` events.
 
-:::CodeblockTabs
-index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 name: hello-rest-example
 title: Hello REST Solution
@@ -501,5 +494,4 @@ tabs:
     jigId: list-customers
     icon: home-apps-logo
 ```
-:::
-
+{% endcode %}

@@ -1,22 +1,21 @@
 # Update multiple records in a single REST call
 
-## Why would you want to update multiple records in a single REST call?
+### Why would you want to update multiple records in a single REST call?
 
 **API Rate Limits** - Many APIs enforce rate limits on the number of requests a client can make. Updating multiple records in a single call reduces the number of API requests made and avoids hitting rate limits.
 
 **Improved performance** - Updating multiple records in a single call reduces the round-trip time between the client and server, improving overall performance.
 
-## How does this work
+### How does this work
 
-- To update multiple records in a single REST call, use the [execute-entities](./../../../Actions/execute-entities.md) action to call the REST function.
-- It is important to know what method your function call is using. For example, using PUT will overwrite all values in the record, while using PATCH will only update the new or changed values in the record.
-- There are two ways to configure the `execute-entities` action.
-  - Use `parameters` for values that must be evaluated statically across all the records.
-  - Values that are dynamic per record are configured in the `data` property.
+* To update multiple records in a single REST call, use the [execute-entities](../../../Actions/execute-entities.md) action to call the REST function.
+* It is important to know what method your function call is using. For example, using PUT will overwrite all values in the record, while using PATCH will only update the new or changed values in the record.
+* There are two ways to configure the `execute-entities` action.
+  * Use `parameters` for values that must be evaluated statically across all the records.
+  * Values that are dynamic per record are configured in the `data` property.
 
-:::CodeblockTabs
-parameters
-
+{% tabs %}
+{% tab title="parameters" %}
 ```yaml
 actions:
   - children:
@@ -32,11 +31,11 @@ actions:
           parameters:
             customerType: Bronze 
           data:
-            customerType: Bronze     
+            customerType: Bronze 
 ```
+{% endtab %}
 
-data
-
+{% tab title="data" %}
 ```yaml
 actions:
   - children:
@@ -55,50 +54,43 @@ actions:
           parameters: =@ctx.datasources.customers.{"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}[] 
           data: =@ctx.datasources.customers.{"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}[]           
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-- The properties defined in the `data` property are determined by the REST call. This means that if the only required property is id you can simply use id, such as:
-  `data: =@ctx.datasources.customers.{"id":id}[]`
-  However, if you have multiple required properties in the REST call you need to define all of them under data, such as:
-  `data: =@ctx.datasources.customers.{"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}[]`
-- Using JSONata expressions can further simplify updating mutiple records, for example, using the following expression will update all records in the customer list to Bronze.
-  `data: =ctx.datasources.customers ~> | $ | { "customerType": "Bronze "} |`
-  See the [Jsonata transform operator](https://docs.jsonata.org/other-operators#-------transform) for more information.
+* The properties defined in the `data` property are determined by the REST call. This means that if the only required property is id you can simply use id, such as: `data: =@ctx.datasources.customers.{"id":id}[]` However, if you have multiple required properties in the REST call you need to define all of them under data, such as: `data: =@ctx.datasources.customers.{"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}[]`
+* Using JSONata expressions can further simplify updating mutiple records, for example, using the following expression will update all records in the customer list to Bronze. `data: =ctx.datasources.customers ~> | $ | { "customerType": "Bronze "} |` See the [Jsonata transform operator](https://docs.jsonata.org/other-operators#-------transform) for more information.
 
-## Scenario
+### Scenario
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example lists all customers without a label (`CustomerType` property). Using the `execute-entities` action all customers without a label are updated to show a Bronze label.
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-![Update multiple records](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-5nIdPIlzJ5yk8C2piaNsh-20240926-075550.png "Update multiple records")
-:::
-::::
+{% column %}
+![Update multiple records](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-5nIdPIlzJ5yk8C2piaNsh-20240926-075550.png)
+
+
+{% endcolumn %}
+{% endcolumns %}
 
 ### How is this scenario configured
 
-1. The customer list is loaded from the *customers* datasource, the query returns all records WHERE `customerType` IS NULL.
+1. The customer list is loaded from the _customers_ datasource, the query returns all records WHERE `customerType` IS NULL.
 2. An `execute-entities` action is configured to update multiple records with a single REST call. The update function calls the REST APIs PATCH operation.
 3. The `execute-entities` action is configured using `parameters` to update the `customerType` property to Bronze. This is a static value and will be the same for all the customers in the list.
 4. The `execute-entities` action is configured using `data` to define the required REST properties for the customers' records. In this example, `id`, `firstName`, `lastName` and `companyName` are required parameters in the REST function.
-5. When the Update records button is pressed all customers with no `customerType` property (label) is updated to *Bronze*.
+5. When the Update records button is pressed all customers with no `customerType` property (label) is updated to _Bronze_.
 
-## REST API
+### REST API
 
-| **REST**         | **Detail**                                    |
-| ---------------- | --------------------------------------------- |
-| URL              | https\://\[your\_rest\_service]/api/customers |
-| Operation/Method | PATCH                                         |
+<table data-header-hidden><thead><tr><th width="220.6484375">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/customers</td></tr><tr><td>Operation/Method</td><td>PATCH</td></tr></tbody></table>
 
-## Function
+### Function
 
 The REST APIs PATCH operator is used in a Jigx function with body parameters to specify the exact columns to be updated for the record. The `inputTransform` specifies how the data should be structured or formatted when being sent to the REST service. This transformation process ensures that the data adheres to the expected schema or format required by the REST service for processing the request. Take note of the required parameters in the function as these are required in the `data` property of the `execute-entities` action.
 
-:::CodeblockTabs
-rest-update-customer.jigx
-
+{% code title="rest-update-customer.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 # Updates data in the REST Service 
@@ -199,15 +191,13 @@ inputTransform: |
     "jobTitle": jobTitle
   }
 ```
-:::
+{% endcode %}
 
-## Action (global)
+### Action (global)
 
 Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or is in focus on the device.
 
-:::CodeblockTabs
-load-data.jigx
-
+{% code title=" load-data.jigx" %}
 ```yaml
 # The sync-entities action gets the data from the REST data provider 
 # using the function.
@@ -226,21 +216,18 @@ action:
         function: rest-get-usStates  
         
 ```
-:::
+{% endcode %}
 
-## Jig (screen)
+### Jig (screen)
 
-- Create a customers list jig where the *customer* datasource query is configured to return all customers with no label.
-- Add an `execute-entities` action to call the function that will update all the customer records in the local table (using `method: update`) and in the REST service (`function: rest-update-customer`). Define the `parameter` property to update the `customerType` property to Bronze. Configuring the `data` property is used to configure the properties that are required to update all records in the list.
+* Create a customers list jig where the _customer_ datasource query is configured to return all customers with no label.
+* Add an `execute-entities` action to call the function that will update all the customer records in the local table (using `method: update`) and in the REST service (`function: rest-update-customer`). Define the `parameter` property to update the `customerType` property to Bronze. Configuring the `data` property is used to configure the properties that are required to update all records in the list.
 
-:::hint{type="success"}
-An alternate option would be to use the following expression under data, removing the need for functionParameter:
-`data: =ctx.datasources.customers ~> | $ | { "customerType": "Bronze "} |`
-:::
+{% hint style="success" %}
+An alternate option would be to use the following expression under data, removing the need for functionParameter: `data: =ctx.datasources.customers ~> | $ | { "customerType": "Bronze "} |`&#x20;
+{% endhint %}
 
-:::CodeblockTabs
-update-customerType.jigx
-
+{% code title="update-customerType.jigx" %}
 ```yaml
 title: Update Customer type
 type: jig.default
@@ -351,15 +338,13 @@ actions:
           # to be updated.             
           data: =@ctx.datasources.customers.{"id":id, "firstName":firstName, "lastName":lastName, "companyName":companyName}[]
 ```
-:::
+{% endcode %}
 
-## Index
+### Index
 
 For performance and offline support the data is synced from the REST service as soon as the app is opened or receives focus. This is achieved by calling the global action in the `OnFocus` and `onLoad` events.
 
-:::CodeblockTabs
-index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 name: hello-rest-example
 title: Hello REST Solution
@@ -386,5 +371,4 @@ tabs:
     jigId: list-customers
     icon: home-apps-logo
 ```
-:::
-
+{% endcode %}
