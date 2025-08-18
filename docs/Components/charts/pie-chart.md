@@ -1,134 +1,36 @@
 # pie-chart
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-The component can be used to display statistics related to data records. Mostly used in [jig.default](<./../../Jig Types/jig_default.md>) or [jig.list](<./../../Jig Types/jig_list.md>).
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem The component can be used to display statistics related to data records. Mostly used in [jig.default](<../../Jig Types/jig_default.md>) or [jig.list](<../../Jig Types/jig_list.md>). :::
 
-:::VerticalSplitItem
-![Pie Chart Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CEsXqKXctc_APbWr9-1G9_pie-chart.png "Pie Chart Preview")
-:::
-::::
+:::VerticalSplitItem ![Pie Chart Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CEsXqKXctc_APbWr9-1G9_pie-chart.png) ::: ::::
 
-:::hint{type="warning"}
+{% hint style="warning" %}
 We are currently experiencing issues with the legend of the Pie Chart component. We are working hard to fix this issue.
-:::
+{% endhint %}
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](pie-chart.md) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>chart</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>title</code>- Its <code>text</code> and <code>verticalAlign</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>series</code></p>
-    </td>
-    <td selected="false" align="left">
-      <ul>
-      <li><code>data</code> - values to be used in the chart.</li>
-      <li><code>layout</code> -  <code>Pie</code> or <code>Arch</code> - the availabe types of chart.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="162.8046875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>chart</code></td><td><code>title</code>- Its <code>text</code> and <code>verticalAlign</code>.</td></tr><tr><td><code>series</code></td><td><ul><li><code>data</code> - values to be used in the chart.</li><li><code>layout</code> - <code>Pie</code> or <code>Arch</code> - the availabe types of chart.</li></ul></td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>chart</code></p>
-    </td>
-    <td selected="false" align="left">
-      <ul>
-      <li><code>title</code> and <code>subtitle</code> - Name and a short description of your chart.</li>
-      <li><code>height</code> and <code>width</code> - The parameters of the chart displayed (in pixels).</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>legend</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>isHidden</code> -  The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>series</code></p>
-    </td>
-    <td selected="false" align="left">
-      <ul>
-      <li><code>name</code> - The naming of the actual series.</li>
-      <li><code>color</code>- select a color from the color palette.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="161.16015625">Other options</th><th></th></tr></thead><tbody><tr><td><code>chart</code></td><td><ul><li><code>title</code> and <code>subtitle</code> - Name and a short description of your chart.</li><li><code>height</code> and <code>width</code> - The parameters of the chart displayed (in pixels).</li></ul></td></tr><tr><td><code>legend</code></td><td><code>isHidden</code> - The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.</td></tr><tr><td><code>series</code></td><td><ul><li><code>name</code> - The naming of the actual series.</li><li><code>color</code>- select a color from the color palette.</li></ul></td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Actions</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onPress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The ability to add any of the actions (please refer to the list of  Actions). This action(s) will be triggered as a reaction to the press event.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="162.4140625">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>The ability to add any of the actions (please refer to the list of Actions). This action(s) will be triggered as a reaction to the press event.</td></tr></tbody></table>
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Pie chart
+#### Pie chart
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![Pie Chart](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CAWSPzutiCMFmb4gxIrya_w40z-dj51d0ecr9n92ccvpiechartiphone13blueportrait.png "Pie Chart")
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ![Pie Chart](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CAWSPzutiCMFmb4gxIrya_w40z-dj51d0ecr9n92ccvpiechartiphone13blueportrait.png) :::
 
-:::VerticalSplitItem
-This jig displays a complete pie chart. In this example, these are issues where green shows resolved issues, yellow issues in progress, and red unresolved issues.
+:::VerticalSplitItem This jig displays a complete pie chart. In this example, these are issues where green shows resolved issues, yellow issues in progress, and red unresolved issues.
 
-**Examples:**
-See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/static-data/pie-chart/pie-chart.jigx).
-See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/dynamic-data/pie-chart/pie-chart-dynamic.jigx).
+**Examples:** See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/static-data/pie-chart/pie-chart.jigx). See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/dynamic-data/pie-chart/pie-chart-dynamic.jigx).
 
-**Datasources:**
-See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-dynamic.jigx).
-:::
-::::
+**Datasources:** See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-dynamic.jigx).
 
-:::CodeblockTabs
-pie-chart (static)
+:::CodeblockTabs pie-chart (static)
 
 ```yaml
 children:
@@ -192,31 +94,18 @@ datasources:
         FROM [default/charts] WHERE '$.category' = "pie-chart"
     
 ```
-:::
-:::::
 
-:::::ExpandableHeading
-### Pie chart type arch
+#### Pie chart type arch
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![Pie chart - arch](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4-g91a_Saz9YXCiIcWHcR_bco9qdkyaolqvlk3xgf8gpie-chart-archchartiphone13blueportrait.png "Pie chart - arch")
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ![Pie chart - arch](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4-g91a_Saz9YXCiIcWHcR_bco9qdkyaolqvlk3xgf8gpie-chart-archchartiphone13blueportrait.png) :::
 
-:::VerticalSplitItem
-This jig displays an arc pie chart. This example shows the occupancy in a warehouse; the green color shows available space and the red color indicates occupied space.
+:::VerticalSplitItem This jig displays an arc pie chart. This example shows the occupancy in a warehouse; the green color shows available space and the red color indicates occupied space.
 
-**Examples:**
-See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/static-data/pie-chart-arch/pie-chart-arch.jigx).
-See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/dynamic-data/pie-chart-arch/pie-chart-arch-dynamic.jigx).
+**Examples:** See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/static-data/pie-chart-arch/pie-chart-arch.jigx). See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/dynamic-data/pie-chart-arch/pie-chart-arch-dynamic.jigx).
 
-**Datasources:**
-See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-arch-chart-dynamic.jigx).
-:::
-::::
+**Datasources:** See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-arch-chart-dynamic.jigx).&#x20;
 
-:::CodeblockTabs
-arch-chart (static)
+:::CodeblockTabs arch-chart (static)
 
 ```yaml
 children:
@@ -282,6 +171,3 @@ datasources:
           '$.title' 
         FROM [default/charts] WHERE '$.category' = "arch-chart"
 ```
-:::
-:::::
-

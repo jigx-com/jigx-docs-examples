@@ -1,91 +1,28 @@
 # count-up
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-The count-up component is a display-only component that continuously updates in real-time to show the elapsed time since a given start timestamp.
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem The count-up component is a display-only component that continuously updates in real-time to show the elapsed time since a given start timestamp. :::
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" size="60" position="center" caption="Count-up" alt="Count-up" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2\_vVUe8H-20250319-072422.png" size="60" position="center" caption="Count-up" alt="Count-up" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2\_vVUe8H-20250319-072422.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} ::: ::::
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](count-up.md) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="153">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>startTimestamp</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add a start date, date/time or time, in milliseconds either using:</p>
-      <ul>
-      <li>datasource, e.g. <code>=@ctx.datasources.events[1].date</code></li>
-      <li>expression, e.g. <code>=$toMillis('2025-05-19T10:43:04.377Z')</code> If <code>startTimestamp</code> is omitted or set to null, the component remains static and does not count up.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="154.5">Core structure</th><th></th></tr></thead><tbody><tr><td><code>startTimestamp</code></td><td><p>Add a start date, date/time or time, in milliseconds either using:</p><ul><li>datasource, e.g. <code>=@ctx.datasources.events[1].date</code></li><li>expression, e.g. <code>=$toMillis('2025-05-19T10:43:04.377Z')</code> If <code>startTimestamp</code> is omitted or set to null, the component remains static and does not count up.</li></ul></td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>labels</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The count-up label displays time in the format Days: Hours: Minutes: Seconds. The Days section appears only when the timer exceeds 24 hours. Configuration options are:</p>
-      <ul>
-      <li><code>isVisible</code> (default: <code>true</code>)- Controls visibility of the count-up labels. Setting it to <code>false</code> hides the labels.</li>
-      <li><code>position</code> - Determines whether the count-up labels (Days: Hours: Minutes: Seconds) appear at the top or bottom of the count-up display.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>size</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Choose between <code>extra-large</code> and <code>medium</code> sizes, with <code>extra-large</code> as the default if the property is not specified in the YAML.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="153.80078125">Other options</th><th></th></tr></thead><tbody><tr><td><code>labels</code></td><td><p>The count-up label displays time in the format Days: Hours: Minutes: Seconds. The Days section appears only when the timer exceeds 24 hours. Configuration options are:</p><ul><li><code>isVisible</code> (default: <code>true</code>)- Controls visibility of the count-up labels. Setting it to <code>false</code> hides the labels.</li><li><code>position</code> - Determines whether the count-up labels (Days: Hours: Minutes: Seconds) appear at the top or bottom of the count-up display.</li></ul></td></tr><tr><td><code>size</code></td><td>Choose between <code>extra-large</code> and <code>medium</code> sizes, with <code>extra-large</code> as the default if the property is not specified in the YAML.</td></tr></tbody></table>
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Count-up basic
+#### Count-up basic
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example shows how to set up a basic `count-up` component that starts counting from the current moment.
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem This example shows how to set up a basic `count-up` component that starts counting from the current moment.
 
-**Examples:**
-See the full code example in GitHub.
-:::
+**Examples:** See the full code example in GitHub.&#x20;
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" size="60" position="center" caption="Count-up" alt="Count-up" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2_vVUe8H-20250319-072422.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2\_vVUe8H-20250319-072422.png" size="60" position="center" caption="Count-up" alt="Count-up" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2\_vVUe8H-20250319-072422.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} ::: ::::
 
-:::CodeblockTabs
-count-up-basic.jigx
+:::CodeblockTabs count-up-basic.jigx
 
 ```yaml
 title: Basic count-up
@@ -114,27 +51,16 @@ children:
     # Provide the start time.
     startTimestamp: =$now()
 ```
-:::
-:::::
 
-:::::ExpandableHeading
-### Count-up sizes and lables
+#### Count-up sizes and lables
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png" size="60" position="center" caption="Count-up in varying sizes" alt="Count-up in varying sizes" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png" size="60" position="center" caption="Count-up in varying sizes" alt="Count-up in varying sizes" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} :::
 
-:::VerticalSplitItem
-This example displays two `count-up` components of different sizes. The first is `extra-large`, with `labels` `positioned` above it, while the second is `medium`-sized with `labels` below.
+:::VerticalSplitItem This example displays two `count-up` components of different sizes. The first is `extra-large`, with `labels` `positioned` above it, while the second is `medium`-sized with `labels` below.
 
-**Examples:**
-See the full code example in GitHub.
-:::
-::::
+**Examples:** See the full code example in GitHub.
 
-:::CodeblockTabs
-count-up-sizes.jigx
+:::CodeblockTabs count-up-sizes.jigx
 
 ```yaml
 title: Count-up sizes and labels
@@ -179,29 +105,18 @@ children:
            # Set the component's size as medium.   
           size: medium
           # Start time defined in ISO format converted to milliseconds.
-          startTimestamp: =$toMillis('2025-03-06T23:00:00Z')              
+          startTimestamp: =$toMillis('2025-03-06T23:00:00Z')          
 ```
-:::
-:::::
 
-:::::ExpandableHeading
-### Count-up using a datasource
+#### Count-up using a datasource
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example showcases two `count-up` components using a datasource with timestamp records in ISO format and milliseconds. The first component uses the millisecond timestamp, while the second uses the ISO format timestamp.
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem This example showcases two `count-up` components using a datasource with timestamp records in ISO format and milliseconds. The first component uses the millisecond timestamp, while the second uses the ISO format timestamp.
 
-**Examples:**
-See the full code example in GitHub.
-:::
+**Examples:** See the full code example in GitHub. :::
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T_KydUti3vw3y1gc-20250319-110401.png" size="60" position="center" caption="Start time defined in a datasource" alt="Start time defined in a datasource" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T_KydUti3vw3y1gc-20250319-110401.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T\_KydUti3vw3y1gc-20250319-110401.png" size="60" position="center" caption="Start time defined in a datasource" alt="Start time defined in a datasource" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T\_KydUti3vw3y1gc-20250319-110401.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} ::: ::::
 
-:::CodeblockTabs
-count-up-datasource.jigx
+:::CodeblockTabs count-up-datasource.jigx
 
 ```yaml
 title: Count-up using datasource
@@ -247,27 +162,16 @@ children:
           # Start time defined in ISO format in a datasource converted to milliseconds.
           startTimestamp: =$toMillis(@ctx.datasources.time[1].timeStamp)
 ```
-:::
-:::::
 
-:::::ExpandableHeading
-### Count-up using state in a when condition
+#### Count-up using state in a when condition
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![count-up condition](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gTZBlyV4cONAWWhje5ule-20250319-124254.png "Count-up condition")
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ![count-up condition](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gTZBlyV4cONAWWhje5ule-20250319-124254.png) :::
 
-:::VerticalSplitItem
-This example demonstrates how to use the jig `state` in a `when` property to initially hide the `count-up` component and reveal it when a start `button` is pressed within a `list-item`.
+:::VerticalSplitItem This example demonstrates how to use the jig `state` in a `when` property to initially hide the `count-up` component and reveal it when a start `button` is pressed within a `list-item`.
 
-**Examples:**
-See the full code example in GitHub.
-:::
-::::
+**Examples:** See the full code example in GitHub. ::: ::::
 
-:::CodeblockTabs
-count-up-expression.jigx
+:::CodeblockTabs count-up-expression.jigx
 
 ```yaml
 title: Count Up 
@@ -343,6 +247,3 @@ children:
     options:
       startTimestamp: =$millis() - 10000
 ```
-:::
-:::::
-

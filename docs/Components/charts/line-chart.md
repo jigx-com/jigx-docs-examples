@@ -1,110 +1,22 @@
 # line-chart
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-The component can display statistics related to data records represented in a line chart. This can show a single or multiple data series for comparative purposes and highlight specific regions or ranges on the chart to make it easier for users to interpret and analyze the data. Mostly used in [jig.default](<./../../Jig Types/jig_default.md>) or [jig.list](<./../../Jig Types/jig_list.md>).
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem The component can display statistics related to data records represented in a line chart. This can show a single or multiple data series for comparative purposes and highlight specific regions or ranges on the chart to make it easier for users to interpret and analyze the data. Mostly used in [jig.default](<../../Jig Types/jig_default.md>) or [jig.list](<../../Jig Types/jig_list.md>).&#x20;
 
-:::VerticalSplitItem
-::Image[]{alt="Line Chart Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/87b0VKGM9ub8wccKGbXvz_line-chart.png" size="62" caption="Line Chart Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/87b0VKGM9ub8wccKGbXvz_line-chart.png" width="800" height="531" darkWidth="800" darkHeight="531"}
-:::
-::::
+:::VerticalSplitItem ::Image\[]{alt="Line Chart Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/87b0VKGM9ub8wccKGbXvz\_line-chart.png" size="62" caption="Line Chart Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/87b0VKGM9ub8wccKGbXvz\_line-chart.png" width="800" height="531" darkWidth="800" darkHeight="531"} ::: ::::
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](line-chart.md) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                              |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `series`           | `data` - values to be used in the chart.&#xA;`color` - defines the color of the bar used in the chart.                                                                       |
-| `xAxis`            | `categories` to display on the x-axis.                                                                                                                                       |
-| `yAxis`            | `min` and `max` values that display on the y-axis. The `max` property doesn't have to be defined, in this case, it will  automatically be calculated depending on your data. |
+<table><thead><tr><th width="147.625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>series</code></td><td><code>data</code> - values to be used in the chart. <code>color</code> - defines the color of the bar used in the chart.</td></tr><tr><td><code>xAxis</code></td><td><code>categories</code> to display on the x-axis.</td></tr><tr><td><code>yAxis</code></td><td><code>min</code> and <code>max</code> values that display on the y-axis. The <code>max</code> property doesn't have to be defined, in this case, it will automatically be calculated depending on your data.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="112">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>chart</code></p>
-    </td>
-    <td selected="false" align="left">
-      <ul>
-      <li><code>title</code> and <code>subtitle</code> - Name and a short description of your chart.</li>
-      <li><code>height</code> and <code>width</code> - The parameters of the chart displayed (in pixels).</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>legend</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>isHidden</code> -  The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>plotBands</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Use <code>plotbands</code> to highlight specific regions or ranges on the chart, making it easier for users to interpret and analyze the data.
-      The <code>from</code> and <code>to</code> properties define the area to be filled with color. Specify the range using the from and to properties with numeric values.</p>
-      <ul>
-      <li><code>area</code></li>
-      <li><code>area-gradient</code></li>
-      <li><code>line</code></li>
-      <li><code>name</code> - The naming of the actual series.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>xAxis</code></p>
-    </td>
-    <td selected="false" align="left">
-      <ul>
-      <li><code>isFirstLabelHidden</code> value is either <code>true</code> to hide the first label or <code>false</code> to display the first label. The property doesn't have to be defined, by default the first label is shown.</li>
-      <li><code>isFirstTickHidden</code> value is either true/false. Set to <code>true</code> hides the whole axis.</li>
-      <li><code>isHidden</code> value is either true/false.</li>
-      <li><code>isLastLabelHidden</code> value is either <code>true</code> to hide the last label or <code>false</code> to display the last label. The property doesn't have to be defined, by default the last label are shown.</li>
-      <li><code>isLastTickHidden</code> value is either <code>true</code> to hide the last line and label or <code>false</code> to display the last line and label. The property doesn't have to be defined, by default the last label  and line are shown.</li>
-      <li><code>labels</code> - Label of axis, a selection of different formats such as <code>dateFormat</code>, <code>currency</code>, <code>unit</code>, and <code>signDisplay</code> are available.
-      <code>min</code> and <code>max</code> - Minimum and maximum values that should be displayed on the x-axis.</li>
-      <li><code>minPadding</code> - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).</li>
-      <li><code>tickAmount</code> - The number of ticks to display on the x-axis. The final amount doesn't have to be exactly the same number as you pass into it. Round up to 6 to give the chart a good set of numbers 0, 20, 40, 60, 80, 100. Set ticks to 3 will be honored and shows 0, 50, and 100.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>yAxis</code></p>
-    </td>
-    <td selected="false" align="left">
-      <ul>
-      <li><code>isFirstLabelHidden</code> value is either true/false. Set to <code>true</code> hides the first label. The property doesn't have to be defined, by default the first label is shown.</li>
-      <li><code>isFirstTickHidden</code> value is either true/false. Set to <code>true</code> hides the whole axis.</li>
-      <li><code>isHidden</code> value is either true/false. Set to <code>true</code> the last label is hidden.</li>
-      <li><code>isLastLabelHidden</code> value is either <code>true</code> to hide the last label and line or <code>false</code> to display the last label and line. The property doesn't have to be defined, by default the last label and line are shown.</li>
-      <li><code>isLastTickHidden</code> value is either <code>true</code> to hide the last line and label or <code>false</code> to display the last line and label. The property doesn't have to be defined, by default the last label  and line are shown.</li>
-      <li><code>labels</code> - Label of axis, a selection of different formats such as <code>currency</code>, <code>numberStyle</code>, <code>compactDisplay</code> and <code>notation</code> is available.</li>
-      <li><code>minPadding</code> - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).</li>
-      <li><code>min</code> and <code>max</code> - Minimum and maximum values that should be displayed on the y-axis.</li>
-      <li><code>tickAmount</code> - The number of ticks to display on the x-axis. The final amount doesn't have to be exactly the same number as you pass into it. Round up to 6 to give the chart a good set of numbers 0, 20, 40, 60, 80, 100. Set ticks to 3 will be honored and shows 0, 50, and 100.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="152.0078125">Other options</th><th></th></tr></thead><tbody><tr><td><code>chart</code></td><td><ul><li><code>title</code> and <code>subtitle</code> - Name and a short description of your chart.</li><li><code>height</code> and <code>width</code> - The parameters of the chart displayed (in pixels).</li></ul></td></tr><tr><td><code>legend</code></td><td><code>isHidden</code> - The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.</td></tr><tr><td><code>plotBands</code></td><td><p>Use <code>plotbands</code> to highlight specific regions or ranges on the chart, making it easier for users to interpret and analyze the data. The <code>from</code> and <code>to</code> properties define the area to be filled with color. Specify the range using the from and to properties with numeric values.</p><ul><li><code>area</code></li><li><code>area-gradient</code></li><li><code>line</code></li><li><code>name</code> - The naming of the actual series.</li></ul></td></tr><tr><td><code>xAxis</code></td><td><ul><li><code>isFirstLabelHidden</code> value is either <code>true</code> to hide the first label or <code>false</code> to display the first label. The property doesn't have to be defined, by default the first label is shown.</li><li><code>isFirstTickHidden</code> value is either true/false. Set to <code>true</code> hides the whole axis.</li><li><code>isHidden</code> value is either true/false.</li><li><code>isLastLabelHidden</code> value is either <code>true</code> to hide the last label or <code>false</code> to display the last label. The property doesn't have to be defined, by default the last label are shown.</li><li><code>isLastTickHidden</code> value is either <code>true</code> to hide the last line and label or <code>false</code> to display the last line and label. The property doesn't have to be defined, by default the last label and line are shown.</li><li><code>labels</code> - Label of axis, a selection of different formats such as <code>dateFormat</code>, <code>currency</code>, <code>unit</code>, and <code>signDisplay</code> are available. <code>min</code> and <code>max</code> - Minimum and maximum values that should be displayed on the x-axis.</li><li><code>minPadding</code> - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).</li><li><code>tickAmount</code> - The number of ticks to display on the x-axis. The final amount doesn't have to be exactly the same number as you pass into it. Round up to 6 to give the chart a good set of numbers 0, 20, 40, 60, 80, 100. Set ticks to 3 will be honored and shows 0, 50, and 100.</li></ul></td></tr><tr><td><code>yAxis</code></td><td><ul><li><code>isFirstLabelHidden</code> value is either true/false. Set to <code>true</code> hides the first label. The property doesn't have to be defined, by default the first label is shown.</li><li><code>isFirstTickHidden</code> value is either true/false. Set to <code>true</code> hides the whole axis.</li><li><code>isHidden</code> value is either true/false. Set to <code>true</code> the last label is hidden.</li><li><code>isLastLabelHidden</code> value is either <code>true</code> to hide the last label and line or <code>false</code> to display the last label and line. The property doesn't have to be defined, by default the last label and line are shown.</li><li><code>isLastTickHidden</code> value is either <code>true</code> to hide the last line and label or <code>false</code> to display the last line and label. The property doesn't have to be defined, by default the last label and line are shown.</li><li><code>labels</code> - Label of axis, a selection of different formats such as <code>currency</code>, <code>numberStyle</code>, <code>compactDisplay</code> and <code>notation</code> is available.</li><li><code>minPadding</code> - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).</li><li><code>min</code> and <code>max</code> - Minimum and maximum values that should be displayed on the y-axis.</li><li><code>tickAmount</code> - The number of ticks to display on the x-axis. The final amount doesn't have to be exactly the same number as you pass into it. Round up to 6 to give the chart a good set of numbers 0, 20, 40, 60, 80, 100. Set ticks to 3 will be honored and shows 0, 50, and 100.</li></ul></td></tr></tbody></table>
 
-## Considerations
+### Considerations
 
 The line-chart control expects a JSON object. Using a REST call can return data as text. To get the JSON object for the REST call there are two options:
 
-- Add the `$eval` function to the expressions as shown below:
+* Add the `$eval` function to the expressions as shown below:
 
 ```yaml
  type: component.line-chart
@@ -115,7 +27,7 @@ The line-chart control expects a JSON object. Using a REST call can return data 
             - data: =$eval(@ctx.datasources.weatherData.temperatures_max)
 ```
 
-- In the datasource specify the fields to be returned as a JSON object by using the `jsonProperties` in the datasource query as shown below:
+* In the datasource specify the fields to be returned as a JSON object by using the `jsonProperties` in the datasource query as shown below:
 
 ```yaml
 datasources:
@@ -141,30 +53,19 @@ datasources:
          - temperatures_min
 ```
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Line-chart financial
+#### Line-chart financial
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a8Eczez-B9FhlY1DgccaP_cc-linechartfinance.PNG" size="80" position="center" caption="Financial line-chart" alt="Financial line-chart" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a8Eczez-B9FhlY1DgccaP_cc-linechartfinance.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a8Eczez-B9FhlY1DgccaP\_cc-linechartfinance.PNG" size="80" position="center" caption="Financial line-chart" alt="Financial line-chart" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a8Eczez-B9FhlY1DgccaP\_cc-linechartfinance.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
 
-:::VerticalSplitItem
-The widget displays an annual overview of finances. The x-axis shows the months and the y-axis is the monetary amount. Thanks to number formatting, we can set any currency.
+:::VerticalSplitItem The widget displays an annual overview of finances. The x-axis shows the months and the y-axis is the monetary amount. Thanks to number formatting, we can set any currency.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/static-data/line-chart-financial/line-chart-financial.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/dynamic-data/line-chart-financial/line-chart-financial-dynamic.jigx)
+**Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/static-data/line-chart-financial/line-chart-financial.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/dynamic-data/line-chart-financial/line-chart-financial-dynamic.jigx)
 
-**Datasources:**
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/finance-dynamic.jigx).
-:::
-::::
+**Datasources:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/finance-dynamic.jigx).&#x20;
 
-:::CodeblockTabs
-line-chart (static)
+:::CodeblockTabs line-chart (static)
 
 ```yaml
 children:
@@ -244,31 +145,18 @@ datasources:
           '$.category' 
         FROM [default/finances] WHERE '$.category' = "finance-month" ORDER BY '$.financeid' ASC
 ```
-:::
-:::::
 
-:::::ExpandableHeading
-### Line-chart multiple series
+#### Line-chart multiple series
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![Multiple series](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-8GXThFXyg72KBY-Bqw6m_l7gpsdv4391wozh5boekfline-chartiphone13blueportrait.png "Multiple series")
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ![Multiple series](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-8GXThFXyg72KBY-Bqw6m_l7gpsdv4391wozh5boekfline-chartiphone13blueportrait.png) :::
 
-:::VerticalSplitItem
-The widget displays an annual overview of finances. The x-axis shows the months and the y-axis the monetary amount. Thanks to number formatting, we can set any currency.
+:::VerticalSplitItem The widget displays an annual overview of finances. The x-axis shows the months and the y-axis the monetary amount. Thanks to number formatting, we can set any currency.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/static-data/line-chart-multiple-series/line-chart-multiple-series.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/dynamic-data/line-chart-multiple-series/line-chart-multiple-dynamic.jigx).
+**Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/static-data/line-chart-multiple-series/line-chart-multiple-series.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/dynamic-data/line-chart-multiple-series/line-chart-multiple-dynamic.jigx).
 
-**Datasources in order series1 and series2:**
-See the full datasource for dynamic data [series 1](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx) and [series 2](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx) in GitHub.
-:::
-::::
+**Datasources in order series1 and series2:** See the full datasource for dynamic data [series 1](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx) and [series 2](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx) in GitHub.&#x20;
 
-:::CodeblockTabs
-line-chart-multiple (static)
+:::CodeblockTabs line-chart-multiple (static)
 
 ```yaml
 children:
@@ -395,27 +283,16 @@ datasources:
         FROM [default/charts] WHERE '$.category' = "chart2" ORDER BY x
     
 ```
-:::
-:::::
 
-:::::ExpandableHeading
-### Line-chart with plot bands
+#### Line-chart with plot bands
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-The chart shows an annual overview of finances. The x-axis shows the months and the y-axis is the monetary amount. The data points are easy to see as we used the `plotBands` property to add color. Single or multiple bands can be defined by adding the `form`, `to` and `color` properties.
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem The chart shows an annual overview of finances. The x-axis shows the months and the y-axis is the monetary amount. The data points are easy to see as we used the `plotBands` property to add color. Single or multiple bands can be defined by adding the `form`, `to` and `color` properties.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/static-data/line-chart-financial/line-charts-plotBands.jigx).
-:::
+**Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/static-data/line-chart-financial/line-charts-plotBands.jigx).
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Q28ZbI6Gwo1zas-YV1bWU_charts-line-plotbands.PNG" size="80" position="center" caption="Line chart with plot bands" alt="Line chart with plot bands" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Q28ZbI6Gwo1zas-YV1bWU_charts-line-plotbands.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Q28ZbI6Gwo1zas-YV1bWU\_charts-line-plotbands.PNG" size="80" position="center" caption="Line chart with plot bands" alt="Line chart with plot bands" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Q28ZbI6Gwo1zas-YV1bWU\_charts-line-plotbands.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
 
-:::CodeblockTabs
-line-chart-plotbands
+:::CodeblockTabs line-chart-plotbands
 
 ```yaml
 title: Current account overview
@@ -462,30 +339,18 @@ children:
     type: component.line-chart
 
 ```
-:::
-:::::
 
-:::::ExpandableHeading
-### line-chart using expressions
+#### line-chart using expressions
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2oguMl295fgFqnaXqr06u_cc-linechartexpression.PNG" size="82" position="center" caption="Line-chart using expressions" alt="Line-chart using expressions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2oguMl295fgFqnaXqr06u_cc-linechartexpression.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2oguMl295fgFqnaXqr06u\_cc-linechartexpression.PNG" size="82" position="center" caption="Line-chart using expressions" alt="Line-chart using expressions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2oguMl295fgFqnaXqr06u\_cc-linechartexpression.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
 
-:::VerticalSplitItem
-In this example expressions are used to dertermine the `min`, `max`, and `tickAmount` of a line-chart . The x-axis shows the quarters and the y-axis the monetary amount using the `format` property to display the currency.
+:::VerticalSplitItem In this example expressions are used to dertermine the `min`, `max`, and `tickAmount` of a line-chart . The x-axis shows the quarters and the y-axis the monetary amount using the `format` property to display the currency.
 
-**Examples:**
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/dynamic-data/line-chart-multiple-series/line-chart-multiple-dynamic.jigx)
+**Examples:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/dynamic-data/line-chart-multiple-series/line-chart-multiple-dynamic.jigx)
 
-**Datasources**
-See the datasource code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx).
-:::
-::::
+**Datasources** See the datasource code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx).&#x20;
 
-:::CodeblockTabs
-line-chart-multiple-dynamic
+:::CodeblockTabs line-chart-multiple-dynamic
 
 ```yaml
 #Add to jigs folder
@@ -565,6 +430,3 @@ options:
       '$.title' 
     FROM [default/charts] WHERE '$.category' = "chart2" ORDER BY x
 ```
-:::
-:::::
-

@@ -1,134 +1,39 @@
 # countdown
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-The countdown component functionality counts down from a date, date/time, and time.  When the time expires, you can configure an outcome, for example, open a different jig, or perform an action. The countdown starts as soon as the jig containing the `component.countdown` opens.
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem The countdown component functionality counts down from a date, date/time, and time. When the time expires, you can configure an outcome, for example, open a different jig, or perform an action. The countdown starts as soon as the jig containing the `component.countdown` opens. :::
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD\_bJvdgslD-\_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD\_bJvdgslD-\_cd-inputsl.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](countdown.md) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>expiresAt</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add a date, date/time or time when the countdown must expire/stop, either using:</p>
-      <ul>
-      <li>datasource, e.g. <code>=@ctx.datasources.events.date</code></li>
-      <li>expression, e.g. <code>=$fromMillis($toMillis($now()) + 50000)</code></li>
-      <li>string, e.g. <code>"2025-09-20 18:00"</code>, or <code>"2025-07-25T17:30:00+02:00"</code></li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="149.64453125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>expiresAt</code></td><td><p>Add a date, date/time or time when the countdown must expire/stop, either using:</p><ul><li>datasource, e.g. <code>=@ctx.datasources.events.date</code></li><li>expression, e.g. <code>=$fromMillis($toMillis($now()) + 50000)</code></li><li>string, e.g. <code>"2025-09-20 18:00"</code>, or <code>"2025-07-25T17:30:00+02:00"</code></li></ul></td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>align</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>center</code>, <code>left</code>, <code>right</code>, and <code>stretch</code>, with <code>center</code> as the default if the property is not specified in the YAML.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>labels</code></p>
-    </td>
-    <td selected="false" align="left">
-      <ul>
-      <li><code>isVisible</code> - <code>true</code> or <code>false</code> with <code>true</code> as the default. Setting <code>false</code> will hide the countdown component.</li>
-      <li><code>position</code> - The countdown labels of Days : Hours : Minutes: Seconds are shown at the <code>bottom</code> or <code>top</code> of the countdown.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>size</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Choose from <code>extra-large</code>, <code>large</code>, <code>medium</code>, <code>small</code>, with <code>large</code> being the default if the property is not specified in the YAML.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="151.8828125">Other options</th><th></th></tr></thead><tbody><tr><td><code>align</code></td><td><code>center</code>, <code>left</code>, <code>right</code>, and <code>stretch</code>, with <code>center</code> as the default if the property is not specified in the YAML.</td></tr><tr><td><code>labels</code></td><td><ul><li><code>isVisible</code> - <code>true</code> or <code>false</code> with <code>true</code> as the default. Setting <code>false</code> will hide the countdown component.</li><li><code>position</code> - The countdown labels of Days : Hours : Minutes: Seconds are shown at the <code>bottom</code> or <code>top</code> of the countdown.</li></ul></td></tr><tr><td><code>size</code></td><td>Choose from <code>extra-large</code>, <code>large</code>, <code>medium</code>, <code>small</code>, with <code>large</code> being the default if the property is not specified in the YAML.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Actions</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onPress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Choose from the provided list of available actions, for example, use the <code>go-to</code> action to open a different jig.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onFinish</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Choose from the provided list of available actions. For example, <code>go-back</code> action.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="153.1484375">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>Choose from the provided list of available actions, for example, use the <code>go-to</code> action to open a different jig.</td></tr><tr><td><code>onFinish</code></td><td>Choose from the provided list of available actions. For example, <code>go-back</code> action.</td></tr></tbody></table>
 
-## Considerations
+### Considerations
 
-- This component's function is to countdown to a predefined date/time. It is not recommended to use the component as a timer.
-- The `component.countdown` can only be used in a `jig.default`.
-- The countdown's separator is by default shown as a colon `:`.
-- The countdown starts when you navigate to the jig containing the `component.countdown`.
-- Use any inputs for the countdown configuration, for example, different types of datasources, states and inputs.
-- Use the `set-state` and `reset-state` actions to set and reset the countdown.
+* This component's function is to countdown to a predefined date/time. It is not recommended to use the component as a timer.
+* The `component.countdown` can only be used in a `jig.default`.
+* The countdown's separator is by default shown as a colon `:`.
+* The countdown starts when you navigate to the jig containing the `component.countdown`.
+* Use any inputs for the countdown configuration, for example, different types of datasources, states and inputs.
+* Use the `set-state` and `reset-state` actions to set and reset the countdown.
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Countdown with inputs (static, dynamic, expression, & datasource)
+#### Countdown with inputs (static, dynamic, expression, & datasource)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD_bJvdgslD-_cd-inputsl.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD\_bJvdgslD-\_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD\_bJvdgslD-\_cd-inputsl.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
 
-:::VerticalSplitItem
-This example shows the `expiresAt` property value set using a static value, an expression, a static datasource, and a dynamic datasource.
+:::VerticalSplitItem This example shows the `expiresAt` property value set using a static value, an expression, a static datasource, and a dynamic datasource.
 
-**Example:**
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-input.jigx").
-:::
-::::
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-input.jigx%22).&#x20;
 
-:::CodeblockTabs
-countdown-input.jigx
+:::CodeblockTabs countdown-input.jigx
 
 ```yaml
 children:
@@ -197,27 +102,16 @@ datasources:
           dateType: Books
           date: "2025-07-18 14:00"
 ```
-:::
-:::::
 
-:::::ExpandableHeading
-### Countdown with alignment
+#### Countdown with alignment
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-You can choose to `align` the `component.countdown` to the `left`, `right`, `center` and `stretch` it across the screen.
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem You can choose to `align` the `component.countdown` to the `left`, `right`, `center` and `stretch` it across the screen.
 
-**Example:**
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-align.jigx).
-:::
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-align.jigx).
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6_cd-alignl.PNG" size="80" position="center" caption="Aligning countdown" alt="Aligning countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6_cd-alignl.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6\_cd-alignl.PNG" size="80" position="center" caption="Aligning countdown" alt="Aligning countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6\_cd-alignl.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
 
-:::CodeblockTabs
-countdown-align.jigx
+:::CodeblockTabs countdown-align.jigx
 
 ```yaml
 children:
@@ -257,27 +151,16 @@ children:
           expiresAt: =$fromMillis($toMillis($now()) + 3600000)
           align: stretch
 ```
-:::
-:::::
 
-:::::ExpandableHeading
-### Countdown with different sizes
+#### Countdown with different sizes
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp_cd-sizel.PNG" size="80" position="center" caption="Size variations" alt="Size variations" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp_cd-sizel.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp\_cd-sizel.PNG" size="80" position="center" caption="Size variations" alt="Size variations" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp\_cd-sizel.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
 
-:::VerticalSplitItem
-Use the `size` property in the `component.countdown` to change the size from `extra-large` to `small`.
+:::VerticalSplitItem Use the `size` property in the `component.countdown` to change the size from `extra-large` to `small`.
 
-**Example:**
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-sizes.jigx).
-:::
-::::
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-sizes.jigx).
 
-:::CodeblockTabs
-count-down-sizes.jigx
+:::CodeblockTabs count-down-sizes.jigx
 
 ```yaml
 children:
@@ -317,27 +200,16 @@ children:
           expiresAt: =$fromMillis($toMillis($now()) + 36000000)
           size: small
 ```
-:::
-:::::
 
-:::::ExpandableHeading
-### Countdown onPress
+#### Countdown onPress
 
-::::VerticalSplit{layout="right"}
-:::VerticalSplitItem
-![Action when pressed](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w0GIWssJYaMr0muw1PZwb_cd-onpressl.PNG "Action when pressed")
-:::
+::::VerticalSplit{layout="right"} :::VerticalSplitItem ![Action when pressed](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w0GIWssJYaMr0muw1PZwb_cd-onpressl.PNG) :::
 
-:::VerticalSplitItem
-This example shows two scenarios, the first opens a different jig when the component is pressed and the second opens a URL when pressed. Use the `onPress` property to set up an action when pressing on the component.
+:::VerticalSplitItem This example shows two scenarios, the first opens a different jig when the component is pressed and the second opens a URL when pressed. Use the `onPress` property to set up an action when pressing on the component.
 
-**Example:**
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-onpress.jigx).
-:::
-::::
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-onpress.jigx).
 
-:::CodeblockTabs
-countdown-OnPress.jigx
+:::CodeblockTabs countdown-OnPress.jigx
 
 ```yaml
 children:
@@ -424,27 +296,16 @@ children:
           expiresAt: =$fromMillis($toMillis($now()) + 36000000)
           size: small
 ```
-:::
-:::::
 
-:::::ExpandableHeading
-### Countdown onFinish
+#### Countdown onFinish
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-In this example the `onFinish` property is used to show a modal when the `component.countdown` `expiresAt` property reaches zero.
+::::VerticalSplit{layout="left"} :::VerticalSplitItem In this example the `onFinish` property is used to show a modal when the `component.countdown` `expiresAt` property reaches zero.
 
-**Example:**
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-onfinish.jigx).
-:::
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-onfinish.jigx).
 
-:::VerticalSplitItem
-![Modal when countdown expires](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_Cmtlj3SADsfj7CruXBXF-20240822-125634.PNG "Modal when countdown expires")
-:::
-::::
+:::VerticalSplitItem ![Modal when countdown expires](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_Cmtlj3SADsfj7CruXBXF-20240822-125634.PNG) ::: ::::
 
-:::CodeblockTabs
-count-down-onFinish.jigx
+:::CodeblockTabs count-down-onFinish.jigx
 
 ```yaml
  children:
@@ -458,29 +319,18 @@ count-down-onFinish.jigx
                   title: 🏖️ Holiday time!
                   buttonText: Enjoy!
 ```
-:::
-:::::
 
-:::::ExpandableHeading
-### Countdown started from another jig
+#### Countdown started from another jig
 
-::::VerticalSplit{layout="right"}
-:::VerticalSplitItem
-![Countdown from jig input](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-R9XOjo8mV7rhiI2DHdOQW-20250304-070603.png "Countdown from jig input")
-:::
+::::VerticalSplit{layout="right"} :::VerticalSplitItem ![Countdown from jig input](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-R9XOjo8mV7rhiI2DHdOQW-20250304-070603.png) :::
 
-:::VerticalSplitItem
-Add inputs from another jig to set the `expiresAl` property for the countdown to start.
+:::VerticalSplitItem Add inputs from another jig to set the `expiresAl` property for the countdown to start.
 
-**Example:**
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-jig-input.jigx).
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-jig-input.jigx).
 
 Supporting example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/start-countdown-support.jigx).
-:::
-::::
 
-:::CodeblockTabs
-count-down-jig-input.jigx
+:::CodeblockTabs count-down-jig-input.jigx
 
 ```yaml
 title: =@ctx.jig.inputs.packageName
@@ -573,6 +423,3 @@ item:
             packagePrice: =@ctx.current.item.Price
             packageName: =@ctx.current.item.name
 ```
-:::
-:::::
-

@@ -3,10 +3,6 @@ title: charts
 slug: n5MH-charts
 createdAt: Wed Oct 12 2022 08:42:41 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jan 17 2024 10:18:12 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to use the Jigx component to display statistics for categorical
-  variables in this informative document. Discover examples of converting data
-  formats like Excel, Jigx dynamic data tables, and
 ---
 
 # charts
@@ -53,8 +49,7 @@ Now that you have your data you can convert it into the YAML needed for the char
 
 Using the _finance-data.json_ it was easy to convert the data into YAML as shown below.
 
-:::CodeblockTabs static-data
-
+{% code title="static-data" %}
 ```yaml
 datasources:
   finance:
@@ -77,15 +72,13 @@ datasources:
           Q4: 86000
           Year: "2019"
 ```
-
-:::
+{% endcode %}
 
 #### YAML - Dynamic Data
 
 In Jigx you can use the data from the dynamic data table, in this instance _data-Finance-data_, then create a file under datasource folder. Use the Dynamic data provider that references the finance-data table with a query selecting the data you want to use, quarters and year in this example.
 
-:::CodeblockTabs dynamic-data
-
+{% code title="dynamic-data" %}
 ```yaml
 type: datasource.sqlite
 options:
@@ -104,8 +97,7 @@ options:
       '$.Year' 
     FROM [default/finance-data]
 ```
-
-:::
+{% endcode %}
 
 #### YAML - Chart
 
@@ -117,8 +109,7 @@ In this example the _finance-data_ would show as follows for each key.
 
 Now it is possible to create charts in YAML with the exact same data, for example a bar and line chart with the finance-data in the above YAML keys is shown below. Notice in the YAML below that the same YAML is used for both the bar and line chart.
 
-:::CodeblockTabs Bar-chart
-
+{% code title="Bar-chart" %}
 ```yaml
 children:
   # select the BAR-CHART component and configure the x-axis and y-axis
@@ -160,9 +151,9 @@ children:
           name: Q4
           color: color5
 ```
+{% endcode %}
 
-Line-chart
-
+{% code title="Line-chart" %}
 ```yaml
 children:
   # select the LINE-CHART component and configure the x-axis and y-axis
@@ -204,13 +195,26 @@ children:
           name: Q4
           color: color5
 ```
+{% endcode %}
 
-:::
+{% columns %}
+{% column %}
+The `component.bar-chart` in the Jigx App using the finance- data.
+{% endcolumn %}
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem The `component.bar-chart` in the Jigx App using the finance- data.
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ssjfdQ\_2eC20t8-KJZYKQ\_c-barmultiexplained.png
+{% endcolumn %}
+{% endcolumns %}
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ssjfdQ\_2eC20t8-KJZYKQ\_c-barmultiexplained.png" size="74" position="center" caption="Bar chart in Jigx App" alt="Bar chart in Jigx App"} :::
+{% columns %}
+{% column %}
+&#x20;The `component.line-chart` in the Jigx App using the finance- data.
+{% endcolumn %}
 
-:::VerticalSplitItem The `component.line-chart` in the Jigx App using the finance- data.
+{% column %}
+![Line chart in Jigx](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jm-81Q_XeyBlWOAAY5A4M_c-lineexample.PNG)&#x20;
 
-![Line chart in Jigx](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jm-81Q_XeyBlWOAAY5A4M_c-lineexample.PNG) ::: ::::
+
+{% endcolumn %}
+{% endcolumns %}

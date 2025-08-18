@@ -5,22 +5,17 @@ createdAt: Wed Jan 29 2025 07:48:11 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Feb 03 2025 08:08:23 GMT+0000 (Coordinated Universal Time)
 ---
 
+# divider
+
 A divider is a simple yet effective UI component that creates a visual separation between components. It helps improve readability, structure content, and enhance user experience by distinguishing different sections. Common use cases include grouping related content or enhancing visual hierarchy.
 
-## Examples and code snippets
+#### Examples and code snippets
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wbWNQ7aP448sIxR7cCoQW-20250203-075934.png" size="66" position="center" caption="Dividers" alt="Dividers"}
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wbWNQ7aP448sIxR7cCoQW-20250203-075934.png" size="66" position="center" caption="Dividers" alt="Dividers"} :::
 
-:::VerticalSplitItem
-This example demonstrates using dividers between components and creating a double-line divider between the horizontal list and the form.
-:::
-::::
+:::VerticalSplitItem This example demonstrates using dividers between components and creating a double-line divider between the horizontal list and the form. ::: ::::
 
-:::CodeblockTabs
-divider.jigx
+:::CodeblockTabs divider.jigx
 
 ```yaml
 children:
@@ -132,5 +127,3 @@ datasources:
           service: Plumbing
           time: 60
 ```
-
-:::

@@ -2,7 +2,7 @@
 
 {% columns %}
 {% column %}
-The calendar jig displays an agenda calendar view. `jig.calendar` contains data with an :Link\[event]{href="https://docs.jigx.com/docs/jc-event" newTab="true" hasDisabledNofollow="false"} component, which adds functionality to the calendar and provides a convenient overview of your scheduled events.
+The calendar jig displays an agenda calendar view. `jig.calendar` contains data with an [event](../Components/event.md) component, which adds functionality to the calendar and provides a convenient overview of your scheduled events.
 {% endcolumn %}
 
 {% column %}
@@ -25,7 +25,7 @@ Certain actions can be executed on the event; for example, when pressing on the 
 ### Examples and code snippets
 
 {% hint style="success" %}
-The code below is an extract from the full _jigx-samples_ solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full _jigx-samples_ project from :Link\[GitHub]{href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples" newTab="true" hasDisabledNofollow="false"}, and follow the instructions in [Setting up your solution](jig_calendar.md).
+The code below is an extract from the full _jigx-samples_ solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full _jigx-samples_ project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples), and follow the instructions in [Setting up your solution](jig_calendar.md).
 {% endhint %}
 
 #### Calendar jig
@@ -185,8 +185,6 @@ Only [Entity](../Preview/Entity.md) and [Web-view](../Preview/Web-view.md) are a
 {% endcolumns %}
 
 **Examples:** See the full example of [calendar-jig](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-calendar/static-data/calendar-preview/calendar-jig.jigx) and [calendar-detail-entity](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-calendar/static-data/calendar-preview/calendar-detail-entity.jigx) in GitHub.
-
-:::CodeblockTabs&#x20;
 
 {% tabs %}
 {% tab title="calendar-jig" %}

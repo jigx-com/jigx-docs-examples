@@ -2,66 +2,40 @@
 
 The entity component is a container for the following components:
 
-- [entity-field](./entity/entity-field.md)
-- [entity-field](./entity/entity-field.md)
-- [section](./entity/section.md)
+* [entity-field](entity/entity-field.md)
+* [entity-field](entity/entity-field.md)
+* [section](entity/section.md)
 
-## Considerations
+### Considerations
 
-- The `component.entity` used with the above-mentioned components is configurable on a `jig.default`.
-- [Section](./entity/section.md) and [field-row](./entity/field-row.md) are also available under the `component.form` as its container. Here the [entity-field](./entity/entity-field.md) is replaced by the [form's](./form.md) children field.
-- When setting up a `component.entity`, either a [default jig](<./../Jig Types/jig_default.md>) or `component.form` can be used in the following combinations:
-  - An entity containing [section(s)](./entity/section.md) with [rows](./entity/field-row.md) and [entity-field](./entity/entity-field.md)
-  - An entity containing [section(s)](./entity/section.md) and [entity-field](./entity/entity-field.md)An entity containing [rows](./entity/field-row.md) and [entity-field](./entity/entity-field.md)
-  - An entity containing [entity fields](./entity/entity-field.md)
+* The `component.entity` used with the above-mentioned components is configurable on a `jig.default`.
+* [Section](entity/section.md) and [field-row](entity/field-row.md) are also available under the `component.form` as its container. Here the [entity-field](entity/entity-field.md) is replaced by the [form's](form.md) children field.
+* When setting up a `component.entity`, either a [default jig](<../Jig Types/jig_default.md>) or `component.form` can be used in the following combinations:
+  * An entity containing [section(s)](entity/section.md) with [rows](entity/field-row.md) and [entity-field](entity/entity-field.md)
+  * An entity containing [section(s)](entity/section.md) and [entity-field](entity/entity-field.md)An entity containing [rows](entity/field-row.md) and [entity-field](entity/entity-field.md)
+  * An entity containing [entity fields](entity/entity-field.md)
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](entity.md) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="121">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isCompact</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>When this property is set to <code>true</code> the entity-field will cover the entire row. This compact variant does not allow usage of field-row components. By default, a label is at the top and the value below. <code>isCompact</code> will place the label on the left and the value on the right. Columns are not supported.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="138.28515625">Other options</th><th></th></tr></thead><tbody><tr><td><code>isCompact</code></td><td>When this property is set to <code>true</code> the entity-field will cover the entire row. This compact variant does not allow usage of field-row components. By default, a label is at the top and the value below. <code>isCompact</code> will place the label on the left and the value on the right. Columns are not supported.</td></tr></tbody></table>
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Entity example
+#### Entity example
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-**Basic**
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem **Basic**
 
-![Entity with sections, row & field](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xQ6vW15SRw79rWRz5aMxz_img9802iphone13blueportrait.png "Entity with sections, row & field")
-:::
+![Entity with sections, row & field](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xQ6vW15SRw79rWRz5aMxz_img9802iphone13blueportrait.png) :::
 
-:::VerticalSplitItem
-**Compact**
+:::VerticalSplitItem **Compact**
 
-![Entity with sections & field](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/P7cVpxb09Yx1ZnvKqqhc8_img9803iphone13blueportrait.png "Entity with sections & field")
-:::
-::::
+![Entity with sections & field](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/P7cVpxb09Yx1ZnvKqqhc8_img9803iphone13blueportrait.png) ::: ::::
 
-**Examples**:
-**Basic** - See the full example using static data in [GitHub]().
-**Compact** - See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd-compact.jigx).
+**Examples**: **Basic** - See the full example using static data in [GitHub](entity.md). **Compact** - See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd-compact.jigx).
 
-:::CodeblockTabs
-Basic-entity-section-row-entity-field
+:::CodeblockTabs Basic-entity-section-row-entity-field
 
 ```yaml
 children:
@@ -216,12 +190,9 @@ datasources:
           '$.time' 
         FROM [default/cleaning-services] ORDER BY '$.service' ASC
 ```
-:::
-:::::
 
 ## See also
 
-- [entity-field](./entity/entity-field.md)
-- [field-row](./entity/field-row.md)
-- [section](https://docs.jigx.com/docs/jc-section")
-
+* [entity-field](entity/entity-field.md)
+* [field-row](entity/field-row.md)
+* [section](https://docs.jigx.com/docs/jc-section%22)
