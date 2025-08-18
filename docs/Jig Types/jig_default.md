@@ -1,60 +1,57 @@
 # jig.default
 
-::::VerticalSplit{layout="right"}
-:::VerticalSplitItem
-Type` jig.default` is the most versatile jig allowing you to create a jig with various setup options such as:
+{% columns %}
+{% column %}
+Type `jig.default` is the most versatile jig allowing you to create a jig with various setup options such as:
 
-- A [form](./../Components/form.md)
-- A [list](./../Widgets/list.md)
-- The jig which can be a part of the [jig.composite](./jig_composite.md)
-- Used with a combination of different components and actions.
+* A [form](../Components/form.md)
+* A [list](../Widgets/list.md)
+* The jig which can be a part of the [jig.composite](jig_composite.md)
+* Used with a combination of different components and actions.
+{% endcolumn %}
 
-##
-:::
+{% column %}
+&#x20;![Jig Default Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gQ4hbnjxlyTp0AqHB3Abz_default.png)
 
-:::VerticalSplitItem
-![Jig Default Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gQ4hbnjxlyTp0AqHB3Abz_default.png "Jig Default Preview")
-:::
-::::
 
-## Configuration options
+{% endcolumn %}
+{% endcolumns %}
 
-Some properties are common to all jig types, see [Common jig type properties]() for a list and their configuration options.
+### Configuration options
 
-| **Core structure** |                                                                                                                                                                 |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`         | Add the UI elements () under the children property, for example, `component.form`. Use Intellisense (ctrl+space) to select a component from the available list. |
-| `title`            | Provide the name of the screen. If you do not want to show a title in a jig use `title: ' '` or add an expression.                                              |
+Some properties are common to all jig types, see [Common jig type properties](jig_default.md) for a list and their configuration options.
+
+<table><thead><tr><th width="167.3359375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td>Add the UI elements () under the children property, for example, <code>component.form</code>. Use Intellisense (ctrl+space) to select a component from the available list.</td></tr><tr><td><code>title</code></td><td>Provide the name of the screen. If you do not want to show a title in a jig use <code>title: ' '</code> or add an expression.</td></tr></tbody></table>
 
 ### Other options
 
-The jig.default is the most versatile jig available allowing you to create a variety of screens. Many options are available for configuration on this jig.
+The `jig.default` is the most versatile jig available allowing you to create a variety of screens. Many options are available for configuration on this jig.
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::hint{type="success"}
-The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples), and follow the instructions in [Setting up your solution]().
-:::
+{% hint style="success" %}
+The code below is an extract from the full _jigx-samples_ solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full _jigx-samples_ project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples), and follow the instructions in [Setting up your solution](jig_default.md).
+{% endhint %}
 
-:::::ExpandableHeading
-### Jig.default as a Form
+#### Jig.default as a Form
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Form jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9eZFxhRcmQLZppDM0sY_1_def1iphone13blueportrait.png "Form jig")
-:::
+{% columns %}
+{% column %}
+&#x20;![Form jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9eZFxhRcmQLZppDM0sY_1_def1iphone13blueportrait.png)
 
-:::VerticalSplitItem
-**Examples:**
-See the full default-form.jigx code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-form.jigx).
-**Datasource:**
+
+{% endcolumn %}
+
+{% column %}
+**Examples:** \
+See the full default-form.jigx code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-form.jigx). \
+**Datasource:** \
 See the full datasource code example for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-form.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-default-form.jigx
-
+{% tabs %}
+{% tab title="default-form.jigx" %}
 ```yaml
 title: Form
 type: jig.default
@@ -128,9 +125,9 @@ children:
                   label: Contract
                   mediaType: image
 ```
+{% endtab %}
 
-datasources
-
+{% tab title="datasources" %}
 ```yaml
 datasources:
   employees:
@@ -144,17 +141,17 @@ datasources:
           id
         FROM [default/employees]
 ```
+{% endtab %}
 
-default.jigx
-
-```yaml
+{% tab title="default.jigx" %}
+```ruby
 databaseId: default
 tables:
   employees: null
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: form
 title: default form
@@ -165,39 +162,36 @@ tabs:
     jigId: defaut-form
     icon: home-apps-logo
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-::::::ExpandableHeading
-### Jig.default as a List
+#### Jig.default as a List
 
-:::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Default jig as a list](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/svSY3C1rR0c7fLoQ5vS5D_def4iphone13blueportrait.png "Default jig as a list")
-:::
+{% columns %}
+{% column %}
+&#x20;![Default jig as a list](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/svSY3C1rR0c7fLoQ5vS5D_def4iphone13blueportrait.png)
 
-::::VerticalSplitItem
-**Examples:**
 
-See the full code sample with static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-list.jigx).
+{% endcolumn %}
 
+{% column %}
+**Examples:**\
+See the full code sample with static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-list.jigx).\
 See the full code sample with dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-list-dynamic.jigx).
 
-**Datasource:**
-
+**Datasource:**\
 See the full code sample for datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-list.jigx).
 
 See the full datasource code samples for dynamic data for [product](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/prods.jigx) and [sales](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/sale.jigx) in GitHub.
 
-:::hint{type="success"}
+{% hint style="success" %}
 Using the code below requires data in the database, the jigx.sample solution has the data provided for products. You can use the products.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/products.csv) and upload it via the [Data](https://docs.jigx.com/S_SB-data) configuration in Jigx Management.
-:::
-::::
-:::::
+{% endhint %}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-default-list-dynamic.jigx
-
+{% tabs %}
+{% tab title="default-list-dynamic.jigx" %}
 ```yaml
 title: List
 type: jig.default
@@ -241,9 +235,9 @@ children:
                     numberStyle: currency
                 discount: =@ctx.current.item.discount
 ```
+{% endtab %}
 
-datasources
-
+{% tab title="datasources" %}
 ```yaml
 datasources:
   prods:
@@ -283,44 +277,39 @@ datasources:
         FROM [default/products]
         WHERE '$.sale' = 'true'
 ```
+{% endtab %}
 
-default.jigx
-
+{% tab title="default.jigx" %}
 ```yaml
 databaseId: default
 tables:
   products: null
 ```
-:::
-::::::
+{% endtab %}
+{% endtabs %}
 
-::::::ExpandableHeading
-### Other examples of jig.default
+#### Other examples of jig.default
 
-:::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Employee default jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ARfHxPHSMCnhUcRfMkpAI_def2iphone13blueportrait.png "Employee default jig")
-:::
+{% columns %}
+{% column %}
+&#x20;![Employee default jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ARfHxPHSMCnhUcRfMkpAI_def2iphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-::::VerticalSplitItem
-**Examples:**
-
+{% column %}
+**Examples:**\
 See the full code sample with static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-employee-detail.jigx). See the full code sample with dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/employee-detail-dynamic.jigx)
 
-**Datasource:**
+**Datasource:**\
+See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products.jigx) See the full datasource code samples for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products-dynamic.jigx)
 
-See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products.jigx)
-See the full datasource code samples for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products-dynamic.jigx)
-
-:::hint{type="success"}
+{% hint style="success" %}
 Using the code below requires data in the database, the jigx.sample solution has the data provided for employees. You can use the employee.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/employees.csv) and upload it via the [Data](https://docs.jigx.com/S_SB-data) configuration in Jigx Management.
-:::
-::::
-:::::
+{% endhint %}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-employee-detail-dynamic.jigx
-
+{% tabs %}
+{% tab title="employee-detail-dynamic.jigx" %}
 ```yaml
 title: Employee detail
 type: jig.default
@@ -413,9 +402,9 @@ children:
           series:
             - data: =@ctx.current.item.data
 ```
+{% endtab %}
 
-datasources
-
+{% tab title="datasources" %}
 ```yaml
 datasources:
   quartal:
@@ -475,41 +464,39 @@ datasources:
           '$.modify' 
         FROM [default/employees] WHERE '$.category' = "employee-detail"
 ```
+{% endtab %}
 
-default.jigx
-
+{% tab title="default.jigx" %}
 ```yaml
 databaseId: default
 tables:
   employees: null
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-:::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LJG6xDMsV4HJ4kjLn7DKK_def3iphone13blueportrait.png)
-:::
+{% columns %}
+{% column %}
+&#x20;![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LJG6xDMsV4HJ4kjLn7DKK_def3iphone13blueportrait.png)
 
-::::VerticalSplitItem
-**Examples:**
 
-See full code sample with static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-product-detail.jigx)
-See full code sample with dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-product-detail-dynamic.jigx).
+{% endcolumn %}
 
-**Datasource:**
+{% column %}
+**Examples:**\
+See full code sample with static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/static-data/default-product-detail.jigx) See full code sample with dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-product-detail-dynamic.jigx).
 
-See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/product-detail-static.jigx).
-See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/product-detail-dynamic.jigx).
+**Datasource:**\
+See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/product-detail-static.jigx). See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/product-detail-dynamic.jigx).
 
-:::hint{type="success"}
+{% hint style="success" %}
 Using the code below requires data in the database, the jigx.sample solution has the data provided for products. You can use the products.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/products.csv) and upload it via the [Data](https://docs.jigx.com/S_SB-data) configuration in Jigx Management.
-:::
-::::
-:::::
+{% endhint %}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-default-product-detail-dynamic.jigx
-
+{% tabs %}
+{% tab title="default-product-detail-dynamic.jigx" %}
 ```yaml
 title: Name
 type: jig.default
@@ -655,9 +642,9 @@ children:
                   isMultiline: true
                   value: =@ctx.datasources.product-detail-dynamic.shipping-detail
 ```
+{% endtab %}
 
-datasources
-
+{% tab title="datasources" %}
 ```yaml
 datasources:
   products-dynamic:
@@ -687,17 +674,17 @@ datasources:
           '$.productid' 
         FROM [default/products] WHERE '$.category' = "detail" AND '$.productid' = '2'
 ```
+{% endtab %}
 
-default.jigx
-
+{% tab title="default.jigx" %}
 ```yaml
 databaseId: default
 tables:
   products: null
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: default-product-detail
 title: default form
@@ -708,11 +695,10 @@ tabs:
     jigId: defaut-product-detail-dynamic
     icon: home-apps-logo
 ```
-:::
-::::::
+{% endtab %}
+{% endtabs %}
 
 ## See also
 
-- [Jigs (screens)](https://docs.jigx.com/jigs-screens)
-- [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-default)
-
+* [Jigs (screens)](https://docs.jigx.com/jigs-screens)
+* [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-default)

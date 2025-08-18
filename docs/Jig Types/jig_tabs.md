@@ -1,240 +1,56 @@
 # jig.tabs
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 Tabs allow you to navigate between different jigs with ease, enhancing the user experience by providing an organized layout. These tabs are placed at the top of the screen to ensure a sleek and intuitive interface.
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E_iRppiL-20250206-182545.gif" size="66" position="center" caption="Tabs " alt="Tabs " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E_iRppiL-20250206-182545.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E\_iRppiL-20250206-182545.gif" size="66" position="center" caption="Tabs " alt="Tabs " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E\_iRppiL-20250206-182545.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
+{% endcolumn %}
+{% endcolumns %}
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all jig types, see [Common jig type properties]() for a list and their configuration options.
+Some properties are common to all jig types, see [Common jig type properties](jig_tabs.md) for a list and their configuration options.
 
 The `jig.tabs` can be configured in the following way in Jigx Builder.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="171">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>title</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Give the jig a title that is displayed at the top of the screen.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>type</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Select <code>jig.tabs</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>jigId</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Provide the <code>jigId</code> for the jig that will be displayed when the tab is active.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>instanceId</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Give the tab a unique identifier, that can be used in expressions.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>tab</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>title</code> - The text that displays as the tab name.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>icon</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add an icon to display in the tab. A list of available icons can be found in . The <code>title</code> appears below the <code>icon</code> in the tab.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>badge</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add a badge to display on the tab to highlight critical information. The badge can be configured at the root level of the jig file. The badge can be configured with an <code>icon</code>, <code>color</code>, and a <code>value</code>.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="187.46484375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Give the jig a title that is displayed at the top of the screen.</td></tr><tr><td><code>type</code></td><td>Select <code>jig.tabs</code>.</td></tr><tr><td><code>jigId</code></td><td>Provide the <code>jigId</code> for the jig that will be displayed when the tab is active.</td></tr><tr><td><code>instanceId</code></td><td>Give the tab a unique identifier, that can be used in expressions.</td></tr><tr><td><code>tab</code></td><td><code>title</code> - The text that displays as the tab name.</td></tr><tr><td><code>icon</code></td><td>Add an icon to display in the tab. A list of available icons can be found in . The <code>title</code> appears below the <code>icon</code> in the tab.</td></tr><tr><td><code>badge</code></td><td>Add a badge to display on the tab to highlight critical information. The badge can be configured at the root level of the jig file. The badge can be configured with an <code>icon</code>, <code>color</code>, and a <code>value</code>.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="178">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>areTabsScrollable</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>When there are many tabs that exceed the width of the screen, set the property to <code>true</code> to scroll and view the additional obscured tabs by swiping left. Setting the property to <code>false</code> will only display the tabs that fit on the width of the screen, additional tabs will be hidden. The property is accessible using IntelliSense at the root level in the YAML. By default tabs are scrollable.
-      Tip: Using areTabsScrollable: false will align the tabs in the center.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>inputs</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Used to pass data between the jigs in the tabs to provide context and data. See  for more information.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>instanceId</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Give the tab a unique identifier allowing you to reference the tab in expressions in jigs.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>initialTabId</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Specify the tab to display when the jig opens. The tab's <code>jigId</code> is used as the value. This property is accessible via IntelliSense at the root level in the YAML. If not specified, the first tab is displayed by default.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isDisabled</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>If <code>true</code> you won't be able to toggle the tabs. The default value is <code>false</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isSwipeable</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Set to <code>true</code> allows you to navigate between tabs by swiping left and right anywhere on the jig. By default tabs are not swipeable and require you to press on the tab title for navigation.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>when</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>This property is used to show/hide any tab based on conditions, such as true, false, or conditions set using an expression.</p>
-    </td>
-  </tr>
-</table>
+<table data-header-hidden><thead><tr><th width="192.8828125">Other options</th><th></th></tr></thead><tbody><tr><td><code>areTabsScrollable</code></td><td>When there are many tabs that exceed the width of the screen, set the property to <code>true</code> to scroll and view the additional obscured tabs by swiping left. Setting the property to <code>false</code> will only display the tabs that fit on the width of the screen, additional tabs will be hidden. The property is accessible using IntelliSense at the root level in the YAML. By default tabs are scrollable. Tip: Using areTabsScrollable: false will align the tabs in the center.</td></tr><tr><td><code>inputs</code></td><td>Used to pass data between the jigs in the tabs to provide context and data. See for more information.</td></tr><tr><td><code>instanceId</code></td><td>Give the tab a unique identifier allowing you to reference the tab in expressions in jigs.</td></tr><tr><td><code>initialTabId</code></td><td>Specify the tab to display when the jig opens. The tab's <code>jigId</code> is used as the value. This property is accessible via IntelliSense at the root level in the YAML. If not specified, the first tab is displayed by default.</td></tr><tr><td><code>isDisabled</code></td><td>If <code>true</code> you won't be able to toggle the tabs. The default value is <code>false</code>.</td></tr><tr><td><code>isSwipeable</code></td><td>Set to <code>true</code> allows you to navigate between tabs by swiping left and right anywhere on the jig. By default tabs are not swipeable and require you to press on the tab title for navigation.</td></tr><tr><td><code>when</code></td><td>This property is used to show/hide any tab based on conditions, such as true, false, or conditions set using an expression.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="109">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Actions</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>actions</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The <code>actions</code> property is a local action applicable to the specific tab. Once the tab is tapped the action will execute.</p>
-      <ul>
-      <li><code>Action Identifier</code> - Provide a unique name that is used to identify the action.</li>
-      <li><code>type</code> - Select the  that is triggered in the specific tab. Use IntelliSense to see the available list of actions.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<table data-header-hidden><thead><tr><th width="194.8671875">Actions</th><th></th></tr></thead><tbody><tr><td><code>actions</code></td><td><p>The <code>actions</code> property is a local action applicable to the specific tab. Once the tab is tapped the action will execute.</p><ul><li><code>Action Identifier</code> - Provide a unique name that is used to identify the action.</li><li><code>type</code> - Select the that is triggered in the specific tab. Use IntelliSense to see the available list of actions.</li></ul></td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="211,123">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>State Configuration</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Key</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Notes</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.jig.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>activeTabId</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Applies to the active tab in the <code>jig.tab</code> type.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.solution.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>tab</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Global variable for the tab used throughout a solution.</p>
-    </td>
-  </tr>
-</table>
+<table data-header-hidden><thead><tr><th width="195.4375">State Configuration</th><th width="135.16796875">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.jig.state.</code></td><td>activeTabId</td><td>Applies to the active tab in the <code>jig.tab</code> type.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>tab</td><td>Global variable for the tab used throughout a solution.</td></tr></tbody></table>
 
-## Considerations
+### Considerations
 
-- Specifying a background color for tabs is currently not supported.
-- `jig.headers` do not display in the children tabs.
-- Using `areTabsScrollable: false` aligns the tabs in the center, aligns the tabs at the center, enhancing visual consistency.
+* Specifying a background color for tabs is currently not supported.
+* `jig.headers` do not display in the children tabs.
+* Using `areTabsScrollable: false` aligns the tabs in the center, aligns the tabs at the center, enhancing visual consistency.
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Basic tabs
+#### Basic tabs
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gXY6EX-Uq2C9RtFI5kPcb-20250206-181546.gif" size="66" position="center" caption="Basic tab jig" alt="Basic tab jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gXY6EX-Uq2C9RtFI5kPcb-20250206-181546.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gXY6EX-Uq2C9RtFI5kPcb-20250206-181546.gif" size="66" position="center" caption="Basic tab jig" alt="Basic tab jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gXY6EX-Uq2C9RtFI5kPcb-20250206-181546.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example demonstrates the simplest use of the `jig.tabs`. Four tabs are configured, each opens the corresponding jig.
 
-**Examples:**
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-basic.jigx).
-Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/supporting-jigs).
-:::
-::::
+**Examples:** \
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-basic.jigx). Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/supporting-jigs).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-jig-tabs-basic.jigx
+:::CodeblockTabs&#x20;
 
+{% tabs %}
+{% tab title="jig-tabs-basic.jigx" %}
 ```yaml
 # Select the jig type tabs.
 type: jig.tabs
@@ -270,9 +86,9 @@ children:
       options:
         title: Help
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: work
 title: work
@@ -285,9 +101,9 @@ tabs:
     jigId: jig-tabs-basic
     icon: home-apps-logo
 ```
+{% endtab %}
 
-appointments.jigx
-
+{% tab title="appointments.jigx" %}
 ```yaml
 # Supporting jig - First tab corresponding jig
 title: Today
@@ -328,9 +144,13 @@ children:
                 title: =@ctx.current.item.customer
                 value: =@ctx.current.item.address
 ```
+{% endtab %}
+{% endtabs %}
 
-inventory.jigx
 
+
+{% tabs %}
+{% tab title="inventory.jigx" %}
 ```yaml
 # Supporting jig - Second tab's corresponding jig
 title: Inventory
@@ -363,9 +183,9 @@ item:
       isDuotone: true
     title: =@ctx.current.item.item
 ```
+{% endtab %}
 
-timelogs
-
+{% tab title="timelogs.jigx" %}
 ```yaml
 # Supporting jig - Third tab's corresponding jig
 title: Time logging
@@ -442,9 +262,9 @@ actions:
             shift-date: =@ctx.components.shift-date.state.value
             shift-duration: =@ctx.components.shift-duration.state.value
 ```
+{% endtab %}
 
-manuals.jigx
-
+{% tab title="manuals.jigx" %}
 ```yaml
 # Supporting jig - Fourth tab's corresponding jig
 title: HVAC manual
@@ -454,29 +274,26 @@ source:
   documentType: PDF
   uri: https://s28.q4cdn.com/392171258/files/doc_downloads/test.pdf
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Scrollable tabs
+#### Scrollable tabs
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-lBrVY3woIBnimDwWulEHH-20250110-093815.gif" size="66" position="center" caption="Scrollable tabs" alt="Scrollable tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-lBrVY3woIBnimDwWulEHH-20250110-093815.gif" width="366" height="730" darkWidth="366" darkHeight="730"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-lBrVY3woIBnimDwWulEHH-20250110-093815.gif" size="66" position="center" caption="Scrollable tabs" alt="Scrollable tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-lBrVY3woIBnimDwWulEHH-20250110-093815.gif" width="366" height="730" darkWidth="366" darkHeight="730"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows the `jig.tabs` with ten tabs. Tab8, Tab9, and Tab10 are not visible. Setting the the `areTabsScrollable: true` property enables scrolling on the tab bar. Each tab opens the corresponding jig when pressed. For demonstration purposes placeholder jigs are used.
 
-**Examples:**
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-scrollable.jigx).
-Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/supporting-jigs).
-:::
-::::
+**Examples:** \
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-scrollable.jigx). Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/supporting-jigs).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-jig-tabs-scrollable.jigx
-
+{% tabs %}
+{% tab title="jig-tabs-scrollable.jigx" %}
 ```yaml
 # Select the jig type tabs.
 type: jig.tabs
@@ -537,9 +354,9 @@ children:
       options:
         title: Tab 10
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: work
 title: work
@@ -552,9 +369,9 @@ tabs:
     jigId: jig-tabs-scrollable
     icon: home-apps-logo
 ```
+{% endtab %}
 
-tab-placeholder.jigx
-
+{% tab title="tab-placeholder.jigx" %}
 ```yaml
 # This jig is create the base for the placeholder jigs in this example.
 # Duplicate the jig to create the required placeholder jigs.
@@ -575,28 +392,26 @@ children:
             label: " "
             value: " "
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Swipeable tabs
+#### Swipeable tabs
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UdPtwouumvXFSZS6_4cU5-20250206-181844.gif" size="66" position="center" caption="Swipeable tabs" alt="Swipeable tabs tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UdPtwouumvXFSZS6_4cU5-20250206-181844.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UdPtwouumvXFSZS6\_4cU5-20250206-181844.gif" size="66" position="center" caption="Swipeable tabs" alt="Swipeable tabs tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UdPtwouumvXFSZS6\_4cU5-20250206-181844.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows the `jig.tabs` with four tabs. Setting the `isSwipeable: true` property allows you to swipe left and right anywhere on the screen to navigate between the tabs instead of pressing on each tab title to display the jigs. Each tab opens the corresponding jig.
 
-**Examples:**
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-swipeable.jigx).
-:::
-::::
+**Examples:** \
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-swipeable.jigx)&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-jig-tabs-swipeable.jigx
-
+{% tabs %}
+{% tab title="jig-tabs-swipeable.jigx" %}
 ```yaml
 # Select the jig type tabs.
 type: jig.tabs
@@ -630,9 +445,9 @@ children:
       options:
         title: Help
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: work
 title: work
@@ -645,28 +460,25 @@ tabs:
     jigId: jig-tabs-swipeable
     icon: home-apps-logo
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Tabs with initialTabId
+#### Tabs with initialTabId
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fMURvK7rblWigmQqdUPWv-20250206-182207.png" size="66" position="center" caption="Initial tab specified" alt="Initial tab specified" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fMURvK7rblWigmQqdUPWv-20250206-182207.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fMURvK7rblWigmQqdUPWv-20250206-182207.png" size="66" position="center" caption="Initial tab specified" alt="Initial tab specified" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fMURvK7rblWigmQqdUPWv-20250206-182207.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example demonstrates the `jig.tabs` with the third tab (logs) set as the default (initial) tab displayed when the jig opens. The `initialTabId: timelogs` property specifies which tab will be in focus upon opening the jig. To specify the default jig use the `jigId` as the `initialTabId`'s value.
 
-**Examples:**
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-intialtabid.jigx).
-:::
-::::
+**Examples:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-intialtabid.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-jig-tabs-initialtabid.jigx
-
+{% tabs %}
+{% tab title="jig-tabs-initialtabid.jigx" %}
 ```yaml
 # Select the jig type tabs.
 type: jig.tabs
@@ -699,9 +511,9 @@ children:
       options:
         title: Help
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: work
 title: work
@@ -714,28 +526,26 @@ tabs:
     jigId: jig-tabs-initialtabid
     icon: home-apps-logo
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Tabs with icons
+#### Tabs with icons
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E_iRppiL-20250206-182545.gif" size="66" position="center" caption="Tabs with icons" alt="Tabs with icons" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E_iRppiL-20250206-182545.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E\_iRppiL-20250206-182545.gif" size="66" position="center" caption="Tabs with icons" alt="Tabs with icons" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E\_iRppiL-20250206-182545.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example demonstrates the `jig.tabs` with the `icons`. The active tab's `icon` displays in the primary color.
 
-**Examples:**
+**Examples:** \
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-icons.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-jig-tabs-icons.jigx
-
+{% tabs %}
+{% tab title="jig-tabs-icons.jigx" %}
 ```yaml
 # Select the jig type tabs.
 type: jig.tabs
@@ -775,9 +585,9 @@ children:
         # Add an icon to the tab. The title is diplayed below the icon.
         icon: book-book-pages
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: work
 title: work
@@ -790,29 +600,26 @@ tabs:
     jigId: jig-tabs-icons
     icon: home-apps-logo
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Tabs with inputs
+#### Tabs with inputs
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MsVwU6nEEHgimuiowkBQ7-20250206-183000.gif" size="66" position="center" caption="Tabs with inputs" alt="Tabs with inputs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MsVwU6nEEHgimuiowkBQ7-20250206-183000.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MsVwU6nEEHgimuiowkBQ7-20250206-183000.gif" size="66" position="center" caption="Tabs with inputs" alt="Tabs with inputs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MsVwU6nEEHgimuiowkBQ7-20250206-183000.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example demonstrates `jig.tabs` where the *Logs* tab is configured to use a jig with inputs. The input values are set within `jig.tabs` under the `jigId` of the corresponding jig.
+{% column %}
+This example demonstrates `jig.tabs` where the _Logs_ tab is configured to use a jig with inputs. The input values are set within `jig.tabs` under the `jigId` of the corresponding jig.
 
-**Examples:**
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-inputs.jigx).
-Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/supporting-jigs).
-:::
-::::
+**Examples:** \
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-inputs.jigx). Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/supporting-jigs).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-jigx-tabs-inputs.jigx
-
+{% tabs %}
+{% tab title="jigx-tabs-inputs.jigx" %}
 ```yaml
 type: jig.tabs
 title: Global INC
@@ -848,9 +655,9 @@ children:
       options:
         title: Help
 ```
+{% endtab %}
 
-timelogs-inputs.jigx
-
+{% tab title="timelogs-inputs.jigx" %}
 ```yaml
 title: Time logging
 description: Log the time taken to complete the job
@@ -915,9 +722,9 @@ children:
                   minutes:
                     step: 2
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: work
 title: work
@@ -930,29 +737,26 @@ tabs:
     jigId: jig-tabs-inputs
     icon: home-apps-logo
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Set tab's content from a single jig
+#### Set tab's content from a single jig
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-y_xWPxX2BR2mdsyMN72Ar-20250227-155626.gif" size="66" position="center" caption="Tabs using single tab" alt="Tabs using single tab" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-y_xWPxX2BR2mdsyMN72Ar-20250227-155626.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-y\_xWPxX2BR2mdsyMN72Ar-20250227-155626.gif" size="66" position="center" caption="Tabs using single tab" alt="Tabs using single tab" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-y\_xWPxX2BR2mdsyMN72Ar-20250227-155626.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example demonstrates how to use a single jig to set the content for each tab by using the jig `inputs`.
 
-**Examples:**
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-content.jigx)
-Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/supporting-jigs).
-:::
-::::
+**Examples:** \
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-content.jigx) Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/supporting-jigs).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-jig-tab-content
-
+{% tabs %}
+{% tab title="jig-tab-content.jigx" %}
 ```yaml
 type: jig.tabs
 title: Time-tracking
@@ -1007,9 +811,9 @@ children:
       hours: 6
       color: color4
 ```
+{% endtab %}
 
-timecard.jigx
-
+{% tab title="timecard.jigx" %}
 ```yaml
 title: Time-tracking
 type: jig.default
@@ -1058,6 +862,5 @@ children:
         icon: time-clock-circle-1-alternate
         isDuotone: true
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

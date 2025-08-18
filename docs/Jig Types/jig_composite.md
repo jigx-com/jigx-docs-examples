@@ -1,72 +1,28 @@
 # jig.composite
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-The composite jig is a jig made up of several parts or elements. In this case, a jig is made up of several jigs. This jig allows you to display multiple jigs on one list where you would otherwise be unable to combine the functionality in the same way.
-:::
+{% columns %}
+{% column %}
+The composite jig is a jig made up of several parts or elements. In this case, a jig is made up of several jigs. This jig allows you to display multiple jigs on one list where you would otherwise be unable to combine the functionality in the same way.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{alt="Jig Composite Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ_xkWBnn-yCDc_composite.png" size="90" caption="Jig Composite Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ_xkWBnn-yCDc_composite.png" width="800" height="996" darkWidth="800" darkHeight="996"}
-:::
-::::
+{% column %}
+Image\[]{alt="Jig Composite Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ\_xkWBnn-yCDc\_composite.png" size="90" caption="Jig Composite Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ\_xkWBnn-yCDc\_composite.png" width="800" height="996" darkWidth="800" darkHeight="996"}&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all jig types, see [Common jig type properties]() for a list and their configuration options.
+Some properties are common to all jig types, see [Common jig type properties](jig_composite.md) for a list and their configuration options.
 
-| **Core Structure** |                                                                                                |
-| ------------------ | ---------------------------------------------------------------------------------------------- |
-| `jigId`            | The core structure includes two `jigId` or more (depends on how many jigs you are connecting). |
+<table><thead><tr><th width="148.98828125">Core Structure</th><th></th></tr></thead><tbody><tr><td><code>jigId</code></td><td>The core structure includes two <code>jigId</code> or more (depends on how many jigs you are connecting).</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="154">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>icon</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The icon will be displayed on the of this jig. Start typing the name of the icon to invoke the available list in IntelliSene. See <a href="">Jigx icons</a> for information on worknig with icons.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>inputs</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>If you are setting up a <code>jig.composite</code> where jigs rely on input to display or otherwise interact with very specific data, you'll need to use <code>inputs</code>. Here you set the data you would like to transfer to the composite jig. There are 2 options to make data available for input: 1) Set them in <code>output</code> inside the jig. 2) Set them as a <code>global</code> variable by using <code>set-state action</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isTitleHidden</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The boolean value allows you to hide the title of your jig in the composite jig. Even if the jig's title is set to <code>true</code> , because the title is a mandatory property.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>when</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The ability to include or exclude a jig for display on a composite jig. If set to <code>true</code> the jig is included, if set to <code>false</code> the jig will not appear on the composite jig. Dynamically set this property by using expressions.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="150.23828125">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>The icon will be displayed on the widget of this jig. Start typing the name of the icon to invoke the available list in IntelliSense. See <a href="jig_composite.md">Jigx icons</a> for information on working with icons.</td></tr><tr><td><code>inputs</code></td><td>If you are setting up a <code>jig.composite</code> where jigs rely on input to display or otherwise interact with very specific data, you'll need to use <code>inputs</code>. Here you set the data you would like to transfer to the composite jig. There are 2 options to make data available for input: 1) Set them in <code>output</code> inside the jig. 2) Set them as a <code>global</code> variable by using <code>set-state action</code>.</td></tr><tr><td><code>isTitleHidden</code></td><td>The boolean value allows you to hide the title of your jig in the composite jig. Even if the jig's title is set to <code>true</code> , because the title is a mandatory property.</td></tr><tr><td><code>when</code></td><td>The ability to include or exclude a jig for display on a composite jig. If set to <code>true</code> the jig is included, if set to <code>false</code> the jig will not appear on the composite jig. Dynamically set this property by using expressions.</td></tr></tbody></table>
 
-## Considerations
+### Considerations
 
-- When calling a jig in a composite jig for example, `jigId: personal-details`, you can add an `instanceId` on the composite jig. This allows you to interact with the referenced jig, such as saving or calling a control on the referenced jig.   If no `instanceId` exists, IntelliSense cannot show it in the composite jig configuration.
+* When calling a jig in a composite jig for example, `jigId: personal-details`, you can add an `instanceId` on the composite jig. This allows you to interact with the referenced jig, such as saving or calling a control on the referenced jig. If no `instanceId` exists, IntelliSense cannot show it in the composite jig configuration.
 
-:::CodeblockTabs
-composite.jigx
-
+{% code title="composite.jigx" %}
 ```yaml
 children:
   - jigId: personal-details
@@ -118,37 +74,34 @@ actions:
             employee-position: =@ctx.jigs.workDetails.components.work-position.state.value
             employee-contract: =@ctx.jigs.hrInfo.components.employee-contract.state.value  
 ```
-:::
+{% endcode %}
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::hint{type="success"}
-The code below is an extract from the full *jigx-samples* solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full *jigx-samples* project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples) and follow the instructions in [Setting up your solution]().
-:::
+{% hint style="success" %}
+The code below is an extract from the full _jigx-samples_ solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full _jigx-samples_ project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples) and follow the instructions in [Setting up your solution](jig_composite.md).
+{% endhint %}
 
-:::::ExpandableHeading
-### Composite Jig without any form of input
+#### Composite Jig without any form of input
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Composite jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CdvFnDVAGN7W5UQc00w_N_brj8ppzfa99c5cmqx-wsucomposite-withoutiphone13blueportrait.png "Composite jig")
-:::
+{% columns %}
+{% column %}
+&#x20;![Composite jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CdvFnDVAGN7W5UQc00w_N_brj8ppzfa99c5cmqx-wsucomposite-withoutiphone13blueportrait.png)
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows the simplest way in which a `Composite Jig` can be set up - referencing two separate jigs and displaying them on one without having to filter the content.
 
 **Examples:**
 
-See the compsite jig code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/jig-composite.jigx").
-See the [location](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/location/static-data/location-with-address.jigx) code and [country list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/country-list-sd.jigx) code examples in GitHub.
-See the static country datasource code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/country-data-static.jigx).
-See the index.jigx code below to add the jig to the Home Hub.
-:::
-::::
+See the compsite jig code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/jig-composite.jigx%22). See the [location](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/location/static-data/location-with-address.jigx) code and [country list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/country-list-sd.jigx) code examples in GitHub. See the static country datasource code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/country-data-static.jigx). See the index.jigx code below to add the jig to the Home Hub.
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-composite-jig.jigx
 
+
+{% tabs %}
+{% tab title="composite-jig.jigx" %}
 ```yaml
 #This file is added under the jig folder
 title: Composite Jig
@@ -159,13 +112,12 @@ children:
   - jigId: location-with-address
   - jigId: country-list-sd
 ```
+{% endtab %}
 
-location-with-address.jigx
-
+{% tab title="location-with-address.jigx" %}
 ```yaml
 title: Location with address
 type: jig.default
-
 isCollapsible: true
 
 datasources:
@@ -183,9 +135,9 @@ children:
       address: =@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country
       zoomLevel: 9
 ```
+{% endtab %}
 
-country-list-sd.jigx
-
+{% tab title="country-list-sd.jigx" %}
 ```yaml
 title: Country List
 description: List of countries and their flags
@@ -200,11 +152,13 @@ item:
     subtitle: =@ctx.current.item.value
     leftElement: 
       element: icon
-      name: =@ctx.current.item.icon
+      name: =@ctx.current.item.icon// Some code
 ```
+{% endtab %}
+{% endtabs %}
 
-datasources
-
+{% tabs %}
+{% tab title="datasource" %}
 ```yaml
 datasources:
   country-data-static:
@@ -292,9 +246,9 @@ datasources:
         icon: be
         iconType: flag
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: location
 title: location with country list
@@ -304,38 +258,37 @@ tabs:
     jigId: composite-jig
     icon: home-apps-logo
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Composite Jig with input
+#### Composite Jig with input
 
 This example shows how a Composite jig can be used to only display certain data based on the input received.
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![Composite jig with input](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/11o2jArG-3bPKeQT7w0pi_comiphone13blueportrait.png "Composite jig with input")
-:::
+{% columns %}
+{% column %}
+&#x20;![Composite jig with input](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/11o2jArG-3bPKeQT7w0pi_comiphone13blueportrait.png)
 
-:::VerticalSplitItem
-![Composite jig with input](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8ycT7LBXUDhtkDoz8pdUc_compiphone13blueportrait.png "Composite jig with input")
-:::
-::::
 
-**Examples:**
-See the full composite jig input code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/inputs/service-details-comp.jigx).
-See the folder with supporting files in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/inputs/supporting-files).
-See the datasource code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
+{% endcolumn %}
+
+{% column %}
+&#x20;![Composite jig with input](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8ycT7LBXUDhtkDoz8pdUc_compiphone13blueportrait.png)
+
+
+{% endcolumn %}
+{% endcolumns %}
+
+**Examples:** See the full composite jig input code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/inputs/service-details-comp.jigx). See the folder with supporting files in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/inputs/supporting-files). See the datasource code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
 
 See the default.jigx code snippet with the database table defined below.
 
-:::hint{type="success"}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data]() configuration in Jigx Management.
-:::
+{% hint style="success" %}
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](jig_composite.md) configuration in Jigx Management.
+{% endhint %}
 
-:::CodeblockTabs
-service-details-comp.jigx
-
+{% tabs %}
+{% tab title="service-details-comp.jigx" %}
 ```yaml
 type: jig.composite
 title: Cleaning Services
@@ -363,12 +316,11 @@ children:
     inputs:
       id: =@ctx.jigs.cleaning.outputs.output-key
 ```
+{% endtab %}
 
-cleaning-serv-horizon-list-dd.jigx
-
+{% tab title="cleaning-serv-horizon-list-dd.jigx" %}
 ```yaml
 title: List of available services
-
 type: jig.list
 icon: contact 
 isHorizontal: true
@@ -422,9 +374,9 @@ item:
               state: =@ctx.solution.state.servicesId
               value: =@ctx.current.item.id
 ```
+{% endtab %}
 
-service-details.jigx
-
+{% tab title="service-details.jigx" %}
 ```yaml
 title: =@ctx.datasources.cleaningServices.service != null ? "Service details":" "
 type: jig.default
@@ -513,9 +465,11 @@ children:
                   value: ='$ ' & $number(@ctx.datasources.cleaningServices.onceoffrate)
                   isHidden: =(@ctx.datasources.cleaningServices.onceoffrate) = null ? true:false
 ```
+{% endtab %}
+{% endtabs %}
 
-datasources
-
+{% tabs %}
+{% tab title="datasources" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -541,17 +495,17 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+{% endtab %}
 
-default.jigx
-
+{% tab title="default.jigx" %}
 ```yaml
 databaseId: default
 tables:
-  cleaning-services: null  
+  cleaning-services: null 
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: cleaning-service
 title: cleaning service
@@ -561,11 +515,10 @@ tabs:
     jigId: service-details-comp
     icon: home-apps-logo
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
 ## See also
 
-- [Jigs (screens)]()
-- [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-composite)
-
+* [Jigs (screens)](jig_composite.md)
+* [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-composite)

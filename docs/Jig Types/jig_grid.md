@@ -2,292 +2,59 @@
 
 The `jig.grid` enables you to create grid layouts in your app, organizing content into rows and columns for a visually consistent and flexible interface. It helps align elements proportionally, ensuring a structured design. The grid is ideal for creating galleries to display photos or product images, as well as dashboards, menus, and product lists.
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" size="52" position="center" caption="Custom Grid " alt="Custom Grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" size="52" position="center" caption="Custom Grid " alt="Custom Grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" size="52" position="center" caption="Auto Grid " alt="Auto Grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" size="52" position="center" caption="Auto Grid " alt="Auto Grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
+{% endcolumns %}
 
-## Configuration options
+### Configuration options
 
 The `jig.grid` has two available configuration options:
 
-1. **Auto Grid** - used to create a grid layout from a datasource. This is similar in configuration to a [jig.list](./jig_list.md) where a single `grid-item` is configured and iterates through the datasource.
-2. **Custom Grid** - used to create a custom grid layout using widgets, images, or custom components in various sizes.
-   Some properties are common to all jig types, see [Common jig type properties]() for a list and their configuration options.
+1. **Auto Grid** - used to create a grid layout from a datasource. This is similar in configuration to a [jig.list](jig_list.md) where a single `grid-item` is configured and iterates through the datasource.
+2. **Custom Grid** - used to create a custom grid layout using widgets, images, or custom components in various sizes. Some properties are common to all jig types, see [Common jig type properties](jig_grid.md) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="201">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>title</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Give the jig a title that is displayed at the top of the screen. If you do not want to show a title in a jig use <code>title: ' '</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>type</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Select <code>jig.grid</code> for a grid layout configuration.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>component</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Within a grid jig type, the component is used to define each of the elements in the grid layout. Within the <code>grid-item</code> a select set of components can be configured.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>datasources</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Configure a datasource to call the data to display in the grid layout. The datasource property is required for the Auto Grid, but is optional for the Custom Grid selection.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="148.84765625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Give the jig a title that is displayed at the top of the screen. If you do not want to show a title in a jig use <code>title: ' '</code>.</td></tr><tr><td><code>type</code></td><td>Select <code>jig.grid</code> for a grid layout configuration.</td></tr><tr><td><code>component</code></td><td>Within a grid jig type, the component is used to define each of the elements in the grid layout. Within the <code>grid-item</code> a select set of components can be configured.</td></tr><tr><td><code>datasources</code></td><td>Configure a datasource to call the data to display in the grid layout. The datasource property is required for the Auto Grid, but is optional for the Custom Grid selection.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="205">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>actions</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Choose from the provided list of available actions, for example, use the <code>go-to</code> action to open a different jig.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>badge</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Enhance your tabs with a badge, for instance show the number of grid-items. Add the <code>badge</code> property to the jig YAML with an expression.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>description</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Give the jig a description that is displayed under the <code>title</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>data</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Reference a global datasource to use in the jig .</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>grid-item</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>size</code> - Select either <code>1x1</code>,<code> 2x2</code>, <code>2x4</code>, <code>4x2</code>, <code>4x4</code> <code>children</code> - Select a component from the predefined list to display in the grid. The components for selection are:</p>
-      <ul>
-      <li><a href="./../Components/image.md">image</a></li>
-      <li><a href="">widgets</a></li>
-      <li>Use Template - image templates</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>expressions</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Use the <code>expressions</code> property to set that are reusable throughout the jig.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>header</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Configure a that displays and image, location or video at the top of the jig.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>icon</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The icon will be displayed on the of the jig. Start typing the name of the icon to invoke the available list in IntelliSense. See <a href="">Jigx icons</a> for information on working with icons. The <code>icon</code> property applies to <code>component.jig-widget</code> without a <code>widgetId</code>. See the considerations below for the rules governing icon behavior.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>inputs</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Configure that allow you to receive data from other jigs and use it in the current jig.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isCollapsible</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>When the jig is used in a and this property is set to <code>true</code>, a collapse and expand icon is shown, allowing the jig to be collapsed. This is helpful if the composite jig has a number of jigs configured, making it easier to view and interact with the app.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isInitiallyCollapsed</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>When the property is set to <code>true</code> and the jig is part of a composite jig, the jig will open in collapsed mode when the composite jig is launched.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isWaitingSync</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Displays a waiting sync indicator.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>jigId</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Give the jig a unique id that can be referenced outside the jig, for example in state expressions.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>outputs</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Configure that allow you to transfer data out of the current jig and use it in another jig.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>placeholders</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Create a placeholder to show when there is no data to use yet. See tips and tricks -use a placeholder for a placeholder example.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>preview</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Configure the which is triggered by <em>long-pressing</em> on the grid-item.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>summary</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add a component that displays at the bottom of the jig.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>title</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>By default, the jig's <code>title</code> is displayed on the widget. You can override it by adding the <code>title</code> property to the <code>component.jig-widget</code> in the <code>grid-item</code>, either with a custom <code>title</code> or with <code>''</code> (a blank space) to remove the title entirely.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="199.66015625">Other options</th><th></th></tr></thead><tbody><tr><td><code>actions</code></td><td>Choose from the provided list of available actions, for example, use the <code>go-to</code> action to open a different jig.</td></tr><tr><td><code>badge</code></td><td>Enhance your tabs with a badge, for instance show the number of grid-items. Add the <code>badge</code> property to the jig YAML with an expression.</td></tr><tr><td><code>description</code></td><td>Give the jig a description that is displayed under the <code>title</code>.</td></tr><tr><td><code>data</code></td><td>Reference a global datasource to use in the jig .</td></tr><tr><td><code>grid-item</code></td><td><p><code>size</code> - Select either <code>1x1</code>, <code>2x2</code>, <code>2x4</code>, <code>4x2</code>, <code>4x4</code> <code>children</code> - Select a component from the predefined list to display in the grid. The components for selection are:</p><ul><li><a href="../Components/image.md">image</a></li><li><a href="jig_grid.md">widgets</a></li><li>Use Template - image templates</li></ul></td></tr><tr><td><code>expressions</code></td><td>Use the <code>expressions</code> property to set that are reusable throughout the jig.</td></tr><tr><td><code>header</code></td><td>Configure a that displays and image, location or video at the top of the jig.</td></tr><tr><td><code>icon</code></td><td>The icon will be displayed on the of the jig. Start typing the name of the icon to invoke the available list in IntelliSense. See <a href="jig_grid.md">Jigx icons</a> for information on working with icons. The <code>icon</code> property applies to <code>component.jig-widget</code> without a <code>widgetId</code>. See the considerations below for the rules governing icon behavior.</td></tr><tr><td><code>inputs</code></td><td>Configure that allow you to receive data from other jigs and use it in the current jig.</td></tr><tr><td><code>isCollapsible</code></td><td>When the jig is used in a and this property is set to <code>true</code>, a collapse and expand icon is shown, allowing the jig to be collapsed. This is helpful if the composite jig has a number of jigs configured, making it easier to view and interact with the app.</td></tr><tr><td><code>isInitiallyCollapsed</code></td><td>When the property is set to <code>true</code> and the jig is part of a composite jig, the jig will open in collapsed mode when the composite jig is launched.</td></tr><tr><td><code>isWaitingSync</code></td><td>Displays a waiting sync indicator.</td></tr><tr><td><code>jigId</code></td><td>Give the jig a unique id that can be referenced outside the jig, for example in state expressions.</td></tr><tr><td><code>outputs</code></td><td>Configure that allow you to transfer data out of the current jig and use it in another jig.</td></tr><tr><td><code>placeholders</code></td><td>Create a placeholder to show when there is no data to use yet. See tips and tricks -use a placeholder for a placeholder example.</td></tr><tr><td><code>preview</code></td><td>Configure the which is triggered by <em>long-pressing</em> on the grid-item.</td></tr><tr><td><code>summary</code></td><td>Add a component that displays at the bottom of the jig.</td></tr><tr><td><code>title</code></td><td>By default, the jig's <code>title</code> is displayed on the widget. You can override it by adding the <code>title</code> property to the <code>component.jig-widget</code> in the <code>grid-item</code>, either with a custom <code>title</code> or with <code>''</code> (a blank space) to remove the title entirely.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="204">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Events</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onFocus</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Configure an action that executes when the jig opens, for example, <code>reset-solution-state</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onRefresh</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Configure an action that executes when the jig is pulled down, for example, <code>sync-entities</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onPress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add an <code>onPress</code> event to add an action directly on the grid-item, such as <code>open-url</code>.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="201.18359375">Events</th><th></th></tr></thead><tbody><tr><td><code>onFocus</code></td><td>Configure an action that executes when the jig opens, for example, <code>reset-solution-state</code>.</td></tr><tr><td><code>onRefresh</code></td><td>Configure an action that executes when the jig is pulled down, for example, <code>sync-entities</code>.</td></tr><tr><td><code>onPress</code></td><td>Add an <code>onPress</code> event to add an action directly on the grid-item, such as <code>open-url</code>.</td></tr></tbody></table>
 
 ## Considerations
 
-- When using the `grid-item` with a `component.jig-widget`, note the following:
-  - A `widgetId` is required if the referenced jig includes a widget configuration. This value should match the `Widget Name` specified in the referenced jig.
-  - If no widget configuration exists, the widget’s icon is inherited from the jig’s `icon` value. If no `icon` is specified there either, a default icon is used. You can override the icon by specifying one in the `component.jig-widget` of the `grid-item`.
-- For a `1x1` widget, or a `component.widget` with no widgetId, the following rules apply:
-  - If no `icon` is specified, a default icon is displayed.
-  - If an `icon` is configured in the linked jig, that icon is used.
-  - If an `icon` is specified in the `component.widget` of the `grid-item`, it overrides all other icon settings.
-- A jig with inputs in it's `title` will display without a title (blank) as the jig would not have received those inputs.
+* When using the `grid-item` with a `component.jig-widget`, note the following:
+  * A `widgetId` is required if the referenced jig includes a widget configuration. This value should match the `Widget Name` specified in the referenced jig.
+  * If no widget configuration exists, the widget’s icon is inherited from the jig’s `icon` value. If no `icon` is specified there either, a default icon is used. You can override the icon by specifying one in the `component.jig-widget` of the `grid-item`.
+* For a `1x1` widget, or a `component.widget` with no widgetId, the following rules apply:
+  * If no `icon` is specified, a default icon is displayed.
+  * If an `icon` is configured in the linked jig, that icon is used.
+  * If an `icon` is specified in the `component.widget` of the `grid-item`, it overrides all other icon settings.
+* A jig with inputs in it's `title` will display without a title (blank) as the jig would not have received those inputs.
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Custom grid jig
+#### Custom grid jig
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" size="60" position="center" caption="Custom Grid - Delivery " alt="Custom Grid - Delivery " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" size="60" position="center" caption="Custom Grid - Delivery " alt="Custom Grid - Delivery " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, a delivery company uses a dashboard for drivers to display their daily deliveries, urgent tasks, inspection checklists, logs, and customer ratings or complaints. The `jig.grid` with the `custom grid` option is used, allowing multiple `grid-item` configurations. These items include widgets, images, and custom components in various sizes.
 
-**Examples:**
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-custom.jigx).
-Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-grid).
-:::
-::::
+**Examples:** \
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-custom.jigx). Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-grid).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-grid-custom.jigx
-
+{% tabs %}
+{% tab title="grid-custom.jigx" %}
 ```yaml
 # Use the custom grid jig type to create a jig with images, icons, widgets, 
 # and custom component.
@@ -370,9 +137,9 @@ children:
         type: component.custom-component
         componentId: grid-location
 ```
+{% endtab %}
 
-grid-location.jigx
-
+{% tab title="grid-location.jigx" %}
 ```yaml
 type: component.default
 children:
@@ -418,9 +185,9 @@ children:
               options:
                 url: https://www.google.com/maps/place/Boston
 ```
+{% endtab %}
 
-inspection.jigx
-
+{% tab title="inspection.jigx" %}
 ```yaml
 title: Vehicle Inspection Checklist
 type: jig.default
@@ -472,9 +239,9 @@ children:
             label: Vehicle locks
             helperText: Check all door locks to maintain security standards
 ```
+{% endtab %}
 
-customer-complaints.jigx
-
+{% tab title="customer-complaints.jigx" %}
 ```yaml
 title: Complaints
 type: jig.default
@@ -501,9 +268,11 @@ children:
             label: Placeholder
             value: Placeholder
 ```
+{% endtab %}
+{% endtabs %}
 
-customer-rating.jigx
-
+{% tabs %}
+{% tab title="customer-rating.jigx" %}
 ```yaml
 title: Rating  
 description: Customer Survey
@@ -568,9 +337,9 @@ actions:
           data:
             satisfaction: =@ctx.components.satisfaction.state.value
 ```
+{% endtab %}
 
-fuel-log.jigx
-
+{% tab title="fuel-log.jigx" %}
 ```yaml
 title: Fuel log
 description: Description of your Jig
@@ -597,11 +366,10 @@ children:
           options:
             label: Placeholder
             value: Placeholder
-            
 ```
+{% endtab %}
 
-time-log.jigx
-
+{% tab title="time-log.jigx" %}
 ```yaml
 title: Time log
 type: jig.default
@@ -627,30 +395,27 @@ children:
           options:
             label: Placeholder
             value: Placeholder
-            
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Auto grid jig
+#### Auto grid jig
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" size="60" position="center" caption="Auto Grid -Image Gallery  " alt="Auto Grid -Image Gallery  " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" size="60" position="center" caption="Auto Grid -Image Gallery " alt="Auto Grid -Image Gallery " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, a gallery of images is created to showcase the services a company offers. The `jig.grid` type is used with a datasource, enabling a simple configuration based on the records in the datasource. The `component.grid-item` only needs to be configured once using the expression `=@ctx.current.item.` followed by the desired data field. Using `current` loops through the datasource, creating a grid-item for each data record. Note that the specified `size` will apply to all returned records.
 
-**Examples:**
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-auto.jigx).
-:::
-::::
+**Examples:** \
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-auto.jigx)
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-cleaning-services.jigx
-
+{% tabs %}
+{% tab title="cleaning-services.jigx" %}
 ```yaml
 title: Cleaning services
 description: Available services in your area.
@@ -674,9 +439,9 @@ item:
         source:  
           uri: =@ctx.current.item.image
 ```
+{% endtab %}
 
-cleaning (datasource)&#x20;
-
+{% tab title="cleaning (datasource)" %}
 ```yaml
 datasources:
   cleaning: 
@@ -698,25 +463,23 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Custom grid jig with default widget icons and titles
+#### Custom grid jig with default widget icons and titles
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OKrZ-aPdkRLtb-y-wYsci-20250605-062154.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OKrZ-aPdkRLtb-y-wYsci-20250605-062154.png" size="66" width="1313" height="2676" position="center" caption="Default icons" alt="Default icons"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OKrZ-aPdkRLtb-y-wYsci-20250605-062154.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OKrZ-aPdkRLtb-y-wYsci-20250605-062154.png" size="66" width="1313" height="2676" position="center" caption="Default icons" alt="Default icons"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, no icons are configured, so all widgets display the default icon. The `title` of the jig is displayed below the widget.
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-grid-default-icons.jigx
-
+{% tabs %}
+{% tab title="grid-default-icons.jigx" %}
 ```yaml
 title: Grid default icons
 type: jig.grid
@@ -762,9 +525,9 @@ children:
         options:
           jigId: customer-rating
 ```
+{% endtab %}
 
-fuel-log.jigx
-
+{% tab title="fuel-log.jigx" %}
 ```yaml
 title: Fuel log
 description: Description of your Jig
@@ -791,9 +554,9 @@ children:
             label: Placeholder
             value: Placeholder
 ```
+{% endtab %}
 
-inspection.jigx
-
+{% tab title="inspection.jigx" %}
 ```yaml
 title: Vehicle Inspection Checklist
 type: jig.default
@@ -845,9 +608,11 @@ children:
             label: Vehicle locks
             helperText: Check all door locks to maintain security standards
 ```
+{% endtab %}
+{% endtabs %}
 
-delivery-list.jigx
-
+{% tabs %}
+{% tab title="delivery-list.jigx" %}
 ```yaml
 title: Today's Delivery List
 type: jig.default
@@ -901,11 +666,11 @@ children:
           subtitle: =@ctx.current.item.name
           leftElement: 
             element: icon
-            icon: package-size-l                  
+            icon: package-size-l    
 ```
+{% endtab %}
 
-time-log.jigx
-
+{% tab title="time-log.jigx" %}
 ```yaml
 title: Time log
 type: jig.default
@@ -931,9 +696,9 @@ children:
             label: Placeholder
             value: Placeholder
 ```
+{% endtab %}
 
-customer-rating.jigx
-
+{% tab title="customer-rating.jigx" %}
 ```yaml
 title: Rating  
 description: Customer Survey
@@ -998,25 +763,23 @@ actions:
           data:
             satisfaction: =@ctx.components.satisfaction.state.value
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Custom grid with jig icons&#x20;
+#### Custom grid with jig icons
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 In this example, the widget `icons` are configured in each jig, and the jig `title` is displayed below the widget.
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-jF1rEGTotK6gMI6Yr3SMk-20250605-062807.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-jF1rEGTotK6gMI6Yr3SMk-20250605-062807.png" size="66" width="1313" height="2676" position="center" caption="Jig icons " alt="Jig icons "}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-jF1rEGTotK6gMI6Yr3SMk-20250605-062807.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-jF1rEGTotK6gMI6Yr3SMk-20250605-062807.png" size="66" width="1313" height="2676" position="center" caption="Jig icons " alt="Jig icons "}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-grid-jig-icons
-
+{% tabs %}
+{% tab title="grid-jig-icons" %}
 ```yaml
 title: Grid jig icons
 type: jig.grid
@@ -1062,9 +825,9 @@ children:
         options:
           jigId: customer-rating
 ```
+{% endtab %}
 
-fuel-log.jigx
-
+{% tab title="fuel-log.jigx" %}
 ```yaml
 title: Fuel log
 description: Description of your Jig
@@ -1092,11 +855,10 @@ children:
           options:
             label: Placeholder
             value: Placeholder
-
 ```
+{% endtab %}
 
-inspection.jigx
-
+{% tab title="inspection.jigx" %}
 ```yaml
 title: Vehicle Inspection Checklist
 type: jig.default
@@ -1149,11 +911,10 @@ children:
             icon: car-key-1
             label: Vehicle locks
             helperText: Check all door locks to maintain security standards
-
 ```
+{% endtab %}
 
-time-log.jigx
-
+{% tab title="time-log.jigx" %}
 ```yaml
 title: Time log
 type: jig.default
@@ -1180,11 +941,12 @@ children:
           options:
             label: Placeholder
             value: Placeholder
-
 ```
+{% endtab %}
+{% endtabs %}
 
-delivery-list.jigx
-
+{% tabs %}
+{% tab title="delivery-list.jigx" %}
 ```yaml
 title: Today's Delivery List
 type: jig.default
@@ -1241,12 +1003,11 @@ children:
           leftElement:
             element: icon
             icon: package-size-l
-
 ```
+{% endtab %}
 
-customer-rating.jigx
-
-```yaml
+{% tab title="customer-rating.jigx" %}
+```python
 title: Rating
 description: Customer Survey
 type: jig.default
@@ -1311,27 +1072,24 @@ actions:
                 buttonText: Thank you
           data:
             satisfaction: =@ctx.components.satisfaction.state.value
-
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Custom grid jig with custom widget icons
+#### Custom grid jig with custom widget icons
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pPENIb9VM7Y5emq97n8fa-20250605-074146.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pPENIb9VM7Y5emq97n8fa-20250605-074146.png" size="66" width="1313" height="2676" position="center" caption="Custom icons" alt="Custom icons"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pPENIb9VM7Y5emq97n8fa-20250605-074146.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pPENIb9VM7Y5emq97n8fa-20250605-074146.png" size="66" width="1313" height="2676" position="center" caption="Custom icons" alt="Custom icons"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, the widget `icons` are configured in the `component.widget` of the `grid-item`, overriding the `icons` defined in the individual jigs. The jig `title` is displayed below each widget.
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-grid-custom-icons.jigx
-
+{% tabs %}
+{% tab title="grid-custom-icons.jigx" %}
 ```yaml
 title: Grid custom icons
 type: jig.grid
@@ -1387,10 +1145,10 @@ children:
           # Configure a custom icon for the widget.
           icon: rating-star
 ```
+{% endtab %}
 
-fuel-log.jigx
-
-```yaml
+{% tab title="fuel-log.jigx" %}
+```python
 title: Fuel log
 description: Description of your Jig
 type: jig.default
@@ -1418,9 +1176,9 @@ children:
             label: Placeholder
             value: Placeholder
 ```
+{% endtab %}
 
-inspection.jigx
-
+{% tab title="inspection.jigx" %}
 ```yaml
 title: Vehicle Inspection Checklist
 type: jig.default
@@ -1473,11 +1231,12 @@ children:
             icon: car-key-1
             label: Vehicle locks
             helperText: Check all door locks to maintain security standards
-
 ```
+{% endtab %}
+{% endtabs %}
 
-delivery-list.jigx
-
+{% tabs %}
+{% tab title="delivery-list.jigx" %}
 ```yaml
 title: Today's Delivery List
 type: jig.default
@@ -1534,11 +1293,10 @@ children:
           leftElement:
             element: icon
             icon: package-size-l
-
 ```
+{% endtab %}
 
-time-log.jigx
-
+{% tab title="time-log.jigx" %}
 ```yaml
 title: Time log
 type: jig.default
@@ -1566,9 +1324,9 @@ children:
             label: Placeholder
             value: Placeholder
 ```
+{% endtab %}
 
-customer-rating.jigx
-
+{% tab title="customer-rating.jigx" %}
 ```yaml
 title: Rating
 description: Customer Survey
@@ -1634,27 +1392,24 @@ actions:
                 buttonText: Thank you
           data:
             satisfaction: =@ctx.components.satisfaction.state.value
-
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Custom grid jig with no widget and image titles
+#### Custom grid jig with no widget and image titles
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example demonstrates that setting the `title` property in the`component.widget` of the `grid-item` overrides the default jig `title`. Configuring the `component.widget` `title` as a blank space ( ' ' ) removes the title entirely. Custom `icons` are also configured in the `component.widget` of the grid jig for each widget.
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Va-TuCoDex7BnFZwAaCZp-20250605-075319.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Va-TuCoDex7BnFZwAaCZp-20250605-075319.png" size="66" width="1313" height="2676" position="center" caption="Widgets with no titles" alt="Widgets with no titles"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Va-TuCoDex7BnFZwAaCZp-20250605-075319.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Va-TuCoDex7BnFZwAaCZp-20250605-075319.png" size="66" width="1313" height="2676" position="center" caption="Widgets with no titles" alt="Widgets with no titles"
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-grid-custom-no-titles.jigx
-
+{% tabs %}
+{% tab title="grid-custom-no-titles.jigx" %}
 ```yaml
 title: Grid custom no titles icons
 type: jig.grid
@@ -1726,9 +1481,9 @@ children:
           # Using a blank space (' ') for the title removes it entirely.
           title: ' '
 ```
+{% endtab %}
 
-fuel-log.jigx
-
+{% tab title="fuel-log.jigx" %}
 ```yaml
 title: Fuel log
 description: Description of your Jig
@@ -1755,9 +1510,9 @@ children:
             label: Placeholder
             value: Placeholder
 ```
+{% endtab %}
 
-inspection.jigx
-
+{% tab title="inspection.jigx" %}
 ```yaml
 title: Vehicle Inspection Checklist
 type: jig.default
@@ -1809,9 +1564,11 @@ children:
             label: Vehicle locks
             helperText: Check all door locks to maintain security standards
 ```
+{% endtab %}
+{% endtabs %}
 
-delivery-list.jigx
-
+{% tabs %}
+{% tab title="delivery-list.jigx" %}
 ```yaml
 title: Today's Delivery List
 type: jig.default
@@ -1866,11 +1623,10 @@ children:
           leftElement:
             element: icon
             icon: package-size-l
-
 ```
+{% endtab %}
 
-time-log.jigx
-
+{% tab title="time-log.jigx" %}
 ```yaml
 title: Time log
 type: jig.default
@@ -1896,9 +1652,9 @@ children:
             label: Placeholder
             value: Placeholder
 ```
+{% endtab %}
 
-customer-rating.jigx
-
+{% tab title="customer-rating.jigx" %}
 ```yaml
 title: Rating
 description: Customer Survey
@@ -1962,31 +1718,27 @@ actions:
                 buttonText: Thank you
           data:
             satisfaction: =@ctx.components.satisfaction.state.value
-
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Custom grid with custom widget and image titles
+#### Custom grid with custom widget and image titles
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-W6_bRSRg3PqeSS47-WjXp-20250605-080654.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-W6_bRSRg3PqeSS47-WjXp-20250605-080654.png" size="66" width="1313" height="2676" position="center" caption="Custom titles" alt="Custom titles"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-W6\_bRSRg3PqeSS47-WjXp-20250605-080654.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-W6\_bRSRg3PqeSS47-WjXp-20250605-080654.png" size="66" width="1313" height="2676" position="center" caption="Custom titles" alt="Custom titles"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example demonstrates that setting the `title` property in the `component.widget` `grid-item` overrides the default jig `title`. Custom icons are also configured in the `component.widget` of the grid jig for each widget. For image widgets, the title configured in the `component.image` of the `grid-item` overlays the image.
 
-**Examples:**
-See the full code sample in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-custom-icons-titles.jigx" newTab="true" hasDisabledNofollow="false"}.
-Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-grid).
-:::
-::::
+**Examples:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-custom-icons-titles.jigx). \
+Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-grid).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-grid-custom-titles.jigx
-
+{% tabs %}
+{% tab title="grid-custom-titles.jigx" %}
 ```yaml
 title: Grid custom titles
 type: jig.grid
@@ -2059,9 +1811,9 @@ children:
           # Add a custom title to display below the widget.
           title: Rating
 ```
+{% endtab %}
 
-fuel-log.jigx
-
+{% tab title="fuel-log.jigx" %}
 ```yaml
 # The widget title is overridden by the title configured in the grid jig.
 title: Fuel log
@@ -2088,10 +1840,10 @@ children:
             label: Placeholder
             value: Placeholder
 ```
+{% endtab %}
 
-inspection.jigx
-
-```yaml
+{% tab title="inspection.jigx" %}
+```ruby
 # The widget title is overridden by the title configured in the grid jig.
 title: Vehicle Inspection Checklist
 type: jig.default
@@ -2142,11 +1894,12 @@ children:
             icon: car-key-1
             label: Vehicle locks
             helperText: Check all door locks to maintain security standards
-
 ```
+{% endtab %}
+{% endtabs %}
 
-delivery-list.jigx
-
+{% tabs %}
+{% tab title="delivery-list.jigx" %}
 ```yaml
 # The widget title is overridden by the title configured in the grid jig.
 title: Today's Delivery List
@@ -2202,11 +1955,10 @@ children:
           leftElement:
             element: icon
             icon: package-size-l
-
 ```
+{% endtab %}
 
-time-log.jigx
-
+{% tab title="time-log.jigx" %}
 ```yaml
 # The widget title is overridden by the title configured in the grid jig.
 title: Time log
@@ -2233,9 +1985,9 @@ children:
             label: Placeholder
             value: Placeholder
 ```
+{% endtab %}
 
-customer-rating.jigx
-
+{% tab title="customer-rating.jigx" %}
 ```yaml
 # The widget title is overridden by the title configured in the grid jig.
 title: Rating
@@ -2300,27 +2052,23 @@ actions:
                 buttonText: Thank you
           data:
             satisfaction: =@ctx.components.satisfaction.state.value
-
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Custom grid widgets with OnPress event&#x20;
+#### Custom grid widgets with OnPress event
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-In this example, each `component.widget` is configured with an `onPress` event that executes an action, such as `opening-a-map` or displaying an `info-modal`. Note that the configured `onPress` event overrides the default behavior of opening the jig specified in the `jigId`.
-:::
+{% columns %}
+{% column %}
+In this example, each `component.widget` is configured with an `onPress` event that executes an action, such as `opening-a-map` or displaying an `info-modal`. Note that the configured `onPress` event overrides the default behavior of opening the jig specified in the `jigId`.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ys9CzEMHsUELDhiBg37KY-20250605-092415.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ys9CzEMHsUELDhiBg37KY-20250605-092415.gif" size="66" width="681" height="1377" position="center" caption="Widget with onpress" alt="Widget with onpress"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ys9CzEMHsUELDhiBg37KY-20250605-092415.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ys9CzEMHsUELDhiBg37KY-20250605-092415.gif" size="66" width="681" height="1377" position="center" caption="Widget with onpress" alt="Widget with onpress"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-grid-custom-onpress.jigx
-
+{% code title="grid-custom-onpress.jigx" %}
 ```yaml
 title: Grid custom onpress
 type: jig.grid
@@ -2398,6 +2146,4 @@ children:
             options:
               url: https://jigx.com/solutions/construction/
 ```
-:::
-:::::
-
+{% endcode %}

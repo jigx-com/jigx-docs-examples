@@ -1,132 +1,44 @@
 # bottomSheet (Beta)
 
-:::hint{type="info"}
-BETA:
-This feature is currently in **beta**. Functionality and design may change as we continue to improve the experience. Any bugs discovered must be logged via [support@jigx.com](mailto\:support@jigx.com).
-:::
+{% hint style="danger" %}
+BETA: This feature is currently in **beta**. Functionality and design may change as we continue to improve the experience. Any bugs discovered must be logged via [support@jigx.com](mailto:support@jigx.com).
+{% endhint %}
 
 The bottomSheet element slides up from the bottom of the screen to present additional content, actions, or contextual information. It enhances user interaction by providing a seamless display of information without navigating away from the current screen. Perfect for menus, filters, forms, or quick actions, the bottomSheet can be customized to suit various use cases while maintaining a smooth and intuitive user experience.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rbofFxJH56jChPg93JrhO-20250128-094353.png" size="80" position="center" caption="BottomSheets" alt="BottomSheets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rbofFxJH56jChPg93JrhO-20250128-094353.png" width="800" height="517" darkWidth="800" darkHeight="517"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rbofFxJH56jChPg93JrhO-20250128-094353.png" size="80" position="center" caption="BottomSheets" alt="BottomSheets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rbofFxJH56jChPg93JrhO-20250128-094353.png" width="800" height="517" darkWidth="800" darkHeight="517"}
 
-## Configuration options
+### Configuration options
 
-| **Core structure** |                                                                                                                                                                                                                                                                         |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `jigId`            | Provide the `jigId` for the jigs that will be displayed when the bottomSheet is opened.&#xA;- `instanceId` - Give the bottomSheet jig a unique identifier allowing you to reference the jig in expressions.&#xA;- `inputs`- Specify the inputs related to the the jigs. |
+<table><thead><tr><th width="231.0625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>jigId</code></td><td>Provide the <code>jigId</code> for the jigs that will be displayed when the bottomSheet is opened. - <code>instanceId</code> - Give the bottomSheet jig a unique identifier allowing you to reference the jig in expressions. - <code>inputs</code>- Specify the inputs related to the the jigs.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="228">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isPanDownToCloseEnabled</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Enable pan down gesture to close the sheet. Swiping or dragging downward while maintaining contact with the screen closes the sheet. Setting this to <code>false</code> disables closing the sheet by dragging down; instead, tapping outside the sheet on the jig will close it.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>backDrop</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The <code>backdrop</code> property controls the visibility of the jig content displayed beneath the bottomSheet. <code>appearsOnIndex</code> - Specifies the ID of the <code>snapPoint</code> at which the <code>backdrop</code> will appear. This value is a number starting from 0 and depends on the number of <code>snapPoints</code> configured. Example snapPoints configured: <code>snapPoints:</code> <code>- 30%</code> <code>- 50%</code> Example backdrop configuration: <code>backdrop:</code> <code>appearsOnIndex: 0</code> <code>disappearsOnIndex: 1</code> <code>disappearsOnIndex</code> - Specifies the ID of the snapPoint at which the backdrop will disappear. Like <code>appearsOnIndex</code>, the value starts at 0 and corresponds to the configured snapPoints. <code>isVisible</code> - Determines whether the backdrop is enabled.- <code>true</code> - Enables the backdrop, adding a grey overlay to the parent jig.- <code>false</code> - Disables the backdrop, rendering the parent jig without an overlay. Default: <code>true</code>. <code>opacity</code> - Sets the transparency level of the jig content under the bottomSheet. Acceptable values range from 0.1 (very transparent) to 1(fully opaque).</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isDetached</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>When set to <code>true</code>, the modal detaches from the jig and slides up independently from the bottom of the screen.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>initialValue</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Setting the <code>initialValue</code> with the <code>jigId</code> ensures that the bottomSheet is open when the parent jig loads.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>position</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Determine the open position of the bottomSheet. Options are <code>left</code>, <code>middle</code> or <code>right</code>. <strong>Note</strong>: This property is specific to tablets.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>snapIndex</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Specifies the initial <code>snapPoint</code> to which the bottomSheet should open. The value is a number starting from 0 and corresponds to the configured <code>snapPoints</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>snapPoints</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Defines the points where the bottomSheet will snap when opened. These points should be configured in ascending order, from the smallest to the largest, and are set as percentages.
-      Examples:</p>
-      <ul>
-      <li>The <code>bottomSheet</code> covers the entire jig: <code>snapPoints:</code> <code>- 100%</code> The <code>bottomSheet</code> covers the 30% on first snap and 60% on the second snap <code>snapPoints:</code> <code>- 30%</code> <code>- 60%</code></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>width</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Select the width of the bottomSheet from <code>small</code>, <code>medium</code>, or <code>large</code>.
-      <strong>Note:</strong> This property is specific to tablets.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="234.625">Other options</th><th></th></tr></thead><tbody><tr><td><code>isPanDownToCloseEnabled</code></td><td>Enable pan down gesture to close the sheet. Swiping or dragging downward while maintaining contact with the screen closes the sheet. Setting this to <code>false</code> disables closing the sheet by dragging down; instead, tapping outside the sheet on the jig will close it.</td></tr><tr><td><code>backDrop</code></td><td>The <code>backdrop</code> property controls the visibility of the jig content displayed beneath the bottomSheet. <code>appearsOnIndex</code> - Specifies the ID of the <code>snapPoint</code> at which the <code>backdrop</code> will appear. This value is a number starting from 0 and depends on the number of <code>snapPoints</code> configured. Example snapPoints configured: <code>snapPoints:</code> <code>- 30%</code> <code>- 50%</code> Example backdrop configuration: <code>backdrop:</code> <code>appearsOnIndex: 0</code> <code>disappearsOnIndex: 1</code> <code>disappearsOnIndex</code> - Specifies the ID of the snapPoint at which the backdrop will disappear. Like <code>appearsOnIndex</code>, the value starts at 0 and corresponds to the configured snapPoints. <code>isVisible</code> - Determines whether the backdrop is enabled.- <code>true</code> - Enables the backdrop, adding a grey overlay to the parent jig.- <code>false</code> - Disables the backdrop, rendering the parent jig without an overlay. Default: <code>true</code>. <code>opacity</code> - Sets the transparency level of the jig content under the bottomSheet. Acceptable values range from 0.1 (very transparent) to 1(fully opaque).</td></tr><tr><td><code>isDetached</code></td><td>When set to <code>true</code>, the modal detaches from the jig and slides up independently from the bottom of the screen.</td></tr><tr><td><code>initialValue</code></td><td>Setting the <code>initialValue</code> with the <code>jigId</code> ensures that the bottomSheet is open when the parent jig loads.</td></tr><tr><td><code>position</code></td><td>Determine the open position of the bottomSheet. Options are <code>left</code>, <code>middle</code> or <code>right</code>. <strong>Note</strong>: This property is specific to tablets.</td></tr><tr><td><code>snapIndex</code></td><td>Specifies the initial <code>snapPoint</code> to which the bottomSheet should open. The value is a number starting from 0 and corresponds to the configured <code>snapPoints</code>.</td></tr><tr><td><code>snapPoints</code></td><td><p>Defines the points where the bottomSheet will snap when opened. These points should be configured in ascending order, from the smallest to the largest, and are set as percentages. Examples:</p><ul><li>The <code>bottomSheet</code> covers the entire jig: <code>snapPoints:</code> <code>- 100%</code> The <code>bottomSheet</code> covers the 30% on first snap and 60% on the second snap <code>snapPoints:</code> <code>- 30%</code> <code>- 60%</code></li></ul></td></tr><tr><td><code>width</code></td><td>Select the width of the bottomSheet from <code>small</code>, <code>medium</code>, or <code>large</code>. <strong>Note:</strong> This property is specific to tablets.</td></tr></tbody></table>
 
 ## Considerations
 
-- **Multiple bottomSheets:**
-  Multiple `bottomSheets` can be configured. When doing so, the `action.go-to` for the second `bottomSheet` must be configured in the parent jig. Refer to the *Multiple BottomSheets* example below.
-- **Order of actions:**
-  When configuring multiple actions, carefully consider the order of the action list. Certain actions should be executed before the `action.go-to` that opens the bottomSheet. For instance, a `execute-entity` action to save data should be performed before opening the bottomSheet.
-- **Testing:**
-  Configuring the bottomSheet requires careful setup and testing to ensure the jig content displays correctly and the bottomSheet renders as expected. Test on multiple devices to confirm the bottomSheet functions properly across all supported devices.
-- **Global properties:**
-  BottomSheet properties can be set globally, applying the same settings to all jigs specified in the bottomSheet. These properties are configured directly under the bottomSheet property.
-- **Local properties (per jig):**
-  BottomSheet properties can also be set individually for each jig. For instance, when multiple bottomSheets are configured, each jig may require unique settings, such as different heights or content. These properties are configured directly under each `jigId` property.
-- **Navigating to jigs**:
-  To navigate to another screen from the bottomSheet specify `isModal: false` to explicitly open the jig outside of the bottomSheet.
+* **Multiple bottomSheets:** Multiple `bottomSheets` can be configured. When doing so, the `action.go-to` for the second `bottomSheet` must be configured in the parent jig. Refer to the _Multiple BottomSheets_ example below.
+* **Order of actions:** When configuring multiple actions, carefully consider the order of the action list. Certain actions should be executed before the `action.go-to` that opens the bottomSheet. For instance, a `execute-entity` action to save data should be performed before opening the bottomSheet.
+* **Testing:** Configuring the bottomSheet requires careful setup and testing to ensure the jig content displays correctly and the bottomSheet renders as expected. Test on multiple devices to confirm the bottomSheet functions properly across all supported devices.
+* **Global properties:** BottomSheet properties can be set globally, applying the same settings to all jigs specified in the bottomSheet. These properties are configured directly under the bottomSheet property.
+* **Local properties (per jig):** BottomSheet properties can also be set individually for each jig. For instance, when multiple bottomSheets are configured, each jig may require unique settings, such as different heights or content. These properties are configured directly under each `jigId` property.
+* **Navigating to jigs**: To navigate to another screen from the bottomSheet specify `isModal: false` to explicitly open the jig outside of the bottomSheet.
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Basic bottomSheet
+#### Basic bottomSheet
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fGGAq1TUWIESf1rpNc8sM-20250116-130051.png" size="66" position="center" caption="Basic bottomSheet" alt="Basic bottomSheet" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fGGAq1TUWIESf1rpNc8sM-20250116-130051.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fGGAq1TUWIESf1rpNc8sM-20250116-130051.png" size="66" position="center" caption="Basic bottomSheet" alt="Basic bottomSheet" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fGGAq1TUWIESf1rpNc8sM-20250116-130051.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
-Here is a simple example of a menu that is configured to open a `bottomSheet` with options to order the food. The Options `jigId` is specified under the bottomSheet property.
-:::
-::::
+{% column %}
+Here is a simple example of a menu that is configured to open a `bottomSheet` with options to order the food. The Options `jigId` is specified under the bottomSheet property.&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-bottomsheet-basic.jigx
-
+{% tabs %}
+{% tab title="bottomsheet-basic.jigx" %}
 ```yaml
 title: Global Eats 
 type: jig.default
@@ -178,9 +90,9 @@ actions:
           linkTo: options
           isModal: true
 ```
+{% endtab %}
 
-options.jigx
-
+{% tab title="options.jigx" %}
 ```yaml
 # Jig that opens in the bottomSheet.
 title: Options
@@ -218,11 +130,10 @@ children:
               options:
                 title: =@ctx.current.item.booking
                 value: =@ctx.current.item.booking
-                  
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: global-eats
 title: global-eats
@@ -233,9 +144,9 @@ tabs:
     jigId: bottomsheet-basic
     icon: vegan-vegetarian-food-dome
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   menu-list: 
@@ -276,29 +187,25 @@ datasources:
           option: Mediterranean Veggie Platter
           description: A colorful assortment of falafel, hummus, tzatziki, tabbouleh, and warm pita bread. Paired with a Greek salad of cucumbers, tomatoes, olives, and feta cheese.
           price: $15.95
-          icon: vegan-vegetarian-food-dome             
+          icon: vegan-vegetarian-food-dome  
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### BottomSheet with pan down to close disabled
+#### BottomSheet with pan down to close disabled
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example demonstrates how to disable the bottomSheet from being closed by swiping or dragging downward. To achieve this, set the `isPanDownToCloseEnabled `property to `false`. This property is configured at the global level under the `bottomSheet` property.
-In this example, the jig rendered in the bottomSheet includes an `info-modal` action, which is used to display information necessary for ordering food from the menu.&#x20;
-To close the bottomSheet in this example, add a `go-back` action.
-:::
+{% columns %}
+{% column %}
+This example demonstrates how to disable the bottomSheet from being closed by swiping or dragging downward. To achieve this, set the `isPanDownToCloseEnabled` property to `false`. This property is configured at the global level under the `bottomSheet` property. In this example, the jig rendered in the bottomSheet includes an `info-modal` action, which is used to display information necessary for ordering food from the menu. To close the bottomSheet in this example, add a `go-back` action.
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-s9BFz_kwCOvR6cW7HJGga-20250127-123727.gif" size="66" position="center" caption="Pan down disabled" alt="Pan down disabled" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-s9BFz_kwCOvR6cW7HJGga-20250127-123727.gif" width="348" height="694" darkWidth="348" darkHeight="694"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-s9BFz\_kwCOvR6cW7HJGga-20250127-123727.gif" size="66" position="center" caption="Pan down disabled" alt="Pan down disabled" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-s9BFz\_kwCOvR6cW7HJGga-20250127-123727.gif" width="348" height="694" darkWidth="348" darkHeight="694"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-bottomsheet-ispandownenabled.jigx
-
+{% tabs %}
+{% tab title="bottomsheet-ispandownenabled.jigx" %}
 ```yaml
 title: Global Eats 
 type: jig.default
@@ -354,10 +261,11 @@ actions:
           title: Options
           linkTo: options-action
           isModal: true
+
 ```
+{% endtab %}
 
-options-action.jigx
-
+{% tab title="options-action.jigx" %}
 ```yaml
 # Jig that opens in the bottomSheet.
 title: Options
@@ -410,9 +318,9 @@ actions:
               icon: phone-mobile-device-iphone-x-2
               color: positive   
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   menu-list: 
@@ -445,25 +353,23 @@ datasources:
           photo: https://images.unsplash.com/photo-1567122256639-d880e21e48a5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fFZlZ2dpZSUyMFBsYXR0ZXJ8ZW58MHx8MHx8fDA%3D           
                   
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### BottomSheet set to open by default when the parent jig opens
+#### BottomSheet set to open by default when the parent jig opens
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m5UYNy13CwVwOpMaWZ4kP-20250128-093229.png" size="66" position="center" caption="BottomSheet open by default" alt="BottomSheet open by default" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m5UYNy13CwVwOpMaWZ4kP-20250128-093229.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m5UYNy13CwVwOpMaWZ4kP-20250128-093229.png" size="66" position="center" caption="BottomSheet open by default" alt="BottomSheet open by default" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m5UYNy13CwVwOpMaWZ4kP-20250128-093229.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, the bottomSheet opens automatically when the parent jig loads. This is achieved by setting the `initialValue` property with the corresponding `jigId`.
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-bottomsheet-initialvalue.jigx
-
+{% tabs %}
+{% tab title="bottomsheet-initialvalue.jigx" %}
 ```yaml
 title: Itinerary
 type: jig.default
@@ -500,9 +406,9 @@ bottomSheet:
   children:
     - jigId: status-itinerary
 ```
+{% endtab %}
 
-status-itinerary.jigx
-
+{% tab title="status-itinerary.jigx" %}
 ```yaml
 # Jig that opens in the bottomSheet.
 title: Status
@@ -551,9 +457,9 @@ children:
             - when: =@ctx.current.item.status = "Delayed"
               color: negative
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   flight-schedule-static:
@@ -605,27 +511,24 @@ datasources:
           toabrv: DAY
           icon: transportation-ticket-train-alternate
           image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60 
-
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### BottomSheet  with backdrop
+#### BottomSheet with backdrop
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column width="41.66666666666667%" %}
 In this example, the backdrop of the bottomSheet completely obscures the menu screen. This is achieved by using the `isVisible: true` and maximum `opacity: 1`. Note: Setting `isVisible: false` allows the menu to be visible.
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-![Maximum backdrop opacity](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wBwIX6u1nvibK8MmlI7FC-20250127-140142.png "Maximum backdrop opacity")
-:::
-::::
+{% column width="58.33333333333333%" %}
+&#x20;![Maximum backdrop opacity](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wBwIX6u1nvibK8MmlI7FC-20250127-140142.png)&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-bottomsheet-backdrop.jigx
-
+{% tabs %}
+{% tab title="bottomsheet-backdrop.jigx" %}
 ```yaml
 title: Global Eats 
 type: jig.default
@@ -685,9 +588,9 @@ actions:
           linkTo: options-action
           isModal: true
 ```
+{% endtab %}
 
-options-action.jigx
-
+{% tab title="options-action.jigx" %}
 ```yaml
 # Jig that opens in the bottomSheet.
 title: Options
@@ -740,10 +643,10 @@ actions:
               icon: phone-mobile-device-iphone-x-2
               color: positive
 ```
+{% endtab %}
 
-datasource
-
-```yaml
+{% tab title="datasource" %}
+```ruby
 datasources:
   menu-list: 
     type: datasource.static
@@ -785,25 +688,23 @@ datasources:
           price: $15.95
           icon: vegan-vegetarian-food-dome             
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### BottomSheet with backdrop that appears & disappears on index
+#### BottomSheet with backdrop that appears & disappears on index
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Wf2UuFKggYNJKqxyFOItK-20250127-144346.gif" size="66" position="center" caption="Backdrop set to disappear" alt="Backdrop set to disappear" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Wf2UuFKggYNJKqxyFOItK-20250127-144346.gif" width="536" height="1080" darkWidth="536" darkHeight="1080"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Wf2UuFKggYNJKqxyFOItK-20250127-144346.gif" size="66" position="center" caption="Backdrop set to disappear" alt="Backdrop set to disappear" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Wf2UuFKggYNJKqxyFOItK-20250127-144346.gif" width="536" height="1080" darkWidth="536" darkHeight="1080"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example demonstrates how to configure the `backdrop` of the bottomSheet to appear at a specific `snapPoint` and disappear at another. Use the `appearsOnIndex` and `disappearsOnIndex` properties, which correspond to the indexes of the `snapPoints`. The `snapIndex` property specifies the initial `snapPoint` at which the bottomSheet will open.
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-bottomsheet-backdrop-index.jigx
-
+{% tabs %}
+{% tab title="bottomsheet-backdrop-index.jigx" %}
 ```yaml
 title: Global Eats 
 type: jig.default
@@ -866,9 +767,9 @@ actions:
           linkTo: options-action
           isModal: true
 ```
+{% endtab %}
 
-options.jigx
-
+{% tab title="options.jigx" %}
 ```yaml
 # Jig that opens in the bottomSheet.
 title: Options
@@ -920,11 +821,10 @@ actions:
               type: icon
               icon: phone-mobile-device-iphone-x-2
               color: positive
-                  
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   menu-list: 
@@ -965,27 +865,25 @@ datasources:
           option: Mediterranean Veggie Platter
           description: A colorful assortment of falafel, hummus, tzatziki, tabbouleh, and warm pita bread. Paired with a Greek salad of cucumbers, tomatoes, olives, and feta cheese.
           price: $15.95
-          icon: vegan-vegetarian-food-dome                                
+          icon: vegan-vegetarian-food-dome 
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Detached bottomSheet
+#### Detached bottomSheet
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 In this example the bottomSheet is detached from the main parent jig, giving it a floating effect. This functionality is achieved by setting the `isDetached` property to `true`.
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8UGDNAP_eYiJxHBOEFO3D-20250128-083124.png" size="66" position="center" caption="Detached bottomSheet" alt="Detached bottomSheet" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8UGDNAP_eYiJxHBOEFO3D-20250128-083124.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8UGDNAP\_eYiJxHBOEFO3D-20250128-083124.png" size="66" position="center" caption="Detached bottomSheet" alt="Detached bottomSheet" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8UGDNAP\_eYiJxHBOEFO3D-20250128-083124.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-bottomsheet-detached.jigx
-
+{% tabs %}
+{% tab title="bottomsheet-detached.jigx" %}
 ```yaml
 title: Global Eats 
 type: jig.default
@@ -1039,9 +937,9 @@ actions:
           linkTo: booking
           isModal: true
 ```
+{% endtab %}
 
-booking.jigx
-
+{% tab title="booking.jigx" %}
 ```yaml
 # Jig that opens in the bottomSheet.
 title: Reservation
@@ -1088,9 +986,9 @@ actions:
             number: =@ctx.components.number.state.value
             reservation-date: =@ctx.components.reservation-date.state.value
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   menu-list: 
@@ -1123,26 +1021,23 @@ datasources:
           photo: https://images.unsplash.com/photo-1567122256639-d880e21e48a5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fFZlZ2dpZSUyMFBsYXR0ZXJ8ZW58MHx8MHx8fDA%3D           
           
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### BottomSheet with snapPoints
+#### BottomSheet with snapPoints
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0ieXmLubj-yVwI-lM6d9-20250128-081012.gif" size="66" position="center" caption="BottomSheet with snapPoints" alt="BottomSheet with snapPoints" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0ieXmLubj-yVwI-lM6d9-20250128-081012.gif" width="536" height="1080" darkWidth="536" darkHeight="1080"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0ieXmLubj-yVwI-lM6d9-20250128-081012.gif" size="66" position="center" caption="BottomSheet with snapPoints" alt="BottomSheet with snapPoints" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0ieXmLubj-yVwI-lM6d9-20250128-081012.gif" width="536" height="1080" darkWidth="536" darkHeight="1080"}
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example demonstrates how to configure three snap points for the bottomSheet using the `SnapPoints` property. The bottomSheet will initially open at 20% of the screen. When panned up, it will expand to cover 40%, and finally, 60% of the screen.&#x20;
-**Note**: Snapoints should be configured in ascending order, from the smallest to the largest.
-:::
-::::
+{% column %}
+This example demonstrates how to configure three snap points for the bottomSheet using the `SnapPoints` property. The bottomSheet will initially open at 20% of the screen. When panned up, it will expand to cover 40%, and finally, 60% of the screen. **Note**: Snapoints should be configured in ascending order, from the smallest to the largest.
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-bottomsheet-snappoints.jigx
-
+{% tabs %}
+{% tab title="bottomsheet-snappoints.jigx" %}
 ```yaml
 title: Global Eats 
 type: jig.default
@@ -1202,10 +1097,10 @@ actions:
           linkTo: booking
           isModal: true
 ```
+{% endtab %}
 
-booking.jigx
-
-```yaml
+{% tab title="booking.jigx" %}
+```python
 # Jig that opens in the bottomSheet.
 title: Reservation
 type: jig.default
@@ -1251,9 +1146,9 @@ actions:
             number: =@ctx.components.number.state.value
             reservation-date: =@ctx.components.reservation-date.state.value
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   menu-list: 
@@ -1296,31 +1191,28 @@ datasources:
           description: A colorful assortment of falafel, hummus, tzatziki, tabbouleh, and warm pita bread. Paired with a Greek salad of cucumbers, tomatoes, olives, and feta cheese.
           price: $15.95
           icon: vegan-vegetarian-food-dome             
-         
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Multiple bottomSheets with local properties set
+#### Multiple bottomSheets with local properties set
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example demonstrates that two jigs can be opened sequentially in the bottomSheet. Each jig is configured with its own local properties to ensure the bottomSheet adjusts and renders the content correctly.
 
 **Note:** The `go-to` action for the second bottom sheet jig is configured within the YAML of the parent jig.
 
 The first bottom sheet jig is set to open by default using the `initialValue` property.
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9uVxy1VqUe8VoOwnQkCOO-20250430-074455.gif" size="66" position="center" caption="Multiple bottomSheets" alt="Multiple bottomSheets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9uVxy1VqUe8VoOwnQkCOO-20250430-074455.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9uVxy1VqUe8VoOwnQkCOO-20250430-074455.gif" size="66" position="center" caption="Multiple bottomSheets" alt="Multiple bottomSheets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9uVxy1VqUe8VoOwnQkCOO-20250430-074455.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-bottomsheet-multiple.jigx
-
+{% tabs %}
+{% tab title="bottomsheet-multiple.jigx" %}
 ```yaml
 title: Global Eats 
 type: jig.default
@@ -1390,9 +1282,9 @@ actions:
           linkTo: options-bookings
           isModal: true 
 ```
+{% endtab %}
 
-options-bookings.jigx
-
+{% tab title="options-bookings.jigx" %}
 ```yaml
 # First jig that opens in the bottomSheet.
 title: Options
@@ -1437,11 +1329,11 @@ actions:
         - type: action.go-to
           options:
             title: Book Now
-            linkTo: booking                
+            linkTo: booking 
 ```
+{% endtab %}
 
-booking.jigx
-
+{% tab title="booking.jigx" %}
 ```yaml
 # Second jig that opens in the bottomSheet.
 title: Reservation
@@ -1488,9 +1380,9 @@ actions:
             number: =@ctx.components.number.state.value
             reservation-date: =@ctx.components.reservation-date.state.value
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   menu-list: 
@@ -1531,9 +1423,7 @@ datasources:
           option: Mediterranean Veggie Platter
           description: A colorful assortment of falafel, hummus, tzatziki, tabbouleh, and warm pita bread. Paired with a Greek salad of cucumbers, tomatoes, olives, and feta cheese.
           price: $15.95
-          icon: vegan-vegetarian-food-dome             
-                    
+          icon: vegan-vegetarian-food-dome       
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}
