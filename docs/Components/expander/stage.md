@@ -1,14 +1,19 @@
 ---
 title: stage
 slug: Cw5F-stage
-description: Learn how to use the "Stage" component to efficiently showcase content with left and right elements. This comprehensive document highlights the component's configuration options, such as customizing titles, incorporating icons, and defining actions. Follo
 createdAt: Thu Jun 09 2022 19:58:34 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Apr 24 2025 07:14:20 GMT+0000 (Coordinated Universal Time)
+description: >-
+  Learn how to use the "Stage" component to efficiently showcase content with
+  left and right elements. This comprehensive document highlights the
+  component's configuration options, such as customizing t
 ---
+
+# stage
 
 In this component, you add left and right elements, typically showing a start-and-end concept, such as flight schedules.
 
-## Configuration options
+### Configuration options
 
 Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
@@ -28,31 +33,23 @@ Some properties are common to all components, see [Common component properties](
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | `onPress`   | The action is triggered while pressing on the content in the stage. Use IntelliSense (ctrl+space) to see the list of available actions. |
 
-## Consideration
+### Consideration
 
-- `component.stage` can only be used in the `component.expander` or a [list](./../list/stage.md).
+* `component.stage` can only be used in the `component.expander` or a [list](../list/stage.md).
 
-## Examples and code snippets
+### Examples and code snippets
 
 :::::ExpandableHeading
 
-### Stage in expander
+#### Stage in expander
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Stage in expander](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQUOSOOooTNZSRT6fBCoU_dqf676mvwvyz4w1feir5qstageiphone13blueportrait.png "Stage in ")
-:::
+::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Stage in expander](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQUOSOOooTNZSRT6fBCoU_dqf676mvwvyz4w1feir5qstageiphone13blueportrait.png) :::
 
-:::VerticalSplitItem
-**Examples:**
+:::VerticalSplitItem **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/static-data/stage.jigx).
-See the full example using dynamic data [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/dynamic-data/stage-dynamic.jigx).
-:::
-::::
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/static-data/stage.jigx). See the full example using dynamic data [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/dynamic-data/stage-dynamic.jigx). ::: ::::
 
-:::CodeblockTabs
-stage (static)
+:::CodeblockTabs stage (static)
 
 ```yaml
 children:
@@ -127,33 +124,23 @@ datasources:
         FROM [default/flight-schedule]
 ```
 
-:::
-:::::
+::: :::::
 
 :::::ExpandableHeading
 
-### Stage in list
+#### Stage in list
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Stage in list](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8oR-ecX43O27thnShsgId_mlmkhpfrzwatv8spkkz7vstageiphone13blueportrait.png "Stage in list")
-:::
+::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Stage in list](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8oR-ecX43O27thnShsgId_mlmkhpfrzwatv8spkkz7vstageiphone13blueportrait.png) :::
 
-:::VerticalSplitItem
-**Examples:**
+:::VerticalSplitItem **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/static-data/stage-list.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/dynamic-data/stage-list-dynamic.jigx).
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/static-data/stage-list.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/dynamic-data/stage-list-dynamic.jigx).
 
 **Datasources:**
 
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/trip-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/trip-dynamic.jigx).
-:::
-::::
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/trip-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/trip-dynamic.jigx). ::: ::::
 
-:::CodeblockTabs
-stage-list (static)
+:::CodeblockTabs stage-list (static)
 
 ```yaml
 title: Trip in list
@@ -242,5 +229,4 @@ datasources:
         FROM [default/flight-schedule]
 ```
 
-:::
-:::::
+::: :::::

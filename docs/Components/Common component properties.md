@@ -1,14 +1,13 @@
 ---
 title: Common component properties
 slug: LLnT-lg-work-area
-description: Learn how to use the "When" property in Jigx components to conditionally show or hide components and execute actions. This comprehensive document includes an example code snippet demonstrating how the "When" property is utilized to display a text field ex
 createdAt: Fri Apr 14 2023 12:19:19 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Apr 29 2025 09:46:37 GMT+0000 (Coordinated Universal Time)
 ---
 
-Some properties are common to all Jigx components. See the details below:
+# Common component properties
 
-::::ExpandableHeading
+Some properties are common to all Jigx components. See the details below:
 
 ### When
 
@@ -16,19 +15,18 @@ Some properties are common to all Jigx components. See the details below:
 
 Below are the settings to use with the `when` property:
 
-- `when: true`
-- `when: false`
-- `when: =@ctx` set with an expression
+* `when: true`
+* `when: false`
+* `when: =@ctx` set with an expression
 
-**Example and code snippet**
+#### **Example and code snippet**
 
 The example below demonstrates how the `when` property is used at a component level to display a `component.text-field` (Note requirements) only when the `component.checkbox` (Special Diet) is selected.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Xic9Zc-dcHhgZJ_-_qata-20250225-095457.png" size="62" position="center" caption="When-Display a field  " alt="When-Display a field  "}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Xic9Zc-dcHhgZJ\_-\_qata-20250225-095457.png" size="62" position="center" caption="When-Display a field " alt="When-Display a field "}
 
-:::CodeblockTabs
-When.jigx
-
+{% tabs %}
+{% tab title="When.jigx" %}
 ```yaml
 title: Lunch Order
 description: Place your lunch order here
@@ -96,9 +94,9 @@ actions:
           onSuccess: 
             type: action.go-back
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources: 
   meals: 
@@ -116,36 +114,31 @@ datasources:
           - id: 5 
             meal: Flapjacks with Fresh Berries
 ```
-
-:::
-::::
-
-::::ExpandableHeading
+{% endtab %}
+{% endtabs %}
 
 ### Colors
 
 **Applying colors based on specific conditions**: Colors can be configured based on specific conditions. For example, a payment amount exceeding a certain threshold can be displayed in red. However, conditional color configurations are only available in areas that support conditions, such as list items. In contrast, direct color options are more widely supported, for example, `lists` allow both conditional and direct setups, whereas `interactive-images` only support direct options. Additionally, certain areas restrict the available color choices, while UI elements support the predefined set of fourteen colors.
 
-- When configuring the `color` property, select the `color condition` option.
-- Under the `when` property, add an expression that defines the condition under which the specified color should be applied.
+* When configuring the `color` property, select the `color condition` option.
+* Under the `when` property, add an expression that defines the condition under which the specified color should be applied.
 
-:::CodeblockTabs
-color-condition
-
+{% tabs %}
+{% tab title="color-condition" %}
 ```yaml
 color:
    - when: =@ctx.current.item.registered = true 
      color: color2
    - when: =@ctx.current.item.registered = false
-     color: color4          
+     color: color4 
 ```
+{% endtab %}
 
-color (no condition)
-
+{% tab title="color (no condition)" %}
 ```yaml
 options:
   color: color2
 ```
-
-:::
-::::
+{% endtab %}
+{% endtabs %}

@@ -2,53 +2,42 @@
 
 The card is a versatile and visually appealing UI element that encapsulates and presents information or interactive content in a structured, consistent, and user-friendly manner. It enhances the app's usability by organizing content into manageable, self-contained units that are easy to navigate and interact with. Each card typically includes a mix of text, images, and interactive elements, creating a self-contained unit of content.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LFWTucW7Hd-Gh2mU4HA29_cc-card-overview.png" size="80" position="center" caption="Cards" alt="Cards" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LFWTucW7Hd-Gh2mU4HA29_cc-card-overview.png"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LFWTucW7Hd-Gh2mU4HA29\_cc-card-overview.png" size="80" position="center" caption="Cards" alt="Cards" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LFWTucW7Hd-Gh2mU4HA29\_cc-card-overview.png"}
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                  |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| `children`         | Configure a component or multiple components in a card. See [Components](./../Components.md) for a list of available components. |
-| `instanceId`       | Give the card component a unique id that can be referenced throughout the jig.                                                   |
+<table data-header-hidden><thead><tr><th width="152.88671875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td>Configure a component or multiple components in a card. See <a href="../Components.md">Components</a> for a list of available components.</td></tr><tr><td><code>instanceId</code></td><td>Give the card component a unique id that can be referenced throughout the jig.</td></tr></tbody></table>
 
-| **Other options** |                                                                                                                                                            |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`           | Sets the color of the card. Choose a color from the provided [Jigx color palette](https://docs.jigx.com/jigx-color-palette). Default color is white if the property is not specified in the YAML. |
-| `style`           | When `isDisabled` is set to `true`, the card appears opaque, indicating that it is unavailable for selection. By default `isDisabled` is set to `false`.   |
+<table data-header-hidden><thead><tr><th width="154.1875">Other options</th><th></th></tr></thead><tbody><tr><td><code>color</code></td><td>Sets the color of the card. Choose a color from the provided <a href="https://docs.jigx.com/jigx-color-palette">Jigx color palette</a>. Default color is white if the property is not specified in the YAML.</td></tr><tr><td><code>style</code></td><td>When <code>isDisabled</code> is set to <code>true</code>, the card appears opaque, indicating that it is unavailable for selection. By default <code>isDisabled</code> is set to <code>false</code>.</td></tr></tbody></table>
 
-| **Actions** |                                                                                                                  |
-| ----------- | ---------------------------------------------------------------------------------------------------------------- |
-| `onPress`   | Choose from the provided list of available actions, for example, use the `go-to` action to open a different jig. |
+<table data-header-hidden><thead><tr><th width="156.296875">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>Choose from the provided list of available actions, for example, use the <code>go-to</code> action to open a different jig.</td></tr></tbody></table>
 
-## Considerations
+### Considerations
 
-- *Jig-level:* The card component is only available for use in a [default](<./../Jig Types/jig_default.md>) jig.
-- *Component-level*: The [carousel](./carousel.md) component has the option to use the card component within the carousel to create a visually appealing carousel.
+* _Jig-level:_ The card component is only available for use in a [default](<../Jig Types/jig_default.md>) jig.
+* _Component-level_: The [carousel](carousel.md) component has the option to use the card component within the carousel to create a visually appealing carousel.
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
+#### Card containing a form
 
-### Card containing a form
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AGHA6ALv3\_4Jlm-EYHqE4\_cc-card.PNG" size="80" position="center" caption="Card containing a form" alt="Card containing a form" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AGHA6ALv3\_4Jlm-EYHqE4\_cc-card.PNG
+{% endcolumn %}
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AGHA6ALv3_4Jlm-EYHqE4_cc-card.PNG" size="80" position="center" caption="Card containing a form" alt="Card containing a form" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AGHA6ALv3_4Jlm-EYHqE4_cc-card.PNG"}
-:::
+{% column %}
+&#x20;In this example the card component wraps the form component to create a visual container around the form.
 
-:::VerticalSplitItem
-In this example the card component wraps the form component to create a visual container around the form.
+**Example:**&#x20;
 
-**Example:**
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-basic.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-card-basic.jigx
-
+{% code title="card-basic.jigx" %}
 ```yaml
 
 title: Form in a card
@@ -111,30 +100,24 @@ actions:
           onSuccess: 
             type: action.go-back                                   
 ```
+{% endcode %}
 
-:::
-:::::
+#### Card in a carousel
 
-:::::ExpandableHeading
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C\_cc-carousel-card2.gif
+{% endcolumn %}
 
-### Card in a carousel
+{% column %}
+In this example the carousel uses a `card` component with a color property, within the card, there is an `image` component used to display the images, an `entity-field` component to describe the product. The card component creates a visually appealing container for the images. The `pagination` is configured `outside` of the carousel.
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif" size="80" position="center" caption="Carousel with card" alt="Carousel with card" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C_cc-carousel-card2.gif"}
-:::
+**Example:** \
+See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/carousel/carousel-card.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::VerticalSplitItem
-In this example the carousel uses a `card` component with a color property, within the card, there is an `image` component used to display the images, an `entity-field` component to describe the product. The card component creates a visually appealing container for the images.  The `pagination` is configured `outside` of the carousel.
-
-**Example:**
-See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/carousel/carousel-card.jigx).
-:::
-::::
-
-:::CodeblockTabs
-carousel-card.jigx
-
+{% code title="carousel-card.jigx" %}
 ```yaml
 title: Carousel with card
 type: jig.default
@@ -167,34 +150,31 @@ children:
       counter:
         isHidden: true
 ```
+{% endcode %}
 
-:::
-:::::
+#### Cards with color
 
-:::::ExpandableHeading
-
-### Cards with color
-
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example shows three cards.
 
 1. The first card contains the `avatar`, `expander`, `entity-field` and `location` components with the `color: color3` property.
 2. The second card contains a `line-chart` component with the `color: color14` property set.
 3. The third card contains an `image` and `entity-field` components with the `color: color6` property set.
 
-**Example:**
+**Example:** \
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-color.jigx).
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-![Cards with color](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BnatBgEmVsruHZlnCqBlK_cc-card-color.PNG "Cards with color")
-:::
-::::
+{% column %}
+&#x20;![Cards with color](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BnatBgEmVsruHZlnCqBlK_cc-card-color.PNG)&#x20;
 
-:::CodeblockTabs
-card-color.jigx
 
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="card-color.jigx" %}
 ```yaml
 title: Cards with color
 description: Card with color and multiple components
@@ -291,9 +271,9 @@ children:
       color: color6
   
 ```
+{% endtab %}
 
-users.jigx (datasource)
-
+{% tab title="users.jigx (datasource)" %}
 ```yaml
 type: datasource.static
 options:
@@ -340,30 +320,25 @@ options:
       status: Declined
       address: 399-301 Chapel Ave, Claymont, DE 19703, USA   
 ```
+{% endtab %}
+{% endtabs %}
 
-:::
-:::::
+#### Card with style
 
-:::::ExpandableHeading
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/St6oYKOw2poUb2nO16RLi\_cc-card-disabled.PNG
+{% endcolumn %}
 
-### Card with style
-
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/St6oYKOw2poUb2nO16RLi_cc-card-disabled.PNG" size="80" position="center" caption="Card with style" alt="Card with style" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/St6oYKOw2poUb2nO16RLi_cc-card-disabled.PNG"}
-:::
-
-:::VerticalSplitItem
+{% column %}
 This jig contains two cards, the first appears disabled using the `isDisabled: true` property and the second card the `isDisabled` property is set to `false`.
 
-**Example:**
-See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-style.jigx).
-:::
-::::
+**Example:** \
+See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-style.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-card-style.jigx
-
+{% code title="card-style.jigx" %}
 ```yaml
 title: card style - disabled
 type: jig.default
@@ -406,30 +381,26 @@ children:
                     uri: https://images.unsplash.com/photo-1612539465222-c20af6006413?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
                 
 ```
+{% endcode %}
 
-:::
-:::::
+#### Card with onPress
 
-:::::ExpandableHeading
+{% columns %}
+{% column width="41.66666666666667%" %}
+&#x20;The card component can be configured with an `onPress` event. In this example when the card is pressed a `go-to` component is configured to take you to the product list jig with items on sale.
 
-### Card with onPress
-
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-The card component can be configured with an `onPress` event. In this example when the card is pressed a `go-to` component is configured to take you to the product list jig with items on sale.
-
-**Example:**
+**Example:** \
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-onPress.jigx).
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-![Card with onPress](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/E7GRbm2QRkLlrDR9NkuwC_cc-card-onpress.PNG "Card with onPress")
-:::
-::::
+{% column width="58.33333333333333%" %}
+&#x20;![Card with onPress](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/E7GRbm2QRkLlrDR9NkuwC_cc-card-onpress.PNG)&#x20;
 
-:::CodeblockTabs
-card-onPress
 
+{% endcolumn %}
+{% endcolumns %}
+
+{% code title="card-onPress" %}
 ```yaml
 title: card with onPress
 type: jig.default
@@ -457,6 +428,4 @@ children:
                   value: Shop now
                   rightIcon: arrow-button-right-1        
 ```
-
-:::
-:::::
+{% endcode %}

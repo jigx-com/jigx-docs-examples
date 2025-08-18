@@ -76,7 +76,6 @@
     * [Use template](<docs/Jig Types/Use template.md>)
   * [Components](docs/Components.md)
     * [Common component properties](<docs/Components/Common component properties.md>)
-    * [component actions](<docs/Components/component actions.md>)
     * [avatar](docs/Components/avatar.md)
     * [card](docs/Components/card.md)
     * [carousel](docs/Components/carousel.md)

@@ -1,43 +1,41 @@
 ---
 title: action-list
 slug: c214-action-list
-description: Learn how to utilize the action list feature effectively with this comprehensive document. Discover various configuration options and understand how to execute multiple actions with a single button press. Gain valuable insights with provided examples and 
 createdAt: Thu Jun 09 2022 18:19:16 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Feb 24 2025 09:57:20 GMT+0000 (Coordinated Universal Time)
+description: >-
+  Learn how to utilize the action list feature effectively with this
+  comprehensive document. Discover various configuration options and understand
+  how to execute multiple actions with a single button pr
 ---
+
+# action-list
 
 This action allows for multiple actions to be run while only requiring the user to press a single button. The actions can be set to run sequentially or executed as a bulk functionality.
 
-## Configuration options
+### Configuration options
 
 An `action list` can be set up in various ways:
 
 1. As a primary action button.
-2. In onPress/onChange events - usually triggered by [list](./../Widgets/list.md) or [jig.list](<./../Jig Types/jig_list.md>) related items.
+2. In onPress/onChange events - usually triggered by [list](../Widgets/list.md) or [jig.list](<../Jig Types/jig_list.md>) related items.
 3. In onRefresh/onFocus events on any type of jig.
 
-## Examples and code snippets
+### Examples and code snippets
 
 :::::ExpandableHeading
 
-### Action-list as a primary action button
+#### Action-list as a primary action button
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9DlW77ErmICtx4FdonAhb_ou82sm6mjtwuv1o3jo2zonsubmitiphone13blueportrait.png" size="80" position="center" caption="Action List" alt="Action List"}
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9DlW77ErmICtx4FdonAhb\_ou82sm6mjtwuv1o3jo2zonsubmitiphone13blueportrait.png" size="80" position="center" caption="Action List" alt="Action List"}
 
 :::
 
-:::VerticalSplitItem
-This example shows an action-list with two actions. The first action is [submit-form](https://docs.jigx.com/examples/submit-form), which will save the entered data, and the second action, [go-back](https://docs.jigx.com/examples/go-back), will redirect us back to the previous page.
+:::VerticalSplitItem This example shows an action-list with two actions. The first action is [submit-form](https://docs.jigx.com/examples/submit-form), which will save the entered data, and the second action, [go-back](https://docs.jigx.com/examples/go-back), will redirect us back to the previous page.
 
-**Example:**
-See the full example of action-list in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-primary.jigx)
-:::
-::::
+**Example:** See the full example of action-list in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-primary.jigx) ::: ::::
 
-:::CodeblockTabs
-action-list
+:::CodeblockTabs action-list
 
 ```yaml
 title: Action-list example
@@ -80,28 +78,19 @@ children:
             keyboardType: decimal-pad
 ```
 
-:::
-:::::
+::: :::::
 
 :::::ExpandableHeading
 
-### Action list as onPress/onChange
+#### Action list as onPress/onChange
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_QIAeOQBiGMj4eE2lrAkM_dxwftvt0qk-ombng7ba1onrefreshiphone13blueportrait.png" size="78"  position="center" caption="Action-list with onPress" alt="Action-list with onPress"}
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_QIAeOQBiGMj4eE2lrAkM\_dxwftvt0qk-ombng7ba1onrefreshiphone13blueportrait.png" size="78" position="center" caption="Action-list with onPress" alt="Action-list with onPress"} :::
 
-:::VerticalSplitItem
-In this example, we have an action list with the onPress function in the list-item. The first action will color the last chosen item and the second action will sync our entity with the database and we can use them for further actions.
+:::VerticalSplitItem In this example, we have an action list with the onPress function in the list-item. The first action will color the last chosen item and the second action will sync our entity with the database and we can use them for further actions.
 
-**Example:**
-See the full example of action-list in onPress in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onPress.jigx). See the full example of action-list in onChange in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onChange.jigx)
-:::
-::::
+**Example:** See the full example of action-list in onPress in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onPress.jigx). See the full example of action-list in onChange in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onChange.jigx) ::: ::::
 
-:::CodeblockTabs
-action-list-onPress
+:::CodeblockTabs action-list-onPress
 
 ```yaml
 item: 
@@ -157,21 +146,17 @@ item:
                   - default/employees
 ```
 
-:::
-:::::
+::: :::::
 
 ::::ExpandableHeading
 
-### Action list as onRefresh/onFocus
+#### Action list as onRefresh/onFocus
 
 In this example when we refresh the jig/jig is focused, we call set-state and sync-entities actions.
 
-**Example:**
-See the full example of the action list onRefresh in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onRefresh.jigx).
-See the full example of the action list onFocus in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onFocus.jigx).
+**Example:** See the full example of the action list onRefresh in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onRefresh.jigx). See the full example of the action list onFocus in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onFocus.jigx).
 
-:::CodeblockTabs
-action-list-onRefresh
+:::CodeblockTabs action-list-onRefresh
 
 ```yaml
 onRefresh: 
@@ -209,5 +194,4 @@ onFocus:
             - default/employees
 ```
 
-:::
-::::
+::: ::::

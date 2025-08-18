@@ -1,49 +1,43 @@
 ---
 title: field-row
 slug: iGAk-field-row
-description: Learn how to use the field-row component to display multiple components on the same row in this comprehensive document. Discover how rows can contain entity-field components and children components, and how they can be nested under section components. Get
 createdAt: Thu Jun 09 2022 19:32:19 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jul 24 2024 09:33:13 GMT+0000 (Coordinated Universal Time)
+description: >-
+  Learn how to use the field-row component to display multiple components on the
+  same row in this comprehensive document. Discover how rows can contain
+  entity-field components and children components, a
 ---
+
+# field-row
 
 The field-row component contains other components and displays them on the same row. This component does not indicate a new row; all components are automatically placed in a new row. Instead, this component ensures that items are placed next to instead of underneath each other.
 
-## Considerations
+### Considerations
 
-- Rows can contain [entity-field](./entity-field.md)</a> components:
-  - On a [default jig](<./../../Jig Types/jig_default.md>) or children components
-  - On a [form](./../form.md) component
-  - Nested under [section](./section.md) components
-- A maximum of three components can be displayed per row.
+* Rows can contain [entity-field](entity-field.md) components:
+  * On a [default jig](<../../Jig Types/jig_default.md>) or children components
+  * On a [form](../form.md) component
+  * Nested under [section](section.md) components
+* A maximum of three components can be displayed per row.
 
-Some properties are common to all components, see [Common component properties](docId\:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-## Examples and code snippets
+### Examples and code snippets
 
 :::::ExpandableHeading
 
-### Field-row components with entity-fields (Display only)
+#### Field-row components with entity-fields (Display only)
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Field-row](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VA6mlFjt5KI9NaTxqInAb_mv9-5gc8jut5xwtpdtsmock-fieldiphone13blueportrait.png)
-:::
+::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Field-row](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VA6mlFjt5KI9NaTxqInAb_mv9-5gc8jut5xwtpdtsmock-fieldiphone13blueportrait.png) :::
 
-:::VerticalSplitItem
-Example showing how rows have been incorporated to display more than one component per row in certain instances.
+:::VerticalSplitItem Example showing how rows have been incorporated to display more than one component per row in certain instances.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/field-row/static-data/row-entity-field-sd.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/field-row/dynamic-data/row-entity-field-dd.jigx).
+**Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/field-row/static-data/row-entity-field-sd.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/field-row/dynamic-data/row-entity-field-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
-::::
+**Datasources:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx). ::: ::::
 
-:::CodeblockTabs
-row-entity-fields (static)
+:::CodeblockTabs row-entity-fields (static)
 
 ```yaml
 children:
@@ -242,29 +236,19 @@ datasources:
         FROM [default/cleaning-services] WHERE '$.service' = "Mattress Cleaning"
 ```
 
-:::
-:::::
+::: :::::
 
 :::::ExpandableHeading
 
-### Field-row components on form with children components (Display and input)
+#### Field-row components on form with children components (Display and input)
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![field-row on form](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O9ZlnWKC7QQAQScg2Klh4_8uyi918oalwk7j3rzytb1mock-field2iphone13blueportrait.png "Field-row on form")
-:::
+::::VerticalSplit{layout="left"} :::VerticalSplitItem ![field-row on form](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O9ZlnWKC7QQAQScg2Klh4_8uyi918oalwk7j3rzytb1mock-field2iphone13blueportrait.png) :::
 
-:::VerticalSplitItem
-**Examples:**
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/field-row/dynamic-data/form-row-children-dd.jigx).
+:::VerticalSplitItem **Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/field-row/dynamic-data/form-row-children-dd.jigx).
 
-**Datasource:**
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
-::::
+**Datasource:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx). ::: ::::
 
-:::CodeblockTabs
-form-rows-children (dynamic)
+:::CodeblockTabs form-rows-children (dynamic)
 
 ```yaml
 children:
@@ -346,5 +330,4 @@ datasources:
         FROM [default/cleaning-services] WHERE '$.service' = "Mattress Cleaning"
 ```
 
-:::
-:::::
+::: :::::

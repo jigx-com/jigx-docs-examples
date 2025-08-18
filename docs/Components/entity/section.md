@@ -1,49 +1,43 @@
 ---
 title: section
 slug: g1WJ-section
-description: Learn how to use the section component in your user interface to group related items together. This document provides examples and code snippets for creating display sections for repair services and cleaning services. Explore different repair and installa
 createdAt: Thu Jun 09 2022 19:48:21 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jul 24 2024 09:33:04 GMT+0000 (Coordinated Universal Time)
+description: >-
+  Learn how to use the section component in your user interface to group related
+  items together. This document provides examples and code snippets for creating
+  display sections for repair services and c
 ---
 
-The section component groups related items together under a single title. A section can be set up on a [jig.default](<./../../Jig Types/jig_default.md>) under the [entity](./../entity.md) component or on a [form](./../form.md) component as its container. The component can contain [field-row](https://docs.jigx.com/examples/field-row) and [entity-field](./entity-field.md) components or children components on a [form](./../form.md) component.
+# section
+
+The section component groups related items together under a single title. A section can be set up on a [jig.default](<../../Jig Types/jig_default.md>) under the [entity](../entity.md) component or on a [form](../form.md) component as its container. The component can contain [field-row](https://docs.jigx.com/examples/field-row) and [entity-field](entity-field.md) components or children components on a [form](../form.md) component.
 
 A `component.section` can be set up with the following combinations:
 
-1. An entity containing sections with [rows](./field-row.md) and [entity-field](./entity-field.md) for display purposes.
-2. An entity containing sections and [entity-field](./entity-field.md) for display purposes.
-3. A form component containing sections with [rows](./field-row.md) and children for display/capturing purposes.
+1. An entity containing sections with [rows](field-row.md) and [entity-field](entity-field.md) for display purposes.
+2. An entity containing sections and [entity-field](entity-field.md) for display purposes.
+3. A form component containing sections with [rows](field-row.md) and children for display/capturing purposes.
 4. A form component containing sections and children components for display/capturing purposes.
 5. Horizontal lists cannot be used with the [section](https://docs.jigx.com/examples/section) components as an empty white jig will be displayed.
 
 Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-## Examples and code snippets
+### Examples and code snippets
 
 :::::ExpandableHeading
 
-### The Entity with sections, rows, and entity fields (Display only)
+#### The Entity with sections, rows, and entity fields (Display only)
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Jig with sections](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5SKtUcADiqdQ1iYCL3z1M_sec1iphone13blueportrait.png "Jig with sections")
-:::
+::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Jig with sections](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5SKtUcADiqdQ1iYCL3z1M_sec1iphone13blueportrait.png) :::
 
-:::VerticalSplitItem
-Using sections, rows, and entity fields to create relevant display sections for the information to be functional yet elegant and neatly organized.
+:::VerticalSplitItem Using sections, rows, and entity fields to create relevant display sections for the information to be functional yet elegant and neatly organized.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-row-entity-field-sd)
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-row-entity-field-dd.jigx).
+**Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-row-entity-field-sd) See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-row-entity-field-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](tps://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-row-entity-field-dd.jigx)
-:::
-::::
+**Datasources:** See the full datasource for static data in [GitHub](tps://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-row-entity-field-dd.jigx) ::: ::::
 
-:::CodeblockTabs
-Section-rows-entity-fields (static)
+:::CodeblockTabs Section-rows-entity-fields (static)
 
 ```yaml
 children:
@@ -267,31 +261,21 @@ datasources:
         FROM [default/cleaning-services]
 ```
 
-:::
-:::::
+::: :::::
 
 :::::ExpandableHeading
 
-### Form with sections, rows, and children components (Display and input)
+#### Form with sections, rows, and children components (Display and input)
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Jig with sections & rows](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9vfRyetsrPXmlodRx0toQ_form-with-sectionsiphone13blueportrait.png "Jig with sections & rows")
-:::
+::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Jig with sections & rows](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9vfRyetsrPXmlodRx0toQ_form-with-sectionsiphone13blueportrait.png) :::
 
-:::VerticalSplitItem
-Similar to the above example, this has the same functionality, except that this is for adding or editing data too, and not just for display purposes.
+:::VerticalSplitItem Similar to the above example, this has the same functionality, except that this is for adding or editing data too, and not just for display purposes.
 
-**Examples:**
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-row-children-dd.jigx).
+**Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-row-children-dd.jigx).
 
-**Datasource:**
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
-::::
+**Datasource:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx). ::: ::::
 
-:::CodeblockTabs
-form-section-row (dynamic)
+:::CodeblockTabs form-section-row (dynamic)
 
 ```yaml
 children:
@@ -387,39 +371,27 @@ datasources:
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL   ORDER BY id DESC
 ```
 
-:::
-:::::
+::: :::::
 
 :::::ExpandableHeading
 
-### Entity with sections and entity-fields (Display only)
+#### Entity with sections and entity-fields (Display only)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-**Basic**
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem **Basic**
 
-![Jig with display sections & fields](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nMs-BfhD6R1UM-4N3Q6BL_img9804iphone13blueportrait.png "Jig with display sections & fields")
-:::
+![Jig with display sections & fields](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nMs-BfhD6R1UM-4N3Q6BL_img9804iphone13blueportrait.png) :::
 
-:::VerticalSplitItem
-**Compact**
+:::VerticalSplitItem **Compact**
 
-![Jig with display sections & fields](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hNKX2CKxIPamHFP1U0RPu_img9803iphone13blueportrait.png)
-:::
-::::
+![Jig with display sections & fields](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hNKX2CKxIPamHFP1U0RPu_img9803iphone13blueportrait.png) ::: ::::
 
 This is another example for display purposes only, but this time without the rows. Note the difference in the fields as they now display below each other instead of numerous entity-fields in a row.
 
-**Examples:**
-**Basic**- See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd.jigx).
-**Compact** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd-compact.jigx).
+**Examples:** **Basic**- See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd.jigx). **Compact** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd-compact.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd.jigx).
+**Datasources:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd.jigx).
 
-:::CodeblockTabs
-section-entity-field (static)
+:::CodeblockTabs section-entity-field (static)
 
 ```yaml
 children:
@@ -710,31 +682,21 @@ datasources:
         FROM [default/cleaning-services] ORDER BY '$.service' ASC
 ```
 
-:::
-:::::
+::: :::::
 
 :::::ExpandableHeading
 
-### Form with sections and entity-fields (Display and input)
+#### Form with sections and entity-fields (Display and input)
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Form with sections](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/U_yPbJflLyS_T1tiIygID_secc3iphone13blueportrait.png "Form with sections")
-:::
+::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Form with sections](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/U_yPbJflLyS_T1tiIygID_secc3iphone13blueportrait.png) :::
 
-:::VerticalSplitItem
-This is the same as the above, again with the exception of being used in a form component and not just being for display purposes, but allowing input from the user.
+:::VerticalSplitItem This is the same as the above, again with the exception of being used in a form component and not just being for display purposes, but allowing input from the user.
 
-**Examples:**
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-children-dd.jigx).
+**Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-children-dd.jigx).
 
-**Datasources:**
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-children-dd.jigx).
-:::
-::::
+**Datasources:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-children-dd.jigx). ::: ::::
 
-:::CodeblockTabs
-form-section-children (dynamic)
+:::CodeblockTabs form-section-children (dynamic)
 
 ```yaml
 children:
@@ -816,5 +778,4 @@ datasources:
         FROM [default/cleaning-services]
 ```
 
-:::
-:::::
+::: :::::
