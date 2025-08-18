@@ -1,50 +1,50 @@
 ---
 title: Get Event List
 slug: eq2E-get-event-list
-description: Explore Microsoft Graph documentation and the Graph explorer tool with this comprehensive document. Find out the necessary OAuth scope for accessing calendar events and gain access to a Microsoft Graph example through Jigx Code. Discover a link to the com
 createdAt: Sat Nov 26 2022 20:48:07 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 17:58:07 GMT+0000 (Coordinated Universal Time)
 ---
 
-## Scenario
+# Get Event List
+
+{% columns %}
+{% column %}
+### Scenario
 
 Get a list of the next week's events on a user's calendar from Microsoft Graph using GET REST functions and show the events in a calendar jig.
 
-::::VerticalSplit{layout="right"}
-:::VerticalSplitItem
 **Resource links:**
 
-- [List events](https://learn.microsoft.com/en-us/graph/api/user-list-events?view=graph-rest-1.0&tabs=http) - MS Graph documentation
-- [List calendarView](https://learn.microsoft.com/en-us/graph/api/user-list-calendarview?view=graph-rest-1.0&tabs=http) - MS Graph documentation
-- [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
+* [List events](https://learn.microsoft.com/en-us/graph/api/user-list-events?view=graph-rest-1.0\&tabs=http) - MS Graph documentation
+* [List calendarView](https://learn.microsoft.com/en-us/graph/api/user-list-calendarview?view=graph-rest-1.0\&tabs=http) - MS Graph documentation
+* [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
+* [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
-Calendars.Read
-Calendars.ReadWrite
+Calendars.Read Calendars.ReadWrite
 
 **Related Sample**
 
-This example uses [Get Calendar List](<./Get Calendar List.md>) to provide the calendar input to the view-calendar-events jig and navigates to [Get Event Item](<./Get Event Item.md>) when the event item is pressed.
-:::
+This example uses [Get Calendar List](<Get Calendar List.md>) to provide the calendar input to the view-calendar-events jig and navigates to [Get Event Item](<Get Event Item.md>) when the event item is pressed.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-![Calendar events](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YBoFi0sX8sWnJ1Kp77gs9_graph-listevents.png "Calendar events")
-:::
-::::
+{% column %}
+&#x20;![Calendar events](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YBoFi0sX8sWnJ1Kp77gs9_graph-listevents.png)
 
-## Examples and code snippets
 
-:::hint{type="success"}
+{% endcolumn %}
+{% endcolumns %}
+
+### Examples and code snippets
+
+{% hint style="success" %}
 When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
-:::
+{% endhint %}
 
-## General
+### General
 
-:::CodeblockTabs
-index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 name: ms-graph-demonstrator
 title: MS Graph Demonstrator
@@ -79,16 +79,14 @@ onFocus:
                 accessToken: microsoft.OAuth
 
 ```
+{% endcode %}
 
-:::
-
-## Functions
+### Functions
 
 MS Graph Event List function in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/functions/calendar/get-calendar-event-list.jigx).
 
-:::CodeblockTabs
-get-calendar-event-list.jigx
-
+{% tabs %}
+{% tab title="get-calendar-event-list.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: GET
@@ -125,9 +123,9 @@ continuation:
       type: string
       value: microsoft.OAuth
 ```
+{% endtab %}
 
-get-calendar-events-next-week.jigx
-
+{% tab title="get-calendar-events-next-week.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: GET
@@ -164,16 +162,14 @@ continuation:
       type: string
       value: microsoft.OAuth
 ```
+{% endtab %}
+{% endtabs %}
 
-:::
-
-## Jigs
+### Jigs
 
 MS Graph Calendar Events List jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/calendar/view-calendar-events.jigx).
 
-:::CodeblockTabs
-view-calendar-events.jigx
-
+{% code title="view-calendar-events.jigx" %}
 ```yaml
 title: Calendar
 type: jig.calendar
@@ -288,11 +284,10 @@ actions:
           title: Create New Event
           linkTo: create-calendar-event
 ```
+{% endcode %}
 
-:::
+### See Also
 
-## See Also
-
-- [Get Calendar List](<./Get Calendar List.md>)
-- [Get Event Item](<./Get Event Item.md>)
-- [Create Event Item](<./Create Event Item.md>)
+* [Get Calendar List](<Get Calendar List.md>)
+* [Get Event Item](<Get Event Item.md>)
+* [Create Event Item](<Create Event Item.md>)

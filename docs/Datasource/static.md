@@ -9,9 +9,9 @@ When setting up a `static datasource` component within a Jig you have the option
 1. As a locally configured data source within a jig for locally stored data to be available
 2. As a global data source that allows easy access and reusability to the data across various jigs and components
 
-:::hint{type="info"}
-You also have the option to set up static data directly in the relevant fields. This scenario is however not discussed here as this section focuses only on the application of the static data component itself. Please refer to the guide on working with [Static Data](#) for more information on the alternative application.
-:::
+{% hint style="info" %}
+You also have the option to set up static data directly in the relevant fields. This scenario is however not discussed here as this section focuses only on the application of the static data component itself. Please refer to the guide on working with [Static Data](static.md) for more information on the alternative application.
+{% endhint %}
 
 ## Examples and code snippets
 
@@ -19,25 +19,21 @@ View common uses for the static datasource below and how you can configure the s
 
 We've gone ahead and expanded the first one for you. Feel free to view any others you'd like to inspect.
 
-:::::ExpandableHeading
-### Static datasource configured locally on a jig
+#### Static datasource configured locally on a jig
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6d2E3jkkz-3oaCcClqGp7_xdair6ef8yljgyggr4vgnptpye1yvizw6xnzc8rdoimg1086iphone13blueportrait.png" size="84" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6d2E3jkkz-3oaCcClqGp7_xdair6ef8yljgyggr4vgnptpye1yvizw6xnzc8rdoimg1086iphone13blueportrait.png" caption}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6d2E3jkkz-3oaCcClqGp7\_xdair6ef8yljgyggr4vgnptpye1yvizw6xnzc8rdoimg1086iphone13blueportrait.png" size="84" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6d2E3jkkz-3oaCcClqGp7\_xdair6ef8yljgyggr4vgnptpye1yvizw6xnzc8rdoimg1086iphone13blueportrait.png" caption}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 Below is an example of static data that has been configured locally.
 
-**Examples**:
-See the full example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-local.jigx")
-:::
-::::
+**Examples**: See the full example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-local.jigx%22)&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-static-data-local-jig
-
+{% code title="static-data-local-jig" %}
 ```yaml
 datasources:
   repair_services_static:
@@ -84,29 +80,24 @@ item:
     title: =@ctx.current.item.service
     subtitle: =@ctx.current.item.description
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### Static datasource configured globally on a jig
+#### Static datasource configured globally on a jig
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pZ0rUZjo9pPWfByWfKXN9_skdjnmnz8jhe2zi98rf8orpbfc2v0eb20juoqcdpbhimg1087iphone13blueportrait.png" size="82" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pZ0rUZjo9pPWfByWfKXN9_skdjnmnz8jhe2zi98rf8orpbfc2v0eb20juoqcdpbhimg1087iphone13blueportrait.png" caption}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pZ0rUZjo9pPWfByWfKXN9\_skdjnmnz8jhe2zi98rf8orpbfc2v0eb20juoqcdpbhimg1087iphone13blueportrait.png" size="82" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pZ0rUZjo9pPWfByWfKXN9\_skdjnmnz8jhe2zi98rf8orpbfc2v0eb20juoqcdpbhimg1087iphone13blueportrait.png" caption}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 Below is an example of static data that has been configured globally along with the example of where this is being referenced.
 
-**Examples**:
-See the full example of static datasource in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx)
-See the full example of the list using this global static datasource in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-global.jigx).
-:::
-::::
+**Examples**: See the full example of static datasource in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx) See the full example of the list using this global static datasource in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-global.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-global-static-datasource.-jig
-
+{% tabs %}
+{% tab title="global-static-datasource.-jig" %}
 ```yaml
 type: datasource.static
 options:
@@ -136,9 +127,9 @@ options:
       service: Tile Installation/Repair
       time: 120
 ```
+{% endtab %}
 
-referenced-data-jig
-
+{% tab title="referenced-data-jig" %}
 ```yaml
 data: =@ctx.datasources.repair_services_static
 item:
@@ -147,26 +138,26 @@ item:
     title: =@ctx.current.item.service
     subtitle: =@ctx.current.item.description
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-::::::ExpandableHeading
-### Static datasource configured inside a component
+#### Static datasource configured inside a component
 
 You can also create static data right inside your component or as an `initialValue`, without a need to specify the datasource.
 
-:::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Dropdown with static data](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HTm0zWy8oZflxCPJEVsL4_gv7ncdv0kooclr35hxm9img1018iphone13blueportrait.png "Dropdown with static data")
-:::
+{% columns %}
+{% column %}
+![Dropdown with static data](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HTm0zWy8oZflxCPJEVsL4_gv7ncdv0kooclr35hxm9img1018iphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-::::VerticalSplitItem
-In this example static data is used to create the data need for selection in the `component.dropdown`.
+{% column %}
+In this example static data is used to create the data need for selection in the `component.dropdown`. \
+**Example:**\
 See the full code sample on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-static-data/static-datasource/static-list.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-dropdown.jigx
-
+{% code title="dropdown.jigx" %}
 ```yaml
 title: Dropdown with values
 type: jig.default
@@ -200,27 +191,25 @@ children:
                 title: =@ctx.current.item.title
                 value: =@ctx.current.item.value
 ```
-:::
-::::
-:::::
-::::::
+{% endcode %}
 
-::::::ExpandableHeading
-### Static datasource configured inside a dropdown component
+#### Static datasource configured inside a dropdown component
 
-:::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![List](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Pe8WHP9gAtWHmJH-7Pv2c_dgrc4ddwpungnxnal7khlimg1017iphone13blueportrait.png "List")
-:::
+{% columns %}
+{% column %}
+![List](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Pe8WHP9gAtWHmJH-7Pv2c_dgrc4ddwpungnxnal7khlimg1017iphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-::::VerticalSplitItem
-In this example static data is defined and used in the `component.list-item`.
+{% column %}
+In this example static data is defined and used in the `component.list-item`.\
 
-See the code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/people.jigx" target="_blank">GitHub</a>.
 
-:::CodeblockTabs
-list.jigx
+**Example:**\
+See the code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/people.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
+{% code title="list.jigx" %}
 ```yaml
 title: List
 type: jig.list
@@ -238,12 +227,8 @@ item:
       element: avatar
       text: =@ctx.current.item.initials
 ```
-:::
-::::
-:::::
-::::::
+{% endcode %}
 
 ## See also
 
-- [Related Items (GitHub)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/datasources)
-
+* [Related Items (GitHub)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/datasources)

@@ -1,49 +1,44 @@
 ---
 title: Get Event Item
 slug: e9aK-get-event-item
-description: Learn how to retrieve the details of an event item from a user's calendar using Microsoft Graph with this comprehensive document. Explore code examples, configuration details, and REST calls with OAuth authentication. Additionally, discover how to create
 createdAt: Sat Nov 26 2022 20:48:33 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed May 08 2024 14:27:40 GMT+0000 (Coordinated Universal Time)
 ---
 
-## Scenario
+# Get Event Item
 
-Get the details of an event item in a user's calendar from Microsoft Graph using a GET REST function and showing it in a default jig using an expander, entity-field, and list component.
+{% columns %}
+{% column %}
+### **Resource links:**
 
-::::VerticalSplit{layout="right"}
-:::VerticalSplitItem
-**Resource links:**
-
-- [List Event](https://learn.microsoft.com/en-us/graph/api/user-list-events?view=graph-rest-1.0&tabs=http) - MS Graph documentation
-- [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
+* [List Event](https://learn.microsoft.com/en-us/graph/api/user-list-events?view=graph-rest-1.0\&tabs=http) - MS Graph documentation
+* [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
+* [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
-Calendars.Read
-Calendars.ReadWrite
+Calendars.Read Calendars.ReadWrite
 
 **Related Sample**
 
-This example uses [Get Calendar List](<./Get Calendar List.md>) and [Get Event List](<./Get Event List.md>) to provide the calendar id and event id input to the view-calendar-event-details jig.
-:::
+This example uses [Get Calendar List](<Get Calendar List.md>) and [Get Event List](<Get Event List.md>) to provide the calendar id and event id input to the view-calendar-event-details jig.
+{% endcolumn %}
 
-:::VerticalSplitItem
-![Calendar event](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hFXLIgg5zAk0sS-e1-HhJ_graph-eventitem.png "Calendar event")
-:::
-::::
+{% column %}
+&#x20;![Calendar event](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hFXLIgg5zAk0sS-e1-HhJ_graph-eventitem.png)
+{% endcolumn %}
+{% endcolumns %}
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::hint{type="success"}
+{% hint style="success" %}
 When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
-:::
+{% endhint %}
 
-## General
+### General
 
-:::CodeblockTabs
-index.jigx
-
+{% tabs %}
+{% tab title="index.jigx" %}
 ```yaml
 name: ms-graph-demonstrator
 title: MS Graph Demonstrator
@@ -73,14 +68,10 @@ tabs:
   home:
     jigId: home
     icon: home
-
 ```
+{% endtab %}
 
-:::
-
-:::CodeblockTabs
-home.jigx
-
+{% tab title="home.jigx" %}
 ```yaml
 title: Home
 type: jig.grid
@@ -134,23 +125,19 @@ children:
         options:
           jigId: items-trending
           widgetId: trending
-
-
 ```
+{% endtab %}
+{% endtabs %}
 
-:::
+### Functions
 
-## Functions
-
-:::hint{type="info"}
-We will use `forRowsWithValues` in the get-calendar-event-details function to update only one record in the calendarEvents table when called from `onRefresh` on the view-calendar-event-details jig. If you dont specify `forRowsWithValues` the entire table is wiped by the REST call and only the result is inserted. See [REST Overview](https://docs.jigx.com/rest-overview) for more information on using `forRowsWithValues` with REST calls.
-:::
+{% hint style="info" %}
+We will use `forRowsWithValues` in the get-calendar-event-details function to update only one record in the calendarEvents table when called from `onRefresh` on the view-calendar-event-details jig. If you don't specify `forRowsWithValues` the entire table is wiped by the REST call and only the result is inserted. See [REST Overview](https://docs.jigx.com/rest-overview) for more information on using `forRowsWithValues` with REST calls.
+{% endhint %}
 
 MS Graph Event Item function in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/functions/calendar/get-calendar-event-details.jigx).
 
-:::CodeblockTabs
-get-calendar-events-details.jigx
-
+{% code title="get-calendar-events-details.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: GET
@@ -177,16 +164,13 @@ parameters:
 forRowsWithValues:
   id: calendarEventId
 ```
+{% endcode %}
 
-:::
+### Jigs
 
-## Jigs
+MS Graph Calendar Events jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/calendar/view-calendar-events.jigx).
 
-MS Graph Calendar Events jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/calendar/view-calendar-events.jigx)</a>.
-
-:::CodeblockTabs
-view-calendar-event-details
-
+{% code title="view-calendar-event-details" %}
 ```yaml
 title: =@ctx.jig.inputs.subject
 type: jig.default
@@ -352,11 +336,10 @@ preview:
             isHidden: |
               =@ctx.jig.inputs.isOnlineMeeting? false: true
 ```
+{% endcode %}
 
-:::
+### See Also
 
-## See Also
-
-- [Get Event List](<./Get Event List.md>)
-- [Get Calendar List](<./Get Calendar List.md>)
-- [Create Event Item](<./Create Event Item.md>)
+* [Get Event List](<Get Event List.md>)
+* [Get Calendar List](<Get Calendar List.md>)
+* [Create Event Item](<Create Event Item.md>)

@@ -5,41 +5,41 @@ createdAt: Thu May 02 2024 16:42:44 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 18:00:49 GMT+0000 (Coordinated Universal Time)
 ---
 
-## Scenario
+# Get list messages
+
+{% columns %}
+{% column %}
+### Scenario
 
 Get a list of emails for a user in Microsoft Graph using a GET REST function and displaying the emails in a list jig. Press on an email to view the content of the email.
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
 **Resource links:**
 
-- [List messages](https://learn.microsoft.com/en-us/graph/api/user-list-messages?view=graph-rest-1.0&tabs=http#http-request) - MS Graph documentation
-- [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
+* [List messages](https://learn.microsoft.com/en-us/graph/api/user-list-messages?view=graph-rest-1.0\&tabs=http#http-request) - MS Graph documentation
+* [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
+* [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
-Mail.ReadBasic
-Mail.ReadWrite
-Mail.Read
-:::
+Mail.ReadBasic Mail.ReadWrite Mail.Read&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-![List messages](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6tPoKL8XoL_-4k3FL5YSD_graph-messages.png "List messages")
-:::
-::::
+{% column %}
+&#x20;![List messages](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6tPoKL8XoL_-4k3FL5YSD_graph-messages.png)&#x20;
 
-## Examples and code snippets
 
-:::hint{type="success"}
+{% endcolumn %}
+{% endcolumns %}
+
+### Examples and code snippets
+
+{% hint style="success" %}
 When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
-:::
+{% endhint %}
 
-## General
+### General
 
-:::CodeblockTabs
-index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 name: ms-graph-demonstrator
 title: MS Graph Demonstrator
@@ -61,16 +61,13 @@ tabs:
     jigId: list-email-messages
     icon: email
 ```
+{% endcode %}
 
-:::
-
-## Functions
+### Functions
 
 MS Graph list messages function in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/functions/mail/get-email-messages.jigx).
 
-:::CodeblockTabs
-get-email-messages.jigx
-
+{% code title="get-email-messages.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: GET
@@ -103,16 +100,14 @@ continuation:
       type: string
       value: microsoft.OAuth
 ```
+{% endcode %}
 
-:::
-
-## Jigs
+### Jigs
 
 MS Graph messages jig in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/jigs/mail).
 
-:::CodeblockTabs
-list-email-messages.jigx
-
+{% tabs %}
+{% tab title="list-email-messages.jigx" %}
 ```yaml
 title: ="Inbox - " & $count(@ctx.datasources.mydata) & " items"
 type: jig.list
@@ -224,9 +219,9 @@ filter:
   - title: Other
     value: other
 ```
+{% endtab %}
 
-view-email.jigx
-
+{% tab title="view-email.jigx" %}
 ```yaml
 title: =@ctx.jig.inputs.subject
 type: jig.default
@@ -280,5 +275,5 @@ children:
         & "</body>
         </html>")
 ```
-
-:::
+{% endtab %}
+{% endtabs %}

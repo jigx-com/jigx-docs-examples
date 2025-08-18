@@ -1,45 +1,45 @@
 ---
 title: Create Event Item
 slug: VeSA-create-event-item
-description: Learn how to create a new event item in a specified calendar using Microsoft Graph with this comprehensive document. Find links to relevant resources, Jigx code examples, and essential information on required parameters and authentication. Implement the p
 createdAt: Sat Nov 26 2022 20:49:18 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 13:47:07 GMT+0000 (Coordinated Universal Time)
 ---
 
-## Scenario
+# Create Event Item
+
+{% columns %}
+{% column %}
+### Scenario
 
 Creates a new calendar event item in a user's specified calendar using the Microsoft Graph POST REST function. A default jig uses a form component to capture the event details.
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
 **Resource links:**
 
-- [Create event](https://learn.microsoft.com/en-us/graph/api/user-post-events?view=graph-rest-1.0&tabs=http) - MS Graph documentation
-- [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
+* [Create event](https://learn.microsoft.com/en-us/graph/api/user-post-events?view=graph-rest-1.0\&tabs=http) - MS Graph documentation
+* [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
+* [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
 Calendars.ReadWrite
+{% endcolumn %}
 
-:::
+{% column %}
+![Create event](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Pbr8Kmjr4fVyk6P6qIBf6_graph-createevent.png)&#x20;
 
-:::VerticalSplitItem
-![Create event](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Pbr8Kmjr4fVyk6P6qIBf6_graph-createevent.png "Create event")
-:::
-::::
 
-## Examples and code snippets
+{% endcolumn %}
+{% endcolumns %}
 
-:::hint{type="success"}
+### Examples and code snippets
+
+{% hint style="success" %}
 When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
-:::
+{% endhint %}
 
-## General
+### General
 
-:::CodeblockTabs
-index
-
+{% code title="index.jigx" %}
 ```yaml
 name: ms-graph-demonstrator
 title: MS Graph Demonstrator
@@ -112,16 +112,13 @@ onRefresh:
               parameters:
                 accessToken: microsoft.OAuth
 ```
+{% endcode %}
 
-:::
-
-## Functions
+### Functions
 
 MS Graph Create Event function in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/guides/ms-graph-solution/functions/create-calendar-event.jigx).
 
-:::CodeblockTabs
-create-calendar-event
-
+{% code title="create-calendar-event.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: POST
@@ -185,16 +182,13 @@ parameters:
     location: body
     required: true
 ```
+{% endcode %}
 
-:::
-
-## Jigs
+### Jigs
 
 MS Graph Create Calendar Events jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/guides/ms-graph-solution/jigs/create-calendar-event.jigx).
 
-:::CodeblockTabs
-create-calendar-event.jigx
-
+{% code title="create-calendar-event.jigx" %}
 ```yaml
 title: Create new calendar event
 description: Create a new calendar event in the selected calendar.
@@ -313,10 +307,9 @@ actions:
             description: "Event Created"
             title: "Event Created"
 ```
+{% endcode %}
 
-:::
+### See Also
 
-## See Also
-
-- [Get Event List](<./Get Event List.md>)
-- [Get Event Item](<./Get Event Item.md>)
+* [Get Event List](<Get Event List.md>)
+* [Get Event Item](<Get Event Item.md>)

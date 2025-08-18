@@ -5,40 +5,39 @@ createdAt: Thu May 02 2024 16:35:17 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 18:25:25 GMT+0000 (Coordinated Universal Time)
 ---
 
-## Scenario
+# Get item trending
+
+{% columns %}
+{% column %}
+### Scenario
 
 Get insights that include a list of documents trending around the user using a GET REST function and display the list in a list jig.
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
 **Resource links:**
 
-- [Insights list trending](https://learn.microsoft.com/en-us/graph/api/insights-list-trending?view=graph-rest-1.0&tabs=http) - MS Graph documentation
-- [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
+* [Insights list trending](https://learn.microsoft.com/en-us/graph/api/insights-list-trending?view=graph-rest-1.0\&tabs=http) - MS Graph documentation
+* [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
+* [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
-Sites.Read.All
-Sites.ReadWrite.All
-:::
+Sites.Read.All Sites.ReadWrite.All&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/p9BeCoKBDXDxGNvlXA4j1_graph-trending.png" size="70" position="center" caption="Insights - trending" alt="Insights - trending"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/p9BeCoKBDXDxGNvlXA4j1\_graph-trending.png" size="70" position="center" caption="Insights - trending" alt="Insights - trending"}
+{% endcolumn %}
+{% endcolumns %}
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::hint{type="success"}
-When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
-:::
+{% hint style="success" %}
+When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).&#x20;
+{% endhint %}
 
-## General
+### General
 
-:::CodeblockTabs
-index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 name: ms-graph-demonstrator
 title: MS Graph Demonstrator
@@ -52,16 +51,13 @@ tabs:
     jigId: items-trending
     icon: newspaper
 ```
+{% endcode %}
 
-:::
-
-## Functions
+### Functions
 
 MS Graph list trending function in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/functions/general/get-items-trending.jigx).
 
-:::CodeblockTabs
-get-calendar-list.jigx
-
+{% code title="get-calendar-list.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: GET
@@ -89,16 +85,14 @@ continuation:
       type: string
       value: microsoft.OAuth
 ```
+{% endcode %}
 
-:::
-
-## Jigs
+### Jigs
 
 MS Graph list trending jigs in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/jigs/general)
 
-:::CodeblockTabs
-view-calendar-list.jigx
-
+{% tabs %}
+{% tab title="view-calendar-list.jigx" %}
 ```yaml
 title: Items Trending
 type: jig.default
@@ -201,9 +195,9 @@ widgets:
                     parameters:
                       uri: =@ctx.current.item.webUrl
 ```
+{% endtab %}
 
-view-trending-object-pdf.jigx
-
+{% tab title="view-trending-object-pdf.jigx" %}
 ```yaml
 title: Document
 type: jig.document
@@ -212,9 +206,9 @@ source:
   documentType: PDF
   uri: =@ctx.jig.inputs.uri
 ```
+{% endtab %}
 
-view-trending-object.jigx
-
+{% tab title="view-trending-object.jigx" %}
 ```yaml
 title: Document
 type: jig.document
@@ -224,5 +218,5 @@ source:
   uri: =@ctx.jig.inputs.uri
   isTrackingTransparencyRequired: false
 ```
-
-:::
+{% endtab %}
+{% endtabs %}

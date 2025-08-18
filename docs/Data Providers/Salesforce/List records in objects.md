@@ -1,29 +1,33 @@
 ---
 title: List records in objects
 slug: Cg0q-list
-description: Learn how to efficiently read data from Salesforce using the Salesforce provider with this comprehensive document. Explore examples and code snippets for creating lists of accounts and opportunities, as well as designing a Stage detail jig. Discover how t
 createdAt: Wed Jul 19 2023 12:39:56 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 15:03:54 GMT+0000 (Coordinated Universal Time)
 ---
 
+# List records in objects
+
 Reading data from Salesforce using the Salesforce provider is easy. The provider is intuitive, and once you have synced the data from the Salesforce provider to the local data provider, you can design lists, charts, and widgets to show your organization's Salesforce metrics, accounts, opportunities, and more.
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::hint{type="warning"}
+{% hint style="warning" %}
 Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.
-:::
+{% endhint %}
 
-::::ExpandableHeading
+#### List of accounts
 
-### List of accounts
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A8Tn9KF-RKvhmVl9o\_CxX\_salesforce-list.PNG" size="70" position="center" caption="Search and filtering a list" alt="Search and filtering a list"}
+{% endcolumn %}
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A8Tn9KF-RKvhmVl9o_CxX_salesforce-list.PNG" size="70" position="center" caption="Search and filtering a list" alt="Search and filtering a list"}
-
+{% column %}
 The code below shows a simple example of a list of accounts in Salesforce. Adding `search` and `filter` properties allows you to easily find the accounts you looking for.
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-list-accounts.jigx
+:::CodeblockTabs&#x20;
 
 ```yaml
 title: List Salesforce accounts
@@ -89,23 +93,19 @@ children:
         
 ```
 
-:::
-::::
+#### List of Opportunities
 
-:::::ExpandableHeading
-
-### List of Opportunities
-
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 The code below shows a basic example of a list of opportunites in Salesforce with an `onPress` action that will allow you to update the opportunity amount.
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/i3TJ4x_PLLgmihe9nnqgS_sf-opplist.PNG" size="70" position="center" caption="Basic List" alt="Basic List"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/i3TJ4x\_PLLgmihe9nnqgS\_sf-opplist.PNG" size="70" position="center" caption="Basic List" alt="Basic List"}
+{% endcolumn %}
+{% endcolumns %}
 
+{% code title="list.jigx" %}
 ```yaml
 title: List Salesforce opportunities
 type: jig.default
@@ -167,26 +167,22 @@ children:
                 id: =@ctx.current.item.id
                 entity: Opportunity
 ```
+{% endcode %}
 
-:::::
+#### Create a Stage detail jig
 
-:::::ExpandableHeading
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FGcAzSsO51PuV3Di4atbl\_stagedetail.PNG" size="70" position="center"}
+{% endcolumn %}
 
-### Create a Stage detail jig
+{% column %}
+Below is an example of reading data from the _Account_, _Opportunity_, and _OpportunityStage_ objects in Salesforce. Combining the data, using a `jig.list` with `component.list-item` and `component.summary` to create the Stage Detail jig.
+{% endcolumn %}
+{% endcolumns %}
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FGcAzSsO51PuV3Di4atbl_stagedetail.PNG" size="70"  position="center"}
-:::
-
-:::VerticalSplitItem
-Below is an example of reading data from the *Account*, *Opportunity*, and *OpportunityStage* objects in Salesforce. Combining the data, using a `jig.list` with `component.list-item` and `component.summary` to create the Stage Detail jig.
-:::
-::::
-
-:::CodeblockTabs
-stage-detail.jigx
-
+{% tabs %}
+{% tab title="stage-detail.jigx" %}
 ```yaml
 title: Stage detail
 type: jig.list
@@ -272,9 +268,9 @@ summary:
         element: icon
         name: currency-dollar-circle
 ```
+{% endtab %}
 
-total-sales.jigx
-
+{% tab title="total-sales.jigx" %}
 ```yaml
 # datasources>total-sales.jigx
 type: datasource.sqlite
@@ -292,6 +288,5 @@ options:
 
     and json_extract(data, '$.CloseDate') between '2020-01-01' and '2020-03-31'
 ```
-
-:::
-:::::
+{% endtab %}
+{% endtabs %}

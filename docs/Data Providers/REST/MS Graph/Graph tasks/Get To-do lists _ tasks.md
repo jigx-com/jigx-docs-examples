@@ -5,40 +5,40 @@ createdAt: Thu May 02 2024 16:42:09 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 18:00:17 GMT+0000 (Coordinated Universal Time)
 ---
 
-## Scenario
+# Get To-do lists & tasks
+
+{% columns %}
+{% column %}
+### Scenario
 
 Get a list of To-do tasks for a user in Microsoft Graph using a GET REST function and display the tasks in a list jig.
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
 **Resource links:**
 
-- [List tasks](https://learn.microsoft.com/en-us/graph/api/todotasklist-list-tasks?view=graph-rest-1.0&tabs=http) - MS Graph documentation&#x20;
-- [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
+* [List tasks](https://learn.microsoft.com/en-us/graph/api/todotasklist-list-tasks?view=graph-rest-1.0\&tabs=http) - MS Graph documentation
+* [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
+* [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
-Tasks.Read
-Tasks.ReadWrite
-:::
+Tasks.Read Tasks.ReadWrite
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UXO3cJBGL2oEzsbc3jTlu_graph-tasks.png" size="70" position="center" caption="Task list" alt="Task list"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UXO3cJBGL2oEzsbc3jTlu\_graph-tasks.png" size="70" position="center" caption="Task list" alt="Task list"}
+{% endcolumn %}
+{% endcolumns %}
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::hint{type="success"}
+{% hint style="success" %}
 When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
-:::
+{% endhint %}
 
-## General
+### General
 
-:::CodeblockTabs
-index.jigx
-
+{% tabs %}
+{% tab title="index.jigx" %}
 ```yaml
 name: ms-graph-demonstrator
 title: MS Graph Demonstrator
@@ -69,12 +69,9 @@ tabs:
     jigId: home
     icon: home
 ```
+{% endtab %}
 
-:::
-
-:::CodeblockTabs
-home.jigx
-
+{% tab title="home.jigx" %}
 ```yaml
 title: Home
 type: jig.grid
@@ -129,14 +126,15 @@ children:
           jigId: items-trending
           widgetId: trending
 ```
+{% endtab %}
+{% endtabs %}
 
-## Functions
+### Functions
 
-MS Graph list To-do tasks function in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/functions/tasks)
+MS Graph list To-do tasks function in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/functions/tasks).
 
-:::CodeblockTabs
-get-all-todo-tasks.jigx
-
+{% tabs %}
+{% tab title="get-all-todo-tasks.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: POST
@@ -166,9 +164,9 @@ errorTransform: |
     "error": "No lists"
   }
 ```
+{% endtab %}
 
-get-task-lists.jigx
-
+{% tab title="get-task-lists.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: GET
@@ -200,16 +198,14 @@ errorTransform: |
     "error": "No lists"
   }
 ```
+{% endtab %}
+{% endtabs %}
 
-:::
-
-## Jigs
+### Jigs
 
 MS Graph list To-do tasks jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/tasks/list-task-lists.jigx).
 
-:::CodeblockTabs
-list-task-lists.jigx
-
+{% code title="list-task-lists.jigx" %}
 ```yaml
 title: Task Lists
 type: jig.list
@@ -288,5 +284,4 @@ widgets:
           subtitle: |
             ="Number of Tasks: " & @ctx.current.item.task_count
 ```
-
-:::
+{% endcode %}

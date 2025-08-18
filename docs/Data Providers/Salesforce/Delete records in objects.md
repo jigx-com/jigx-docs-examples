@@ -1,34 +1,33 @@
 ---
 title: Delete records in objects
 slug: 1UtO-delete
-description: Learn how to delete records in a Salesforce object using Salesforce provider's Delete method. Understand the importance of being cautious as deletions are irreversible. Follow our example code snippet to delete a Salesforce Account record, including using
 createdAt: Wed Jul 19 2023 12:39:59 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 12:04:01 GMT+0000 (Coordinated Universal Time)
 ---
 
+# Delete records in objects
+
 Using the Salesforce provider's Delete method, you can delete records in a Salesforce object. This is helpful when a data cleanup is needed due to outdated, incorrect, or irrelevant data. It is essential to exercise caution when deleting records, as the action is irreversible. In Jigx Builder use an `action.confirm` with a `modal` to provide a message before deleting the record permanently. Ensure you have sufficient rights in Salesforce to delete a record in an object.
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::hint{type="warning"}
+{% hint style="warning" %}
 Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.
-:::
+{% endhint %}
 
-### Delete a Salesforce Account record
+#### Delete a Salesforce Account record
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K-RyjjKQLQvbYp16EUENW_salesforcedelete.PNG" size="70" position="center" caption="Deleting records " alt="Deleting records "}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K-RyjjKQLQvbYp16EUENW\_salesforcedelete.PNG" size="70" position="center" caption="Deleting records " alt="Deleting records "}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example uses a list jig type with a `component.list-item` with a `rightElement: button` to execute the Salesforce provider's `method: delete`.
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-salesforce-delete-account.jigx
-
+{% code title="salesforce-delete-account.jigx" %}
 ```yaml
 title: Delete Account
 description: Delete a Salesforce account
@@ -97,5 +96,4 @@ item:
                   title: Are you sure you want to delete the Account?
             - type: action.go-back            
 ```
-:::
-
+{% endcode %}

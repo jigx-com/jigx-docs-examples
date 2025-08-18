@@ -1,33 +1,34 @@
 ---
 title: Save & update records in objects
 slug: 7Wlr-save-or-update-an
-description: Learn how to easily update records in Salesforce from your mobile device using the *Save* or *Update* methods. This comprehensive guide includes examples and code snippets on editing the amount field and utilizing the Salesforce Provider's *save* method t
 createdAt: Wed Jul 19 2023 12:41:59 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 15:04:19 GMT+0000 (Coordinated Universal Time)
 ---
 
-There is always a need to ensure records are kept up to date and have the latest contact details, sales figures, or case details. The Salesforce *Save* or *Update* methods allow you to update records in Salesforce directly from your mobile device.
+# Save & update records in objects
 
-## Examples and code snippets
+There is always a need to ensure records are kept up to date and have the latest contact details, sales figures, or case details. The Salesforce _Save_ or _Update_ methods allow you to update records in Salesforce directly from your mobile device.
 
-:::hint{type="warning"}
+### Examples and code snippets
+
+{% hint style="warning" %}
 Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.
-:::
+{% endhint %}
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hgBabHVNXORk0caznrtB5_sf-oppsave.PNG" size="70" position="center" caption="Update opportunity amount" alt="Update opportunity amount"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hgBabHVNXORk0caznrtB5\_sf-oppsave.PNG" size="70" position="center" caption="Update opportunity amount" alt="Update opportunity amount"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows how to update a Salesforce Opportunity record. From the list of opportunities using the `onPress` action the jig opens a form showing the opportunity name and amount. Edit the amount field. Using the Salesforce Providers `save` method the opportunity is updated.
+{% endcolumn %}
+{% endcolumns %}
 
-:::
-::::
+:::CodeblockTabs&#x20;
 
-:::CodeblockTabs
-Salesforce-opp-update.jigx
-
+{% tabs %}
+{% tab title="Salesforce-opp-update.jigx" %}
 ```yaml
 title: Opportunity Update
 description: Update the opportunity Amount
@@ -91,9 +92,9 @@ actions:
           onSuccess: 
             type: action.go-back  
 ```
+{% endtab %}
 
-salesforce-opp-list.jigx
-
+{% tab title="salesforce-opp-list.jigx" %}
 ```yaml
 title: List Salesforce opportunities
 type: jig.default
@@ -155,5 +156,5 @@ children:
                 id: =@ctx.current.item.id
                 entity: Opportunity
 ```
-
-:::
+{% endtab %}
+{% endtabs %}

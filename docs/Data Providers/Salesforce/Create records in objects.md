@@ -1,39 +1,37 @@
 ---
 title: Create records in objects
 slug: jsdw-create
-description: Learn how to create Salesforce objects directly from your mobile device with this comprehensive document. Discover step-by-step instructions, examples, and code snippets on utilizing key tools like Salesforce schema builder and object reference. Create fl
 createdAt: Wed Jul 19 2023 12:40:04 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 12:01:57 GMT+0000 (Coordinated Universal Time)
 ---
+
+# Create records in objects
 
 Create records in Salesforce objects straight from your mobile device. If you at a customer and want to create a new account with the customer or capture a new opportunity while having coffee with a prospect, you can design a form and use the Salesforce provider's create method.
 
 You can use the [object reference for Salesforce](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_concepts.htm), [https://workbench.developerforce.com/login.php,](https://workbench.developerforce.com/login.php) or the Salesforce schema builder to check the objects, required fields, and relationships. The minimum needed to create a record is based on the required fields.
 
-![Salesforce schema builder](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/r0ILhitTT-XYMa78Yytn5_salesforceschema.png "Salesforce schema builder")
+![Salesforce schema builder](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/r0ILhitTT-XYMa78Yytn5_salesforceschema.png)
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::hint{type="warning"}
+{% hint style="warning" %}
 Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.
-:::
+{% endhint %}
 
-### Create a Salesforce Account record
+#### Create a Salesforce Account record
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FMWGP3yB9L754yL0vXfGA_createacc.PNG" size="70" position="center" caption="Creat an Account object  " alt="Creat an Account object  "}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FMWGP3yB9L754yL0vXfGA\_createacc.PNG" size="70" position="center" caption="Creat an Account object " alt="Creat an Account object "}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example uses a default jig type with a a `component.form`. Certain of the Salesforce's Account object's fields are used to create a basic account record. You can add any additional fields you require.
+{% endcolumn %}
+{% endcolumns %}
 
-:::
-::::
-
-:::CodeblockTabs
-salesforce-create-account.jigx
-
+{% code title="salesforce-create-account.jigx" %}
 ```yaml
 title: Create Salesforce account 
 description: 2 Create a new account in Salesforce
@@ -115,23 +113,21 @@ actions:
                   title: Successfully created
             - type: action.go-back
 ```
+{% endcode %}
 
-:::
+#### Create a Salesforce Opportunity record
 
-### Create a Salesforce Opportunity record
+{% columns %}
+{% column %}
+This example uses a default jig type with a `component.form`. Certain of the Salesforce's Opportunity object's fields are used to create a basic record. You can add any additional fields you require.
+{% endcolumn %}
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example uses a default jig type with  a `component.form`. Certain of the Salesforce's Opportunity object's fields are used to create a basic record. You can add any additional fields you require.
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xRt75T6ECDiejwwmNLRR-\_sf-newopp.PNG" size="70" position="center" caption="New opportunity" alt="New opportunity"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xRt75T6ECDiejwwmNLRR-_sf-newopp.PNG" size="70" position="center" caption="New opportunity" alt="New opportunity"}
-:::
-::::
-
-:::CodeblockTabs
-salesforce-create-opportunity.jigx
-
+{% code title="salesforce-create-opportunity.jigx" %}
 ```yaml
 title: Create Salesforce opportunity 
 description: Create a new opportunity in Salesforce
@@ -216,5 +212,4 @@ actions:
                   title: Successfully created
             - type: action.go-back
 ```
-
-:::
+{% endcode %}
