@@ -8,31 +8,27 @@ This action can be used to sync your local database with your live database on t
 4. In onRefresh/onFocus
 5. Dynamically sync multiple entities
 
-:::hint{type="warning"}
-sync-entities can't be used if you using [Static Data](https://docs.jigx.com/examples/static).
-:::
+{% hint style="warning" %}
+`sync-entities` can't be used if you using [Static Data](https://docs.jigx.com/examples/static).&#x20;
+{% endhint %}
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### sync-entities in action
+#### sync-entities in action
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy_Ed5LO5RY_5j_action-sync-entities.PNG" size="80" position="center" caption="Sync-entities action" alt="Sync-entities action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy_Ed5LO5RY_5j_action-sync-entities.PNG" width="800" height="791" darkWidth="800" darkHeight="791"}
+{% columns %}
+{% column %}
+In this example, when tapping the Sync entities button the `action.sync-entities` is used to show a list of employees.
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-In  this example, when tapping the Sync entities button the `action.sync-entities` is used to show a list of employees.
-:::
+**Example:** The full example of sync-entities in action you can find in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-action.jigx)
+{% endcolumn %}
 
-:::VerticalSplitItem
-**Example:**
-The full example of sync-entities in action you can find in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-action.jigx)
-:::
-::::
+{% column %}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy\_Ed5LO5RY\_5j\_action-sync-entities.PNG" size="80" position="center" caption="Sync-entities action" alt="Sync-entities action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy\_Ed5LO5RY\_5j\_action-sync-entities.PNG" width="800" height="791" darkWidth="800" darkHeight="791"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-sync-entities-action.jigx
-
+{% code title="sync-entities-action.jigx" %}
 ```yaml
 actions:
   - children:
@@ -43,28 +39,23 @@ actions:
         entities:
           - default/employees    
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### sync-entities in the action list
+#### sync-entities in the action list
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mvmPcSbReereFrlWFAo8t_syncent-actionlist.PNG" size="80" position="center" caption="Sync-entities action" alt="sync-entities action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mvmPcSbReereFrlWFAo8t_syncent-actionlist.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mvmPcSbReereFrlWFAo8t\_syncent-actionlist.PNG" size="80" position="center" caption="Sync-entities action" alt="sync-entities action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mvmPcSbReereFrlWFAo8t\_syncent-actionlist.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example the `action.sync-entities` is used to linkt to the a different jig.
 
-**Example:**
-The full example of sync-entities in an action list you can find in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-actionlist.jigx).
-:::
-::::
+**Example:** The full example of sync-entities in an action list you can find in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-actionlist.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-sync-entities-actionlist.jigx
-
+{% code title="sync-entities-actionlist.jigx" %}
 ```yaml
 actions:
   - children:
@@ -81,30 +72,26 @@ actions:
             options:
               linkTo: default-employee-detail
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### sync-entities in onPress/onChange event
+#### sync-entities in onPress/onChange event
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 Here is the example of [sync-entities](https://docs.jigx.com/examples/sync-entities) in onPress/onChange event in [list-item](https://docs.jigx.com/examples/list-item)
 
 **Example:**
 
-The full example of sync-entities in onChange you can find in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-onChange.jigx).
-The full example of sync-entities in onPress you can find in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-onPress.jigx).
-:::
+The full example of sync-entities in onChange you can find in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-onChange.jigx). The full example of sync-entities in onPress you can find in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-onPress.jigx).&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fSEBZHTaBdKmnRfeiOWlH_syncent-onpress.PNG" size="80" position="center" caption="Sync-entities action with onPress" alt="sync-entities action with onPress" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fSEBZHTaBdKmnRfeiOWlH_syncent-onpress.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fSEBZHTaBdKmnRfeiOWlH\_syncent-onpress.PNG" size="80" position="center" caption="Sync-entities action with onPress" alt="sync-entities action with onPress" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fSEBZHTaBdKmnRfeiOWlH\_syncent-onpress.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-sync-entities-onPress.jigx
-
+{% tabs %}
+{% tab title="sync-entities-onPress.jigx" %}
 ```yaml
 item:
   type: component.list-item
@@ -134,9 +121,9 @@ item:
               entities:
                 - default/employees
 ```
+{% endtab %}
 
-sync-entities-onChange.jigx
-
+{% tab title="sync-entities-onChange.jigx" %}
 ```yaml
 item:
   type: component.list-item
@@ -170,31 +157,31 @@ item:
                 entities:
                   - default/employees
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### sync-entities in onRefresh/onFocus
+#### sync-entities in onRefresh/onFocus
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v-diCoJjp-AGG2UGwZn9n_syncent-inchange.PNG" size="80" position="center" caption="sync-entities action with onRefresh" alt="sync-entities action with onRefresh" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v-diCoJjp-AGG2UGwZn9n_syncent-inchange.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v-diCoJjp-AGG2UGwZn9n\_syncent-inchange.PNG" size="80" position="center" caption="sync-entities action with onRefresh" alt="sync-entities action with onRefresh" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v-diCoJjp-AGG2UGwZn9n\_syncent-inchange.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 **Example:**
 
-See the full example of sync-entities on onRefresh action in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-onRefresh.jigx).
-:::
-::::
+See the full example of sync-entities on onRefresh action in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-onRefresh.jigx).&#x20;
 
-:::hint{type="info"}
-If you want to use onLoad or onFocus just change the `onRefresh` to `onLoad` or `onFocus`.
-:::
+{% hint style="info" %}
+&#x20;If you want to use onLoad or onFocus just change the `onRefresh` to `onLoad` or `onFocus`
+{% endhint %}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-sync-entities-onRefresh.jigx
+:::CodeblockTabs&#x20;
 
+{% tabs %}
+{% tab title="sync-entities-onRefresh.jigx" %}
 ```yaml
 onRefresh: 
   type: action.sync-entities
@@ -203,9 +190,9 @@ onRefresh:
     entities:
       - default/employees
 ```
+{% endtab %}
 
-sync-entities-onFocus
-
+{% tab title="sync-entities-onFocus" %}
 ```yaml
 onFocus: 
   type: action.sync-entities
@@ -214,31 +201,28 @@ onFocus:
     entities:
       - default/employees
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-::::ExpandableHeading
 ### Dynamically sync multiple entities
 
 When building a solution, the number of entities to sync and the parameters for each are not always known; for example, when syncing the attachments, files, or documents for a message, there can be zero, one, or more. It is necessary to dynamically specify a list of the entities, functions, and function parameters to return from the database using an expression.
 
-### Considerations
+#### Considerations
 
-- The expression is specified in the `action.sync-entities` action either as a local action in the jig or as a global action.
-- Dynamic sync-entities apply to the REST, OneDrive, and Salesforce data providers.
-- Any of the following can be synced dynamically: entity, functions, and function parameters.
+* The expression is specified in the `action.sync-entities` action either as a local action in the jig or as a global action.
+* Dynamic sync-entities apply to the REST, OneDrive, and Salesforce data providers.
+* Any of the following can be synced dynamically: entity, functions, and function parameters.
 
-### Expression structure
+#### Expression structure
 
-- The **basic expression** structure is `=$.map(array, function)`.
-  - Specify the array you will consult, i.e., a datasource `@ctx.datasources.{datasourceName}`.
-  - For the function, specify `($item)`.
-  - Example of the basic structure `=$map(@ctx.datasources.{datasourceName}, function($item))`.
-- After defining the basic structure, **map out** relevant properties from the array to the relevant `entity`/`function`/`parameters` and specify the dynamic entry using the `$.item` property, e.g., `"calenderId": $.item.id`. This will run through all the records in the datasource and perform a sync-entities action for each record in the table.
+* The **basic expression** structure is `=$.map(array, function)`.
+  * Specify the array you will consult, i.e., a datasource `@ctx.datasources.{datasourceName}`.
+  * For the function, specify `($item)`.
+  * Example of the basic structure `=$map(@ctx.datasources.{datasourceName}, function($item))`.
+* After defining the basic structure, **map out** relevant properties from the array to the relevant `entity`/`function`/`parameters` and specify the dynamic entry using the `$.item` property, e.g., `"calenderId": $.item.id`. This will run through all the records in the datasource and perform a sync-entities action for each record in the table.
 
-:::CodeblockTabs
-sync-entities-action
-
+{% code title="sync-entities-action" %}
 ```yaml
 # Example of dynamic sync-entities expression
 actions:
@@ -259,17 +243,16 @@ actions:
               }
             })[]
 ```
-:::
+{% endcode %}
 
-### Example sync-entities dynamically for calendars (full input source)
+#### Example sync-entities dynamically for calendars (full input source)
 
 To return all records from the input source use `$item.id`. In this example, a jig has two lists; the first list shows all the user's calendars, and the second list uses the `ids` from the first list to return all the events for all the calendars. A summary component shows a count of the number of events.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GmLSc1g6aMLAAgchgPdQK_jb-dyn-sync-cals.png" size="70" position="center" caption="Sync calendars and events" alt="Sync calendars and events" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GmLSc1g6aMLAAgchgPdQK_jb-dyn-sync-cals.png" width="800" height="796" darkWidth="800" darkHeight="796"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GmLSc1g6aMLAAgchgPdQK\_jb-dyn-sync-cals.png" size="70" position="center" caption="Sync calendars and events" alt="Sync calendars and events" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GmLSc1g6aMLAAgchgPdQK\_jb-dyn-sync-cals.png" width="800" height="796" darkWidth="800" darkHeight="796"}
 
-:::CodeblockTabs
-full-calendar-list
-
+{% tabs %}
+{% tab title="full-calendar-list" %}
 ```yaml
 # Jig for to show the calendars and events
 title: Calendars
@@ -341,9 +324,9 @@ summary:
       value: =$count(@ctx.datasources.list-events-by-calendar)
       title: Total events 
 ```
+{% endtab %}
 
-sync-dynamic-ds-rest
-
+{% tab title="sync-dynamic-ds-rest" %}
 ```yaml
 # Global action using the full datasource to return the calender events
 action:  
@@ -368,9 +351,9 @@ parameters:
     type: object
     required: true
 ```
+{% endtab %}
 
-get-calendar-event-list
-
+{% tab title="get-calendar-event-list" %}
 ```yaml
 # Rest function to get the calendars events 
 provider: DATA_PROVIDER_REST
@@ -408,17 +391,17 @@ continuation:
 records: =$.value
 useLocalCall: true
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-### Example sync-entities dynamically for a selected calendar
+#### Example sync-entities dynamically for a selected calendar
 
-To return all records for a selected calendar use `=$map(@ctx.action.parameters.selected, function($item)` in the global action. In this example, a jig has a dropdown to select the calendar and a *Show events* button syncs the entries in the selected calendar. A summary component shows a count of the number of events in the selected calendar.
+To return all records for a selected calendar use `=$map(@ctx.action.parameters.selected, function($item)` in the global action. In this example, a jig has a dropdown to select the calendar and a _Show events_ button syncs the entries in the selected calendar. A summary component shows a count of the number of events in the selected calendar.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-9e6Q31g_zJYZw9ARJCXw_jb-dyn-sync-cal2.png" size="78" position="center" caption="Sync events for the birthday calendar" alt="Sync events for the birthday calendar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-9e6Q31g_zJYZw9ARJCXw_jb-dyn-sync-cal2.png" width="800" height="803" darkWidth="800" darkHeight="803"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-9e6Q31g\_zJYZw9ARJCXw\_jb-dyn-sync-cal2.png" size="78" position="center" caption="Sync events for the birthday calendar" alt="Sync events for the birthday calendar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-9e6Q31g\_zJYZw9ARJCXw\_jb-dyn-sync-cal2.png" width="800" height="803" darkWidth="800" darkHeight="803"}
 
-:::CodeblockTabs
-my-events.jigx
-
+{% tabs %}
+{% tab title="my-events.jigx" %}
 ```yaml
 # jig to selected the calendar and sync the events for that calendar
 title: My events
@@ -491,9 +474,9 @@ summary:
       value: =$count(@ctx.datasources.list-events-by-calendar)
       title: Number of events
 ```
+{% endtab %}
 
-sync-dynamic-selected-rest
-
+{% tab title=" message = "hello world" puts message sync-dynamic-selected-rest" %}
 ```yaml
 # Add the global action under actions folder and use selected in the array
 # mapping. 
@@ -519,9 +502,9 @@ parameters:
     type: object 
     required: true
 ```
+{% endtab %}
 
-get-calendar-event-list
-
+{% tab title="get-calendar-event-list" %}
 ```yaml
 # Rest function to get the calendars events 
 provider: DATA_PROVIDER_REST
@@ -559,6 +542,5 @@ continuation:
 records: =$.value
 useLocalCall: true
 ```
-:::
-::::
-
+{% endtab %}
+{% endtabs %}

@@ -2,91 +2,29 @@
 
 This action allows users to update specific information about themselves, which is displayed on the app's profile screen.
 
-This action can be configured within a jig in various ways, such as:
-&#x9; An action button
-&#x9; A header action link or icon
-&#x9; An event, e.g., `onPress`
+This action can be configured within a jig in various ways, such as: An action button A header action link or icon An event, e.g., `onPress`
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](update-profile.md) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="136">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>instanceId</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Provide the action with an <code>instanceId</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>avatarUrl</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Configure the property with an expression, datasource, or input to update the user's avatar.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>displayName</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Configure the property with an expression, datasource, or input to update the user's preferred name, for example, Rob instead of Robert.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>firstName</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Configure the property with an expression, datasource, or input to update the user's last name (surname).</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>lastName</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Configure the property with an expression, datasource or input to update the user's name.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>title</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Defines the title for the action button, such as Update your details.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="142.3046875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>instanceId</code></td><td>Provide the action with an <code>instanceId</code>.</td></tr><tr><td><code>avatarUrl</code></td><td>Configure the property with an expression, datasource, or input to update the user's avatar.</td></tr><tr><td><code>displayName</code></td><td>Configure the property with an expression, datasource, or input to update the user's preferred name, for example, Rob instead of Robert.</td></tr><tr><td><code>firstName</code></td><td>Configure the property with an expression, datasource, or input to update the user's last name (surname).</td></tr><tr><td><code>lastName</code></td><td>Configure the property with an expression, datasource or input to update the user's name.</td></tr><tr><td><code>title</code></td><td>Defines the title for the action button, such as Update your details.</td></tr></tbody></table>
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Update-profile button in a jig
+#### Update-profile button in a jig
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![Update Profile details](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NhdCeFqRkSdYEjyKBdnIQ-20250514-093621.png "Update Profile details")
-:::
+{% columns %}
+{% column %}
+&#x20;![Update Profile details](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NhdCeFqRkSdYEjyKBdnIQ-20250514-093621.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example demonstrates how a form captures basic personal information and updates the profile screen when the user taps the 'Update' button, which triggers the `action.update-profile`.
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-actions-update-profile.jigx
-
+{% code title="actions-update-profile.jigx" %}
 ```yaml
 title: Update user profile
 type: jig.default
@@ -138,25 +76,21 @@ actions:
           # Provide text that displays on the action button.
           title: Update
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### Update-profile in a jig-header link
+#### Update-profile in a jig-header link
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example demonstrates how a form captures basic personal information and updates the profile screen when the user taps the *Profile Update* link in the `jig-header`, which triggers the `action.update-profile`.
-:::
+{% columns %}
+{% column %}
+This example demonstrates how a form captures basic personal information and updates the profile screen when the user taps the _Profile Update_ link in the `jig-header`, which triggers the `action.update-profile`.
+{% endcolumn %}
 
-:::VerticalSplitItem
-![Update profile -header link](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-S3VYcMTayd_F6Z6AXR5aq-20250514-094006.png "Update profile - header link ")
-:::
-::::
+{% column %}
+&#x20;![Update profile -header link](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-S3VYcMTayd_F6Z6AXR5aq-20250514-094006.png)
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-action-update-profile-header.jigx
-
+{% code title="action-update-profile-header.jigx" %}
 ```yaml
 title: Update user profile
 type: jig.default
@@ -204,25 +138,21 @@ children:
           options:
             label: App Name    
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### Update-profile in a jig-header icon
+#### Update-profile in a jig-header icon
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![Update profile - header icon](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-6IbgXLdFBoLHrp0wab0U4-20250514-095340.png "Update profile - header icon")
-:::
+{% columns %}
+{% column %}
+&#x20;![Update profile - header icon](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-6IbgXLdFBoLHrp0wab0U4-20250514-095340.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example demonstrates how a form captures basic personal information and updates the profile screen when the user taps the *icon* in the `jig-header`, which triggers the `action.update-profile`.
-:::
-::::
+{% column %}
+This example demonstrates how a form captures basic personal information and updates the profile screen when the user taps the _icon_ in the `jig-header`, which triggers the `action.update-profile`.&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-action-update-profile-header-icon.jigx
-
+{% code title="action-update-profile-header-icon.jigx" %}
 ```yaml
 title: Update user profile
 type: jig.default
@@ -273,25 +203,22 @@ children:
           options:
             label: App Name    
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### Update-profile with onPress event
+#### Update-profile with onPress event
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example demonstrates how to use the `onPress` event with `action.update-profile` in a `list-item` to update the first and last names. The names come from a datasource and the avatar from a `form` containing an `avatar` component.
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-![Update profile - onPress](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-K-J4yCmos33-L-KO8H9cF-20250429-125242.png "Update profile - onPress event")
-:::
-::::
+{% column %}
+&#x20;![Update profile - onPress](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-K-J4yCmos33-L-KO8H9cF-20250429-125242.png)&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-action-update-profile-onpress.jigx
-
+{% tabs %}
+{% tab title="action-update-profile-onpress.jigx" %}
 ```yaml
 title: Update user profile
 type: jig.default
@@ -335,9 +262,9 @@ children:
           options:
             label: Photo
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   contractors:
@@ -349,6 +276,5 @@ datasources:
           firstName: Robert
           displayName: Rob
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

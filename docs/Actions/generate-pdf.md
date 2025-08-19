@@ -1,92 +1,49 @@
 # generate-pdf
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 The generate-pdf action allows you to quickly create a PDF file version of HTML content, whether a receipt, report, form, or other document.
 
 The URI of the generated file is returned and is available as part of the action instance output. When you tap the button, the app compiles the necessary information and generates a file you can save, or share instantly.
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif" size="60" position="center" caption="Generate a PDF file" alt="Generate a PDF file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O\_Flk4q6qp9u-20250218-113955.gif" size="60" position="center" caption="Generate a PDF file" alt="Generate a PDF file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O\_Flk4q6qp9u-20250218-113955.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+{% endcolumn %}
+{% endcolumns %}
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](generate-pdf.md) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                          |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `html`             | Use standard HTML elements to ensure optimal formatting and compatibility when rendering content in the PDF file, for example, \<html>\<body>Invoices are provided monthly.\</body\</html>.&#xA;The HTML can be built up using JSONata or JavaScript.                    |
-| `fileName`         | Give the PDF a name, this name is used as the local file name, and is referenced as part of the uri, which can be accessed via the action's instance output (`=@ctx.actions.generatePDF.outputs.uri`). &#xA;The .pdf extension is automatically added to the `fileName`. |
-| `title`            | Provide the action button with a title, for example, Invoice.                                                                                                                                                                                                            |
+<table><thead><tr><th width="140.71875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>html</code></td><td>Use standard HTML elements to ensure optimal formatting and compatibility when rendering content in the PDF file, for example, &#x3C;html>&#x3C;body>Invoices are provided monthly.&#x3C;/body&#x3C;/html>. The HTML can be built up using JSONata or JavaScript.</td></tr><tr><td><code>fileName</code></td><td>Give the PDF a name, this name is used as the local file name, and is referenced as part of the uri, which can be accessed via the action's instance output (<code>=@ctx.actions.generatePDF.outputs.uri</code>). The .pdf extension is automatically added to the <code>fileName</code>.</td></tr><tr><td><code>title</code></td><td>Provide the action button with a title, for example, Invoice.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>icon</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Select a icon to display when the action is configured as the secondary button or in a <a href="./../Components/jig-header.md">jig-header</a>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isHidden</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>styles</code></p>
-    </td>
-    <td selected="false" align="left">
-      <ul>
-      <li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li>
-      <li><code>isDisabled</code> - Displays the action button as greyed out.</li>
-      <li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li>
-      <li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="149.015625">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>Select a icon to display when the action is configured as the secondary button or in a <a href="../Components/jig-header.md">jig-header</a>.</td></tr><tr><td><code>isHidden</code></td><td><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</td></tr><tr><td><code>styles</code></td><td><ul><li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li><li><code>isDisabled</code> - Displays the action button as greyed out.</li><li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li><li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li></ul></td></tr></tbody></table>
 
-## Considerations
+### Considerations
 
-- You can reference the local PDF file using the action's output uri in other actions or components, `=@ctx.actions.generatePDF.outputs.uri`. For example, generate the PDF file then [share](./share.md) the file.&#x20;
-- Depending on where you save and use the saved PDF, you might need to use [conversions](https://docs.jigx.com/file-handling).
-- The .pdf extension is automatically added to the `fileName`.
+* You can reference the local PDF file using the action's output uri in other actions or components, `=@ctx.actions.generatePDF.outputs.uri`. For example, generate the PDF file then [share](share.md) the file.
+* Depending on where you save and use the saved PDF, you might need to use [conversions](https://docs.jigx.com/file-handling).
+* The .pdf extension is automatically added to the `fileName`.
 
-## Examples and code snippets
+### Examples and code snippets
 
-### Basic generate a PDF and share
+#### Basic generate a PDF and share
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif" size="70" position="center" caption="Generate and share PDF" alt="Generate and share PDF" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O_Flk4q6qp9u-20250218-113955.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
-:::
+{% columns %}
+{% column %}
+mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O\_Flk4q6qp9u-20250218-113955.gif" size="70" position="center" caption="Generate and share PDF" alt="Generate and share PDF" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O\_Flk4q6qp9u-20250218-113955.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, an action list contains two actions: the first generates a PDF of a checklist, the second shares the PDF via a messaging app on the device.
 
-**Example:**&#x20;
-See the full code sample in GitHub.
-:::
-::::
+**Example:** See the full code sample in GitHub.&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-action-generate-pdf.jigx
-
+{% tabs %}
+{% tab title="action-generate-pdf.jigx" %}
 ```yaml
 title: Site Checklist
 type: jig.document
@@ -122,9 +79,9 @@ actions:
                 # Use the action instance output to reference the file.
                 fileUri: =@ctx.actions.share-pdf.outputs.uri             
 ```
+{% endtab %}
 
-datasource (HTML)
-
+{% tab title="datasource (HTML)" %}
 ```yaml
 # Use a datasource with the required HTML
 datasources:
@@ -186,26 +143,24 @@ datasources:
                 </body>
                 </html>
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-### Generate a pdf,  save and share&#x20;
+#### Generate a pdf, save and share
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-In this example, an action list contains three actions: the first generates a PDF for an invoice, the second saves it to the database, and the third shares the PDF via a messaging app on the device.  When saving the file to the database the file is converted from local-uri to data-uri for storage.
+{% columns %}
+{% column %}
+In this example, an action list contains three actions: the first generates a PDF for an invoice, the second saves it to the database, and the third shares the PDF via a messaging app on the device. When saving the file to the database the file is converted from local-uri to data-uri for storage.
 
-**Example:**&#x20;
-See the full code sample in GitHub.
-:::
+**Example:** See the full code sample in GitHub.
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" size="70" position="center" caption="Generate PDF, save & share" alt="Generate PDF, save & share" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" size="70" position="center" caption="Generate PDF, save & share" alt="Generate PDF, save & share" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-action-generate-pdf-save-share.jigx
-
+{% code title="action-generate-pdf-save-share.jigx" %}
 ```yaml
 title: Monthly invoicing
 description: Provide you details
@@ -425,20 +380,18 @@ actions:
                 message: Global Invoice 
                 subject: Invoice for January
 ```
-:::
+{% endcode %}
 
-### Generate pdf from JavaScript HTML function
+#### Generate pdf from JavaScript HTML function
 
 This example demonstrates how to use a JavaScript function to generate an HTML invoice. The invoice is populated with customer details retrieved from a Dynamic Data datasource named invoices. The JavaScript function is referenced in an expression used by `action.generate-pdf`, after which the invoice is shared using the `action.share` via the device's apps.
 
-**Example:**&#x20;
-See the full code sample in GitHub.
+**Example:** See the full code sample in GitHub.
 
-![PDF from JavaScript function](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wZMGFJvxtv3534txsjD9R-20250228-132836.png "PDF from JavaScript function")
+![PDF from JavaScript function](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wZMGFJvxtv3534txsjD9R-20250228-132836.png)
 
-:::CodeblockTabs
-action-pdf-javascript.jigx
-
+{% tabs %}
+{% tab title="action-pdf-javascript.jigx" %}
 ```yaml
 title: Monthly invoicing
 description: Provide your details
@@ -526,9 +479,9 @@ actions:
                 message: Global Invoice 
                 subject: Invoice for January 
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   
@@ -551,9 +504,9 @@ datasources:
         FROM [default/invoices] 
         WHERE firstName = 'John Smith'
 ```
+{% endtab %}
 
-html.js
-
+{% tab title="html.js" %}
 ```javascript
 // Create a JS function that generates HTML, reference the input fields from
 // the datasource.
@@ -707,5 +660,5 @@ return `
 
 }
 ```
-:::
-
+{% endtab %}
+{% endtabs %}

@@ -2,7 +2,7 @@
 
 This action redirects you to another jig. The `go-to` action can be used with elements like `swipeable` and `rightElement` or combined with another action. When paired with another action, it is triggered after the main action to navigate to a specified screen, for example, saving a date in a form and then opening a list of customers. `go-to` helps configure navigation, ensuring a seamless app flow. See [Navigation](https://docs.jigx.com/navigation) for more information.
 
-## Configuration option
+### Configuration option
 
 A go-to action can be set up in various ways:
 
@@ -13,38 +13,35 @@ A go-to action can be set up in various ways:
 5. Use the `go-to` to open a jig as a modal using the `isModal` property set to `true`. Set to `false` opens navigates to the specified jig.
 6. Use the `behaviour` property to determine if you want to push the jig into the history of navigation, by using the `new` value, or reuse the one you already have in history by using the `existing` value.
 
-## Considerations
+### Considerations
 
-- Current known limitations when using the `isModal` property include:
-  - Unable to send a value from the jig modal to the parent jig.
-    - Depending on the device used different behavior can be expected, such as the jig will slide from the bottom to top, but the entire screen will be covered. This applies to:
-      - On any Android device (phones and tablets).
-      - On an iPad in landscape mode:
+* Current known limitations when using the `isModal` property include:
+  * Unable to send a value from the jig modal to the parent jig.
+    * Depending on the device used different behavior can be expected, such as the jig will slide from the bottom to top, but the entire screen will be covered. This applies to:
+      * On any Android device (phones and tablets).
+      * On an iPad in landscape mode:
         1. When the drawer is open, it will only open in the jig panel.
         2. When the drawer is closed, it will cover the entire screen, but it will not display as a modal.
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### go-to as an action
+#### go-to as an action
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MFStH4Yrw_PUJ4y5tc7Cj-20250225-070717.png" size="80" position="center" caption="go-to action" alt="go-to action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MFStH4Yrw_PUJ4y5tc7Cj-20250225-070717.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MFStH4Yrw\_PUJ4y5tc7Cj-20250225-070717.png" size="80" position="center" caption="go-to action" alt="go-to action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MFStH4Yrw\_PUJ4y5tc7Cj-20250225-070717.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 The simplest example of using a go-to action is to use it as a separate action. When configured, a button will appear at the bottom, redirecting us to the details page when pressed.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-action/go-to-action.jigx).
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-action/go-to-action.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-action/go-to-action-dynamic.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-go-to
-
+{% code title="go-to" %}
 ```yaml
 actions:
   - children:
@@ -53,33 +50,26 @@ actions:
           title: Go to
           linkTo: default-employee-detail
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### go-to swipeable left/right
+#### go-to swipeable left/right
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![go-to with swipeable](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-94FRrFAw2MmmyUYjMB80f-20250225-071002.png "go-to with swipeable")
-:::
+{% columns %}
+{% column %}
+&#x20;![go-to with swipeable](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-94FRrFAw2MmmyUYjMB80f-20250225-071002.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example uses the go-to action as a swipeable property. We can choose the swipe direction left or right. After pressing the button, it will redirect to the details of the person.
 
-\*\*Examples left:
-\*\*See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-swipeable/go-to-swipeable-left.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-swipeable/go-to-left-dynamic.jigx).
+**Examples left:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-swipeable/go-to-swipeable-left.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-swipeable/go-to-left-dynamic.jigx).
 
-**Examples right:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-swipeable/go-to-swipeable-right.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-swipeable/go-to-right-dynamic.jigx).
-:::
-::::
+**Examples right:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-swipeable/go-to-swipeable-right.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-swipeable/go-to-right-dynamic.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-left
-
+{% tabs %}
+{% tab title="left" %}
 ```yaml
 item:
   type: component.list-item
@@ -98,9 +88,9 @@ item:
         options:
           linkTo: default-employee-detail
 ```
+{% endtab %}
 
-right
-
+{% tab title="right" %}
 ```yaml
 item:
   type: component.list-item
@@ -120,29 +110,26 @@ item:
             options:
               linkTo: default-employee-detail
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### go-to right button element
+#### go-to right button element
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TVkSZkXqMnIyfLztOYUmk-20250225-071246.png" size="80" position="center" caption="go-to button" alt="go-to button" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TVkSZkXqMnIyfLztOYUmk-20250225-071246.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TVkSZkXqMnIyfLztOYUmk-20250225-071246.png" size="80" position="center" caption="go-to button" alt="go-to button" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TVkSZkXqMnIyfLztOYUmk-20250225-071246.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, we use the go-to action as the rightElement in the list-item component. There is a button for each item.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-right-element/go-to-right-element.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-right-element/go-to-right-element-dynamic.jigx).
-:::
-::::
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-right-element/go-to-right-element.jigx). \
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-right-element/go-to-right-element-dynamic.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-go-to-rightElement.jigx
-
+{% code title="go-to-rightElement.jigx" %}
 ```yaml
 item:
   type: component.list-item
@@ -161,28 +148,24 @@ item:
         options:
           linkTo: default-employee-detail
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### go-to onSuccess
+#### go-to onSuccess
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-o3gCYRbZdD4iyLoJ-oCNJ-20250225-071422.png" size="82" position="center" caption="Go to onSuccess" alt="go-to onSuccess" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-o3gCYRbZdD4iyLoJ-oCNJ-20250225-071422.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-o3gCYRbZdD4iyLoJ-oCNJ-20250225-071422.png" size="82" position="center" caption="Go to onSuccess" alt="go-to onSuccess" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-o3gCYRbZdD4iyLoJ-oCNJ-20250225-071422.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, the go-back action is associated with the submit-form action. After we enter the signature and press the "Sign" button, the submit-form action is performed and then the go-to action redirects us to the next page.
 
-**Examples:**
+**Examples:** \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-on-success/go-to-on-success.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-go-to-onSuccess.jigx
-
+{% code title="go-to-onSuccess.jigx" %}
 ```yaml
 actions:
   - children:
@@ -207,28 +190,25 @@ actions:
                         linkTo: default-employee-detail
             - type: action.go-back
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### go-to open a jig as a modal
+#### go-to open a jig as a modal
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 In this example, we use the `go-to` action as the `rightElement` in the `list-item` component. There is a button for each item. When tapped the `go-to` will open the jig as a modal when the `isModal` property is set to `true`.
 
-**Examples:**
+**Examples:** \
 See the full example using dynamic data in GitHub.
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-![Open jig in a modal](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-j3LEPMTcK3_9xbDHC3dKC-20250225-080141.png "Open jig in a modal")
-:::
-::::
+{% column %}
+&#x20;![Open jig in a modal](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-j3LEPMTcK3_9xbDHC3dKC-20250225-080141.png)
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-go-to-ismodal.jigx
-
+{% tabs %}
+{% tab title="go-to-ismodal.jigx" %}
 ```yaml
 title: Go To action
 type: jig.list
@@ -254,9 +234,9 @@ item:
           isModal: true
           linkTo: default-employee-detail
 ```
+{% endtab %}
 
-default-employee-detail.jigx
-
+{% tab title="default-employee-detail.jigx" %}
 ```yaml
 title: Employee detail
 type: jig.default
@@ -349,9 +329,9 @@ children:
           series:
             - data: =@ctx.current.item.data
 ```
+{% endtab %}
 
-employees-dynamic.jigx
-
+{% tab title="employees-dynamic.jigx" %}
 ```yaml
 type: datasource.sqlite
 options:
@@ -376,9 +356,9 @@ options:
     FROM [default/employees] 
     WHERE '$.category' = "employees" ORDER BY '$.firstname' ASC
 ```
+{% endtab %}
 
-quartal.jigx
-
+{% tab title="quartal.jigx" %}
 ```yaml
 type: datasource.static
 options:
@@ -412,27 +392,25 @@ options:
         - y: 100
           color: transparent
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### go-to using new & existing behaviour
+#### go-to using new & existing behaviour
 
 In this example, three jigs are configured to create a stack of data for each guest, including their Name, Age, and Address. Each jig's `go-to` action is set with the `behaviour` property as `new`, enabling new guest details to be pushed into the app history. In the final jig, a secondary `go-to` action is added. This action introduces a button to review each guest's data by setting the `behaviour` property to `existing` and linking to the first jig in the stack via the `linkTo` property. The review process will cycle through each guest's details in the stack before completing.
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07_99i4UGP-20250225-083249.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07_99i4UGP-20250225-083249.gif" size="60" position="center" caption="Go-to new guest" alt="Go-to new guest " width="681" height="1377" darkWidth="681" darkHeight="1377"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07\_99i4UGP-20250225-083249.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07\_99i4UGP-20250225-083249.gif" size="60" position="center" caption="Go-to new guest" alt="Go-to new guest " width="681" height="1377" darkWidth="681" darkHeight="1377"}
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc_azd0-20250225-083738.gif" size="60" position="center" caption="Review guests" alt="Review guests" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc_azd0-20250225-083738.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc\_azd0-20250225-083738.gif" size="60" position="center" caption="Review guests" alt="Review guests" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc\_azd0-20250225-083738.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-jig-a.jigx
-
+{% tabs %}
+{% tab title="jig-a.jigx" %}
 ```yaml
 title: Name
 type: jig.default
@@ -490,9 +468,9 @@ actions:
                 # Configure which jig must open next.
                 linkTo: jig-b
 ```
+{% endtab %}
 
-jig-b.jigx
-
+{% tab title="jig-b.jigx" %}
 ```yaml
 title: Age
 type: jig.default
@@ -551,9 +529,9 @@ actions:
                 # Configure which jig must open next in the stack.
                 linkTo: jig-c
 ```
+{% endtab %}
 
-jig-c.jigx
-
+{% tab title="jig-c.jigx" %}
 ```yaml
 title: Address
 type: jig.default
@@ -617,6 +595,5 @@ actions:
           # for each stack captured.
           linkTo: jig-a
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

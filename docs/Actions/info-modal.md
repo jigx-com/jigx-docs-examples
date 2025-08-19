@@ -2,157 +2,47 @@
 
 The info-modal is a pop-up window that provides additional information or context without navigating away from the current screen. It is used to display additional information and offer guidance or instructions. The modal appears as a temporary overlay on top of the current screen, dimming the background to focus your attention on the modal content. The Info-modal includes interactive elements like buttons, images, icons, or links.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GT3z8bVI4Thn1WDWMkgPB_cc-infom-intro.png" size="86" position="center" caption="Info-modal" alt="Info-modal" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GT3z8bVI4Thn1WDWMkgPB_cc-infom-intro.png" width="800" height="538" darkWidth="800" darkHeight="538"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GT3z8bVI4Thn1WDWMkgPB\_cc-infom-intro.png" size="86" position="center" caption="Info-modal" alt="Info-modal" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GT3z8bVI4Thn1WDWMkgPB\_cc-infom-intro.png" width="800" height="538" darkWidth="800" darkHeight="538"}
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](info-modal.md) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="134">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>modal</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Modal contains the properties that will determine the button and content in the modal.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>instanceId</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The unique identifier for the info-modal that can be referenced in other jigs.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>title</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Provide a short title for display at the top of the info-modal. You can use text, an expression or a datasource to set the title.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="166.40234375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>modal</code></td><td>Modal contains the properties that will determine the button and content in the modal.</td></tr><tr><td><code>instanceId</code></td><td>The unique identifier for the info-modal that can be referenced in other jigs.</td></tr><tr><td><code>title</code></td><td>Provide a short title for display at the top of the info-modal. You can use text, an expression or a datasource to set the title.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="136">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>buttonText</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Give the button a label by providing short text. The button displays as a link. If an action like <code>onConfirm</code> is configured the button displays as a button.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>description</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Provide the text description or instructions for the user to follow. This creates the content in the info-modal. You can use text, an expression or a datasource. This can have multiple lines.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>element</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The following elements can be added to the modal:
-      - <code>type</code> - Specify either an <code>icon</code>, <code>image</code>, <code>avatar</code>.
-      - When <code>image</code> is specified a <code>uri</code> is required.
-      - Use <code>color</code> to change the <code>icon</code> color, available colors are positive, negative, primary, warning. The default color is primary if no color is specificed.
-      - When using an <code>avatar</code> you can specifiy <code>text</code> or use a <code>uri</code> to show in the avatar.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>icon</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add an icon to the info-modal, for example a dollar icon. The icon apprears on the center of the modal.  A list of icons are available. See  for more information. This property relates to the action button at the bottom of the screen.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isHidden</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>When set to <code>true</code> the info-modal (button at the bottom of the screen) is hidden on a jig.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="163.86328125">Other options</th><th></th></tr></thead><tbody><tr><td><code>buttonText</code></td><td>Give the button a label by providing short text. The button displays as a link. If an action like <code>onConfirm</code> is configured the button displays as a button.</td></tr><tr><td><code>description</code></td><td>Provide the text description or instructions for the user to follow. This creates the content in the info-modal. You can use text, an expression or a datasource. This can have multiple lines.</td></tr><tr><td><code>element</code></td><td>The following elements can be added to the modal: - <code>type</code> - Specify either an <code>icon</code>, <code>image</code>, <code>avatar</code>. - When <code>image</code> is specified a <code>uri</code> is required. - Use <code>color</code> to change the <code>icon</code> color, available colors are positive, negative, primary, warning. The default color is primary if no color is specificed. - When using an <code>avatar</code> you can specifiy <code>text</code> or use a <code>uri</code> to show in the avatar.</td></tr><tr><td><code>icon</code></td><td>Add an icon to the info-modal, for example a dollar icon. The icon apprears on the center of the modal. A list of icons are available. See for more information. This property relates to the action button at the bottom of the screen.</td></tr><tr><td><code>isHidden</code></td><td>When set to <code>true</code> the info-modal (button at the bottom of the screen) is hidden on a jig.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="133">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Actions</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onConfirmed</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The action is triggered when the button is pressed. Use IntelliSense to see the list of available actions.
-      Action to execute when the info-modal button is pressed. </p>
-      <ul>
-      <li>If the action is not defined, the info-modal will be closed.</li>
-      <li>If defined, the info-modal closes after the action is executed.</li>
-      <li>The button will have primary action style.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="159.22265625">Actions</th><th></th></tr></thead><tbody><tr><td><code>onConfirmed</code></td><td><p>The action is triggered when the button is pressed. Use IntelliSense to see the list of available actions. Action to execute when the info-modal button is pressed.</p><ul><li>If the action is not defined, the info-modal will be closed.</li><li>If defined, the info-modal closes after the action is executed.</li><li>The button will have primary action style.</li></ul></td></tr></tbody></table>
 
-## Considerations
+### Considerations
 
-- The info-modal only has one action (button).
-- If the action on the button is not defined, the info-modal closes automatically and no action is performed.
-- Expressions can be used in the info-modal properties to provide the required values.
-- The info-modal can be used in the `onFocus`, `onRefresh`, and `onPress` events.
-- The info-modal is available in the default, composite, list and document jigs.
-- An info-modal action can be used in an action-list.
-- A jig can have multiple info-modals configured.
-- In the info-modal the `buttonText` displays as a link, if the `onConfirmed` event is added the link visually changes to a button.
-- Consider the [confirm](./confirm.md) action, which also provides a modal with two buttons, allowing you to cancel or proceed.
+* The info-modal only has one action (button).
+* If the action on the button is not defined, the info-modal closes automatically and no action is performed.
+* Expressions can be used in the info-modal properties to provide the required values.
+* The info-modal can be used in the `onFocus`, `onRefresh`, and `onPress` events.
+* The info-modal is available in the default, composite, list and document jigs.
+* An info-modal action can be used in an action-list.
+* A jig can have multiple info-modals configured.
+* In the info-modal the `buttonText` displays as a link, if the `onConfirmed` event is added the link visually changes to a button.
+* Consider the [confirm](confirm.md) action, which also provides a modal with two buttons, allowing you to cancel or proceed.
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### info-modal with avatar
+#### info-modal with avatar
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-In this example, the info-modal is configured on an action. When the button is pressed the info-modal opens and displays an avatar. The avatar `uri` property is used to set the avatar image. The `buttonText` is configured to close the info-modal.
+{% columns %}
+{% column %}
+&#x20;In this example, the info-modal is configured on an action. When the button is pressed the info-modal opens and displays an avatar. The avatar `uri` property is used to set the avatar image. The `buttonText` is configured to close the info-modal.
 
-**Example:**
-See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-avatar.jigx).
-:::
+**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-avatar.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VJwrxIQhnivZs1hnS-Glo_cc-infom-avatar.PNG" size="70" position="center" caption="Info-modal with avatar" alt="Info-modal with avatar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VJwrxIQhnivZs1hnS-Glo_cc-infom-avatar.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VJwrxIQhnivZs1hnS-Glo\_cc-infom-avatar.PNG" size="70" position="center" caption="Info-modal with avatar" alt="Info-modal with avatar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VJwrxIQhnivZs1hnS-Glo\_cc-infom-avatar.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-info-modal-avatar.jigx
-
+{% code title="info-modal-avatar.jigx" %}
 ```yaml
 title: info-modal - avatar
 description: Tap the button to view the info-modal
@@ -191,28 +81,23 @@ actions:
               text: AV
               uri: https://images.unsplash.com/photo-1546961329-78bef0414d7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### info-modal with icon
+#### info-modal with icon
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nHMaSdrD4gXN3E5WClJKO_cc-infom-icon.PNG" size="70" position="center" caption="Info-modal with icon" alt="Info-modal with icon" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nHMaSdrD4gXN3E5WClJKO_cc-infom-icon.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nHMaSdrD4gXN3E5WClJKO\_cc-infom-icon.PNG" size="70" position="center" caption="Info-modal with icon" alt="Info-modal with icon" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nHMaSdrD4gXN3E5WClJKO\_cc-infom-icon.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, the info-modal is configured on an action. When the button is pressed the info-modal opens and displays a location icon. The `color` property is set to use the primary color. The `buttonText` is configured to close the info-modal.
 
-**Example:**
-See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-icon.jigx).
-:::
-::::
+**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-icon.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-info-modal-icon.jigx
-
+{% code title="info-modal-icon.jigx" %}
 ```yaml
 title: info-modal with icon
 description: Tap the button to view the info-modal
@@ -252,28 +137,23 @@ actions:
               icon: maps-pin
               color: primary
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### info-modal with image
+#### info-modal with image
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7FLQDKXDKA4e1UCDKLEcx_cc-infom-image.PNG" size="70" position="center" caption="Info-modal with an image" alt="Info-modal with an image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7FLQDKXDKA4e1UCDKLEcx_cc-infom-image.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7FLQDKXDKA4e1UCDKLEcx\_cc-infom-image.PNG" size="70" position="center" caption="Info-modal with an image" alt="Info-modal with an image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7FLQDKXDKA4e1UCDKLEcx\_cc-infom-image.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 Tapping on the action button opens the info-modal showing an image of Thialand. The image property uses `resizeMode` ensuring it is contained in the modal. The `buttonText` allows you to close the modal.
 
-**Example:**
-See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-image.jigx).
-:::
-::::
+**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-image.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-info-modal-image.jigx
-
+{% code title="info-modal-image.jigx" %}
 ```yaml
 title: info-modal with image
 description: Tap the button to view the info-modal
@@ -312,27 +192,23 @@ actions:
               resizeMode: contain
               uri: https://images.unsplash.com/photo-1502085671122-2d218cd434e6?q=80&w=1226&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ```
-:::
-:::::
+{% endcode %}
 
-::::ExpandableHeading
-### info-modal in calendar jig
+#### info-modal in calendar jig
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42pa6T1c-ZmK3uaq-Fb-Y_cc-infom-calendar.PNG" size="90" position="center" caption="Info-modal in a calendar jig" alt="Info-modal in a calendar jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42pa6T1c-ZmK3uaq-Fb-Y_cc-infom-calendar.PNG" width="800" height="389" darkWidth="800" darkHeight="389"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42pa6T1c-ZmK3uaq-Fb-Y\_cc-infom-calendar.PNG" size="90" position="center" caption="Info-modal in a calendar jig" alt="Info-modal in a calendar jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42pa6T1c-ZmK3uaq-Fb-Y\_cc-infom-calendar.PNG" width="800" height="389" darkWidth="800" darkHeight="389"}
 
 In this example the info-modal is used four places in the jig:
 
 1. In the `onFocus` event to show what type of calendar it is. The info-modal uses the `element` type `image`. The `buttonText` closes the info-modal.
 2. In the `onRefresh` event to notify the user that the calendar is refreshing. The info-modal uses the `title`, and the `buttonText` closes the info-modal.
 3. In the `action` to allow the info-modal to inform users that events are subject to change, the `element` uses type `icon` with a `color: negative`.
-4. In the `onPress` event to show informaton about the event that has been pressed. The info-modal's `description` property provides a text message to users, the `avatar: uri` provides an image  and the `buttonText` allows you close the info-modal.
+4. In the `onPress` event to show informaton about the event that has been pressed. The info-modal's `description` property provides a text message to users, the `avatar: uri` provides an image and the `buttonText` allows you close the info-modal.
 
-**Example:**
-See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-calendar.jigx).
+**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-calendar.jigx).
 
-:::CodeblockTabs
-info-modal-calendar.jigx
-
+{% tabs %}
+{% tab title="info-modal-calendar.jigx" %}
 ```yaml
 title: Info Modal in a Calendar
 type: jig.calendar
@@ -389,9 +265,9 @@ item:
               text: CD
               uri: https://cdn1.iconfinder.com/data/icons/managers-15/488/Untitled-5-512.png
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   story:
@@ -411,28 +287,25 @@ datasources:
           to: $fromMillis($toMillis($now()) + 7200000 + 3600000)
           active: false
 ```
-:::
-::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### info-modal in default jig
+#### info-modal in default jig
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T_RsT3Q_vvFf2sJUSbFr4_cc-infom-default.PNG" size="70" position="center" caption="Info-modal on a default jig" alt="Info-modal on a default jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T_RsT3Q_vvFf2sJUSbFr4_cc-infom-default.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T\_RsT3Q\_vvFf2sJUSbFr4\_cc-infom-default.PNG" size="70" position="center" caption="Info-modal on a default jig" alt="Info-modal on a default jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T\_RsT3Q\_vvFf2sJUSbFr4\_cc-infom-default.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows the info-modal when the Submit action button is pressed. The `icon` element property is used with `color: warning`. The description property provides the text content, and the `buttonText` is used for the text on the button. An `onConfirm` event is used to add a `go-back` action to the button. Notice how the button has visually changed from a link to a button. You can add an `action-list` to the `onConfirm` and add an `execute-entity` to submit the data from the form to the data store.
 
-**Example:**
-See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-default.jigx).
-:::
-::::
+**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-default.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-info-modal-default.jigx
-
+{% tabs %}
+{% tab title="info-modal-default.jigx" %}
 ```yaml
 title: Info modal on a default jig
 type: jig.default
@@ -528,9 +401,9 @@ children:
                   initialValue: =@ctx.datasources.employee-detail-dynamic[0].employee-startWork
                   label: Date of starting work
 ```
+{% endtab %}
 
-employee-detail-dynamic.jigx
-
+{% tab title="employee-detail-dynamic.jigx" %}
 ```yaml
 type: datasource.sqlite
 options:
@@ -558,13 +431,12 @@ options:
     FROM [default/employees] 
     WHERE '$.category' = "employee-detail"
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-::::ExpandableHeading
-### info-modal in list jig
+#### info-modal in list jig
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gCf59HwaD_adrk5tU5b_z_cc-infom-list2.PNG" size="80" position="center" caption="Info-modal in a list jig" alt="Info-modal in a list jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gCf59HwaD_adrk5tU5b_z_cc-infom-list2.PNG" width="800" height="538" darkWidth="800" darkHeight="538"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gCf59HwaD\_adrk5tU5b\_z\_cc-infom-list2.PNG" size="80" position="center" caption="Info-modal in a list jig" alt="Info-modal in a list jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gCf59HwaD\_adrk5tU5b\_z\_cc-infom-list2.PNG" width="800" height="538" darkWidth="800" darkHeight="538"}
 
 In this example the info-modal is used three places in the jig:
 
@@ -572,12 +444,10 @@ In this example the info-modal is used three places in the jig:
 2. In the `action` to allow the info-modal to show a message regarding sales information with an element type of `image`, the `buttonText` allows you to go back to the list.
 3. In a `swipeable: left` event to show the customer's details. The info-modal's `description` property provides a text message to users, the `avatar: uri` provides an `avatar` with `text` and the `buttonText` allows you close the info-modal. The `description` containing the info-modal content uses an expression to add content from a datasource.
 
-**Example:**
-See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-list.jigx).
+**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-list.jigx).
 
-:::CodeblockTabs
-info-modal-list.jigx
-
+{% tabs %}
+{% tab title="info-modal-list.jigx" %}
 ```yaml
 title: Info Modal in a list jig
 type: jig.list
@@ -651,9 +521,9 @@ actions:
             description: Customer and sales information is subject to change frequently  
             buttonText: Go back
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   components:
@@ -772,13 +642,12 @@ datasources:
         reason:   
         badge: off
 ```
-:::
-::::
+{% endtab %}
+{% endtabs %}
 
-::::ExpandableHeading
-### info-modal in onPress action on a widget
+#### info-modal in onPress action on a widget
 
-![Info-modal on widget](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x16UEinXJlMDbA6LAMVXp_cc-infom-widget.png "Info-modal on widget")
+![Info-modal on widget](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x16UEinXJlMDbA6LAMVXp_cc-infom-widget.png)
 
 In this example the info-modal is added to the `onPress` event of the widgets.
 
@@ -787,12 +656,10 @@ In this example the info-modal is added to the `onPress` event of the widgets.
 3. Third widget uses an `image`, `title`, `buttonText` and `onConfirmed` event to open a url.
 4. The fourth widget uses a `title`, `buttonText` and `description`. The `buttonText` closes the modal.
 
-**Example:**
-See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-widget.jigx).
+**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-widget.jigx).
 
-:::CodeblockTabs
-info-modal-widget.jigx
-
+{% tabs %}
+{% tab title="info-modal-widget.jigx" %}
 ```yaml
 # Main wellness week landing screen configuration.
 title: Wellness Week
@@ -909,9 +776,9 @@ children:
                       buttonText: Go Back    
                       description: At our wellness center, we are dedicated to nurturing your mind, body, and spirit through holistic and personalized care
 ```
+{% endtab %}
 
-info-modal-placeholder.jigx
-
+{% tab title="info-modal-placeholder.jigx" %}
 ```yaml
 title: ' '
 
@@ -936,6 +803,5 @@ children:
             label: Placeholder
             value: Placeholder
 ```
-:::
-::::
-
+{% endtab %}
+{% endtabs %}

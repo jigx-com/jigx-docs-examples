@@ -3,10 +3,6 @@ title: go-back
 slug: LX00-go-back
 createdAt: Thu Jun 09 2022 18:22:53 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Nov 04 2024 09:47:02 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to use the go-back action in Jigx to enable users to easily navigate
-  back to the previous page. This comprehensive document covers multiple setup
-  options, including separate action, swipeabl
 ---
 
 # go-back
@@ -22,24 +18,30 @@ A go-back action can be set up in various ways:
 3. As rightElement in the list
 4. As an associated action in the action list
 
-:::hint{type="info"} A go-back action associated with another action under onSuccess can only be used with dynamic data. :::
+{% hint style="info" %}
+A go-back action associated with another action under onSuccess can only be used with dynamic data.
+{% endhint %}
 
 ### Examples and code snippets
 
-:::::ExpandableHeading
-
 #### go-back as an action
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1BxcmGrBKayAJDjL1mdFT\_qfq8vyqssxkg7hk1329ugo-backiphone13blueportrait.png" size="80" position="center" caption="go-back as an action" alt="go-back as an action"} :::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1BxcmGrBKayAJDjL1mdFT\_qfq8vyqssxkg7hk1329ugo-backiphone13blueportrait.png" size="80" position="center" caption="go-back as an action" alt="go-back as an action"}
+{% endcolumn %}
 
-:::VerticalSplitItem The simplest example of a go-back action is to use it as a separate action. When configured, a button will appear at the bottom which will return us to the previous page when pressed. In this case, the use of the function is unnecessary because as we can see in the screenshot there is an arrow to the left in the upper left corner. This means that this jig already has a go-back action automatically in it and the arrow has the same function as the "Go back" button below.
+{% column %}
+The simplest example of a go-back action is to use it as a separate action. When configured, a button will appear at the bottom which will return us to the previous page when pressed. In this case, the use of the function is unnecessary because as we can see in the screenshot there is an arrow to the left in the upper left corner. This means that this jig already has a go-back action automatically in it and the arrow has the same function as the "Go back" button below.
 
 **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-action/go-back-action.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-action/go-back-action-dynamic.jigx). ::: ::::
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-action/go-back-action.jigx). \
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-action/go-back-action-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs go-back-action.jigx
-
+{% code title="go-back-action.jigx" %}
 ```yaml
 actions:
   - children:
@@ -47,23 +49,26 @@ actions:
         options:
           title: Go back
 ```
-
-::: :::::
-
-:::::ExpandableHeading
+{% endcode %}
 
 #### go-back swipeable left/right
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wHC\_QgeGKS4eLonetgUDH\_c-t3oukoehdqalzuaazzcgo-back-swipeableiphone13blueportrait.png" size="80" position="center" caption="swipeable go-back " alt="swipeable go-back "} :::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wHC\_QgeGKS4eLonetgUDH\_c-t3oukoehdqalzuaazzcgo-back-swipeableiphone13blueportrait.png" size="80" position="center" caption="swipeable go-back " alt="swipeable go-back "}
+{% endcolumn %}
 
-:::VerticalSplitItem This example uses the go-back action as a swipeable property. We can choose the swipe direction left or right. After pressing the button, we return to the previous page.
+{% column %}
+This example uses the go-back action as a swipeable property. We can choose the swipe direction left or right. After pressing the button, we return to the previous page.
 
 **Examples left:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-swipeable/go-back-swipeable-left.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-swipeable/go-back-left-dynamic.jigx).
 
-**Examples right:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-swipeable/go-back-swipeable-right.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-swipeable/go-back-right-dynamic.jigx). ::: ::::
+**Examples right:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-swipeable/go-back-swipeable-right.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-swipeable/go-back-right-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs left
-
+{% tabs %}
+{% tab title="left" %}
 ```yaml
 swipeable:
     left:
@@ -73,9 +78,9 @@ swipeable:
             type: action.go-back
             
 ```
+{% endtab %}
 
-right
-
+{% tab title="right" %}
 ```yaml
 swipeable:
     right:
@@ -84,21 +89,26 @@ swipeable:
           onPress: 
             type: action.go-back
 ```
-
-::: :::::
-
-:::::ExpandableHeading
+{% endtab %}
+{% endtabs %}
 
 #### go-back rightElement
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/f59eQfajBmOoVwstlCTxe\_8n2xgcq2o-rtnrp7hgdmwgo-back-rightelementiphone13blueportrait.png" size="80" position="center" caption="rightElement go-back " alt="rightElement go-back "} :::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/f59eQfajBmOoVwstlCTxe\_8n2xgcq2o-rtnrp7hgdmwgo-back-rightelementiphone13blueportrait.png" size="80" position="center" caption="rightElement go-back " alt="rightElement go-back "}
+{% endcolumn %}
 
-:::VerticalSplitItem In this example, we use the go-back action as the rightElement in the list-item component. There is a button for each item.
+{% column %}
+In this example, we use the go-back action as the rightElement in the list-item component. There is a button for each item.
 
-**Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-right-element/go-back-right-element.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-right-element/go-back-right-element-dynamic.jigx) ::: ::::
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-right-element/go-back-right-element.jigx). \
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-right-element/go-back-right-element-dynamic.jigx)
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs goback-right-element
-
+{% code title="goback-right-element" %}
 ```yaml
 rightElement: 
       element: button
@@ -106,23 +116,24 @@ rightElement:
       onPress:
         type: action.go-back
 ```
-
-::: :::::
-
-:::::ExpandableHeading
+{% endcode %}
 
 #### go-back-on-success
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem In this example, we use the `action.go-back` with `onSuccess` to take you back to the main list after signing a form.
+{% columns %}
+{% column %}
+In this example, we use the `action.go-back` with `onSuccess` to take you back to the main list after signing a form.
 
-**Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-on-success/go-back-on-success.jigx).
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-on-success/go-back-on-success.jigx).
+{% endcolumn %}
 
-:::
+{% column %}
+mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IHyr3vBgqg8v34h9wMu2E\_go-back-onsucces.PNG" size="80" position="center" caption="go-back onSuccess" alt="go-back onSuccess"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IHyr3vBgqg8v34h9wMu2E\_go-back-onsucces.PNG" size="80" position="center" caption="go-back onSuccess" alt="go-back onSuccess"} ::: ::::
-
-:::CodeblockTabs go-back-on-success
-
+{% code title="go-back-on-success" %}
 ```yaml
 title: Signature
 type: jig.default
@@ -165,5 +176,4 @@ children:
           options:
             label: Signature required         
 ```
-
-::: :::::
+{% endcode %}

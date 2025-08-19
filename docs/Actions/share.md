@@ -1,55 +1,46 @@
 # share
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-Easily share your files directly from the app with just a tap. Whether it's a document, image, or report, the share action lets you quickly send files via apps on the device, such as email, messaging apps, or AirDrop.
-:::
+{% columns %}
+{% column %}
+Easily share your files directly from the app with just a tap. Whether it's a document, image, or report, the share action lets you quickly send files via apps on the device, such as email, messaging apps, or AirDrop.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" size="80" position="center" caption="Share images" alt="Share images" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" width="800" height="794" darkWidth="800" darkHeight="794"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" size="80" position="center" caption="Share images" alt="Share images" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" width="800" height="794" darkWidth="800" darkHeight="794"}
+{% endcolumn %}
+{% endcolumns %}
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](share.md) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `email`            | Provide an email address, this optional property allows a string or expression. &#xA;It is used to set the To address if sharing with email.&#xA;If an email is supplied the share action will automatically open up the default email app on the phone to compose and fill in the supplied details.&#xA;If email is not supplied, you will be able to share via other methods or apps.&#xA;For iOS you can only supply a single email address. If you supply more, the To field will be left blank. This is not an issue on Android but for consistency it is best to keep to one email address. |
-| `fileUri`          | Provide the uri for the file you want to share, either from a datasource, in an expression, or from an action, such as the `action.generate-pdf`. You can reference the PDF or the local uri of the PDF document using the action's output uri `=@ctx.actions.generatePDF.outputs.uri`. &#xA;The `fileUri` needs to be the full uri of the local file.                                                                                                                                                                                                                                            |
-| `message`          | Add a text message to send with the shared file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `subject`          | Add a subject when sharing the file. The subject will only appear in apps that support a subject property, such as email.                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `title`            | Provide the action button with a title, for example, Share file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+<table><thead><tr><th width="151.31640625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>email</code></td><td>Provide an email address, this optional property allows a string or expression. It is used to set the To address if sharing with email. If an email is supplied the share action will automatically open up the default email app on the phone to compose and fill in the supplied details. If email is not supplied, you will be able to share via other methods or apps. For iOS you can only supply a single email address. If you supply more, the To field will be left blank. This is not an issue on Android but for consistency it is best to keep to one email address.</td></tr><tr><td><code>fileUri</code></td><td>Provide the uri for the file you want to share, either from a datasource, in an expression, or from an action, such as the <code>action.generate-pdf</code>. You can reference the PDF or the local uri of the PDF document using the action's output uri <code>=@ctx.actions.generatePDF.outputs.uri</code>. The <code>fileUri</code> needs to be the full uri of the local file.</td></tr><tr><td><code>message</code></td><td>Add a text message to send with the shared file.</td></tr><tr><td><code>subject</code></td><td>Add a subject when sharing the file. The subject will only appear in apps that support a subject property, such as email.</td></tr><tr><td><code>title</code></td><td>Provide the action button with a title, for example, Share file.</td></tr></tbody></table>
 
-## Considerations
+### Considerations
 
-- All properties are optional but you need to at least supply a `message` or `fileUri`.
-- You can select from the apps or methods available on your device for sharing.
-- This means you can share a piece of text without a file.
-- You can also share one or more files. If there is more than one file it needs to evaluate to a string array.
-- For best results, share files that are stored locally (e.g., images or PDFs). Files stored in a datasource as base64, data URI, or buffers will be returned as unreadable binary (.bin) files.
+* All properties are optional but you need to at least supply a `message` or `fileUri`.
+* You can select from the apps or methods available on your device for sharing.
+* This means you can share a piece of text without a file.
+* You can also share one or more files. If there is more than one file it needs to evaluate to a string array.
+* For best results, share files that are stored locally (e.g., images or PDFs). Files stored in a datasource as base64, data URI, or buffers will be returned as unreadable binary (.bin) files.
 
-## Examples and code snippets
+### Examples and code snippets
 
-### Share images
+#### Share images
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" size="88" position="center" caption="Share images" alt="Share images" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" width="800" height="794" darkWidth="800" darkHeight="794"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" size="88" position="center" caption="Share images" alt="Share images" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" width="800" height="794" darkWidth="800" darkHeight="794"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, a foreman takes multiple images of the job and saves the images to Dynamic Data. When the images are successfully saved the images are shared via the devices message sharing apps.
 
-**Example:**&#x20;
-See the full code sample in GitHub.
-:::
-::::
+**Example:** See the full code sample in GitHub.
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-action-share-images.jigx
-
+{% code title="action-share-images.jigx" %}
 ```yaml
 title: Site Inspection
 type: jig.default
@@ -108,26 +99,24 @@ actions:
                     fileUri: =@ctx.components.site-photos.state.value     
 
 ```
-:::
+{% endcode %}
 
-### Generate a pdf,  save and share&#x20;
+#### Generate a pdf, save and share
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-In this example, an action list contains three actions: the first generates a PDF for an invoice, the second saves it to the database, and the third shares the PDF via a messaging app on the device.  The file is saved to dynamic files.
+{% columns %}
+{% column %}
+In this example, an action list contains three actions: the first generates a PDF for an invoice, the second saves it to the database, and the third shares the PDF via a messaging app on the device. The file is saved to dynamic files.
 
-**Example:**&#x20;
-See the full code sample in GitHub.
-:::
+**Example:** See the full code sample in GitHub.
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" size="70" position="center" caption="PDF generated, saved & shared" alt="PDF generated, saved & shared" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" size="70" position="center" caption="PDF generated, saved & shared" alt="PDF generated, saved & shared" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-action-share-pdf.jigx
-
+{% tabs %}
+{% tab title="action-share-pdf.jigx" %}
 ```yaml
 title: Monthly invoices
 description: Provide you details
@@ -210,9 +199,9 @@ actions:
                 # Subject appears only in apps that support it (e.g., email). 
                 subject: Invoice for January
 ```
+{% endtab %}
 
-invoice-HTML datasource
-
+{% tab title="invoice-HTML datasource" %}
 ```yaml
 type: datasource.static
 options:
@@ -358,30 +347,29 @@ options:
           </body>
           </html>
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-### Share by email&#x20;
+#### Share by email
 
-:::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![Share by email](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4SZKMO4JiYVgY4Y03Xeur-20250219-082629.png "Share by email")
-:::
+{% columns %}
+{% column %}
+&#x20;![Share by email](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4SZKMO4JiYVgY4Y03Xeur-20250219-082629.png)&#x20;
+{% endcolumn %}
 
-::::VerticalSplitItem
-In this example, we demonstrate using the `action.share` to send an `email` to a customer with an attachment. The `message`, `subject` and `email` (To) properties are configured as part of the action.&#x20;
+{% column %}
+In this example, we demonstrate using the `action.share` to send an `email` to a customer with an attachment. The `message`, `subject` and `email` (To) properties are configured as part of the action.
 
-**Example:**&#x20;
-See the full code sample in GitHub.
+**Example:** See the full code sample in GitHub.
+{% endcolumn %}
+{% endcolumns %}
 
-:::hint{type="info"}
-For best results, share files that are stored locally (e.g., images or PDFs). Files stored in a datasource as base64, data URI, or buffers will be returned as unreadable binary (.bin) files.
-:::
-::::
-:::::
+{% hint style="info" %}
+For best results, share files that are stored locally (e.g., images or PDFs). Files stored in a datasource as base64, data URI, or buffers will be returned as unreadable binary (.bin) files.&#x20;
+{% endhint %}
 
-:::CodeblockTabs
-action-share-email.jigx
-
+{% tabs %}
+{% tab title="action-share-email.jigx" %}
 ```yaml
 title: Global Invoice 
 type: jig.document
@@ -426,9 +414,9 @@ actions:
           # Provide a subject for the email's subject line.
           subject: Purchase order March 2025 
 ```
+{% endtab %}
 
-purchase-order-HTML datasource
-
+{% tab title="purchase-order-HTML datasource" %}
 ```yaml
 type: datasource.static
 options:
@@ -513,5 +501,5 @@ options:
             </body>
             </html>
 ```
-:::
-
+{% endtab %}
+{% endtabs %}

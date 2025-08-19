@@ -1,36 +1,40 @@
 # open-map
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem The open map action lets you tap the on-screen button to open your device's default map app (e.g., Google Maps, Apple Maps, or Waze) with the provided destination address. If multiple map apps are available, they will be listed for you to select one. :::
+{% columns %}
+{% column %}
+The open map action lets you tap the on-screen button to open your device's default map app (e.g., Google Maps, Apple Maps, or Waze) with the provided destination address. If multiple map apps are available, they will be listed for you to select one.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR\_gXAWqyOYxwwBly0Kx-20250217-110927.gif" size="66" position="center" caption="Open map action" alt="Open map action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR\_gXAWqyOYxwwBly0Kx-20250217-110927.gif" width="1080" height="2167" darkWidth="1080" darkHeight="2167"} ::: ::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR\_gXAWqyOYxwwBly0Kx-20250217-110927.gif" size="66" position="center" caption="Open map action" alt="Open map action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR\_gXAWqyOYxwwBly0Kx-20250217-110927.gif" width="1080" height="2167" darkWidth="1080" darkHeight="2167"}
+{% endcolumn %}
+{% endcolumns %}
 
-## Configuration options
+### Configuration options
 
 Some properties are common to all components, see [Common component properties](open-map.md) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `title`            | Provide the action with a title, for example, Navigate.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `address`          | <p>Address of location - geocode string address to location. Valid formats are:</p><ul><li><strong>address string - city, street</strong>, e.g. `address: 20 W 34th St., New York, NY 10001, USA or in an expression calling a datasource <code>=@ctx.datasources.address</code></li><li><strong>latitude and longitude</strong>, e.g. address: 40.759412, -73.912306`</li><li>DMS format</li><li><strong>latitude and longitude</strong>, e.g. address: latitude: 40.74860 longitude: "-73.98566"</li></ul> |
+<table><thead><tr><th width="151.94140625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Provide the action with a title, for example, Navigate.</td></tr><tr><td><code>address</code></td><td><p>Address of location - geocode string address to location. Valid formats are:</p><ul><li><strong>address string - city, street</strong>, e.g. `address: 20 W 34th St., New York, NY 10001, USA or in an expression calling a datasource <code>=@ctx.datasources.address</code></li><li><strong>latitude and longitude</strong>, e.g. address: 40.759412, -73.912306`</li><li>DMS format</li><li><strong>latitude and longitude</strong>, e.g. address: latitude: 40.74860 longitude: "-73.98566"</li></ul></td></tr></tbody></table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Select an to display when the action is configured as the secondary button or in a [header action](../Components/jig-header.md).                                                                                                                                                                                                                                                                                                                                                                                      |
-| `isHidden`        | `true` hides the action button, `false` shows the action button. Default setting is `false`.                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `styles`          | <p><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</p><ul><li><code>isDisabled</code> - Displays the action button as greyed out.</li><li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li><li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li></ul> |
+<table><thead><tr><th width="160.21484375">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>Select an to display when the action is configured as the secondary button or in a <a href="../Components/jig-header.md">header action</a>.</td></tr><tr><td><code>isHidden</code></td><td><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</td></tr><tr><td><code>styles</code></td><td><p><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</p><ul><li><code>isDisabled</code> - Displays the action button as greyed out.</li><li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li><li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li></ul></td></tr></tbody></table>
 
-## Examples and code snippets
+### Examples and code snippets
 
-### Open map action button
+#### Open map action button
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR\_gXAWqyOYxwwBly0Kx-20250217-110927.gif" size="66" position="center" caption="Open an address on a map" alt="Open an address on a map" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR\_gXAWqyOYxwwBly0Kx-20250217-110927.gif" width="1080" height="2167" darkWidth="1080" darkHeight="2167"} :::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR\_gXAWqyOYxwwBly0Kx-20250217-110927.gif" size="66" position="center" caption="Open an address on a map" alt="Open an address on a map" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR\_gXAWqyOYxwwBly0Kx-20250217-110927.gif" width="1080" height="2167" darkWidth="1080" darkHeight="2167"}
+{% endcolumn %}
 
-:::VerticalSplitItem In this example, a button at the bottom of the screen uses the `action.open-map` to open a modal listing the available map apps on the device. Select your preferred app to navigate to the specified address.
+{% column %}
+In this example, a button at the bottom of the screen uses the `action.open-map` to open a modal listing the available map apps on the device. Select your preferred app to navigate to the specified address.
 
-**Example:** See the full code example in GitHub. ::: ::::
+**Example:** See the full code example in GitHub. &#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs open-map-action
-
+{% code title="open-map-action" %}
 ```yaml
 title: New York
 type: jig.default
@@ -71,19 +75,24 @@ actions:
           title: Go to New York
           address: New York, US
 ```
+{% endcode %}
 
-:::
+#### Open map from a list (onPress)
 
-### Open map from a list (onPress)
+{% columns %}
+{% column %}
+This example includes a list of people and places in New York. Tapping the `rightElement` button opens a modal, displaying available map apps on the device. Select your preferred app to navigate to the specified `address`. The addresses are defined in a datasource in various formats, including text strings, latitude, and longitude.
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem This example includes a list of people and places in New York. Tapping the `rightElement` button opens a modal, displaying available map apps on the device. Select your preferred app to navigate to the specified `address`. The addresses are defined in a datasource in various formats, including text strings, latitude, and longitude.
+**Example:** See the full code example in GitHub.&#x20;
+{% endcolumn %}
 
-**Example:** See the full code example in GitHub. :::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BWuMO4jXKq6t1f05HH6E6-20250217-115630.gif" size="66" position="center" caption="Open an address from a list" alt="Open an address from a list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BWuMO4jXKq6t1f05HH6E6-20250217-115630.gif" width="1080" height="2167" darkWidth="1080" darkHeight="2167"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BWuMO4jXKq6t1f05HH6E6-20250217-115630.gif" size="66" position="center" caption="Open an address from a list" alt="Open an address from a list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BWuMO4jXKq6t1f05HH6E6-20250217-115630.gif" width="1080" height="2167" darkWidth="1080" darkHeight="2167"} ::: ::::
-
-:::CodeblockTabs open-map-onpress.jigx
-
+{% tabs %}
+{% tab title="open-map-onpress.jigx" %}
 ```yaml
 title: Open map
 type: jig.default
@@ -124,9 +133,9 @@ children:
               options:
                 address: =@ctx.current.item.address
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   adresses:
@@ -148,19 +157,24 @@ datasources:
           address: "40.74789, -74.01113"
           icon: lighthouse-bird
 ```
+{% endtab %}
+{% endtabs %}
 
-:::
+#### Open the map from a secondary action button
 
-### Open the map from a secondary action button
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-I5St-RlrY0rIm7zN2AEvP-20250217-120353.gif" size="66" width="1080" height="2167" position="center" caption="Open - map as secondary action" alt="Open - map as secondary action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-I5St-RlrY0rIm7zN2AEvP-20250217-120353.gif"}
+{% endcolumn %}
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-I5St-RlrY0rIm7zN2AEvP-20250217-120353.gif" size="66" width="1080" height="2167" position="center" caption="Open - map as secondary action" alt="Open - map as secondary action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-I5St-RlrY0rIm7zN2AEvP-20250217-120353.gif"} :::
+{% column %}
+This example describes Central Park in New York. Tapping the ellipsis opens the secondary action button, which is configured with an `icon` displayed to the left of the `title`. When tapped, a modal opens, listing available map apps on the device. Select your preferred app to navigate to the specified `address`, defined by latitude and longitude.
 
-:::VerticalSplitItem This example describes Central Park in New York. Tapping the ellipsis opens the secondary action button, which is configured with an `icon` displayed to the left of the `title`. When tapped, a modal opens, listing available map apps on the device. Select your preferred app to navigate to the specified `address`, defined by latitude and longitude.
+**Example:** See the full code example in GitHub.&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-**Example:** See the full code example in GitHub. ::: ::::
-
-:::CodeblockTabs open-map-secondary.jigx
-
+{% code title="open-map-secondary.jigx" %}
 ```yaml
 title: Central Park NY
 type: jig.default
@@ -205,19 +219,23 @@ actions:
           # Specify the address for the action button.
           address: 40.7827902614508, -73.96559413203381
 ```
+{% endcode %}
 
-:::
+#### Jig header with open-map action icon
 
-### Jig header with open-map action icon
+{% columns %}
+{% column %}
+mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aOQBSERQ1zpZdhMkFOba3-20250217-132934.gif" size="66" position="center" caption="Action in jig header" alt="Action in jig header" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aOQBSERQ1zpZdhMkFOba3-20250217-132934.gif" width="1080" height="2162" darkWidth="1080" darkHeight="2162"}&#x20;
+{% endcolumn %}
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aOQBSERQ1zpZdhMkFOba3-20250217-132934.gif" size="66" position="center" caption="Action in jig header" alt="Action in jig header" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aOQBSERQ1zpZdhMkFOba3-20250217-132934.gif" width="1080" height="2162" darkWidth="1080" darkHeight="2162"} :::
+{% column %}
+In this example, the `action.open-map` is configured in the `jig.header` action to open a modal listing the available map apps on the device. Select your preferred app to navigate to the specified address. The action is configured with an icon rather than a button.
 
-:::VerticalSplitItem In this example, the `action.open-map` is configured in the `jig.header` action to open a modal listing the available map apps on the device. Select your preferred app to navigate to the specified address. The action is configured with an icon rather than a button.
+**Example:** See the full code example in GitHub.
+{% endcolumn %}
+{% endcolumns %}
 
-**Example:** See the full code example in GitHub. ::: ::::
-
-:::CodeblockTabs open-map-header.jigx
-
+{% code title="open-map-header.jigx" %}
 ```yaml
 title: New York Financial District
 type: jig.default
@@ -261,5 +279,4 @@ children:
             young professionals fill the restaurants and bars of the South Street Seaport 
             and pedestrian-only Stone Street.
 ```
-
-:::
+{% endcode %}

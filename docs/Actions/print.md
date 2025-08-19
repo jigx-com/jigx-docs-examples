@@ -1,84 +1,44 @@
 # print
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This feature enables you to generate hard copies of invoices, receipts, articles, or any rendered content in raw HTML, providing a smooth, native experience that works across different devices and printers.
-:::
+{% columns %}
+{% column %}
+This feature enables you to generate hard copies of invoices, receipts, articles, or any rendered content in raw HTML, providing a smooth, native experience that works across different devices and printers.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-![Print HTML action](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wFDCewCVoIO0COQ0OYTYR-20250211-082455.png "Print HTML action")
-:::
-::::
+{% column %}
+&#x20;![Print HTML action](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wFDCewCVoIO0COQ0OYTYR-20250211-082455.png)&#x20;
 
-## Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+{% endcolumn %}
+{% endcolumns %}
 
-| **Core structure** |                                                                                                                                                                                                                                                    |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`            | Provide the action button with a title, for example, Print.                                                                                                                                                                                        |
-| `html`             | Use standard HTML elements to ensure optimal formatting and compatibility when rendering content for printing, for example, \<html>\<body>Invoices are provided monthly.\</body\</html>.&#xA;The HTML can be built up using JSONata or JavaScript. |
+### Configuration options
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>icon</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Select an  to display when the action is configured as the secondary button or in a <a href="./../Components/jig-header.md">header action</a>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isHidden</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>styles</code></p>
-    </td>
-    <td selected="false" align="left">
-      <ul>
-      <li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li>
-      <li><code>isDisabled</code> - Displays the action button as greyed out.</li>
-      <li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li>
-      <li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+Some properties are common to all components, see [Common component properties](print.md) for a list and their configuration options.
 
-## Considerations
+<table><thead><tr><th width="138.47265625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Provide the action button with a title, for example, Print.</td></tr><tr><td><code>html</code></td><td>Use standard HTML elements to ensure optimal formatting and compatibility when rendering content for printing, for example, &#x3C;html>&#x3C;body>Invoices are provided monthly.&#x3C;/body&#x3C;/html>. The HTML can be built up using JSONata or JavaScript.</td></tr></tbody></table>
 
-- The `action.print` requires raw HTML. This can be configured in the action, in an expression, or in JavaScript.
+<table data-header-hidden><thead><tr><th width="142.82421875">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>Select an to display when the action is configured as the secondary button or in a <a href="../Components/jig-header.md">header action</a>.</td></tr><tr><td><code>isHidden</code></td><td><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</td></tr><tr><td><code>styles</code></td><td><ul><li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li><li><code>isDisabled</code> - Displays the action button as greyed out.</li><li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li><li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li></ul></td></tr></tbody></table>
 
-## Examples and code snippets
+### Considerations
 
-### Basic print action
+* The `action.print` requires raw HTML. This can be configured in the action, in an expression, or in JavaScript.
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![Print HTML](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wFDCewCVoIO0COQ0OYTYR-20250211-082455.png "Print HTML")
-:::
+### Examples and code snippets
 
-:::VerticalSplitItem
-This example demonstrates configuring `action.print` to display a button for printing HTML content.
-:::
-::::
+#### Basic print action
 
-:::CodeblockTabs
-action-print-basic.jigx
+{% columns %}
+{% column %}
+&#x20;![Print HTML](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wFDCewCVoIO0COQ0OYTYR-20250211-082455.png)&#x20;
+{% endcolumn %}
 
+{% column %}
+This example demonstrates configuring `action.print` to display a button for printing HTML content. &#x20;
+{% endcolumn %}
+{% endcolumns %}
+
+{% code title="action-print-basic.jigx" %}
 ```yaml
 title: Welcome
 description: Provide you details
@@ -162,15 +122,13 @@ actions:
             </body>
             </html>
 ```
-:::
+{% endcode %}
 
-### Print with web-view component
+#### Print with web-view component
 
 This example demonstrates configuring `action.print` to display a button for printing HTML content shown in the `component.web-view`. The `state` of the component is used to reference the raw HTML used in the component.
 
-:::CodeblockTabs
-action-print-web-view\.jigx
-
+{% code title="action-print-web-view.jigx" %}
 ```yaml
 title: Jigx Frontline
 type: jig.default
@@ -281,23 +239,21 @@ actions:
           title: Print demo form
           html: =@ctx.components.demo.state.content
 ```
-:::
+{% endcode %}
 
-### Document jig with print action
+#### Document jig with print action
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![Print from a document jig](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Qo1Yno0o5cJkS20VHRALl-20250211-124914.png "Print from a document jig")
-:::
+{% columns %}
+{% column %}
+&#x20;![Print from a document jig](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Qo1Yno0o5cJkS20VHRALl-20250211-124914.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example demonstrates configuring `action.print` to display a button for printing raw HTML content from a `jig.document` type.
-:::
-::::
+{% column %}
+This example demonstrates configuring `action.print` to display a button for printing raw HTML content from a `jig.document` type.&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-action.print-document-jig.jigx
-
+{% code title="action.print-document-jig.jigx" %}
 ```yaml
 title: HTML Document Type (Content)
 type: jig.document
@@ -592,23 +548,22 @@ actions:
               </body>
               </html>
 ```
-:::
+{% endcode %}
 
-### Print action in a jig header
+#### Print action in a jig header
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![Print from the header](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-EQWfal-j1SxV9GUW-R1iE-20250212-063817.png "Print from the header")
-:::
+{% columns %}
+{% column %}
+&#x20;![Print from the header](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-EQWfal-j1SxV9GUW-R1iE-20250212-063817.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example demonstrates configuring `action.print` in the `jig.header`. A print `icon` is used to trigger the action. The raw HTML content is configured in the `action.print`.
-:::
-::::
+{% column %}
+This example demonstrates configuring `action.print` in the `jig.header`. A print `icon` is used to trigger the action. The raw HTML content is configured in the `action.print`.&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-action.print-jig-header.jigx
-
+{% tabs %}
+{% tab title="action.print-jig-header.jigx" %}
 ```yaml
 title: Company Event Details
 type: jig.default
@@ -710,9 +665,9 @@ children:
                 title: =@ctx.current.item.option
                 value: =@ctx.current.item.option
 ```
+{% endtab %}
 
-datasource (static)
-
+{% tab title="datasource (static)" %}
 ```yaml
 datasources:
   community-event:
@@ -726,5 +681,5 @@ datasources:
         - id: 3
           option: 🏃fun walk
 ```
-:::
-
+{% endtab %}
+{% endtabs %}

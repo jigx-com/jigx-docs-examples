@@ -3,10 +3,6 @@ title: reset-state
 slug: EQV7-reset-state
 createdAt: Mon Jun 13 2022 13:39:09 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Sep 30 2024 12:19:59 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to effectively use the reset-state action in Jig files with this
-  comprehensive document. Discover multiple approaches to set up this action,
-  such as utilizing onFocus, onRefresh, onPress, or
 ---
 
 # reset-state
@@ -24,8 +20,6 @@ There are multiple ways to set up a reset-state action within a jig:
 
 ### Examples and code snippets
 
-::::ExpandableHeading
-
 #### reset-state onFocus/onRefresh
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/me\_Ah8R\_TyYAScqJsBsn6\_reset-state-onfocus.PNG" size="80" position="center" caption="Reset-state onFocus/onRefresh" alt="Reset-state onFocus/onRefresh"}
@@ -36,27 +30,25 @@ There are multiple ways to set up a reset-state action within a jig:
 
 **Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/reset-state/static-data/reset-state-focus-load-refresh.jigx).
 
-:::CodeblockTabs onFocus.jigx
-
+{% tabs %}
+{% tab title="onFocus.jigx" %}
 ```yaml
 onFocus:
   type: action.reset-state
   options:
     state: =@ctx.solution.state.onFocus-key
 ```
+{% endtab %}
 
-onRefresh.jigx
-
+{% tab title="onRefresh.jigx" %}
 ```yaml
 onRefresh:
   type: action.reset-state
   options:
     state: =@ctx.solution.state.onRefresh-key
 ```
-
-::: ::::
-
-::::ExpandableHeading
+{% endtab %}
+{% endtabs %}
 
 #### reset-state as action
 
@@ -70,8 +62,7 @@ onRefresh:
 
 See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/reset-state/static-data/reset-state-action-form.jigx).
 
-:::CodeblockTabs action.jigx
-
+{% code title="action.jigx" %}
 ```yaml
 actions:
   - children:
@@ -80,10 +71,7 @@ actions:
           title: Reset state of the form
           state: =@ctx.components.form.state.data
 ```
-
-::: ::::
-
-::::ExpandableHeading
+{% endcode %}
 
 #### reset-state onPress/onChange
 
@@ -97,22 +85,22 @@ actions:
 
 See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/reset-state/static-data/reset-state-onpress-onchange.jigx).
 
-:::CodeblockTabs onPress.jigx
-
+{% tabs %}
+{% tab title="onPress.jigx" %}
 ```yaml
 onPress:
   type: action.reset-state
   options:
     state: =@ctx.solution.state.onPress-key
 ```
+{% endtab %}
 
-onChange.jigx
-
+{% tab title="onChange.jigx" %}
 ```yaml
 onChange:
   type: action.reset-state
   options:
     state: =@ctx.solution.state.onChange-key
 ```
-
-::: ::::
+{% endtab %}
+{% endtabs %}

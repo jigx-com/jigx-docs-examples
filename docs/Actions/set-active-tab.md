@@ -2,40 +2,40 @@
 
 Programmatically set the next active tab to display in the [jig.tabs](<../Jig Types/jig_tabs.md>). The action determines which tab will open next. For example, if you are on the third tab, the action button can be set to open the first tab.
 
-## Configuration options
+### Configuration options
 
 Some properties are common to all components, see [Common component properties](set-active-tab.md) for a list and their configuration options.
 
-| **Core structure**  |                                                                                                                         |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `Action Identifier` | Give the action a unique name that will be used to reference the action in another jig's action. See the example below. |
-| `id`                | Provide the `jigId` for the jig that will be opened next.                                                               |
+<table><thead><tr><th width="179.25390625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>Action Identifier</code></td><td>Give the action a unique name that will be used to reference the action in another jig's action. See the example below.</td></tr><tr><td><code>id</code></td><td>Provide the <code>jigId</code> for the jig that will be opened next.</td></tr></tbody></table>
 
-| **State configuration** | **Key**         | **Notes**                                                             |
-| ----------------------- | --------------- | --------------------------------------------------------------------- |
-| `=@ctx.jig.state.`      | `initialTabId`  | A state variable used to reference the tab designated as the default. |
-| `=@ctx.jig.state.`      | `activeTabId`   | A state variable that references the currently active tab.            |
+<table><thead><tr><th width="181.921875">State configuration</th><th width="144.46484375">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.jig.state.</code></td><td><code>initialTabId</code> </td><td>A state variable used to reference the tab designated as the default.</td></tr><tr><td><code>=@ctx.jig.state.</code></td><td><code>activeTabId</code></td><td>A state variable that references the currently active tab.</td></tr></tbody></table>
 
-## Considerations
+### Considerations
 
 * The `action.set-active-tab` can only be used in [jig.tabs](<../Jig Types/jig_tabs.md>).
 * The `action.set-active-tab` needs to be referenced as a callback action which is used in conjunction with the `action.execute-action`.
 
-## How to configure the action
+### How to configure the action
 
 1. The action is configured under the `jigId` in the `jig.tabs` file. Give the action a unique name (`action identifier`) that will be used to reference the action in the tab's corresponding jig.
 2. In the corresponding jig configure the `action.execute-action` and specify the unique name (`action identifier`) in the action property's value.
 
-## Examples and code snippets
+### Examples and code snippets
 
-### Basic set active tab
+#### Basic set active tab
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-v9n12mYoxQdQcvO9V0ehS-20250212-115144.gif" size="70" position="center" caption="Set next active tab" alt="Set next active tab" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-v9n12mYoxQdQcvO9V0ehS-20250212-115144.gif" width="1080" height="2162" darkWidth="1080" darkHeight="2162"} :::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-v9n12mYoxQdQcvO9V0ehS-20250212-115144.gif" size="70" position="center" caption="Set next active tab" alt="Set next active tab" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-v9n12mYoxQdQcvO9V0ehS-20250212-115144.gif" width="1080" height="2162" darkWidth="1080" darkHeight="2162"}
+{% endcolumn %}
 
-:::VerticalSplitItem In this example, when you are on the third tab (timelogs), a `Next Appointment` button at the bottom of the screen will open the first tab (appointments). **Note:** The `action.set-active-tab` works in conjunction with `action.execute-action` using an `action identifier`. ::: ::::
+{% column %}
+In this example, when you are on the third tab (timelogs), a `Next Appointment` button at the bottom of the screen will open the first tab (appointments). **Note:** The `action.set-active-tab` works in conjunction with `action.execute-action` using an `action identifier`.&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs jig.tabs.jigx
-
+{% tabs %}
+{% tab title="jig.tabs.jigx" %}
 ```yaml
 type: jig.tabs
 title: Global INC
@@ -68,8 +68,10 @@ children:
     icon: book-book-pages
 ```
 
-timelogs.jigx
 
+{% endtab %}
+
+{% tab title="timelogs.jigx" %}
 ```yaml
 title: Time logging
 description: Log the time taken to complete the job
@@ -150,5 +152,5 @@ actions:
           # Reference the action identifier configured in the jig.tabs.
           action: next-appointment            
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
