@@ -3,10 +3,6 @@ title: execute-entity
 slug: jGWl-execute-entity
 createdAt: Thu Jun 09 2022 18:22:55 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Nov 04 2024 15:41:43 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to use the "execute-entity" action to save, update, or delete data
-  from your database. This document provides code snippets and examples for
-  using execute-entity in various scenarios such as
 ---
 
 # execute-entity
@@ -15,7 +11,9 @@ Execute-entity can save, update, or delete data in a **single row** from a datab
 
 For the Dynamic datasource, values will be saved under the `data` option. For SQL/REST datasource, values will be saved under the `Parameters` option.
 
-:::hint{type="warning"} This action can't be used if you are using [Static Data](https://docs.jigx.com/examples/static). :::
+{% hint style="warning" %}
+This action can't be used if you are using [Static Data](https://docs.jigx.com/examples/static).&#x20;
+{% endhint %}
 
 ### Configuration options
 
@@ -26,7 +24,9 @@ An `execute-entity` action can be used in multiple areas:
 3. In onPress/onChange events (if the component you are setting up has these options)
 4. In onRefresh/onFocus
 
-:::hint{type="warning"} The execute-entity has a `go-back` option, which is set to on by default. That means when you run execute-entity, it will automatically return you to the previous jig. :::
+{% hint style="warning" %}
+The execute-entity has a `go-back` option, which is set to on by default. That means when you run execute-entity, it will automatically return you to the previous jig.
+{% endhint %}
 
 ### Offline remote data handling
 
@@ -34,18 +34,21 @@ Dealing with offline remote data is fundamental to ensuring data synchronization
 
 ### Examples and code snippets
 
-:::::ExpandableHeading
-
 #### Execute-entity in action
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNJS6iz-l7FhJtP82\_Kae\_ex-actioniphone13blueportrait.png" size="80" position="center" caption="Execute enitity" alt="Execute entity"} :::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNJS6iz-l7FhJtP82\_Kae\_ex-actioniphone13blueportrait.png" size="80" position="center" caption="Execute enitity" alt="Execute entity"}
+{% endcolumn %}
 
-:::VerticalSplitItem In this example, execute entity is used in _action_ with the _create_ method. This example results in creating a new record with the First name, Last name, Email, and Phone number information. Execute entity is called by the press of the _Save details_ button on the bottom.
+{% column %}
+&#x20;In this example, execute entity is used in _action_ with the _create_ method. This example results in creating a new record with the First name, Last name, Email, and Phone number information. Execute entity is called by the press of the _Save details_ button on the bottom.
 
-**Example:** See the full example of execute-entity in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-action.jigx). ::: ::::
+**Example:** See the full example of execute-entity in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-action.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs execute-entity-action
-
+{% code title="execute-entity-action" %}
 ```yaml
 actions:
   - children:
@@ -63,21 +66,23 @@ actions:
           onSuccess:
             type: action.go-back
 ```
-
-::: :::::
-
-:::::ExpandableHeading
+{% endcode %}
 
 #### Execute-entity in action list
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZEf\_uXB3562SxaHxxh\_ae\_ex-a-listiphone13blueportrait.png" size="82" position="center" caption="Execute entity in action-list" alt="Execute entity in action-list"} :::
+{% columns %}
+{% column %}
+mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZEf\_uXB3562SxaHxxh\_ae\_ex-a-listiphone13blueportrait.png" size="82" position="center" caption="Execute entity in action-list" alt="Execute entity in action-list"}
+{% endcolumn %}
 
-:::VerticalSplitItem By pressing the _Save details_ button the execute-entity action will be followed by the go-to action.
+{% column %}
+By pressing the _Save details_ button the execute-entity action will be followed by the go-to action.
 
-**Examples:** See the full example of execute-entity in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-actionlist.jigx). ::: ::::
+**Examples:** See the full example of execute-entity in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-actionlist.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs execute-entity-action-list
-
+{% code title="execute-entity-action-list" %}
 ```yaml
 actions:
   - children:
@@ -110,21 +115,24 @@ actions:
                   options:
                     linkTo: ja-execute-entity-onPress
 ```
-
-::: :::::
-
-:::::ExpandableHeading
+{% endcode %}
 
 #### Execute-entity in onPress/onChange event
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fHcCpIywUK-qDL8nRfoO3\_tjvfgtwpkgot3fa73lrbex-onchangeiphone13blueportrait.png" size="80" position="center" caption="Execute-entity in onPress" } :::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fHcCpIywUK-qDL8nRfoO3\_tjvfgtwpkgot3fa73lrbex-onchangeiphone13blueportrait.png" size="80" position="center" caption="Execute-entity in onPress" }&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem Here is the example of execute-entity in onPress/onChange event in list-item.
+{% column %}
+Here is the example of execute-entity in onPress/onChange event in list-item.
 
-**Examples:** See the full example using onChange in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onChange.jigx). See the full example using onPress you in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onPress.jigx). ::: ::::
+**Examples:** See the full example using onChange in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onChange.jigx). See the full example using onPress you in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onPress.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs onPress
-
+{% tabs %}
+{% tab title="onPress" %}
 ```yaml
 item:
   type: component.list-item
@@ -146,9 +154,9 @@ item:
           id: =@ctx.current.item.id
           modify: =($number(@ctx.current.item.modify) + 1)
 ```
+{% endtab %}
 
-onChange
-
+{% tab title="onChange" %}
 ```yaml
 item:
   type: component.list-item
@@ -173,21 +181,26 @@ item:
             id: =@ctx.current.item.id
             modify: =$number(@ctx.current.item.modify) + 1
 ```
-
-::: :::::
-
-::::ExpandableHeading
+{% endtab %}
+{% endtabs %}
 
 #### Execute-entity in onRefresh/onFocus
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ODgGFijGrBYtf6\_qv57VK\_actioneentityrefresh.PNG" size="80" position="center" caption="Execute entity" alt="Execute entity"}
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ODgGFijGrBYtf6\_qv57VK\_actioneentityrefresh.PNG" size="80" position="center" caption="Execute entity" alt="Execute entity"}
+{% endcolumn %}
 
+{% column %}
 Here is the example of execute-entity in onRefresh/onFocus.
 
-See the full example using onRefresh in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onRefresh.jigx). See the full example using onFocus in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onFocus.jigx)
+See the full example using onRefresh in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onRefresh.jigx). \
+See the full example using onFocus in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onFocus.jigx)
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs execute-entity-onRefresh
-
+{% tabs %}
+{% tab title="execute-entity-onRefresh" %}
 ```yaml
 onRefresh:
   type: action.execute-entity
@@ -199,9 +212,9 @@ onRefresh:
       id: =@ctx.datasources.employee-detail-dynamic.id
       modify: =@ctx.datasources.employee-detail-dynamic.modify >= 10 ? 1 :($number(@ctx.datasources.employee-detail-dynamic.modify) + 1)
 ```
+{% endtab %}
 
-execute-entity-onFocus
-
+{% tab title="execute-entity-onFocus" %}
 ```yaml
 onFocus:
   type: action.execute-entity
@@ -213,10 +226,8 @@ onFocus:
       id: =@ctx.datasources.employee-detail-dynamic.id
       modify: =@ctx.datasources.employee-detail-dynamic.modify >= 10 ? 1 :($number(@ctx.datasources.employee-detail-dynamic.modify) + 1)
 ```
-
-::: ::::
-
-::::ExpandableHeading
+{% endtab %}
+{% endtabs %}
 
 #### Deleting data using execute-entity
 
@@ -229,8 +240,8 @@ In the first two examples, you can see the same situation where you are deleting
 
 The third example shows how to delete the first 3 records from your datasource.
 
-:::CodeblockTabs delete-by-first-name
-
+{% tabs %}
+{% tab title="delete-by-first-name" %}
 ```yaml
 datasource:
   people:
@@ -256,9 +267,9 @@ actions:
       data:
         id: =@ctx.datasource.people.id
 ```
+{% endtab %}
 
-delete-by-fist-name-jsonata-function
-
+{% tab title="delete-by-fist-name-jsonata-function" %}
 ```yaml
 type: "action.execute-entity"
 options:
@@ -268,9 +279,9 @@ options:
   method: delete
   data: "=@ctx.datasources.people[name = 'Jane']{'id':id}[]"
 ```
+{% endtab %}
 
-delete-first-3-records
-
+{% tab title="delete-first-3-records" %}
 ```yaml
 datasource:
   people:
@@ -297,5 +308,5 @@ actions:
       data:
         id: =@ctx.datasource.people.id
 ```
-
-::: ::::
+{% endtab %}
+{% endtabs %}

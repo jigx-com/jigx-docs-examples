@@ -1,15 +1,15 @@
 # Combine custom & standard components (Alpha)
 
-:::hint{type="danger"}
+{% hint style="danger" %}
 This feature is currently in its **Alpha** stage of development.
 
-- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
-- In this phase, the feature may contain bugs or behave unpredictably.
-- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
-- We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
-:::
+* As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
+* In this phase, the feature may contain bugs or behave unpredictably.
+* Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
+* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
+{% endhint %}
 
-Combining [Custom components (Alpha)](<./../Custom components _Alpha_.md>) with [Standard components](./../Components.md) enables the creation of advanced functionality and rich user interfaces. Standard components, such as [stepper](./../Components/stepper.md) , [progress-bar](./../Components/progress-bar.md) , and [countdown](./../Components/countdown.md) , provide a reliable foundation for common interactions, ensuring consistency and usability. By integrating custom components and tailored elements designed to meet specific requirements, you can extend this functionality to create dynamic features like interactive menus, tabbed navigation, and toggles with unique behaviors. This blend allows for a balance between efficiency and creativity, enabling apps to stand out with innovative designs while maintaining intuitive user experiences.
+Combining [Custom components (Alpha)](<../Custom components _Alpha_.md>) with [Standard components](../Components.md) enables the creation of advanced functionality and rich user interfaces. Standard components, such as [stepper](../Components/stepper.md) , [progress-bar](../Components/progress-bar.md) , and [countdown](../Components/countdown.md) , provide a reliable foundation for common interactions, ensuring consistency and usability. By integrating custom components and tailored elements designed to meet specific requirements, you can extend this functionality to create dynamic features like interactive menus, tabbed navigation, and toggles with unique behaviors. This blend allows for a balance between efficiency and creativity, enabling apps to stand out with innovative designs while maintaining intuitive user experiences.
 
 Additionally, you can take this further by **creating entirely new components** through the clever use of custom components or by combining standard and custom components. These new components can encapsulate specialized functionality, offer unique visual elements, or address specific user needs, opening up endless possibilities for tailored solutions. To ensure the reuse of custom components in the same jig or in different jigs, you can use [Inputs & outputs (Alpha)](https://docs.jigx.com/inputs-and-outputs-alpha).
 
@@ -19,11 +19,10 @@ Here are code examples to illustrate combining custom and standard components to
 
 ### Considerations
 
-- When using `component.image` in a custom component, the `height` property must be specified as part of the `size` property. Otherwise, validation errors occur, see below:
+* When using `component.image` in a custom component, the `height` property must be specified as part of the `size` property. Otherwise, validation errors occur, see below:
 
-:::CodeblockTabs
-Correct YAML
-
+{% tabs %}
+{% tab title="Correct YAML" %}
 ```yaml
 # Correct YAML snippet for using the height property in the image component,
 # when used in a custom component.
@@ -34,9 +33,9 @@ Correct YAML
             source:
               uri: https://images
 ```
+{% endtab %}
 
-Incorrect YAML
-
+{% tab title="Incorrect YAML" %}
 ```yaml
 # Incorrect YAML snippet for using the height property in the image component,
 # when used in a custom component.
@@ -46,34 +45,33 @@ Incorrect YAML
             source:
               uri: https://images     
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-## Example and code samples
+### Example and code samples
 
-The examples use a set of custom components called *sections*. The sections are for titles, spacing, and context. The *sections* code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+The examples use a set of custom components called _sections_. The sections are for titles, spacing, and context. The _sections_ code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
 
-:::::ExpandableHeading
-### Countdown
+#### Countdown
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3qwiIlmNqKU__uU3e5yrB-20241114-092231.png" size="48" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3qwiIlmNqKU__uU3e5yrB-20241114-092231.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3qwiIlmNqKU\_\_uU3e5yrB-20241114-092231.png" size="48" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3qwiIlmNqKU\_\_uU3e5yrB-20241114-092231.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, the first `component.countdown` is a standard component and the following four are custom components. Here, the `component.countdown` is configured in a `component.card` with color.
 
 **Example:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/countdown).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/countdown/countdown.jigx).
-:::
-::::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/countdown).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/countdown/countdown.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-countdown.jigx
-
+{% tabs %}
+{% tab title="countdown.jigx" %}
 ```yaml
 # jigs/countdown.jigx 
 title: Countdown
@@ -129,9 +127,9 @@ children:
   - type: component.custom-component
     componentId: countdown4
 ```
+{% endtab %}
 
-countdown.jigx&#x20;
-
+{% tab title="countdown.jigx" %}
 ```yaml
 # components/countdown.jigx 
 type: component.default
@@ -151,9 +149,9 @@ children:
             size: small
             align: left
 ```
+{% endtab %}
 
-countdown2.jigx
-
+{% tab title="countdown2.jigx" %}
 ```yaml
 # components/countdown2.jigx 
 type: component.default
@@ -171,9 +169,9 @@ children:
               position: bottom
             size: medium
 ```
+{% endtab %}
 
-countdown3.jigx
-
+{% tab title="countdown3.jigx" %}
 ```yaml
 # components/countdown3.jigx 
 type: component.default
@@ -191,9 +189,9 @@ children:
               position: top
             size: large
 ```
+{% endtab %}
 
-countdown4.jigx
-
+{% tab title="countdown4.jigx" %}
 ```yaml
 # components/countdown4.jigx 
 type: component.default
@@ -211,31 +209,29 @@ children:
               position: bottom
             size: extra-large
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Progress Bar
+#### Progress Bar
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 In this example, the `component.progress-bar`, is customized by adding a `component.card`, `component.icon`, and `component.text` to achieve the required appearance.
 
 **Example:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/progressbar/progress-sample-1.jigx).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-basic.jigx).
-:::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/progressbar/progress-sample-1.jigx).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-basic.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k9S-WX-dQLP59hWunApnu-20241114-094230.png" size="48" position="center" caption="Progress-bar" alt="Progress-bar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k9S-WX-dQLP59hWunApnu-20241114-094230.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k9S-WX-dQLP59hWunApnu-20241114-094230.png" size="48" position="center" caption="Progress-bar" alt="Progress-bar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k9S-WX-dQLP59hWunApnu-20241114-094230.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-progressbar-basic.jigx
-
+{% tabs %}
+{% tab title="progressbar-basic.jigx" %}
 ```yaml
 # jigs/progressbar-basic.jigx
 title: Progress Bars - Basic
@@ -261,9 +257,9 @@ children:
   - type: component.custom-component
     componentId: progress-sample-2
 ```
+{% endtab %}
 
-progress-sample-1.jigx
-
+{% tab title="progress-sample-1.jigx" %}
 ```yaml
 # components/progress-sample1.jigx 
 type: component.default
@@ -327,9 +323,9 @@ children:
                           current: =@ctx.solution.state.progressValue
                           max: 20
 ```
+{% endtab %}
 
-progress-sample-2.jigx
-
+{% tab title="progress-sample-2.jigx" %}
 ```yaml
 # components/progress-sample2.jigx 
 type: component.default
@@ -575,39 +571,37 @@ children:
                               title:
                                 value: Title                               
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
 More examples of customized progress bars are available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar):
 
-| **Examples**                                                                                                                                                                                                                         |                                                                                                                                                                                                                                         |
+| Examples                                                                                                                                                                                                                             |                                                                                                                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Progress-bar with details](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-details.jigx)          | [Progress-bar with top labels](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-top-labels.jigx)       |
 | [Progress-bar sizes](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-sizes-dynamic.jigx) (Dynamic) | [Progress-bar with bottom labels](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-bottom-labels.jigx) |
 | [Progress-bar steps](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-steps-dynamic.jigx)(Dynamic)  |                                                                                                                                                                                                                                         |
-:::::
 
-:::::ExpandableHeading
-### Ratings
+#### Ratings
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Npl-iTbt3CbHZqYsyA1Xf-20241114-095208.png" size="48" position="center" caption="Ratings " alt="Ratings" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Npl-iTbt3CbHZqYsyA1Xf-20241114-095208.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Npl-iTbt3CbHZqYsyA1Xf-20241114-095208.png" size="48" position="center" caption="Ratings " alt="Ratings" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Npl-iTbt3CbHZqYsyA1Xf-20241114-095208.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example demonstrates how you can create your own component using the custom components. Here various rating components are created by configuring the `component.view` and `component.text`.
 
 **Example:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/rating).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/rating/rating.jigx).
-:::
-::::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/rating).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/rating/rating.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-rating.jigx
-
+{% tabs %}
+{% tab title="rating.jigx" %}
 ```yaml
 # jigs/rating.jigx
 title: Ratings
@@ -661,9 +655,9 @@ children:
         - type: component.custom-component
           componentId: rating-5
 ```
+{% endtab %}
 
-rating-1.jigx
-
+{% tab title="rating-1.jigx" %}
 ```yaml
 # components/rating-1.jigx 
 type: component.default
@@ -747,9 +741,9 @@ children:
             emphasis: =$number(@ctx.solution.state.rating) > 4 ? '':'low'
             value: ★            
 ```
+{% endtab %}
 
-rating-2.jigx
-
+{% tab title="rating-2.jigx" %}
 ```yaml
 # components/rating-2.jigx 
 type: component.default
@@ -818,9 +812,9 @@ children:
                         color: =@ctx.inputs.rating >= 4.5 ? 'warning':'element'
                         emphasis: =@ctx.inputs.rating >= 4.5 ? '':'low'
 ```
+{% endtab %}
 
-rating-3.jigx
-
+{% tab title="rating-3.jigx" %}
 ```yaml
 # components/rating-3.jigx 
 type: component.default
@@ -861,9 +855,9 @@ children:
                   weight: semi-bold
                   emphasis: medium
 ```
+{% endtab %}
 
-rating-4.jigx
-
+{% tab title="rating-4.jigx" %}
 ```yaml
 # components/rating-4.jigx 
 type: component.default
@@ -961,9 +955,10 @@ children:
                   emphasis: =$number(@ctx.solution.state.rating) = 5 ? '':'medium'
                   value: 😍
 ```
+{% endtab %}
+{% endtabs %}
 
-rating-5.jigx
-
+{% code title="rating-5.jigx" %}
 ```yaml
 # components/rating-5.jigx 
 type: component.default
@@ -1089,30 +1084,27 @@ children:
                   size: extra-large
                   value: 😍 
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### Sections
+#### Sections
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example demonstrates how you can create one custom component and reuse it multiple times, in this instance, in the same jig. We use `inputs` to show different data and elements in each reuse of the custom component. Here a standard `component.avatar` is combined with `component.view`, `component.text` and `component.icon`.
 
 **Example:**
 
-1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
-2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections).
-:::
+1. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_czeKbMWCCPZwwMK3bo5k-20241114-102305.png" size="48" position="center" caption="Sections" alt="Sections" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_czeKbMWCCPZwwMK3bo5k-20241114-102305.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_czeKbMWCCPZwwMK3bo5k-20241114-102305.png" size="48" position="center" caption="Sections" alt="Sections" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_czeKbMWCCPZwwMK3bo5k-20241114-102305.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-section-header-greetings.jigx
-
+{% tabs %}
+{% tab title="section-header-greetings.jigx" %}
 ```yaml
 # jigs/section-header-greetings.jigx
 title: Greetings
@@ -1205,9 +1197,9 @@ children:
             right-icon-link: link-here
             linkTo: link-here
 ```
+{% endtab %}
 
-greetings.jigx
-
+{% tab title="greetings.jigx" %}
 ```yaml
 # components/greetings.jigx 
 type: component.default
@@ -1286,40 +1278,38 @@ children:
         options:
           linkTo: =@ctx.inputs.linkTo
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
 More examples of customized sections are available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections):
 
-| **Examples**                                                                                                                                                                                                                    |                                                                                                                                                                                                                                               |
+| Examples                                                                                                                                                                                                                        |                                                                                                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Section header samples](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-samples.jigx)        | [Section sizes - medium (extra-bold)](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-med-xbold.jigx) |
 | [Section sizes - regular](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-reg.jigx)     | [Section sizes - large](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-large.jigx)                   |
 | [Section sizes - medium](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-med.jigx)      | [Section sizes - extra large](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-extra-large.jigx)       |
 | [Section header with subtitle](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-subtitle.jigx) |                                                                                                                                                                                                                                               |
-:::::
 
-:::::ExpandableHeading
-### Stepper
+#### Stepper
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![Steppers](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SqhIJwlC1MtJGk9LMqLBA-20241114-102836.png "Steppers")
-:::
+{% columns %}
+{% column %}
+&#x20;![Steppers](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SqhIJwlC1MtJGk9LMqLBA-20241114-102836.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example demonstrates how you can create one custom component and reuse it multiple times, in this instance in the two different jigs. We use `inputs` to show the number of steps and current steps in each reuse of the custom component. Here a stepper component is created by configuring the `component.view`.
 
 **Example:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/stepper/stepper1.jigx).
-3. See the *jig* example in \<[GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style1-variations.jigx).
-:::
-::::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/stepper/stepper1.jigx).
+3. See the _jig_ example in <[GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style1-variations.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-stepper-style1.jigx
-
+{% tabs %}
+{% tab title="stepper-style1.jigx" %}
 ```yaml
 # jigs/stepper-style1.jigx 
 title: Stepper Style 1
@@ -1345,9 +1335,9 @@ children:
       numberOfSteps: 5
       currentStep: 3
 ```
+{% endtab %}
 
-stepper-style1-variations.jigx
-
+{% tab title="stepper-style1-variations.jigx" %}
 ```yaml
 # jigs/stepper-style1-variations.jigx 
 title: Stepper 1 - Variations
@@ -1476,9 +1466,9 @@ children:
       numberOfSteps: 6
       currentStep: 6  
 ```
+{% endtab %}
 
-stepper1.jigx
-
+{% tab title="stepper1.jigx" %}
 ```yaml
 # components/stepper1.jigx 
 type: component.default
@@ -1652,40 +1642,38 @@ children:
               width: 24
             children: []                                                                                                 
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
 More examples of customized sections are available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper):
 
-| **Examples**                                                                                                                                                                                             |                                                                                                                                                                                                          |
+| Examples                                                                                                                                                                                                 |                                                                                                                                                                                                          |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Stepper style 2](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style2.jigx) | [Stepper style 6](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style6.jigx) |
 | [Stepper style 3](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style3.jigx) | [Stepper style 7](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style7.jigx) |
-| [Stepper style 4]()                                                                                                                                                                                      | [Stepper style 8](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style8.jigx) |
+| [Stepper style 4](<Combine custom _ standard components _Alpha_.md>)                                                                                                                                     | [Stepper style 8](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style8.jigx) |
 | [Stepper style 5](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style5.jigx) |                                                                                                                                                                                                          |
-:::::
 
-:::::ExpandableHeading
-### Tabs
+#### Tabs
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example demonstrates how you can create custom components and reuse them multiple times. We use `inputs` to show the tab value, name, indicator and alignment in each reuse of the custom component. Here tab components are created by configuring the `component.view`. Additionally, we show how to reference a custom component inside a standard `component.list-item`.
 
 **Example:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/tabs).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/tabs/tabs.jigx).
-:::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/tabs).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/tabs/tabs.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a-MnTk6l7a1IoAevGnBKt-20241114-103014.png" size="48" position="center" caption="Tabs" alt="Tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a-MnTk6l7a1IoAevGnBKt-20241114-103014.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a-MnTk6l7a1IoAevGnBKt-20241114-103014.png" size="48" position="center" caption="Tabs" alt="Tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a-MnTk6l7a1IoAevGnBKt-20241114-103014.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-tabs.jigx
-
+{% tabs %}
+{% tab title="tabs.jigx" %}
 ```yaml
 # jigs/tabs.jigx
 title: Tabs
@@ -1824,9 +1812,9 @@ children:
                 tabName: =@ctx.current.item.tabName
                 tabValue: =@ctx.current.item.tabValue
 ```
+{% endtab %}
 
-tabs.jigx
-
+{% tab title="tabs.jigx" %}
 ```yaml
 # components/tabs.jigx
 type: component.default
@@ -2163,9 +2151,9 @@ children:
                 state: =@ctx.solution.state.tab
                 value: =@ctx.inputs.tabValue4
 ```
+{% endtab %}
 
-tabs-stretched.jigx
-
+{% tab title="tabs-stretched.jigx" %}
 ```yaml
 #components/tabs-stretched.jigx
 type: component.default
@@ -2466,9 +2454,9 @@ children:
                 state: =@ctx.solution.state.tab
                 value: =@ctx.inputs.tabValue4
 ```
+{% endtab %}
 
-list-item-tabs.jigx
-
+{% tab title="list-item-tabs.jigx" %}
 ```yaml
 #components/list-item-tabs.jigx
 type: component.default
@@ -2552,30 +2540,28 @@ children:
           state: =@ctx.solution.state.tab
           value: =@ctx.inputs.tabValue
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Tags
+#### Tags
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CUZSlXSPFZahDNId27IH7-20241114-103058.png" size="50" position="center" caption="Tags" alt="Tags" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CUZSlXSPFZahDNId27IH7-20241114-103058.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CUZSlXSPFZahDNId27IH7-20241114-103058.png" size="50" position="center" caption="Tags" alt="Tags" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CUZSlXSPFZahDNId27IH7-20241114-103058.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example demonstrates how you can create tags in a custom component. We use `inputs` in the custom component to show the tag color and title. Here a tab component is created by configuring the `component.view` and `component.text`. Additionally, we show you how to reference a custom component inside a standard `component.list`, and use a second custom component to create an action allowing you to tap a link at the top to add new tag.
 
 **Example:**
 
-1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/tags/tags.jigx).
-2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/tags/tags.jigx).
-:::
-::::
+1. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/tags/tags.jigx).
+2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/tags/tags.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-tags.jigx
-
+{% tabs %}
+{% tab title="tags.jigx" %}
 ```yaml
 #jigs/tags.jigx
 title: Tags
@@ -2638,9 +2624,9 @@ children:
     inputs:
       title: Add Tags
 ```
+{% endtab %}
 
-view-todo-tags.jigx
-
+{% tab title="view-todo-tags.jigx" %}
 ```yaml
 # components/view-todo-tags.jigx
 type: component.default
@@ -2666,8 +2652,10 @@ children:
             value: =@ctx.inputs.info.title
 ```
 
-add-button.jigx
 
+{% endtab %}
+
+{% tab title="add-button.jigx" %}
 ```yaml
 # components/add-button.jigx
 type: component.default
@@ -2710,30 +2698,28 @@ children:
               when: =@ctx.inputs.title = 'Add Notes'
           isSequential: true
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Toggles
+#### Toggles
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example demonstrates how you can create a custom component providing the functionality to toggle. We use `inputs` to determine the toggle name, highlighting and value. Here a toggle component is created by configuring the `component.view` and `component.text`. Additionally, we show you how to reference a custom component inside a standard `component.list`. The custom component is configured with the `onPress` event to trigger an action when the toggle is pressed.
 
 **Example:**
 
-1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/toggles).
-2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/toggles/toggles.jigx).
-:::
+1. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/toggles).
+2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/toggles/toggles.jigx).&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_frjcbq6BgaicVmNICaMG-20241114-103225.png" size="48" position="center" caption="Toggles" alt="Toggles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_frjcbq6BgaicVmNICaMG-20241114-103225.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_frjcbq6BgaicVmNICaMG-20241114-103225.png" size="48" position="center" caption="Toggles" alt="Toggles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_frjcbq6BgaicVmNICaMG-20241114-103225.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-toggles.jigx
-
+{% tabs %}
+{% tab title="toggles.jigx" %}
 ```yaml
 #jigs/toggles.jigx
 title: Toggles
@@ -2860,9 +2846,9 @@ children:
             switchValue1: switch-item1
             switchValue2: switch-item2
 ```
+{% endtab %}
 
-switch.jigx
-
+{% tab title="switch.jigx" %}
 ```yaml
 # components/switch.jigx
 type: component.default
@@ -3094,9 +3080,9 @@ children:
                 state: =@ctx.solution.state.switch
                 value: =@ctx.inputs.switchValue3
 ```
+{% endtab %}
 
-list-item-switch.jigx
-
+{% tab title="list-item-switch.jigx" %}
 ```yaml
 # components/list-item-switch.jigx
 type: component.default
@@ -3140,6 +3126,5 @@ children:
           state: =@ctx.solution.state.list-item-switch
           value: =@ctx.inputs.switchValue
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

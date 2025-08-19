@@ -1,57 +1,48 @@
 # Icon (Alpha)
 
-:::hint{type="danger"}
+{% hint style="danger" %}
 This feature is currently in its **Alpha** stage of development.
 
-- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
-- In this phase, the feature may contain bugs or behave unpredictably.
-- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
-- We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
-:::
+* As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
+* In this phase, the feature may contain bugs or behave unpredictably.
+* Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
+* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
+{% endhint %}
 
-The icon component can be integrated into custom components to enhance their visual appeal and functionality, such as adding an icon within a [Button (Alpha)](<./Button _Alpha_.md>) , displaying it in a [Card (Alpha)](<./Card _Alpha_.md>) , or embedding it in a [View (Alpha)](<./View _Alpha_.md>) . By customizing an icon, you can adjust its size, color, and shape, and even apply animations or conditional styling, ensuring seamless alignment with your application's design system and user experience.
+The icon component can be integrated into custom components to enhance their visual appeal and functionality, such as adding an icon within a [Button (Alpha)](<Button _Alpha_.md>) , displaying it in a [Card (Alpha)](<Card _Alpha_.md>) , or embedding it in a [View (Alpha)](<View _Alpha_.md>) . By customizing an icon, you can adjust its size, color, and shape, and even apply animations or conditional styling, ensuring seamless alignment with your application's design system and user experience.
 
-For steps on creating a custom component, see [How to create a custom component](<./../Custom components _Alpha_.md>).
+For steps on creating a custom component, see [How to create a custom component](<../Custom components _Alpha_.md>).
 
-## Configuration options
+### Configuration options
 
 You can use `when` and `instanceId` with `component.icon`, add the properties before the `options:` property. The available list of options is shown below. For the full list of properties, see [jc-icon](https://docs.jigx.com/jigx-icons) .
 
-| **Options** | **value**                                                                                                                                                                          |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `color`     | Multiple, use IntelliSense to view the available list.                                                                                                                             |
-| `emphasis`  | Changing the color, for example, brighter, bolder, or a contrasting hue.&#xA;`extra-low`&#xA;`high`&#xA;`low`&#xA;`low-medium`&#xA;`medium`                                        |
-| `onPress`   | Multiple, use IntelliSense to view the list of available  to call. The action is called when the icon is pressed.                                                                  |
-| `shape`     | Determine the shape around the icon.&#xA;`circle`&#xA;`rounded` (default)&#xA;`square`                                                                                             |
-| `size`      | Enter a number value or use an expression to determine the size of the icon.                                                                                                       |
-| `type`      | Configure the icon's display as a standalone icon, within a shape, or in a duotone style. The following options are available:&#xA;`basic` (default)&#xA;`duotone`&#xA;`contained` |
+<table><thead><tr><th width="129.93359375">Options</th><th>value</th></tr></thead><tbody><tr><td><code>color</code></td><td>Multiple, use IntelliSense to view the available list.</td></tr><tr><td><code>emphasis</code></td><td>Changing the color, for example, brighter, bolder, or a contrasting hue. <code>extra-low</code> <code>high</code> <code>low</code> <code>low-medium</code> <code>medium</code></td></tr><tr><td><code>onPress</code></td><td>Multiple, use IntelliSense to view the list of available to call. The action is called when the icon is pressed.</td></tr><tr><td><code>shape</code></td><td>Determine the shape around the icon. <code>circle</code> <code>rounded</code> (default) <code>square</code></td></tr><tr><td><code>size</code></td><td>Enter a number value or use an expression to determine the size of the icon.</td></tr><tr><td><code>type</code></td><td>Configure the icon's display as a standalone icon, within a shape, or in a duotone style. The following options are available: <code>basic</code> (default) <code>duotone</code> <code>contained</code></td></tr></tbody></table>
 
-## Examples and code snippets
+### Examples and code snippets
 
-The examples use a set of custom components called *sections*. The sections are for titles, spacing, and context. The *sections* code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+The examples use a set of custom components called _sections_. The sections are for titles, spacing, and context. The _sections_ code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
 
-:::::ExpandableHeading
-### Icon sizes
+#### Icon sizes
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example shows the `component.icon` with different icon sizes using the `size:` property in a [Card (Alpha)](<./Card _Alpha_.md>).
+{% columns %}
+{% column %}
+This example shows the `component.icon` with different icon sizes using the `size:` property in a [Card (Alpha)](<Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section4.jigx).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/icons/icon-sizes.jigx).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons/icons-sizes.jigx).
-:::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section4.jigx).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/icons/icon-sizes.jigx).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons/icons-sizes.jigx).&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fr7_n4lVvW220aIUVfsGR-20241113-084145.png" size="70" position="center" caption="Icon sizes" alt="Icon sizes" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fr7_n4lVvW220aIUVfsGR-20241113-084145.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fr7\_n4lVvW220aIUVfsGR-20241113-084145.png" size="70" position="center" caption="Icon sizes" alt="Icon sizes" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fr7\_n4lVvW220aIUVfsGR-20241113-084145.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-icon-sizes.jigx &#x20;
-
+{% tabs %}
+{% tab title="icon-sizes.jigx" %}
 ```yaml
 # components/icon-sizes.jigx
 type: component.default
@@ -125,8 +116,10 @@ children:
             size: small
 ```
 
-icons-sizes.jigx
 
+{% endtab %}
+
+{% tab title="icons-sizes.jigx" %}
 ```yaml
 # jigs/icons-sizes.jigx
 title: Icons Sizes
@@ -144,25 +137,29 @@ children:
   - type: component.custom-component
     componentId: icon-sizes
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-::::ExpandableHeading
-### Icon shapes & types
+#### Icon shapes & types
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qvyB3bcmZhUZFyyIrWOHN-20241113-103827.png" size="76" position="center" caption="Icon shapes" alt="Icons shapes" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qvyB3bcmZhUZFyyIrWOHN-20241113-103827.png" width="800" height="528" darkWidth="800" darkHeight="528"}
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qvyB3bcmZhUZFyyIrWOHN-20241113-103827.png" size="76" position="center" caption="Icon shapes" alt="Icons shapes" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qvyB3bcmZhUZFyyIrWOHN-20241113-103827.png" width="800" height="528" darkWidth="800" darkHeight="528"}
+{% endcolumn %}
 
-These examples demonstrate the various options for using icons with rounded, square and circled shapes in a [Card (Alpha)](<./Card _Alpha_.md>). By combining the `shape`, `type`, and `size` properties, you can achieve the desired appearance.
+{% column %}
+These examples demonstrate the various options for using icons with rounded, square and circled shapes in a [Card (Alpha)](<Card _Alpha_.md>). By combining the `shape`, `type`, and `size` properties, you can achieve the desired appearance.
 
 **Examples:**
 
-1. See the *custom components* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/basic-elements/icons) for icons-1.0.jigx to icons-3.5.jigx.
-2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons).
-3. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+1. See the _custom components_ example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/basic-elements/icons) for icons-1.0.jigx to icons-3.5.jigx.
+2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons).
+3. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-icon-1.0.jigx
-
+{% tabs %}
+{% tab title="icon-1.0.jigx" %}
 ```yaml
 # components/icon-1.0.jigx
 # See the YAML for icon-1.1.jigx to icon-1.5.jigx in GitHub, link provided
@@ -210,9 +207,9 @@ children:
             shape: rounded
             type: basic
 ```
+{% endtab %}
 
-icons-rounded.jigx
-
+{% tab title="icons-rounded.jigx" %}
 ```yaml
 # jigs/icons-rounded.jigx
 # See the YAML for sections in GitHub, link provided above.
@@ -262,30 +259,28 @@ children:
   - type: component.custom-component
     componentId: icons-1.5
 ```
-:::
-::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Icon bar
+#### Icon bar
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-Create an icon bar within in a `component.card` by configuring multiple `component.icon`. Add an `onPress` event to each icon that opens its associated URL. You can configure the `onPress` event to call various available [actions](./../Actions.md).
+{% columns %}
+{% column %}
+Create an icon bar within in a `component.card` by configuring multiple `component.icon`. Add an `onPress` event to each icon that opens its associated URL. You can configure the `onPress` event to call various available [actions](../Actions.md).
 
 **Example:**
 
-1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/icons/icons.jigx).
-2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons/icons-bar.jigx).
-:::
+1. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/icons/icons.jigx).
+2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons/icons-bar.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ldb9jwQQ5se9SWGcUOMRO-20241113-104500.png" size="70" position="center" caption="Icon bar" alt="Icon bar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ldb9jwQQ5se9SWGcUOMRO-20241113-104500.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ldb9jwQQ5se9SWGcUOMRO-20241113-104500.png" size="70" position="center" caption="Icon bar" alt="Icon bar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ldb9jwQQ5se9SWGcUOMRO-20241113-104500.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-icons.jigx
-
+{% tabs %}
+{% tab title="icons.jigx" %}
 ```yaml
 # components/icons.jigx
 type: component.default
@@ -356,9 +351,9 @@ children:
               options:
                 url: https://www.google.com/maps/
 ```
+{% endtab %}
 
-icons-bar.jigx
-
+{% tab title="icons-bar.jigx" %}
 ```yaml
 # jigs/icons-bar.jigx
 title: Icons Bar
@@ -369,6 +364,5 @@ children:
   - type: component.custom-component
     componentId: icons
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

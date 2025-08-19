@@ -2,48 +2,33 @@
 
 Certain properties are shared across all actions, ensuring consistency and flexibility in configuration. These common properties allow you to define behaviors, appearance, and functionality that apply universally, regardless of the specific actions used. This simplifies the setup process and helps maintain uniformity across different jigs.
 
-## Icons in actions
+### Icons in actions
 
 Adding an `icon` property in an action only applies to `swipeable`, `secondary`, and `header` actions. Primary actions do not support icon setups.
 
-## Working with parent & child actions
+### Working with parent & child actions
 
-&#x20;When configuring actions across parent and child jigs, the following behavior applies:
+When configuring actions across parent and child jigs, the following behavior applies:
 
-- If both the parent and child jigs have an `action` configured, the child’s configuration takes precedence and overrides the parent’s.
-- If only the parent has an `action`, it automatically applies to the child.
-- If only the child has an `action`, it is used in the parent jig as well.
+* If both the parent and child jigs have an `action` configured, the child’s configuration takes precedence and overrides the parent’s.
+* If only the parent has an `action`, it automatically applies to the child.
+* If only the child has an `action`, it is used in the parent jig as well.
 
-## Dual action buttons
+### Dual action buttons
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-Configure `actions` to display two action buttons on the jig's main screen. In this example, the first button has a secondary button `style` applied, by default, the button normally uses the primary color. Additionally, you can set up a third action, referred to as a secondary action button, that appears when the ellipsis (...) is tapped. This allows multiple action options to be accessible within a single jig.
-:::
+{% columns %}
+{% column %}
+Configure `actions` to display two action buttons on the jig's main screen. In this example, the first button has a secondary button `style` applied, by default, the button normally uses the primary color. Additionally, you can set up a third action, referred to as a secondary action button, that appears when the ellipsis (...) is tapped. This allows multiple action options to be accessible within a single jig.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-![Dual action buttons & secondary button](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TZVU6r07hz0LEPo_3zZ2W-20250225-092012.png "Dual action buttons & secondary button")
-:::
-::::
+{% column %}
+&#x20;![Dual action buttons & secondary button](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TZVU6r07hz0LEPo_3zZ2W-20250225-092012.png)&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="228">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Property</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Description</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>numberOfVisibleActions</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Configure this property to display multiple action buttons on the screen. The recommended number is two. A numerical value is expected, such as <code>2</code>.</p>
-    </td>
-  </tr>
-</table>
+| Property                 | Description                                                                                                                                          |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `numberOfVisibleActions` | Configure this property to display multiple action buttons on the screen. The recommended number is two. A numerical value is expected, such as `2`. |
 
 ```yaml
 actions:
@@ -79,4 +64,3 @@ actions:
             jobTitle: =@ctx.components.jobTitle.state.value
             companyName: =@ctx.components.companyName.state.value    
 ```
-

@@ -2,98 +2,25 @@
 
 This action allows the app to execute a SQL statement during local SQLite execution, which is used to edit either local tables or Dynamic Data tables. It's useful for running custom queries or updates in response to user interactions or app events. To improve performance, consider creating indexes on frequently queried columns—this enables SQLite to locate rows more efficiently using optimized lookup structures.
 
-## Configuration options
+### Configuration options
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="126">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>entities</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The entities/tables affected by the statements. Before executing the statements, a check ensures that the tables exist.
-      After execution any datasources that use these entities will be notified that the database was changed.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>statements</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>List of statements to execute in sequence. Multiple statements can be configured to execute in sequence.
-      <code>statement</code> - the SQL statement to execute against the solution database.
-      <code>parameters</code> - The parameters used in the above statement.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>title</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Provide the action button with a title, for example, <em>Delete record</em>.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="152.64453125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>entities</code></td><td>The entities/tables affected by the statements. Before executing the statements, a check ensures that the tables exist. After execution any datasources that use these entities will be notified that the database was changed.</td></tr><tr><td><code>statements</code></td><td>List of statements to execute in sequence. Multiple statements can be configured to execute in sequence. <code>statement</code> - the SQL statement to execute against the solution database. <code>parameters</code> - The parameters used in the above statement.</td></tr><tr><td><code>title</code></td><td>Provide the action button with a title, for example, <em>Delete record</em>.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>icon</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Select an to display when the action is configured as the secondary button or in a <a href="./../Components/jig-header.md">header action</a>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isHidden</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>style</code></p>
-    </td>
-    <td selected="false" align="left">
-      <ul>
-      <li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li>
-      <li><code>isDisabled</code> - Displays the action button as greyed out.</li>
-      <li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li>
-      <li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="155.98828125">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>Select an to display when the action is configured as the secondary button or in a <a href="../Components/jig-header.md">header action</a>.</td></tr><tr><td><code>isHidden</code></td><td><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</td></tr><tr><td><code>style</code></td><td><ul><li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li><li><code>isDisabled</code> - Displays the action button as greyed out.</li><li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li><li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li></ul></td></tr></tbody></table>
 
-## Considerations
+### Considerations
 
-- Validation currently only applies to SELECT statements and does not apply to INSERT, UPDATE, or DELETE operations, due to limitations in the SQLite parser.
-- Creating indexes should occur before actual queries are run against the tables. Creating the index in the `onLoad` event in the index.jigx file ensures the app loads with the exact data.
+* Validation currently only applies to SELECT statements and does not apply to INSERT, UPDATE, or DELETE operations, due to limitations in the SQLite parser.
+* Creating indexes should occur before actual queries are run against the tables. Creating the index in the `onLoad` event in the index.jigx file ensures the app loads with the exact data.
 
-## Examples and code snippets
+### Examples and code snippets
 
-### Execute SQL statements to update & delete
+#### Execute SQL statements to update & delete
 
-This example shows a list with an `onPress` event that executes a SQL statement to update the *Tags* table in the local database. A `swipeable` event is configured to delete the list item record from the local database.
+This example shows a list with an `onPress` event that executes a SQL statement to update the _Tags_ table in the local database. A `swipeable` event is configured to delete the list item record from the local database.&#x20;
 
-:::CodeblockTabs
-create-tag.jigx
-
+{% tabs %}
+{% tab title="create-tag.jigx" %}
 ```yaml
 title: Create Tag
 type: jig.default
@@ -150,9 +77,9 @@ children:
           options:
             label: Description
 ```
+{% endtab %}
 
-list-tag.jigx
-
+{% tab title="list-tag.jigx" %}
 ```yaml
 title: Tags (execute-sql)
 type: jig.list
@@ -214,9 +141,9 @@ item:
                   entities:
                     - tags
 ```
+{% endtab %}
 
-tags (datasource)
-
+{% tab title="tags (datasource)" %}
 ```yaml
 datasources:
   tags:
@@ -232,15 +159,15 @@ datasources:
          '$.count'
         FROM [tags]
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-### Execute SQL statements to create indexes
+#### Execute SQL statements to create indexes
 
 This example demonstrates how to use the `execute-sql` action to run the CREATE statements. It also shows how to incorporate indexes to optimize query performance. Using SQL statements in this way allows you to define and manage table structures, remove data, and improve efficiency through indexing—all directly from your Jigx solution. Creating indexes should occur before actual queries are run against the tables. In this example we create the index on the `assignedTo` column in the `onLoad` event in the index.jigx file, ensuring that only the tasks for the logged on user are displayed.
 
-:::CodeblockTabs
-index.jigx
-
+{% tabs %}
+{% tab title="index.jigx" %}
 ```yaml
 name: jigx-demo-2025
 title: jigx-demo-2025
@@ -266,9 +193,9 @@ tabs:
     jigId: create-task-dd
     icon: home-apps-logo
 ```
+{% endtab %}
 
-create-task-dd.jigx
-
+{% tab title="create-task-dd.jigx" %}
 ```yaml
 title: Create Task
 type: jig.default
@@ -310,9 +237,9 @@ children:
           options:
             label: Description
 ```
+{% endtab %}
 
-list-tasks-dd.jigx
-
+{% tab title="list-tasks-dd.jigx" %}
 ```yaml
 title: Tasks (DD)
 type: jig.list
@@ -371,9 +298,11 @@ item:
                 task: =@ctx.current.item
               linkTo: edit-task-dd
 ```
+{% endtab %}
+{% endtabs %}
 
-edit-task-dd.jigx
-
+{% tabs %}
+{% tab title="edit-task-dd.jigx" %}
 ```yaml
 title: Edit Task
 type: jig.default
@@ -425,9 +354,9 @@ children:
             style:
               isDisabled: true
 ```
+{% endtab %}
 
-task-dd.jigx
-
+{% tab title="task-dd.jigx" %}
 ```yaml
 type: datasource.sqlite
 options:
@@ -451,5 +380,5 @@ options:
   queryParameters:
     assignedTo: =@ctx.user.email
 ```
-:::
-
+{% endtab %}
+{% endtabs %}

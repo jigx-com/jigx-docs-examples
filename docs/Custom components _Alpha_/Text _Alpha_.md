@@ -1,152 +1,48 @@
 # Text (Alpha)
 
-:::hint{type="danger"}
+{% hint style="danger" %}
 This feature is currently in its **Alpha** stage of development.
 
-- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
-- In this phase, the feature may contain bugs or behave unpredictably.
-- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
-- We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
-:::
+* As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
+* In this phase, the feature may contain bugs or behave unpredictably.
+* Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
+* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
+{% endhint %}
 
-The custom component *text* allows adding text inside custom components. For example, adding text inside a [Card (Alpha)](<./Card _Alpha_.md>) or [View (Alpha)](<./View _Alpha_.md>).
+The custom component _text_ allows adding text inside custom components. For example, adding text inside a [Card (Alpha)](<Card _Alpha_.md>) or [View (Alpha)](<View _Alpha_.md>).
 
-For steps on creating a custom component, see [How to create a custom component](<./../Custom components _Alpha_.md>).
+For steps on creating a custom component, see [How to create a custom component](<../Custom components _Alpha_.md>).
 
-## Configuration options
+### Configuration options
 
 You can use `when` and `instanceId` with `component.text`, add the properties before the `options` property. The available list of options is shown below.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="145">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Options</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>value</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>align</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Determine the text alignment, options are:
-      <code>center</code>
-      <code>left</code>
-      <code>right</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>color</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Multiple, use IntelliSense to view the available list. See  to view the different colors.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>decoration</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>line-through</code>
-      <code>underline</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>emphasis</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Change the text's brightness and boldness.
-      <code>high</code>
-      <code>low</code>
-      <code>low-medium</code>
-      <code>medium</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>numberOfLines</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Use a number to indicate the number of lines of text.
-      Use an expression to determine the number of lines needed.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onPress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Multiple, use IntelliSense to view the list of available  to call.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>size</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Adjust the size of the text, the following sizes are available:
-      <code>extra-large</code>
-      <code>large</code>
-      <code>medium</code>
-      <code>regular</code>
-      <code>small</code>
-      <code>tiny</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>value</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Provide the text to be used. You can use an , as well as <a href="https://docs.jigx.com/localization">Localization</a>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>weight</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Determine how thick or bold the text must be, the following weights are available:
-      <code>bold</code>
-      <code>extra-bold</code>
-      <code>extra-light</code>
-      <code>light</code>
-      <code>regular</code>
-      <code>semi-bold</code></p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="153.96875">Options</th><th></th></tr></thead><tbody><tr><td><code>align</code></td><td>Determine the text alignment, options are: <code>center</code> <code>left</code> <code>right</code></td></tr><tr><td><code>color</code></td><td>Multiple, use IntelliSense to view the available list. See to view the different colors.</td></tr><tr><td><code>decoration</code></td><td><code>line-through</code> <code>underline</code></td></tr><tr><td><code>emphasis</code></td><td>Change the text's brightness and boldness. <code>high</code> <code>low</code> <code>low-medium</code> <code>medium</code></td></tr><tr><td><code>numberOfLines</code></td><td>Use a number to indicate the number of lines of text. Use an expression to determine the number of lines needed.</td></tr><tr><td><code>onPress</code></td><td>Multiple, use IntelliSense to view the list of available to call.</td></tr><tr><td><code>size</code></td><td>Adjust the size of the text, the following sizes are available: <code>extra-large</code> <code>large</code> <code>medium</code> <code>regular</code> <code>small</code> <code>tiny</code></td></tr><tr><td><code>value</code></td><td>Provide the text to be used. You can use an , as well as <a href="https://docs.jigx.com/localization">Localization</a>.</td></tr><tr><td><code>weight</code></td><td>Determine how thick or bold the text must be, the following weights are available: <code>bold</code> <code>extra-bold</code> <code>extra-light</code> <code>light</code> <code>regular</code> <code>semi-bold</code></td></tr></tbody></table>
 
-## Examples and code snippets
+### Examples and code snippets
 
-The examples use a set of custom components called *sections*. The sections are for titles, spacing, and context. The *sections* code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+The examples use a set of custom components called _sections_. The sections are for titles, spacing, and context. The _sections_ code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
 
-:::::ExpandableHeading
-### Text font sizes
+#### Text font sizes
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-dxYQtS-bNSkPWJeZxXb-h-20241113-113134.png" size="70" position="center" caption="Text font size" alt="Text font size" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-dxYQtS-bNSkPWJeZxXb-h-20241113-113134.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-dxYQtS-bNSkPWJeZxXb-h-20241113-113134.png" size="70" position="center" caption="Text font size" alt="Text font size" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-dxYQtS-bNSkPWJeZxXb-h-20241113-113134.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example shows the use of `component.text` with various font sizes configured using the `size` property, all displayed within a [Card (Alpha)](<./Card _Alpha_.md>).
+{% column %}
+This example shows the use of `component.text` with various font sizes configured using the `size` property, all displayed within a [Card (Alpha)](<Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-1.jigx).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-font-sizes.jigx).
-:::
-::::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-1.jigx).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-font-sizes.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-text-1.jigx
-
+{% tabs %}
+{% tab title="text-1.jigx" %}
 ```yaml
 # components/text-1.jigx
 type: component.default
@@ -182,9 +78,9 @@ children:
             value: Tiny 123
             size: tiny
 ```
+{% endtab %}
 
-text-font-sizes.jigx
-
+{% tab title="text-font-sizes.jigx" %}
 ```yaml
 # jigs/text-font-sizes.jigx
 title: Text (Font Sizes)
@@ -202,31 +98,29 @@ children:
   - type: component.custom-component
     componentId: text-1
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Text with line through
+#### Text with line through
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example shows how to apply strikethrough formatting to font of various sizes by using the `decoration: line-through` property of the `component.text`.
 
 **Examples:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-2.jigx).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-line-through.jigx).
-:::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-2.jigx).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-line-through.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qbyUXtdunBGIQRffCKP8C-20241113-113923.png" size="70" position="center" caption="Text with line through" alt="Text with line through" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qbyUXtdunBGIQRffCKP8C-20241113-113923.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qbyUXtdunBGIQRffCKP8C-20241113-113923.png" size="70" position="center" caption="Text with line through" alt="Text with line through" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qbyUXtdunBGIQRffCKP8C-20241113-113923.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-text-2.jigx
-
+{% tabs %}
+{% tab title="text-2.jigx" %}
 ```yaml
 # components/text-line-through.jigx
 type: component.default
@@ -268,9 +162,9 @@ children:
             size: tiny
             decoration: line-through
 ```
+{% endtab %}
 
-text-line-through.jigx
-
+{% tab title="text-line-through.jigx" %}
 ```yaml
 # jigs/text-line-through.jigx
 title: Text (Line-through)
@@ -288,31 +182,29 @@ children:
   - type: component.custom-component
     componentId: text-2
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Text with underlining
+#### Text with underlining
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Hw1klMA74o6_8I9xaduNU-20241113-114815.png" size="70" position="center" caption="Underlined text" alt="Underlined text" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Hw1klMA74o6_8I9xaduNU-20241113-114815.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Hw1klMA74o6\_8I9xaduNU-20241113-114815.png" size="70" position="center" caption="Underlined text" alt="Underlined text" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Hw1klMA74o6\_8I9xaduNU-20241113-114815.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example shows how to underline text with various font sizes using the `decoration: underline` property. The text is contained in a yellow [Card (Alpha)](<./Card _Alpha_.md>).
+{% column %}
+This example shows how to underline text with various font sizes using the `decoration: underline` property. The text is contained in a yellow [Card (Alpha)](<Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-3.jigx).
-2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-underline.jigx).
-3. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-:::
-::::
+1. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-3.jigx).
+2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-underline.jigx).
+3. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-text-3.jigx
-
+{% tabs %}
+{% tab title="text-3.jigx" %}
 ```yaml
 # components/text-3.jigx
 type: component.default
@@ -354,9 +246,9 @@ children:
             size: tiny
             decoration: underline
 ```
+{% endtab %}
 
-text-underline.jigx
-
+{% tab title="text-underline.jigx" %}
 ```yaml
 # jigs/text-custom-component.jigx
 title: Text (Underline)
@@ -374,31 +266,29 @@ children:
   - type: component.custom-component
     componentId: text-3
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Text with emphasis
+#### Text with emphasis
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example shows the `component.text` with various font sizes and emphasis styles, configured using the `emphasis` property, all displayed in a [Card (Alpha)](<./Card _Alpha_.md>).
+{% columns %}
+{% column %}
+This example shows the `component.text` with various font sizes and emphasis styles, configured using the `emphasis` property, all displayed in a [Card (Alpha)](<Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-4.jigx).
-2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-emphasis.jigx).
-3. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-:::
+1. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-4.jigx).
+2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-emphasis.jigx).
+3. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QEETvY3gSRqzzh4tSWD1V-20241113-115730.png" size="70" position="center" caption="Text with emphasis" alt="Text with emphasis" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QEETvY3gSRqzzh4tSWD1V-20241113-115730.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QEETvY3gSRqzzh4tSWD1V-20241113-115730.png" size="70" position="center" caption="Text with emphasis" alt="Text with emphasis" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QEETvY3gSRqzzh4tSWD1V-20241113-115730.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-text-4.jigx
-
+{% tabs %}
+{% tab title="text-4.jigx" %}
 ```yaml
 # components/text-4.jigx
 type: component.default
@@ -433,9 +323,9 @@ children:
             size: extra-large
             emphasis: low
 ```
+{% endtab %}
 
-text-emphasis.jigx
-
+{% tab title="text-emphasis.jigx" %}
 ```yaml
 # jigs/text-emphasis.jigx
 title: Text (Emphasis)
@@ -453,31 +343,29 @@ children:
   - type: component.custom-component
     componentId: text-4
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Text with alignment
+#### Text with alignment
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-b39lj_DjMe63LB7r_FopZ-20241113-120533.png" size="70" position="center" caption="Text alignment" alt="Text alignment" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-b39lj_DjMe63LB7r_FopZ-20241113-120533.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-b39lj\_DjMe63LB7r\_FopZ-20241113-120533.png" size="70" position="center" caption="Text alignment" alt="Text alignment" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-b39lj\_DjMe63LB7r\_FopZ-20241113-120533.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example demonstrates various text alignments with varying font sizes using the `align` property, all displayed in a [Card (Alpha)](<./Card _Alpha_.md>).
+{% column %}
+This example demonstrates various text alignments with varying font sizes using the `align` property, all displayed in a [Card (Alpha)](<Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-5.jigx).
-2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-alignment.jigx).
-3. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-:::
-::::
+1. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-5.jigx).
+2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-alignment.jigx).
+3. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-text-5.jigx
-
+{% tabs %}
+{% tab title="text-5.jigx" %}
 ```yaml
 # components/text-5.jigx
 type: component.default
@@ -519,9 +407,9 @@ children:
             size: tiny
             align: left
 ```
+{% endtab %}
 
-text-alignment.jigx
-
+{% tab title="text-alignment.jigx" %}
 ```yaml
 # jigs/text-alignment.jigx
 title: Text (Alignment)
@@ -539,31 +427,29 @@ children:
   - type: component.custom-component
     componentId: text-5
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Text over multiple lines
+#### Text over multiple lines
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example demonstrates how to control the number of text lines displayed in `component.text` using the `numberOfLines:` property, with the content displayed inside a [Card (Alpha)](<./Card _Alpha_.md>).
+{% columns %}
+{% column %}
+This example demonstrates how to control the number of text lines displayed in `component.text` using the `numberOfLines:` property, with the content displayed inside a [Card (Alpha)](<Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-6.jigx).
-2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-number-lines.jigx).
-3. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-:::
+1. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-6.jigx).
+2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-number-lines.jigx).
+3. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MjqAbpfVvW0TjoP4M-L2z-20241113-121315.png" size="70" position="center" caption="Multiple lines of text" alt="Multiple lines of text" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MjqAbpfVvW0TjoP4M-L2z-20241113-121315.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MjqAbpfVvW0TjoP4M-L2z-20241113-121315.png" size="70" position="center" caption="Multiple lines of text" alt="Multiple lines of text" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MjqAbpfVvW0TjoP4M-L2z-20241113-121315.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-text-6.jigx
-
+{% tabs %}
+{% tab title="text-6.jigx" %}
 ```yaml
 # components/text-6.jigx
 type: component.default
@@ -606,9 +492,9 @@ children:
             size: tiny
             numberOfLines: 3
 ```
+{% endtab %}
 
-text-number-lines.jigx
-
+{% tab title="text-number-lines.jigx" %}
 ```yaml
 # jigs/text-number-lines.jigx
 title: Text (Number Lines)
@@ -627,31 +513,29 @@ children:
   - type: component.custom-component
     componentId: text-6
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Text with color
+#### Text with color
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NDvPVznGR9XU44dCTG1Mm-20241113-122018.png" size="70" position="center" caption="Text with color" alt="Text with color" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NDvPVznGR9XU44dCTG1Mm-20241113-122018.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NDvPVznGR9XU44dCTG1Mm-20241113-122018.png" size="70" position="center" caption="Text with color" alt="Text with color" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NDvPVznGR9XU44dCTG1Mm-20241113-122018.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example shows how to set the color of text of varying font sizes, and spread over a number of lines by using the `color:` property, with the content displayed in a [Card (Alpha)](<./Card _Alpha_.md>).
+{% column %}
+This example shows how to set the color of text of varying font sizes, and spread over a number of lines by using the `color:` property, with the content displayed in a [Card (Alpha)](<Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-7.jigx).
-2. See the *jig* example in [GitHub]().
-3. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-:::
-::::
+1. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-7.jigx).
+2. See the _jig_ example in [GitHub](<Text _Alpha_.md>).
+3. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-text-7.jigx
-
+{% tabs %}
+{% tab title="text-7.jigx" %}
 ```yaml
 # components/text-7.jigx
 type: component.default
@@ -703,8 +587,10 @@ children:
             color: color5
 ```
 
-text-colored.jigx
 
+{% endtab %}
+
+{% tab title="text-colored.jigx" %}
 ```yaml
 # jigs/text-colored.jigx
 title: Text (Colored)
@@ -723,25 +609,29 @@ children:
   - type: component.custom-component
     componentId: text-7
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-::::ExpandableHeading
-### Text weights&#x20;
+#### Text weights
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ZloD22zynAUqeBo0e5---20241113-130811.png" size="92" position="center" caption="text weights" alt="text weights" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ZloD22zynAUqeBo0e5---20241113-130811.png" width="800" height="401" darkWidth="800" darkHeight="401"}
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ZloD22zynAUqeBo0e5---20241113-130811.png" size="92" position="center" caption="text weights" alt="text weights" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ZloD22zynAUqeBo0e5---20241113-130811.png" width="800" height="401" darkWidth="800" darkHeight="401"}
+{% endcolumn %}
 
-These examples demonstrate the various options for using text weights to ensure thickness and boldness of text combined with varying sizes, displayed in a [Card (Alpha)](<./Card _Alpha_.md>). By combining the `size`, and `weight` properties, you can achieve the desired appearance.
+{% column %}
+These examples demonstrate the various options for using text weights to ensure thickness and boldness of text combined with varying sizes, displayed in a [Card (Alpha)](<Card _Alpha_.md>). By combining the `size`, and `weight` properties, you can achieve the desired appearance.
 
 **Examples:**
 
-1. See the *custom component* example in \<[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-11.jigx).
-2. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-regular-weights.jigx).
-3. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+1. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-11.jigx).
+2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-regular-weights.jigx).
+3. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-text-11.jigx
-
+{% tabs %}
+{% tab title="text-11.jigx" %}
 ```yaml
 # components/text-11.jigx
 # See the YAML for text-8.jigx to text-13.jigx in GitHub,
@@ -785,9 +675,9 @@ children:
             size: regular
             weight: extra-light
 ```
+{% endtab %}
 
-text-regular-weights.jigx
-
+{% tab title="text-regular-weights.jigx" %}
 ```yaml
 # jigs/text-custom-component.jigx
 title: Text
@@ -804,6 +694,5 @@ children:
   - type: component.custom-component
     componentId: text-font-weights-extra-large
 ```
-:::
-::::
-
+{% endtab %}
+{% endtabs %}

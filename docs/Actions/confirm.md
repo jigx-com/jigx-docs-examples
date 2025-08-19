@@ -3,10 +3,6 @@ title: confirm
 slug: 41-N-confirm
 createdAt: Thu Jun 09 2022 18:18:56 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 17:44:28 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to use the "confirm" action in a user interface to create
-  customizable pop-up messages for safety and feedback purposes. This document
-  includes examples and code snippets for various scenari
 ---
 
 # confirm
@@ -26,22 +22,23 @@ A `confirm` action can be set up in various ways:
 
 ### Examples and code snippets
 
-:::::ExpandableHeading
-
 #### Confirm action with modal
 
-::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Confirm](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QCU14bRGTq8hi9CRQMjJC_con-hiphone13blueportrait.png)
+{% columns %}
+{% column %}
+![Confirm](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QCU14bRGTq8hi9CRQMjJC_con-hiphone13blueportrait.png)
+{% endcolumn %}
 
-:::
-
-:::VerticalSplitItem This example has a c`onfirm` action with a nested `execute-entity` action. After pressing the button 'Update employee', a modal will be displayed - here, you confirm if you wish to proceed. When confirmed, the `execute-entity` action will proceed.
+{% column %}
+This example has a c`onfirm` action with a nested `execute-entity` action. After pressing the button 'Update employee', a modal will be displayed - here, you confirm if you wish to proceed. When confirmed, the `execute-entity` action will proceed.
 
 **Example:**
 
-See the full example of confirm with modal in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/actions/confirm/confirm-with-modal.jigx). ::: ::::
+See the full example of confirm with modal in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/actions/confirm/confirm-with-modal.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs confirm-with-modal
-
+{% code title="confirm-with-modal" %}
 ```yaml
 actions:
   - children:
@@ -70,29 +67,27 @@ actions:
                   cancel: 'Cancel'
             - type: action.go-back      
 ```
-
-:::
-
-:::::
-
-:::::ExpandableHeading
+{% endcode %}
 
 #### Confirm action
 
-::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Confirm action](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DIJdtpUUQiTJCb7aHzUht_img9732iphone13blueportrait.png)
+{% columns %}
+{% column %}
+&#x20;![Confirm action](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DIJdtpUUQiTJCb7aHzUht_img9732iphone13blueportrait.png)
+{% endcolumn %}
 
-:::
-
-:::VerticalSplitItem This example has a confirm action nested inside an `execute-entity` action. When the form is submitted, the `confirm` action will show a pop-up stating that "Employee was added successfully". Note that as seen in the image, there is no option to confirm since _isConfirmedAutomatically_ is set to true. But you can see the result of the automatically confirmed action by tapping on "See the confirmation".
+{% column %}
+This example has a confirm action nested inside an `execute-entity` action. When the form is submitted, the `confirm` action will show a pop-up stating that "Employee was added successfully". Note that as seen in the image, there is no option to confirm since _isConfirmedAutomatically_ is set to true. But you can see the result of the automatically confirmed action by tapping on "See the confirmation".
 
 **Example:**
 
 See the full example of confirm in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/confirm/confirm.jigx).
 
-See the helper file [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/confirm/confirmation.jigx). ::: ::::
+See the helper file [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/confirm/confirmation.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs confirm
-
+{% code title="confirm" %}
 ```yaml
 actions:
   - children:
@@ -125,5 +120,4 @@ actions:
                         title: ''
             - type: action.go-back
 ```
-
-::: :::::
+{% endcode %}
