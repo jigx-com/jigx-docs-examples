@@ -1,54 +1,46 @@
 # grid-item
 
-The grid-item component serves as the child component whenever any grid component has been configured, as discussed in the [grid](./../grid.md)  section. The component determines how the grid items are displayed, allowing you to customize the UI elements in the grid.
+The grid-item component serves as the child component whenever any grid component has been configured, as discussed in the [grid](../grid.md) section. The component determines how the grid items are displayed, allowing you to customize the UI elements in the grid.
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](grid-item.md) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                     |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `size`             | Select the size that the grid-item will be displayed in, the options are `1x1`,`2x2`, `2x4`, `4x2`, `4x4`.                          |
-| `children`         | The following components can be used in the grid-item:&#xA;&#xA;[image](./../image.md)&#xA;[widgets](https://docs.jigx.com/widgets) |
+<table><thead><tr><th width="160.73046875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>size</code></td><td>Select the size that the grid-item will be displayed in, the options are <code>1x1</code>,<code>2x2</code>, <code>2x4</code>, <code>4x2</code>, <code>4x4</code>.</td></tr><tr><td><code>children</code></td><td>The following components can be used in the grid-item: <a href="../image.md">image</a> <a href="https://docs.jigx.com/widgets">widgets</a></td></tr></tbody></table>
 
-| **Other options** |                                                                                                                                                                                                                                                                                                                                                                          |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `icon`            | The icon will be displayed on the  of the jig. Start typing the name of the icon to invoke the available list in IntelliSense. See [Jigx icons](https://docs.jigx.com/jigx-icons) for information on working with icons. The `icon` property applies to `component.jig-widget` without a `widgetId`. See the considerations below for the rules governing icon behavior. |
-| `title`           | By default, the jig's title is displayed. You can override it by adding the `title` property to the `grid-item`, either with a custom `title` or with `''` (a blank space) to remove the title entirely.                                                                                                                                                                 |
+<table><thead><tr><th width="170.640625">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>The icon will be displayed on the of the jig. Start typing the name of the icon to invoke the available list in IntelliSense. See <a href="https://docs.jigx.com/jigx-icons">Jigx icons</a> for information on working with icons. The <code>icon</code> property applies to <code>component.jig-widget</code> without a <code>widgetId</code>. See the considerations below for the rules governing icon behavior.</td></tr><tr><td><code>title</code></td><td>By default, the jig's title is displayed. You can override it by adding the <code>title</code> property to the <code>grid-item</code>, either with a custom <code>title</code> or with <code>''</code> (a blank space) to remove the title entirely.</td></tr></tbody></table>
 
-## Considerations
+### Considerations
 
-- When using the `grid-item` with a `component.jig-widget`, note the following:
-  - A `widgetId` is required if the referenced jig includes a widget configuration. This value should match the `Widget Name` specified in the referenced jig.
-  - If no widget configuration exists, the widget’s icon is inherited from the jig’s `icon` value. If no `icon` is specified there either, a default icon is used. You can override the icon by specifying one in the `component.jig-widget` of the `grid-item`.
-- For a `1x1` widget, or a `component.widget` with no widgetId, the following rules apply:
-  - If no `icon` is specified, a default icon is displayed.
-  - If an `icon` is configured in the linked jig, that icon is used.
-  - If an `icon` is specified in the `component.widget` in the `grid-item`, it overrides all other icon settings.
-- A jig with inputs in it's `title` will display without a title (blank) as the jig would not have received those inputs.
+* When using the `grid-item` with a `component.jig-widget`, note the following:
+  * A `widgetId` is required if the referenced jig includes a widget configuration. This value should match the `Widget Name` specified in the referenced jig.
+  * If no widget configuration exists, the widget’s icon is inherited from the jig’s `icon` value. If no `icon` is specified there either, a default icon is used. You can override the icon by specifying one in the `component.jig-widget` of the `grid-item`.
+* For a `1x1` widget, or a `component.widget` with no widgetId, the following rules apply:
+  * If no `icon` is specified, a default icon is displayed.
+  * If an `icon` is configured in the linked jig, that icon is used.
+  * If an `icon` is specified in the `component.widget` in the `grid-item`, it overrides all other icon settings.
+* A jig with inputs in it's `title` will display without a title (blank) as the jig would not have received those inputs.
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Grid-item with image and widget
+#### Grid-item with image and widget
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-swPsNWBEeUaZR5ulp043w-20250203-103644.png" size="66" position="center" caption="Grid-items" alt="Grid-items" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-swPsNWBEeUaZR5ulp043w-20250203-103644.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-swPsNWBEeUaZR5ulp043w-20250203-103644.png" size="66" position="center" caption="Grid-items" alt="Grid-items" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-swPsNWBEeUaZR5ulp043w-20250203-103644.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, three grid-items are configured, each with a different size and type.
 
 1. Grid-item using an image component with a size specified of 4x2.
 2. Grid-item using a list widget with a size specified as 2x2. The grid-item automatically shows the list.
 3. Grid-item using a chart widget with a size of 2x2.
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-grid-item-sales.jigx
-
+{% tabs %}
+{% tab title="grid-item-sales.jigx" %}
 ```yaml
 children:
     # Add a grid to contain multiple grid-items.  
@@ -85,9 +77,9 @@ children:
                   jigId: chart-bar1_2x2
                   widgetId: sales
 ```
+{% endtab %}
 
-list-with-stage-dd
-
+{% tab title="list-with-stage-dd" %}
 ```yaml
 # Supporting file for the first widget jig in the grid-item.
 # Using jig.list ensures the widget automatically displays,
@@ -120,9 +112,9 @@ item:
       subtitle: =@ctx.current.item.board
          
 ```
+{% endtab %}
 
-chart-bar1\_2x2
-
+{% tab title="chart-bar1_2x2" %}
 ```yaml
 # Supporting file for the second widget jig in the grid-item.
 title: Sales to date
@@ -200,33 +192,30 @@ widgets:
             - data: =@ctx.datasources.static-data-2
               color: positive
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Grid-item options
+#### Grid-item options
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example shows the various configurations available to customize a `grid-item`, making it a versatile widget component. Options include:
 
-- Default `icon`.
-- Customized `icons`.
-- Overridden or hidden titles using the `title` property.
-- `onPress` actions for interactive behavior.
+* Default `icon`.
+* Customized `icons`.
+* Overridden or hidden titles using the `title` property.
+* `onPress` actions for interactive behavior.
 
-**Examples:**
-See the full code example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/grid-item/grid-item-auto.jigx" newTab="true" hasDisabledNofollow="false"}.
-:::
+**Examples:** See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/grid-item/grid-item-auto.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-eWxJs3no2ja7nEJdJ1LMG-20250605-104403.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-eWxJs3no2ja7nEJdJ1LMG-20250605-104403.png" size="66" width="1313" height="2676" position="center" caption}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-eWxJs3no2ja7nEJdJ1LMG-20250605-104403.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-eWxJs3no2ja7nEJdJ1LMG-20250605-104403.png" size="66" width="1313" height="2676" position="center" caption}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-default-icon
-
+{% tabs %}
+{% tab title=" default-icon" %}
 ```yaml
 - type: component.grid
   options:
@@ -240,9 +229,9 @@ default-icon
             options:
               jigId: placeholder                                                                           
 ```
+{% endtab %}
 
-custom-icon
-
+{% tab title="custom-icon" %}
 ```yaml
 - type: component.grid
   options:
@@ -259,9 +248,9 @@ custom-icon
               # Configuring the title with (' ') removes the title entirely.
               title: ' '
 ```
+{% endtab %}
 
-custom-title
-
+{% tab title="custom-title" %}
 ```yaml
 - type: component.grid
   options:
@@ -279,9 +268,11 @@ custom-title
               # Configuring the title with (' ') removes the title entirely.
               title: Log
 ```
+{% endtab %}
+{% endtabs %}
 
-onPress-event
-
+{% tabs %}
+{% tab title="onPress-event" %}
 ```yaml
 - type: component.grid-item
   options:
@@ -307,9 +298,9 @@ onPress-event
                 color: warning
               buttonText: Exit
 ```
+{% endtab %}
 
-placeholder.jigx
-
+{% tab title="placeholder.jigx" %}
 ```yaml
 title: Default icon
 type: jig.default
@@ -326,9 +317,9 @@ children:
             label: Placeholder
             value: Placeholder
 ```
+{% endtab %}
 
-time-log.jigx
-
+{% tab title="time-log.jigx" %}
 ```yaml
 title: Time log
 type: jig.default
@@ -355,6 +346,5 @@ children:
             label: Placeholder
             value: Placeholder
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

@@ -2,106 +2,44 @@
 
 This component displays a webpage from a specified URL, content from a datasource, or custom HTML.
 
-:::hint{type="info"}
-You can also use the [jig.document](<./../Jig Types/jig_document.md>) type to display web pages in full-screen mode or pass messages from your HTML content via JavaScript to the Jigx App.
-:::
+{% hint style="info" %}
+&#x20;You can also use the [jig.document](<../Jig Types/jig_document.md>) type to display web pages in full-screen mode or pass messages from your HTML content via JavaScript to the Jigx App.
+{% endhint %}
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](web-view.md) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="285">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>uri</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The source to be displayed in the web-view, for example, a URL.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="278.1953125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>uri</code></td><td>The source to be displayed in the web-view, for example, a URL.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="291">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>content</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>HTML to render in the web-view.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>height</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The height of the web-view.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isEditable</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>A very basic implementation, if set to <code>true</code>, the web-view <code>content</code> becomes editable. This works only with <code>content</code>, not with a <code>uri</code>. The <code>isEditable</code> property is only available when using the web-view in a .</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isTrackingTransparencyRequired</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>If set to <code>true</code> tracking transparency permission modal is shown before opening the URL. The default setting is <code>true</code>.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="281.4453125">Other options</th><th></th></tr></thead><tbody><tr><td><code>content</code></td><td>HTML to render in the web-view.</td></tr><tr><td><code>height</code></td><td>The height of the web-view.</td></tr><tr><td><code>isEditable</code></td><td>A very basic implementation, if set to <code>true</code>, the web-view <code>content</code> becomes editable. This works only with <code>content</code>, not with a <code>uri</code>. The <code>isEditable</code> property is only available when using the web-view in a .</td></tr><tr><td><code>isTrackingTransparencyRequired</code></td><td>If set to <code>true</code> tracking transparency permission modal is shown before opening the URL. The default setting is <code>true</code>.</td></tr></tbody></table>
 
-## Consideration
+### Consideration
 
-- The `component.web-view` can be used in [jig.fullscreen](<./../Jig Types/jig_fullscreen.md>), if the content needs to fill the screen.
+* The `component.web-view` can be used in [jig.fullscreen](<../Jig Types/jig_fullscreen.md>), if the content needs to fill the screen.
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Web-view example (URL)
+#### Web-view example (URL)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE_SLn_img9582iphone13blueportrait.png" size="80" position="center" caption="Web-view with URL " alt="Web-view with URL " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE_SLn_img9582iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE\_SLn\_img9582iphone13blueportrait.png" size="80" position="center" caption="Web-view with URL " alt="Web-view with URL " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE\_SLn\_img9582iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, we open a target URL in the web-view component.
 
 If the target URL is tracking data (e.g., cookies etc.), you are required by Apple to ask for user consent using the `isTrackingTransparencyRequired` option. It will ask for user consent the first time any web view in your solution tries to open a target URL.
 
-**Examples**:
-See the full example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/web-view/static-data/web-view-example/web-view-example.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/web-view/dynamic-data/web-view-example-dynamic/web-view-example-dynamic.jigx).
+**Examples**: See the full example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/web-view/static-data/web-view-example/web-view-example.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/web-view/dynamic-data/web-view-example-dynamic/web-view-example-dynamic.jigx).
 
-**Datasource**:
-See the full datasource for static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/web-view.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/web-view-dynamic.jigx).
-:::
-::::
+**Datasource**: See the full datasource for static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/web-view.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/web-view-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-web-view (static)
-
+{% tabs %}
+{% tab title="web-view (static)" %}
 ```yaml
 type: jig.default
 title: Web view
@@ -112,9 +50,9 @@ children:
       uri: =@ctx.datasources.web-view.url
       isTrackingTransparencyRequired: true
 ```
+{% endtab %}
 
-web-view (dynamic)
-
+{% tab title="web-view (dynamic)" %}
 ```yaml
 type: jig.default
 title: Web view
@@ -127,9 +65,9 @@ children:
       isTrackingTransparencyRequired: true
       height: 1000
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   web-view:
@@ -138,9 +76,9 @@ datasources:
       data:
         - url: https://www.jigx.com
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   web-view-dynamic:
@@ -156,26 +94,22 @@ datasources:
         FROM [default/links] 
         WHERE '$.category' = "web-view"
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Web-view example (HTML Content)
+#### Web-view example (HTML Content)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv_img9581iphone13blueportrait.png" size="80" position="center" caption="Web-view with HTML content" alt="Web-view with HTML content" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv_img9581iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv\_img9581iphone13blueportrait.png" size="80" position="center" caption="Web-view with HTML content" alt="Web-view with HTML content" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv\_img9581iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+{% endcolumn %}
 
-:::VerticalSplitItem
-In this example, we are passing raw HTML content to the web-view component. This can either be inline content (see example below) or content from a datasource.
-If your HTML content does not render as expected (e.g. font too small etc.) embed the meta HTML tag used in the example below in your HTML content.
-:::
-::::
+{% column %}
+In this example, we are passing raw HTML content to the web-view component. This can either be inline content (see example below) or content from a datasource. If your HTML content does not render as expected (e.g. font too small etc.) embed the meta HTML tag used in the example below in your HTML content.
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-web-view-raw
-
+{% code title="web-view-raw" %}
 ```yaml
 title: Web-View
 type: jig.default
@@ -193,25 +127,22 @@ children:
           </body>
         </html>
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### Editable web-view content (Fullscreen)
+#### Editable web-view content (Fullscreen)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 In this example, the web-view component is used to make notes on a job. It is configured in a `jig.full-screen` to display `content` from a datasource. The `isEditable` property is set to `true`, allowing the text in the web-view to be edited. An `execute-entity` action ensures the updated HTML is saved to the database.
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4yhXXgCmRFjbhuG8YuyU--20250519-104335.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4yhXXgCmRFjbhuG8YuyU--20250519-104335.gif" size="66" width="681" height="1377" position="center" caption="Editable web-view" alt="Editable web-view"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4yhXXgCmRFjbhuG8YuyU--20250519-104335.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4yhXXgCmRFjbhuG8YuyU--20250519-104335.gif" size="66" width="681" height="1377" position="center" caption="Editable web-view" alt="Editable web-view"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-web-view-edit.jigx
-
+{% tabs %}
+{% tab title=" web-view-edit.jigx" %}
 ```yaml
 title: Notes
 type: jig.full-screen
@@ -259,9 +190,9 @@ actions:
                   title: Notes added successfully
                   buttonText: Exit
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   work-notes: 
@@ -280,6 +211,5 @@ datasources:
       queryParameters:
         jobNo: A1
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

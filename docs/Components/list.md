@@ -1,6 +1,6 @@
 # list
 
-This component is very similar to the [jig.list](<./../Jig Types/jig_list.md>) the only exception is that this list component can be used in a [jig.default](<./../Jig Types/jig_default.md>) with other items, whereas the [jig.list](<./../Jig Types/jig_list.md>) is a jig dedicated to a list only. With this component, you can typically combine a list with other components. Another difference is that [jig.list](<./../Jig Types/jig_list.md>) automatically display lists on the widget, which is not true with lists on a [jig.default](<./../Jig Types/jig_default.md>).
+This component is very similar to the [jig.list](<../Jig Types/jig_list.md>) the only exception is that this list component can be used in a [jig.default](<../Jig Types/jig_default.md>) with other items, whereas the [jig.list](<../Jig Types/jig_list.md>) is a jig dedicated to a list only. With this component, you can typically combine a list with other components. Another difference is that [jig.list](<../Jig Types/jig_list.md>) automatically display lists on the widget, which is not true with lists on a [jig.default](<../Jig Types/jig_default.md>).
 
 As far as the functionality goes, the same list options are available as with the List Jig where the list itself can either be a list of values with list items or it can be one of the following:
 
@@ -9,207 +9,50 @@ As far as the functionality goes, the same list options are available as with th
 3. [Expander](https://docs.jigx.com/examples/expander)
 4. [Pie charts](https://docs.jigx.com/examples/pie-chart)
 5. [Product item](https://docs.jigx.com/examples/product-item)
-6. [Stage](./list/stage.md)
+6. [Stage](list/stage.md)
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](list.md) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="209">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>data</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The items you want to show in the list.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>item</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>There is a list of components available to use:
-      <a href="./charts/bar-chart.md">bar-chart</a>
-      <a href="./expander.md">expander</a>
-      <a href="./charts/pie-chart.md">pie-chart</a>
-      <a href="./list/product-item.md">product-item</a>
-      <a href="./list/stage.md">stage</a>
-      If you use the list component in a <a href="https://docs.jigx.com/examples/jigcomposite">https://docs.jigx.com/examples/jigcomposite</a> jig.composite  , the maximum number of displayed items is 8. If you set the <code>maximumItemsToRender</code> to a higher number, the rest of the list will display after clicking on the 'Show more' option.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>maximumItemsToRender</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The number of items you would like to display in your list.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="205.90625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>data</code></td><td>The items you want to show in the list.</td></tr><tr><td><code>item</code></td><td><p>There is a list of components available to use: <br><a href="charts/bar-chart.md">bar-chart</a><br><a href="expander.md">expander</a><br><a href="charts/pie-chart.md">pie-chart</a><br><a href="list/product-item.md">product-item</a></p><p> <a href="list/stage.md">stage</a><br> If you use the list component in a  <a href="../Jig Types/jig_composite.md">jig.composite</a> , the maximum number of displayed items is 8. If you set the <code>maximumItemsToRender</code> to a higher number, the rest of the list will display after clicking on the 'Show more' option.</p></td></tr><tr><td><code>maximumItemsToRender</code></td><td>The number of items you would like to display in your list.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="210">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>badge</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:</p>
-      <ul>
-      <li>To display as a red dot using the <code>empty</code> value.</li>
-      <li>A red dot with a number using an expression to perform a count.
-      For example, counting the number of tasks in the list.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>filter</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Allows you to create lists filtered by a key/value. Set the filter to open on a specific tab in a list.</p>
-      <ul>
-      <li><code>initialValue</code> - Predefine the default selected tab for a filter on the list, when opening the jig the default filter tab is displayed.</li>
-      <li><code>data</code> -  define the filter tabs using:
-      <ul>
-      <li><code>title</code> - give the filter a name. The text that will be displayed in the tab, for example, in-stock.</li>
-      <li><code>value</code> - The value that the list filter returns. Use the following expressions to return this value:
-      - <code>=@ctx.components.my-list.state.filter</code> (for a list in a default jig)
-      - <code>=@ctx.jig.state.filter</code> (for a list jig)
-      For <code>true/false</code> values that are saved as <strong>boolean</strong> ensure the filter has a <strong>boolean</strong> value.
-      For <code>true/false</code> values that are saved as <strong>string</strong> ensure the filter has a <strong>string</strong> value.
-      When using the <code>value</code> property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.</li>
-      </ul>
-      </li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isHorizontal</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The boolean value that transforms the list into a horizontal one.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isSearchable</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The boolean value which allows you to add a search bar on the top of your list.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onShowMorePress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Action to be performed when you press on the <em>show more</em> button. This is <code>type: action.go-to</code> with a <code>linkTo:</code> option.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="156.55078125">Other options</th><th></th></tr></thead><tbody><tr><td><code>badge</code></td><td><p>Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:</p><ul><li>To display as a red dot using the <code>empty</code> value.</li><li>A red dot with a number using an expression to perform a count. For example, counting the number of tasks in the list.</li></ul></td></tr><tr><td><code>filter</code></td><td><p>Allows you to create lists filtered by a key/value. Set the filter to open on a specific tab in a list.</p><ul><li><code>initialValue</code> - Predefine the default selected tab for a filter on the list, when opening the jig the default filter tab is displayed.</li><li><p><code>data</code> - define the filter tabs using:</p><ul><li><code>title</code> - give the filter a name. The text that will be displayed in the tab, for example, in-stock.</li><li><code>value</code> - The value that the list filter returns. Use the following expressions to return this value: - <code>=@ctx.components.my-list.state.filter</code> (for a list in a default jig) - <code>=@ctx.jig.state.filter</code> (for a list jig) For <code>true/false</code> values that are saved as <strong>boolean</strong> ensure the filter has a <strong>boolean</strong> value. For <code>true/false</code> values that are saved as <strong>string</strong> ensure the filter has a <strong>string</strong> value. When using the <code>value</code> property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.</li></ul></li></ul></td></tr><tr><td><code>isHorizontal</code></td><td>The boolean value that transforms the list into a horizontal one.</td></tr><tr><td><code>isSearchable</code></td><td>The boolean value which allows you to add a search bar on the top of your list.</td></tr><tr><td><code>onShowMorePress</code></td><td>Action to be performed when you press on the <em>show more</em> button. This is <code>type: action.go-to</code> with a <code>linkTo:</code> option.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="219">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>State Configuration</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Key</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Notes</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.current.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>amount
-      checked</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.component.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>amount
-      checked</p>
-    </td>
-    <td selected="false" align="left">
-      <p>State is the variable of the component.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.solution.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>activeItemId
-      now</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Global state variable that can be used throughout the solution.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="209.51171875">State Configuration</th><th width="129.65234375">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.current.state.</code></td><td>amount checked</td><td>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</td></tr><tr><td><code>=@ctx.component.state.</code></td><td>amount checked</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-## Considerations
+### Considerations
 
-- When using the `value` property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.
+* When using the `value` property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.
 
-## List functionality
+### List functionality
 
-::::::ExpandableHeading
-### List with Search functionality
+#### List with Search functionality
 
-:::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![List with search](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_bTEwNxapZnocXZQDpY_Z_jih8qge9gqguamhh99d6cimg2152iphone13blueportrait.png "List with search")
-:::
+{% columns %}
+{% column %}
+&#x20;![List with search](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_bTEwNxapZnocXZQDpY_Z_jih8qge9gqguamhh99d6cimg2152iphone13blueportrait.png) ::
+{% endcolumn %}
 
-::::VerticalSplitItem
-This example displays the search functionality of a basic list jig that allows you to search a large list  instantly based on certain keywords entered.
+{% column %}
+This example displays the search functionality of a basic list jig that allows you to search a large list instantly based on certain keywords entered.
 
 **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-search-sd.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-search-dd.jigx).
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-search-sd.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-search-dd.jigx).
 
-:::hint{type="warning"}
+{% hint style="warning" %}
 By design, search functionality is automatically disabled when using it on a composite jig.
-:::
+{% endhint %}
 
 **Datasource:**
 
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-search-dd.jigx).
-::::
-:::::
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-search-dd.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-search (static)
-
+{% tabs %}
+{% tab title="search (static)" %}
 ```yaml
 children:
   - type: component.list
@@ -225,9 +68,9 @@ children:
           title: =@ctx.current.item.service
           subtitle: =@ctx.current.item.description
 ```
+{% endtab %}
 
-search (dynamic)
-
+{% tab title="search (dynamic)" %}
 ```yaml
 children:
   - type: component.list
@@ -243,9 +86,9 @@ children:
           title: =@ctx.current.item.service
           subtitle: =@ctx.current.item.area
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   repair-services-static:
@@ -333,9 +176,9 @@ datasources:
           service: Plumbing
           time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -361,33 +204,27 @@ datasources:
       queryParameters:
         search: =@ctx.components.cleaning_serv_items.state.searchText
 ```
-:::
-::::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### List with Filter functionality
+#### List with Filter functionality
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![List with filter](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bHiss0wgKVKlzkhquqLtf_lt6pfxjmnbkzj07kxqormlist-filteriphone13blueportrait.png "List with ")
-:::
+{% columns %}
+{% column %}
+&#x20;![List with filter](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bHiss0wgKVKlzkhquqLtf_lt6pfxjmnbkzj07kxqormlist-filteriphone13blueportrait.png)
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example helps to filter the items in a list to create meaningful sections or split the data for ease of use.
 
-**Examples**:
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-filter-label-sd.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-filter-label-dd.jigx).
+**Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-filter-label-sd.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-filter-label-dd.jigx).
 
-**Datasource**:
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-filter-label-sd.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-filter-label-dd.jigx).
-:::
-::::
+**Datasource**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-filter-label-sd.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-filter-label-dd.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-filter-label (static)
-
+{% tabs %}
+{% tab title="filter-label (static)" %}
 ```yaml
 children:
   - type: component.list
@@ -414,9 +251,9 @@ children:
             text: =$substring($substringBefore(@ctx.current.item.service, " "), 1, 1) & $substring($substringAfter(@ctx.current.item.service, " ") , 1, 1)
             uri: =@ctx.current.item.image
 ```
+{% endtab %}
 
-filter-label (dynamic)
-
+{% tab title="filter-label (dynamic)" %}
 ```yaml
 children:
   - type: component.list
@@ -445,9 +282,9 @@ children:
             text: =$substring($substringBefore(@ctx.current.item.service, " "), 1, 1) & $substring($substringAfter(@ctx.current.item.service, " ") , 1, 1)
             uri: =@ctx.current.item.image
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   cleaning-services-static:
@@ -535,9 +372,9 @@ datasources:
           service: Pool Cleaning
           time: 45
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -563,28 +400,24 @@ datasources:
       queryParameters:
           filter: =@ctx.components.cleaning_serv_items.state.filter
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Filtered list with default tab set
+#### Filtered list with default tab set
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 In this example, there are four tabs to filter on. By default we want the jig to open on the third tab to show the in progress work by default. This is achieved by setting the `initialValue` property to the `filter` property.
 
-**Examples**:
-See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-filter-initialvalue.jigx).
-:::
+**Examples**: See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-filter-initialvalue.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Tcoz4aCsZXsAf45JxF6ym-20240913-142629.PNG" size="80" position="center" caption="Filtered list with default tab" alt="Filtered list with default tab" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Tcoz4aCsZXsAf45JxF6ym-20240913-142629.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Tcoz4aCsZXsAf45JxF6ym-20240913-142629.PNG" size="80" position="center" caption="Filtered list with default tab" alt="Filtered list with default tab" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Tcoz4aCsZXsAf45JxF6ym-20240913-142629.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-default-w-filter-initialvalue
-
+{% code title="default-w-filter-initialvalue" %}
 ```yaml
 title: Filter List with default tab 
 description: A dynamic list displaying filter options opening with a default tab showing tasks in progress
@@ -659,37 +492,30 @@ children:
             uri: =@ctx.current.item.Profile  
       maximumItemsToRender: 50
 ```
-:::
-:::::
+{% endcode %}
 
-::::::ExpandableHeading
-### List with Search and Filter functionality
+#### List with Search and Filter functionality
 
-:::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![List with search & filter](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9Z_36FsaTrAMuCRas1_OB_vmadtk6wrobldr9mo8fvilist-searchiphone13blueportrait.png "List with search & filter")
-:::
+{% columns %}
+{% column %}
+&#x20;![List with search & filter](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9Z_36FsaTrAMuCRas1_OB_vmadtk6wrobldr9mo8fvilist-searchiphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-::::VerticalSplitItem
-Combine the search and filter capabilities to enhance the list functionalty.
+{% column %}
+Combine the search and filter capabilities to enhance the list functionality.
 
-**Examples**:
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-search-filter-sd.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-search-filter-dd.jigx).
+**Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-search-filter-sd.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-search-filter-dd.jigx).
 
-:::hint{type="warning"}
-By design, search functionality is automatically disabled when using it on a composite jig.
-:::
+{% hint style="warning" %}
+&#x20;By design, search functionality is automatically disabled when using it on a composite jig.&#x20;
+{% endhint %}
 
-**Datasource**:
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-search-filter-sd.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-search-filter-dd.jigx").
-::::
-:::::
+**Datasource**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-search-filter-sd.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-search-filter-dd.jigx%22).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-search-filter (static)
-
+{% tabs %}
+{% tab title="search-filter (static)" %}
 ```yaml
 children:
   - type: component.list
@@ -719,8 +545,10 @@ children:
             uri: =@ctx.current.item.image
 ```
 
-search-filter (dynamic)
 
+{% endtab %}
+
+{% tab title="search-filter (dynamic)" %}
 ```yaml
 children:
   - type: component.list
@@ -751,8 +579,10 @@ children:
             uri: =@ctx.current.item.image
 ```
 
-datasources (static)
 
+{% endtab %}
+
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   cleaning-services-static:
@@ -840,9 +670,9 @@ datasources:
           service: Pool Cleaning
           time: 45
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -868,36 +698,29 @@ datasources:
         filter: =@ctx.components.cleaning_serv_items.state.filter
         search: =@ctx.components.cleaning_serv_items.state.searchText
 ```
-:::
-::::::
+{% endtab %}
+{% endtabs %}
 
-::::::ExpandableHeading
-### Horizontal list
+#### Horizontal list
 
-:::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Horizontal](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/PUolQC5rzXgpeRKu8dIlf_w42pf50snuglxtnxqaupyzoyiwlc9fs6cevvalpuslist-horizontal-w-janeiphone13blueportrait.png "Horizontal")
-:::
+{% columns %}
+{% column %}
+&#x20;![Horizontal](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/PUolQC5rzXgpeRKu8dIlf_w42pf50snuglxtnxqaupyzoyiwlc9fs6cevvalpuslist-horizontal-w-janeiphone13blueportrait.png)
+{% endcolumn %}
 
-::::VerticalSplitItem
-This is an example of a horizontal list with UI elements such as an image and values configured. Horizontal lists are especially helpful when used on a composite jig.
-**Examples**:
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-horizontal-list-sd.jigx).
-See the full example using dynamic data in [GitHub]().
+{% column %}
+This is an example of a horizontal list with UI elements such as an image and values configured. Horizontal lists are especially helpful when used on a composite jig. **Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-horizontal-list-sd.jigx). See the full example using dynamic data in [GitHub](list.md).
 
-**Datasources**:
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
+**Datasources**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
 
-:::hint{type="warning"}
-Horizontal lists cannot be used with the [section](./entity/section.md) component as an empty white jig will be displayed.
-:::
-::::
-:::::
+{% hint style="warning" %}
+&#x20;Horizontal lists cannot be used with the [section](entity/section.md) component as an empty white jig will be displayed.&#x20;
+{% endhint %}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-horizontal-list (static)
-
+{% tabs %}
+{% tab title="horizontal-list (static)" %}
 ```yaml
 children:
   - type: component.entity
@@ -925,9 +748,9 @@ children:
             text: ''
             uri: =@ctx.current.item.image
 ```
+{% endtab %}
 
-horizontal-list (dynamic)
-
+{% tab title="horizontal-list (dynamic)" %}
 ```yaml
 children:
   - type: component.entity
@@ -955,9 +778,9 @@ children:
             text: ''
             uri: =@ctx.current.item.image
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   repair-services-static:
@@ -1045,9 +868,9 @@ datasources:
           service: Plumbing
           time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -1074,10 +897,9 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-::::::
+{% endtab %}
+{% endtabs %}
 
-## See also
+### See also
 
-- [State](https://docs.jigx.com/state)
-
+* [State](https://docs.jigx.com/state)

@@ -4,130 +4,36 @@ The segmented-control is a horizontal control consisting of segments that allows
 
 This component enhances user experience by providing a quick and intuitive way to navigate without needing drop-downs or separate screens. When designing a segmented control, consider:
 
-- Keeping the number of segments minimal for readability
-- Providing immediate visual feedback when a selection is made
+* Keeping the number of segments minimal for readability
+* Providing immediate visual feedback when a selection is made
 
-## Configuration options
+### Configuration options
 
 Some properties are common to all components, see [Common component properties](https://docs.jigx.com/examples/common-component-properties) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="135">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>data</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Specify the <code>title</code> to display in each segment and a data <code>value</code>. Repeat the <code>title</code> and <code>value</code> properties to create the number of segments in the control.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>title</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The label for the segment. You can use in the title.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>value</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The data value for the segment that is used to display content when toggled. Can be used in an expression or to set the <code>initialValue</code>.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="214.85546875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>data</code></td><td>Specify the <code>title</code> to display in each segment and a data <code>value</code>. Repeat the <code>title</code> and <code>value</code> properties to create the number of segments in the control.</td></tr><tr><td><code>title</code></td><td>The label for the segment. You can use in the title.</td></tr><tr><td><code>value</code></td><td>The data value for the segment that is used to display content when toggled. Can be used in an expression or to set the <code>initialValue</code>.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="139">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>initialValue</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Configure which segment to display as active when the jig opens. By default there are no active segments. Tap the segment to activate it.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isDisabled</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Set to <code>true</code> disables the segmented-control (ready only mode). By default the property's value is <code>false</code>.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="216.66796875">Other options</th><th></th></tr></thead><tbody><tr><td><code>initialValue</code></td><td>Configure which segment to display as active when the jig opens. By default there are no active segments. Tap the segment to activate it.</td></tr><tr><td><code>isDisabled</code></td><td>Set to <code>true</code> disables the segmented-control (ready only mode). By default the property's value is <code>false</code>.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="222,116">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>State Configuration</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Key</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Notes</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.component.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>value</p>
-    </td>
-    <td selected="false" align="left">
-      <p>State is the variable of the component.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.solution.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>activeItemId now</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Global state variable that can be used throughout the solution.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="218.76953125">State Configuration</th><th width="148.5390625">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>value</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Basic segmented-control
+#### Basic segmented-control
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pHtkDiH6Gt4WbxB3RqjTn-20250210-123111.gif" size="70" position="center" caption="Segmented-controls" alt="Segmented-controls" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pHtkDiH6Gt4WbxB3RqjTn-20250210-123111.gif" width="957" height="1920" darkWidth="957" darkHeight="1920"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pHtkDiH6Gt4WbxB3RqjTn-20250210-123111.gif" size="70" position="center" caption="Segmented-controls" alt="Segmented-controls" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pHtkDiH6Gt4WbxB3RqjTn-20250210-123111.gif" width="957" height="1920" darkWidth="957" darkHeight="1920"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This examples displays a basic segmented-control - A `segmented-control` with four segments. When a segment is tapped, its corresponding `value` is displayed in an `entity-field`.
 
-**Example**:
-See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-basic.jigx" newTab="true"}.
-:::
-::::
+**Example**: See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-basic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-segmented-control-basic.jigx
-
+{% code title="segmented-control-basic.jigx" %}
 ```yaml
 title: Segmented-control
 type: jig.default
@@ -161,28 +67,24 @@ children:
                   # segments.                
                   value: =@ctx.components.numbers.state.value      
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### Segmented-control with a datasource
+#### Segmented-control with a datasource
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iP2xku1EYLHyeMpFIT6kY-20250210-123945.gif" size="70" position="center" caption="Segment-control with a datasource" alt="Segment-control with a datasource" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iP2xku1EYLHyeMpFIT6kY-20250210-123945.gif" width="957" height="1920" darkWidth="957" darkHeight="1920"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iP2xku1EYLHyeMpFIT6kY-20250210-123945.gif" size="70" position="center" caption="Segment-control with a datasource" alt="Segment-control with a datasource" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iP2xku1EYLHyeMpFIT6kY-20250210-123945.gif" width="957" height="1920" darkWidth="957" darkHeight="1920"}&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This examples displays a segmented-control with a datasource - This `segmented-control` dynamically retrieves its `titles` and `values` from a datasource. It consists of three segments, when a segment is tapped, its `value` is displayed in an `entity-field`.
 
-**Example:**
-See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-datasource.jigx" newTab="true"}.
-:::
-::::
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-datasource.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-segmented-control-datasource.jigx
-
+{% tabs %}
+{% tab title="segmented-control-datasource.jigx" %}
 ```yaml
 title: Segmented-control
 type: jig.default
@@ -208,9 +110,9 @@ children:
                # Display the segments values in a field as you toggle the segments.                
                 value: =@ctx.components.work.state.value   
 ```
+{% endtab %}
 
-datasource (static)
-
+{% tab title="datasource (static)" %}
 ```yaml
 datasources:
   content:
@@ -230,28 +132,24 @@ datasources:
           icon: hourglass-1-alternate 
           value: ⏱️ record time spent on the job 
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Disabled segmented-control
+#### Disabled segmented-control
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-tKWjaJY0548jX_q1W9VxD-20250210-124219.png" size="70" position="center" caption="Disabled segmented-controls" alt="Disabled segmented-controls" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-tKWjaJY0548jX_q1W9VxD-20250210-124219.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-tKWjaJY0548jX\_q1W9VxD-20250210-124219.png" size="70" position="center" caption="Disabled segmented-controls" alt="Disabled segmented-controls" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-tKWjaJY0548jX\_q1W9VxD-20250210-124219.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This examples displays a disabled segmented-control - A `segmented-control` with three segments that is set to a disabled state, preventing user interaction.
 
-**Example:**
-See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-disabled.jigx" newTab="true"}.
-:::
-::::
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-disabled.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-segmented-control-disabled.jigx
-
+{% code title="segmented-control-disabled.jigx" %}
 ```yaml
 title: Segmented-control
 type: jig.default
@@ -275,31 +173,24 @@ children:
               - title: Clock Out
                 value: 3  
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### Preselected segmented-control
+#### Preselected segmented-control
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MCjH8aCTNSekHLyZVyObM-20250210-124737.gif" size="70" position="center" caption="Segmented-controls" alt="Segmented-controls" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MCjH8aCTNSekHLyZVyObM-20250210-124737.gif" width="957" height="1920" darkWidth="957" darkHeight="1920"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MCjH8aCTNSekHLyZVyObM-20250210-124737.gif" size="70" position="center" caption="Segmented-controls" alt="Segmented-controls" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MCjH8aCTNSekHLyZVyObM-20250210-124737.gif" width="957" height="1920" darkWidth="957" darkHeight="1920"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This examples displays a preselected segmented-control - A `segmented-control` with three segments, where the second segment is set as active by default when the jig opens. When a segment is tapped, its `value` is displayed in an `entity-field`.
 
-**Example:**
-See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-preselected.jigx" newTab="true"}.
-:::
-::::
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-preselected.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-segmented-control-preselected.jigx
-
-```yaml
-title: Segmented-control
-type: jig.default
+<pre class="language-yaml" data-title="segmented-control-preselected.jigx"><code class="lang-yaml"><strong>title: Segmented-control
+</strong>type: jig.default
          
 children:
   - type: component.section
@@ -328,29 +219,24 @@ children:
                 label: Roster
                 # Display the segments values in a field as you toggle the segments.                 
                 value: =@ctx.components.default-segment.state.value    
-```
-:::
-:::::
+</code></pre>
 
-:::::ExpandableHeading
-### Segmented-control using state
+#### Segmented-control using state
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example demonstrates how to configure the `entity-field` and `form` component state to display the relevant content based on the segment tapped. The value entered in the `form` when the *Email* segment is displayed is used to generate a PDF and share it via email.
+{% columns %}
+{% column %}
+This example demonstrates how to configure the `entity-field` and `form` component state to display the relevant content based on the segment tapped. The value entered in the `form` when the _Email_ segment is displayed is used to generate a PDF and share it via email.
 
-**Example:**
-See the full example in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-state.jigx" newTab="true"}.
-:::
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/segmented-control/segmented-control-state.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bh2ApSeAzFg1cn7wN_ef4-20250331-134936.gif" size="66" position="center" caption="Segmented-control using state" alt="Segmented-control using state" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bh2ApSeAzFg1cn7wN_ef4-20250331-134936.gif" width="536" height="1080" darkWidth="536" darkHeight="1080"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bh2ApSeAzFg1cn7wN\_ef4-20250331-134936.gif" size="66" position="center" caption="Segmented-control using state" alt="Segmented-control using state" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bh2ApSeAzFg1cn7wN\_ef4-20250331-134936.gif" width="536" height="1080" darkWidth="536" darkHeight="1080"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-segmented-control-state.jigx
-
+{% tabs %}
+{% tab title="segmented-control-state.jigx" %}
 ```yaml
 title: Invoice
 description: "Send an invoice via: "
@@ -437,9 +323,9 @@ actions:
                   message: Global Invoice 
                   subject: Invoice for January       
 ```
+{% endtab %}
 
-monthly-invoice-HTML.jigx
-
+{% tab title="monthly-invoice-HTML.jigx" %}
 ```yaml
 type: datasource.static
 options:
@@ -585,6 +471,5 @@ options:
           </body>
           </html>
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

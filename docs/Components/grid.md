@@ -1,37 +1,32 @@
 # grid
 
-The grid component enables you to create grid layouts in your app, organizing content into rows and columns for a visually consistent and flexible interface. It helps align elements proportionally, ensuring a structured design. The grid is ideal for creating galleries to display photos or product images, dashboards, menus, and product lists. This component is very similar to the [jig.grid](<./../Jig Types/jig_grid.md>)  the only exception is that this component can be used in a [jig.default](<./../Jig Types/jig_default.md>) with other components.
+The grid component enables you to create grid layouts in your app, organizing content into rows and columns for a visually consistent and flexible interface. It helps align elements proportionally, ensuring a structured design. The grid is ideal for creating galleries to display photos or product images, dashboards, menus, and product lists. This component is very similar to the [jig.grid](<../Jig Types/jig_grid.md>) the only exception is that this component can be used in a [jig.default](<../Jig Types/jig_default.md>) with other components.
 
 ## Configuration options
 
 The grid component has two available configuration options:
 
-1. **Auto Grid** - used to create a grid layout from a datasource. This is similar in configuration to a [jig.list](<./../Jig Types/jig_list.md>) where a single `grid-item` is configured and iterates through the datasource.
+1. **Auto Grid** - used to create a grid layout from a datasource. This is similar in configuration to a [jig.list](<../Jig Types/jig_list.md>) where a single `grid-item` is configured and iterates through the datasource.
 2. **Custom Grid** - used to create a custom grid layout using widgets, images, or custom components in various sizes.
 
-| **Core structure** |                                                                                                                                                                         |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`             | Within a grid component, the  component is used to define each of the elements in the grid layout. Within the `grid-item` a select set of components can be configured. |
-| `data`             | Configure a datasource to call the data in the grid layout. The data property is required for the Auto Grid, but is optional for the Custom Grid selection.             |
+<table><thead><tr><th width="153.90234375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>type</code></td><td>Within a grid component, the component is used to define each of the elements in the grid layout. Within the <code>grid-item</code> a select set of components can be configured.</td></tr><tr><td><code>data</code></td><td>Configure a datasource to call the data in the grid layout. The data property is required for the Auto Grid, but is optional for the Custom Grid selection.</td></tr></tbody></table>
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Auto grid
+#### Auto grid
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fJilLcZQaseZ0gjR18gfb-20250107-084107.png" size="60" position="center" caption="Auto grid" alt="Auto grid" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fJilLcZQaseZ0gjR18gfb-20250107-084107.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fJilLcZQaseZ0gjR18gfb-20250107-084107.png" size="60" position="center" caption="Auto grid" alt="Auto grid" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fJilLcZQaseZ0gjR18gfb-20250107-084107.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
-In this example, a gallery of images is created to showcase the services a company offers. The `jig.default` type, grid component and datasource is used, enabling a simple configuration based on the records in the datasource. The `component.grid-item` only needs to be configured once using the expression `=@ctx.current.item.` followed by the desired data field. Using `current` loops through the datasource, creating a grid item for each data record. Note that the specified `size` will apply to all returned records.
-:::
-::::
+{% column %}
+In this example, a gallery of images is created to showcase the services a company offers. The `jig.default` type, grid component and datasource is used, enabling a simple configuration based on the records in the datasource. The `component.grid-item` only needs to be configured once using the expression `=@ctx.current.item.` followed by the desired data field. Using `current` loops through the datasource, creating a grid item for each data record. Note that the specified `size` will apply to all returned records.;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-grid-cleaning-service.jigx
-
+{% tabs %}
+{% tab title="grid-cleaning-service.jigx" %}
 ```yaml
 title: Cleaning services
 description: Available services in your area.
@@ -60,9 +55,9 @@ children:
                 source:
                   uri: =@ctx.current.item.image
 ```
+{% endtab %}
 
-datasource (Dynamic Data)
-
+{% tab title="datasource (Dynamic Data)" %}
 ```yaml
 datasources:
   cleaning: 
@@ -84,25 +79,23 @@ datasources:
         FROM [default/cleaning-services]
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Custom grid
+#### Custom grid
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example demonstrates combining the grid component with other components (entity and form) in a default jig. The grid is customized to show an image component (4x2), a list widget (2x2) and chart widget (2x2).
-:::
+{% columns %}
+{% column %}
+This example demonstrates combining the grid component with other components (entity and form) in a default jig. The grid is customized to show an image component (4x2), a list widget (2x2) and chart widget (2x2).&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" size="66" position="center" caption="Custom grid " alt="Custom grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U\_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" size="66" position="center" caption="Custom grid " alt="Custom grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U\_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-grid-custom-component
-
+{% tabs %}
+{% tab title="grid-custom-component" %}
 ```yaml
 title: Global Sales 
 type: jig.default
@@ -174,9 +167,9 @@ children:
             options:
               label: Flight number        
 ```
+{% endtab %}
 
-list-with-stage-dd
-
+{% tab title="list-with-stage-dd" %}
 ```yaml
 # Supporting file for the first widget jig in the grid-item.
 # Using jig.list ensures the widget automatically displays,
@@ -208,9 +201,9 @@ item:
       title: =@ctx.current.item.fromabrv
       subtitle: =@ctx.current.item.board
 ```
+{% endtab %}
 
-chart-bar1\_2x2
-
+{% tab title="chart-bar1_2x2" %}
 ```yaml
 # Supporting file for the second widget jig in the grid-item.
 title: Sales to date
@@ -288,6 +281,5 @@ widgets:
             - data: =@ctx.datasources.static-data-2
               color: positive
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

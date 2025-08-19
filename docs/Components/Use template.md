@@ -3,10 +3,6 @@ title: Use template
 slug: CNts-use-template
 createdAt: Thu May 25 2023 10:24:29 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 14 2024 09:03:38 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to use component templates for fast and efficient component creation
-  in your project. Customize these preconfigured code blocks and easily insert
-  them. Check out our detailed instructions an
 ---
 
 # Use template
@@ -15,6 +11,6 @@ description: >-
 
 For steps on how to use component templates, see [Component Templates](https://docs.jigx.com/component-templates)
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ![Component template gallery](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_OsD78JQNeAWwK34pgQ3a_templatecomponent.png) :::
+&#x20;![Component template gallery](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_OsD78JQNeAWwK34pgQ3a_templatecomponent.png)&#x20;
 
-:::VerticalSplitItem ![Component template option](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gOtQ7cHK6CWawkfsxEozh_templatescompcode.png) ::: ::::
+&#x20;![Component template option](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gOtQ7cHK6CWawkfsxEozh_templatescompcode.png)&#x20;

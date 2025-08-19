@@ -1,107 +1,53 @@
 # stage
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-A stage is a primary container for displaying various UI components on the left and right, typically showing a start-and-end concept.
-:::
+{% columns %}
+{% column %}
+A stage is a primary container for displaying various UI components on the left and right, typically showing a start-and-end concept.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yWymE6Po4TH-JLyB7xKK2_cc-list-stage.png" size="88" position="center" caption="Stage in a list" alt="Stage in a list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yWymE6Po4TH-JLyB7xKK2_cc-list-stage.png" width="800" height="531" darkWidth="800" darkHeight="531"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yWymE6Po4TH-JLyB7xKK2\_cc-list-stage.png" size="88" position="center" caption="Stage in a list" alt="Stage in a list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yWymE6Po4TH-JLyB7xKK2\_cc-list-stage.png" width="800" height="531" darkWidth="800" darkHeight="531"}&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](stage.md) for a list and their configuration options.
 
-| **Core structure** |                                                                   |
-| ------------------ | ----------------------------------------------------------------- |
-| `left`             | Add content to the `left` element as text, or use an expression.  |
-| `right`            | Add content to the `right` element as text, or use an expression. |
-| `title`            | Add `titles` for the text on the `left` and `right` elements.     |
+<table><thead><tr><th width="154.28515625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>left</code></td><td>Add content to the <code>left</code> element as text, or use an expression.</td></tr><tr><td><code>right</code></td><td>Add content to the <code>right</code> element as text, or use an expression.</td></tr><tr><td><code>title</code></td><td>Add <code>titles</code> for the text on the <code>left</code> and <code>right</code> elements.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="137">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>icon</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add an icon to show in the <code>centerElement</code>. A list of icons is available. See  for more information.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>style</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>isWaitingSync</code> - Will display a "Waiting sync" indicator (cloud with a line through it), a visual indicator showing that data has not been synced to the cloud yet.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>subtitle</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add a <code>subtitle</code> to either the left or right element as text, or use an expression.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="157.2734375">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>Add an icon to show in the <code>centerElement</code>. A list of icons is available. See for more information.</td></tr><tr><td><code>style</code></td><td><code>isWaitingSync</code> - Will display a "Waiting sync" indicator (cloud with a line through it), a visual indicator showing that data has not been synced to the cloud yet.</td></tr><tr><td><code>subtitle</code></td><td>Add a <code>subtitle</code> to either the left or right element as text, or use an expression.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="135">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Actions</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onPress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The action is triggered while pressing on an item in the stage. Use IntelliSense (ctrl+space) to see the list of available actions.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="161.8515625">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>The action is triggered while pressing on an item in the stage. Use IntelliSense (ctrl+space) to see the list of available actions.</td></tr></tbody></table>
 
-## Consideration
+### Consideration
 
-- `component.stage` can only be used in the `component.list` or an [expander](./../expander.md).
+* `component.stage` can only be used in the `component.list` or an [expander](../expander.md).
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### List with stage
+#### List with stage
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RjT9ffFl39FHcgn4CQhU4_n-v2bpok86ynufyojh-jvlist-default-jig-with-stage-listiphone13blueportrait.png" size="80" position="center" caption="Stage for flights" alt="Stage for flights" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RjT9ffFl39FHcgn4CQhU4_n-v2bpok86ynufyojh-jvlist-default-jig-with-stage-listiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RjT9ffFl39FHcgn4CQhU4\_n-v2bpok86ynufyojh-jvlist-default-jig-with-stage-listiphone13blueportrait.png" size="80" position="center" caption="Stage for flights" alt="Stage for flights" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RjT9ffFl39FHcgn4CQhU4\_n-v2bpok86ynufyojh-jvlist-default-jig-with-stage-listiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows list items with left and right elements and typically shows a start-and-end concept. Flight schedules are used in this example. However, you can choose a different icon for many different use cases.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-stage-list-sd.jigx).
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-stage-list-sd.jigx).\
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-stage-list-dd.jigx).
 
-**Datasource:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-static.jigx).
+**Datasource:** \
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-static.jigx). \
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-dynamic.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-default-w-stage-list (static)
-
+{% tabs %}
+{% tab title="default-w-stage-list (static)" %}
 ```yaml
 children:
   - type: component.entity
@@ -125,9 +71,9 @@ children:
             title: =@ctx.current.item.fromabrv
             subtitle: =@ctx.current.item.disembark
 ```
+{% endtab %}
 
-default-w-stage-list (dynamic)
-
+{% tab title="default-w-stage-list (dynamic)" %}
 ```yaml
 children:
   - type: component.entity
@@ -151,9 +97,9 @@ children:
             title: =@ctx.current.item.fromabrv
             subtitle: =@ctx.current.item.disembark
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   flight-schedule-static:
@@ -203,9 +149,9 @@ datasources:
           toabrv: DAY
           image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   flight-schedule-dynamic:
@@ -231,35 +177,33 @@ datasources:
           '$.toabrv' 
         FROM [default/flight-schedule]
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### List with expander and stage as a Header
+#### List with expander and stage as a Header
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih_dHdqqMASbcxefEw-_rxx3cpwfsmgibkcygpxznlist-with-expander.png" size="80" position="center" caption="Stage in list with expanders" alt="Stage in list with expanders" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih_dHdqqMASbcxefEw-_rxx3cpwfsmgibkcygpxznlist-with-expander.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih\_dHdqqMASbcxefEw-\_rxx3cpwfsmgibkcygpxznlist-with-expander.png" size="80" position="center" caption="Stage in list with expanders" alt="Stage in list with expanders" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih\_dHdqqMASbcxefEw-\_rxx3cpwfsmgibkcygpxznlist-with-expander.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows a list of expanders that have used the stage components as their header elements.
 
 Expanders are ideal for displaying additional information without having to navigate to another page.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-exp-stage-list-sd.jigx).
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-exp-stage-list-sd.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-exp-stage-list-dd.jigx).
 
-**Datasource:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-dynamic.jigx).
-:::
-::::
+**Datasource:** \
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-static.jigx). \
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-dynamic.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-list-expander (static)
-
+{% tabs %}
+{% tab title="list-expander (static)" %}
 ```yaml
 children:
   - type: component.entity
@@ -336,9 +280,9 @@ children:
                   centerPosition: middle
                   address: =@ctx.current.item.to
 ```
+{% endtab %}
 
-list-expander (dynamic)
-
+{% tab title="list-expander (dynamic)" %}
 ```yaml
 children:
   - type: component.entity
@@ -415,9 +359,9 @@ children:
                   centerPosition: middle
                   address: =@ctx.current.item.to
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   flight-schedule-static:
@@ -467,9 +411,9 @@ datasources:
           toabrv: DAY
           image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   flight-schedule-dynamic:
@@ -495,6 +439,5 @@ datasources:
           '$.toabrv' 
         FROM [default/flight-schedule]
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

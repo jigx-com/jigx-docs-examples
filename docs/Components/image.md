@@ -1,144 +1,52 @@
 # image
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 You can use this component as a unique visual identifier. Display a profile photo, company logo, photo of products, and much more to improve your application's visual experience.
 
-The `image` component can be part of the [header](./jig-header.md)and as a child component in [jig.default](<./../Jig Types/jig_default.md>).
-:::
+The `image` component can be part of the [header](jig-header.md) and as a child component in [jig.default](<../Jig Types/jig_default.md>).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{alt="Image Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gZBreuXUNc-zSldzmyWaI_image.png" size="60" caption="Image Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gZBreuXUNc-zSldzmyWaI_image.png" width="800" height="495" darkWidth="800" darkHeight="495"}
-:::
-::::
+{% column %}
+Image\[]{alt="Image Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gZBreuXUNc-zSldzmyWaI\_image.png" size="60" caption="Image Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gZBreuXUNc-zSldzmyWaI\_image.png" width="800" height="495" darkWidth="800" darkHeight="495"}
+{% endcolumn %}
+{% endcolumns %}
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](image.md) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="117">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>uri</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The image source (either a remote URL or a local file resource). The currently supported formats are png, jpg, jpeg, bmp, gif, webp (Android only), psd (iOS only).</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="151.33984375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>uri</code></td><td>The image source (either a remote URL or a local file resource). The currently supported formats are png, jpg, jpeg, bmp, gif, webp (Android only), psd (iOS only).</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="118">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>height</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Change the height of the image in pixels. Ensure a proper <code>resizeMode</code> is used to achieve the best results on different device resolutions. The default is set at 196 pixels.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>resizeMode</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Resize the image when the frame doesn't match the raw image dimensions. The following options are available:</p>
-      <ul>
-      <li><code>center</code> - If the image is bigger than the area it is scaled down making it completely visible. The image is not scaled up.</li>
-      <li><code>contain</code> - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or less than the corresponding dimension of the view (minus padding).</li>
-      <li><code>cover</code> - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or larger than the corresponding dimension of the view (minus padding).</li>
-      <li><code>stretch</code> - Scales the width and height of the image independently, This may change the aspect ratio of the <code>source</code>.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>subtitle</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Adds a subtitle that is displayed on or next to the image based on image context.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>title</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Display the text content for the title that can be displayed on or next to the image based on the image context.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>width</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Change the width of the image in pixels. Ensure a proper <code>resizeMode</code> is used to achieve the best results on different device resolutions.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="156.54296875">Other options</th><th></th></tr></thead><tbody><tr><td><code>height</code></td><td>Change the height of the image in pixels. Ensure a proper <code>resizeMode</code> is used to achieve the best results on different device resolutions. The default is set at 196 pixels.</td></tr><tr><td><code>resizeMode</code></td><td><p>Resize the image when the frame doesn't match the raw image dimensions. The following options are available:</p><ul><li><code>center</code> - If the image is bigger than the area it is scaled down making it completely visible. The image is not scaled up.</li><li><code>contain</code> - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or less than the corresponding dimension of the view (minus padding).</li><li><code>cover</code> - Scales the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or larger than the corresponding dimension of the view (minus padding).</li><li><code>stretch</code> - Scales the width and height of the image independently, This may change the aspect ratio of the <code>source</code>.</li></ul></td></tr><tr><td><code>subtitle</code></td><td>Adds a subtitle that is displayed on or next to the image based on image context.</td></tr><tr><td><code>title</code></td><td>Display the text content for the title that can be displayed on or next to the image based on the image context.</td></tr><tr><td><code>width</code></td><td>Change the width of the image in pixels. Ensure a proper <code>resizeMode</code> is used to achieve the best results on different device resolutions.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="120">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Actions</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onPress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The action is triggered when pressing on the image. Use IntelliSense (ctrl+space) to see the list of available actions.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="158.0703125">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>The action is triggered when pressing on the image. Use IntelliSense (ctrl+space) to see the list of available actions.</td></tr></tbody></table>
 
 ### Considerations
 
-- Dynamic Data cannot save images larger than 350K. Jigx does not recommend storing images in Dynamic Data or storing images as base64 in the Dynamic Data database.
-- The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline.  For more details, refer to [Assets](https://docs.jigx.com/assets).
+* Dynamic Data cannot save images larger than 350K. Jigx does not recommend storing images in Dynamic Data or storing images as base64 in the Dynamic Data database.
+* The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/assets).
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Image in Header
+#### Image in Header
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Image in header](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kBN2nzInf6mQuzw80sqWo_l8cou8hxm5ixnzx3gtni5image-headeriphone13blueportrait.png "Image in header")
-:::
+{% columns %}
+{% column %}
+&#x20;![Image in header](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kBN2nzInf6mQuzw80sqWo_l8cou8hxm5ixnzx3gtni5image-headeriphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 Image is used as a background picture in the header section.
 
-**Examples:**
-See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/static-data/header-image/header-image.jigx).
-See the example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/dynamic-data/header-image/header-image-dynamic.jigx).
+**Examples:** See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/static-data/header-image/header-image.jigx). See the example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/dynamic-data/header-image/header-image-dynamic.jigx).
 
-**Datasource:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/image-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/image.jigx).
-:::
-::::
+**Datasource:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/image-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/image.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-header (static)
-
+{% tabs %}
+{% tab title="header (static)" %}
 ```yaml
 header:
   type: component.jig-header
@@ -151,9 +59,9 @@ header:
         source:
           uri: =@ctx.datasources.story-static[0].image
 ```
+{% endtab %}
 
-header (dynamic)
-
+{% tab title="header (dynamic)" %}
 ```yaml
 header:
   type: component.jig-header
@@ -166,9 +74,9 @@ header:
         source:
           uri: =@ctx.datasources.story[2].photo
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   story-static:
@@ -193,9 +101,9 @@ datasources:
           thumbnail: https://images.unsplash.com/photo-1589591830600-7ba977995a5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80
           url: https://www.travelers.com/resources/home/working-remotely/10-tips-for-staying-productive-when-working-from-home
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   story:
@@ -217,33 +125,27 @@ datasources:
         FROM [default/avatar] 
         WHERE '$.category' = "image-source"
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Image in jig/default
+#### Image in jig/default
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Image in a jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YaAqpkNpiqadnCkOkHLZE_cjowjjtfwvnbkcesgiy8limage-storyiphone13blueportrait.png "Image in a jig")
-:::
+{% columns %}
+{% column %}
+&#x20;![Image in a jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YaAqpkNpiqadnCkOkHLZE_cjowjjtfwvnbkcesgiy8limage-storyiphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 Image as a children component in `default` jig.
 
-**Examples**:
-See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/static-data/default-image/default-image.jigx).
-See the example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/dynamic-data/default-image/default-image-dynamic.jigx).
+**Examples**: See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/static-data/default-image/default-image.jigx). See the example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/dynamic-data/default-image/default-image-dynamic.jigx).
 
-**Datasource**:
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/story-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/story.jigx).
-:::
-::::
+**Datasource**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/story-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/story.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-jig (static)
-
+{% tabs %}
+{% tab title="jig (static)" %}
 ```yaml
 title: Image in jig/default
 type: jig.default
@@ -256,9 +158,9 @@ children:
       source:
         uri: =@ctx.datasources.story-static[0].image
 ```
+{% endtab %}
 
-jig (dynamic)
-
+{% tab title="jig (dynamic)" %}
 ```yaml
 title: Image in jig/default
 type: jig.default
@@ -272,8 +174,10 @@ children:
         uri: =@ctx.datasources.story[2].photo
 ```
 
-datasources (static)
 
+{% endtab %}
+
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   story-static:
@@ -298,9 +202,9 @@ datasources:
           thumbnail: https://images.unsplash.com/photo-1589591830600-7ba977995a5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80
           url: https://www.travelers.com/resources/home/working-remotely/10-tips-for-staying-productive-when-working-from-home
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   story:
@@ -322,6 +226,5 @@ datasources:
         FROM [default/avatar] 
         WHERE '$.category' = "image-source"
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

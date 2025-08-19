@@ -1,180 +1,45 @@
 # interactive-image-item
 
-The interactive-image-item is used in the `item` property of the [interactive-image](./../interactive-image.md) component that servers as a container. The `interactive-image-item` can be set in various ways using the properties of the [interactive-image](./../interactive-image.md) as well as the properties described below.
+The interactive-image-item is used in the `item` property of the [interactive-image](../interactive-image.md) component that servers as a container. The `interactive-image-item` can be set in various ways using the properties of the [interactive-image](../interactive-image.md) as well as the properties described below.
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](interactive-image-item.md) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="211">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>id</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Provide an id for the item that is used for filtering and as a key</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>percentageCoordinates</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Percentage <code>x</code> and <code>y</code> coordinates are required.  Coordinates are represented as absolute percentage numbers between 0-100.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>title</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Give a name/title for the point, for example, Table 1.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="214.78515625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>id</code></td><td>Provide an id for the item that is used for filtering and as a key</td></tr><tr><td><code>percentageCoordinates</code></td><td>Percentage <code>x</code> and <code>y</code> coordinates are required. Coordinates are represented as absolute percentage numbers between 0-100.</td></tr><tr><td><code>title</code></td><td>Give a name/title for the point, for example, Table 1.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="215">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>color</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>This allows you to set a specific color for the active/selected point (e.g., when the point is selected or active).</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>icon</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>This allows you to set a specific icon for different states (e.g., when the point is selected active or inactive).</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>index</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Index for the initial animation.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>groupId</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>This property allows you to add the item to the group. The groups are created inside the  component. Effective only initial load.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>style</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The following style options are available:
-      <code>isActive</code> - shows if the point is active or available for selection.
-      <code>isDisabled</code> - shows if the point is disabled and is unavailable for selection.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="217.328125">Other options</th><th></th></tr></thead><tbody><tr><td><code>color</code></td><td>This allows you to set a specific color for the active/selected point (e.g., when the point is selected or active).</td></tr><tr><td><code>icon</code></td><td>This allows you to set a specific icon for different states (e.g., when the point is selected active or inactive).</td></tr><tr><td><code>index</code></td><td>Index for the initial animation.</td></tr><tr><td><code>groupId</code></td><td>This property allows you to add the item to the group. The groups are created inside the component. Effective only initial load.</td></tr><tr><td><code>style</code></td><td>The following style options are available: <code>isActive</code> - shows if the point is active or available for selection. <code>isDisabled</code> - shows if the point is disabled and is unavailable for selection.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="215">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Actions</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onPress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The action is triggered when pressing the image's marked coordinate point. Use IntelliSense (ctrl+space) to see the list of available actions.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="219.9453125">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>The action is triggered when pressing the image's marked coordinate point. Use IntelliSense (ctrl+space) to see the list of available actions.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="219,117">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>State Configuration</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Key</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Notes</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.component.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>selected</p>
-    </td>
-    <td selected="false" align="left">
-      <p>State is the variable of the component.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.solution.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>activeItemId
-      now</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Global state variable that can be used throughout the solution.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="217.06640625">State Configuration</th><th width="130.71875">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>selected</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Restaurant table booking example
+#### Restaurant table booking example
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8_rest-1iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8_rest-1iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8\_rest-1iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8\_rest-1iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj_WAUzvJz1S_rest-2iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj_WAUzvJz1S_rest-2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj\_WAUzvJz1S\_rest-2iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj\_WAUzvJz1S\_rest-2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
 The example shows tables in a restaurant that are available for booking, the `pointColor` property is set to blue to show availabilty. Once a table is reserved the `icon` and `color` property are set to show that the tables are reserved and cannot be booked.
 
-**Examples:**
-See the full example using static data in \<[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/static-data/interactive-image-rest-sd.jigx)
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/static-data/interactive-image-rest-sd.jigx) \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/dynamic-data/interactive-image-rest-dd.jigx)
 
-**Datasource:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/interactive-image/floorplan-restaurant-static.jigx)
+**Datasource:** \
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/interactive-image/floorplan-restaurant-static.jigx) \
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/interactive-image/floorplan-restaurant-dynamic.jigx)
 
-:::CodeblockTabs
-interactive-image-rest (static)
-
+{% tabs %}
+{% tab title="interactive-image-rest (static)" %}
 ```yaml
 children:
   - type: component.interactive-image
@@ -205,9 +70,9 @@ children:
             x: =@ctx.current.item.xCoordinate
             y: =@ctx.current.item.yCoordinate
 ```
+{% endtab %}
 
-interactive-image-rest (dynamic)
-
+{% tab title="interactive-image-rest (dynamic)" %}
 ```yaml
 children:
   - type: component.interactive-image
@@ -238,9 +103,9 @@ children:
             x: =@ctx.current.item.x
             y: =@ctx.current.item.y
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   floorplan-restaurant-static:
@@ -362,9 +227,9 @@ datasources:
           yCoordinate: 87
           isReserved: false
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   floorplan-restaurant-dynamic:
@@ -386,31 +251,29 @@ datasources:
           '$.category' 
         FROM [default/interactive-image] WHERE '$.category' = 'floorplan-restaurant'
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Hot seat and meeting room booking example
+#### Hot seat and meeting room booking example
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ_interactive-image-1iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ_interactive-image-1iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ\_interactive-image-1iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ\_interactive-image-1iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ_HVAl1AUyX_interactive-image-2iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ_HVAl1AUyX_interactive-image-2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ\_HVAl1AUyX\_interactive-image-2iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ\_HVAl1AUyX\_interactive-image-2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+{% endcolumn %}
+{% endcolumns %}
 
 The example shows how hot seats and meeting rooms at an office can be booked. The `groups` property is used to differentiate between the types of available bookings, namely, seats, meeting rooms and reserved seats. The `maximumPoints` property specifies how many of each type can be booked, for example, there are three hot desks for booking.
 
 **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/static-data/interactive-image-office-sd.jigx)
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/static-data/interactive-image-office-sd.jigx)&#x20;
 
-:::CodeblockTabs
-interactive-image (static)
-
+{% tabs %}
+{% tab title="interactive-image (static)" %}
 ```yaml
 children:
   - type: component.interactive-image
@@ -448,9 +311,9 @@ children:
             x: =@ctx.current.item.xCoordinate
             y: =@ctx.current.item.yCoordinate
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   interactive-image-office:
@@ -500,10 +363,9 @@ datasources:
           isReserved: true
           group: Hot desk - reserved
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-## See also
+### See also
 
-- [State](https://docs.jigx.com/state)
-
+* [State](https://docs.jigx.com/state)

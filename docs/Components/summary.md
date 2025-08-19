@@ -1,169 +1,59 @@
 # summary
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 Summarize the information in the jig at the bottom of the screen using the summary component. For example, a count of the number orders, or the number of items in a cart for an online shopping app.
 
-The summary is fixed and displays even when the screen is scrolled. Make the summary actionable by combining it with an [action](./../Actions.md).
-:::
+The summary is fixed and displays even when the screen is scrolled. Make the summary actionable by combining it with an [action](../Actions.md).
+{% endcolumn %}
 
-:::VerticalSplitItem
-![Summary Preview](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qvA_G2dUG6m5hTRuSzrwS-20250515-070710.png "Summary Preview")
-:::
-::::
+{% column %}
+&#x20;![Summary Preview](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qvA_G2dUG6m5hTRuSzrwS-20250515-070710.png)&#x20;
 
-## Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+{% endcolumn %}
+{% endcolumns %}
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>layout</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>There are three types to choose from:</p>
-      <ol>
-      <li><code>default</code> - used to display information. This is the default layout, allowing you to specify what must be shown.</li>
-      <li><code>cart</code> - useful for an online shopping app to show the number of items in a cart. The <code>value</code> is shown to the right of the <code>title</code>.</li>
-      <li><code>counter</code> - useful for showing a count, for example, the number of sales made in a month. The <code>value</code> is shown to the left of the <code>title</code>.</li>
-      </ol>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>title</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The main text to display on the component.</p>
-    </td>
-  </tr>
-</table>
+### Configuration options
 
-:::Iframe{code="<be />"}
+Some properties are common to all components, see [Common component properties](summary.md) for a list and their configuration options.
 
-:::
+<table><thead><tr><th width="151.33984375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>layout</code></td><td><p>There are three types to choose from:</p><ol><li><code>default</code> - used to display information. This is the default layout, allowing you to specify what must be shown.</li><li><code>cart</code> - useful for an online shopping app to show the number of items in a cart. The <code>value</code> is shown to the right of the <code>title</code>.</li><li><code>counter</code> - useful for showing a count, for example, the number of sales made in a month. The <code>value</code> is shown to the left of the <code>title</code>.</li></ol></td></tr><tr><td><code>title</code></td><td>The main text to display on the component.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="136">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>color</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Changing color of <code>title</code> and <code>leftIcon</code> based on <code>when</code> conditions. First condition evaluated to <code>true</code> will be used. If the condition evaluates to <code>false</code> the default color (black) is used.
-      Choose a color from the provided color palette as well as the status colors, e.g. <code>isWarning</code>. Default color is black if the property is not specified in the YAML. See the list of available colors in .</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>description</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Provide third level of supporting text to be displayed. The position of the text is under the <code>subtitle</code> property. This property is only available with <code>layout</code> type <code>cart</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>leftIcon</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add an icon to show on the left before the <code>title</code>. A list of icons is available. See  for more information.
-      <code>leftIcon</code> is only available with the <code>default</code> layout.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>subtitle</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Provide supporting text to be displayed as a <code>subtitle</code>. The position of the subtitle text depends on the selected <code>layout</code> property.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>value</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The actual value in your summary configured by a string or an expression that must equal a number. This property is only available for <code>layout</code> types <code>cart</code> and <code>counter</code>.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="145.49609375">Other options</th><th></th></tr></thead><tbody><tr><td><code>color</code></td><td>Changing color of <code>title</code> and <code>leftIcon</code> based on <code>when</code> conditions. First condition evaluated to <code>true</code> will be used. If the condition evaluates to <code>false</code> the default color (black) is used. Choose a color from the provided color palette as well as the status colors, e.g. <code>isWarning</code>. Default color is black if the property is not specified in the YAML. See the list of available colors in .</td></tr><tr><td><code>description</code></td><td>Provide third level of supporting text to be displayed. The position of the text is under the <code>subtitle</code> property. This property is only available with <code>layout</code> type <code>cart</code>.</td></tr><tr><td><code>leftIcon</code></td><td>Add an icon to show on the left before the <code>title</code>. A list of icons is available. See for more information. <code>leftIcon</code> is only available with the <code>default</code> layout.</td></tr><tr><td><code>subtitle</code></td><td>Provide supporting text to be displayed as a <code>subtitle</code>. The position of the subtitle text depends on the selected <code>layout</code> property.</td></tr><tr><td><code>value</code></td><td>The actual value in your summary configured by a string or an expression that must equal a number. This property is only available for <code>layout</code> types <code>cart</code> and <code>counter</code>.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Actions</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>OnPress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The action is triggered while pressing on the <code>LeftIcon</code> in the summary. Use IntelliSense (ctrl+space) to see the available list of actions.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><a href="./../Actions.md">Actions</a> </p>
-    </td>
-    <td selected="false" align="left">
-      <p>By using the summary component along with actions, you can unlock a powerful feature that enables you to take necessary actions based on the information available from the summary. For instance, adding a sales opportunity. This feature can significantly enhance the usability of your jig and make it more efficient.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="146.0390625">Actions</th><th></th></tr></thead><tbody><tr><td><code>OnPress</code></td><td>The action is triggered while pressing on the <code>LeftIcon</code> in the summary. Use IntelliSense (ctrl+space) to see the available list of actions.</td></tr><tr><td><a href="../Actions.md">Actions</a></td><td>By using the summary component along with actions, you can unlock a powerful feature that enables you to take necessary actions based on the information available from the summary. For instance, adding a sales opportunity. This feature can significantly enhance the usability of your jig and make it more efficient.</td></tr></tbody></table>
 
-## Consideration
+### Consideration
 
-- The summary component is available on all [Jig Types](<./../Jig Types.md>).
-- To show an empty `title` use `title: ' '`.
-- To format the `value` property, for example, adding a currency symbol in front of the value or percentage behind the value, use the `Text with Format` option available in IntelliSense (ctrl+space).
-- Only numbers can be shown in the `value` property.
-- If the `value` property exceeds 100 a default 99+ will be displayed in the property.
-- Enhance the usability of your jig and make it more efficient by using the summary component along with an [action](./../Actions.md).
-- **Working with Parent and Child Actions and Summaries:**
-  When configuring `actions` or `summary` buttons across parent and child jigs, the following behavior applies:
-  - If both the parent and child jigs have an `action` or `summary` configured, the child’s configuration takes precedence and overrides the parent’s.
-  - If only the parent has an `action` or `summary`, it automatically applies to the child.
-  - If only the child has an `action` or `summary`, it is used in the parent jig as well.
+* The summary component is available on all [Jig Types](<../Jig Types.md>).
+* To show an empty `title` use `title: ' '`.
+* To format the `value` property, for example, adding a currency symbol in front of the value or percentage behind the value, use the `Text with Format` option available in IntelliSense (ctrl+space).
+* Only numbers can be shown in the `value` property.
+* If the `value` property exceeds 100 a default 99+ will be displayed in the property.
+* Enhance the usability of your jig and make it more efficient by using the summary component along with an [action](../Actions.md).
+* **Working with Parent and Child Actions and Summaries:** When configuring `actions` or `summary` buttons across parent and child jigs, the following behavior applies:
+  * If both the parent and child jigs have an `action` or `summary` configured, the child’s configuration takes precedence and overrides the parent’s.
+  * If only the parent has an `action` or `summary`, it automatically applies to the child.
+  * If only the child has an `action` or `summary`, it is used in the parent jig as well.
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Summary - default
+#### Summary - default
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8KO0c_Gob5Y71dIkYhi37-20250515-065249.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8KO0c_Gob5Y71dIkYhi37-20250515-065249.png" size="80" width="1224" height="2466" position="center" caption="Default layout" alt="Default layout"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8KO0c\_Gob5Y71dIkYhi37-20250515-065249.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8KO0c\_Gob5Y71dIkYhi37-20250515-065249.png" size="80" width="1224" height="2466" position="center" caption="Default layout" alt="Default layout"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example the `default` layout property is used to show a `title` with a cart as a `leftIcon`.
 
-**Example**:
-The full example is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary.jigx).
-:::
-::::
+**Example**: The full example is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-summary
-
+{% code title="summary" %}
 ```yaml
 title: Products
 type: jig.list
@@ -193,28 +83,25 @@ item:
       value: =@ctx.current.item.price
     tag: =@ctx.current.item.tag
 ```
-:::
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
-### Summary - cart
+#### Summary - cart
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-In this example the `cart` layout property is used in a `jig.list` with a `product-item` component to show the  number of products in the cart. Notice the number of items in the cart is shown in a circle on the right of the `title`.
-**Example**:
-The full example of the summary type: cart using product-item is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-cart.jigx).
+{% columns %}
+{% column %}
+n this example the `cart` layout property is used in a `jig.list` with a `product-item` component to show the number of products in the cart. Notice the number of items in the cart is shown in a circle on the right of the `title`. \
+**Example**: \
+The full example of the summary type: cart using product-item is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-cart.jigx). \
 The full example of the summary type: cart using expander is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-cart-expander.jigx).
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cRcH3caCDaCROlthQTsvC-20250515-065436.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cRcH3caCDaCROlthQTsvC-20250515-065436.png" size="80" width="1224" height="2466" position="center" caption="Cart layout" alt="Cart layout"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cRcH3caCDaCROlthQTsvC-20250515-065436.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cRcH3caCDaCROlthQTsvC-20250515-065436.png" size="80" width="1224" height="2466" position="center" caption="Cart layout" alt="Cart layout"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-summary-cart-product-item
-
+{% tabs %}
+{% tab title="summary-cart-product-item" %}
 ```yaml
 title: Products
 type: jig.list
@@ -242,9 +129,9 @@ item:
       value: =@ctx.current.item.price
     tag: =@ctx.current.item.tag
 ```
+{% endtab %}
 
-summary-cart-expander
-
+{% tab title="summary-cart-expander" %}
 ```yaml
 title: Flights
 type: jig.list
@@ -333,9 +220,9 @@ item:
             centerPosition: middle
             address: =@ctx.current.item.to         
 ```
+{% endtab %}
 
-datasources 1 (static)
-
+{% tab title="datasources 1 (static)" %}
 ```yaml
 datasources:
   products:
@@ -368,9 +255,9 @@ datasources:
           price: 71.08
           discount:
 ```
+{% endtab %}
 
-datasources 2 (static)
-
+{% tab title="datasources 2 (static)" %}
 ```yaml
 datasources:
   flight-schedule-static:
@@ -420,29 +307,26 @@ datasources:
           toabrv: DAY
           image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Summary - counter
+#### Summary - counter
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-q8MySAMTMx1Xkxjn3sDXv-20250515-065617.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-q8MySAMTMx1Xkxjn3sDXv-20250515-065617.png" size="80" width="1224" height="2466" position="center" caption="Counter layout" alt="Counter layout"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-q8MySAMTMx1Xkxjn3sDXv-20250515-065617.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-q8MySAMTMx1Xkxjn3sDXv-20250515-065617.png" size="80" width="1224" height="2466" position="center" caption="Counter layout" alt="Counter layout"}&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-In this example the `counter` layout property is used in a `jig.list` with a `product-item` component to show the  number of products in the cart. Notice the  number of products is show on the left of the `title`.
+{% column %}
+In this example the `counter` layout property is used in a `jig.list` with a `product-item` component to show the number of products in the cart. Notice the number of products is show on the left of the `title`.
 
-**Example**:
-The full example of the summary type: counter using product-item is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-counter.jigx).
-The full example of the summary type: counter using expander is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-counter-expander.jigx).
-:::
-::::
+**Example**: \
+The full example of the summary type: counter using product-item is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-counter.jigx). The full example of the summary type: counter using expander is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-counter-expander.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-summary-counter-product-item
-
+{% tabs %}
+{% tab title="summary-counter-product-item" %}
 ```yaml
 title: Products
 type: jig.list
@@ -469,9 +353,9 @@ item:
       value: =@ctx.current.item.price
     tag: =@ctx.current.item.tag
 ```
+{% endtab %}
 
-summary-counter-expander
-
+{% tab title="summary-counter-expander" %}
 ```yaml
 title: Today's Flights
 type: jig.list
@@ -561,9 +445,9 @@ item:
             centerPosition: middle
             address: =@ctx.current.item.to
 ```
+{% endtab %}
 
-datasources 1 (static)
-
+{% tab title="datasources 1 (static)" %}
 ```yaml
 datasources:
   products:
@@ -596,9 +480,9 @@ datasources:
           price: 71.08
           discount:
 ```
+{% endtab %}
 
-datasources 2 (static)
-
+{% tab title="datasources 2 (static)" %}
 ```yaml
 datasources:
   flight-schedule-static:
@@ -648,28 +532,25 @@ datasources:
           toabrv: DAY
           image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Summary with action
+#### Summary with action
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 In this example the `cart` layout property is used in a `jig.list` with the `expander` component to show the number of available flights. A `go-to` action is added to take you to book a flight.
 
-**Example**:
-The full example is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-cart-action.jigx).
-:::
+**Example**: The full example is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-cart-action.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Z9TXyir8aI7GgqI4dPQM9-20250515-070027.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Z9TXyir8aI7GgqI4dPQM9-20250515-070027.png" size="70" width="1224" height="2466" position="center" caption="Summary with action" alt="Summary with action"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Z9TXyir8aI7GgqI4dPQM9-20250515-070027.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Z9TXyir8aI7GgqI4dPQM9-20250515-070027.png" size="70" width="1224" height="2466" position="center" caption="Summary with action" alt="Summary with action"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-summary-cart-action
-
+{% tabs %}
+{% tab title="summary-cart-action" %}
 ```yaml
 title: Flights
 type: jig.list
@@ -762,9 +643,9 @@ actions:
           title: Book a flight
           linkTo: expander-trip 
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 type: datasource.static
 options:
@@ -810,8 +691,7 @@ options:
       seat: 13F
       to: Columbus, Ohio, US
       toabrv: DAY
-      image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60   
+      image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60 
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

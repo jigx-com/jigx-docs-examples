@@ -2,95 +2,14 @@
 
 The location component enables users to display a location on a map within a jig. It can be configured to appear in different formats, including the standard component layout, the jig header, or fullscreen mode. Additionally, display options can be set up to show the current location with markers or paths.
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](location.md) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="261">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>address</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The actual address of the location. Valid formats are:</p>
-      <ul>
-      <li><strong>address string - city, street</strong>, e.g. <code>address: 20 W 34th St., New York, NY 10001, USA</code> or in an expression calling a datasource <code>=@ctx.datasources.address.street &#x26; ',' &#x26; @ctx.datasources.address.city &#x26; ',' &#x26; @ctx.datasources.address.country</code></li>
-      <li><strong>latitude and longitude</strong>, e.g. <code>address: 40.759412, -73.912306</code></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>is AnimationDisabled</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>true</code> or <code>false</code> to determine if map animation is disabled.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isFollowUserLocationEnabled</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>When enabled, the <code>viewPoint</code> will be centred on the user’s real-time location.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>markers</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map. See <em>multi-markers</em> code example below. You can use an expression to provide the latitude and longitude points from a datasource. See <em>multi-datasource</em> code example below.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>marker-item</code></p>
-    </td>
-    <td selected="false" align="left">
-      <ul>
-      <li><code>anchorTo:</code> - Anchor the marker to a specific point, either <code>bottom-center</code> or <code>center</code>.</li>
-      <li><code>radius</code> - Display a circle around the marker. In the radius you can configure the <code>color</code>, <code>unit</code> (Default is kilometres).</li>
-      <li><code>icon</code> - Choose an icon for the markers. You can style the icon <code>color</code>, <code>emphasis</code>, <code>type</code>, <code>shape</code> and <code>size</code>.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>paths</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map. See <em>path-multi-points</em> code example below.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>viewPoint</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation. Options include: <code>centerPosition:</code> <code>middle</code> or <code>top</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>zoomLevel</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="272.02734375">Options</th><th></th></tr></thead><tbody><tr><td><code>address</code></td><td><p>The actual address of the location. Valid formats are:</p><ul><li><strong>address string - city, street</strong>, e.g. <code>address: 20 W 34th St., New York, NY 10001, USA</code> or in an expression calling a datasource <code>=@ctx.datasources.address.street &#x26; ',' &#x26; @ctx.datasources.address.city &#x26; ',' &#x26; @ctx.datasources.address.country</code></li><li><strong>latitude and longitude</strong>, e.g. <code>address: 40.759412, -73.912306</code></li></ul></td></tr><tr><td><code>is AnimationDisabled</code></td><td><code>true</code> or <code>false</code> to determine if map animation is disabled.</td></tr><tr><td><code>isFollowUserLocationEnabled</code></td><td>When enabled, the <code>viewPoint</code> will be centred on the user’s real-time location.</td></tr><tr><td><code>markers</code></td><td>Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map. See <em>multi-markers</em> code example below. You can use an expression to provide the latitude and longitude points from a datasource. See <em>multi-datasource</em> code example below.</td></tr><tr><td><code>marker-item</code></td><td><ul><li><code>anchorTo:</code> - Anchor the marker to a specific point, either <code>bottom-center</code> or <code>center</code>.</li><li><code>radius</code> - Display a circle around the marker. In the radius you can configure the <code>color</code>, <code>unit</code> (Default is kilometres).</li><li><code>icon</code> - Choose an icon for the markers. You can style the icon <code>color</code>, <code>emphasis</code>, <code>type</code>, <code>shape</code> and <code>size</code>.</li></ul></td></tr><tr><td><code>paths</code></td><td>Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map. See <em>path-multi-points</em> code example below.</td></tr><tr><td><code>viewPoint</code></td><td>Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation. Options include: <code>centerPosition:</code> <code>middle</code> or <code>top</code></td></tr><tr><td><code>zoomLevel</code></td><td>Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.</td></tr></tbody></table>
 
-:::CodeblockTabs
-multiple-markers
-
+{% tabs %}
+{% tab title="multiple-markers" %}
 ```yaml
 - type: component.location
     options:
@@ -104,16 +23,20 @@ multiple-markers
           longitude: -73.97429291692742 
 ```
 
-markers-datasource
 
+{% endtab %}
+
+{% tab title="markers-datasource" %}
 ```yaml
 markers:
    data: |
       =@ctx.datasources.jobs.{"lng": $number($.lng), "lat": $number($.lat)}
 ```
 
-path-multi-points
 
+{% endtab %}
+
+{% tab title="path-multi-points" %}
 ```yaml
  - type: component.location
     options:
@@ -125,115 +48,44 @@ path-multi-points
           longitude: -73.950694
       address: =@ctx.datasources.location[0].address
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="252">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Action</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><a href="./../Actions/open-map.md">open-map</a></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The <code>action.open-map</code> lets you open your device's default map app (e.g., Google Maps, Apple Maps, or Waze) with the provided destination address. If multiple map apps are available, they will be listed for you to select one.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><a href="./../Actions/open-app-settings.md">open-app-settings</a></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The <code>action.open-app-settings</code> can be configured to show when location tracking permission is not granted. Tapping the action opens the device’s settings screen.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="176.33203125">Action</th><th></th></tr></thead><tbody><tr><td><a href="../Actions/open-map.md">open-map</a></td><td>The <code>action.open-map</code> lets you open your device's default map app (e.g., Google Maps, Apple Maps, or Waze) with the provided destination address. If multiple map apps are available, they will be listed for you to select one.</td></tr><tr><td><a href="../Actions/open-app-settings.md">open-app-settings</a></td><td>The <code>action.open-app-settings</code> can be configured to show when location tracking permission is not granted. Tapping the action opens the device’s settings screen.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="255">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>State Configuration</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Key</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Notes</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.component.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>location</p>
-    </td>
-    <td selected="false" align="left">
-      <p>State is the variable of the component.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="213.9453125">State Configuration</th><th width="105.05859375">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>location</td><td>State is the variable of the component.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="257,106">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>System variable Configuration</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Key</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Notes</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.system.geolocation.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>coords timestamp</p>
-    </td>
-    <td selected="false" align="left">
-      <p>See example.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="240.703125">System variable Configuration</th><th width="203.80859375">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.system.geolocation.</code></td><td>coords timestamp</td><td>See example.</td></tr></tbody></table>
 
-## Considerations
+### Considerations
 
-- Test the layout of the location component when combining it with other components, as it can cause spacing issues.
-- To display a location as a full screen, use the [jig.fullscreen](<./../Jig Types/jig_fullscreen.md>) type with the `component.location`. See the [Fullscreen location](https://docs.jigx.com/examples/location#autxL) example down below.
+* Test the layout of the location component when combining it with other components, as it can cause spacing issues.
+* To display a location as a full screen, use the [jig.fullscreen](<../Jig Types/jig_fullscreen.md>) type with the `component.location`. See the [Fullscreen location](https://docs.jigx.com/examples/location#autxL) example down below.
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Location using address
+#### Location using address
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UFZdb7OyH1n4qiLOUrfKR-20250221-065903.png" size="80" position="center" caption="Location from address" alt="Location from address" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UFZdb7OyH1n4qiLOUrfKR-20250221-065903.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UFZdb7OyH1n4qiLOUrfKR-20250221-065903.png" size="80" position="center" caption="Location from address" alt="Location from address" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UFZdb7OyH1n4qiLOUrfKR-20250221-065903.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 An interactive map displaying the location using the address.
 
-**Examples**:
-See the example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-with-address.jigx).
+**Examples**: \
+See the example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-with-address.jigx). \
 See the example using dynamic data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/dynamic-data/location-with-address-dynamic.jigx).
 
-**Datasource**:
-See the full datasource for static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-with-address.jigx).
+**Datasource**: \
+See the full datasource for static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-with-address.jigx). \
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/location.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-location (static)
-
+{% tabs %}
+{% tab title=" location (static)" %}
 ```yaml
 - type: component.location
       options:
@@ -254,9 +106,9 @@ location (static)
                   color: negative
                   icon: pin-1-map
 ```
+{% endtab %}
 
-location (dynamic)
-
+{% tab title="location (dynamic)" %}
 ```yaml
 - type: component.location
       options:
@@ -277,9 +129,9 @@ location (dynamic)
                   color: negative
                   icon: pin-1-map
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   location:
@@ -299,9 +151,9 @@ datasources:
         FROM [default/location] 
         WHERE '$.category' = "location"
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   address: 
@@ -312,25 +164,23 @@ datasources:
           city: New York
           country: US
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Location using latitude and longitude
+#### Location using latitude and longitude
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SNmxyLzQ0Z2t6OnyCEYDv-20250221-075843.png" size="80" position="center" caption="Address - Latitude & Longitude" alt="Address - Latitude & Longitude" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SNmxyLzQ0Z2t6OnyCEYDv-20250221-075843.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SNmxyLzQ0Z2t6OnyCEYDv-20250221-075843.png" size="80" position="center" caption="Address - Latitude & Longitude" alt="Address - Latitude & Longitude" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SNmxyLzQ0Z2t6OnyCEYDv-20250221-075843.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example a location is shown using the `latitude` and `longitude` coordinates in the address property.
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-location-lat-lng.jigx
-
+{% tabs %}
+{% tab title=" location-lat-lng.jigx" %}
 ```yaml
 children:
     - type: component.location
@@ -355,9 +205,9 @@ children:
                       color: negative
                       icon: pin-1-map      
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   appointments:
@@ -377,31 +227,29 @@ datasources:
           address: 86th St Transverse, New York, NY 10024, United States
           icon: stadium-1-building 
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Location with multiple markers
+#### Location with multiple markers
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_G08LkK_JYJE7lY18vhAQ-20250221-073344.png" size="80" position="center" caption="Multiple markers" alt="Multiple markers" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_G08LkK_JYJE7lY18vhAQ-20250221-073344.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_G08LkK\_JYJE7lY18vhAQ-20250221-073344.png" size="80" position="center" caption="Multiple markers" alt="Multiple markers" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_G08LkK\_JYJE7lY18vhAQ-20250221-073344.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 An interactive map displaying multiple points.
 
-**Examples**:
+**Examples**: \
 See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-multiple-markers.jigx).
 
-**Datasources**:
+**Datasources**: \
 See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-multiple-markers.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-location-multiple-markers (static)
-
+{% tabs %}
+{% tab title="location-multiple-markers (static)" %}
 ```yaml
 children:
   - type: component.location
@@ -415,9 +263,9 @@ children:
       markers:
         data: =@ctx.datasources.points
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
  # First datasource with address.
@@ -441,31 +289,29 @@ datasources:
         - latitude: 40.76479429122513
           longitude: -73.97429291692742    
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Location displaying paths
+#### Location displaying paths
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HyprtOZYo43vA857u8iYz-20250221-074256.png" size="80" position="center" caption="Location paths" alt="Location paths" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HyprtOZYo43vA857u8iYz-20250221-074256.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HyprtOZYo43vA857u8iYz-20250221-074256.png" size="80" position="center" caption="Location paths" alt="Location paths" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HyprtOZYo43vA857u8iYz-20250221-074256.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 An interactive map displaying a path with three points, a starting point, middle and end point, with a marker-item at each point.
 
-**Examples**:
+**Examples**: \
 See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-path.jigx).
 
-**Datasources**:
+**Datasources**: \
 See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-path.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-location-path (static-no -animation)
-
+{% tabs %}
+{% tab title="location-path (static-no -animation)" %}
 ```yaml
 - type: component.location
           options:
@@ -492,9 +338,9 @@ location-path (static-no -animation)
             paths:
               data: =@ctx.datasources.points            
 ```
+{% endtab %}
 
-location-path (static- with-animation)
-
+{% tab title="location-path (static- with-animation)" %}
 ```yaml
 children:
    - type: component.location
@@ -519,9 +365,9 @@ children:
               isAnimationEnabled: true
               zoomLevel: 9
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
    coordinates:
@@ -538,28 +384,25 @@ datasources:
             latitude: 40.803495
             longitude: -73.950694
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Location radius
+#### Location radius
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example demonstrates how to add a circular `radius` around the specified location. Determine whether it is in `kilometers` or `miles` and set its size (`value`). Then, select the `color` of the radius.
 
-**Examples:**
-See the full code example in GitHub.
-:::
+**Examples:** See the full code example in GitHub.
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cDA1fuYtVPJqgPh81VW6l-20250226-085626.png" size="66" position="center" caption="Location with a radius" alt="Location with a radius" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cDA1fuYtVPJqgPh81VW6l-20250226-085626.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cDA1fuYtVPJqgPh81VW6l-20250226-085626.png" size="66" position="center" caption="Location with a radius" alt="Location with a radius" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cDA1fuYtVPJqgPh81VW6l-20250226-085626.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-location-radius.jigx
-
+{% tabs %}
+{% tab title="location-radius.jigx" %}
 ```yaml
 title: Location with radius
 type: jig.default
@@ -593,9 +436,9 @@ children:
               options:
                 icon: end-marker      
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   points:
@@ -605,35 +448,31 @@ datasources:
         - latitude: 40.759412
           longitude: -73.912306
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-::::::ExpandableHeading
-### Location full screen
+#### Location full screen
 
-:::::VerticalSplit{layout="middle"}
-::::VerticalSplitItem
-In this example the `component.location` is used in the `jig.fullscreen` ensuring the map covers the entire jig.
+{% columns %}
+{% column %}
+&#x20;In this example the `component.location` is used in the `jig.fullscreen` ensuring the map covers the entire jig.
 
-**Examples**:
-See the example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/dynamic-data/location-fullscreen-dynamic.jigx).
+**Examples**: See the example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/dynamic-data/location-fullscreen-dynamic.jigx).
 
-**Datasource**:
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/location.jigx).
+**Datasource**: See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/location.jigx).
 
-:::hint{type="success"}
-Using the code below requires data in the database, the *jigx.sample* solution has the data provided for location. You can use the location.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/location.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
-:::
-::::
+{% hint style="success" %}
+Using the code below requires data in the database, the _jigx.sample_ solution has the data provided for location. You can use the location.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/location.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.&#x20;
+{% endhint %}
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RV6o93L_kcfzE1pfggkwo-20250221-082705.png" size="68" position="center" caption="Fullscreen location" alt="Fullscreen location" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RV6o93L_kcfzE1pfggkwo-20250221-082705.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-:::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RV6o93L\_kcfzE1pfggkwo-20250221-082705.png" size="68" position="center" caption="Fullscreen location" alt="Fullscreen location" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RV6o93L\_kcfzE1pfggkwo-20250221-082705.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-location-fullscreen.jigx
-
+{% tabs %}
+{% tab title="location-fullscreen.jigx" %}
 ```yaml
 title: Location fullscreen
 type: jig.full-screen
@@ -663,9 +502,9 @@ component:
               size: large
               icon: end-marker
 ```
+{% endtab %}
 
-datasources
-
+{% tab title="datasources" %}
 ```yaml
 datasources:
   address: 
@@ -681,28 +520,25 @@ datasources:
           city: New York
           country: US  
 ```
-:::
-::::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Location as a header
+#### Location as a header
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cQZEvoQcr1J_SDuWosHd7-20250221-091813.png" size="98" position="center" caption="Location in header" alt="Location in header" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cQZEvoQcr1J_SDuWosHd7-20250221-091813.png" width="800" height="788" darkWidth="800" darkHeight="788"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cQZEvoQcr1J\_SDuWosHd7-20250221-091813.png" size="98" position="center" caption="Location in header" alt="Location in header" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cQZEvoQcr1J\_SDuWosHd7-20250221-091813.png" width="800" height="788" darkWidth="800" darkHeight="788"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 The location component can be used as a `small` or `medium` size header in a jig. In the screenshot the difference between the set heights is shown.
 
-**Examples:**
-See the code samples using static data in GitHub for [small](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-small.jigx) and [medium](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-medium.jigx) headers.
-:::
-::::
+**Examples:** See the code samples using static data in GitHub for [small](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-small.jigx) and [medium](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-medium.jigx) headers.&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-location-as-header(small)
-
+{% tabs %}
+{% tab title="location-as-header(small)" %}
 ```yaml
 header: 
   type: component.jig-header
@@ -733,9 +569,9 @@ header:
                   # Define the icon in the datasource.
                   icon: =@ctx.datasources.sites[0].icon
 ```
+{% endtab %}
 
-location-as-header(medium)
-
+{% tab title="location-as-header(medium)" %}
 ```yaml
 header: 
   type: component.jig-header
@@ -766,9 +602,9 @@ header:
                   # Define the icon in the datasource.
                   icon: =@ctx.datasources.sites[0].icon
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   sites:
@@ -788,10 +624,9 @@ datasources:
           address: 86th St Transverse, New York, NY 10024, United States
           icon: stadium-1-building 
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-## See also
+### See also
 
-- [State](https://docs.jigx.com/state)
-
+* [State](https://docs.jigx.com/state)
