@@ -1,8 +1,14 @@
 # line-chart
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem The component can display statistics related to data records represented in a line chart. This can show a single or multiple data series for comparative purposes and highlight specific regions or ranges on the chart to make it easier for users to interpret and analyze the data. Mostly used in [jig.default](<../../Jig Types/jig_default.md>) or [jig.list](<../../Jig Types/jig_list.md>).&#x20;
+{% columns %}
+{% column %}
+The component can display statistics related to data records represented in a line chart. This can show a single or multiple data series for comparative purposes and highlight specific regions or ranges on the chart to make it easier for users to interpret and analyze the data. Mostly used in [jig.default](<../../Jig Types/jig_default.md>) or [jig.list](<../../Jig Types/jig_list.md>).&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{alt="Line Chart Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/87b0VKGM9ub8wccKGbXvz\_line-chart.png" size="62" caption="Line Chart Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/87b0VKGM9ub8wccKGbXvz\_line-chart.png" width="800" height="531" darkWidth="800" darkHeight="531"} ::: ::::
+{% column %}
+Image\[]{alt="Line Chart Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/87b0VKGM9ub8wccKGbXvz\_line-chart.png
+{% endcolumn %}
+{% endcolumns %}
 
 ### Configuration options
 
@@ -57,16 +63,22 @@ datasources:
 
 #### Line-chart financial
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a8Eczez-B9FhlY1DgccaP\_cc-linechartfinance.PNG" size="80" position="center" caption="Financial line-chart" alt="Financial line-chart" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a8Eczez-B9FhlY1DgccaP\_cc-linechartfinance.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a8Eczez-B9FhlY1DgccaP\_cc-linechartfinance.PNG"
+{% endcolumn %}
 
-:::VerticalSplitItem The widget displays an annual overview of finances. The x-axis shows the months and the y-axis is the monetary amount. Thanks to number formatting, we can set any currency.
+{% column %}
+The widget displays an annual overview of finances. The x-axis shows the months and the y-axis is the monetary amount. Thanks to number formatting, we can set any currency.
 
 **Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/static-data/line-chart-financial/line-chart-financial.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/dynamic-data/line-chart-financial/line-chart-financial-dynamic.jigx)
 
 **Datasources:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/finance-dynamic.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs line-chart (static)
-
+{% tabs %}
+{% tab title="ine-chart (static)" %}
 ```yaml
 children:
   - type: component.line-chart
@@ -95,9 +107,9 @@ children:
           name: "2021/2022"
           color: color2
 ```
+{% endtab %}
 
-line-chart (dynamic)
-
+{% tab title="line-chart (dynamic)" %}
 ```yaml
 children:
   - type: component.line-chart
@@ -125,9 +137,9 @@ children:
           name: "2021/2022"
           color: color2
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   finance-dynamic:
@@ -145,19 +157,27 @@ datasources:
           '$.category' 
         FROM [default/finances] WHERE '$.category' = "finance-month" ORDER BY '$.financeid' ASC
 ```
+{% endtab %}
+{% endtabs %}
 
 #### Line-chart multiple series
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ![Multiple series](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-8GXThFXyg72KBY-Bqw6m_l7gpsdv4391wozh5boekfline-chartiphone13blueportrait.png) :::
+{% columns %}
+{% column %}
+&#x20;![Multiple series](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-8GXThFXyg72KBY-Bqw6m_l7gpsdv4391wozh5boekfline-chartiphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem The widget displays an annual overview of finances. The x-axis shows the months and the y-axis the monetary amount. Thanks to number formatting, we can set any currency.
+{% column %}
+The widget displays an annual overview of finances. The x-axis shows the months and the y-axis the monetary amount. Thanks to number formatting, we can set any currency.
 
 **Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/static-data/line-chart-multiple-series/line-chart-multiple-series.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/dynamic-data/line-chart-multiple-series/line-chart-multiple-dynamic.jigx).
 
 **Datasources in order series1 and series2:** See the full datasource for dynamic data [series 1](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx) and [series 2](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx) in GitHub.&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs line-chart-multiple (static)
-
+{% tabs %}
+{% tab title="line-chart-multiple (static)" %}
 ```yaml
 children:
   - type: component.line-chart
@@ -199,9 +219,9 @@ children:
       legend:
         isHidden: false
 ```
+{% endtab %}
 
-line-chart-mulitple (dynamic)
-
+{% tab title="line-chart-mulitple (dynamic)" %}
 ```yaml
 children:
   - type: component.line-chart
@@ -243,9 +263,9 @@ children:
       legend:
         isHidden: false
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   series1-dynamic:
@@ -281,19 +301,25 @@ datasources:
           '$.subtitle', 
           '$.title' 
         FROM [default/charts] WHERE '$.category' = "chart2" ORDER BY x
-    
 ```
+{% endtab %}
+{% endtabs %}
 
 #### Line-chart with plot bands
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem The chart shows an annual overview of finances. The x-axis shows the months and the y-axis is the monetary amount. The data points are easy to see as we used the `plotBands` property to add color. Single or multiple bands can be defined by adding the `form`, `to` and `color` properties.
+{% columns %}
+{% column %}
+The chart shows an annual overview of finances. The x-axis shows the months and the y-axis is the monetary amount. The data points are easy to see as we used the `plotBands` property to add color. Single or multiple bands can be defined by adding the `form`, `to` and `color` properties.
 
 **Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/static-data/line-chart-financial/line-charts-plotBands.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Q28ZbI6Gwo1zas-YV1bWU\_charts-line-plotbands.PNG" size="80" position="center" caption="Line chart with plot bands" alt="Line chart with plot bands" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Q28ZbI6Gwo1zas-YV1bWU\_charts-line-plotbands.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Q28ZbI6Gwo1zas-YV1bWU\_charts-line-plotbands.PNG
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs line-chart-plotbands
-
+{% code title="line-chart-plotbands" %}
 ```yaml
 title: Current account overview
 type: jig.default
@@ -339,19 +365,26 @@ children:
     type: component.line-chart
 
 ```
+{% endcode %}
 
 #### line-chart using expressions
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2oguMl295fgFqnaXqr06u\_cc-linechartexpression.PNG" size="82" position="center" caption="Line-chart using expressions" alt="Line-chart using expressions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2oguMl295fgFqnaXqr06u\_cc-linechartexpression.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2oguMl295fgFqnaXqr06u\_cc-linechartexpression.PNG
+{% endcolumn %}
 
-:::VerticalSplitItem In this example expressions are used to dertermine the `min`, `max`, and `tickAmount` of a line-chart . The x-axis shows the quarters and the y-axis the monetary amount using the `format` property to display the currency.
+{% column %}
+In this example expressions are used to dertermine the `min`, `max`, and `tickAmount` of a line-chart . The x-axis shows the quarters and the y-axis the monetary amount using the `format` property to display the currency.
 
 **Examples:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/dynamic-data/line-chart-multiple-series/line-chart-multiple-dynamic.jigx)
 
 **Datasources** See the datasource code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs line-chart-multiple-dynamic
-
+{% tabs %}
+{% tab title="line-chart-multiple-dynamic" %}
 ```yaml
 #Add to jigs folder
 title: Multiple series with expressions
@@ -406,12 +439,11 @@ children:
             notation: compact
             numberStyle: currency
         min: =@ctx.datasources.staticinputs.min
-        tickAmount: =@ctx.datasources.staticinputs.tickAmount       
-
+        tickAmount: =@ctx.datasources.staticinputs.tickAmount
 ```
+{% endtab %}
 
-series2-dynamic
-
+{% tab title="series2-dynamic" %}
 ```yaml
 #Add to datasource folder
 type: datasource.sqlite
@@ -430,3 +462,5 @@ options:
       '$.title' 
     FROM [default/charts] WHERE '$.category' = "chart2" ORDER BY x
 ```
+{% endtab %}
+{% endtabs %}

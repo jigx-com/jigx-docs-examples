@@ -2,149 +2,41 @@
 
 The expander component is a collapsible element that initially displays a small portion of content, such as a name. Users can tap the arrow, aligned either to the left or right, to expand the component and reveal additional details. The expander is customizable, and the content inside can be configured using components such as forms, lists, or cards. This helps keep screens clean and organized while making additional information easily accessible.
 
-![Expander Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xDQizxD7Vjjgr1tbdQpPr_expander.png "Expander Preview")
+![Expander Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xDQizxD7Vjjgr1tbdQpPr_expander.png)
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](expander.md) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>children</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Define the content of the expander. The following components can be used in the expander:</p>
-      <ul>
-      <li><a href="./charts/bar-chart.md">bar-chart</a></li>
-      <li><a href="./entity.md">entity</a></li>
-      <li><a href="./form.md">form</a></li>
-      <li><a href="./interactive-image.md">interactive-image</a></li>
-      <li><a href="./charts/line-chart.md">line-chart</a></li>
-      <li><a href="./list.md">list</a></li>
-      <li><a href="./location.md">location</a></li>
-      <li><a href="./charts/pie-chart.md">pie-chart</a></li>
-      <li><a href="./stepper.md">stepper</a></li>
-      <li><a href="./video-player.md">video-player</a></li>
-      <li><a href="./web-view.md">web-view</a></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>header</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>centerElement</code> - what is initially visible in your jig. The following options are available in <code>header</code>:</p>
-      <ul>
-      <li><a href="./../Custom%20components%20_Alpha_.md">Custom components (Alpha)</a></li>
-      <li><a href="https://docs.jigx.com/examples/h1bm-titles">titles</a></li>
-      <li><a href="./expander/stage.md">stage</a></li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="196.203125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td><p>Define the content of the expander. The following components can be used in the expander:</p><ul><li><a href="charts/bar-chart.md">bar-chart</a></li><li><a href="entity.md">entity</a></li><li><a href="form.md">form</a></li><li><a href="interactive-image.md">interactive-image</a></li><li><a href="charts/line-chart.md">line-chart</a></li><li><a href="list.md">list</a></li><li><a href="location.md">location</a></li><li><a href="charts/pie-chart.md">pie-chart</a></li><li><a href="stepper.md">stepper</a></li><li><a href="video-player.md">video-player</a></li><li><a href="web-view.md">web-view</a></li></ul></td></tr><tr><td><code>header</code></td><td><p><code>centerElement</code> - what is initially visible in your jig. The following options are available in <code>header</code>:</p><ul><li><a href="../Custom components _Alpha_.md">Custom components (Alpha)</a></li><li><a href="https://docs.jigx.com/examples/h1bm-titles">titles</a></li><li><a href="expander/stage.md">stage</a></li></ul></td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="207">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>divider</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Added the ability to add a solid or transparent <code>divider</code>. Default setting is <code>none</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>expandIcon</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Allows the ability to customize the alignment of the expander button. Default setting is <code>right</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isInitiallyCollapsed</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>If the expander is initially collapsed. <code>true</code> is the default setting. <code>false</code> - expanded <code>true</code> - collapsed</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>leftElement</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add a left element, for example, an ordering number or avatar.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>variant</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Determine the background color for header versus body using the <code>variant</code> property with <code>plain</code> or <code>emphasized</code> values. Default setting is <code>emphasized</code>.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="198.453125">Other options</th><th></th></tr></thead><tbody><tr><td><code>divider</code></td><td>Added the ability to add a solid or transparent <code>divider</code>. Default setting is <code>none</code>.</td></tr><tr><td><code>expandIcon</code></td><td>Allows the ability to customize the alignment of the expander button. Default setting is <code>right</code>.</td></tr><tr><td><code>isInitiallyCollapsed</code></td><td>If the expander is initially collapsed. <code>true</code> is the default setting. <code>false</code> - expanded <code>true</code> - collapsed</td></tr><tr><td><code>leftElement</code></td><td>Add a left element, for example, an ordering number or avatar.</td></tr><tr><td><code>variant</code></td><td>Determine the background color for header versus body using the <code>variant</code> property with <code>plain</code> or <code>emphasized</code> values. Default setting is <code>emphasized</code>.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="174">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Actions</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onContentPress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Action triggered while pressing on the content in the expander. Use IntelliSense (ctrl+space) to see the available list of actions.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="204.4375"></th><th></th></tr></thead><tbody><tr><td><code>onContentPress</code></td><td>Action triggered while pressing on the content in the expander. Use IntelliSense (ctrl+space) to see the available list of actions.</td></tr></tbody></table>
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Expander with titles in a header, entity-fields and bar-chart
+#### Expander with titles in a header, entity-fields and bar-chart
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XKqP3rQXzqg4vzPaen2DY_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png" size="80" position="center" caption="Expander with titles" alt="Expander with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XKqP3rQXzqg4vzPaen2DY_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XKqP3rQXzqg4vzPaen2DY\_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A-syqy6kp5jw7sh9vGb1t_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png" size="80" position="center" caption="Expander with bar-chart & entity-fields" alt="Expander with bar-chart & entity-fields" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A-syqy6kp5jw7sh9vGb1t_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A-syqy6kp5jw7sh9vGb1t\_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png
+{% endcolumn %}
+{% endcolumns %}
 
-**Examples**:
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/static-data/expander.jigx).
+**Examples**: \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/static-data/expander.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/dynamic-data/expander-dynamic-data.jigx).
 
-**Datasource**:
+**Datasource**: \
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/expander-dynamic.jigx).
 
-:::CodeblockTabs
-expander (static)
-
+{% tabs %}
+{% tab title="expander (static)" %}
 ```yaml
 children:
   - type: component.expander
@@ -186,9 +78,9 @@ children:
             series:
               - data: =@ctx.datasources.series1
 ```
+{% endtab %}
 
-expander (dynamic)
-
+{% tab title="expander (dynamic)" %}
 ```yaml
 children:
   - type: component.expander
@@ -231,8 +123,10 @@ children:
               - data: =@ctx.datasources.series1-dynamic
 ```
 
-datasources (dynamic)
 
+{% endtab %}
+
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   expander-dynamic:
@@ -256,32 +150,34 @@ datasources:
           '$.category' 
         FROM [default/employees] WHERE '$.firstname' = "July" AND '$.category' = 'employees'
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Expander with stage in header and entity-field
+#### Expander with stage in header and entity-field
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BCWgmHKWYvB2jD2gt9jHK_hs8ymbcaghjk2zqrbi6daexpander-with-stageiphone13blueportrait.png" size="80" position="center" caption="Expander with stage" alt="Expander with stage" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BCWgmHKWYvB2jD2gt9jHK_hs8ymbcaghjk2zqrbi6daexpander-with-stageiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
+{% columns %}
+{% column %}
+&#x20;::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BCWgmHKWYvB2jD2gt9jHK\_hs8ymbcaghjk2zqrbi6daexpander-with-stageiphone13blueportrait.png" size="80" position="center" caption="Expander with stage" alt="Expander with stage" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BCWgmHKWYvB2jD2gt9jHK\_hs8ymbcaghjk2zqrbi6daexpander-with-stageiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"} :::
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ANaskxsOt0saAl1DqnWtu_rsfux7yzcblgkgbnpyu-expander-stage2.png" size="80" position="center" caption="Expander with stage & entity" alt="Expander with stage & entity" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ANaskxsOt0saAl1DqnWtu_rsfux7yzcblgkgbnpyu-expander-stage2.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
-::::
 
-**Examples**:
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/static-data/expander-trip.jigx).
+{% endcolumn %}
+
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ANaskxsOt0saAl1DqnWtu\_rsfux7yzcblgkgbnpyu-expander-stage2.png" size="80" position="center" caption="Expander with stage & entity" alt="Expander with stage & entity" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ANaskxsOt0saAl1DqnWtu\_rsfux7yzcblgkgbnpyu-expander-stage2.png" width="800" height="1494" darkWidth="800" darkHeight="1494"} ::: ::::
+{% endcolumn %}
+{% endcolumns %}
+
+**Examples**: \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/static-data/expander-trip.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/dynamic-data/expander-trip-dynamic-data.jigx).
 
-**Datasource**:
+**Datasource**: \
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/trip-dynamic.jigx).
 
-:::CodeblockTabs
-expander-trip (static)
+:::CodeblockTabs&#x20;
 
+{% tabs %}
+{% tab title="expander-trip (static)" %}
 ```yaml
 children:
   - type: component.expander
@@ -346,8 +242,10 @@ children:
           
 ```
 
-expander-trip (dynamic)
 
+{% endtab %}
+
+{% tab title="expander-trip (dynamic)" %}
 ```yaml
 children:
   - type: component.expander
@@ -411,8 +309,10 @@ children:
                         value: =@ctx.datasources.trip-dynamic.board
 ```
 
-datasources (dynamic)
 
+{% endtab %}
+
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   trip-dynamic:
@@ -438,30 +338,28 @@ datasources:
           '$.toabrv' 
         FROM [default/flight-schedule]
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Expander with variant, divider & expandIcon
+#### Expander with variant, divider & expandIcon
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example includes four expander components, each configured with different options for the `variant`, `divider`, and `expandIcon` properties.
 
 1. Expander configured with a `plain` variant & `transparent` divider.
 2. Expander configured with `emphasized` variant & no divider.
 3. Expander configured with no variant and a `solid` divider.
-4. Expander configured with expandIcon aligned to the `left`, `plain` variant & no divider.
-:::
+4. Expander configured with expandIcon aligned to the `left`, `plain` variant & no divider.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-LLslE6fh7WCJh3cp8G37g-20250424-093658.gif" size="66" position="center" caption="Expander options" alt="Expander options" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-LLslE6fh7WCJh3cp8G37g-20250424-093658.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-LLslE6fh7WCJh3cp8G37g-20250424-093658.gif" size="66" position="center" caption="Expander options" alt="Expander options" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-LLslE6fh7WCJh3cp8G37g-20250424-093658.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-expander-variant.jigx
-
+{% tabs %}
+{% tab title="expander-variant.jigx" %}
 ```yaml
 title: Deliveries
 type: jig.default
@@ -610,8 +508,10 @@ children:
                         isWarning: true  
 ```
 
-product-delivery.jigx
 
+{% endtab %}
+
+{% tab title="product-delivery.jigx" %}
 ```yaml
 type: datasource.sqlite
 options:
@@ -629,6 +529,5 @@ options:
      '$.expectedDelivery'
     FROM [default/product-delivery] 
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

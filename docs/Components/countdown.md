@@ -1,8 +1,14 @@
 # countdown
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem The countdown component functionality counts down from a date, date/time, and time. When the time expires, you can configure an outcome, for example, open a different jig, or perform an action. The countdown starts as soon as the jig containing the `component.countdown` opens. :::
+{% columns %}
+{% column %}
+The countdown component functionality counts down from a date, date/time, and time. When the time expires, you can configure an outcome, for example, open a different jig, or perform an action. The countdown starts as soon as the jig containing the `component.countdown` opens
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD\_bJvdgslD-\_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD\_bJvdgslD-\_cd-inputsl.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD\_bJvdgslD-\_cd-inputsl.PNG
+{% endcolumn %}
+{% endcolumns %}
 
 ### Configuration options
 
@@ -27,14 +33,22 @@ Some properties are common to all components, see [Common component properties](
 
 #### Countdown with inputs (static, dynamic, expression, & datasource)
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD\_bJvdgslD-\_cd-inputsl.PNG" size="80" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD\_bJvdgslD-\_cd-inputsl.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD\_bJvdgslD-\_cd-inputsl.PNG
+{% endcolumn %}
 
-:::VerticalSplitItem This example shows the `expiresAt` property value set using a static value, an expression, a static datasource, and a dynamic datasource.
+{% column %}
+This example shows the `expiresAt` property value set using a static value, an expression, a static datasource, and a dynamic datasource.
 
 **Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-input.jigx%22).&#x20;
 
-:::CodeblockTabs countdown-input.jigx
 
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="countdown-input.jigx" %}
 ```yaml
 children:
   - type: component.section
@@ -69,9 +83,9 @@ children:
         options:
           expiresAt: =@ctx.datasources.event-dd[2].StartDate
 ```
+{% endtab %}
 
-event-dd.jigx
-
+{% tab title="event-dd.jigx" %}
 ```yaml
 type: datasource.sqlite
 options:
@@ -83,9 +97,9 @@ options:
   query: SELECT id, '$.EventName', '$.StartDate', '$.Tickets', '$.Time', '$.Type', '$.Venue' FROM [default/events] 
     
 ```
+{% endtab %}
 
-static-data
-
+{% tab title="static-data" %}
 ```yaml
 datasources:
   dates: 
@@ -102,17 +116,24 @@ datasources:
           dateType: Books
           date: "2025-07-18 14:00"
 ```
+{% endtab %}
+{% endtabs %}
 
 #### Countdown with alignment
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem You can choose to `align` the `component.countdown` to the `left`, `right`, `center` and `stretch` it across the screen.
+{% columns %}
+{% column %}
+You can choose to `align` the `component.countdown` to the `left`, `right`, `center` and `stretch` it across the screen.
 
 **Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-align.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6\_cd-alignl.PNG" size="80" position="center" caption="Aligning countdown" alt="Aligning countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6\_cd-alignl.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6\_cd-alignl.PNG
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs countdown-align.jigx
-
+{% code title="countdown-align.jigx" %}
 ```yaml
 children:
   - type: component.section
@@ -151,17 +172,23 @@ children:
           expiresAt: =$fromMillis($toMillis($now()) + 3600000)
           align: stretch
 ```
+{% endcode %}
 
 #### Countdown with different sizes
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp\_cd-sizel.PNG" size="80" position="center" caption="Size variations" alt="Size variations" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp\_cd-sizel.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp\_cd-sizel.PNG
+{% endcolumn %}
 
-:::VerticalSplitItem Use the `size` property in the `component.countdown` to change the size from `extra-large` to `small`.
+{% column %}
+Use the `size` property in the `component.countdown` to change the size from `extra-large` to `small`.
 
 **Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-sizes.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs count-down-sizes.jigx
-
+{% code title="count-down-sizes.jigx" %}
 ```yaml
 children:
   - type: component.section
@@ -200,17 +227,26 @@ children:
           expiresAt: =$fromMillis($toMillis($now()) + 36000000)
           size: small
 ```
+{% endcode %}
 
 #### Countdown onPress
 
-::::VerticalSplit{layout="right"} :::VerticalSplitItem ![Action when pressed](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w0GIWssJYaMr0muw1PZwb_cd-onpressl.PNG) :::
+{% columns %}
+{% column %}
+&#x20;![Action when pressed](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w0GIWssJYaMr0muw1PZwb_cd-onpressl.PNG)&#x20;
 
-:::VerticalSplitItem This example shows two scenarios, the first opens a different jig when the component is pressed and the second opens a URL when pressed. Use the `onPress` property to set up an action when pressing on the component.
+
+{% endcolumn %}
+
+{% column %}
+This example shows two scenarios, the first opens a different jig when the component is pressed and the second opens a URL when pressed. Use the `onPress` property to set up an action when pressing on the component.
 
 **Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-onpress.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs countdown-OnPress.jigx
-
+{% tabs %}
+{% tab title="countdown-OnPress.jigx" %}
 ```yaml
 children:
   - type: component.section
@@ -241,9 +277,9 @@ children:
           options: 
             uri: https://www.tourismthailand.org/Destinations/Provinces/Phuket/350          
 ```
+{% endtab %}
 
-countdown-sizes.jigx
-
+{% tab title="countdown-sizes.jigx" %}
 ```yaml
 title: Countdown - size
 type: jig.default
@@ -296,17 +332,26 @@ children:
           expiresAt: =$fromMillis($toMillis($now()) + 36000000)
           size: small
 ```
+{% endtab %}
+{% endtabs %}
 
 #### Countdown onFinish
 
-::::VerticalSplit{layout="left"} :::VerticalSplitItem In this example the `onFinish` property is used to show a modal when the `component.countdown` `expiresAt` property reaches zero.
+{% columns %}
+{% column width="41.66666666666667%" %}
+In this example the `onFinish` property is used to show a modal when the `component.countdown` `expiresAt` property reaches zero.
 
 **Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-onfinish.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem ![Modal when countdown expires](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_Cmtlj3SADsfj7CruXBXF-20240822-125634.PNG) ::: ::::
+{% column width="58.33333333333333%" %}
+&#x20;![Modal when countdown expires](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_Cmtlj3SADsfj7CruXBXF-20240822-125634.PNG)
 
-:::CodeblockTabs count-down-onFinish.jigx
 
+{% endcolumn %}
+{% endcolumns %}
+
+{% code title=" count-down-onFinish.jigx" %}
 ```yaml
  children:
         - type: component.countdown
@@ -319,19 +364,28 @@ children:
                   title: 🏖️ Holiday time!
                   buttonText: Enjoy!
 ```
+{% endcode %}
 
 #### Countdown started from another jig
 
-::::VerticalSplit{layout="right"} :::VerticalSplitItem ![Countdown from jig input](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-R9XOjo8mV7rhiI2DHdOQW-20250304-070603.png) :::
+{% columns %}
+{% column %}
+&#x20;![Countdown from jig input](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-R9XOjo8mV7rhiI2DHdOQW-20250304-070603.png)&#x20;
 
-:::VerticalSplitItem Add inputs from another jig to set the `expiresAl` property for the countdown to start.
+
+{% endcolumn %}
+
+{% column %}
+Add inputs from another jig to set the `expiresAl` property for the countdown to start.
 
 **Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-jig-input.jigx).
 
 Supporting example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/start-countdown-support.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs count-down-jig-input.jigx
-
+{% tabs %}
+{% tab title="count-down-jig-input.jigx" %}
 ```yaml
 title: =@ctx.jig.inputs.packageName
 type: jig.default
@@ -366,9 +420,9 @@ actions:
               resizeMode: contain
               uri: https://plus.unsplash.com/premium_photo-1680466283263-91b51ab91832?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YmVhY2glMjB1bWJyZWxsYXxlbnwwfHwwfHx8MA%3D%3D
 ```
+{% endtab %}
 
-start-countdown-support.jigx
-
+{% tab title="start-countdown-support.jigx" %}
 ```yaml
 title: Island Holiday Packages
 type: jig.list
@@ -423,3 +477,5 @@ item:
             packagePrice: =@ctx.current.item.Price
             packageName: =@ctx.current.item.name
 ```
+{% endtab %}
+{% endtabs %}

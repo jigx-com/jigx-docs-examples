@@ -11,12 +11,18 @@ A divider is a simple yet effective UI component that creates a visual separatio
 
 #### Examples and code snippets
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wbWNQ7aP448sIxR7cCoQW-20250203-075934.png" size="66" position="center" caption="Dividers" alt="Dividers"} :::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wbWNQ7aP448sIxR7cCoQW-20250203-075934.png
+{% endcolumn %}
 
-:::VerticalSplitItem This example demonstrates using dividers between components and creating a double-line divider between the horizontal list and the form. ::: ::::
+{% column %}
+This example demonstrates using dividers between components and creating a double-line divider between the horizontal list and the form.
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs divider.jigx
-
+{% tabs %}
+{% tab title="divider.jigx" %}
 ```yaml
 children:
   - type: component.section
@@ -77,9 +83,9 @@ children:
             label: ' '
             value: Thank you for your support
 ```
+{% endtab %}
 
-datasource (static)
-
+{% tab title="datasource (static)" %}
 ```yaml
 datasources:
   repair-services-static:
@@ -127,3 +133,5 @@ datasources:
           service: Plumbing
           time: 60
 ```
+{% endtab %}
+{% endtabs %}

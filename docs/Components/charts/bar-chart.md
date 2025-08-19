@@ -1,8 +1,14 @@
 # bar-chart
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem The component can display statistics related to data records (categorical variables) represented in a bar chart. This can show a single or multiple data series for comparative purposes and highlight specific regions or ranges on the chart to make it easier for users to interpret and analyze the data. This component is mostly used in [jig.default](<../../Jig Types/jig_default.md>) or [jig.list](<../../Jig Types/jig_list.md>). :::
+{% columns %}
+{% column %}
+The component can display statistics related to data records (categorical variables) represented in a bar chart. This can show a single or multiple data series for comparative purposes and highlight specific regions or ranges on the chart to make it easier for users to interpret and analyze the data. This component is mostly used in [jig.default](<../../Jig Types/jig_default.md>) or [jig.list](<../../Jig Types/jig_list.md>)
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{alt="Bar Chart Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNwqF58yNsXcKrMxDsANE\_bar-chart.png" size="86" caption="Bar Chart Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNwqF58yNsXcKrMxDsANE\_bar-chart.png" width="800" height="604" darkWidth="800" darkHeight="604"} ::: ::::
+{% column %}
+Image\[]{alt="Bar Chart Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNwqF58yNsXcKrMxDsANE\_bar-chart.png
+{% endcolumn %}
+{% endcolumns %}
 
 ### Configuration options
 
@@ -16,16 +22,26 @@ Some properties are common to all components, see [Common component properties](
 
 #### Bar-chart finance static
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ![Finance bar-chart](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8Z28MLwf3pqS_7EEZqmRC_weml0oui8khi-mqiu-dbbbar-chart-singleiphone13blueportrait.png) :::
+{% columns %}
+{% column %}
+&#x20;![Finance bar-chart](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8Z28MLwf3pqS_7EEZqmRC_weml0oui8khi-mqiu-dbbbar-chart-singleiphone13blueportrait.png)&#x20;
 
-:::VerticalSplitItem The jig displays a bar chart with an annual overview of finances. The x-axis shows the months and the y-axis the monetary amount. Using number formatting, we can have any currency displayed.
+
+{% endcolumn %}
+
+{% column %}
+The jig displays a bar chart with an annual overview of finances. The x-axis shows the months and the y-axis the monetary amount. Using number formatting, we can have any currency displayed.
 
 **Examples:** See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/static-data/bar-chart-finance-statistic/bar-chart-finance-statistic.jigx). See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic/bar-chart-finance-dynamic.jigx).
 
 **Datasources:** See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs bar-chart (static)
+:::CodeblockTabs&#x20;
 
+{% tabs %}
+{% tab title="bar-chart (static)" %}
 ```yaml
 title: Current account overview
 type: jig.default
@@ -89,9 +105,9 @@ children:
       legend:
         isHidden: false
 ```
+{% endtab %}
 
-bar-chart (dynamic)
-
+{% tab title="bar-chart (dynamic)" %}
 ```yaml
 children:
   - type: component.bar-chart
@@ -119,9 +135,9 @@ children:
           name: "2021/2022"
           color: color2
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   finance-dynamic:
@@ -139,19 +155,29 @@ datasources:
           '$.category' 
         FROM [default/finances] WHERE '$.category' = "finance-month" ORDER BY '$.financeid' ASC
 ```
+{% endtab %}
+{% endtabs %}
 
 #### Bar-chart multiple series
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y0mOpU1tdF-6Q5inYOHBx\_c-barmultiseries.PNG" size="80" position="center" caption="Multiple series" alt="Multiple series" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y0mOpU1tdF-6Q5inYOHBx\_c-barmultiseries.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
+{% columns %}
+{% column %}
+mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y0mOpU1tdF-6Q5inYOHBx\_c-barmultiseries.PNG
+{% endcolumn %}
 
-:::VerticalSplitItem The jig displays a bar chart with four series that compares amounts for three years per quarter. In this example the `Legend` is shown.
+{% column %}
+The jig displays a bar chart with four series that compares amounts for three years per quarter. In this example the `Legend` is shown.
 
 **Examples:** See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/static-data/bar-chart-multiple-series/bar-chart-multiple-series.jigx). See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-multiple-series-dynamic/bar-chart-multiple-dynamic.jigx).
 
 **Datasources in order series1 and series2:** See the full datasource code sample for dynamic data [series 1](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx) and [series 2](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx) in GitHub.&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs bar-chart-multiple (static)
+:::CodeblockTabs
 
+{% tabs %}
+{% tab title=" bar-chart-multiple (static)" %}
 ```yaml
 title: Multiple series
 type: jig.default
@@ -216,9 +242,9 @@ children:
           name: Q4
           color: color5
 ```
+{% endtab %}
 
-bar-chart-multiple (dynamic)
-
+{% tab title=" bar-chart-multiple (dynamic)" %}
 ```yaml
 children:
   - type: component.bar-chart
@@ -234,9 +260,9 @@ children:
         - data: =@ctx.datasources.series1-dynamic.data
         - data: =@ctx.datasources.series2-dynamic.data
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   series1-dynamic:
@@ -272,19 +298,25 @@ datasources:
           '$.subtitle', 
           '$.title' 
         FROM [default/charts] WHERE '$.category' = "chart2" ORDER BY x
-    
 ```
+{% endtab %}
+{% endtabs %}
 
 #### Bar-chart with plot bands
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem The jig displays a bar chart with an annual overview of finances. The x-axis shows the months and the y-axis the monetary amount. The data points are easy to see as we used the `plotBands` property to add color. In this example multiple bands are defined by adding the form, to and color properties.
+{% columns %}
+{% column %}
+The jig displays a bar chart with an annual overview of finances. The x-axis shows the months and the y-axis the monetary amount. The data points are easy to see as we used the `plotBands` property to add color. In this example multiple bands are defined by adding the form, to and color properties.
 
 **Examples:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic/bar-charts-plotBands.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EP5F4QeY\_kyU4tfa\_QRG-\_charts-bar-plotbands.PNG" size="80" position="center" caption="Bar chart with plot bands" alt="Bar chart with plot bands" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EP5F4QeY\_kyU4tfa\_QRG-\_charts-bar-plotbands.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
+{% column %}
+mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EP5F4QeY\_kyU4tfa\_QRG-\_charts-bar-plotbands.PNG
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs bar-chart-plotbands
-
+{% code title="bar-chart-plotbands" %}
 ```yaml
 title: Current account overview
 type: jig.default
@@ -362,19 +394,26 @@ children:
       legend:
         isHidden: false
 ```
+{% endcode %}
 
 #### Bar-chart using expressions
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QoIeM\_NRC-TWN5R079CYy\_cc-barchartexpression.PNG" size="74" position="center" caption="Bar-chart using expressions" alt="Bar-chart using expressions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QoIeM\_NRC-TWN5R079CYy\_cc-barchartexpression.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QoIeM\_NRC-TWN5R079CYy\_cc-barchartexpression.PNG
+{% endcolumn %}
 
-:::VerticalSplitItem In this example expressions are used to dertermine the `series`, `categories`, `min`, `max`, and `tickAmount` of a bar chart . The x-axis shows the quarters and the y-axis the monetary amount using the `format` property to display the currency.
+{% column %}
+In this example expressions are used to dertermine the `series`, `categories`, `min`, `max`, and `tickAmount` of a bar chart . The x-axis shows the quarters and the y-axis the monetary amount using the `format` property to display the currency.
 
 **Examples:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-multiple-series-dynamic/bar-chart-multiple-dynamic.jigx).
 
 **Datasources** See the full datasource code sample for [series 1](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx) and [series 2](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx) in GitHub.
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs bar-chart-multiple-dynamic
-
+{% tabs %}
+{% tab title=" bar-chart-multiple-dynamic" %}
 ```yaml
 #Add file to the jigs folder
 title: Multiple series dynamic
@@ -404,9 +443,9 @@ children:
         tickAmount: =@ctx.datasources.series2[0].tickAmount
         max: =@ctx.datasources.series2[0].max 
 ```
+{% endtab %}
 
-series1
-
+{% tab title="series1" %}
 ```yaml
 #Add file to the datasource folder
 type: datasource.static
@@ -425,9 +464,9 @@ options:
       y: 86000
       color: color2
 ```
+{% endtab %}
 
-series2
-
+{% tab title="series2" %}
 ```yaml
 #Add file to the datasource folder
 type: datasource.static
@@ -458,3 +497,5 @@ options:
       max: 127000
       tickAmount: 6 
 ```
+{% endtab %}
+{% endtabs %}

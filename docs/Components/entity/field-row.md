@@ -3,10 +3,6 @@ title: field-row
 slug: iGAk-field-row
 createdAt: Thu Jun 09 2022 19:32:19 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jul 24 2024 09:33:13 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to use the field-row component to display multiple components on the
-  same row in this comprehensive document. Discover how rows can contain
-  entity-field components and children components, a
 ---
 
 # field-row
@@ -25,20 +21,24 @@ Some properties are common to all components, see [Common component properties](
 
 ### Examples and code snippets
 
-:::::ExpandableHeading
-
 #### Field-row components with entity-fields (Display only)
 
-::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Field-row](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VA6mlFjt5KI9NaTxqInAb_mv9-5gc8jut5xwtpdtsmock-fieldiphone13blueportrait.png) :::
+{% columns %}
+{% column %}
+![Field-row](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VA6mlFjt5KI9NaTxqInAb_mv9-5gc8jut5xwtpdtsmock-fieldiphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem Example showing how rows have been incorporated to display more than one component per row in certain instances.
+{% column %}
+Example showing how rows have been incorporated to display more than one component per row in certain instances.
 
 **Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/field-row/static-data/row-entity-field-sd.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/field-row/dynamic-data/row-entity-field-dd.jigx).
 
-**Datasources:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx). ::: ::::
+**Datasources:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs row-entity-fields (static)
-
+{% tabs %}
+{% tab title="row-entity-fields (static)" %}
 ```yaml
 children:
   - type: component.entity
@@ -75,9 +75,9 @@ children:
                   value: =(@ctx.datasources.repair-services-static[id=2].materials = 'True' ? true :false) 
                   contentType: checkbox   
 ```
+{% endtab %}
 
-row-entity-fields (dynamic)
-
+{% tab title="row-entity-fields (dynamic)" %}
 ```yaml
 children:
   - type: component.entity
@@ -123,11 +123,11 @@ children:
               - type: component.entity-field
                 options:
                   label: Once Off Rate
-                  value: =@ctx.datasources.cleaning-services-dd.onceoffrate      
+                  value: =@ctx.datasources.cleaning-services-dd.onceoffrate
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   repair-services-static:
@@ -208,11 +208,12 @@ datasources:
           time: 60
         - id: 10
           description: Plumbing issues and repairs
-          hourlyRat
+          hourlyRate: 50
+          time: 30
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dd:
@@ -235,21 +236,29 @@ datasources:
           '$.time' 
         FROM [default/cleaning-services] WHERE '$.service' = "Mattress Cleaning"
 ```
-
-::: :::::
-
-:::::ExpandableHeading
+{% endtab %}
+{% endtabs %}
 
 #### Field-row components on form with children components (Display and input)
 
-::::VerticalSplit{layout="left"} :::VerticalSplitItem ![field-row on form](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O9ZlnWKC7QQAQScg2Klh4_8uyi918oalwk7j3rzytb1mock-field2iphone13blueportrait.png) :::
+{% columns %}
+{% column %}
+&#x20;![field-row on form](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O9ZlnWKC7QQAQScg2Klh4_8uyi918oalwk7j3rzytb1mock-field2iphone13blueportrait.png)&#x20;
 
-:::VerticalSplitItem **Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/field-row/dynamic-data/form-row-children-dd.jigx).
 
-**Datasource:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx). ::: ::::
+{% endcolumn %}
 
-:::CodeblockTabs form-rows-children (dynamic)
+{% column %}
+**Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/field-row/dynamic-data/form-row-children-dd.jigx).
 
+**Datasource:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
+
+:::CodeblockTabs&#x20;
+
+{% tabs %}
+{% tab title="form-rows-children (dynamic)" %}
 ```yaml
 children:
   - type: component.form
@@ -304,9 +313,9 @@ children:
                   label: Once Off Rate
                   value: =@ctx.datasources.cleaning-services-dd.onceoffrate
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dd:
@@ -329,5 +338,5 @@ datasources:
           '$.time' 
         FROM [default/cleaning-services] WHERE '$.service' = "Mattress Cleaning"
 ```
-
-::: :::::
+{% endtab %}
+{% endtabs %}

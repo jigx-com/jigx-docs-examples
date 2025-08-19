@@ -23,20 +23,24 @@ Some properties are common to all components, see [Common component properties](
 
 ### Examples and code snippets
 
+{% columns %}
+{% column %}
+![Entity with sections, row & field](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xQ6vW15SRw79rWRz5aMxz_img9802iphone13blueportrait.png)&#x20;
+{% endcolumn %}
+
+{% column %}
+![Entity with sections & field](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/P7cVpxb09Yx1ZnvKqqhc8_img9803iphone13blueportrait.png)
+{% endcolumn %}
+{% endcolumns %}
+
 #### Entity example
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem **Basic**
-
-![Entity with sections, row & field](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xQ6vW15SRw79rWRz5aMxz_img9802iphone13blueportrait.png) :::
-
-:::VerticalSplitItem **Compact**
-
-![Entity with sections & field](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/P7cVpxb09Yx1ZnvKqqhc8_img9803iphone13blueportrait.png) ::: ::::
+**Compact**
 
 **Examples**: **Basic** - See the full example using static data in [GitHub](entity.md). **Compact** - See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd-compact.jigx).
 
-:::CodeblockTabs Basic-entity-section-row-entity-field
-
+{% tabs %}
+{% tab title="Basic-entity-section-row-entity-field" %}
 ```yaml
 children:
   - type: component.entity
@@ -115,9 +119,9 @@ children:
                 isMultiline: true
                 contentType: default
 ```
+{% endtab %}
 
-Compact-entity-section-entity-field
-
+{% tab title="Compact-entity-section-entity-field" %}
 ```yaml
 children:
   - type: component.entity
@@ -163,9 +167,9 @@ children:
                   label: Once Off Rate
                   value: =@ctx.datasources.cleaning-services[0].onceoffrate != null ? @ctx.datasources.cleaning-services[0].onceoffrate :'N/A'
 ```
+{% endtab %}
 
-Datasource (dynamic)
-
+{% tab title="Datasource (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services:
@@ -190,8 +194,10 @@ datasources:
           '$.time' 
         FROM [default/cleaning-services] ORDER BY '$.service' ASC
 ```
+{% endtab %}
+{% endtabs %}
 
-## See also
+#### See also
 
 * [entity-field](entity/entity-field.md)
 * [field-row](entity/field-row.md)

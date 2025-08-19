@@ -1,8 +1,16 @@
 # pie-chart
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem The component can be used to display statistics related to data records. Mostly used in [jig.default](<../../Jig Types/jig_default.md>) or [jig.list](<../../Jig Types/jig_list.md>). :::
+{% columns %}
+{% column %}
+The component can be used to display statistics related to data records. Mostly used in [jig.default](<../../Jig Types/jig_default.md>) or [jig.list](<../../Jig Types/jig_list.md>).
+{% endcolumn %}
 
-:::VerticalSplitItem ![Pie Chart Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CEsXqKXctc_APbWr9-1G9_pie-chart.png) ::: ::::
+{% column %}
+&#x20;![Pie Chart Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CEsXqKXctc_APbWr9-1G9_pie-chart.png)&#x20;
+
+
+{% endcolumn %}
+{% endcolumns %}
 
 {% hint style="warning" %}
 We are currently experiencing issues with the legend of the Pie Chart component. We are working hard to fix this issue.
@@ -22,16 +30,27 @@ Some properties are common to all components, see [Common component properties](
 
 #### Pie chart
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ![Pie Chart](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CAWSPzutiCMFmb4gxIrya_w40z-dj51d0ecr9n92ccvpiechartiphone13blueportrait.png) :::
+{% columns %}
+{% column %}
+&#x20;![Pie Chart](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CAWSPzutiCMFmb4gxIrya_w40z-dj51d0ecr9n92ccvpiechartiphone13blueportrait.png)&#x20;
 
-:::VerticalSplitItem This jig displays a complete pie chart. In this example, these are issues where green shows resolved issues, yellow issues in progress, and red unresolved issues.
 
-**Examples:** See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/static-data/pie-chart/pie-chart.jigx). See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/dynamic-data/pie-chart/pie-chart-dynamic.jigx).
+{% endcolumn %}
 
-**Datasources:** See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-dynamic.jigx).
+{% column %}
+This jig displays a complete pie chart. In this example, these are issues where green shows resolved issues, yellow issues in progress, and red unresolved issues.
 
-:::CodeblockTabs pie-chart (static)
+**Examples:** \
+See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/static-data/pie-chart/pie-chart.jigx). \
+See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/dynamic-data/pie-chart/pie-chart-dynamic.jigx).
 
+**Datasources:** \
+See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-dynamic.jigx). &#x20;
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="pie-chart (static)" %}
 ```yaml
 children:
   - type: component.pie-chart
@@ -50,9 +69,9 @@ children:
               - isEnabled: true
             layout: pie
 ```
+{% endtab %}
 
-pie-chart (dynamic)
-
+{% tab title="pie-chart (dynamic)" %}
 ```yaml
 children:
   - type: component.pie-chart
@@ -71,9 +90,9 @@ children:
               - isEnabled: true
             layout: pie
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   pie-chart-dynamic:
@@ -92,21 +111,32 @@ datasources:
           '$.subtitle', 
           '$.title' 
         FROM [default/charts] WHERE '$.category' = "pie-chart"
-    
 ```
+{% endtab %}
+{% endtabs %}
 
 #### Pie chart type arch
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ![Pie chart - arch](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4-g91a_Saz9YXCiIcWHcR_bco9qdkyaolqvlk3xgf8gpie-chart-archchartiphone13blueportrait.png) :::
+{% columns %}
+{% column %}
+&#x20;![Pie chart - arch](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4-g91a_Saz9YXCiIcWHcR_bco9qdkyaolqvlk3xgf8gpie-chart-archchartiphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem This jig displays an arc pie chart. This example shows the occupancy in a warehouse; the green color shows available space and the red color indicates occupied space.
+{% column %}
+This jig displays an arc pie chart. This example shows the occupancy in a warehouse; the green color shows available space and the red color indicates occupied space.
 
 **Examples:** See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/static-data/pie-chart-arch/pie-chart-arch.jigx). See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/dynamic-data/pie-chart-arch/pie-chart-arch-dynamic.jigx).
 
 **Datasources:** See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-arch-chart-dynamic.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs arch-chart (static)
+:::VerticalSplitItem&#x20;
 
+:::CodeblockTabs&#x20;
+
+{% tabs %}
+{% tab title="arch-chart (static)" %}
 ```yaml
 children:
   - type: component.pie-chart
@@ -125,9 +155,9 @@ children:
               - isEnabled: true
             layout: arch
 ```
+{% endtab %}
 
-arch-chart (dynamic)
-
+{% tab title="arch-chart (dynamic)" %}
 ```yaml
 title: Arch pie chart
 type: jig.default
@@ -149,9 +179,9 @@ children:
               - isEnabled: true
             layout: arch
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   pie-arch-chart-dynamic:
@@ -171,3 +201,5 @@ datasources:
           '$.title' 
         FROM [default/charts] WHERE '$.category' = "arch-chart"
 ```
+{% endtab %}
+{% endtabs %}

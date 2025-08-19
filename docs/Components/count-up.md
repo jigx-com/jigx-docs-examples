@@ -1,8 +1,14 @@
 # count-up
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem The count-up component is a display-only component that continuously updates in real-time to show the elapsed time since a given start timestamp. :::
+{% columns %}
+{% column %}
+The count-up component is a display-only component that continuously updates in real-time to show the elapsed time since a given start timestamp.
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2\_vVUe8H-20250319-072422.png" size="60" position="center" caption="Count-up" alt="Count-up" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2\_vVUe8H-20250319-072422.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} ::: ::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2\_vVUe8H-20250319-072422.png
+{% endcolumn %}
+{% endcolumns %}
 
 ### Configuration options
 
@@ -16,14 +22,19 @@ Some properties are common to all components, see [Common component properties](
 
 #### Count-up basic
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem This example shows how to set up a basic `count-up` component that starts counting from the current moment.
+{% columns %}
+{% column %}
+This example shows how to set up a basic `count-up` component that starts counting from the current moment.
 
 **Examples:** See the full code example in GitHub.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2\_vVUe8H-20250319-072422.png" size="60" position="center" caption="Count-up" alt="Count-up" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2\_vVUe8H-20250319-072422.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} ::: ::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2\_vVUe8H-20250319-072422.png
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs count-up-basic.jigx
-
+{% code title="count-up-basic.jigx" %}
 ```yaml
 title: Basic count-up
 type: jig.default
@@ -51,17 +62,23 @@ children:
     # Provide the start time.
     startTimestamp: =$now()
 ```
+{% endcode %}
 
-#### Count-up sizes and lables
+#### Count-up sizes and labels
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png" size="60" position="center" caption="Count-up in varying sizes" alt="Count-up in varying sizes" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} :::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png
+{% endcolumn %}
 
-:::VerticalSplitItem This example displays two `count-up` components of different sizes. The first is `extra-large`, with `labels` `positioned` above it, while the second is `medium`-sized with `labels` below.
+{% column %}
+This example displays two `count-up` components of different sizes. The first is `extra-large`, with `labels` `positioned` above it, while the second is `medium`-sized with `labels` below.
 
-**Examples:** See the full code example in GitHub.
+**Examples:** See the full code example in GitHub.&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs count-up-sizes.jigx
-
+{% code title="count-up-sizes.jigx" %}
 ```yaml
 title: Count-up sizes and labels
 type: jig.default
@@ -107,17 +124,23 @@ children:
           # Start time defined in ISO format converted to milliseconds.
           startTimestamp: =$toMillis('2025-03-06T23:00:00Z')          
 ```
+{% endcode %}
 
 #### Count-up using a datasource
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem This example showcases two `count-up` components using a datasource with timestamp records in ISO format and milliseconds. The first component uses the millisecond timestamp, while the second uses the ISO format timestamp.
+{% columns %}
+{% column %}
+This example showcases two `count-up` components using a datasource with timestamp records in ISO format and milliseconds. The first component uses the millisecond timestamp, while the second uses the ISO format timestamp.
 
-**Examples:** See the full code example in GitHub. :::
+**Examples:** See the full code example in GitHub.
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T\_KydUti3vw3y1gc-20250319-110401.png" size="60" position="center" caption="Start time defined in a datasource" alt="Start time defined in a datasource" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T\_KydUti3vw3y1gc-20250319-110401.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} ::: ::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T\_KydUti3vw3y1gc-20250319-110401.png
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs count-up-datasource.jigx
-
+{% code title="count-up-datasource.jigx" %}
 ```yaml
 title: Count-up using datasource
 type: jig.default
@@ -162,17 +185,25 @@ children:
           # Start time defined in ISO format in a datasource converted to milliseconds.
           startTimestamp: =$toMillis(@ctx.datasources.time[1].timeStamp)
 ```
+{% endcode %}
 
 #### Count-up using state in a when condition
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ![count-up condition](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gTZBlyV4cONAWWhje5ule-20250319-124254.png) :::
+{% columns %}
+{% column %}
+&#x20;![count-up condition](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gTZBlyV4cONAWWhje5ule-20250319-124254.png)&#x20;
 
-:::VerticalSplitItem This example demonstrates how to use the jig `state` in a `when` property to initially hide the `count-up` component and reveal it when a start `button` is pressed within a `list-item`.
 
-**Examples:** See the full code example in GitHub. ::: ::::
+{% endcolumn %}
 
-:::CodeblockTabs count-up-expression.jigx
+{% column %}
+This example demonstrates how to use the jig `state` in a `when` property to initially hide the `count-up` component and reveal it when a start `button` is pressed within a `list-item`.
 
+**Examples:** See the full code example in GitHub
+{% endcolumn %}
+{% endcolumns %}
+
+{% code title="count-up-expression.jigx" %}
 ```yaml
 title: Count Up 
 type: jig.default
@@ -247,3 +278,4 @@ children:
     options:
       startTimestamp: =$millis() - 10000
 ```
+{% endcode %}

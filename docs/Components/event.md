@@ -1,117 +1,41 @@
 # event
 
-The component can only be used in the [jig.calendar](<./../Jig Types/jig_calendar.md>) to display events related to data records. All events have a start and end date. Additional elements can be added, such as people attending the event or where the event will take place.
+The component can only be used in the [jig.calendar](<../Jig Types/jig_calendar.md>) to display events related to data records. All events have a start and end date. Additional elements can be added, such as people attending the event or where the event will take place.
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](event.md) for a list and their configuration options.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `from`             | Configure the starting time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;For more information about the setting of the date format/ time zones, refer to . |
-| `to`               | Configure the ending time. You can change the property format by setting the value to the `Text With Format` property, *cntrl+space*, and choosing `Date`. In the `format` property, select the required date format.&#xA;The default format saved in the database is **yyyy/mm/ddThour\:minute\:second** (i.e., 2022-07-27T08:15:00). &#xA;For more information about the setting of the date format/ time zones, refer to.    |
-| `title`            | Provide the name of the event.                                                                                                                                                                                                                                                                                                                                                                                                  |
+<table><thead><tr><th width="159.73046875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>from</code></td><td>Configure the starting time. You can change the property format by setting the value to the <code>Text With Format</code> property, <em>cntrl+space</em>, and choosing <code>Date</code>. In the <code>format</code> property, select the required date format. The default format saved in the database is <strong>yyyy/mm/ddThour:minute:second</strong> (i.e., 2022-07-27T08:15:00). For more information about the setting of the date format/ time zones, refer to .</td></tr><tr><td><code>to</code></td><td>Configure the ending time. You can change the property format by setting the value to the <code>Text With Format</code> property, <em>cntrl+space</em>, and choosing <code>Date</code>. In the <code>format</code> property, select the required date format. The default format saved in the database is <strong>yyyy/mm/ddThour:minute:second</strong> (i.e., 2022-07-27T08:15:00). For more information about the setting of the date format/ time zones, refer to.</td></tr><tr><td><code>title</code></td><td>Provide the name of the event.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="130">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>description</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The general description of the event.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>location</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The event's location, for example, a meeting room or conference center.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>people</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The list of invitees/attendees for the event. Use an expression to configure the property, for example,
-      <code>people: =@ctx.current.item.attendees.emailAddress</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>tags</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Displays a list of <code>tags</code> for the event, such as meeting, interview, or social. The <code>tags</code> array can contain the <em>color</em> and <em>title</em> for each tag.
-      <code>"=[{'title': @ctx.current.item.type, 'color': @ctx.current.item.color}]"</code>
-      or define the tag in a datasource whihc is referenced in the property.
-      <code>tags: =@ctx.current.item.tags</code></p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="166.3125">Other options</th><th></th></tr></thead><tbody><tr><td><code>description</code></td><td>The general description of the event.</td></tr><tr><td><code>location</code></td><td>The event's location, for example, a meeting room or conference center.</td></tr><tr><td><code>people</code></td><td>The list of invitees/attendees for the event. Use an expression to configure the property, for example, <code>people: =@ctx.current.item.attendees.emailAddress</code>.</td></tr><tr><td><code>tags</code></td><td>Displays a list of <code>tags</code> for the event, such as meeting, interview, or social. The <code>tags</code> array can contain the <em>color</em> and <em>title</em> for each tag. <code>"=[{'title': @ctx.current.item.type, 'color': @ctx.current.item.color}]"</code> or define the tag in a datasource which is referenced in the property. <code>tags: =@ctx.current.item.tags</code></td></tr></tbody></table>
 
 Certain actions can be executed on the event; for example, when pressing on the event opens the URL of the advertised event.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="146">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Actions</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onButtonPress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>You can set any action in this property just like in the <code>onPress</code> property. The difference is that if only <code>onButtonPress</code> is configured, after pressing on the event, a modal window with the event's details opens. The modal contains a button for the action configured in the <code>onButtonPress</code> property. When <code>isHidden</code> is used with <code>when:false</code> , the <code>isHidden</code> property is automatically overwritten on the mobile device and set to <code>isHidden:true</code> and the button automatically hides.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onPress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>When pressing on the event an action executes. Use IntelliSense to select an action or refer to the list of available . When the <code>onPress</code> is configured, the <code>onButtonPress</code> configuration is ignored.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="172.33203125">Actions</th><th></th></tr></thead><tbody><tr><td><code>onButtonPress</code></td><td>You can set any action in this property just like in the <code>onPress</code> property. The difference is that if only <code>onButtonPress</code> is configured, after pressing on the event, a modal window with the event's details opens. The modal contains a button for the action configured in the <code>onButtonPress</code> property. When <code>isHidden</code> is used with <code>when:false</code> , the <code>isHidden</code> property is automatically overwritten on the mobile device and set to <code>isHidden:true</code> and the button automatically hides.</td></tr><tr><td><code>onPress</code></td><td>When pressing on the event an action executes. Use IntelliSense to select an action or refer to the list of available . When the <code>onPress</code> is configured, the <code>onButtonPress</code> configuration is ignored.</td></tr></tbody></table>
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Event of meeting
+#### Event of meeting
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Meeting event](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qH20EHiZsEqMm-1fydZau_tii6byi98kqitscdlxevent-meetingeventiphone13blueportrait.png "Meeting event")
-:::
+{% columns %}
+{% column %}
+&#x20;![Meeting event](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qH20EHiZsEqMm-1fydZau_tii6byi98kqitscdlxevent-meetingeventiphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 The jig displays the event on the calendar. We immediately see what time the meeting will take place, where it will take place and which people will attend.
 
-**Examples**:
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/static-data/event-of-meeting/event-of-meeting.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-of-meeting/event-of-meeting-dynamic.jigx).
+**Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/static-data/event-of-meeting/event-of-meeting.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-of-meeting/event-of-meeting-dynamic.jigx).
 
-**Datasources**:
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-training.jigx)
-See the full datasource for dynamic data in [GitHub]()
-:::
-::::
+**Datasources**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-training.jigx) See the full datasource for dynamic data in [GitHub](event.md)&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-event-of-meeting
+:::CodeblockTabs&#x20;
 
+{% tabs %}
+{% tab title="event-of-meeting" %}
 ```yaml
 # add file under jigs folder 
 type: jig.calendar
@@ -135,9 +59,9 @@ item:
     tags: =@ctx.current.item.tags
     location: =@ctx.current.item.location
 ```
+{% endtab %}
 
-event-of-meeting-dynamic
-
+{% tab title="event-of-meeting-dynamic" %}
 ```yaml
 # add file under jigs folder 
 type: jig.calendar
@@ -161,9 +85,9 @@ item:
     location:  =@ctx.current.item.location
     tags: "=[{'title': @ctx.current.item.tags, 'color': @ctx.current.item.color}]"
 ```
+{% endtab %}
 
-event-meeting
-
+{% tab title="event-meeting" %}
 ```yaml
 type: datasource.static
 options:
@@ -186,9 +110,9 @@ options:
         - avatarUrl: https://images.unsplash.com/photo-1591084728795-1149f32d9866?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80
           fullName: Karl Fisher
 ```
+{% endtab %}
 
-event-meeting-dynamic
-
+{% tab title="event-meeting-dynamic" %}
 ```yaml
 type: datasource.sqlite
 options:
@@ -207,33 +131,29 @@ options:
       '$.category'
     FROM [default/calendar] WHERE category = "meeting"
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Event of training
+#### Event of training
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Training event](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rZqCjnEYr20cKgcuryWYA_event-training.PNG "Training event")
-:::
+{% columns %}
+{% column %}
+&#x20;![Training event](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rZqCjnEYr20cKgcuryWYA_event-training.PNG)&#x20;
 
-:::VerticalSplitItem
-The jig displays a multi-day event on the calendar
 
-**Examples**:
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/static-data/multi-day-event/multi-day-event.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/multi-day-event/multi-day-event-dynamic.jigx).
+{% endcolumn %}
 
-**Datasources**:
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-vacation.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-vacation-dynamic.jigx).
-:::
-::::
+{% column %}
+&#x20;The jig displays a multi-day event on the calendar.
 
-:::CodeblockTabs
-multi-day-event-day-event
+**Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/static-data/multi-day-event/multi-day-event.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/multi-day-event/multi-day-event-dynamic.jigx).
 
+**Datasources**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-vacation.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-vacation-dynamic.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="multi-day-event-day-event" %}
 ```yaml
 # add file under jigs folder 
 title: =$now('[D1o] [MNn] [Y]') 
@@ -247,9 +167,9 @@ item:
     location: =@ctx.current.item.location
     to: =$fromMillis($toMillis($now()) + 2 * 60 * 60000 + @ctx.current.item.eventEnd * 3600000)
 ```
+{% endtab %}
 
-multi-day-event-dynamic
-
+{% tab title="multi-day-event-dynamic" %}
 ```yaml
 # add file under jigs folder 
 title: =$now('[D1o] [MNn] [Y]')
@@ -264,9 +184,9 @@ item:
     location: =@ctx.current.item.location
     to: =$fromMillis($toMillis($now()) + 5 * 60 * 60000 + @ctx.current.item.eventEnd * 3600000)
 ```
+{% endtab %}
 
-event-training
-
+{% tab title="event-training" %}
 ```yaml
 # Add file under datasources folder
 type: datasource.static
@@ -277,9 +197,9 @@ options:
       location: Blue room
       name: Onboarding/Induction Training
 ```
+{% endtab %}
 
-event-training-dynamic
-
+{% tab title="event-training-dynamic" %}
 ```yaml
 # Add file under datasources folder
 type: datasource.sqlite
@@ -296,34 +216,38 @@ options:
       '$.category' 
     FROM [default/calendar] WHERE '$.category' = 'meeting-event'
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Event with action
+#### Event with action
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![Event with action](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VRUxBeE5caQr5pntG0EYD_img8568iphone13blueportrait.png "Event with action")
-:::
+{% columns %}
+{% column %}
+&#x20;![Event with action](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VRUxBeE5caQr5pntG0EYD_img8568iphone13blueportrait.png)&#x20;
 
-:::VerticalSplitItem
-![Event with action](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YeceMRw6Rbi1bKY6Yfxpe_img8569iphone13blueportrait.png "Event with action")
-:::
-::::
+
+{% endcolumn %}
+
+{% column %}
+&#x20;![Event with action](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YeceMRw6Rbi1bKY6Yfxpe_img8569iphone13blueportrait.png)&#x20;
+
+
+{% endcolumn %}
+{% endcolumns %}
 
 The jig displays an event on the calendar with actions on the main screen or in the detail of the event.
 
-**Examples**:
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/event-with-action.jigx).
+**Examples**: \
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/event-with-action.jigx). \
 See also the supporting files [create event](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/create-event.jigx) and [add event users](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/add-event-user.jigx) in GitHub.
 
-**Datasource**:
+**Datasource**: \
 See the full datasource using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/calendar-data-dynamic.jigx).
 
-:::CodeblockTabs
-event-with-action.jigx
+:::CodeblockTabs&#x20;
 
+{% tabs %}
+{% tab title="event-with-action.jigx" %}
 ```yaml
 # add file under jigs folder 
 title: Calendar with action
@@ -403,9 +327,9 @@ item:
                 id: =@ctx.current.item.id
                 title: =@ctx.current.item.title
 ```
+{% endtab %}
 
-create-event.jigx
-
+{% tab title="create-event.jigx" %}
 ```yaml
 # add file under jigs folder 
 title: Create event
@@ -487,9 +411,9 @@ children:
             value: color6
             isHidden: true
 ```
+{% endtab %}
 
-add-event-user.jigx
-
+{% tab title="add-event-user.jigx" %}
 ```yaml
 title: Registration
 type: jig.default
@@ -561,6 +485,5 @@ children:
             label: Phone
             value: =@ctx.datasources.employee-detail-dynamic.phone
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

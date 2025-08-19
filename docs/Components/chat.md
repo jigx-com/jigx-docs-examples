@@ -1,10 +1,14 @@
 # chat
 
-:
+{% columns %}
+{% column %}
+Experience seamless communication on the go with our chat-message component, keeping you connected anytime, anywhere.
+{% endcolumn %}
 
-:::VerticalSplit{layout="middle"} :::VerticalSplitItem Experience seamless communication on the go with our chat-message component, keeping you connected anytime, anywhere. :::
-
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WqoBhXkDyLGY8so3dYBHO-20240806-111124.png" size="78" position="center" caption="Chat" alt="Chat" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WqoBhXkDyLGY8so3dYBHO-20240806-111124.png" width="800" height="1575" darkWidth="800" darkHeight="1575"} ::: ::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WqoBhXkDyLGY8so3dYBHO-20240806-111124.png
+{% endcolumn %}
+{% endcolumns %}
 
 ### Configuration options
 
@@ -50,8 +54,8 @@ Configure the jig file called **ai**-**chat.jigx** with:
 
 ![AI chatbot](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-S4CYksahsIsJkfrCo6d8_-20240806-103549.png)
 
-:::CodeblockTabs ai-chat.jigx (function)
-
+{% tabs %}
+{% tab title="ai-chat.jigx (function)" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: POST
@@ -159,10 +163,11 @@ parameters:
     required: true
 
 forRowsWithMatchingIds: true
+
 ```
+{% endtab %}
 
-ai-chat.jigx
-
+{% tab title="ai-chat.jigx" %}
 ```yaml
 title: ="Chat"
 type: jig.full-screen
@@ -222,11 +227,10 @@ component:
           author: =@ctx.user.email
           user: =@ctx.user.email
           question: =@ctx.components.myChat.state.message
-                
 ```
+{% endtab %}
 
-ai-chat-action.jigx
-
+{% tab title="ai-chat-action.jigx" %}
 ```yaml
 parameters:
   author: 
@@ -273,3 +277,5 @@ action:
                 # Configure a unique id for the chatbot message.                
                 mId: =$uuid()
 ```
+{% endtab %}
+{% endtabs %}

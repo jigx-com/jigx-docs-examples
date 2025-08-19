@@ -5,8 +5,7 @@ createdAt: Thu Jun 09 2022 19:48:21 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jul 24 2024 09:33:04 GMT+0000 (Coordinated Universal Time)
 description: >-
   Learn how to use the section component in your user interface to group related
-  items together. This document provides examples and code snippets for creating
-  display sections for repair services and c
+  items together.
 ---
 
 # section
@@ -25,20 +24,24 @@ Some properties are common to all components, see [Common component properties](
 
 ### Examples and code snippets
 
-:::::ExpandableHeading
-
 #### The Entity with sections, rows, and entity fields (Display only)
 
-::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Jig with sections](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5SKtUcADiqdQ1iYCL3z1M_sec1iphone13blueportrait.png) :::
+{% columns %}
+{% column width="41.66666666666667%" %}
+&#x20;![Jig with sections](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5SKtUcADiqdQ1iYCL3z1M_sec1iphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem Using sections, rows, and entity fields to create relevant display sections for the information to be functional yet elegant and neatly organized.
+{% column width="58.33333333333333%" %}
+Using sections, rows, and entity fields to create relevant display sections for the information to be functional yet elegant and neatly organized.
 
 **Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-row-entity-field-sd) See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-row-entity-field-dd.jigx).
 
-**Datasources:** See the full datasource for static data in [GitHub](tps://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-row-entity-field-dd.jigx) ::: ::::
+**Datasources:** See the full datasource for static data in [GitHub](tps://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-row-entity-field-dd.jigx)
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs Section-rows-entity-fields (static)
-
+{% tabs %}
+{% tab title="Section-rows-entity-fields (static)" %}
 ```yaml
 children:
   - type: component.entity
@@ -83,11 +86,7 @@ children:
                         label: Materials
                         value: =(@ctx.datasources.repair-services-static[id=1].materials = 'True' ? true :false)
                         contentType: checkbox
-```
-
 Section-rows-entity-fields (dynamic)
-
-```yaml
 children:
   - type: component.entity
     options:
@@ -143,9 +142,9 @@ children:
                         label: Once Off Rate
                         value: =@ctx.datasources.cleaning-services-dynamic[0].onceoffrate != null ? @ctx.datasources.cleaning-services-dynamic[0].onceoffrate:'N/A'
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   repair-services-static:
@@ -233,19 +232,17 @@ datasources:
           service: Plumbing
           time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_DYNAMIC
-
       entities:
         - entity: default/cleaning-services
-
       query: |
         SELECT 
           id, 
@@ -260,23 +257,29 @@ datasources:
           '$.time' 
         FROM [default/cleaning-services]
 ```
-
-::: :::::
-
-:::::ExpandableHeading
+{% endtab %}
+{% endtabs %}
 
 #### Form with sections, rows, and children components (Display and input)
 
-::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Jig with sections & rows](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9vfRyetsrPXmlodRx0toQ_form-with-sectionsiphone13blueportrait.png) :::
+{% columns %}
+{% column %}
+&#x20;![Jig with sections & rows](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9vfRyetsrPXmlodRx0toQ_form-with-sectionsiphone13blueportrait.png)&#x20;
 
-:::VerticalSplitItem Similar to the above example, this has the same functionality, except that this is for adding or editing data too, and not just for display purposes.
+
+{% endcolumn %}
+
+{% column %}
+Similar to the above example, this has the same functionality, except that this is for adding or editing data too, and not just for display purposes.
 
 **Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-row-children-dd.jigx).
 
-**Datasource:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx). ::: ::::
+**Datasource:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs form-section-row (dynamic)
-
+{% tabs %}
+{% tab title="form-section-row (dynamic)" %}
 ```yaml
 children:
   - type: component.form
@@ -342,9 +345,9 @@ children:
                         label: Once Off Rate
                         value: =@ctx.datasources.cleaning-services-dynamic[0].onceoffrate != null ? @ctx.datasources.cleaning-services-dynamic[0].onceoffrate :'N/A'
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -370,29 +373,39 @@ datasources:
           '$.quantity'
         FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL   ORDER BY id DESC
 ```
-
-::: :::::
-
-:::::ExpandableHeading
+{% endtab %}
+{% endtabs %}
 
 #### Entity with sections and entity-fields (Display only)
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem **Basic**
+{% columns %}
+{% column %}
+**Basic**
 
-![Jig with display sections & fields](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nMs-BfhD6R1UM-4N3Q6BL_img9804iphone13blueportrait.png) :::
+![Jig with display sections & fields](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nMs-BfhD6R1UM-4N3Q6BL_img9804iphone13blueportrait.png)
+{% endcolumn %}
 
-:::VerticalSplitItem **Compact**
+{% column %}
+**Compact**
 
-![Jig with display sections & fields](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hNKX2CKxIPamHFP1U0RPu_img9803iphone13blueportrait.png) ::: ::::
+![Jig with display sections & fields](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hNKX2CKxIPamHFP1U0RPu_img9803iphone13blueportrait.png)&#x20;
+
+
+{% endcolumn %}
+{% endcolumns %}
 
 This is another example for display purposes only, but this time without the rows. Note the difference in the fields as they now display below each other instead of numerous entity-fields in a row.
 
-**Examples:** **Basic**- See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd.jigx). **Compact** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd-compact.jigx).
+**Examples:** \
+**Basic**- See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd.jigx). \
+**Compact** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd-compact.jigx).
 
-**Datasources:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd.jigx).
+**Datasources:** \
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). \
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd.jigx).
 
-:::CodeblockTabs section-entity-field (static)
-
+{% tabs %}
+{% tab title="section-entity-field (static)" %}
 ```yaml
 children:
   - type: component.entity
@@ -429,9 +442,9 @@ children:
                   value: =(@ctx.datasources.repair-services-static[id=1].materials = 'True' ? true :false)
                   contentType: checkbox
 ```
+{% endtab %}
 
-section-entity-field-compact (static)
-
+{% tab title="section-entity-field-compact (static)" %}
 ```yaml
 children:
   - type: component.entity
@@ -469,9 +482,9 @@ children:
                   value: =(@ctx.datasources.repair-services-static[id=1].materials = 'True' ? true :false)
                   contentType: checkbox
 ```
+{% endtab %}
 
-section-entity-field (dynamic)
-
+{% tab title="section-entity-field (dynamic)" %}
 ```yaml
 children:
   - type: component.entity
@@ -516,9 +529,9 @@ children:
                   label: Once Off Rate
                   value: =@ctx.datasources.cleaning-services[0].onceoffrate != null ? @ctx.datasources.cleaning-services[0].onceoffrate :'N/A'
 ```
+{% endtab %}
 
-section-entity-field-compact (dynamic)
-
+{% tab title="section-entity-field-compact (dynamic)" %}
 ```yaml
 children:
   - type: component.entity
@@ -562,11 +575,13 @@ children:
               - type: component.entity-field
                 options:
                   label: Once Off Rate
-                  value: =@ctx.datasources.cleaning-services[0].onceoffrate != null ? @ctx.datasources.cleaning-services[0].onceoffrate :'N/A'
+                  value: =@ctx.datasources.cleaning-services[0].onceoffrate != null ? @ctx.datasources.cleaning-services[0].onceoffrate :'N/A'y
 ```
+{% endtab %}
+{% endtabs %}
 
-datasources (static)
-
+{% tabs %}
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   repair-services-static:
@@ -654,9 +669,9 @@ datasources:
           service: Plumbing
           time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services:
@@ -681,23 +696,27 @@ datasources:
           '$.time' 
         FROM [default/cleaning-services] ORDER BY '$.service' ASC
 ```
-
-::: :::::
-
-:::::ExpandableHeading
+{% endtab %}
+{% endtabs %}
 
 #### Form with sections and entity-fields (Display and input)
 
-::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Form with sections](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/U_yPbJflLyS_T1tiIygID_secc3iphone13blueportrait.png) :::
+{% columns %}
+{% column %}
+&#x20;![Form with sections](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/U_yPbJflLyS_T1tiIygID_secc3iphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem This is the same as the above, again with the exception of being used in a form component and not just being for display purposes, but allowing input from the user.
+{% column %}
+This is the same as the above, again with the exception of being used in a form component and not just being for display purposes, but allowing input from the user.
 
 **Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-children-dd.jigx).
 
-**Datasources:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-children-dd.jigx). ::: ::::
+**Datasources:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-children-dd.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs form-section-children (dynamic)
-
+{% tabs %}
+{% tab title="form-section-children (dynamic)" %}
 ```yaml
 children:
   - type: component.form
@@ -749,9 +768,9 @@ children:
                   label: Once Off Rate
                   value: =@ctx.datasources.cleaning-services-dynamic[0].onceoffrate != null ? =@ctx.datasources.cleaning-services-dynamic[0].onceoffrate :'N/A'
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -777,5 +796,5 @@ datasources:
           '$.category' 
         FROM [default/cleaning-services]
 ```
-
-::: :::::
+{% endtab %}
+{% endtabs %}
