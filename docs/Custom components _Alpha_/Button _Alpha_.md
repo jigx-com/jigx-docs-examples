@@ -1,112 +1,48 @@
 # Button (Alpha)
 
-:::hint{type="danger"}
+{% hint style="danger" %}
 This feature is currently in its **Alpha** stage of development.
+{% endhint %}
 
-- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
-- In this phase, the feature may contain bugs or behave unpredictably.
-- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
-- We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
-:::
+* As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
+* In this phase, the feature may contain bugs or behave unpredictably.
+* Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
+* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.&#x20;
 
-The *button* custom component provides predefined options for designing the UI and tap functionality for a button. For example, your requirement might be a button showing an icon and text with a background color that can be used in multiple jigs in your app.
+The _button_ custom component provides predefined options for designing the UI and tap functionality for a button. For example, your requirement might be a button showing an icon and text with a background color that can be used in multiple jigs in your app.
 
-For steps on creating a custom component, see [How to create a custom component](<./../Custom components _Alpha_.md>).&#x20;
+For steps on creating a custom component, see [How to create a custom component](<../Custom components _Alpha_.md>).
 
-## Configuration options
+### Configuration options
 
 You can use `when` and `instanceId` with `component.button`, add the properties before the `options` property. The available list of options is shown below.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="124">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Options</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Value</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>icon</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>left</code> - select an icon from the provided list.
-      <code>right</code> - select an icon from the provided list.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isCompact</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>false</code>
-      <code>true</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onPress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Multiple, use IntelliSense to view the list of available  to call. The action is called when the button is pressed.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>style</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>isBusy</code> - true/false
-      <code>isDisabled</code> - true/false</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>title</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Provide the text to display on the button. You can use  to cater for multiple languages.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>type</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>primary</code> - the main button that guides you to complete the most important action on the screen, for example, <em>Approve</em>.
-      <code>secondary</code> - the option that shows when the ellipsis menu is tapped, for example, <em>Reject</em>.
-      <code>tertiary</code> - the second option that shows when the ellipsis menu is tapped, for example, <em>Rework</em>.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="134.7265625">Options</th><th>Value</th></tr></thead><tbody><tr><td><code>icon</code></td><td><code>left</code> - select an icon from the provided list. <code>right</code> - select an icon from the provided list.</td></tr><tr><td><code>isCompact</code></td><td><code>false</code> <code>true</code></td></tr><tr><td><code>onPress</code></td><td>Multiple, use IntelliSense to view the list of available to call. The action is called when the button is pressed.</td></tr><tr><td><code>style</code></td><td><code>isBusy</code> - true/false <code>isDisabled</code> - true/false</td></tr><tr><td><code>title</code></td><td>Provide the text to display on the button. You can use to cater for multiple languages.</td></tr><tr><td><code>type</code></td><td><code>primary</code> - the main button that guides you to complete the most important action on the screen, for example, <em>Approve</em>. <code>secondary</code> - the option that shows when the ellipsis menu is tapped, for example, <em>Reject</em>. <code>tertiary</code> - the second option that shows when the ellipsis menu is tapped, for example, <em>Rework</em>.</td></tr></tbody></table>
 
-## Example and code snippets
+### Example and code snippets
 
-The examples use a set of custom components called *sections*. The sections are for titles, spacing, and context. The *sections* code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
+The examples use a set of custom components called _sections_. The sections are for titles, spacing, and context. The _sections_ code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
 
-:::::ExpandableHeading
-### Buttons-basic
+#### Buttons-basic
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example shows the custom component that uses the button's basic form. Scroll down for more examples of how you can implement buttons.
 
 **Examples:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-1.jigx).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-basic.jigx).
-:::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-1.jigx).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-basic.jigx).&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-p4ZWpa0alO6cEoFrHeoNE-20250224-140438.png" size="70" position="center" caption="Buttons basic" alt="Buttons basic" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-p4ZWpa0alO6cEoFrHeoNE-20250224-140438.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-p4ZWpa0alO6cEoFrHeoNE-20250224-140438.png" size="70" position="center" caption="Buttons basic" alt="Buttons basic" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-p4ZWpa0alO6cEoFrHeoNE-20250224-140438.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-button-1.jigx
-
+{% tabs %}
+{% tab title="button-1.jigx" %}
 ```yaml
 # components/button-1.jigx
 type: component.default
@@ -198,9 +134,9 @@ children:
               right: alarm-bell
               left: alarm-bell
 ```
+{% endtab %}
 
-button-basic.jigx
-
+{% tab title="button-basic.jigx" %}
 ```yaml
 # jigs/buttons-basic.jigx
 title: Buttons (Basic)
@@ -218,31 +154,29 @@ children:
   - type: component.custom-component
     componentId: button-1
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Buttons-compact
+#### Buttons-compact
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rJ5zvKabEkI9ExMdH1tLI-20250224-140637.png" size="70" position="center" caption="Compact buttons" alt="Compact buttons" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rJ5zvKabEkI9ExMdH1tLI-20250224-140637.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rJ5zvKabEkI9ExMdH1tLI-20250224-140637.png" size="70" position="center" caption="Compact buttons" alt="Compact buttons" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rJ5zvKabEkI9ExMdH1tLI-20250224-140637.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows the custom component that uses compact buttons using the `isCompact` property inside a `component.card`. Compact buttons take up less space, making the screen cleaner and allowing more components to fit on the screen.
 
 **Example:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-2.jigx).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-compact.jigx).
-:::
-::::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-2.jigx).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-compact.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-button-2.jigx
-
+{% tabs %}
+{% tab title="button-2.jigx" %}
 ```yaml
 # components/button-2.jigx
 type: component.default
@@ -346,9 +280,9 @@ children:
               right: alarm-bell
               left: alarm-bell
 ```
+{% endtab %}
 
-buttons-compact.jigx
-
+{% tab title="buttons-compact.jigx" %}
 ```yaml
 # jigs/buttons-compact.jigx
 title: Buttons (Compact)
@@ -367,31 +301,29 @@ children:
   - type: component.custom-component
     componentId: button-2
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Buttons-busy
+#### Buttons-busy
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example shows how to set buttons in a custom component to show they are busy by displaying a spinner using the `isBusy` property set to `true` inside a [Card (Alpha)](<./Card _Alpha_.md>).
+{% columns %}
+{% column %}
+This example shows how to set buttons in a custom component to show they are busy by displaying a spinner using the `isBusy` property set to `true` inside a [Card (Alpha)](<Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-3.jigx).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-busy.jigx).
-:::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-3.jigx).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-busy.jigx).&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pQC8cHL_kv7Y_CqVZGy6t-20250224-141900.png" size="70" position="center" caption="Button busy" alt="Button busy" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pQC8cHL_kv7Y_CqVZGy6t-20250224-141900.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pQC8cHL\_kv7Y\_CqVZGy6t-20250224-141900.png" size="70" position="center" caption="Button busy" alt="Button busy" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pQC8cHL\_kv7Y\_CqVZGy6t-20250224-141900.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-button-3.jigx
-
+{% tabs %}
+{% tab title="button-3.jigx" %}
 ```yaml
 # components/button-3.jigx
  type: component.default
@@ -515,9 +447,9 @@ children:
            # Configure the button with a spinner to show it is busy
               isBusy: true
 ```
+{% endtab %}
 
-button-busy.jigx
-
+{% tab title="button-busy.jigx" %}
 ```yaml
 # jigs/buttons-busy.jigx
 title: Buttons (Busy)
@@ -535,31 +467,29 @@ children:
   - type: component.custom-component
     componentId: button-3
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Buttons-disabled
+#### Buttons-disabled
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-E99dmqP9t0r_Po8DyUgFh-20250224-142050.png" size="70" position="center" caption="Button disabled" alt="Button disabled" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-E99dmqP9t0r_Po8DyUgFh-20250224-142050.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-E99dmqP9t0r\_Po8DyUgFh-20250224-142050.png" size="70" position="center" caption="Button disabled" alt="Button disabled" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-E99dmqP9t0r\_Po8DyUgFh-20250224-142050.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example shows how to disable a button on a custom component using the `isDisabled: true` property inside a [Card (Alpha)](<./Card _Alpha_.md>).
+{% column %}
+This example shows how to disable a button on a custom component using the `isDisabled: true` property inside a [Card (Alpha)](<Card _Alpha_.md>).
 
 **Examples:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-4.jigx).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-disabled.jigx).
-:::
-::::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-4.jigx).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-disabled.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-button-4.jigx
-
+{% tabs %}
+{% tab title="button-4.jigx" %}
 ```yaml
 # components/button-4.jigx
 type: component.default
@@ -687,9 +617,9 @@ children:
               # Disable the button to prevent it from being tapped.
               isDisabled: true
 ```
+{% endtab %}
 
-button-disabled.jigx
-
+{% tab title="button-disabled.jigx" %}
 ```yaml
 # jigs/buttons-disabled.jigx
 title: Buttons (Disabled)
@@ -707,31 +637,29 @@ children:
   - type: component.custom-component
     componentId: button-4
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Buttons-disabled and busy
+#### Buttons-disabled and busy
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example shows a custom component with a combination of the buttons as disabled and busy using the button `style:` properties, `isDisabled: true` and `isBusy: true`.
 
 **Examples:**
 
-1. See the *section* component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-2. See the *custom component* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-5.jigx).
-3. See the *jig* example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-disabled-busy.jigx).
-:::
+1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
+2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-5.jigx).
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-disabled-busy.jigx).&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-N6w4yX5FZGhPmyRyp83cl-20250224-142236.png" size="70" position="center" caption="Buttons disabled & busy" alt="Buttons disabled & busy" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-N6w4yX5FZGhPmyRyp83cl-20250224-142236.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-N6w4yX5FZGhPmyRyp83cl-20250224-142236.png" size="70" position="center" caption="Buttons disabled & busy" alt="Buttons disabled & busy" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-N6w4yX5FZGhPmyRyp83cl-20250224-142236.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-button-5.jigx
-
+{% tabs %}
+{% tab title="button-5.jigx" %}
 ```yaml
 # components/button-5.jigx
 type: component.default
@@ -871,9 +799,9 @@ children:
               isDisabled: true
               isBusy: true
 ```
+{% endtab %}
 
-buttons-disabled-busy.jigx
-
+{% tab title="buttons-disabled-busy.jigx" %}
 ```yaml
 # jigs/buttons-disabled-busy.jigx
 title: Buttons (Disabled & Busy)
@@ -891,6 +819,5 @@ children:
   - type: component.custom-component
     componentId: button-5
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}
