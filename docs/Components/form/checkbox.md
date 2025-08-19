@@ -1,255 +1,60 @@
 # checkbox
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 Checkboxes on mobile app forms offer a straightforward way to make selections, especially for multiple options, enhancing usability and interaction.
 
-The component is used in a [jig.default](<./../../Jig Types/jig_default.md>) inside of a [form](./../form.md) component and supports single- and multiple-selection options. The checkbox's initial checkbox status and required checkbox status can be set.
-:::
+The component is used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](../form.md) component and supports single- and multiple-selection options. The checkbox's initial checkbox status and required checkbox status can be set.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{alt="Checkbox preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/C108AXi_xo5aRgmBnjo_9_checkboxes.png" size="90" caption="Checkbox preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/C108AXi_xo5aRgmBnjo_9_checkboxes.png" width="800" height="348" darkWidth="800" darkHeight="348"}
-:::
-::::
+{% column %}
+Image\[]{alt="Checkbox preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/C108AXi\_xo5aRgmBnjo\_9\_checkboxes.png" size="90" caption="Checkbox preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/C108AXi\_xo5aRgmBnjo\_9\_checkboxes.png" width="800" height="348" darkWidth="800" darkHeight="348"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::hint{type="info"}
-The `checkbox` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
-:::
+{% hint style="info" %}
+The `checkbox` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.&#x20;
+{% endhint %}
 
-## Configuration options
+### Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](checkbox.md) for a list and their configuration options.
 
-| **Core structure** |                                                                                                              |
-| ------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `instanceId`       | The unique identifier for the checkbox component.                                                            |
-| `label`            | Provide a label/name for the checkbox.&#xA;'Label' is displayed as a placeholder when no value is specified. |
+<table><thead><tr><th width="199.234375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>instanceId</code></td><td>The unique identifier for the checkbox component.</td></tr><tr><td><code>label</code></td><td>Provide a label/name for the checkbox. 'Label' is displayed as a placeholder when no value is specified.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="218">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>color</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Sets the color of the checkbox based on conditions by using the <code>when</code> property. First evaluated to true will be used.
-      Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML.
-      See the list of available colors in .</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>errorText</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add text, string, or expressions to show text under the checkbox indicating an error/invalid value in the field.
-      Text is shown in <code>isNegative</code> (red) styling.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>helperText</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add text, string, or expressions to guide users by showing text under the checkbox.
-      Helper text is displayed only when there is no <code>errorText</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>icon</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add an icon to the title.
-      A list of icons is available. See  for more information.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>initialValue</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The <code>initialValue</code> is the value that the checkbox will load with when the form is initially loaded.
-      You can use this property to preset the checkbox value so that the user doesn't have to manually select it.
-      Set to <code>true</code> loads the checkbox as selected, <code>false</code> loads the checkbox as unselected.
-      Using the <code>reset-state</code> action with <code>initialValues</code> does not clear the checkbox, it resets the field back to its <code>initialValue</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isAutoFocused</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>If <code>true</code> it will get focus immediately after the jig is displayed.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isHidden</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>If <code>true</code> the checkbox will be hidden on the form.
-      If set to <code>false</code> the field will be shown.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isIgnored</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>When <code>true</code>, the field will be ignored when submitting the form and the content will not be stored.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isOptionalLabelHidden</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>If the field is optional you can turn off the "(optional)" label by setting this field to <code>true</code>.
-      This property works in combination with <code>isRequired: false</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isRequired</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Set to <code>true</code> when the field is required.
-      Useful when you use it in form submission.
-      Set to <code>false</code> the checkbox is optional and will have an (optional) in the label.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>nextProperty</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Name of the property you want to focus next in the form when you use return/next on a keyboard.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>style</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The following property settings are available:</p>
-      <ul>
-      <li><code>flex</code> - Flex property if rendered inside row.</li>
-      <li><code>isDanger</code> - when the checkbox is selected the component displays in red.</li>
-      <li><code>isDisabled</code> - makes the checkbox field un-selectable.</li>
-      <li><code>isPositive</code> - when the checkbox is selected the component displays in green.</li>
-      <li><code>isWarning</code> - displays the component in red.</li>
-      </ul>
-      <p>More than one can be true. It will be evaluated based on priority.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>value</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The value to show for the checkbox.
-      Setting up a checkbox with a <code>value</code> property of <code>true</code> will display the checkbox as selected when the form loads,
-      setting the property to <code>false</code> will display the checkbox as unselected when the form loads.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="197.9609375">Other options</th><th></th></tr></thead><tbody><tr><td><code>color</code></td><td>Sets the color of the checkbox based on conditions by using the <code>when</code> property. First evaluated to true will be used. Choose a color from the provided color palette. Default color is grey if the property is not specified in the YAML. See the list of available colors in .</td></tr><tr><td><code>errorText</code></td><td>Add text, string, or expressions to show text under the checkbox indicating an error/invalid value in the field. Text is shown in <code>isNegative</code> (red) styling.</td></tr><tr><td><code>helperText</code></td><td>Add text, string, or expressions to guide users by showing text under the checkbox. Helper text is displayed only when there is no <code>errorText</code>.</td></tr><tr><td><code>icon</code></td><td>Add an icon to the title. A list of icons is available. See for more information.</td></tr><tr><td><code>initialValue</code></td><td>The <code>initialValue</code> is the value that the checkbox will load with when the form is initially loaded. You can use this property to preset the checkbox value so that the user doesn't have to manually select it. Set to <code>true</code> loads the checkbox as selected, <code>false</code> loads the checkbox as unselected. Using the <code>reset-state</code> action with <code>initialValues</code> does not clear the checkbox, it resets the field back to its <code>initialValue</code>.</td></tr><tr><td><code>isAutoFocused</code></td><td>If <code>true</code> it will get focus immediately after the jig is displayed.</td></tr><tr><td><code>isHidden</code></td><td>If <code>true</code> the checkbox will be hidden on the form. If set to <code>false</code> the field will be shown.</td></tr><tr><td><code>isIgnored</code></td><td>When <code>true</code>, the field will be ignored when submitting the form and the content will not be stored.</td></tr><tr><td><code>isOptionalLabelHidden</code></td><td>If the field is optional you can turn off the "(optional)" label by setting this field to <code>true</code>. This property works in combination with <code>isRequired: false</code>.</td></tr><tr><td><code>isRequired</code></td><td>Set to <code>true</code> when the field is required. Useful when you use it in form submission. Set to <code>false</code> the checkbox is optional and will have an (optional) in the label.</td></tr><tr><td><code>nextProperty</code></td><td>Name of the property you want to focus next in the form when you use return/next on a keyboard.</td></tr><tr><td><code>style</code></td><td><p>The following property settings are available:</p><ul><li><code>flex</code> - Flex property if rendered inside row.</li><li><code>isDanger</code> - when the checkbox is selected the component displays in red.</li><li><code>isDisabled</code> - makes the checkbox field un-selectable.</li><li><code>isPositive</code> - when the checkbox is selected the component displays in green.</li><li><code>isWarning</code> - displays the component in red.</li></ul><p>More than one can be true. It will be evaluated based on priority.</p></td></tr><tr><td><code>value</code></td><td>The value to show for the checkbox. Setting up a checkbox with a <code>value</code> property of <code>true</code> will display the checkbox as selected when the form loads, setting the property to <code>false</code> will display the checkbox as unselected when the form loads.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Actions</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onChange</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The action is triggered when the content in the <code>checkbox</code> is changed. Use IntelliSense (ctrl+space) to see the list of available actions.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onPress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>OnPress</code> action overwrites the main check / uncheck functionality.</p>
-    </td>
-  </tr>
-</table>
+| **Actions** |                                                                                                                                            |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `onChange`  | The action is triggered when the content in the `checkbox` is changed. Use IntelliSense (ctrl+space) to see the list of available actions. |
+| `onPress`   | `OnPress` action overwrites the main check / uncheck functionality.                                                                        |
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="218,120">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>State Configuration</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Key</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Notes</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.component.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>value</p>
-    </td>
-    <td selected="false" align="left">
-      <p>State is the variable of the component.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.solution.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>activeItemId
-      now</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Global state variable that can be used throughout the solution.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="211.01953125">State Configuration</th><th width="143.390625">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>value</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-:::hint{type="info"}
-There's also the option to configure checkboxes as part of [entity-field](./../entity/entity-field.md) or [list-item](./../list/list-item.md).
-:::
+{% hint style="info" %}
+There's also the option to configure checkboxes as part of [entity-field](../entity/entity-field.md) or [list-item](../list/list-item.md).&#x20;
+{% endhint %}
 
-## Examples and code snippets
+### Examples and code snippets
 
-:::::ExpandableHeading
-### Checkbox on Form - Single Selection (Yes/No Question)
+#### Checkbox on Form - Single Selection (Yes/No Question)
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Checkbox on a form](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IJK_lSaGyt3T1vku2VDAY_mdjjmgfkxmndvtxfd8ru5checkbox-yes-no.png "Checkbox on a form")
-:::
+{% columns %}
+{% column %}
+&#x20;![Checkbox on a form](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IJK_lSaGyt3T1vku2VDAY_mdjjmgfkxmndvtxfd8ru5checkbox-yes-no.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 The component displays a yes/no question about the agreement to the Terms and Conditions. The option is preselected as the agreement is in our case required.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/checkbox/static-data/yes-no-question/checkbox-yes-no-question.jigx).
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/checkbox/static-data/yes-no-question/checkbox-yes-no-question.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/checkbox/dynamic-data/yes-no-question/checkbox-yes-no-dynamic.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-check-box (static)
-
+{% tabs %}
+{% tab title="check-box (static)" %}
 ```yaml
 children:
   - type: component.form
@@ -263,9 +68,9 @@ children:
             isRequired: true
             initialValue: true
 ```
+{% endtab %}
 
-check-box (dynamic)
-
+{% tab title="check-box (dynamic)" %}
 ```yaml
 children:
   - type: component.form
@@ -279,9 +84,9 @@ children:
             isRequired: true
             initialValue: true
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   checkbox-options:
@@ -298,30 +103,27 @@ datasources:
           '$.agreement'
         FROM [default/checkbox] ORDER by '$.order'
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
-### Checkbox on Form - Multiple Selection
+#### Checkbox on Form - Multiple Selection
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Multiple checkbox selection](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/MCeJFm_9bW3uwfB47U1Uk_ikqrb22eirxfob4os15bcheckbox-multi.PNG "Multiple checkbox selection")
-:::
+{% columns %}
+{% column %}
+&#x20;![Multiple checkbox selection](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/MCeJFm_9bW3uwfB47U1Uk_ikqrb22eirxfob4os15bcheckbox-multi.PNG)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example displays a question you can answer by selecting multiple checkboxes. The most common answers are already checked for better user experience, but the selection can always be changed.
 
 **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/checkbox/static-data/multiple-selection/checkbox-multiple-selection.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/checkbox/dynamic-data/multiple-selection/checkbox-multiple-dynamic.jigx)
-:::
-::::
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/checkbox/static-data/multiple-selection/checkbox-multiple-selection.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/checkbox/dynamic-data/multiple-selection/checkbox-multiple-dynamic.jigx)&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-checkbox-multiple (static)
-
+{% tabs %}
+{% tab title="checkbox-multiple (static)" %}
 ```yaml
 children:
   - type: component.form
@@ -369,9 +171,9 @@ children:
             label: Saturday
             isRequired: false
 ```
+{% endtab %}
 
-checkbox-multiple (dynamic)
-
+{% tab title="checkbox-multiple (dynamic)" %}
 ```yaml
 children:
   - type: component.form
@@ -419,9 +221,9 @@ children:
              label: =@ctx.datasources.checkbox-options[6].day
              isRequired: false
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   checkbox-options:
@@ -438,8 +240,5 @@ datasources:
           '$.agreement'
         FROM [default/checkbox] ORDER by '$.order'
 ```
-:::
-:::::
-
-
-
+{% endtab %}
+{% endtabs %}

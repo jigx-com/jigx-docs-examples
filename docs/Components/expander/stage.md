@@ -3,10 +3,6 @@ title: stage
 slug: Cw5F-stage
 createdAt: Thu Jun 09 2022 19:58:34 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Apr 24 2025 07:14:20 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to use the "Stage" component to efficiently showcase content with
-  left and right elements. This comprehensive document highlights the
-  component's configuration options, such as customizing t
 ---
 
 # stage
@@ -17,21 +13,11 @@ In this component, you add left and right elements, typically showing a start-an
 
 Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-| **Core structure** |                                                                   |
-| ------------------ | ----------------------------------------------------------------- |
-| `left`             | Add content to the `left` element as text, or use an expression.  |
-| `right`            | Add content to the `right` element as text, or use an expression. |
-| `title`            | Add `titles` for the text on the `left` and `right` elements.     |
+<table><thead><tr><th width="164.26171875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>left</code></td><td>Add content to the <code>left</code> element as text, or use an expression.</td></tr><tr><td><code>right</code></td><td>Add content to the <code>right</code> element as text, or use an expression.</td></tr><tr><td><code>title</code></td><td>Add <code>titles</code> for the text on the <code>left</code> and <code>right</code> elements.</td></tr></tbody></table>
 
-| **Other options** |                                                                                                                                                                      |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`            | Add an icon to show in the `centerElement`. A list of icons is available. See [Jigx icons](https://docs.jigx.com/jigx-icons) for more information.                   |
-| `style`           | `isWaitingSync` - Will display a "Waiting sync" indicator (cloud with a line through it), a visual indicator showing that data has not been synced to the cloud yet. |
-| `subtitle`        | Add a `subtitle` to either the left or right element as text, or use an expression.                                                                                  |
+<table><thead><tr><th width="167.36328125">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>Add an icon to show in the <code>centerElement</code>. A list of icons is available. See <a href="https://docs.jigx.com/jigx-icons">Jigx icons</a> for more information.</td></tr><tr><td><code>style</code></td><td><code>isWaitingSync</code> - Will display a "Waiting sync" indicator (cloud with a line through it), a visual indicator showing that data has not been synced to the cloud yet.</td></tr><tr><td><code>subtitle</code></td><td>Add a <code>subtitle</code> to either the left or right element as text, or use an expression.</td></tr></tbody></table>
 
-| **Actions** |                                                                                                                                         |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `onPress`   | The action is triggered while pressing on the content in the stage. Use IntelliSense (ctrl+space) to see the list of available actions. |
+<table data-header-hidden><thead><tr><th width="166.58984375">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>The action is triggered while pressing on the content in the stage. Use IntelliSense (ctrl+space) to see the list of available actions.</td></tr></tbody></table>
 
 ### Consideration
 
@@ -39,18 +25,23 @@ Some properties are common to all components, see [Common component properties](
 
 ### Examples and code snippets
 
-:::::ExpandableHeading
-
 #### Stage in expander
 
-::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Stage in expander](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQUOSOOooTNZSRT6fBCoU_dqf676mvwvyz4w1feir5qstageiphone13blueportrait.png) :::
+{% columns %}
+{% column %}
+![Stage in expander](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQUOSOOooTNZSRT6fBCoU_dqf676mvwvyz4w1feir5qstageiphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem **Examples:**
+{% column %}
+**Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/static-data/stage.jigx). See the full example using dynamic data [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/dynamic-data/stage-dynamic.jigx). ::: ::::
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/static-data/stage.jigx). \
+See the full example using dynamic data [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/dynamic-data/stage-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs stage (static)
-
+{% tabs %}
+{% tab title="stage (static)" %}
 ```yaml
 children:
   - type: component.expander
@@ -66,9 +57,9 @@ children:
               title: New York
               subtitle: 12:30
 ```
+{% endtab %}
 
-stage (dynamic)
-
+{% tab title="stage (dynamic)" %}
 ```yaml
 title: Stage
 type: jig.default
@@ -95,9 +86,9 @@ children:
                   label: tbd
                   value: tbd
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   trip-dynamic:
@@ -123,25 +114,29 @@ datasources:
           '$.toabrv' 
         FROM [default/flight-schedule]
 ```
-
-::: :::::
-
-:::::ExpandableHeading
+{% endtab %}
+{% endtabs %}
 
 #### Stage in list
 
-::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Stage in list](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8oR-ecX43O27thnShsgId_mlmkhpfrzwatv8spkkz7vstageiphone13blueportrait.png) :::
+{% columns %}
+{% column %}
+&#x20;![Stage in list](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8oR-ecX43O27thnShsgId_mlmkhpfrzwatv8spkkz7vstageiphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem **Examples:**
+{% column %}
+**Examples:**
 
 See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/static-data/stage-list.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/dynamic-data/stage-list-dynamic.jigx).
 
 **Datasources:**
 
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/trip-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/trip-dynamic.jigx). ::: ::::
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/trip-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/trip-dynamic.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs stage-list (static)
-
+{% tabs %}
+{% tab title="stage-list (static)" %}
 ```yaml
 title: Trip in list
 type: jig.list
@@ -157,9 +152,9 @@ item:
       title: =@ctx.current.item.from
       subtitle: =@ctx.current.item.time-from
 ```
+{% endtab %}
 
-stage-list (dynamic)
-
+{% tab title="stage-list (dynamic)" %}
 ```yaml
 title: Stage in list
 type: jig.list
@@ -175,9 +170,9 @@ item:
       title: =@ctx.current.item.to
       subtitle: =@ctx.current.item.disembark
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   trip-static:
@@ -200,9 +195,9 @@ datasources:
           to: Prague
           time-to: 17:30
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   trip-dynamic:
@@ -228,5 +223,5 @@ datasources:
           '$.toabrv' 
         FROM [default/flight-schedule]
 ```
-
-::: :::::
+{% endtab %}
+{% endtabs %}
