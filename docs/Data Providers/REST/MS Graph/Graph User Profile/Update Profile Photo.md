@@ -25,7 +25,7 @@ User.ReadWrite User.ReadWrite.All
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../../../../.gitbook/assets/Graph-uploadPic.png" alt="Update profile" width="375"><figcaption><p>Update profile</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/Graph-uploadPic.png" alt="Update profile" width="188"><figcaption><p>Update profile</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

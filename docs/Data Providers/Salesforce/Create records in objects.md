@@ -11,7 +11,7 @@ Create records in Salesforce objects straight from your mobile device. If you at
 
 You can use the [object reference for Salesforce](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_concepts.htm), [https://workbench.developerforce.com/login.php,](https://workbench.developerforce.com/login.php) or the Salesforce schema builder to check the objects, required fields, and relationships. The minimum needed to create a record is based on the required fields.
 
-![Salesforce schema builder](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/r0ILhitTT-XYMa78Yytn5_salesforceschema.png)
+<figure><img src="../../../.gitbook/assets/SalesforceSchema.png" alt="Salesforce schema builder"><figcaption><p>Salesforce schema builder</p></figcaption></figure>
 
 ### Examples and code snippets
 
@@ -23,7 +23,7 @@ Examples are based on test data in a Jigx demo Salesforce environment. Copying t
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FMWGP3yB9L754yL0vXfGA\_createacc.PNG" size="70" position="center" caption="Creat an Account object " alt="Creat an Account object "}
+<figure><img src="../../../.gitbook/assets/SalesforceCreate.PNG" alt="Creat an Account object " width="188"><figcaption><p>Creat an Account object </p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

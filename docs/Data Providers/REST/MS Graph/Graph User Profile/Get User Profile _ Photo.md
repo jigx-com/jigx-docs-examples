@@ -25,7 +25,7 @@ User.Read User.ReadWrite User.ReadBasic.All User.Read.All User.ReadWrite.All Dir
 {% endcolumn %}
 
 {% column width="50%" %}
-<figure><img src="../../../../../.gitbook/assets/Graph - User profile.png" alt="User Profile" width="375"><figcaption><p>User Profile</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/Graph - User profile.png" alt="User Profile" width="188"><figcaption><p>User Profile</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

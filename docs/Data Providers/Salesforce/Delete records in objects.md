@@ -19,7 +19,7 @@ Examples are based on test data in a Jigx demo Salesforce environment. Copying t
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K-RyjjKQLQvbYp16EUENW\_salesforcedelete.PNG" size="70" position="center" caption="Deleting records " alt="Deleting records "}
+<figure><img src="../../../.gitbook/assets/SalesForceDelete.PNG" alt="&#x22;Deleting records" width="188"><figcaption><p>Deleting records</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

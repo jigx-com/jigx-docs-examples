@@ -25,7 +25,7 @@ Sites.Read.All Sites.ReadWrite.All&#x20;
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../../../../.gitbook/assets/Graph-trending.png" alt="Insights - trending"><figcaption><p>Insights - trending</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/Graph-trending.png" alt="Insights - trending" width="188"><figcaption><p>Insights - trending</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

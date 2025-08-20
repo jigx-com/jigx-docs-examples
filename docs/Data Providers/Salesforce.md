@@ -16,7 +16,7 @@ Jigx easily integrates with your Salesforce instance, through the [Salesforce da
 
 Creating a Salesforce dashboard can help you gain valuable insight into your business, improve decision-making, and enhance overall efficiency and performance across your organization. The Jigx Salesforce provider brings data directly into the app from Salesforce, giving you access to real-time data and visual insights no matter where you are. Tailor the app to display metrics that matter most to your business and configure them to suit different user roles and responsibilities. Dashboards can be shared with team members, managers, or stakeholders. Sales teams can benefit significantly from Salesforce dashboards as they provide a clear view of their pipelines, opportunities, and sales targets.
 
-::embed\[]{url="https://vimeo.com/846066533"}
+{% embed url="https://vimeo.com/846066533" %}
 
 {% hint style="warning" %}
 Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.
@@ -24,7 +24,7 @@ Examples are based on test data in a Jigx demo Salesforce environment. Copying t
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HVVwC60g4xu-W3wdJBW8O\_salesfdashboard.PNG" size="98" position="center" caption="Salesforce Dashboard" alt="Salesforce Dashboard"}
+<figure><img src="../../.gitbook/assets/SalesFDashboard.PNG" alt="Salesforce Dashboard" width="188"><figcaption><p>Salesforce Dashboard</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

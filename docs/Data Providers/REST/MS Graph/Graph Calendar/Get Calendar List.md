@@ -30,7 +30,7 @@ Calendars.Read Calendars.Read.Shared Calendars.ReadWrite
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../../../../.gitbook/assets/Graph-Calendars.png" alt="Calender list" width="375"><figcaption><p>Calender list</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/Graph-Calendars.png" alt="Calender list" width="188"><figcaption><p>Calender list</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

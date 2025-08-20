@@ -25,7 +25,7 @@ This example uses [Get Calendar List](<Get Calendar List.md>) and [Get Event Lis
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../../../../.gitbook/assets/Graph-eventItem.png" alt="Event items"><figcaption><p>Event items</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/Graph-eventItem.png" alt="Event items" width="188"><figcaption><p>Event items</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

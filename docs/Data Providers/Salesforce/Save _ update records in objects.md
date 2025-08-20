@@ -17,7 +17,7 @@ Examples are based on test data in a Jigx demo Salesforce environment. Copying t
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hgBabHVNXORk0caznrtB5\_sf-oppsave.PNG" size="70" position="center" caption="Update opportunity amount" alt="Update opportunity amount"}
+<figure><img src="../../../.gitbook/assets/SF-oppSave.PNG" alt="Update opportunity amount" width="188"><figcaption><p>Update opportunity amount</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

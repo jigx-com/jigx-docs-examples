@@ -25,7 +25,7 @@ Tasks.Read Tasks.ReadWrite
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../../../../.gitbook/assets/Graph-tasks.png" alt="Task list"><figcaption><p>Task list</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/Graph-tasks.png" alt="Task list" width="188"><figcaption><p>Task list</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

@@ -30,7 +30,7 @@ This example uses [Get Calendar List](<Get Calendar List.md>) to provide the cal
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../../../../.gitbook/assets/Graph-listEvents.png" alt="List events"><figcaption><p>List events</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/Graph-listEvents.png" alt="List events" width="188"><figcaption><p>List events</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

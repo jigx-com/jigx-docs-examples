@@ -19,15 +19,13 @@ Examples are based on test data in a Jigx demo Salesforce environment. Copying t
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A8Tn9KF-RKvhmVl9o\_CxX\_salesforce-list.PNG" size="70" position="center" caption="Search and filtering a list" alt="Search and filtering a list"}
+<figure><img src="../../../.gitbook/assets/Salesforce-list.PNG" alt="Search and filtering a list"><figcaption><p>Search and filtering a list</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-The code below shows a simple example of a list of accounts in Salesforce. Adding `search` and `filter` properties allows you to easily find the accounts you looking for.
+The code below shows a simple example of a list of accounts in Salesforce. Adding `search` and `filter` properties allows you to easily find the accounts you looking for.&#x20;
 {% endcolumn %}
 {% endcolumns %}
-
-:::CodeblockTabs&#x20;
 
 ```yaml
 title: List Salesforce accounts
@@ -97,11 +95,11 @@ children:
 
 {% columns %}
 {% column %}
-The code below shows a basic example of a list of opportunites in Salesforce with an `onPress` action that will allow you to update the opportunity amount.
+The code below shows a basic example of a list of opportunities in Salesforce with an `onPress` action that will allow you to update the opportunity amount.
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/i3TJ4x\_PLLgmihe9nnqgS\_sf-opplist.PNG" size="70" position="center" caption="Basic List" alt="Basic List"}
+<figure><img src="../../../.gitbook/assets/salesforceOppList.PNG" alt="Basic List" width="188"><figcaption><p>Basic List</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -173,7 +171,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FGcAzSsO51PuV3Di4atbl\_stagedetail.PNG" size="70" position="center"}
+<figure><img src="../../../.gitbook/assets/StageDetail.PNG" alt="Stage detail" width="188"><figcaption><p>Stage detail</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
