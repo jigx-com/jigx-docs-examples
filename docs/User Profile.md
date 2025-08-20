@@ -110,11 +110,7 @@ You can create a jig as the first screen a new user sees when they log into the 
 
 This is especially useful in scenarios where devices are shared among multiple employees, such as contractors or engineers.
 
-| **Properties**                  | **Description**                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `Profile`                       | Adding the property with it's values to the index.jigx file will insert the referenced jigs into the header section of the Profile screen.                                                                                                                                                                                                                                     |
-| `isPersonalInfoMenuItemVisible` | Determine whether the Personal Information menu should be hidden (`false`) or visible (`true`). The default setting is `true`. This menu opens a screen displaying the user's name, email, and avatar, and provides an option to delete the account. Customizing the Profile screen allows this information to be integrated directly, eliminating the need for a menu option. |
-| `jigId`                         | Provide the `jigId` for the jigs that will be displayed in the Profile screen.                                                                                                                                                                                                                                                                                                 |
+<table><thead><tr><th width="279.625">Properties</th><th>Description</th></tr></thead><tbody><tr><td><code>Profile</code></td><td>Adding the property with it's values to the index.jigx file will insert the referenced jigs into the header section of the Profile screen.</td></tr><tr><td><code>isPersonalInfoMenuItemVisible</code></td><td>Determine whether the Personal Information menu should be hidden (<code>false</code>) or visible (<code>true</code>). The default setting is <code>true</code>. This menu opens a screen displaying the user's name, email, and avatar, and provides an option to delete the account. Customizing the Profile screen allows this information to be integrated directly, eliminating the need for a menu option.</td></tr><tr><td><code>jigId</code></td><td>Provide the <code>jigId</code> for the jigs that will be displayed in the Profile screen.</td></tr></tbody></table>
 
 ### Considerations
 
@@ -125,12 +121,20 @@ This is especially useful in scenarios where devices are shared among multiple e
 
 ### Extended Profile screen with hidden personal information menu
 
+{% columns %}
+{% column %}
 ::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wECb6jB\_d0KV8RZks0JhF-20250429-115657.png" size="64" position="center" caption="Extended Profile " alt="Extended Profile" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wECb6jB\_d0KV8RZks0JhF-20250429-115657.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} :::
 
-:::VerticalSplitItem In this example, the Profile screen is extended to display the user's **avatar** along with their details in an expander component. Additionally, the personal information menu option is hidden from the list. ::: ::::
 
-:::CodeblockTabs user-detail.jigx
+{% endcolumn %}
 
+{% column %}
+In this example, the Profile screen is extended to display the user's **avatar** along with their details in an expander component. Additionally, the personal information menu option is hidden from the list.&#x20;
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="user-detail.jigx" %}
 ```yaml
 title: profile
 type: jig.default
@@ -179,9 +183,9 @@ children:
                         label: Address
                         value: 141 Harbor Dr Claymont, Delaware(DE), 19703
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: jigx-demo-2025
 title: jigx-demo-2025
@@ -205,17 +209,23 @@ profile:
       options:
         jigId: user-detail
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Extended Profile screen with list
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem This example demonstrates how to add a `list` of emergency contacts to a jig, which is referenced in the index.jigx file to extend the Profile screen. :::
+{% columns %}
+{% column %}
+This example demonstrates how to add a `list` of emergency contacts to a jig, which is referenced in the index.jigx file to extend the Profile screen.
+{% endcolumn %}
 
+{% column %}
 :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-H0Dgln2rHI2yHTQ3h6dN\_-20250429-115802.png" size="66" position="center" caption="Profile extended with list" alt="Profile extended with list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-H0Dgln2rHI2yHTQ3h6dN\_-20250429-115802.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} ::: ::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs emergency-list.jigx
-
+{% tabs %}
+{% tab title="emergency-list.jigx" %}
 ```yaml
 title: Emergency contact list
 type: jig.default
@@ -238,9 +248,9 @@ children:
             element: value
             text: =@ctx.current.item.contact
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: jigx-demo-2025
 title: jigx-demo-2025
@@ -261,9 +271,9 @@ profile:
       options:
         jigId: emergency-list
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   emergency: 
@@ -292,19 +302,27 @@ datasources:
           icon: work-from-home-computer-meeting
           color: warning   
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Extended Profile screen using custom components (alpha)
 
+{% columns %}
+{% column %}
 ::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FH4wEyKl1W6fCjOeD1Cbi-20250429-115844.png" size="64" position="center" caption="Custom Profile" alt="Custom Profile" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FH4wEyKl1W6fCjOeD1Cbi-20250429-115844.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} :::
 
-:::VerticalSplitItem In this example, the Profile screen has been extended to display the user's `avatar`, name, and email address using a custom component to create the required UI layout. This custom component is placed within a `card` in the user-profile jig. A standard `list` component is configured to display the region and department.
 
-The list component allows users to update their department and region by configuring a `rightElement` with an `onPress` event. ::: ::::
+{% endcolumn %}
 
-:::CodeblockTabs user-data.jigx
+{% column %}
+In this example, the Profile screen has been extended to display the user's `avatar`, name, and email address using a custom component to create the required UI layout. This custom component is placed within a `card` in the user-profile jig. A standard `list` component is configured to display the region and department.
 
+The list component allows users to update their department and region by configuring a `rightElement` with an `onPress` event.
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="user-data.jigx" %}
 ```yaml
 # Configure a custom component to control the layout for the avatar and text.
 # Add padding and alignment of item.
@@ -330,9 +348,9 @@ children:
           options:
             value: =@ctx.user.email
 ```
+{% endtab %}
 
-user-profile.jigx
-
+{% tab title="user-profile.jigx" %}
 ```yaml
 title: User details
 type: jig.default
@@ -369,9 +387,9 @@ children:
                     options:
                       linkTo: action-update-profile      
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: jigx-demo-2025
 title: jigx-demo-2025
@@ -395,9 +413,9 @@ profile:
       options:
         jigId: user-profile
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   department: 
@@ -413,5 +431,5 @@ datasources:
           icon: global-collaboration-handshake
           color: negative
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
