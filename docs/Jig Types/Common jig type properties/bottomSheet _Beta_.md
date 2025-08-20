@@ -6,7 +6,7 @@ BETA: This feature is currently in **beta**. Functionality and design may change
 
 The bottomSheet element slides up from the bottom of the screen to present additional content, actions, or contextual information. It enhances user interaction by providing a seamless display of information without navigating away from the current screen. Perfect for menus, filters, forms, or quick actions, the bottomSheet can be customized to suit various use cases while maintaining a smooth and intuitive user experience.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rbofFxJH56jChPg93JrhO-20250128-094353.png" size="80" position="center" caption="BottomSheets" alt="BottomSheets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rbofFxJH56jChPg93JrhO-20250128-094353.png" width="800" height="517" darkWidth="800" darkHeight="517"}
+<figure><img src="../../../.gitbook/assets/BS-intro.png" alt="BottomSheets" width="563"><figcaption><p>BottomSheets</p></figcaption></figure>
 
 ### Configuration options
 
@@ -29,7 +29,7 @@ The bottomSheet element slides up from the bottom of the screen to present addit
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fGGAq1TUWIESf1rpNc8sM-20250116-130051.png" size="66" position="center" caption="Basic bottomSheet" alt="Basic bottomSheet" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fGGAq1TUWIESf1rpNc8sM-20250116-130051.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../../.gitbook/assets/bottomSheet-basic.png" alt="Basic bottomSheet" width="188"><figcaption><p>Basic bottomSheet</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -200,7 +200,7 @@ This example demonstrates how to disable the bottomSheet from being closed by sw
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-s9BFz\_kwCOvR6cW7HJGga-20250127-123727.gif" size="66" position="center" caption="Pan down disabled" alt="Pan down disabled" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-s9BFz\_kwCOvR6cW7HJGga-20250127-123727.gif" width="348" height="694" darkWidth="348" darkHeight="694"}
+<figure><img src="../../../.gitbook/assets/BS-ispandownenabled.gif" alt="Pan down disabled" width="174"><figcaption><p>Pan down disabled</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -360,7 +360,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m5UYNy13CwVwOpMaWZ4kP-20250128-093229.png" size="66" position="center" caption="BottomSheet open by default" alt="BottomSheet open by default" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m5UYNy13CwVwOpMaWZ4kP-20250128-093229.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../../.gitbook/assets/BS-intialValue.png" alt="BottomSheet open by default" width="188"><figcaption><p>BottomSheet open by default</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -523,7 +523,7 @@ In this example, the backdrop of the bottomSheet completely obscures the menu sc
 {% endcolumn %}
 
 {% column width="58.33333333333333%" %}
-&#x20;![Maximum backdrop opacity](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wBwIX6u1nvibK8MmlI7FC-20250127-140142.png)&#x20;
+<figure><img src="../../../.gitbook/assets/BS-Backdrop.png" alt="Backdrop" width="375"><figcaption><p>Backdrop</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -695,7 +695,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Wf2UuFKggYNJKqxyFOItK-20250127-144346.gif" size="66" position="center" caption="Backdrop set to disappear" alt="Backdrop set to disappear" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Wf2UuFKggYNJKqxyFOItK-20250127-144346.gif" width="536" height="1080" darkWidth="536" darkHeight="1080"}
+<figure><img src="../../../.gitbook/assets/BS-backdrop-Index.gif" alt="Backdrop set to disappear" width="134"><figcaption><p>Backdrop set to disappear</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -878,7 +878,7 @@ In this example the bottomSheet is detached from the main parent jig, giving it 
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8UGDNAP\_eYiJxHBOEFO3D-20250128-083124.png" size="66" position="center" caption="Detached bottomSheet" alt="Detached bottomSheet" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8UGDNAP\_eYiJxHBOEFO3D-20250128-083124.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../../.gitbook/assets/BS-Detached.png" alt="Detached bottomSheet" width="188"><figcaption><p>Detached bottomSheet</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -1028,7 +1028,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0ieXmLubj-yVwI-lM6d9-20250128-081012.gif" size="66" position="center" caption="BottomSheet with snapPoints" alt="BottomSheet with snapPoints" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0ieXmLubj-yVwI-lM6d9-20250128-081012.gif" width="536" height="1080" darkWidth="536" darkHeight="1080"}
+<figure><img src="../../../.gitbook/assets/BS-snapPoints.gif" alt="BottomSheet with snapPoints" width="134"><figcaption><p>BottomSheet with snapPoints</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -1207,7 +1207,7 @@ The first bottom sheet jig is set to open by default using the `initialValue` pr
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9uVxy1VqUe8VoOwnQkCOO-20250430-074455.gif" size="66" position="center" caption="Multiple bottomSheets" alt="Multiple bottomSheets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9uVxy1VqUe8VoOwnQkCOO-20250430-074455.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+<figure><img src="../../../.gitbook/assets/BS-multiple.gif" alt="Multiple bottomSheets" width="170"><figcaption><p>Multiple bottomSheets</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
