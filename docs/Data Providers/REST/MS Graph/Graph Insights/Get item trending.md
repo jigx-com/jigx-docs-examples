@@ -25,7 +25,7 @@ Sites.Read.All Sites.ReadWrite.All&#x20;
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/p9BeCoKBDXDxGNvlXA4j1\_graph-trending.png" size="70" position="center" caption="Insights - trending" alt="Insights - trending"}
+<figure><img src="../../../../../.gitbook/assets/Graph-trending.png" alt="Insights - trending"><figcaption><p>Insights - trending</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

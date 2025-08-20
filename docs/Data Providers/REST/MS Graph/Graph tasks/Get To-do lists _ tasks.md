@@ -25,7 +25,7 @@ Tasks.Read Tasks.ReadWrite
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UXO3cJBGL2oEzsbc3jTlu\_graph-tasks.png" size="70" position="center" caption="Task list" alt="Task list"}
+<figure><img src="../../../../../.gitbook/assets/Graph-tasks.png" alt="Task list"><figcaption><p>Task list</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

@@ -25,7 +25,7 @@ This example uses [Get Calendar List](<Get Calendar List.md>) and [Get Event Lis
 {% endcolumn %}
 
 {% column %}
-&#x20;![Calendar event](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hFXLIgg5zAk0sS-e1-HhJ_graph-eventitem.png)
+<figure><img src="../../../../../.gitbook/assets/Graph-eventItem.png" alt="Event items"><figcaption><p>Event items</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

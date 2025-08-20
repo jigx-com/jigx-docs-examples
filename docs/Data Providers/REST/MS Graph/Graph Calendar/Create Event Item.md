@@ -25,9 +25,7 @@ Calendars.ReadWrite
 {% endcolumn %}
 
 {% column %}
-![Create event](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Pbr8Kmjr4fVyk6P6qIBf6_graph-createevent.png)&#x20;
-
-
+<figure><img src="../../../../../.gitbook/assets/Graph-CreateEvent.png" alt="Create event items"><figcaption><p>Create event items</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

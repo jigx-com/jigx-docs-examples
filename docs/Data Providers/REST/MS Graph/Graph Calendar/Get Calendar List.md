@@ -30,9 +30,7 @@ Calendars.Read Calendars.Read.Shared Calendars.ReadWrite
 {% endcolumn %}
 
 {% column %}
-![List of calendars](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G6CJD8iiLaiwDbu2Z3J36_graph-calendars.png)&#x20;
-
-
+<figure><img src="../../../../../.gitbook/assets/Graph-Calendars.png" alt="Calender list" width="375"><figcaption><p>Calender list</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

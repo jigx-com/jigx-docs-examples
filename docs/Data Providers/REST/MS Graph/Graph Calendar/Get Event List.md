@@ -30,9 +30,7 @@ This example uses [Get Calendar List](<Get Calendar List.md>) to provide the cal
 {% endcolumn %}
 
 {% column %}
-&#x20;![Calendar events](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YBoFi0sX8sWnJ1Kp77gs9_graph-listevents.png)
-
-
+<figure><img src="../../../../../.gitbook/assets/Graph-listEvents.png" alt="List events"><figcaption><p>List events</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

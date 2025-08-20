@@ -25,9 +25,7 @@ Mail.ReadBasic Mail.ReadWrite Mail.Read&#x20;
 {% endcolumn %}
 
 {% column %}
-&#x20;![List messages](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6tPoKL8XoL_-4k3FL5YSD_graph-messages.png)&#x20;
-
-
+<figure><img src="../../../../../.gitbook/assets/Graph-messages.png" alt="Messages"><figcaption><p>Messages</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

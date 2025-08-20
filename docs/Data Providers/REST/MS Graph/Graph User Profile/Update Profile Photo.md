@@ -25,9 +25,7 @@ User.ReadWrite User.ReadWrite.All
 {% endcolumn %}
 
 {% column %}
-![Update profile photo](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QYTX-A2BExnkFNhSPRmVx_graph-uploadpic.png)
-
-
+<figure><img src="../../../../../.gitbook/assets/Graph-uploadPic.png" alt="Update profile" width="375"><figcaption><p>Update profile</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

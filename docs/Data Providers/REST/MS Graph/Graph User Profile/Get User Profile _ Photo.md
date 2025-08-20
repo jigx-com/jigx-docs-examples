@@ -25,9 +25,7 @@ User.Read User.ReadWrite User.ReadBasic.All User.Read.All User.ReadWrite.All Dir
 {% endcolumn %}
 
 {% column width="50%" %}
-<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dntkn6sc5sSZFqfHF7IGH_graph-user-profile.png" alt="User Profile" data-size="original">
-
-
+<figure><img src="../../../../../.gitbook/assets/Graph - User profile.png" alt="User Profile" width="375"><figcaption><p>User Profile</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
