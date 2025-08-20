@@ -14,14 +14,7 @@ By default, the user profile in Jigx includes various menu options, such as Pers
 
 ## Default profile setup
 
-| Personal information | Includes the logged-in user's name, email, avatar, and the option to delete the user account.                                                            |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Notifications        | Displays all notifications sent to the user, with options to mark all as read and filter by All, Read, or Unread.                                        |
-| Secondary identities | Refers to additional authentication methods required beyond primary login credentials, such as OAuth. Users can connect, refresh, or remove an identity. |
-| Settings             | Includes app settings such as color theme (light/dark mode), language selection, and region changes, if applicable.                                      |
-| Troubleshooting      | Provides logging settings to help debug and troubleshoot app issues.                                                                                     |
-| Support              | Allows users to ask support a question. This setting can be hidden via a flag in the build configuration.                                                |
-| Logout               | Allows the currently logged-in user to log out of the app.                                                                                               |
+<table data-header-hidden><thead><tr><th width="202.0546875"></th><th></th></tr></thead><tbody><tr><td>Personal information</td><td>Includes the logged-in user's name, email, avatar, and the option to delete the user account.</td></tr><tr><td>Notifications</td><td>Displays all notifications sent to the user, with options to mark all as read and filter by All, Read, or Unread.</td></tr><tr><td>Secondary identities</td><td>Refers to additional authentication methods required beyond primary login credentials, such as OAuth. Users can connect, refresh, or remove an identity.</td></tr><tr><td>Settings</td><td>Includes app settings such as color theme (light/dark mode), language selection, and region changes, if applicable.</td></tr><tr><td>Troubleshooting</td><td>Provides logging settings to help debug and troubleshoot app issues.</td></tr><tr><td>Support</td><td>Allows users to ask support a question. This setting can be hidden via a flag in the build configuration.</td></tr><tr><td>Logout</td><td>Allows the currently logged-in user to log out of the app.</td></tr></tbody></table>
 
 ## Allowing users to update their profile
 
