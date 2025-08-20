@@ -32,7 +32,7 @@ View common examples of using SQLite below, you can use these as a guideline to 
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xDYOh1UAllO9EKKsEwuTi\_xjvmxdpuzf6r1ehwbzfseim8-5d0t6e1xgmxstbrrimg1083iphone13blueportrait.png" size="80" position="center" caption="Locally configured datasource" alt="Locally configured datasource"}
+<figure><img src="../../.gitbook/assets/Sqlite-employee.png" alt="Locally configured datasource" width="188"><figcaption><p>Locally configured datasource</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -65,7 +65,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yh7PKs\_rB9kz4BOnOu5EU\_k4oyl6hsldw50bdrzkk1aim8-5d0t6e1xgmxstbrrimg1083iphone13blueportrait.png" size="80" position="center" caption="Global configured datasource" alt="Global configured datasource"}&#x20;
+<figure><img src="../../.gitbook/assets/Sqlite-employee.png" alt="Global configured datasource" width="188"><figcaption><p>Global configured datasource</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -75,8 +75,6 @@ Datasource with type `sqlite` as global datasource to select name, and email fro
 See the full example on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/dynamic-data/employees-list.jigx)
 {% endcolumn %}
 {% endcolumns %}
-
-:::CodeblockTabs&#x20;
 
 {% tabs %}
 {% tab title="sqlite-global-datasource" %}
@@ -117,7 +115,7 @@ In this example a SQLite query is used to count the rows in the **avatar** table
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HWIyEBofvpCdzrMXZJS3c\_sqlite-countrow.PNG" size="80" position="center" caption="Count rows" alt="Count rows"}&#x20;
+<figure><img src="../../.gitbook/assets/sqlite-countRow.PNG" alt="Count rows" width="188"><figcaption><p>Count rows</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -185,7 +183,7 @@ children:
 
 Here is an example of using a SQLite query to convert dates in a dynamic data table.
 
-![SQLite - Converting dates](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XBSJF8_H6mFaRwMcXgr1v_sql-convertdates.png)
+<figure><img src="../../.gitbook/assets/sql-convertdates.png" alt="SQLite - Converting dates"><figcaption><p>SQLite - Converting dates</p></figcaption></figure>
 
 {% code title="converting-dates.sql" %}
 ```yaml
@@ -211,9 +209,9 @@ datasources:
 
 Using a SQLite query, one can join data from different tables by utilizing subqueries. This allows for the combination of information from multiple tables based on specified conditions. By employing subqueries, one can retrieve and manipulate data ensuring accurate and comprehensive results. Below is an example of joining tables and then using a subquery.
 
-&#x20;<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6Rkwhr5x2QjySvZCCYyNZ_sql-join-subquery2.png" alt="Steps table" data-size="original">&#x20;
+<figure><img src="../../.gitbook/assets/sql-join-subquery2.png" alt="" width="563"><figcaption></figcaption></figure>
 
-&#x20;<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ymOmVsfObBApTdSuW94E4_sql-join-subquery1.png" alt="Strategy table" data-size="original">
+<figure><img src="../../.gitbook/assets/sql-join-subquery1.png" alt="" width="563"><figcaption></figcaption></figure>
 
 {% code title="join-and-subquery.sql" %}
 ```yaml
@@ -249,9 +247,9 @@ datasources
 
 Often you want to use data in your solution but the data is stored in different tables. Use a SQLite query to join the data from tables and extract the exact information you want to use. When joining two tables there must be the same identifier in both tables. In the example below both tables has a `$.date` column. _**Result**_: The result of the example below is  date: 5 finished\_date: 5.11
 
-&#x20;![mood-notes table](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dc6dS4tip_wOyz9MYbgm0_sql-jointable2.png)&#x20;
+<figure><img src="../../.gitbook/assets/sql-joinTable2.png" alt="" width="563"><figcaption></figcaption></figure>
 
-&#x20;![dates table](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g7v7I8dD8own7zPsJF9dq_sql-jointables1.png) &#x20;
+<figure><img src="../../.gitbook/assets/sql-joinTables1.png" alt="" width="563"><figcaption></figcaption></figure>
 
 {% code title="join-table.sql" %}
 ```yaml
@@ -283,7 +281,7 @@ datasources:
 
 The query below provides the JSON array length from a table called battles.
 
-![Dynamic data table](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5zo7bdA92zCAW5bMUESAl_sql-jsonarraylength.png)
+<figure><img src="../../.gitbook/assets/sql-jsonArrayLength.png" alt="" width="563"><figcaption></figcaption></figure>
 
 {% code title="json-array-length.sql" %}
 ```yaml

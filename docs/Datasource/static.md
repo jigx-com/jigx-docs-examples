@@ -23,7 +23,7 @@ We've gone ahead and expanded the first one for you. Feel free to view any other
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6d2E3jkkz-3oaCcClqGp7\_xdair6ef8yljgyggr4vgnptpye1yvizw6xnzc8rdoimg1086iphone13blueportrait.png" size="84" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6d2E3jkkz-3oaCcClqGp7\_xdair6ef8yljgyggr4vgnptpye1yvizw6xnzc8rdoimg1086iphone13blueportrait.png" caption}
+<figure><img src="../../.gitbook/assets/Static-list.png" alt="" width="188"><figcaption></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -86,7 +86,7 @@ item:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pZ0rUZjo9pPWfByWfKXN9\_skdjnmnz8jhe2zi98rf8orpbfc2v0eb20juoqcdpbhimg1087iphone13blueportrait.png" size="82" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pZ0rUZjo9pPWfByWfKXN9\_skdjnmnz8jhe2zi98rf8orpbfc2v0eb20juoqcdpbhimg1087iphone13blueportrait.png" caption}
+<figure><img src="../../.gitbook/assets/static-global-list.png" alt="" width="188"><figcaption></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -147,7 +147,7 @@ You can also create static data right inside your component or as an `initialVal
 
 {% columns %}
 {% column %}
-![Dropdown with static data](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HTm0zWy8oZflxCPJEVsL4_gv7ncdv0kooclr35hxm9img1018iphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/static-dropdown.png" alt="" width="188"><figcaption></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -197,7 +197,7 @@ children:
 
 {% columns %}
 {% column %}
-![List](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Pe8WHP9gAtWHmJH-7Pv2c_dgrc4ddwpungnxnal7khlimg1017iphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/static-list-data.png" alt="" width="188"><figcaption></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
