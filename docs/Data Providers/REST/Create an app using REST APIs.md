@@ -13,7 +13,7 @@ By integrating external REST APIs into your Jigx solutions, you can significantl
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZsPx4oKIP0ciydTeJ9bqY\_rest-hello4.gif" size="86" position="center" caption}
+<figure><img src="../../../.gitbook/assets/rest-hello-intro.gif" alt="" width="236"><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

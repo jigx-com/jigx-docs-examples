@@ -68,9 +68,7 @@ This example lists all customers without a label (`CustomerType` property). Usin
 {% endcolumn %}
 
 {% column %}
-![Update multiple records](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-5nIdPIlzJ5yk8C2piaNsh-20240926-075550.png)
-
-
+<figure><img src="../../../../.gitbook/assets/REST-multiple.png" alt="Update records"><figcaption><p>Update records</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

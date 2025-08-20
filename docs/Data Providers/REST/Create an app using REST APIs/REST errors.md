@@ -12,7 +12,7 @@ When trying to view a customer and their details or create a new customer in the
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif" size="80" position="center" caption="REST Error handling" alt="REST Error handling" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oEQrSV1e2rOkeUNFy8GNb-20241018-070100.gif" width="652" height="1304" darkWidth="652" darkHeight="1304"}
+<figure><img src="../../../../.gitbook/assets/REST-errors.gif" alt="REST Error handling" width="326"><figcaption><p>REST Error handling</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

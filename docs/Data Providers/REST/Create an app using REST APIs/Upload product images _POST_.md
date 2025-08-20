@@ -8,9 +8,7 @@ From the [view customer ](<List _ View customers _GET_.md>)On the screen, tap th
 {% endcolumn %}
 
 {% column width="58.33333333333333%" %}
-![Upload images using REST](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9JpcY3lPb4m2WL0w-v4il_rest-image.PNG)&#x20;
-
-
+<figure><img src="../../../../.gitbook/assets/REST-image2.png" alt="Upload images"><figcaption><p>Upload images</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

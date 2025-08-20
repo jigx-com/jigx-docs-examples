@@ -8,7 +8,7 @@ Add the ability to update a customer's details by pressing on the customer in th
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ag9cStah\_4Z8BJQELauFL\_rest-update.PNG" size="70" position="center" caption="Update customer" alt="Update customer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ag9cStah\_4Z8BJQELauFL\_rest-update.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../../../.gitbook/assets/REST-Update.png" alt="Update customer" width="188"><figcaption><p>Update customer</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

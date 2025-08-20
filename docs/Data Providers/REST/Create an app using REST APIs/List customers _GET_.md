@@ -8,7 +8,7 @@ Create a list of customers showing the company name, contact person's first and 
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DS3wYOeRqIAtsmqCP6op5\_rest-list.PNG" size="80" position="center" caption="Customer list" alt="Customer list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DS3wYOeRqIAtsmqCP6op5\_rest-list.PNG"}&#x20;
+<figure><img src="../../../../.gitbook/assets/REST-list.png" alt="Customer list" width="188"><figcaption><p>Customer list</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

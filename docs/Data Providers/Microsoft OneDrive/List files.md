@@ -9,7 +9,7 @@ updatedAt: Wed Mar 05 2025 14:37:02 GMT+0000 (Coordinated Universal Time)
 
 Often there is a requirement to list files or get one specific file from OneDrive and then interact with that file(s), whether for viewing, updating, deleting, or even downloading. The file's details are pulled to the device using the local data provider, after which you can work with the file, showing it in a list.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fQMd2jWXuKDfELt-g5drO-20250305-143658.png" size="34" position="center" caption="List OneDrive files" alt="List OneDrive files"}
+<figure><img src="../../../.gitbook/assets/OneDtiveList.PNG" alt="List OneDrive files" width="188"><figcaption><p>List OneDrive files</p></figcaption></figure>
 
 ### Properties
 

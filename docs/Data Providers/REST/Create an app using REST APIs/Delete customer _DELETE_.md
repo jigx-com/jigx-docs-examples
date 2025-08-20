@@ -8,7 +8,7 @@ Add the ability to delete a customer from the list of customers by swiping left 
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1\_rest-delete.PNG" size="70" position="center" caption="Delete customer" alt="Delete customer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/uJnmJlrFeH9sjVlhUrpc1\_rest-delete.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../../../.gitbook/assets/REST-delete.png" alt="Delete customer" width="188"><figcaption><p>Delete customer</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

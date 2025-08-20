@@ -8,7 +8,7 @@ In this scenario, records are limited to return only fifty from the REST service
 
 The REST APIs GET operator is used in a Jigx function with an `outputTransform` to specify the exact data to be returned. A `continuation` is added to return all records; the records property specifies all records in the customer's table. A global action is configured to sync the data in the app with the REST data provider calling the function. In turn, the global action is called in the index.jigx file to load the data when the app is opened. In the list jig the local data provider is used to configure the list-item component. In the view-customer jig `jsonProperties` are used for address and phone to return the nested object.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9\_rest-listview.PNG" size="76" position="center" caption="List & view customer details" alt="List & view customer details" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/af8mUptr1V3PeVC8oB3s9\_rest-listview.PNG" width="800" height="799" darkWidth="800" darkHeight="799"}
+<figure><img src="../../../../.gitbook/assets/REST-ListView.png" alt="List &#x26; view customer details" width="375"><figcaption><p>List &#x26; view customer details</p></figcaption></figure>
 
 {% hint style="info" %}
 This code sample builds upon the previous [List customers (GET)](<List customers _GET_.md>) step, to develop a complete and functional solution.
@@ -16,7 +16,7 @@ This code sample builds upon the previous [List customers (GET)](<List customers
 
 ### REST API
 
-<table data-header-hidden><thead><tr><th width="180.8515625">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/customers</td></tr><tr><td>Operation/Method</td><td>GET</td></tr></tbody></table>
+<table><thead><tr><th width="180.8515625">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/customers</td></tr><tr><td>Operation/Method</td><td>GET</td></tr></tbody></table>
 
 ### Function
 

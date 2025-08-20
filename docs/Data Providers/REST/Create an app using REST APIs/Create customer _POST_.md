@@ -4,7 +4,7 @@
 
 Press the _Add Customer_ button in the customer list to create a customer. Complete the new customer form and press the _Create_ button.
 
-![Add new customer](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xB26YdYV_JeG1GzllmXLh_rest-create.PNG)
+<figure><img src="../../../../.gitbook/assets/REST-create.png" alt="Add new customer"><figcaption><p>Add new customer</p></figcaption></figure>
 
 ### How does this work
 

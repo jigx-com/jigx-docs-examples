@@ -9,7 +9,7 @@ updatedAt: Wed Mar 05 2025 15:00:27 GMT+0000 (Coordinated Universal Time)
 
 In a Jigx you can download a file from a specific location in OneDrive to your mobile device. This is useful when your device is offline, and you want to view the document or file. Use the OneDrive Data Provider with the download method. The file is downloaded to the mobile device's storage.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ehxypx4yEeuHUfThDB-R-20250305-135933.png" size="70" position="center" caption="Download a file from OneDrive" alt="Download a file from OneDrive"}
+<figure><img src="../../../.gitbook/assets/OneDriveDownload.PNG" alt="Download a file from OneDrive" width="375"><figcaption><p>Download a file from OneDrive</p></figcaption></figure>
 
 ### Device storage location
 

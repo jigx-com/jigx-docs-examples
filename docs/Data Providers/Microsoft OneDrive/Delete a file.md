@@ -9,7 +9,7 @@ updatedAt: Wed Mar 05 2025 13:56:25 GMT+0000 (Coordinated Universal Time)
 
 You can delete existing files in OneDrive from a solution in the Jigx App. This can be used to remove incorrect files or files that are no longer required. First, you must return the files available in OneDrive, for example, in a list, select the file to be deleted by configuring a button or swipeable element, then use the OneDrive Data Provider, its delete method, and required properties.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RwA-cRtkXvu6a5LEzIOJZ-20250305-135621.png" size="60" position="center" caption="Delete file n OneDrive" alt="Delete file n OneDrive"}
+<figure><img src="../../../.gitbook/assets/OneDriveDelete.png" alt="Delete file n OneDrive&#x22;" width="375"><figcaption><p>Delete file n OneDrive"</p></figcaption></figure>
 
 ### Properties
 

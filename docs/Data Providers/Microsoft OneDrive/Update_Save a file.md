@@ -9,7 +9,7 @@ updatedAt: Wed Mar 05 2025 13:47:19 GMT+0000 (Coordinated Universal Time)
 
 Files often change and need to be edited or updated with additional information; for example, team members can collaborate and edit and update a contract proposal. You can update an existing file in OneDrive from a solution in the Jigx App. Use the [media-field](../../Components/form/media-field.md) component in a form to upload the updated file or image, then use the OneDrive Data Provider, its update or save method, and required properties. The existing file in OneDrive will be updated.
 
-![Updating a file on OneDrive](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sB7j0dnUHnFgwToSWpikS-20250305-134712.png)
+<figure><img src="../../../.gitbook/assets/OneDrive-update.png" alt="Updating a file on OneDrive"><figcaption><p>Updating a file on OneDrive</p></figcaption></figure>
 
 ### Properties
 

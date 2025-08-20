@@ -8,9 +8,7 @@ From the list of customers, swipe left and select the _View_ button. The custome
 {% endcolumn %}
 
 {% column %}
-![List customer images](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CF8Qx6fZmON1dZIAYh5Ar_rest-list-images.png)
-
-
+<figure><img src="../../../../.gitbook/assets/REST-List-images.png" alt="List product images"><figcaption><p>List product images</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -24,7 +22,7 @@ This code sample builds upon the previous [List customers (GET)](<List customers
 
 ### REST API
 
-<table data-header-hidden><thead><tr><th width="165.15234375">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/images?custId={custId}&#x26;includeImage=true</td></tr><tr><td>Operation/Method</td><td>GET</td></tr></tbody></table>
+<table><thead><tr><th width="165.15234375">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/images?custId={custId}&#x26;includeImage=true</td></tr><tr><td>Operation/Method</td><td>GET</td></tr></tbody></table>
 
 ### Function
 
