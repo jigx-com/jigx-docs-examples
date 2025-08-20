@@ -6,41 +6,39 @@ Use JSONata comparison operators to compare values in your data and return a Boo
 
 The operators used for comparing data are:
 
-- [= (Equals)](https://docs.jsonata.org/comparison-operators#-equals)
-- [!= (Not equals)](https://docs.jsonata.org/comparison-operators#-not-equals)
-- [> (Greater than)](https://docs.jsonata.org/comparison-operators#-greater-than)
-- [\< (Less than)](https://docs.jsonata.org/comparison-operators#-less-than)
-- [>= (Greater than or equals)](https://docs.jsonata.org/comparison-operators#-greater-than-or-equals)
-- [\<= (Less than or equals)](https://docs.jsonata.org/comparison-operators#-less-than-or-equals)
-- [in (Inclusion)](https://docs.jsonata.org/comparison-operators#in-inclusion)
+* [= (Equals)](https://docs.jsonata.org/comparison-operators#-equals)
+* [!= (Not equals)](https://docs.jsonata.org/comparison-operators#-not-equals)
+* [> (Greater than)](https://docs.jsonata.org/comparison-operators#-greater-than)
+* [< (Less than)](https://docs.jsonata.org/comparison-operators#-less-than)
+* [>= (Greater than or equals)](https://docs.jsonata.org/comparison-operators#-greater-than-or-equals)
+* [<= (Less than or equals)](https://docs.jsonata.org/comparison-operators#-less-than-or-equals)
+* [in (Inclusion)](https://docs.jsonata.org/comparison-operators#in-inclusion)
 
 ## Configuration
 
-| **Result**        | **Expression**                                                                                                                         |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Statement is true | `value: "=@ctx.datasources.mydata.color = 'blue' and @ctx.datasources.mydata.number2 != 0 ? 'Statement is true':'Statement is false'"` |
+<table data-header-hidden><thead><tr><th width="172.19140625">Result</th><th>Expression</th></tr></thead><tbody><tr><td>Statement is true</td><td><code>value: "=@ctx.datasources.mydata.color = 'blue' and @ctx.datasources.mydata.number2 != 0 ? 'Statement is true':'Statement is false'"</code></td></tr></tbody></table>
 
-:::hint{type="warning"}
+{% hint style="warning" %}
 Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.
-:::
+{% endhint %}
 
 ## Examples and code snippets
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LfmaXu2WwFEdyH_mHHYMw_pjyuafcqtnxtwl2rfyrgjimg0977iphone13blueportrait.png" size="82" position="center" caption="Comparison operators" alt="Comparison operators" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LfmaXu2WwFEdyH_mHHYMw_pjyuafcqtnxtwl2rfyrgjimg0977iphone13blueportrait.png"}
-:::
+{% columns %}
+{% column %}
+::::VerticalSplit{layout="left"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LfmaXu2WwFEdyH\_mHHYMw\_pjyuafcqtnxtwl2rfyrgjimg0977iphone13blueportrait.png" size="82" position="center" caption="Comparison operators" alt="Comparison operators" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LfmaXu2WwFEdyH\_mHHYMw\_pjyuafcqtnxtwl2rfyrgjimg0977iphone13blueportrait.png"} :::
 
-:::VerticalSplitItem
+
+{% endcolumn %}
+
+{% column %}
 In this example the `color` and `number2` values are compared, if the color is blue and the vlaue of number2 is not equal to zero then the expression evalutes to True.
 
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx).
-:::
-::::
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-expression.jigx
-
+{% code title="expression.jigx" %}
 ```yaml
 datasources:
   mydata: 
@@ -66,5 +64,4 @@ children:
             value: "=@ctx.datasources.mydata.color = 'blue' and @ctx.datasources.mydata.number2 != 0 
                     ? 'Statement is true':'Statement is false'"
 ```
-:::
-
+{% endcode %}

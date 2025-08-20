@@ -1,84 +1,45 @@
 # Notifications
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-You can send Notifications using Jigx Management or programmatically in your solutions, see [Notifications](https://docs.jigx.com/notifications). Notifications can be configured to be sent to a single user, the entire organization, users of a specific solution, and even users of a specific jig in a specific solution.
-:::
+{% columns %}
+{% column %}
+You can send Notifications using Jigx Management or programmatically in your solutions, see [Notifications](https://docs.jigx.com/notifications). Notifications can be configured to be sent to a single user, the entire organization, users of a specific solution, and even users of a specific jig in a specific solution.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{alt="In-app & push notifications" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7b3RWMHmrLLf2Li44h3sC_jm-notifications.PNG" size="74" caption="In-app & push notifications" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7b3RWMHmrLLf2Li44h3sC_jm-notifications.PNG" width="800" height="787" darkWidth="800" darkHeight="787"}
-:::
-::::
+{% column %}
+:::VerticalSplitItem ::Image\[]{alt="In-app & push notifications" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7b3RWMHmrLLf2Li44h3sC\_jm-notifications.PNG" size="74" caption="In-app & push notifications" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7b3RWMHmrLLf2Li44h3sC\_jm-notifications.PNG" width="800" height="787" darkWidth="800" darkHeight="787"} ::: ::::
+{% endcolumn %}
+{% endcolumns %}
 
 ## Configuration options
 
-| **Core structure** |                                                                                                                                                                                                                                                                        |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| function           | Define a function in the *Functions* folder of your solution. The function has input parameters such as the notification `title`, the notification `text` and requires a Jigx `accessToken` or [personal access token (PAT)](https://docs.jigx.com/my-profile#yepji) . |
-| jig                | jigs will invoke the function for sending notifications either via submitting form values to the function or by using an [execute-entity](./Actions/execute-entity.md) action for invoking the function.                                                               |
+<table><thead><tr><th width="147.6875">Core structure</th><th></th></tr></thead><tbody><tr><td>function</td><td>Define a function in the <em>Functions</em> folder of your solution. The function has input parameters such as the notification <code>title</code>, the notification <code>text</code> and requires a Jigx <code>accessToken</code> or <a href="https://docs.jigx.com/my-profile#yepji">personal access token (PAT)</a> .</td></tr><tr><td>jig</td><td>jigs will invoke the function for sending notifications either via submitting form values to the function or by using an <a href="Actions/execute-entity.md">execute-entity</a> action for invoking the function.</td></tr></tbody></table>
 
 ## Notification URL per region
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="126">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Region</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>URL</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>US</p>
-    </td>
-    <td selected="false" align="left">
-      <p><a href="https://us-east-1.api.jigx.com/v2.0/tool/organizations/%7BorganizationId%7D/notifications">https://us-east-1.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications</a></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>South East</p>
-      <p>(e.g. Australia)</p>
-    </td>
-    <td selected="false" align="left">
-      <p><a href="https://ap-southeast-2.api.jigx.com/v2.0/tool/organizations/%7BorganizationId%7D/notifications">https://ap-southeast-2.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications</a></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Europe</p>
-    </td>
-    <td selected="false" align="left">
-      <p><a href="https://eu-central-1.api.jigx.com/v2.0/tool/organizations/%7BorganizationId%7D/notifications">https://eu-central-1.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications</a></p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="157.69921875">Region</th><th>URL</th></tr></thead><tbody><tr><td>US</td><td><a href="https://us-east-1.api.jigx.com/v2.0/tool/organizations/%7BorganizationId%7D/notifications">https://us-east-1.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications</a></td></tr><tr><td><p>South East</p><p>(e.g. Australia)</p></td><td><a href="https://ap-southeast-2.api.jigx.com/v2.0/tool/organizations/%7BorganizationId%7D/notifications">https://ap-southeast-2.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications</a></td></tr><tr><td>Europe</td><td><a href="https://eu-central-1.api.jigx.com/v2.0/tool/organizations/%7BorganizationId%7D/notifications">https://eu-central-1.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications</a></td></tr></tbody></table>
 
 ## Examples and code snippets
 
-:::hint{type="info"}
+{% hint style="info" %}
 In the code examples below replace `YOUR_ORG_ID` with your actual Organization Id. You can find it in the Organization Settings section of the Jigx Management or use the expression `=@ctx.organization.id`.
 
-Click here to go there directly: [https://manage.jigx.com/settings/org-details](https://manage.jigx.com/organization/org-details)
-:::
+Click here to go there directly: [https://manage.jigx.com/settings/org-details](https://manage.jigx.com/organization/org-details)&#x20;
+{% endhint %}
 
-::::ExpandableHeading
 ### Notification sent when submitting a form
 
 In this example we are using hidden form components (e.g. `organizationId`) to pass required parameters to the function. The emails field contains a comma-separated list of recipients. You could also use [Expressions](https://docs.jigx.com/expressions) to create that comma-separated string dynamically at runtime.
 
 Once you submitted the form, the recipients should receive both a push notification and an in-app notification. You can also check the delivery status of your notification in the [Notifications](https://docs.jigx.com/notifications) section of the Jigx Management.
 
-Add a function definition called *send-notification.jigx* to the *functions* folder of your solution and copy & paste the following snippet into it. Replace the \{organizationId} in the `url` with your organization's Id.
+Add a function definition called _send-notification.jigx_ to the _functions_ folder of your solution and copy & paste the following snippet into it. Replace the {organizationId} in the `url` with your organization's Id.
 
-![Submit form to send notification](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5slfiQWIuZSdPSI5768Ku_notification-submit-form.png "Submit form to send notification")
+![Submit form to send notification](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5slfiQWIuZSdPSI5768Ku_notification-submit-form.png)
 
 See the code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-notifications/basic/send-submit-form.jigx).
 
-:::CodeblockTabs
-send-notification
-
+{% tabs %}
+{% tab title="send-notification" %}
 ```yaml
 # Add this file under the functions folder
 provider: DATA_PROVIDER_REST
@@ -145,9 +106,9 @@ parameters:
     required: true
   
 ```
+{% endtab %}
 
-Send-submit-form.jigx
-
+{% tab title="Send-submit-form.jigx" %}
 ```yaml
 title: Send Notification (submit-form)
 icon: alert-circle
@@ -204,21 +165,19 @@ children:
             initialValue: jigx
             isHidden: true
 ```
-:::
-::::
+{% endtab %}
+{% endtabs %}
 
-::::ExpandableHeading
 ### Send notification with execute-entity
 
-You can also send notifications using an [execute-entity](./Actions/execute-entity.md) action if you want to have more control over what's being sent to the function.
+You can also send notifications using an [execute-entity](Actions/execute-entity.md) action if you want to have more control over what's being sent to the function.
 
 In this example we are using state to access the two form fields `title` and `text`. All other function's parameters are set in the execute-entity action. Note that you don't have to use form fields as you could also assign all `parameters` in the action itself.
 
-![Notification sent with execute entity](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2i6PSLJ_8e_lEs6fQxyS5_notification-execute-entity.png "Notification sent with execute entity")
+![Notification sent with execute entity](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2i6PSLJ_8e_lEs6fQxyS5_notification-execute-entity.png)
 
-:::CodeblockTabs
-send-notification.jigx (function)
-
+{% tabs %}
+{% tab title="send-notification.jigx (function)" %}
 ```yaml
 # Add this file under the functions folder
 provider: DATA_PROVIDER_REST
@@ -285,9 +244,9 @@ parameters:
     required: true
     
 ```
+{% endtab %}
 
-send-execute-entity.jigx
-
+{% tab title="send-execute-entity.jigx" %}
 ```yaml
 title: Send Notification (execute-entity)
 icon: alert-circle
@@ -327,35 +286,37 @@ children:
           options:
             label: Text
 ```
-:::
-::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Send notification with a target jig with input parameters
 
 You can also target a specific jig with input parameters from your push notification. An example of this would be a notification about a new product promotion with the promotion detail jig as the target. When the user taps on the notification (either on the native push notification or the in-app notification), the app will navigate to the specific promotion
 
-![Target a jig with a notification](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/n8OyVvUVWmJdUI2wsfefh_notification-target-jig.png "Target a jig with a notification")
+![Target a jig with a notification](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/n8OyVvUVWmJdUI2wsfefh_notification-target-jig.png)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{alt="Push Notification" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Sd0XI6wwYa6AQ3W7iKK_k_notifications3iphone13blueportrait.png" size="90" caption="Push Notification" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Sd0XI6wwYa6AQ3W7iKK_k_notifications3iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{alt="Push Notification" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Sd0XI6wwYa6AQ3W7iKK\_k\_notifications3iphone13blueportrait.png" size="90" caption="Push Notification" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Sd0XI6wwYa6AQ3W7iKK\_k\_notifications3iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
 
-:::VerticalSplitItem
-::Image[]{alt="Target Jig" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-7AaQQ4OLs957bbfIyQln_notifications4iphone13blueportrait.png" size="90" caption="Target Jig" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-7AaQQ4OLs957bbfIyQln_notifications4iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
-::::
+
+{% endcolumn %}
+
+{% column %}
+:::VerticalSplitItem ::Image\[]{alt="Target Jig" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-7AaQQ4OLs957bbfIyQln\_notifications4iphone13blueportrait.png" size="90" caption="Target Jig" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-7AaQQ4OLs957bbfIyQln\_notifications4iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} ::: ::::
+
+
+{% endcolumn %}
+{% endcolumns %}
 
 For this, you need an adjusted REST function definition (see 1), a Jig that invokes the REST function (see 2), and a target jig that will be displayed when the user taps on the notification (see 3).
 
-Replace the \{organizationId} in the `url` with your organization's Id.
+Replace the {organizationId} in the `url` with your organization's Id.
 
 See the code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/functions/Notifications/send-notification-target-jig.jigx).
 
-:::CodeblockTabs
-1-send-notification-target-jig.jigx (function)
-
+{% tabs %}
+{% tab title="1-send-notification-target-jig.jigx (function)" %}
 ```yaml
 # Add this file under the functions folder
 provider: DATA_PROVIDER_REST
@@ -427,9 +388,9 @@ parameters:
     required: true
     
 ```
+{% endtab %}
 
-2-view-promotion-details.jigx (sending jig)
-
+{% tab title="2-view-promotion-details.jigx (sending jig)" %}
 ```yaml
 title: Send Notification (target jig)
 icon: alert-circle
@@ -471,9 +432,9 @@ children:
           options:
             label: Text
 ```
+{% endtab %}
 
-3-view-promotion-details.jigx (target jig)
-
+{% tab title="3-view-promotion-details.jigx (target jig)" %}
 ```yaml
 title: Promotion Details
 icon: zoom-in
@@ -519,12 +480,9 @@ children:
                 numberStyle: currency
                 currency: USD            
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::ExpandableHeading
-### Sending push notifications  using the Jigx notification  Endpoint
+### Sending push notifications using the Jigx notification Endpoint
 
-See [External push notifications (API)](<./Notifications/External push notifications _API_.md>) for more information and examples.
-:::
-
+See [External push notifications (API)](<Notifications/External push notifications _API_.md>) for more information and examples.&#x20;

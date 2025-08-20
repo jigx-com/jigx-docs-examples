@@ -4,22 +4,19 @@ Handling arrays when saving data to SQL and Dynamic Data require JSONATA express
 
 The operators used for handling arrays are:
 
-- [array functions - count](https://docs.jsonata.org/array-functions)
-- [string function - split](https://docs.jsonata.org/string-functions#split)
-- [string function- eval](https://docs.jsonata.org/string-functions#eval)
+* [array functions - count](https://docs.jsonata.org/array-functions)
+* [string function - split](https://docs.jsonata.org/string-functions#split)
+* [string function- eval](https://docs.jsonata.org/string-functions#eval)
 
 ## Dynamic Data Configuration
 
-Usually, data in  Dynamic Data is saved as an array, for example, `['value1', 'value2'],` but when Dynamic Data returns the data, it is stringified as
-`"['value1', 'value2']"`. If the data is used in components, for example, to show an `intialValue`, it is not seen as an array but rather as a string. Use the `=$eval` before the expression to return the data in an array.
+Usually, data in Dynamic Data is saved as an array, for example, `['value1', 'value2'],` but when Dynamic Data returns the data, it is stringified as `"['value1', 'value2']"`. If the data is used in components, for example, to show an `intialValue`, it is not seen as an array but rather as a string. Use the `=$eval` before the expression to return the data in an array.
 
 **Example**
 
 `=$eval(@ctx.datasources.profile.food)`
 
-:::CodeblockTabs
-dropdown-dd
-
+{% code title="dropdown-dd" %}
 ```yaml
 children:
   - type: component.form
@@ -40,9 +37,9 @@ children:
                 title: =@ctx.current.item.name
                 value: =@ctx.current.item.name
 ```
-:::
+{% endcode %}
 
-## SQL Configuration&#x20;
+## SQL Configuration
 
 Data is sent as an array, for example, \['value1', 'value2'], SQL then saves the data as; VARCHAR(MAX), for example, `'value1, value2'`. If the data is used in components, for example, to show an `intialValue`, it is not seen as an array but rather as a string. Use the `=$split` before the expression to return the data in an array.
 
@@ -50,9 +47,7 @@ Data is sent as an array, for example, \['value1', 'value2'], SQL then saves the
 
 `=$split(@ctx.datasources.profile.food, ',')`
 
-:::CodeblockTabs
-dropdown-sql
-
+{% code title="dropdown-sql" %}
 ```yaml
 children:
   - type: component.form
@@ -72,7 +67,7 @@ children:
                 title: =@ctx.current.item.name
                 value: =@ctx.current.item.name
 ```
-:::
+{% endcode %}
 
 There could be a scenario where there is only one string inside an array. Use the `=$.count` to determine if there is only one string in the array or more. If there are more than one, include `$.split` in the expression.
 
@@ -80,9 +75,7 @@ There could be a scenario where there is only one string inside an array. Use th
 
 `=$count($split(@ctx.datasource.profile.food, ',')) = 1 ? @ctx.datasources.profile.food:$count($split(@ctx.datasources.profile.food, ',')) >1 ? $split(@ctx.datqasources.food, ','):null`
 
-:::CodeblockTabs
-dropdown-sql-count
-
+{% code title="dropdown-sql-count" %}
 ```yaml
 children:
   - type: component.form
@@ -103,27 +96,25 @@ children:
                 title: =@ctx.current.item.name
                 value: =@ctx.current.item.name
 ```
-:::
+{% endcode %}
 
 ## Create a filtered list from an array of records
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Result with Advanced Expressions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LGvYapk-Ctp7XNjyF1AhK_ldcfoljjvzbydshpyny6img1005iphone13blueportrait.png "Result with Advanced Expressions")
-:::
+{% columns %}
+{% column %}
+&#x20;![Result with Advanced Expressions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LGvYapk-Ctp7XNjyF1AhK_ldcfoljjvzbydshpyny6img1005iphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 We will display a list of people from the array of records, then filter them and display those that have entered a name. We will display their initials as a left avatar and add a label to each list item to display whether they are registered.
 
 Filter an array of records to display specific data and perform expression transformations over the data.
 
 See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/samples/jigx-samples/jigs/guide-advanced-expressions/static-data/advanced-expressions-list.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-advanced-expression.jigx
-
+{% code title="advanced-expression.jigx" %}
 ```yaml
 title: List with advanced Expressions
 type: jig.list
@@ -183,5 +174,4 @@ item:
       text: "=$substring(@ctx.current.item.firstname,0,1) 
             & $substring(@ctx.current.item.lastname,0,1)"
 ```
-:::
-
+{% endcode %}

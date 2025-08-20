@@ -3,10 +3,6 @@ title: Predicate Queries
 slug: ELoX-pre
 createdAt: Thu Jul 27 2023 13:16:54 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jul 31 2023 09:13:59 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to filter and select specific values from an array using JSONata
-  Predicate Queries. Discover how to use a predicate expression to display the
-  name of a nurse with a specified color. This doc
 ---
 
 # Predicate Queries
@@ -15,24 +11,27 @@ Use [JSONata Predicate Queries](https://docs.jsonata.org/predicate) at any locat
 
 ### Configuration
 
-| **Result**                         | **Expression**                                                  |
-| ---------------------------------- | --------------------------------------------------------------- |
-| Evaluate if true and show the name | `=@ctx.datasources.mydata[title='Nurse' and color='blue'].name` |
+<table><thead><tr><th width="284.3515625">Result</th><th>Expression</th></tr></thead><tbody><tr><td>Evaluate if true and show the name</td><td><code>=@ctx.datasources.mydata[title='Nurse' and color='blue'].name</code></td></tr></tbody></table>
 
-:::hint{type="warning"} Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression. :::
+{% hint style="warning" %}
+Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.&#x20;
+{% endhint %}
 
 ### Examples and code snippets
 
-:::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Predicate queries](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pJL_aAds1bbqRl0w5trhY_qfbtw3l1pzojf6xyfwlvvimg0976iphone13blueportrait.png)
+{% columns %}
+{% column %}
+&#x20;![Predicate queries](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pJL_aAds1bbqRl0w5trhY_qfbtw3l1pzojf6xyfwlvvimg0976iphone13blueportrait.png)
+{% endcolumn %}
 
-:::
-
-::::VerticalSplitItem In this example the expression is used to show the name of the nurse whose color is blue.
+{% column %}
+In this example the expression is used to show the name of the nurse whose color is blue.
 
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs expression.jigx
-
+{% code title="expression.jigx" %}
 ```yaml
 datasources:
   mydata: 
@@ -72,5 +71,4 @@ children:
             label: Predicate expression
             value: =@ctx.datasources.mydata[title='Nurse' and color='blue'].name
 ```
-
-::: :::: :::::
+{% endcode %}

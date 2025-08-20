@@ -1,27 +1,32 @@
 # Jigx Variables
 
-Jigx has a set of variables that can be used in expressions to manipulate data specific to a  Jigx App, for example, determining the logged-in user, or the Jigx organization and solution.
+## Jigx Variables
 
-# Organization
+Jigx has a set of variables that can be used in expressions to manipulate data specific to a Jigx App, for example, determining the logged-in user, or the Jigx organization and solution.
+
+## Organization
 
 The `organization` variable is used to get information about the actual organization in Jigx, such as your Jigx organization's id.
 
-## Configuration
+### Configuration
 
-| **Result** | **Expression**          |
-| ---------- | ----------------------- |
-| id         | `=@ctx.organization.id` |
+| Result | Expression              |
+| ------ | ----------------------- |
+| id     | `=@ctx.organization.id` |
 
-## Examples and code snippets
+### Examples and code snippets
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/l9Evc2zPxdR6ZYdCJIOcm_img7983iphone13blueportrait.png" size="92" position="flex-end" caption="Organization expression" alt="Organization expression" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/l9Evc2zPxdR6ZYdCJIOcm_img7983iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+::::VerticalSplit{layout="left"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/l9Evc2zPxdR6ZYdCJIOcm\_img7983iphone13blueportrait.png" size="92" position="flex-end" caption="Organization expression" alt="Organization expression" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/l9Evc2zPxdR6ZYdCJIOcm\_img7983iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
 
-:::VerticalSplitItem
-This example returns the organization's `id` . Each organization configured in [Organization Settings]() in Jigx Managementand will have a unique id.
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/organization.jigx).
+
+{% endcolumn %}
+
+{% column %}
+This example returns the organization's  `id` . Each organization configured in [Organization Settings](<Jigx Variables.md>) in Jigx Management and will have a unique id. See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/organization.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
 ```yaml
 children:
@@ -33,187 +38,36 @@ children:
             label: Organization ID
             value: =@ctx.organization.id
 ```
-:::
-::::
 
-# System
+## System
 
 The system variable in an expression is used to get information about devices, for example, you can find information about the internet connection of the device, the language preference, the device's timezone and location details. System expressions are configured by `=@ctx.system.` followed by the specific variable name.
 
-## Configuration
+### Configuration
 
 The supported variables for the system variable are:
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="140,270">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Variable</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Expression</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Results</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>appVersion</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.system.appVersion</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>This variable returns the current version of the installed app, which is useful for troubleshooting, crash tracing, and debugging issues. E.g. 1.110.7</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>deviceType</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.system.deviceType</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The variable returns the current user's device type, such as tablet or handset.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>geocodes</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.system.geocodes</code></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>isOffline</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.system.isOffline</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Boolean</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>isOnline</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.system.isOnline</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Boolean</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>isPortrait</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.system.isPortrait</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The variable is set with a boolean and is used to configure the behavior of components in either portrait or landscape mode.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>locale</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.system.locale</code></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>user</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.user.email</code> or <code>=@ctx.user.id</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>or XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>isLocationSharingEnabled</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.system.isLocationSharingEnabled</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Boolean</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>solution</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.solution.id</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>XXXXXXXX-XXX-XXXX-XXXX-XXXXXXXXXXXX</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>timezone</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.system.timezone.offset</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Get the information about the device's timezone, it can be: -<code>name</code>: e.g. Europe/Prague -<code>offset</code>: e.g. +200</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>geolocation</p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-    <td selected="false" align="left">
-      <ul>
-      <li>**Accuracy: **<code>=@ctx.system.geolocation.coords.accuracy</code> </li>
-      <li>**Altitude: **<code>=@ctx.system.geolocation.coords.altitude</code> </li>
-      <li><strong>Altitude Accuracy:</strong> <code>=@ctx.system.geolocation.coords.altitudeAccuracy</code> </li>
-      <li><strong>Location - Heading:</strong> <code>=@ctx.system.geolocation.coords.heading</code> </li>
-      <li><strong>Location - Latitude:</strong> <code>=@ctx.system.geolocation.coords.latitude</code> </li>
-      <li><strong>Location - Longitude:</strong> <code>=@ctx.system.geolocation.coords.longitude</code> </li>
-      <li><strong>Location - Speed:</strong> <code>=@ctx.system.geolocation.coords.speed</code> </li>
-      <li><strong>Location - Timestamp:</strong> <code>=@ctx.system.geolocation.timestamp</code></li>
-      <li><strong>Location - Entire array (All details):</strong> <code>=$string(@ctx.system.geolocation)</code></li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="146.71875">Variable</th><th width="261.40234375">Expression</th><th>Results</th></tr></thead><tbody><tr><td>appVersion</td><td><code>=@ctx.system.appVersion</code></td><td>This variable returns the current version of the installed app, which is useful for troubleshooting, crash tracing, and debugging issues. E.g. 1.110.7</td></tr><tr><td>deviceType</td><td><code>=@ctx.system.deviceType</code></td><td>The variable returns the current user's device type, such as tablet or handset.</td></tr><tr><td>geocodes</td><td><code>=@ctx.system.geocodes</code></td><td></td></tr><tr><td>isOffline</td><td><code>=@ctx.system.isOffline</code></td><td>Boolean</td></tr><tr><td>isOnline</td><td><code>=@ctx.system.isOnline</code></td><td>Boolean</td></tr><tr><td>isPortrait</td><td><code>=@ctx.system.isPortrait</code></td><td>The variable is set with a boolean and is used to configure the behavior of components in either portrait or landscape mode.</td></tr><tr><td>locale</td><td><code>=@ctx.system.locale</code></td><td></td></tr><tr><td>user</td><td><code>=@ctx.user.email</code> or <code>=@ctx.user.id</code></td><td>or XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</td></tr><tr><td>isLocationSharingEnabled</td><td><code>=@ctx.system.isLocationSharingEnabled</code></td><td>Boolean</td></tr><tr><td>solution</td><td><code>=@ctx.solution.id</code></td><td>XXXXXXXX-XXX-XXXX-XXXX-XXXXXXXXXXXX</td></tr><tr><td>timezone</td><td><code>=@ctx.system.timezone.offset</code></td><td>Get the information about the device's timezone, it can be: -<code>name</code>: e.g. Europe/Prague -<code>offset</code>: e.g. +200</td></tr><tr><td>geolocation</td><td></td><td><p><strong>Accuracy:</strong> <code>=@ctx.system.geolocation.coords.accuracy</code></p><p><strong>Altitude:</strong> <code>=@ctx.system.geolocation.coords.altitude</code></p><p><strong>Altitude Accuracy:</strong> <code>=@ctx.system.geolocation.coords.altitudeAccuracy</code></p><p><strong>Location - Heading:</strong> <code>=@ctx.system.geolocation.coords.heading</code></p><p><strong>Location - Latitude:</strong> <code>=@ctx.system.geolocation.coords.latitude</code></p><p><strong>Location - Longitude:</strong> <code>=@ctx.system.geolocation.coords.longitude</code></p><p><strong>Location - Speed:</strong> <code>=@ctx.system.geolocation.coords.speed</code></p><p><strong>Location - Timestamp:</strong> <code>=@ctx.system.geolocation.timestamp</code></p><p><strong>Location - Entire array (All details):</strong> <code>=$string(@ctx.system.geolocation)</code></p></td></tr></tbody></table>
 
-## Examples and code snippets
+### Examples and code snippets
 
-### System isOffline
+#### System isOffline
 
-:::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![System expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dozQmeZtycpfLoEgq34Zb_vexno05ey8qanp2ahvm8wimg1073iphone13blueportrait.png "System expression")
-:::
+{% columns %}
+{% column %}
+&#x20;![System expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dozQmeZtycpfLoEgq34Zb_vexno05ey8qanp2ahvm8wimg1073iphone13blueportrait.png)&#x20;
 
-::::VerticalSplitItem
+
+{% endcolumn %}
+
+{% column %}
 With this expression, you can disable the action button to prevent it from being pressed if the device is offline.
 
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx)
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-isOffline.jigx
-
+{% code title=" isOffline.jigx" %}
 ```yaml
 actions:
   - children:
@@ -224,17 +78,21 @@ actions:
           title: Go to action
           linkTo: advanced-expressions
 ```
-:::
-::::
-:::::
+{% endcode %}
 
-### System timezone
+#### System timezone
 
-::::VerticalSplit{layout="right"}
-:::VerticalSplitItem
-This example uses `system.timezone` to get the information about the device's timezone, it can be the `name` of the timezone or the `offset`. Use it further to convert date/time using [Date & Time](<./Date _ Time.md>) expressions into the format that you require.
+{% columns %}
+{% column %}
+This example uses `system.timezone` to get the information about the device's timezone, it can be the `name` of the timezone or the `offset`. Use it further to convert date/time using [Date & Time](<Date _ Time.md>) expressions into the format that you require.
 
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx).
+{% endcolumn %}
+
+{% column %}
+&#x20;![System timezone expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oANyCp8ANnxLlVQO8SP9t_br9tnyrzt6xxavl6azvoeimg1075iphone13blueportrait.png)&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
 ```yaml
 children:
@@ -250,26 +108,20 @@ children:
             label: Timezone offset
             value: =@ctx.system.timezone.offset
 ```
-:::
 
-:::VerticalSplitItem
-![System timezone expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oANyCp8ANnxLlVQO8SP9t_br9tnyrzt6xxavl6azvoeimg1075iphone13blueportrait.png "System timezone expression")
-:::
-::::
+#### System geolocation
 
-### System geolocation
+{% columns %}
+{% column %}
+&#x20;![system geolocation expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Zw09RzF0UJDUm3XaEwrcM_img7975iphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![system geolocation expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Zw09RzF0UJDUm3XaEwrcM_img7975iphone13blueportrait.png "system geolocation expression")
-:::
-
-:::VerticalSplitItem
+{% column %}
 This example shows how you can use `system.geolocation` to get the device's location (details).
 
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/geolocation.jigx).
-:::
-::::
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/geolocation.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
 ```yaml
 children: 
@@ -316,11 +168,11 @@ children:
 
 ```
 
-### System appVersion & deviceType
+#### System appVersion & deviceType
 
 Device information is important to identify the types of devices and the app version users are using. This is useful for troubleshooting issues and diagnosing app crashes. The details can be retrieved in multiple ways when using the system variable, such as on the app screen or when connected to Jigx dev tools in Jigx Builder.
 
-![Jigx dev tools for debugging](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-G4rE3IMKVCIOs3HqHfnwf-20250225-112949.png "Jigx dev tools for debugging")
+![Jigx dev tools for debugging](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-G4rE3IMKVCIOs3HqHfnwf-20250225-112949.png)
 
 ```yaml
 children:
@@ -337,11 +189,19 @@ children:
             value: =@ctx.system.deviceType 
 ```
 
-### System isLocationSharingEnabled
+#### System isLocationSharingEnabled
 
-::::VerticalSplit{layout="right"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 See the example using dynamic data in GitHub.
+{% endcolumn %}
+
+{% column %}
+&#x20;![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6PYMLSP1mvgXAyOVdRTl3_systemexpress.png)&#x20;
+
+
+{% endcolumn %}
+{% endcolumns %}
 
 ```yaml
   onFinish: 
@@ -358,67 +218,32 @@ See the example using dynamic data in GitHub.
         options:
           title: Stop sharing
 ```
-:::
 
-:::VerticalSplitItem
-![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6PYMLSP1mvgXAyOVdRTl3_systemexpress.png)
-:::
-::::
+## User
 
-# User
+### Configuration
 
-## Examples and code snippets
+<table><thead><tr><th width="115.625">Result</th><th>Expression</th></tr></thead><tbody><tr><td>Name</td><td><code>=@ctx.user.displayName</code></td></tr><tr><td>Email</td><td><code>=@ctx.user.email</code></td></tr><tr><td>id</td><td><code>=@ctx.user.id</code></td></tr></tbody></table>
 
-The *user* is used to get information about the logged-in user, for example, name, and email.
+### Examples and code snippets
 
-## Configuration
+{% columns %}
+{% column %}
+The _user_ is used to get information about the logged-in user, for example, name, and email.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="126">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Result</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Expression</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Name</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.user.displayName</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Email</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.user.email</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>id</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.user.id</code></p>
-    </td>
-  </tr>
-</table>
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/user.jigx).&#x20;
 
-:::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![User expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YjBuEhcG9PqMOYLrSR02f_img7979iphone13blueportrait.png "User expression")
-:::
 
-::::VerticalSplitItem
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/user.jigx).
+{% endcolumn %}
 
-:::CodeblockTabs
-user.jigx
+{% column %}
+&#x20;![User expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YjBuEhcG9PqMOYLrSR02f_img7979iphone13blueportrait.png)&#x20;
 
+
+{% endcolumn %}
+{% endcolumns %}
+
+{% code title="user.jigx" %}
 ```yaml
 children:
   - type: component.entity
@@ -437,64 +262,31 @@ children:
             label: User Id
             value: =@ctx.user.id
 ```
-:::
-::::
-:::::
+{% endcode %}
 
-# Solution
+## Solution
 
-The `solution` variable is used to get information about the specific Jigx solution, for example, name, and id. [Custom variables]() can be set in [Solution Settings]() in Jigx Management, and the variable value referenced in the solution expression.
+The `solution` variable is used to get information about the specific Jigx solution, for example, name, and id. [Custom variables](<Jigx Variables.md>) can be set in [Solution Settings](<Jigx Variables.md>) in Jigx Management, and the variable value referenced in the solution expression.
 
-## Configuration
+### Configuration
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Result</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Expression</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>name</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.solution.name</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>id</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.solution.id</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>variable value</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=@ctx.solution.settings.custom.variableName</code></p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="133.98046875">Result</th><th>Expression</th></tr></thead><tbody><tr><td>name</td><td><code>=@ctx.solution.name</code></td></tr><tr><td>id</td><td><code>=@ctx.solution.id</code></td></tr><tr><td>variable value</td><td><code>=@ctx.solution.settings.custom.variableName</code></td></tr></tbody></table>
 
-## Examples and code snippets
+### Examples and code snippets
 
-### Solution Id and name
+#### Solution Id and name
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Solution expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oViCGP9PqleD7r5MC51mk_img7981iphone13blueportrait.png "Solution expression")
-:::
+{% columns %}
+{% column %}
+&#x20;![Solution expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oViCGP9PqleD7r5MC51mk_img7981iphone13blueportrait.png)
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows how to get the solution's id and name using the `solution` variable.
 
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/solution.jigx)
+{% endcolumn %}
+{% endcolumns %}
 
 ```yaml
 children:
@@ -510,23 +302,22 @@ children:
             label: Solution Name
             value: =@ctx.solution.name
 ```
-:::
-::::
 
-### Solution settings - custom variable
+#### Solution settings - custom variable
 
-::::VerticalSplit{layout="right"}
-:::VerticalSplitItem
-![Setting Custom Variables](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xXC42Y_pvmCKo34wfapvo-20240819-091011.png "Setting Custom Variables")
-:::
+{% columns %}
+{% column %}
+&#x20;![Setting Custom Variables](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xXC42Y_pvmCKo34wfapvo-20240819-091011.png)&#x20;
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG" size="86" position="center" caption="Showing variable value" alt="Showing variable value" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
-:::
-::::
 
-:::CodeblockTabs
-YAML
+{% endcolumn %}
+
+{% column %}
+:::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG" size="86" position="center" caption="Showing variable value" alt="Showing variable value" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} ::: ::::
+
+
+{% endcolumn %}
+{% endcolumns %}
 
 ```yaml
 children:
@@ -540,5 +331,3 @@ children:
 # Reference the custom variable set in Management in the expression            
             value: =@ctx.solution.settings.custom.SharePoint_URL
 ```
-:::
-

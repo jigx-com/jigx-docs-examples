@@ -4,110 +4,41 @@ This component displays a title, subtitle, comment, or any type of text content.
 
 Titles are available in the following content widgets:
 
-- [avatar](./../avatar.md)&#x20;
-- [chart](./../chart.md)&#x20;
-- [image](./../image.md)&#x20;
-- [location](./../location.md)&#x20;
-- [status](./../status.md)&#x20;
-- [value](./../value.md)&#x20;
+* [avatar](../avatar.md)
+* [chart](../chart.md)
+* [image](../image.md)
+* [location](../location.md)
+* [status](../status.md)
+* [value](../value.md)
 
 ## Configuration options
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="142">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>title</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Display the text content for the title.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>subtitle</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add a subtitle under the title text.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="133.9375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Display the text content for the title.</td></tr><tr><td><code>subtitle</code></td><td>Add a subtitle under the title text.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="135">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>align</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>center</code>, <code>left</code>, <code>right</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>icon</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>icon used in the widget.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>iconColor</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Sets the icon's color. Choose a color from the provided palette. If the property is not specified in the YAML, the default color is black.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>style</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Properties used for component styling.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="136.79296875">Other options</th><th></th></tr></thead><tbody><tr><td><code>align</code></td><td><code>center</code>, <code>left</code>, <code>right</code></td></tr><tr><td><code>icon</code></td><td>icon used in the widget.</td></tr><tr><td><code>iconColor</code></td><td>Sets the icon's color. Choose a color from the provided palette. If the property is not specified in the YAML, the default color is black.</td></tr><tr><td><code>style</code></td><td>Properties used for component styling.</td></tr></tbody></table>
 
 ## Examples and code snippets
 
-:::::ExpandableHeading
 ### Titles in the image widget
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qzUhfHOAIhwl4ruMOw20K_title-imgiphone13blueportrait.png" size="78" position="center" caption="Image widget with titles" alt="Image widget with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qzUhfHOAIhwl4ruMOw20K_title-imgiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qzUhfHOAIhwl4ruMOw20K\_title-imgiphone13blueportrait.png" size="78" position="center" caption="Image widget with titles" alt="Image widget with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qzUhfHOAIhwl4ruMOw20K\_title-imgiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 A descriptive title added to the image widget.
 
 **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/static-data/titles-widget-image/titles-widget-image.jigx)
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/dynamic-data/titles-widget-image/titles-widget-image-dynamic.jigx).
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/static-data/titles-widget-image/titles-widget-image.jigx) See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/dynamic-data/titles-widget-image/titles-widget-image-dynamic.jigx).
 
-**Datasource**:
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles-static.jigx)
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles.jigx).
-:::
-::::
+**Datasource**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles-static.jigx) See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-titles-widget (static)
-
+{% tabs %}
+{% tab title="titles-widget (static)" %}
 ```yaml
 widgets:
   image-title:
@@ -122,9 +53,9 @@ widgets:
           align: center
           title: =@ctx.datasources.titles-static.title
 ```
+{% endtab %}
 
-title-widget (dynamic)
-
+{% tab title="title-widget (dynamic)" %}
 ```yaml
 widgets:
   image-title-dd:
@@ -139,9 +70,9 @@ widgets:
           align: center
           title: =@ctx.datasources.titles.title
 ```
+{% endtab %}
 
-datasource (static)
-
+{% tab title="datasource (static)" %}
 ```yaml
 type: datasource.static
 options:
@@ -152,9 +83,9 @@ options:
       locationTitle: Co-working space
       title: Work productivity
 ```
+{% endtab %}
 
-datasource (dynamic)
-
+{% tab title="datasource (dynamic)" %}
 ```yaml
 type: datasource.sqlite
 options:
@@ -173,9 +104,9 @@ options:
     FROM [default/location] 
     WHERE '$.category' = "titles"
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the static jig.
 children:
@@ -188,33 +119,27 @@ children:
           jigId: titles-widget-image
           widgetId: image-title
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Titles in the location widget
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ShMgsX1bPDxAhXNfPFuo1_title-locationiphone13blueportrait.png" size="80" position="center" caption="Location widget with titles" alt="Location widget with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ShMgsX1bPDxAhXNfPFuo1_title-locationiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ShMgsX1bPDxAhXNfPFuo1\_title-locationiphone13blueportrait.png" size="80" position="center" caption="Location widget with titles" alt="Location widget with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ShMgsX1bPDxAhXNfPFuo1\_title-locationiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 The title/description of the place displayed on the location widget.
 
-**Examples**:
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/static-data/titles-widget-location/titles-widget-location.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/dynamic-data/titles-widget-location/titles-widget-location-dynamic.jigx).
+**Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/static-data/titles-widget-location/titles-widget-location.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/titles/dynamic-data/titles-widget-location/titles-widget-location-dynamic.jigx).
 
-**Datasource**:
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles.jigx).
-:::
-::::
+**Datasource**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/titles.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-titles-widget-location.jigx
-
+{% tabs %}
+{% tab title="titles-widget-location.jigx" %}
 ```yaml
 widgets:
   location-title-s:
@@ -229,9 +154,9 @@ widgets:
           subtitle: =@ctx.datasources.titles-static.locationSubtitle
           align: left
 ```
+{% endtab %}
 
-titles-widget-location-dd.jigx
-
+{% tab title="titles-widget-location-dd.jigx" %}
 ```yaml
 widgets:
   location-titles-dd:
@@ -245,9 +170,9 @@ widgets:
           title: =@ctx.datasources.titles.locationtitle
           subtitle: =@ctx.datasources.titles.locationsubtitle
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the static jig.
 children:
@@ -260,6 +185,5 @@ children:
           jigId: titles-widget-image
           widgetId: image-title
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

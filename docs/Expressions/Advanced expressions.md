@@ -1,26 +1,24 @@
 # Advanced expressions
 
-Use [Advanced Expressions](#) to filter an array of records to display specific data and perform expression transformations over the data.
+Use [Advanced Expressions](<Advanced expressions.md>) to filter an array of records to display specific data and perform expression transformations over the data.
 
 ## Examples and code snippets
 
 ### Create a filtered list from an array of records
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Result with Advanced Expressions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LGvYapk-Ctp7XNjyF1AhK_ldcfoljjvzbydshpyny6img1005iphone13blueportrait.png "Result with Advanced Expressions")
-:::
+{% columns %}
+{% column %}
+&#x20;![Result with Advanced Expressions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LGvYapk-Ctp7XNjyF1AhK_ldcfoljjvzbydshpyny6img1005iphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 We will display a list of people from the array of records, then filter them and display those that have entered a name. We will display their initials as a left avatar and add a label to each list item to display whether they are registered.
 
 See the full example in [GitHub.](https://github.com/jigx-com/jigx-samples/blob/main/samples/jigx-samples/jigs/guide-advanced-expressions/static-data/advanced-expressions-list.jigx)
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-advanced-expression.jigx
-
+{% code title="advanced-expression.jigx" %}
 ```yaml
 title: List with advanced Expressions
 type: jig.list
@@ -80,27 +78,25 @@ item:
       text: "=$substring(@ctx.current.item.firstname,0,1) 
             & $substring(@ctx.current.item.lastname,0,1)"
 ```
-:::
+{% endcode %}
 
 ### Define functions to run the expressions
 
 As part of advanced expressions, you can define functions that will run the expressions. It can be a function for date transformations, maths calculations, or any string transformations. By using functions you will have cleaner code that is easier to read.
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Divided by 10](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w4D0z4M_5GZfbVYTORcV1_hncb97qurvw7muuy4qigeimg1002iphone13blueportrait.png "Divided by 10")
-:::
+{% columns %}
+{% column %}
+&#x20;![Divided by 10](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w4D0z4M_5GZfbVYTORcV1_hncb97qurvw7muuy4qigeimg1002iphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows a simple function that will divide the number from the datasource.
 
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-advanced-expressions/static-data/advanced-expressions-list.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-advanced-expression.jigx
-
+{% code title="advanced-expression.jigx" %}
 ```yaml
 datasources:
   number-data:
@@ -118,5 +114,4 @@ children:
             label: Expression to get result divided by 10
             value: =($b := function($l, $w){ $l / $w }; $b(@ctx.datasources.number-data.number,10);)
 ```
-:::
-
+{% endcode %}

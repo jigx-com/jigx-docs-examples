@@ -5,7 +5,72 @@ createdAt: Fri Apr 04 2025 11:32:25 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Apr 04 2025 11:33:14 GMT+0000 (Coordinated Universal Time)
 ---
 
-:::ApiMethodV2{data="{&#x22;name&#x22;:&#x22;Send notifications to solution users&#x22;,&#x22;method&#x22;:&#x22;POST&#x22;,&#x22;url&#x22;:&#x22;{{baseURL}}/tool/organizations/{{orgId}}/notifications&#x22;,&#x22;description&#x22;:&#x22;Notify all users within a particular solution.&#x22;,&#x22;tab&#x22;:&#x22;examples&#x22;,&#x22;examples&#x22;:{&#x22;languages&#x22;:[{&#x22;id&#x22;:&#x22;oBJWC0EncIucbSLdD614h&#x22;,&#x22;language&#x22;:&#x22;json&#x22;,&#x22;code&#x22;:&#x22;{\n  \&#x22;content\&#x22;: {\n    \&#x22;title\&#x22;: \&#x22;Weekly timesheets\&#x22;,\n    \&#x22;text\&#x22;: \&#x22;Reminder to log your time for the week\&#x22;,\n    \&#x22;screen\&#x22;:\&#x22;jig\&#x22;\n  },\n  \&#x22;scope\&#x22;: \&#x22;SLN\&#x22;,\n  \&#x22;solutionId\&#x22;: \&#x22;{{solutionId}}\&#x22;\n}&#x22;,&#x22;customLabel&#x22;:&#x22;&#x22;}],&#x22;selectedLanguageId&#x22;:&#x22;oBJWC0EncIucbSLdD614h&#x22;},&#x22;results&#x22;:{&#x22;languages&#x22;:[{&#x22;id&#x22;:&#x22;2kpGSRsfEZ7WboJj6mYqx&#x22;,&#x22;language&#x22;:&#x22;201&#x22;,&#x22;code&#x22;:&#x22;{\n    \&#x22;organizationId\&#x22;: \&#x22;{{orgId}}\&#x22;,\n    \&#x22;region\&#x22;: \&#x22;us-east-1\&#x22;,\n    \&#x22;notificationId\&#x22;: \&#x22;85f22fef-1ebc-4dcd-961c-cf8b915c3245\&#x22;,\n    \&#x22;scope\&#x22;: \&#x22;SLN\&#x22;,\n    \&#x22;solutionId\&#x22;: \&#x22;{{solutionId}}\&#x22;,\n    \&#x22;state\&#x22;: \&#x22;QUEUED\&#x22;,\n    \&#x22;startAt\&#x22;: \&#x22;2025-04-04T09:04:33.446Z\&#x22;,\n    \&#x22;content\&#x22;: {\n        \&#x22;text\&#x22;: \&#x22;Reminder to log your time for the week\&#x22;,\n        \&#x22;title\&#x22;: \&#x22;Weekly timesheets\&#x22;,\n        \&#x22;screen\&#x22;: \&#x22;jig\&#x22;,\n        \&#x22;inputs\&#x22;: {}\n    },\n    \&#x22;createdAt\&#x22;: \&#x22;2025-04-04T09:04:33.446Z\&#x22;,\n    \&#x22;createdBy\&#x22;: \&#x22;{{userId}}\&#x22;,\n    \&#x22;updatedAt\&#x22;: \&#x22;2025-04-04T09:04:33.446Z\&#x22;,\n    \&#x22;updatedBy\&#x22;: \&#x22;{{userid}}\&#x22;\n}&#x22;,&#x22;customLabel&#x22;:&#x22;&#x22;},{&#x22;id&#x22;:&#x22;IaBnIZz1Hnm20_YvOXd-s&#x22;,&#x22;language&#x22;:&#x22;401&#x22;,&#x22;code&#x22;:&#x22;{\n    \&#x22;message\&#x22;: \&#x22;Unauthorized\&#x22;\n}&#x22;,&#x22;customLabel&#x22;:&#x22;&#x22;}],&#x22;selectedLanguageId&#x22;:&#x22;2kpGSRsfEZ7WboJj6mYqx&#x22;},&#x22;request&#x22;:{&#x22;pathParameters&#x22;:[],&#x22;queryParameters&#x22;:[],&#x22;headerParameters&#x22;:[{&#x22;name&#x22;:&#x22;Authorization&#x22;,&#x22;kind&#x22;:&#x22;required&#x22;,&#x22;type&#x22;:&#x22;string&#x22;,&#x22;description&#x22;:&#x22;Bearer Token - format:\nBEARER XXXXXXXXXXXXXX&#x22;,&#x22;&#x22;:&#x22;Bearer Token - format:\nBEARER XXXXXXXXXXXXXX&#x22;}],&#x22;bodyDataParameters&#x22;:[{&#x22;name&#x22;:&#x22;JSON body&#x22;,&#x22;kind&#x22;:&#x22;required&#x22;,&#x22;type&#x22;:&#x22;string&#x22;,&#x22;description&#x22;:&#x22;Configure the following properties in the JSON body:\n- title\n- text\n- scope: \&#x22;SLN\&#x22;\n- solutionId: \&#x22;{{solutionId}}\&#x22;, available in Jigx Management> Solution Details\n&#x22;,&#x22;&#x22;:&#x22;Configure the following properties in the JSON body:\n- title\n- text\n- scope: \&#x22;SLN\&#x22;\n- solutionId: \&#x22;{{solutionId}}\&#x22;, available in Jigx Management> Solution Details\n&#x22;}],&#x22;formDataParameters&#x22;:[]},&#x22;currentNewParameter&#x22;:{&#x22;label&#x22;:&#x22;Body Parameter&#x22;,&#x22;value&#x22;:&#x22;bodyDataParameters&#x22;},&#x22;hasTryItOut&#x22;:false,&#x22;response&#x22;:[{&#x22;name&#x22;:&#x22;201 Created&#x22;,&#x22;kind&#x22;:&#x22;optional&#x22;,&#x22;type&#x22;:&#x22;string&#x22;,&#x22;description&#x22;:&#x22;Notification  state = \&#x22;QUEUED\&#x22;,\nStartAt gives the time the notification is sent.\nContent- the message that is sent to the solution users\ncreatedAt,\ncreatedBy: {{userid}}\nupdatedAt\nupdatedBy: {{userid}}\n    &#x22;,&#x22;children&#x22;:[]}]}"}
+# Send notification to all solution users (SLN)
 
-:::
+## Send notification to all solution users (SLN)
 
+<mark style="color:green;">`POST`</mark> `{{baseURL}}/tool/organizations/{{orgId}}/notifications`
+
+Notify all users within a particular solution.
+
+**Headers**
+
+| Name          | Value                                                                                         |
+| ------------- | --------------------------------------------------------------------------------------------- |
+| Authorization | <p><code>Bearer &#x3C;token></code></p><p>Bearer Token - format:<br>BEARER XXXXXXXXXXXXXX</p> |
+
+**Body**
+
+Configure the following properties in the JSON body:
+
+<table><thead><tr><th width="136.6640625">Name</th><th width="118.67578125">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td>string</td><td>Title of the notification.</td></tr><tr><td><code>text</code></td><td>string</td><td>Notification message.</td></tr><tr><td><code>scope</code></td><td>string</td><td>"SLN" for users of the solution.</td></tr><tr><td><code>solutionId</code></td><td>string</td><td>"{{solutionId}}", available in Jigx Management> Solution Details.</td></tr></tbody></table>
+
+{% code title="JSON body" %}
+```json
+{
+  "content": {
+    "title": "Weekly timesheets",
+    "text": "Reminder to log your time for the week",
+    "screen":"jig"
+  },
+  "scope": "SLN",
+  "solutionId": "{{solutionId}}"
+}
+```
+{% endcode %}
+
+**Response**
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+    "organizationId": "{{orgId}}",
+    "region": "us-east-1",
+    "notificationId": "85f22fef-1ebc-4dcd-961c-cf8b915c3245",
+    "scope": "SLN",
+    "solutionId": "{{solutionId}}",
+    "state": "QUEUED",
+    "startAt": "2025-04-04T09:04:33.446Z",
+    "content": {
+        "text": "Reminder to log your time for the week",
+        "title": "Weekly timesheets",
+        "screen": "jig",
+        "inputs": {}
+    },
+    "createdAt": "2025-04-04T09:04:33.446Z",
+    "createdBy": "{{userId}}",
+    "updatedAt": "2025-04-04T09:04:33.446Z",
+    "updatedBy": "{{userid}}"
+}
+```
+{% endtab %}
+
+{% tab title="400" %}
+```json
+{
+    "message": "Unauthorized"
+}
+```
+{% endtab %}
+{% endtabs %}

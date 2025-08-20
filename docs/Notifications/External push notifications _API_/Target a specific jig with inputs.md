@@ -5,7 +5,81 @@ createdAt: Fri Apr 04 2025 11:35:22 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu May 01 2025 08:11:49 GMT+0000 (Coordinated Universal Time)
 ---
 
-:::ApiMethodV2{data="{&#x22;name&#x22;:&#x22;Target a jig with inputs &#x22;,&#x22;method&#x22;:&#x22;POST&#x22;,&#x22;url&#x22;:&#x22;{{baseURL}}/tool/organizations/{{orgId}}/notifications&#x22;,&#x22;description&#x22;:&#x22;Send a notification to a solution group to open a specific jig and pass inputs into the jig. &#x22;,&#x22;tab&#x22;:&#x22;examples&#x22;,&#x22;examples&#x22;:{&#x22;languages&#x22;:[{&#x22;id&#x22;:&#x22;oBJWC0EncIucbSLdD614h&#x22;,&#x22;language&#x22;:&#x22;json&#x22;,&#x22;code&#x22;:&#x22;{\n  \&#x22;content\&#x22;: {\n    \&#x22;title\&#x22;: \&#x22;🎉 New product promotion\&#x22;,\n    \&#x22;text\&#x22;: \&#x22;Check it out now\&#x22;,\n    \&#x22;jigId\&#x22;: \&#x22;view-promotion-details\&#x22;,\n    \&#x22;screen\&#x22;:\&#x22;jig\&#x22;,\n    \&#x22;inputs\&#x22;: {\n      \&#x22;promo-code\&#x22;: \&#x22;x-3654\&#x22;,\n      \&#x22;name\&#x22;: \&#x22;20% on all Winter stock\&#x22;,\n      \&#x22;price\&#x22;: 34\n    }\n  },\n  \&#x22;scope\&#x22;: \&#x22;SLN_GRP\&#x22;,\n  \&#x22;groups\&#x22;: [\n    \&#x22;customers\&#x22;\n  ],\n  \&#x22;solutionId\&#x22;: \&#x22;{{solutionId}}\&#x22;\n}&#x22;,&#x22;customLabel&#x22;:&#x22;&#x22;}],&#x22;selectedLanguageId&#x22;:&#x22;oBJWC0EncIucbSLdD614h&#x22;},&#x22;results&#x22;:{&#x22;languages&#x22;:[{&#x22;id&#x22;:&#x22;2kpGSRsfEZ7WboJj6mYqx&#x22;,&#x22;language&#x22;:&#x22;201&#x22;,&#x22;code&#x22;:&#x22;{\n    \&#x22;organizationId\&#x22;: \&#x22;{{orgId}}\&#x22;,\n    \&#x22;region\&#x22;: \&#x22;us-east-1\&#x22;,\n    \&#x22;notificationId\&#x22;: \&#x22;02817dcd-175c-4d0f-8c47-f1838c8e628c\&#x22;,\n    \&#x22;scope\&#x22;: \&#x22;ORG\&#x22;,\n    \&#x22;state\&#x22;: \&#x22;QUEUED\&#x22;,\n    \&#x22;startAt\&#x22;: \&#x22;2025-04-04T10:06:50.444Z\&#x22;,\n    \&#x22;content\&#x22;: {\n        \&#x22;text\&#x22;: \&#x22;We released a new version of the app\&#x22;,\n        \&#x22;title\&#x22;: \&#x22;Update your app\&#x22;,\n        \&#x22;screen\&#x22;: \&#x22;jig\&#x22;,\n        \&#x22;inputs\&#x22;: {}\n    },\n    \&#x22;createdAt\&#x22;: \&#x22;2025-04-04T10:06:50.444Z\&#x22;,\n    \&#x22;createdBy\&#x22;: \&#x22;{{userId}}\&#x22;,\n    \&#x22;updatedAt\&#x22;: \&#x22;2025-04-04T10:06:50.444Z\&#x22;,\n    \&#x22;updatedBy\&#x22;: \&#x22;{{userId}}\&#x22;\n}&#x22;,&#x22;customLabel&#x22;:&#x22;&#x22;},{&#x22;id&#x22;:&#x22;r3P5FJyIgcaGxoApIU_at&#x22;,&#x22;language&#x22;:&#x22;401&#x22;,&#x22;code&#x22;:&#x22;{\n    \&#x22;message\&#x22;: \&#x22;Unauthorized\&#x22;\n}&#x22;,&#x22;customLabel&#x22;:&#x22;&#x22;}],&#x22;selectedLanguageId&#x22;:&#x22;2kpGSRsfEZ7WboJj6mYqx&#x22;},&#x22;request&#x22;:{&#x22;pathParameters&#x22;:[],&#x22;queryParameters&#x22;:[],&#x22;headerParameters&#x22;:[{&#x22;name&#x22;:&#x22;Authorization&#x22;,&#x22;kind&#x22;:&#x22;required&#x22;,&#x22;type&#x22;:&#x22;string&#x22;,&#x22;description&#x22;:&#x22;Bearer Token - format:\nBEARER XXXXXXXXXXXXXX&#x22;,&#x22;&#x22;:&#x22;Bearer Token - format:\nBEARER XXXXXXXXXXXXXX&#x22;}],&#x22;bodyDataParameters&#x22;:[{&#x22;name&#x22;:&#x22;JSON body&#x22;,&#x22;kind&#x22;:&#x22;required&#x22;,&#x22;type&#x22;:&#x22;string&#x22;,&#x22;description&#x22;:&#x22;Configure the following properties in the JSON body:\n- title\n- text\n- jigId: provide the jigId of the jig you want to open when the notification is tapped\n- inputs: Define the values for the jig inputs \n- scope: can use any of the scopes USR, ORG, SLN, or SLN_GRP\n- solutionId: \&#x22;{{solutionId}}\&#x22;, available in Jigx Management> Solution Details&#x22;,&#x22;&#x22;:&#x22;Configure the following properties in the JSON body:\n- title\n- text\n- jigId: provide the jigId of the jig you want to open when the notification is tapped\n- inputs: Define the values for the jig inputs \n- scope: can use any of the scopes USR, ORG, SLN, or SLN_GRP\n- solutionId: \&#x22;{{solutionId}}\&#x22;, available in Jigx Management> Solution Details&#x22;}],&#x22;formDataParameters&#x22;:[]},&#x22;currentNewParameter&#x22;:{&#x22;label&#x22;:&#x22;Body Parameter&#x22;,&#x22;value&#x22;:&#x22;bodyDataParameters&#x22;},&#x22;hasTryItOut&#x22;:false,&#x22;response&#x22;:[{&#x22;name&#x22;:&#x22;201 Created&#x22;,&#x22;kind&#x22;:&#x22;optional&#x22;,&#x22;type&#x22;:&#x22;string&#x22;,&#x22;description&#x22;:&#x22;Notification  state = \&#x22;QUEUED\&#x22;,\nStartAt gives the time the notification is sent.\nContent- the message that is sent to the solution users\ncreatedAt,\ncreatedBy: {{userid}}\nupdatedAt\nupdatedBy: {{userid}}\n    &#x22;,&#x22;children&#x22;:[]}]}"}
+# Target a specific jig with inputs
 
-:::
+## Target a specific jig with inputs
 
+<mark style="color:green;">`POST`</mark> `{{baseURL}}/tool/organizations/{{orgId}}/notifications`
+
+\<Description of the endpoint>
+
+**Headers**
+
+| Name          | Value                                                                                         |
+| ------------- | --------------------------------------------------------------------------------------------- |
+| Authorization | <p><code>Bearer &#x3C;token></code></p><p>Bearer Token - format:<br>BEARER XXXXXXXXXXXXXX</p> |
+
+**Body**
+
+Configure the following properties in the JSON body:
+
+<table><thead><tr><th width="141.86328125">Name</th><th width="153.484375">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td>string</td><td>Title of the notification.</td></tr><tr><td><code>text</code></td><td>string</td><td>Notification message.</td></tr><tr><td><code>jigId</code></td><td>string</td><td>Provide the jigId of the jig you want to open when the notification is tapped</td></tr><tr><td><code>inputs</code></td><td>string</td><td>Define the values for the jig inputs</td></tr><tr><td><code>scope</code></td><td>string</td><td>Can use any of the scopes USR, ORG, SLN, or SLN_GRP</td></tr><tr><td><code>solutionId</code></td><td>string</td><td>"{{solutionId}}", available in Jigx Management> Solution Details</td></tr></tbody></table>
+
+{% code title="JSON body" %}
+```json
+/{
+  "content": {
+    "title": "🎉 New product promotion",
+    "text": "Check it out now",
+    "jigId": "view-promotion-details",
+    "screen":"jig",
+    "inputs": {
+      "promo-code": "x-3654",
+      "name": "20% on all Winter stock",
+      "price": 34
+    }
+  },
+  "scope": "SLN_GRP",
+  "groups": [
+    "customers"
+  ],
+  "solutionId": "{{solutionId}}"
+}
+```
+{% endcode %}
+
+**Response**
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+    "organizationId": "{{orgId}}",
+    "region": "us-east-1",
+    "notificationId": "02817dcd-175c-4d0f-8c47-f1838c8e628c",
+    "scope": "ORG",
+    "state": "QUEUED",
+    "startAt": "2025-04-04T10:06:50.444Z",
+    "content": {
+        "text": "We released a new version of the app",
+        "title": "Update your app",
+        "screen": "jig",
+        "inputs": {}
+    },
+    "createdAt": "2025-04-04T10:06:50.444Z",
+    "createdBy": "{{userId}}",
+    "updatedAt": "2025-04-04T10:06:50.444Z",
+    "updatedBy": "{{userId}}"
+}
+
+```
+{% endtab %}
+
+{% tab title="400" %}
+```json
+{
+    "message": "Unauthorized"
+}
+```
+{% endtab %}
+{% endtabs %}

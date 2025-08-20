@@ -22,7 +22,7 @@ This event enables a remote system like Acumatica to call into Jigx and trigger 
 
 ## Where and how to configure it
 
-1. Configure [Acumatica Push Notifications](<./onTableChange/Acumatica Push Notifications.md>) to use the [Jigx API endpoint](<./onTableChange/Acumatica Push Notifications.md>).
+1. Configure [Acumatica Push Notifications](<onTableChange/Acumatica Push Notifications.md>) to use the [Jigx API endpoint](<onTableChange/Acumatica Push Notifications.md>).
 2. In the Jigx API endpoint configuration, specify a name for the remote system's data table. This is the name given to the Dynamic Data table.
 3. In default.jigx, add the Dynamic Data table name.
 4. In index.jigx, add the `onTableChanged` event property at the root level.
@@ -34,14 +34,14 @@ This event enables a remote system like Acumatica to call into Jigx and trigger 
 
 Key factors to keep in mind when using this event.
 
-- Multiple `onTableChanged` events can be configured in the index.jigx file.
-- The event continuously listens for data changes on the specified table.
-- It can be used with any data provider, including local, REST, SQL, and Dynamic Data.
-- The event can listen for changes in one table and respond by updating another table using the `actions` property.
-- In the SQL data provider, when using the `functionCall` method, the `onTableChanged` event does not execute because the data changes occur directly on the backend and do not affect local data.
-- When the app is in the background, and changes occur in backend remote data tables, the `onTableChanged` event executes once when the app opens to apply the data changes. This ensures optimal app performance and prevents multiple redundant executions.
-- When the app is open and data changes are made, the event executes individually for each detected change.
-- Avoid creating a loop in `onTableChanged` by checking a table for changes and then modifying the same table.
+* Multiple `onTableChanged` events can be configured in the index.jigx file.
+* The event continuously listens for data changes on the specified table.
+* It can be used with any data provider, including local, REST, SQL, and Dynamic Data.
+* The event can listen for changes in one table and respond by updating another table using the `actions` property.
+* In the SQL data provider, when using the `functionCall` method, the `onTableChanged` event does not execute because the data changes occur directly on the backend and do not affect local data.
+* When the app is in the background, and changes occur in backend remote data tables, the `onTableChanged` event executes once when the app opens to apply the data changes. This ensures optimal app performance and prevents multiple redundant executions.
+* When the app is open and data changes are made, the event executes individually for each detected change.
+* Avoid creating a loop in `onTableChanged` by checking a table for changes and then modifying the same table.
 
 ## Examples and code snippets
 
@@ -49,9 +49,8 @@ Key factors to keep in mind when using this event.
 
 This example demonstrates how to use the `onTableChanged` event to monitor data changes in a single table from a remote data system. When a data change occurs on the remote system, the event executes and resets the solutions state.
 
-:::CodeblockTabs
-index.jigx
-
+{% tabs %}
+{% tab title="index.jigx" %}
 ```yaml
 title: Global
 name: global-inc
@@ -68,26 +67,25 @@ onTableChanged:
         changes:
           - dataStatus                
 ```
+{% endtab %}
 
-default.jigx
-
+{% tab title="default.jigx" %}
 ```yaml
 databaseId: default
 tables:
   employees: null
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Multiple data tables
 
 This example demonstrates how to use the `onTableChanged` event to monitor data changes across multiple tables and different data providers within the solution. When a data change occurs, the event executes the defined actions for each configured data provider.
 
-In the second table, multiple actions are configured, including `action.sync-entities`, which is dynamically updated by specifying a list of entities, functions, and function parameters using an expression. This is particularly useful when the number of entities to sync and their corresponding parameters are not always known.
+In the second table, multiple actions are configured, including `action.sync-entities`, which is dynamically updated by specifying a list of entities, functions, and function parameters using an expression. This is particularly useful when the number of entities to sync and their corresponding parameters are not always known.&#x20;
 
-:::CodeblockTabs
-index.jigx
-
+{% tabs %}
+{% tab title="index.jigx" %}
 ```yaml
 title: Global
 name: global-inc
@@ -134,25 +132,24 @@ onTableChanged:
             options:
               linkTo: event-of-meeting-dynamic
 ```
+{% endtab %}
 
-default.jigx
-
+{% tab title="default.jigx" %}
 ```yaml
 databaseId: default
 tables:
   calendar: null
   calendarEvents: null
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Action data changes from one table to another table
 
 In the example below, the `send-notifications` table is monitored for changes. Once notifications are sent, the event executes and updates the `customer` table with the relevant data.
 
-:::CodeblockTabs
-index.jigx
-
+{% tabs %}
+{% tab title=" index.jigx" %}
 ```yaml
 title: Global
 name: global-inc
@@ -176,13 +173,15 @@ onTableChanged:
           date: =$now()
 ```
 
-default.jigx
 
+{% endtab %}
+
+{% tab title="default.jigx" %}
 ```yaml
 databaseId: default
 tables:
   send-notification: null
   customer: null
 ```
-
-:::
+{% endtab %}
+{% endtabs %}

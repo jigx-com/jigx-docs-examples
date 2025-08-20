@@ -29,22 +29,27 @@ The operators include:
 
 ### Configuration
 
-| **Result**                         | **Expression**                                                                                                                                                                                    |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Filter a list according to a value | `=$filter(@ctx.datasources.filter-list, function($v){$contains($string($v.status), $string(@ctx.components.filter-list.state.filter != null ? @ctx.components.filter-list.state.filter:'')) })[]` |
+<table><thead><tr><th width="257.97265625">Result</th><th>Expression</th></tr></thead><tbody><tr><td>Filter a list according to a value</td><td><code>=$filter(@ctx.datasources.filter-list, function($v){$contains($string($v.status), $string(@ctx.components.filter-list.state.filter != null ? @ctx.components.filter-list.state.filter:'')) })[]</code></td></tr></tbody></table>
 
-:::hint{type="warning"} Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression. :::
+{% hint style="warning" %}
+Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.&#x20;
+{% endhint %}
 
 ### Examples and code snippets
 
 #### Filtering data
 
-:::::VerticalSplit{layout="left"} :::VerticalSplitItem ![Static filter](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3_4ZHyfoqvLE8CUmHcoCg_img9730iphone13blueportrait.png) :::
+{% columns %}
+{% column %}
+&#x20;![Static filter](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3_4ZHyfoqvLE8CUmHcoCg_img9730iphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-::::VerticalSplitItem In this example the `Filter` path operator is used to create a filter for data records marked as Active or Inactive. **Example**: See the full code sample in [GitHub](%22https:/github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/filter.jigx).
+{% column %}
+In this example the `Filter` path operator is used to create a filter for data records marked as Active or Inactive. **Example**: See the full code sample in [GitHub](%22https:/github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/filter.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs filter.jigx
-
+{% code title=" filter.jigx" %}
 ```yaml
 title: Filter, progress and label 
 type: jig.list
@@ -108,8 +113,7 @@ item:
         - when: =@ctx.current.item.status = 'active'
           color: color2
 ```
-
-::: :::: :::::
+{% endcode %}
 
 #### Searching data
 
@@ -117,12 +121,21 @@ Write an expression to add a search field when using **static data**. The charac
 
 **Search:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/search.jigx).
 
+{% columns %}
+{% column %}
 ::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/j\_q3THPfmpWfkzUBqoR4S\_search1iphone13blueportrait.png" size="70" position="center" caption="Search static data" alt="Search static data"} :::
 
+
+{% endcolumn %}
+
+{% column %}
 :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kxfQ-YPzrNiVWsXDgWXaf\_search2iphone13blueportrait.png" size="70" position="center" caption="Search static data" alt="Search static data"} ::: ::::
 
-:::CodeblockTabs search.jigx
 
+{% endcolumn %}
+{% endcolumns %}
+
+{% code title="search.jigx" %}
 ```yaml
 children:
   - type: component.list
@@ -141,5 +154,4 @@ children:
             text: N/A
             uri: =@ctx.current.item.img
 ```
-
-:::
+{% endcode %}

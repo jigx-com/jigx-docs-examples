@@ -1,110 +1,43 @@
 # chart
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-The chart widget is suitable for displaying the \<[line-chart](https://docs.jigx.com/examples/line-chart), [bar-chart](https://docs.jigx.com/examples/bar-chart), or [pie-chart](https://docs.jigx.com/examples/pie-chart) on the Home Hub .
-:::
+{% columns %}
+{% column %}
+The chart widget is suitable for displaying the <[line-chart](https://docs.jigx.com/examples/line-chart), [bar-chart](https://docs.jigx.com/examples/bar-chart), or [pie-chart](https://docs.jigx.com/examples/pie-chart) on the Home Hub.
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/adjbqUzKWPTPOznhe57WH_wd-charts.PNG" size="64" position="center" caption="Chart widgets" alt="Chart widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/adjbqUzKWPTPOznhe57WH_wd-charts.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/adjbqUzKWPTPOznhe57WH\_wd-charts.PNG" size="64" position="center" caption="Chart widgets" alt="Chart widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/adjbqUzKWPTPOznhe57WH\_wd-charts.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+{% endcolumn %}
+{% endcolumns %}
 
 ## Configuration options
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="138">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>chart</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The configuration is the same as for the chart components, refer to the <a href="https://docs.jigx.com/examples/line-chart">line-chart</a>, <a href="https://docs.jigx.com/examples/bar-chart">bar-chart</a>, or <a href="https://docs.jigx.com/examples/pie-chart">pie-chart</a> examples.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="142.81640625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>chart</code></td><td>The configuration is the same as for the chart components, refer to the <a href="https://docs.jigx.com/examples/line-chart">line-chart</a>, <a href="https://docs.jigx.com/examples/bar-chart">bar-chart</a>, or <a href="https://docs.jigx.com/examples/pie-chart">pie-chart</a> examples.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="141">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>bottom</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The <a href="https://docs.jigx.com/examples/titles">titles</a> component will be added to the bottom of the widget.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>footer</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add text to the footer of the widget.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>footerAlign</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Align the footer text to <code>left</code>, <code>right</code>, <code>center</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>placeholders</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Specify a placeholder text to display if there is no data, for example - <code>title: No data to display</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>top</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The <a href="https://docs.jigx.com/examples/titles">titles</a> component will be added to the top of the widget.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="142.23046875">Other options</th><th></th></tr></thead><tbody><tr><td><code>bottom</code></td><td>The <a href="https://docs.jigx.com/examples/titles">titles</a> component will be added to the bottom of the widget.</td></tr><tr><td><code>footer</code></td><td>Add text to the footer of the widget.</td></tr><tr><td><code>footerAlign</code></td><td>Align the footer text to <code>left</code>, <code>right</code>, <code>center</code>.</td></tr><tr><td><code>placeholders</code></td><td>Specify a placeholder text to display if there is no data, for example - <code>title: No data to display</code>.</td></tr><tr><td><code>top</code></td><td>The <a href="https://docs.jigx.com/examples/titles">titles</a> component will be added to the top of the widget.</td></tr></tbody></table>
 
 ## Considerations
 
-- It is recommended to set either the `top`, `bottom`, or both properties when configuring a chart widget to ensure it renders correctly and maintains a clear, readable layout within the widget.
+* It is recommended to set either the `top`, `bottom`, or both properties when configuring a chart widget to ensure it renders correctly and maintains a clear, readable layout within the widget.
 
 ## Examples and code snippets
 
-:::::ExpandableHeading
 ### Chart widget: line-chart component (2x2)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/J6pNWuARKgPksDAqWwkzK_wd-chartline22.PNG" size="74" position="center" caption="Line-chart 2x2" alt="Line-chart 2x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/J6pNWuARKgPksDAqWwkzK_wd-chartline22.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/J6pNWuARKgPksDAqWwkzK\_wd-chartline22.PNG" size="74" position="center" caption="Line-chart 2x2" alt="Line-chart 2x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/J6pNWuARKgPksDAqWwkzK\_wd-chartline22.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example select the `chart` widget and add a `component.line-chart` and add a `component.trend` at the `top` to show the positive percentage trend and a `component.titles` at the `bottom`.
 
-**Example:**
-See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/chart-line-1_2x2.jigx).
-:::
-::::
+**Example:** See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/chart-line-1_2x2.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-chart-line-1\_2x2.jigx
-
+{% tabs %}
+{% tab title="chart-line-1_2x2.jigx" %}
 ```yaml
 widgets:
    line1-2x2: 
@@ -155,9 +88,9 @@ widgets:
           subtitle: Updated 1 min ago
           align: center
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   static-data:
@@ -173,9 +106,9 @@ datasources:
         - x: Q4/20
           y: 86000
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the jig.
 children:
@@ -188,28 +121,25 @@ children:
           jigId: chart-line-1_2x2
           widgetId: line1-2x2
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Chart widget: line-chart component (2x4)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 In this example select the `chart` widget and add a `component.line-chart` and add a `component.title` at the `top`.
 
-**Example:**
-See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x4/chart-line-1_2x4.jigx).
-:::
+**Example:** See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x4/chart-line-1_2x4.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9x1YJjqI0mnBBDuf9rBh_wd-chartline24.PNG" size="84" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9x1YJjqI0mnBBDuf9rBh_wd-chartline24.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9x1YJjqI0mnBBDuf9rBh\_wd-chartline24.PNG" size="84" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9x1YJjqI0mnBBDuf9rBh\_wd-chartline24.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-chart-line-1\_2x4.jigx
-
+{% tabs %}
+{% tab title="chart-line-1_2x4.jigx" %}
 ```yaml
 widgets:
   line1-2x4: 
@@ -253,9 +183,9 @@ widgets:
             max: 75000
             tickAmount: 6
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   static-data:
@@ -271,9 +201,9 @@ datasources:
         - x: Q4/20
           y: 45000
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the jig.
 children:
@@ -286,29 +216,25 @@ children:
           jigId: chart-line-1_2x4
           widgetId: line1-2x4
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Chart widget: line-chart component (4x4)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-![Line-chart widget 4x4](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YwBcJsDpeAgYRh0HOhte2_wd-line44.PNG "Line-chart widget 4x4")
-:::
+{% columns %}
+{% column %}
+&#x20;![Line-chart widget 4x4](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YwBcJsDpeAgYRh0HOhte2_wd-line44.PNG)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example select the `chart` widget and add a `component.line-chart` and add a `component.title` at the `top` and at the `bottom`.
 
-**Example:**
-See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x4/chart-line-2_4x4.jigx) for the Sales performance line-chart widget.
-See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x4/chart-line-1_4x4.jigx) for the Quarterly Company Progress.
-:::
-::::
+**Example:** See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x4/chart-line-2_4x4.jigx) for the Sales performance line-chart widget. See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x4/chart-line-1_4x4.jigx) for the Quarterly Company Progress.&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-chart-line-2\_4x4.jigx
-
+{% tabs %}
+{% tab title="chart-line-2_4x4.jigx" %}
 ```yaml
 title: Line chart 2 (4x4)
 type: jig.default
@@ -397,9 +323,9 @@ widgets:
           iconColor: color4
           align: center
 ```
+{% endtab %}
 
-chart-line-1\_4x4.jigx
-
+{% tab title="chart-line-1_4x4.jigx" %}
 ```yaml
 title: Line chart 1 (4x4)
 type: jig.default
@@ -469,9 +395,9 @@ widgets:
           subtitle: "2022"
           align: center            
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the jig.
 children:
@@ -484,33 +410,27 @@ children:
           jigId: chart-line-2_4x4
           widgetId: line2-4x4
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Chart widget - line-chart component (4x2)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mqh4r9GH4TOTnBy1_kXtQ_linechartiphone13blueportrait.png" size="80" position="center" caption="line-chart widget" alt="line-chart widget 4" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mqh4r9GH4TOTnBy1_kXtQ_linechartiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mqh4r9GH4TOTnBy1\_kXtQ\_linechartiphone13blueportrait.png" size="80" position="center" caption="line-chart widget" alt="line-chart widget 4" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mqh4r9GH4TOTnBy1\_kXtQ\_linechartiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example is configured using a line-chart to display in the chart widget.
 
-**Examples**:
-See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/static-data/chart-widget-with-line-chart/chart-widget-line-chart.jigx).
-See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/dynamic-data/chart-widget-with-line-chart/chart-widget-line-dynamic.jigx).
+**Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/static-data/chart-widget-with-line-chart/chart-widget-line-chart.jigx). See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/dynamic-data/chart-widget-with-line-chart/chart-widget-line-dynamic.jigx).
 
-**Datasources**:
-See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx).
-See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx)
-:::
-::::
+**Datasources**: See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx). See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx)&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-line-chart-widget (static)
-
+{% tabs %}
+{% tab title="line-chart-widget (static)" %}
 ```yaml
 widgets:
   lineChartDD-4x2:
@@ -549,9 +469,9 @@ widgets:
           legend:
             isHidden: false
 ```
+{% endtab %}
 
-line-chart-widget (dynamic)
-
+{% tab title="line-chart-widget (dynamic)" %}
 ```yaml
 widgets:
   lineChartStatic-4x2:
@@ -590,9 +510,9 @@ widgets:
           legend:
             isHidden: false
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the static jig.
 children:
@@ -605,28 +525,25 @@ children:
           jigId: line-chart-widget 
           widgetId: lineChartDD-4x2
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Chart widget: line-chart component in group widget (4x4)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/klbestBzZ9mIfpOu6q7D__wd-linegroup.PNG" size="80" position="center" caption="Group widget with line-charts" alt="Group widget with line-charts" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/klbestBzZ9mIfpOu6q7D__wd-linegroup.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/klbestBzZ9mIfpOu6q7D\_\_wd-linegroup.PNG" size="80" position="center" caption="Group widget with line-charts" alt="Group widget with line-charts" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/klbestBzZ9mIfpOu6q7D\_\_wd-linegroup.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example two line-chart widgets are combined in the `group` widget with the `component.titles` to add additional information.
 
-**Example:**
-See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/combined-chart-chart-1_4x2.jigx).
-:::
-::::
+**Example:** See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/combined-chart-chart-1_4x2.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-combined-chart-chart-1\_4x2.jigx
-
+{% tabs %}
+{% tab title="combined-chart-chart-1_4x2.jigx" %}
 ```yaml
 title: Chart & Chart 1 (4x2)
 type: jig.default
@@ -799,9 +716,9 @@ widgets:
                     layout: area-gradient
 
 ```
+{% endtab %}
 
-coin-history.jigx (function)
-
+{% tab title="coin-history.jigx (function)" %}
 ```yaml
 method: GET
 provider: DATA_PROVIDER_REST
@@ -815,9 +732,9 @@ url: 'https://api.exchange.coinbase.com/products/BTC-EUR/candles'
 outputTransform: >-
   $.{ "ms": $[0] * 1000, "close": $formatNumber($number($[4]), '#.00000000') }
 ```
+{% endtab %}
 
-coin-history-etherum.jigx (function)
-
+{% tab title="coin-history-etherum.jigx (function)" %}
 ```yaml
 method: GET
 provider: DATA_PROVIDER_REST
@@ -831,9 +748,9 @@ url: 'https://api.exchange.coinbase.com/products/ETH-EUR/candles'
 outputTransform: >-
   $.{ "ms": $[0] * 1000, "close": $formatNumber($number($[4]), '#.00000000') }
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the static jig.
 children:
@@ -846,28 +763,25 @@ children:
           jigId: combined-chart-chart-1_4x2
           widgetId: combined-chart1-4x2
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Chart widget: bar-chart component (2x2)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 In this example select the `chart` widget and add a `component.bar-chart` and add a `component.trend` at the `top`.
 
-**Example:**
-See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/chart-line-1_2x2.jigx).
-:::
+**Example:** See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/chart-line-1_2x2.jigx).
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fp7s1B__h9Bjo1bbuR9-k_wd-bar22.PNG" size="80" position="center" caption="Bar-chart widget 2x2" alt="Bar-chart widget 2x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fp7s1B__h9Bjo1bbuR9-k_wd-bar22.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fp7s1B\_\_h9Bjo1bbuR9-k\_wd-bar22.PNG" size="80" position="center" caption="Bar-chart widget 2x2" alt="Bar-chart widget 2x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fp7s1B\_\_h9Bjo1bbuR9-k\_wd-bar22.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-chart-bar-1\_2x2.jigx
-
+{% tabs %}
+{% tab title="chart-bar-1_2x2.jigx" %}
 ```yaml
 widgets:
   line1-2x2:
@@ -914,9 +828,9 @@ widgets:
             - data: =@ctx.datasources.static-data-2
               color: positive
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   static-data-1:
@@ -936,9 +850,9 @@ datasources:
         - 55
         - 65
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the jig.
 children:
@@ -951,28 +865,25 @@ children:
           jigId: chart-bar-1_2x2
           widgetId: line1-2x2
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Chart widget: bar-chart component (4x2)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y3CKSyi1KM2u5eeo3bFHz_wd-bar42.PNG" size="80" position="center" caption="Bar-chart widget 4x2" alt="Bar-chart widget 4x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y3CKSyi1KM2u5eeo3bFHz_wd-bar42.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
+{% columns %}
+{% column %}
+mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y3CKSyi1KM2u5eeo3bFHz\_wd-bar42.PNG" size="80" position="center" caption="Bar-chart widget 4x2" alt="Bar-chart widget 4x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y3CKSyi1KM2u5eeo3bFHz\_wd-bar42.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example a chart widget is used with the `component.bar-chart` and `component.titles` at the `top` to add a `title` and `subtitle`.
 
-**Example:**
-See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/chart-bar-1_4x2.jigx).
-:::
-::::
+**Example:** See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/chart-bar-1_4x2.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-chart-bar-1\_4x2.jigx
-
+{% tabs %}
+{% tab title="chart-bar-1_4x2.jigx" %}
 ```yaml
 widgets:
   bar1-4x2:
@@ -1001,9 +912,9 @@ widgets:
             - data: =@ctx.datasources.static-data-2
               color: color6                  
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   static-data-1:
@@ -1027,9 +938,9 @@ datasources:
         - 52
         - 60
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the jig.
 children:
@@ -1042,33 +953,29 @@ children:
           jigId: chart-bar-1_4x2
           widgetId: bar1-4x2
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Chart widget: bar-chart component (4x2)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2aOyKeqQJOsjZiJRMpoIO_barchartiphone13blueportrait.png" size="80" position="center" caption="Bar-chart widget" alt="Bar-chart widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2aOyKeqQJOsjZiJRMpoIO_barchartiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2aOyKeqQJOsjZiJRMpoIO\_barchartiphone13blueportrait.png" size="80" position="center" caption="Bar-chart widget" alt="Bar-chart widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2aOyKeqQJOsjZiJRMpoIO\_barchartiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
 
-:::VerticalSplitItem
+
+{% endcolumn %}
+
+{% column %}
 This example is configured using a bar-chart to display in the chart widget.
 
-**Examples**:
-See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/static-data/chart-widget-with-bar-chart/chart-widget-bar-chart.jigx).
-See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/dynamic-data/chart-widget-with-bar-chart/chart-widget-bar-dynamic.jigx).
+**Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/static-data/chart-widget-with-bar-chart/chart-widget-bar-chart.jigx). See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/dynamic-data/chart-widget-with-bar-chart/chart-widget-bar-dynamic.jigx).
 
-**Datasources**:
-See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx).
-See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx).
-:::
-::::
+**Datasources**: See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx). See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-bar-chart-widget (static)
-
+{% tabs %}
+{% tab title="bar-chart-widget (static)" %}
 ```yaml
 widgets:
   barChartStatic-4x2:
@@ -1104,9 +1011,9 @@ widgets:
           legend:
             isHidden: false
 ```
+{% endtab %}
 
-bar-chart-widget (dynamic)
-
+{% tab title="bar-chart-widget (dynamic)" %}
 ```yaml
 widgets:
   barChartDD-4x2:
@@ -1142,9 +1049,9 @@ widgets:
           legend:
             isHidden: false
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the static jig.
 children:
@@ -1157,33 +1064,29 @@ children:
           jigId: bar-chart-widget
           widgetId: barChartStatic-4x2
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Chart widget: pie-chart component (2x2)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9aLZHIlMWl2SxoD9rn2V9_piechartiphone13blueportrait.png" size="80" position="center" caption="Pie-chart widget 2x" alt="Pie-chart widget 2x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9aLZHIlMWl2SxoD9rn2V9_piechartiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9aLZHIlMWl2SxoD9rn2V9\_piechartiphone13blueportrait.png" size="80" position="center" caption="Pie-chart widget 2x" alt="Pie-chart widget 2x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9aLZHIlMWl2SxoD9rn2V9\_piechartiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
 
-:::VerticalSplitItem
+
+{% endcolumn %}
+
+{% column %}
 This example is configured using a pie-chart to display in the chart widget.
 
-**Examples**:
-See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/static-data/chart-widget-with-pie-chart/chart-widget-pie-chart.jigx).
-See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/dynamic-data/chart-widget-with-pie-chart/chart-widget-pie-dynamic.jigx).
+**Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/static-data/chart-widget-with-pie-chart/chart-widget-pie-chart.jigx). See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/dynamic-data/chart-widget-with-pie-chart/chart-widget-pie-dynamic.jigx).
 
-**Datasources**:
-See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/pie-chart-data.jigx).
-See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-dynamic.jigx).
-:::
-::::
+**Datasources**: See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/pie-chart-data.jigx). See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-pie-chart-widget (static)
-
+{% tabs %}
+{% tab title="pie-chart-widget (static)" %}
 ```yaml
 widgets:
   pieChartDD-2x2:
@@ -1206,9 +1109,9 @@ widgets:
                   - isEnabled: true
                 layout: pie
 ```
+{% endtab %}
 
-pie-chart-widget (dynamic)
-
+{% tab title=" pie-chart-widget (dynamic)" %}
 ```yaml
 widgets:
   pieChartStatic-2x2:
@@ -1231,9 +1134,9 @@ widgets:
                   - isEnabled: true
                 layout: pie
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the static jig.
 children:
@@ -1246,28 +1149,27 @@ children:
           jigId: pie-chart-widget
           widgetId: pieChartDD-2x2
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Chart widget: pie-chart component (2x4)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 In this example a chart widget is used with the `component.pie-chart` and `component.titles` at the `top` and `bottom` to add additional information.
 
-**Example:**
-See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x4/chart-pie-1_2x4.jigx).
-:::
+**Example:** See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x4/chart-pie-1_2x4.jigx).&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FA-eiRkpMZ-BpHy1o-b6s_wd-pie2x4.PNG" size="80" position="center" caption="Pie-chart widget 2x4" alt="Pie-chart widget 2x4" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FA-eiRkpMZ-BpHy1o-b6s_wd-pie2x4.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+{% column %}
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FA-eiRkpMZ-BpHy1o-b6s\_wd-pie2x4.PNG" size="80" position="center" caption="Pie-chart widget 2x4" alt="Pie-chart widget 2x4" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FA-eiRkpMZ-BpHy1o-b6s\_wd-pie2x4.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
 
-:::CodeblockTabs
-chart-pie-1\_2x4.jigx
 
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="chart-pie-1_2x4.jigx" %}
 ```yaml
 widgets:
   pie1-2x4: 
@@ -1303,9 +1205,9 @@ widgets:
           align: center
           icon: database-2
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   static-data:
@@ -1316,9 +1218,9 @@ datasources:
         - y: 23
           color: transparent
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the jig.
 children:
@@ -1331,28 +1233,27 @@ children:
           jigId: chart-pie-1_2x4
           widgetId: pie1-2x4
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Chart widget: pie-chart component in group widget (4x4)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-In this example a `group` widget is used to combine a `chart` and `list` widget  with `component.pie-chart` and  `component.titles` at the `top` to add additional information.
+{% columns %}
+{% column %}
+In this example a `group` widget is used to combine a `chart` and `list` widget with `component.pie-chart` and `component.titles` at the `top` to add additional information.
 
-**Example:**
-See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/combined-chart-list-1_4x2.jigx).
-:::
+**Example:** See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/combined-chart-list-1_4x2.jigx).&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zS66aUyNJyNwAzzhSZ1pP_wd-combinedpie.PNG" size="80" position="center" caption="Group widget 4x" alt signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zS66aUyNJyNwAzzhSZ1pP_wd-combinedpie.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+{% column %}
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zS66aUyNJyNwAzzhSZ1pP\_wd-combinedpie.PNG" size="80" position="center" caption="Group widget 4x" alt signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zS66aUyNJyNwAzzhSZ1pP\_wd-combinedpie.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
 
-:::CodeblockTabs
-combined-chart-list-1\_4x2.jigx
 
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="combined-chart-list-1_4x2.jigx" %}
 ```yaml
 widgets:
   chart-list1-4x2: 
@@ -1404,9 +1305,9 @@ widgets:
                   isDisabled: =(@ctx.current.item.status = 'done' ? true :false)
  
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   chart:
@@ -1441,9 +1342,9 @@ datasources:
           name: Watch Jigx Intro Video
           status: done
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the jig.
 children:
@@ -1456,6 +1357,5 @@ children:
           jigId: combined-chart-list-1_4x2
           widgetId: chart-list1-4x2
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

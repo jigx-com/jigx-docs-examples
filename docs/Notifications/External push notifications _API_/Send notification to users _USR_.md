@@ -5,7 +5,74 @@ createdAt: Fri Apr 04 2025 11:31:28 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Apr 04 2025 11:32:03 GMT+0000 (Coordinated Universal Time)
 ---
 
-:::ApiMethodV2{data="{&#x22;name&#x22;:&#x22;Send users notifications&#x22;,&#x22;method&#x22;:&#x22;POST&#x22;,&#x22;url&#x22;:&#x22;{{baseURL}}/tool/organizations/{{orgId}}/notifications&#x22;,&#x22;description&#x22;:&#x22;Target specific individual users.&#x22;,&#x22;tab&#x22;:&#x22;examples&#x22;,&#x22;examples&#x22;:{&#x22;languages&#x22;:[{&#x22;id&#x22;:&#x22;oBJWC0EncIucbSLdD614h&#x22;,&#x22;language&#x22;:&#x22;json&#x22;,&#x22;code&#x22;:&#x22;{\n  \&#x22;content\&#x22;: {\n    \&#x22;title\&#x22;: \&#x22;Approved\&#x22;,\n    \&#x22;text\&#x22;: \&#x22;Your overtime for this month has been approved\&#x22;,\n    \&#x22;screen\&#x22;:\&#x22;jig\&#x22;\n    \n  },\n  \&#x22;scope\&#x22;: \&#x22;USR\&#x22;,\n  \&#x22;emails\&#x22;: [\n    \&#x22;username@jigx.com\&#x22;\n  ]\n}&#x22;,&#x22;customLabel&#x22;:&#x22;&#x22;}],&#x22;selectedLanguageId&#x22;:&#x22;oBJWC0EncIucbSLdD614h&#x22;},&#x22;results&#x22;:{&#x22;languages&#x22;:[{&#x22;id&#x22;:&#x22;2kpGSRsfEZ7WboJj6mYqx&#x22;,&#x22;language&#x22;:&#x22;201&#x22;,&#x22;code&#x22;:&#x22;{\n    \&#x22;organizationId\&#x22;: \&#x22;{{orgId}}\&#x22;,\n    \&#x22;region\&#x22;: \&#x22;us-east-1\&#x22;,\n    \&#x22;notificationId\&#x22;: \&#x22;fdb9af93-100a-4b1b-8135-972bcfe4a5df\&#x22;,\n    \&#x22;scope\&#x22;: \&#x22;USR\&#x22;,\n    \&#x22;emails\&#x22;: [\n        \&#x22;username@jigx.com\&#x22;\n    ],\n    \&#x22;state\&#x22;: \&#x22;QUEUED\&#x22;,\n    \&#x22;startAt\&#x22;: \&#x22;2025-04-04T08:18:54.435Z\&#x22;,\n    \&#x22;content\&#x22;: {\n        \&#x22;text\&#x22;: \&#x22;Your overtime for this month has been approved\&#x22;,\n        \&#x22;title\&#x22;: \&#x22;Approved\&#x22;,\n        \&#x22;screen\&#x22;: \&#x22;jig\&#x22;,\n        \&#x22;inputs\&#x22;: {}\n    },\n    \&#x22;createdAt\&#x22;: \&#x22;2025-04-04T08:18:54.435Z\&#x22;,\n    \&#x22;createdBy\&#x22;: \&#x22;{{userId}}\&#x22;,\n    \&#x22;updatedAt\&#x22;: \&#x22;2025-04-04T08:18:54.435Z\&#x22;,\n    \&#x22;updatedBy\&#x22;: \&#x22;{{userid}}\&#x22;&#x22;,&#x22;customLabel&#x22;:&#x22;&#x22;},{&#x22;id&#x22;:&#x22;MNf6JbEDjDtJaGWmlhYMB&#x22;,&#x22;language&#x22;:&#x22;401&#x22;,&#x22;code&#x22;:&#x22;{\n    \&#x22;message\&#x22;: \&#x22;Unauthorized\&#x22;\n}&#x22;,&#x22;customLabel&#x22;:&#x22;&#x22;}],&#x22;selectedLanguageId&#x22;:&#x22;2kpGSRsfEZ7WboJj6mYqx&#x22;},&#x22;request&#x22;:{&#x22;pathParameters&#x22;:[],&#x22;queryParameters&#x22;:[],&#x22;headerParameters&#x22;:[{&#x22;name&#x22;:&#x22;Authorization&#x22;,&#x22;kind&#x22;:&#x22;required&#x22;,&#x22;type&#x22;:&#x22;string&#x22;,&#x22;description&#x22;:&#x22;Bearer Token - format:\nBEARER XXXXXXXXXXXXXX&#x22;,&#x22;&#x22;:&#x22;Bearer Token - format:\nBEARER XXXXXXXXXXXXXX&#x22;}],&#x22;bodyDataParameters&#x22;:[{&#x22;name&#x22;:&#x22;JSON body&#x22;,&#x22;kind&#x22;:&#x22;required&#x22;,&#x22;type&#x22;:&#x22;string&#x22;,&#x22;description&#x22;:&#x22;Configure the following properties in the JSON body:\n- title\n- text\n- scope: \&#x22;USR\&#x22; \n- emails: list users' email addresses using comma-delimited format for multiple addresses&#x22;,&#x22;&#x22;:&#x22;Configure the following properties in the JSON body:\n- title\n- text\n- scope: \&#x22;USR\&#x22; \n- emails: list users' email addresses using comma-delimited format for multiple addresses&#x22;}],&#x22;formDataParameters&#x22;:[]},&#x22;currentNewParameter&#x22;:{&#x22;label&#x22;:&#x22;Body Parameter&#x22;,&#x22;value&#x22;:&#x22;bodyDataParameters&#x22;},&#x22;hasTryItOut&#x22;:false,&#x22;response&#x22;:[{&#x22;name&#x22;:&#x22;201 Created&#x22;,&#x22;kind&#x22;:&#x22;optional&#x22;,&#x22;type&#x22;:&#x22;string&#x22;,&#x22;description&#x22;:&#x22;Notification  state = \&#x22;QUEUED\&#x22;,\nStartAt gives the time the notification is sent.\nContent- the message that is sent to the solution users\ncreatedAt,\ncreatedBy: {{userid}}\nupdatedAt\nupdatedBy: {{userid}}&#x22;,&#x22;children&#x22;:[]}]}"}
+# Send notification to users (USR)
 
-:::
+## Send notification to users (USR)
 
+<mark style="color:green;">`POST`</mark> `{{baseURL}}/tool/organizations/{{orgId}}/notifications`
+
+Target specific users to send a notification to.
+
+**Headers**
+
+<table><thead><tr><th width="302.91796875">Name</th><th>Value</th></tr></thead><tbody><tr><td>Authorization</td><td><p><code>Bearer &#x3C;token></code></p><p>Bearer Token - format:<br>BEARER XXXXXXXXXXXXXX</p></td></tr></tbody></table>
+
+**Body**
+
+Configure the following properties in the JSON body:
+
+<table><thead><tr><th width="163.51953125">Name</th><th width="136.359375">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td>string</td><td>Title of the notification.</td></tr><tr><td><code>text</code></td><td>string</td><td>Notification message.</td></tr><tr><td><code>scope</code></td><td>string</td><td>"USR" for individual users.</td></tr><tr><td><code>emails</code> </td><td>string</td><td>List users' email addresses using a comma-delimited format for multiple addresses.</td></tr></tbody></table>
+
+{% code title="JSON body" %}
+```json
+{
+  "content": {
+    "title": "Approved",
+    "text": "Your overtime for this month has been approved",
+    "screen":"jig"
+    
+  },
+  "scope": "USR",
+  "emails": [
+    "username@jigx.com"
+  ]
+}
+```
+{% endcode %}
+
+**Response**
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+    "organizationId": "{{orgId}}",
+    "region": "us-east-1",
+    "notificationId": "fdb9af93-100a-4b1b-8135-972bcfe4a5df",
+    "scope": "USR",
+    "emails": [
+        "username@jigx.com"
+    ],
+    "state": "QUEUED",
+    "startAt": "2025-04-04T08:18:54.435Z",
+    "content": {
+        "text": "Your overtime for this month has been approved",
+        "title": "Approved",
+        "screen": "jig",
+        "inputs": {}
+    },
+    "createdAt": "2025-04-04T08:18:54.435Z",
+    "createdBy": "{{userId}}",
+    "updatedAt": "2025-04-04T08:18:54.435Z",
+    "updatedBy": "{{userid}}"
+```
+{% endtab %}
+
+{% tab title="400" %}
+```json
+{
+    "message": "Unauthorized"
+}
+```
+{% endtab %}
+{% endtabs %}

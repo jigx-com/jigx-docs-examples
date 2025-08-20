@@ -4,56 +4,29 @@ You can use [JSONata Functional programming](https://docs.jsonata.org/programmin
 
 ## Configuration
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="209">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Result</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Expression</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Determine if the value is bigger or smaller than a certain number</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>"=@ctx.datasources.mydata.number2 > 10 ? 'Number is bigger':'Number is lower'"</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Variables</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>="&#x3C;div style='font-size: 40px'>Welcome on board &#x3C;b>" &#x26; @ctx.datasources.html.name &#x26; "&#x3C;/b> - " &#x26; @ctx.datasources.html.email &#x26; "&#x3C;/div></code></p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="251.87109375">Result</th><th>Expression</th></tr></thead><tbody><tr><td>Determine if the value is bigger or smaller than a certain number</td><td><code>"=@ctx.datasources.mydata.number2 > 10 ? 'Number is bigger':'Number is lower'"</code></td></tr><tr><td>Variables</td><td><code>="&#x3C;div style='font-size: 40px'>Welcome on board &#x3C;b>" &#x26; @ctx.datasources.html.name &#x26; "&#x3C;/b> - " &#x26; @ctx.datasources.html.email &#x26; "&#x3C;/div></code></td></tr></tbody></table>
 
-:::hint{type="warning"}
+{% hint style="warning" %}
 Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.
-:::
+{% endhint %}
 
 ## Examples and code snippets
 
 ### Compare values
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Functional expressions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0uqaFEwFcsgWqmsxHy1uN_mk6aixjb8o06to7dpzsifimg0979iphone13blueportrait.png "Functional expressions")
-:::
+{% columns %}
+{% column %}
+&#x20;![Functional expressions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0uqaFEwFcsgWqmsxHy1uN_mk6aixjb8o06to7dpzsifimg0979iphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example we determine if the value for `entity.field` is bigger or smaller that 10.
 
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx)
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-expression.jigx
-
+{% code title=" expression.jigx" %}
 ```yaml
 datasources:
   mydata: 
@@ -79,25 +52,23 @@ children:
             value: "=@ctx.datasources.mydata.number2 > 10 
                     ? 'Number is bigger':'Number is lower'"
 ```
-:::
+{% endcode %}
 
 ### Variables in content
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Content](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VAw06TIFPwJhNmAezMiwA_contentiphone13blueportrait.png "Content")
-:::
+{% columns %}
+{% column %}
+&#x20;![Content](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VAw06TIFPwJhNmAezMiwA_contentiphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows how to write variables in HTML content.
 
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/variablesInContent.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-variablesInContent.jigx
-
+{% code title="variablesInContent.jigx" %}
 ```yaml
 source:
   documentType: HTML
@@ -111,25 +82,23 @@ source:
     <a href='https://www.qr-code-generator.com' border='0' style='cursor:default'  rel='nofollow'></a>
     <br>"  & @ctx.datasources.html.itemId
 ```
-:::
+{% endcode %}
 
 ### Multiple select in a dropdown
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-![Multiple selector expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9ObXqaGM9y4_deRVoVdX_multipleselectiphone13blueportrait.png "Multiple selector expression")
-:::
+{% columns %}
+{% column %}
+&#x20;![Multiple selector expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9ObXqaGM9y4_deRVoVdX_multipleselectiphone13blueportrait.png)&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, we use the notation in which we select the instanceId of our component from the components, and extract the selected from the state of the component, then choose the required value. For example id, name,...
 
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/multipleSelect.jigx).
-:::
-::::
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/multipleSelect.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-multipleSelect.jigx
-
+{% code title=" multipleSelect.jigx" %}
 ```yaml
 children:
   - type: component.form
@@ -152,5 +121,4 @@ children:
                   text: =$substring(@ctx.current.item.firstname, 0, 1) & $substring(@ctx.current.item.lastname, 0, 1)
                   uri: =@ctx.current.item.img
 ```
-:::
-
+{% endcode %}

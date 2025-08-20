@@ -4,33 +4,29 @@ Use JSONata aggregation to return the results of values to find a maximum, minim
 
 ## Configuration
 
-| **Result** | **Expression**                         |
-| ---------- | -------------------------------------- |
-| Maximum    | `=$max(@ctx.datasources.mydata.array)` |
-| Minimum    | `=$min(@ctx.datasources.mydata.array)` |
-| Sum        | `=$sum(@ctx.datasources.mydata.array)` |
+<table><thead><tr><th width="131.09765625">Result</th><th>Expression</th></tr></thead><tbody><tr><td>Maximum</td><td><code>=$max(@ctx.datasources.mydata.array)</code></td></tr><tr><td>Minimum</td><td><code>=$min(@ctx.datasources.mydata.array)</code></td></tr><tr><td>Sum</td><td><code>=$sum(@ctx.datasources.mydata.array)</code></td></tr></tbody></table>
 
-:::hint{type="warning"}
-Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.
-:::
+{% hint style="warning" %}
+&#x20;Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.
+{% endhint %}
 
 ## Examples and code snippets
 
-::::VerticalSplit{layout="left"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X11pn0BVv4LsvZydrxLVL_img6602iphone13blueportrait.png" size="78" position="center" caption="Aggregated expression" alt="Aggregated expression" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X11pn0BVv4LsvZydrxLVL_img6602iphone13blueportrait.png"}
-:::
+{% columns %}
+{% column %}
+::::VerticalSplit{layout="left"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X11pn0BVv4LsvZydrxLVL\_img6602iphone13blueportrait.png" size="78" position="center" caption="Aggregated expression" alt="Aggregated expression" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X11pn0BVv4LsvZydrxLVL\_img6602iphone13blueportrait.png"} :::
 
-:::VerticalSplitItem
+
+{% endcolumn %}
+
+{% column %}
 In this example static data is agregated in a `component.enity` to show the result in the entity field.
 
 See the full example code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-expression.jigx
-
+{% code title="expression.jigx" %}
 ```yaml
 datasources:
   mydata: 
@@ -63,5 +59,4 @@ children:
             label: Sum
             value: =$sum(@ctx.datasources.mydata.array)
 ```
-:::
-
+{% endcode %}

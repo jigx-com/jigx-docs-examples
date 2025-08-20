@@ -1,35 +1,14 @@
 # Localization (Translation)
 
-Solutions can easily be translated into any language by using the `Text Locale` property and creating a translation file with the translated text in Jigx Builder. On the device, use the *Profile>Settings>Language* option and select *Device (Respects device settings)*. To understand how to configure localization in Jigx see [Localization](https://docs.jigx.com/localization).
+Solutions can easily be translated into any language by using the `Text Locale` property and creating a translation file with the translated text in Jigx Builder. On the device, use the _Profile>Settings>Language_ option and select _Device (Respects device settings)_. To understand how to configure localization in Jigx see [Localization](https://docs.jigx.com/localization).
 
-:::hint{type="info"}
-Adding dynamic values in localized jigs use **ICU message** definitions.
-Try it in the [Online ICU Message Editor](https://format-message.github.io/icu-message-format-for-translators/editor.html) or see the [ICU format messaging](https://unicode-org.github.io/icu/userguide/format_parse/messages/) documentation.
-:::
+{% hint style="info" %}
+Adding dynamic values in localized jigs use **ICU message** definitions. Try it in the [Online ICU Message Editor](https://format-message.github.io/icu-message-format-for-translators/editor.html) or see the [ICU format messaging](https://unicode-org.github.io/icu/userguide/format_parse/messages/) documentation.
+{% endhint %}
 
 ## Configuration options
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="138">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>text Locale</code></p>
-    </td>
-    <td selected="false" align="left">
-      <ul>
-      <li><code>id</code> - provide a unique identifier for the property to be translated. </li>
-      <li><code>values</code> - create context variables with values to use in the translation file. This is useful when creating dynamic content. </li>
-      <li><code>defaultMessage</code> - If no translation is found for the active device's language, it will either fallback to the specified <code>defaultMessage</code> or, if one is not specified, to English.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="156.765625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>text Locale</code></td><td><ul><li><code>id</code> - provide a unique identifier for the property to be translated.</li><li><code>values</code> - create context variables with values to use in the translation file. This is useful when creating dynamic content.</li><li><code>defaultMessage</code> - If no translation is found for the active device's language, it will either fallback to the specified <code>defaultMessage</code> or, if one is not specified, to English.</li></ul></td></tr></tbody></table>
 
 ## Examples and code snippets
 
@@ -37,15 +16,12 @@ Try it in the [Online ICU Message Editor](https://format-message.github.io/icu-m
 
 In this example, the new employee form is translated into German, French, and Czech. To see the form in each of the languages change your device language setting to one of the configured languages.
 
-**Examples**:
-See the jig example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-localization/localized-form-static.jigx).
-See the translation file examples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/translations).
+**Examples**: See the jig example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-localization/localized-form-static.jigx). See the translation file examples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/translations).
 
-![Chez, German, English](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2I1zBOgZCHFr3k64gXtrb_trans-form-static.PNG "Chez, German, English")
+![Chez, German, English](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2I1zBOgZCHFr3k64gXtrb_trans-form-static.PNG)
 
-:::CodeblockTabs
-localized-form-static.jigx
-
+{% tabs %}
+{% tab title="localized-form-static.jigx" %}
 ```yaml
 title:
   id: title
@@ -141,9 +117,9 @@ actions:
           onSuccess:
             type: action.go-back
 ```
+{% endtab %}
 
-de.jigx
-
+{% tab title="de.jigx" %}
 ```yaml
 title: Formular für neue Mitarbeiter
 description: Erfassen Sie die Details des neuen Mitarbeiters
@@ -156,9 +132,9 @@ signature: Zeichen
 email: E-Mail-Adresse
 create: Mitarbeiter anlegen
 ```
+{% endtab %}
 
-fr.jigx
-
+{% tab title="fr.jigx" %}
 ```yaml
 title: Formulaire de nouvel employé
 description: Capturez les détails du nouvel employé
@@ -171,9 +147,9 @@ signature: Signe
 email: Adresse e-mail
 create: Créer un employé
 ```
+{% endtab %}
 
-cs.jigx
-
+{% tab title="cs.jigx" %}
 ```yaml
 title: Nový zaměstnanecký formulář
 description: Zachyťte podrobnosti o novém zaměstnanci
@@ -186,21 +162,19 @@ signature: Podepsat
 email: Emailová adresa
 create: Vytvořit zaměstnance
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Jig translated into German with dynamic values
 
 In this example, a jigwith today's activites is translated into German. The translation is configured dynamically agains the `Text Locale` values. To see the form in each of the languages change your device language setting to one of the configured languages.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoK-35uG5y6FomN9LyI0s_trans-dynamic.PNG" size="82" position="center" caption="One jig in two languages" alt="One jig in two languages" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoK-35uG5y6FomN9LyI0s_trans-dynamic.PNG" width="800" height="787" darkWidth="800" darkHeight="787"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoK-35uG5y6FomN9LyI0s\_trans-dynamic.PNG" size="82" position="center" caption="One jig in two languages" alt="One jig in two languages" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoK-35uG5y6FomN9LyI0s\_trans-dynamic.PNG" width="800" height="787" darkWidth="800" darkHeight="787"}
 
-**Examples**:
-See the jig example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-localization/localized-activities-dynamic.jigx).
-See the translation file examples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/translations).
+**Examples**: See the jig example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-localization/localized-activities-dynamic.jigx). See the translation file examples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/translations).
 
-:::CodeblockTabs
-localized-activities-dynamic.jigx
-
+{% tabs %}
+{% tab title="localized-activities-dynamic.jigx" %}
 ```yaml
 title:
   id: greeting
@@ -270,22 +244,22 @@ children:
             element: icon
             icon: =@ctx.current.item.icon
 ```
+{% endtab %}
 
-de.jigx
-
+{% tab title="de.jigx" %}
 ```yaml
 greeting: "{time, select, am {Guten Morgen} pm {Guten Nachmittag} other {Hallo}} {name}"
 activities: Die heutigen Aktivitäten
 sport: "{name, select, Swimming {Baden} Tennis {Tennis} other {Trainieren}}"
 venues: "{location, select, Pool {Schwimmbad} Court {Tennisplatz} other {Fitnessstudio}}"
 ```
+{% endtab %}
 
-en.jigx
-
+{% tab title="en.jigx" %}
 ```yaml
 greeting: "{time, select, am {Good Morning} pm {Good afternoon} other {Hello}} {name}"
 sport: "{name, select, Swimming {Swimming} Tennis {Tennis} other {Exercising}}"
 venues: "{location, select, Pool {Pool} Court {Court} other {Gym}}"
 ```
-:::
-
+{% endtab %}
+{% endtabs %}

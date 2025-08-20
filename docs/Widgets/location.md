@@ -1,107 +1,23 @@
 # location
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-The location widget displays a map or location on its surface. Configure it within a jig under the `widgets` property, then reference its name (`widgetId`) and define its `size` in a [grid-item](./../Components/grid/grid-item.md) component.
-:::
+{% columns %}
+{% column %}
+The location widget displays a map or location on its surface. Configure it within a jig under the `widgets` property, then reference its name (`widgetId`) and define its `size` in a [grid-item](../Components/grid/grid-item.md) component.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-IHfRNYw2yKgG5R2FL99Mv-20240808-083715.PNG" size="78" position="center" caption="Location widgets" alt="Location widgets" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-IHfRNYw2yKgG5R2FL99Mv-20240808-083715.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
-:::
-::::
+{% column %}
+:::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-IHfRNYw2yKgG5R2FL99Mv-20240808-083715.PNG" size="78" position="center" caption="Location widgets" alt="Location widgets" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-IHfRNYw2yKgG5R2FL99Mv-20240808-083715.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} ::: ::::
+
+
+{% endcolumn %}
+{% endcolumns %}
 
 ## Configuration options
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="263">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>address</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The actual address of the location. Valid formats are: </p>
-      <ul>
-      <li><strong>address string - city, street</strong>, e.g.
-      <code>address: 20 W 34th St., New York, NY 10001, USA</code></li>
-      <li>In an <strong>expression calling a datasource</strong> <code>=@ctx.datasources.address.street &#x26; ',' &#x26; @ctx.datasources.address.city &#x26; ',' &#x26; @ctx.datasources.address.country</code></li>
-      <li><strong>latitude and longitude</strong>, e.g.
-      <code>address: 40.759412, -73.912306</code></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>is AnimationDisabled</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>true</code> or <code>false</code> to determine if map animation is disabled.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isFollowUserLocationEnabled</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>When enabled, the <code>viewPoint</code> will be centred on the user’s real-time location.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>markers</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Multiple markers can be configured to display on the map. There is a 10k limit for markers showing on the map. See <em>multi-markers</em> code example below.
-      You can use an expression to provide the latitude and longitude points from a datasource. See <em>multi-datasource</em> code example below.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>marker-item</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>anchorTo:</code> - Anchor the marker to a specific point, either <code>bottom-center</code> or <code>center</code>
-      <code>radius</code> - Display a circle around the marker. In the radius you can configure the <code>color</code>, <code>unit</code> (Default is kilometres)
-      <code>icon</code> - Choose an icon for the markers. You can style the icon <code>color</code>, <code>emphasis</code>, <code>type</code>, <code>shape</code> and <code>size</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>paths</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map.
-      See <em>path-multi-points</em> code example below.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>viewPoint</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation.
-      Options include:
-      <code>centerPosition:</code> <code>middle</code> or <code>top</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>zoomLevel</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="256.43359375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>address</code></td><td><p>The actual address of the location. Valid formats are:</p><ul><li><strong>address string - city, street</strong>, e.g. <code>address: 20 W 34th St., New York, NY 10001, USA</code></li><li>In an <strong>expression calling a datasource</strong> <code>=@ctx.datasources.address.street &#x26; ',' &#x26; @ctx.datasources.address.city &#x26; ',' &#x26; @ctx.datasources.address.country</code></li><li><strong>latitude and longitude</strong>, e.g. <code>address: 40.759412, -73.912306</code></li></ul></td></tr><tr><td><code>is AnimationDisabled</code></td><td><code>true</code> or <code>false</code> to determine if map animation is disabled.</td></tr><tr><td><code>isFollowUserLocationEnabled</code></td><td>When enabled, the <code>viewPoint</code> will be centred on the user’s real-time location.</td></tr><tr><td><code>markers</code></td><td>Multiple markers can be configured to display on the map. There is a 10k limit for markers showing on the map. See <em>multi-markers</em> code example below. You can use an expression to provide the latitude and longitude points from a datasource. See <em>multi-datasource</em> code example below.</td></tr><tr><td><code>marker-item</code></td><td><code>anchorTo:</code> - Anchor the marker to a specific point, either <code>bottom-center</code> or <code>center</code> <code>radius</code> - Display a circle around the marker. In the radius you can configure the <code>color</code>, <code>unit</code> (Default is kilometres) <code>icon</code> - Choose an icon for the markers. You can style the icon <code>color</code>, <code>emphasis</code>, <code>type</code>, <code>shape</code> and <code>size</code>.</td></tr><tr><td><code>paths</code></td><td>Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map. See <em>path-multi-points</em> code example below.</td></tr><tr><td><code>viewPoint</code></td><td>Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation. Options include: <code>centerPosition:</code> <code>middle</code> or <code>top</code></td></tr><tr><td><code>zoomLevel</code></td><td>Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.</td></tr></tbody></table>
 
-:::CodeblockTabs
-multiple-markers
-
+{% tabs %}
+{% tab title="multiple-markers" %}
 ```yaml
 - type: component.location
     options:
@@ -114,17 +30,17 @@ multiple-markers
         - latitude: 40.76479429122513
           longitude: -73.97429291692742 
 ```
+{% endtab %}
 
-markers-datasource
-
+{% tab title="markers-datasource" %}
 ```yaml
 markers:
    data: |
       =@ctx.datasources.jobs.{"lng": $number($.lng), "lat": $number($.lat)}
 ```
+{% endtab %}
 
-path-multi-points
-
+{% tab title="path-multi-points" %}
 ```yaml
  - type: component.location
     options:
@@ -136,80 +52,38 @@ path-multi-points
           longitude: -73.950694
       address: =@ctx.datasources.location[0].address
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>bottom</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The  component will be added to the bottom of the widget.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>footer</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add text to the footer of the widget.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>footerAlign</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Align the footer text to <code>left</code>, <code>right</code>, <code>center</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>top</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The  component will be added to the top of the widget.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="162.90234375">Other options</th><th></th></tr></thead><tbody><tr><td><code>bottom</code></td><td>The component will be added to the bottom of the widget.</td></tr><tr><td><code>footer</code></td><td>Add text to the footer of the widget.</td></tr><tr><td><code>footerAlign</code></td><td>Align the footer text to <code>left</code>, <code>right</code>, <code>center</code>.</td></tr><tr><td><code>top</code></td><td>The component will be added to the top of the widget.</td></tr></tbody></table>
 
 ## Considerations
 
-- Widgets are displayed on jigs in the [grid](./../Components/grid.md) component or [jig.grid](<./../Jig Types/jig_grid.md>) by referencing the `widgetId` (Widget Name).
-- The location widget can only be used on [grid-items](./../Components/grid/grid-item.md) with widget sizes of 2x2, 2x4, 4x2, 4x4.
+* Widgets are displayed on jigs in the [grid](../Components/grid.md) component or [jig.grid](<../Jig Types/jig_grid.md>) by referencing the `widgetId` (Widget Name).
+* The location widget can only be used on [grid-items](../Components/grid/grid-item.md) with widget sizes of 2x2, 2x4, 4x2, 4x4.
 
 ## Examples and code snippets
 
-:::::ExpandableHeading
 ### location widget using address (4x2)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ygetPIUnrxb2slx34WxQr-20250221-115406.png" size="80" position="center" caption="Location widget with address" alt="Location widget with address" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ygetPIUnrxb2slx34WxQr-20250221-115406.png" width="800" height="1611" darkWidth="800" darkHeight="1611"}
-:::
+{% columns %}
+{% column %}
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ygetPIUnrxb2slx34WxQr-20250221-115406.png" size="80" position="center" caption="Location widget with address" alt="Location widget with address" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ygetPIUnrxb2slx34WxQr-20250221-115406.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} :::
 
-:::VerticalSplitItem
+
+{% endcolumn %}
+
+{% column %}
 This example demonstrates how to configure a `widget` within a `default` jig and display it on a `jig.grid` using a `4x2` layout. The widget focuses on showcasing a specific location based on the provided `address`.
 
-**Examples**:
-See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/static-data/location-address/location-widget-address.jigx).
-See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/dynamic-data/location-address/location-widget-address-dd.jigx).
+**Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/static-data/location-address/location-widget-address.jigx). See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/dynamic-data/location-address/location-widget-address-dd.jigx).
 
-**Datasources**:
-See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/location.jigx).
-:::
-::::
+**Datasources**: See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/location.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-location-widget (static)
-
+{% tabs %}
+{% tab title="location-widget (static)" %}
 ```yaml
 widgets:
   # Provide name for the widget that will be used as the widgetId.
@@ -237,9 +111,9 @@ widgets:
                 # Specify the type of icon.
                 icon: pin-1-map 
 ```
+{% endtab %}
 
-location-widget (dynamic)
-
+{% tab title="location-widget (dynamic)" %}
 ```yaml
 widgets:
   # Provide name for the widget that will be used as the widgetId.
@@ -269,9 +143,9 @@ widgets:
                 # Specify the type of icon.
                 icon: pin-1-map  
 ```
+{% endtab %}
 
-location-grid.jigx
-
+{% tab title="location-grid.jigx" %}
 ```yaml
 title: Location widgets
 type: jig.grid
@@ -290,9 +164,9 @@ children:
           # Specify the widgetId = Widget Name
           widgetId: widgetAddress
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   address: 
@@ -308,9 +182,9 @@ datasources:
           city: New York
           country: US
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the static jig.
 children:
@@ -323,29 +197,29 @@ children:
           jigId: location-widget
           widgetId: widgetAddress
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### location widget with multiple markers (4x2)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iplr68BNQY9Z3L1UuqbYY-20250221-120651.png" size="78" position="center" caption="Location widget with mutiple markers" alt="Location widget with mutiple markers" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iplr68BNQY9Z3L1UuqbYY-20250221-120651.png" width="800" height="1611" darkWidth="800" darkHeight="1611"}
-:::
+{% columns %}
+{% column %}
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iplr68BNQY9Z3L1UuqbYY-20250221-120651.png" size="78" position="center" caption="Location widget with mutiple markers" alt="Location widget with mutiple markers" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iplr68BNQY9Z3L1UuqbYY-20250221-120651.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} :::
 
-:::VerticalSplitItem
+
+{% endcolumn %}
+
+{% column %}
 This example demonstrates how to configure a `widget` within a `default` jig and display it on a `jig.grid` using a `4x2` layout. The widget focuses on showcasing multiple `markers` based on the provided coordinates.
 
 **Examples:**
 
-See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/static-data/location-multiple-markers/location-widget-multiple-markers.jigx).
-:::
-::::
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/static-data/location-multiple-markers/location-widget-multiple-markers.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-multiple-markers (static)
-
+{% tabs %}
+{% tab title="multiple-markers (static)" %}
 ```yaml
 widgets:
   # Provide name for the widget that will be used as the widgetId.
@@ -365,9 +239,9 @@ widgets:
       markers:
         data: =@ctx.datasources.points
 ```
+{% endtab %}
 
-location-grid.jigx
-
+{% tab title="location-grid.jigx" %}
 ```yaml
 title: Location widgets
 type: jig.grid
@@ -386,9 +260,9 @@ children:
           # Specify the widgetId = Widget Name.
           widgetId: widgetMarkers
 ```
+{% endtab %}
 
-datasource&#x20;
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   # First datasource for the adress.  
@@ -416,9 +290,9 @@ datasources:
         - latitude: 40.803495
           longitude: -73.950694 
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the static jig.
 children:
@@ -431,28 +305,25 @@ children:
           jigId: multiple-markers 
           widgetId: widgetMarkers
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### location widget displaying path (4x4)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kUnaPExBNn5pQjxfochEc-20250221-122931.png" size="80" position="center" caption="Location widget with path" alt="Location widget with path" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kUnaPExBNn5pQjxfochEc-20250221-122931.png" width="800" height="1611" darkWidth="800" darkHeight="1611"}
-:::
+{% columns %}
+{% column %}
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kUnaPExBNn5pQjxfochEc-20250221-122931.png" size="80" position="center" caption="Location widget with path" alt="Location widget with path" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kUnaPExBNn5pQjxfochEc-20250221-122931.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} :::
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example demonstrates how to configure a `widget` within a `default` jig and display it on a `jig.grid` using a `4x4` layout. The widget focuses on showcasing `paths` based on provided  points that use coordinates.
+{% column %}
+This example demonstrates how to configure a `widget` within a `default` jig and display it on a `jig.grid` using a `4x4` layout. The widget focuses on showcasing `paths` based on provided points that use coordinates.
 
-**Examples**:
-See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/static-data/location-path/location-widget-path.jigx).
-:::
-::::
+**Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/static-data/location-path/location-widget-path.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-location-widget-path (static)
-
+{% tabs %}
+{% tab title=" location-widget-path (static)" %}
 ```yaml
 widgets:
   # Provide name for the widget that will be used as the widgetId.
@@ -484,9 +355,9 @@ widgets:
       paths:
         data: =@ctx.datasources.points 
 ```
+{% endtab %}
 
-location-grid.jigx
-
+{% tab title="location-grid.jigx" %}
 ```yaml
 title: Location widgets
 type: jig.grid
@@ -505,9 +376,9 @@ children:
           # Specify the widgetId = Widget Name.
           widgetId: widgetPath
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   points:
@@ -521,9 +392,9 @@ datasources:
         - latitude: 40.803495
           longitude: -73.950694  
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the static jig.
 children:
@@ -536,25 +407,27 @@ children:
           jigId: location-widget-path
           widgetId: widgetPath
 ```
-:::
-:::::
 
-:::::ExpandableHeading
-### location widget with longitude and latitude (2x4)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example demonstrates how to configure a `widget` within a `default` jig and display it on a `jig.grid` using a `2x4` layout with `longitude` and `latitude` coordinates. A `component.title` is configured to display the name and address of the location.
-:::
+{% endtab %}
+{% endtabs %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VBTTtn5XYrJZxvt2nsjtR-20250221-122800.png" size="80" position="center" caption="Location widget with coordinates" alt="Location widget with coordinates" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VBTTtn5XYrJZxvt2nsjtR-20250221-122800.png" width="800" height="1611" darkWidth="800" darkHeight="1611"}
-:::
-::::
+### location widget with longitude and latitude (2x4)\\/col
 
-:::CodeblockTabs
-location-lat-long\_2x4.jigx
+{% columns %}
+{% column %}
+This example demonstrates how to configure a `widget` within a `default` jig and display it on a `jig.grid` using a `2x4` layout with `longitude` and `latitude` coordinates. A `component.title` is configured to display the name and address of the location.&#x20;
+{% endcolumn %}
 
+{% column %}
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VBTTtn5XYrJZxvt2nsjtR-20250221-122800.png" size="80" position="center" caption="Location widget with coordinates" alt="Location widget with coordinates" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VBTTtn5XYrJZxvt2nsjtR-20250221-122800.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} ::: ::::
+
+
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="location-lat-long_2x4.jigx" %}
 ```yaml
 widgets:
   # Provide name for the widget that will be used as the widgetId.
@@ -590,9 +463,9 @@ widgets:
                 # Specify the icon to be used as the marker.
                 icon: =@ctx.datasources.appointments[2].icon 
 ```
+{% endtab %}
 
-location-grid.jigx
-
+{% tab title="location-grid.jigx" %}
 ```yaml
 title: Location widgets
 type: jig.grid
@@ -611,9 +484,9 @@ children:
           # Specify the widgetId = Widget Name.
           widgetId: widgetLatitude
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   appointments:
@@ -639,9 +512,9 @@ datasources:
           address: 131 W 55th St, New York
           icon: end-marker  
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the jig.
 children:
@@ -654,6 +527,5 @@ children:
           jigId: location-lat-long_2x4
           widgetId: widgetLatitude
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

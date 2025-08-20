@@ -1,131 +1,17 @@
 # Date & Time
 
-Date and time expressions use the :Link[JSONata Date/Time functions]{href="https://docs.jsonata.org/date-time-functions" newTab="true" hasDisabledNofollow="false"} to return various formats of date/time, date, or time. These expressions are used to get the current timestamp in ISO 8601 formatted string, use an expression over the timestamp to convert the timestamp into a specific format.
+Date and time expressions use the [JSONata Date/Time functions](https://docs.jsonata.org/date-time-functions) to return various formats of date/time, date, or time. These expressions are used to get the current timestamp in ISO 8601 formatted string, use an expression over the timestamp to convert the timestamp into a specific format.
 
 ## Configuration
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="313">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Result</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Expression</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Current timestamp as ISO 8601</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=$now()</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Current datetime in milliseconds</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=$toMillis($now())</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Current date [M]/[D]/[Y]</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=$fromMillis($toMillis($now()), '[M]/[D]/[Y]')</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Current date [M01]/[D01]/[Y0001]</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=$fromMillis($toMillis($now()), '[M01]/[D01]/[Y0001]')</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Current datetime '[M01]/[D01]/[Y0001] [H01]:[m01]:[s01]'</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=$fromMillis($toMillis($now()), '[M01]/[D01]/[Y0001] [H01]:[m01]:[s01]')</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Current date [MI]/[DI]/[YI]</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=$fromMillis($toMillis($now()), '[MI]/[DI]/[YI]')</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Current date [D1o] [MNn] [Y]</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=$fromMillis($toMillis($now()), '[D1o] [MNn] [Y]')</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Current day</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=$fromMillis($toMillis($now()), '[FNn]')</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Current time</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=$fromMillis($toMillis($now()), '[H01]:[m01]:[s01]')</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Current time am/pm</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=$fromMillis($toMillis($now()), '[h#1]:[m01][P]')</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Current time '[H01]:[m01]:[s01] [z]', '-0500'</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=$fromMillis($toMillis($now()), '[H01]:[m01]:[s01] [z]', '-0500')</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Convert UTC to milliseconds</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=$toMillis()</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Convert millisecond to UTC</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>=$fromMillis()</code></p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="256.296875">Result</th><th>Expression</th></tr></thead><tbody><tr><td>Current timestamp as ISO 8601</td><td><code>=$now()</code></td></tr><tr><td>Current datetime in milliseconds</td><td><code>=$toMillis($now())</code></td></tr><tr><td>Current date [M]/[D]/[Y]</td><td><code>=$fromMillis($toMillis($now()), '[M]/[D]/[Y]')</code></td></tr><tr><td>Current date [M01]/[D01]/[Y0001]</td><td><code>=$fromMillis($toMillis($now()), '[M01]/[D01]/[Y0001]')</code></td></tr><tr><td>Current datetime '[M01]/[D01]/[Y0001] [H01]:[m01]:[s01]'</td><td><code>=$fromMillis($toMillis($now()), '[M01]/[D01]/[Y0001] [H01]:[m01]:[s01]')</code></td></tr><tr><td>Current date [MI]/[DI]/[YI]</td><td><code>=$fromMillis($toMillis($now()), '[MI]/[DI]/[YI]')</code></td></tr><tr><td>Current date [D1o] [MNn] [Y]</td><td><code>=$fromMillis($toMillis($now()), '[D1o] [MNn] [Y]')</code></td></tr><tr><td>Current day</td><td><code>=$fromMillis($toMillis($now()), '[FNn]')</code></td></tr><tr><td>Current time</td><td><code>=$fromMillis($toMillis($now()), '[H01]:[m01]:[s01]')</code></td></tr><tr><td>Current time am/pm</td><td><code>=$fromMillis($toMillis($now()), '[h#1]:[m01][P]')</code></td></tr><tr><td>Current time '[H01]:[m01]:[s01] [z]', '-0500'</td><td><code>=$fromMillis($toMillis($now()), '[H01]:[m01]:[s01] [z]', '-0500')</code></td></tr><tr><td>Convert UTC to milliseconds</td><td><code>=$toMillis()</code></td></tr><tr><td>Convert millisecond to UTC</td><td><code>=$fromMillis()</code></td></tr></tbody></table>
 
 ## Consideration
 
-- When using `=$now()` on a component level,  the date/time is not refreshed when navigating out and into the jig. To cater to this scenario, add an `onFocus` with a `set-state` action to the jig.
+* When using `=$now()` on a component level, the date/time is not refreshed when navigating out and into the jig. To cater to this scenario, add an `onFocus` with a `set-state` action to the jig.
 
-:::CodeblockTabs
-component
-
+{% tabs %}
+{% tab title="component" %}
 ```yaml
 children:
   - type: component.entity
@@ -136,9 +22,9 @@ children:
             label: Order Date
             value: =@ctx.solution.state.now
 ```
+{% endtab %}
 
-onFocus
-
+{% tab title="onFocus" %}
 ```yaml
 onFocus: 
   type: action.set-state
@@ -146,29 +32,30 @@ onFocus:
     state: =@ctx.solution.state.now
     value: =$now()
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-:::hint{type="warning"}
-Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.
-:::
+{% hint style="warning" %}
+Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.&#x20;
+{% endhint %}
 
 ## Examples and code snippets
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rLyfpAJd6UWubCCOtnOx8_img6600iphone13blueportrait.png" size="72" position="center" caption="Date & time expressions" alt="Date & time expressions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rLyfpAJd6UWubCCOtnOx8_img6600iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rLyfpAJd6UWubCCOtnOx8\_img6600iphone13blueportrait.png" size="72" position="center" caption="Date & time expressions" alt="Date & time expressions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rLyfpAJd6UWubCCOtnOx8\_img6600iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
 
-:::VerticalSplitItem
-This example uses a component.enitity to show the results of various date/time functions
+
+{% endcolumn %}
+
+{% column %}
+This example uses a `component.enitity` to show the results of various date/time functions
 
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/expression.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-expression.jigx
-
+{% code title="expression.jigx" %}
 ```yaml
 children:
   - type: component.entity
@@ -219,5 +106,4 @@ children:
             label: Current time '[H01]:[m01]:[s01] [z]', '-0500'
             value: =$fromMillis($toMillis($now()), '[H01]:[m01]:[s01] [z]', '-0500')
 ```
-:::
-
+{% endcode %}

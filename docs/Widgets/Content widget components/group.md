@@ -4,87 +4,28 @@ The `group widget` allows widgets to be combined to create a single widget. The 
 
 ## Configuration options
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="133">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>children</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The <code>children</code> property includes all available widgets- combining two widgets is typical for group widgets.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="144.4296875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td>The <code>children</code> property includes all available widgets- combining two widgets is typical for group widgets.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="142">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>footer</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add text to the footer of the widget</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>footerAlign</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Align the footer text to <code>left</code>, <code>right</code>, <code>center</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>placeholders</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Specify a placeholder text to display if there is no data, for example - <code>title: No data to display</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>split</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The option to group the widgets vertically or horizontally. By default, widgets are grouped vertically.</p>
-    </td>
-  </tr>
-</table>
+<table data-header-hidden><thead><tr><th width="142.62890625">Other options</th><th></th></tr></thead><tbody><tr><td><code>footer</code></td><td>Add text to the footer of the widget</td></tr><tr><td><code>footerAlign</code></td><td>Align the footer text to <code>left</code>, <code>right</code>, <code>center</code>.</td></tr><tr><td><code>placeholders</code></td><td>Specify a placeholder text to display if there is no data, for example - <code>title: No data to display</code></td></tr><tr><td><code>split</code></td><td>The option to group the widgets vertically or horizontally. By default, widgets are grouped vertically.</td></tr></tbody></table>
 
 ## Examples and code snippets
 
-:::::ExpandableHeading
 ### Group with chart and list (size: 4x4, split: horizontal)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vZSpwck06Npdts3BCYNB1_group-wiphone13blueportrait.png" size="82" position="center" caption="Horizontal split widget group " alt="Horizontal split widget group " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vZSpwck06Npdts3BCYNB1_group-wiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vZSpwck06Npdts3BCYNB1\_group-wiphone13blueportrait.png" size="82" position="center" caption="Horizontal split widget group " alt="Horizontal split widget group " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vZSpwck06Npdts3BCYNB1\_group-wiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 For the 4x4 widget, we have a split option. In this property, a vertical or horizontal layout is possible for the widget. In this example, a combination of a chart and a list are used in a **horizontal** split.
 
-**Examples**:
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-chart-list-horizontal.jigx).
-:::
-::::
+**Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-chart-list-horizontal.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-group-ChartList (static)
-
+{% tabs %}
+{% tab title=" group-ChartList (static)" %}
 ```yaml
 widgets:
   list-horizontal-4x4: 
@@ -157,9 +98,9 @@ widgets:
                   isPositive: =@ctx.current.item.positive
                   isError: =@ctx.current.item.positive = false ? "true" :"false"
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 children:
   - type: component.grid-item
@@ -171,28 +112,27 @@ children:
           jigId: group-chart-list-horizontal
           widgetId: list-horizontal-4x4
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Group with chart and list (size: 4x4, split: vertical)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vblqyuZ8bZ3CsaQOHpbU3_verticalgroupiphone13blueportrait.png" size="80" position="center" caption="Vertical split widget group " alt="Vertical split widget group " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vblqyuZ8bZ3CsaQOHpbU3_verticalgroupiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vblqyuZ8bZ3CsaQOHpbU3\_verticalgroupiphone13blueportrait.png" size="80" position="center" caption="Vertical split widget group " alt="Vertical split widget group " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vblqyuZ8bZ3CsaQOHpbU3\_verticalgroupiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 In this example, a combination of a chart and list was configured with a **vertical** split.
 
-**Examples**:
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-chart-list-vertical.jigx).
-:::
-::::
+**Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-chart-list-vertical.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-group-ChartListVertical (static)
 
+
+{% tabs %}
+{% tab title="group-ChartListVertical (static)" %}
 ```yaml
 widgets:
   listVertical-4x4: 
@@ -249,9 +189,9 @@ widgets:
                     - when: =@ctx.current.item.change < 0
                       color: color4
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 children:
   - type: component.grid-item
@@ -263,33 +203,27 @@ children:
           jigId: group-chart-list-vertical
           widgetId: listVertical-4x4
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Group with avatar and list (size: 4x2)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ku31Kug--owZX3VQ_NC2G_4x2iphone13blueportrait.png" size="80" position="center" caption="Group widget with avatar and list" alt="Group widget with avatar and list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ku31Kug--owZX3VQ_NC2G_4x2iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ku31Kug--owZX3VQ\_NC2G\_4x2iphone13blueportrait.png" size="80" position="center" caption="Group widget with avatar and list" alt="Group widget with avatar and list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ku31Kug--owZX3VQ\_NC2G\_4x2iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+{% endcolumn %}
 
-:::VerticalSplitItem
-This group widget represents a combination of the avatar with a list. After clicking on the widget, the list component is shown.
+{% column %}
+&#x20;This group widget represents a combination of the avatar with a list. After clicking on the widget, the list component is shown.
 
-**Examples**:
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-avatar-list.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/dynamic-data/group-avatar-list-dynamic.jigx).
+**Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-avatar-list.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/dynamic-data/group-avatar-list-dynamic.jigx).
 
-**Datasources**:
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-dynamic.jigx).
-:::
-::::
+**Datasources**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-group-avatar-list (static)
-
+{% tabs %}
+{% tab title="group-avatar-list (static)" %}
 ```yaml
 widgets:
   groupAvatar-4x2: 
@@ -312,9 +246,9 @@ widgets:
                   text: '' 
                   uri: =@ctx.current.item.img
 ```
+{% endtab %}
 
-group-avatar-list (Dynamic)
-
+{% tab title="group-avatar-list (Dynamic)" %}
 ```yaml
 widgets:
   groupAvatarDD-4x2: 
@@ -338,9 +272,9 @@ widgets:
                   text: '' 
                   uri: =@ctx.current.item.photo
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # grid-item for the static jigx
 children:
@@ -353,33 +287,27 @@ children:
           jigId: group-avatar-list
           widgetId: groupAvatar-4x2
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Group with value and bar-chart (size: 2x4)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_nW2If-8vWWmlEVdp0SmL_2x4iphone13blueportrait.png" size="80" position="center" caption="Group with value and bar-chart" alt="Group with value and bar-chart" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_nW2If-8vWWmlEVdp0SmL_2x4iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_nW2If-8vWWmlEVdp0SmL\_2x4iphone13blueportrait.png" size="80" position="center" caption="Group with value and bar-chart" alt="Group with value and bar-chart" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_nW2If-8vWWmlEVdp0SmL\_2x4iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This group widget represents a combination of the value and bar-chart. After clicking on the widget, the bar- chart is shown.
 
-**Examples**:
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-value-chart.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/dynamic-data/group-value-chart-dynamic.jigx).
+**Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-value-chart.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/dynamic-data/group-value-chart-dynamic.jigx).
 
-**Datasources**:
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx).
-:::
-::::
+**Datasources**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-group-value-bar-chart (static)
-
+{% tabs %}
+{% tab title="group-value-bar-chart (static)" %}
 ```yaml
 widgets:
   groupValue-2x4: 
@@ -401,9 +329,9 @@ widgets:
                 series:
                   - data: =@ctx.datasources.series1
 ```
+{% endtab %}
 
-group-value-chart (dynamic)
-
+{% tab title="group-value-chart (dynamic)" %}
 ```yaml
 widgets:
   groupValueDD-2x4: 
@@ -425,9 +353,9 @@ widgets:
                 series:
                   - data: =@ctx.datasources.series1-dynamic
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # grid-item for the static jigx
 children:
@@ -440,6 +368,5 @@ children:
           jigId: group-value-chart
           widgetId: groupValue-2x4
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

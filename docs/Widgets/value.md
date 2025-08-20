@@ -1,131 +1,41 @@
 # value
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-Show values and amounts for a quick overview or visual representation on a widget, such as sales targets or the number of orders to date. The value can be a number or date and time.
-:::
+{% columns %}
+{% column %}
+Show values and amounts for a quick overview or visual representation on a widget, such as sales targets or the number of orders to date. The value can be a number or date and time.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OcTCGbkBbgy4XAiSLXL8F_img92bc27cc2344-1.jpeg" size="72" position="center" caption="Value widget" alt="Value widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OcTCGbkBbgy4XAiSLXL8F_img92bc27cc2344-1.jpeg" width="800" height="1732" darkWidth="800" darkHeight="1732"}
-:::
-::::
+{% column %}
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OcTCGbkBbgy4XAiSLXL8F\_img92bc27cc2344-1.jpeg" size="72" position="center" caption="Value widget" alt="Value widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OcTCGbkBbgy4XAiSLXL8F\_img92bc27cc2344-1.jpeg" width="800" height="1732" darkWidth="800" darkHeight="1732"} ::: ::::
+
+
+{% endcolumn %}
+{% endcolumns %}
 
 ## Configuration options
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="131">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>value</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Provide the value to be shown on the widget surface. You can use a string, expression or datasource.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="145.1015625">Core options</th><th></th></tr></thead><tbody><tr><td><code>value</code></td><td>Provide the value to be shown on the widget surface. You can use a string, expression or datasource.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="139">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>align</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Align the value either <code>left</code>, <code>right</code> or <code>center</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>bottom</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The  component will be added to the bottom of the widget.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>footer</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add text to the footer of the widget.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>footerAlign</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Align the footer text to <code>left</code>, <code>right</code>, <code>center</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>format</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Various formats available for the value which is of type date and number, for example, currency.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>placeholder</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Specify a placeholder text to display if there is no data, for example - <code>title: No data to display</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>style</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>By default the value is positive. To show a negative value set the <code>style:</code> <code>isNegative</code> to <code>true</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>top</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The  component will be added to the top of the widget.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="149.046875">Other options</th><th></th></tr></thead><tbody><tr><td><code>align</code></td><td>Align the value either <code>left</code>, <code>right</code> or <code>center</code>.</td></tr><tr><td><code>bottom</code></td><td>The component will be added to the bottom of the widget.</td></tr><tr><td><code>footer</code></td><td>Add text to the footer of the widget.</td></tr><tr><td><code>footerAlign</code></td><td>Align the footer text to <code>left</code>, <code>right</code>, <code>center</code>.</td></tr><tr><td><code>format</code></td><td>Various formats available for the value which is of type date and number, for example, currency.</td></tr><tr><td><code>placeholder</code></td><td>Specify a placeholder text to display if there is no data, for example - <code>title: No data to display</code>.</td></tr><tr><td><code>style</code></td><td>By default the value is positive. To show a negative value set the <code>style:</code> <code>isNegative</code> to <code>true</code>.</td></tr><tr><td><code>top</code></td><td>The component will be added to the top of the widget.</td></tr></tbody></table>
 
 ## Examples and code snippets
 
-:::::ExpandableHeading
 ### Value widget (2x2)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYzrsAD8f1eWOTTTZwaBG_img7893iphone13blueportrait.png" size="74" position="center" caption="Value widget with number" alt="Value widget with number" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYzrsAD8f1eWOTTTZwaBG_img7893iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYzrsAD8f1eWOTTTZwaBG\_img7893iphone13blueportrait.png" size="74" position="center" caption="Value widget with number" alt="Value widget with number" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYzrsAD8f1eWOTTTZwaBG\_img7893iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows a value widget configured with a number value, a `format` unit and `align` right. A `component.title` is added at the `top` and `component.trend` at the `bottom` to show additional information.
 
-**Examples**:
-See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-2x2.jigx).
-See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-2x2.jigx).
-:::
-::::
+**Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-2x2.jigx). See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-2x2.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-value-widget-2x2 (static)
-
+{% tabs %}
+{% tab title="value-widget-2x2 (static)" %}
 ```yaml
 widgets:
   valueStatic-2x2: 
@@ -155,9 +65,9 @@ widgets:
             numberStyle: unit
             unit: percent
 ```
+{% endtab %}
 
-value-widget-2x2 (dynamic)
-
+{% tab title="value-widget-2x2 (dynamic)" %}
 ```yaml
 widgets:
   valueDD-2x2: 
@@ -189,9 +99,9 @@ widgets:
             numberStyle: unit
             unit: percent
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the jig.
 children:
@@ -204,29 +114,27 @@ children:
           jigId: value-widget-2x2
           widgetId: valueStatic-2x2
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Value widget (2x4)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pXxBUeIjMcGUuZkQPjG9g_img7894iphone13blueportrait.png" size="78" position="center" caption="Value widget with date and time" alt="Value widget with date and time" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pXxBUeIjMcGUuZkQPjG9g_img7894iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pXxBUeIjMcGUuZkQPjG9g\_img7894iphone13blueportrait.png" size="78" position="center" caption="Value widget with date and time" alt="Value widget with date and time" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pXxBUeIjMcGUuZkQPjG9g\_img7894iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
 
-:::VerticalSplitItem
-This example shows a value widget configured with a date and time value and a `dateFormat` to show HH\:mm and `align` center. A `component.title` is added at the `top` and at the `bottom` to provide additional information about the meeting.
 
-**Examples**:
-See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-2x4.jigx).
-See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-2x4.jigx)
-:::
-::::
+{% endcolumn %}
 
-:::CodeblockTabs
-value-widget-2x4 (static)
+{% column %}
+This example shows a value widget configured with a date and time value and a `dateFormat` to show HH:mm and `align` center. A `component.title` is added at the `top` and at the `bottom` to provide additional information about the meeting.
 
+**Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-2x4.jigx). See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-2x4.jigx)&#x20;
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="value-widget-2x4 (static)" %}
 ```yaml
 widgets:    
   valueStatic-2x4:
@@ -258,9 +166,9 @@ widgets:
           subtitle: 
             text: 60 Minutes
 ```
+{% endtab %}
 
-value-widget-2x4 (dynamic)
-
+{% tab title="value-widget-2x4 (dynamic)" %}
 ```yaml
 widgets:    
   valueDD-2x4:
@@ -294,9 +202,9 @@ widgets:
           subtitle: 
             text: =@ctx.datasources.value2.timeLeft & " Minutes" 
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the static jig.
 children:
@@ -309,29 +217,25 @@ children:
           jigId: value-widget-2x4
           widgetId: valueStatic-2x4
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ### Value widget (4x2)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mTH88SQVn-lvJEtmPiR5__img7895iphone13blueportrait.png" size="80" position="center" caption="Value widget with currency format" alt="Value widget with currency format" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mTH88SQVn-lvJEtmPiR5__img7895iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-:::
+{% columns %}
+{% column %}
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mTH88SQVn-lvJEtmPiR5\_\_img7895iphone13blueportrait.png" size="80" position="center" caption="Value widget with currency format" alt="Value widget with currency format" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mTH88SQVn-lvJEtmPiR5\_\_img7895iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows a value widget configured with an number value and a `Format` to show currency and `align` centre. A `component.title` is added at the `bottom` to provide additional information about the billing and quarter.
 
-**Examples**:
-See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-4x2.jigx)
-See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-4x2.jigx).
-:::
-::::
+**Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-4x2.jigx) See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-4x2.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-value-widget-4x2 (static)
-
+{% tabs %}
+{% tab title="value-widget-4x2 (static)" %}
 ```yaml
 widgets:
   value-s-4x2: 
@@ -348,9 +252,9 @@ widgets:
           title: Company Billing
           subtitle: Q3 / 2022
 ```
+{% endtab %}
 
-value-widget-4x2 (dynamic)
-
+{% tab title="value-widget-4x2 (dynamic)" %}
 ```yaml
 widgets:
   value-dd-4x2: 
@@ -367,9 +271,9 @@ widgets:
           title: =@ctx.datasources.value3.title
           subtitle: =@ctx.datasources.value3.subtitle
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 # Grid-item for the static jig.
 children:
@@ -382,6 +286,5 @@ children:
           jigId: value-widget-4x2
           widgetId: value-s-4x2
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}
