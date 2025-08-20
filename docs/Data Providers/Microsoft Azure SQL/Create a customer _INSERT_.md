@@ -17,21 +17,19 @@ Best practice for production apps is to use REST as the data layer to access dat
 
 This example uses a default jig with a form that executes an SQL command to create a new customer record.
 
-### **Resources**
+#### **Resources**
 
 * Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<Database Scripts.md>).
 * [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection).
 * This sample depends on [List customers (SELECT)](<List customers _SELECT_.md>).
 
-### Jigx Code
+#### Jigx Code
 
 The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs).
 {% endcolumn %}
 
 {% column %}
-&#x20;![Add new customer](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/o9bX3Ee2RDGzscd4uSnnW_thursday-23-mar-2023-155109.PNG)
-
-
+<figure><img src="../../../.gitbook/assets/AzureSql-CreateCustomer.png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

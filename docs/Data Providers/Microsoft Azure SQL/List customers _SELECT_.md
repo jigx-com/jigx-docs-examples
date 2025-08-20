@@ -32,7 +32,7 @@ The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samp
 {% endcolumn %}
 
 {% column %}
-<figure><img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/avKe9CnCia3_gDoxfz7Jf_sunday-19-mar-2023-122036.PNG" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AzureSql-listCustomer.png" alt=""><figcaption></figcaption></figure>
 
 ### &#x20;&#x20;
 

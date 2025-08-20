@@ -22,9 +22,7 @@ The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samp
 {% endcolumn %}
 
 {% column %}
-&#x20;![Update customer](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F2u40_emrBYicR6Oo1HBd_saturday-25-mar-2023-113958.PNG)
-
-
+<figure><img src="../../../.gitbook/assets/AzureSql-UpdateCustmer.png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

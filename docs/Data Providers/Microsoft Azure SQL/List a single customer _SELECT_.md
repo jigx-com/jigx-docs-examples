@@ -10,19 +10,19 @@ Best practice for production apps is to use REST as the data layer to access dat
 
 View the customer's details by pressing on the customer in the list, which opens the customer's details in a default jig.
 
-### Resources
+#### Resources
 
 * Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<Database Scripts.md>).
 * [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection).
 * This sample depends on [List customers (SELECT)](<List customers _SELECT_.md>).
 
-### Jigx Code
+#### Jigx Code
 
 The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs)&#x20;
 {% endcolumn %}
 
 {% column %}
-&#x20;<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eb8nMUangvEbz5PSFP_Cm_thursday-23-mar-2023-151127.PNG" alt="List &#x26; view customer detail" data-size="original">
+<figure><img src="../../../.gitbook/assets/AzureSql-listSingle.png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
