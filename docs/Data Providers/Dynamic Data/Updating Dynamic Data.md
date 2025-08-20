@@ -19,7 +19,7 @@ The employee's details are updated using the Dynamic Data provider's **update** 
 
 ### Examples and code snippets
 
-![Update Dynamic Data record](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-PwrJAGWRqJ1-VCbSPSb7N-20250306-085704.png)
+<figure><img src="../../../.gitbook/assets/DD-update.png" alt="Update Dynamic Data record"><figcaption><p>Update Dynamic Data record</p></figcaption></figure>
 
 Use the employee list with `component.expanders` add the `onContentPress` action that will open the employee form, add `parameters` to transfer the employee details to the form.
 
@@ -268,4 +268,4 @@ tabs:
 
 Navigate to the solution's Data option in Jigx Management and view the updated Dynamic Data employee table and record.
 
-![Updated Dynamic Data record](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/V3ZS4IyJ8RJ78mKGJdRJ2_dd-update-mngt.png)
+<figure><img src="../../../.gitbook/assets/DD-update-mngt.png" alt="Updated Dynamic Data record"><figcaption><p>Updated Dynamic Data record</p></figcaption></figure>

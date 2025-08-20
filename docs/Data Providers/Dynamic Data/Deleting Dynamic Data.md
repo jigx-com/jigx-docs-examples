@@ -19,11 +19,9 @@ With the ability to create and update data, you must be able to delete data that
 
 #### Delete a single data record using execute-entity
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-XPJP9o-8X4H2sF2LWszkR-20250306-090646.png" size="80" position="center" caption="Deleting Dynamic Data" alt="Deleting Dynamic Data"}
+<figure><img src="../../../.gitbook/assets/DD-delete.png" alt="Deleting Dynamic Data" width="563"><figcaption><p>Deleting Dynamic Data</p></figcaption></figure>
 
-![Record deleted from table](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_lcLIwWpStnfpqS5WnizS_dd-sng-delete-mngt.png)
-
-:::CodeblockTabs&#x20;
+<figure><img src="../../../.gitbook/assets/dd-sng-delete-mngt.png" alt="Record deleted from table"><figcaption><p>Record deleted from table</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="delete-single-record.jigx" %}
@@ -131,9 +129,9 @@ tabs:
 
 To delete all employees (multiple data records) in the Dynamic Data table use the `action.execute-entities` action with an expression that as shown below. This will delete all records in the table when the _Delete all employees_ button is pressed.
 
-![Delete multiple records](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ouiryUalSNeUZaPOw03AA-20250306-091204.png)
+<figure><img src="../../../.gitbook/assets/DD-delete-all.png" alt="Delete multiple records"><figcaption><p>Delete multiple records</p></figcaption></figure>
 
-![All records deleted from table](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BjDuEwPyRfOyPy83390NK_dd-multi-delete-mngt.png)
+<figure><img src="../../../.gitbook/assets/dd-multi-delete-mngt.png" alt="All records deleted from table"><figcaption><p>All records deleted from table</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="delete-multiple-records.jigx" %}

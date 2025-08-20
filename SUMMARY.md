@@ -1,5 +1,6 @@
 # Table of contents
 
+* [README](README.md)
 * [Jigx Examples](docs/Overview.md)
   * [Setting up your solution](<docs/Overview/Setting up your solution.md>)
   * [Data Providers](<docs/Data Providers.md>)

@@ -14,7 +14,7 @@ In this example, a list of expenses is displayed with the following:
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JG8sn10\_wFTyXLGp\_QSAS-20250519-125130.gif" size="66" position="center" caption="Delete record or file" alt="Delete record or file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JG8sn10\_wFTyXLGp\_QSAS-20250519-125130.gif"}
+<figure><img src="../../../.gitbook/assets/DF-delete-file.gif" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -132,7 +132,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-In Management the _Hotel accomodation_ record is deleted in the **expense** dynamic data table and the _airplane ticket_ file is deleted but the record still exists.
+In Management the _Hotel accommodation_ record is deleted in the **expense** dynamic data table and the _airplane ticket_ file is deleted but the record still exists.
 
 ## Delete a file in Jigx Management
 

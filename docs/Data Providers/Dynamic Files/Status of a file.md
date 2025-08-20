@@ -8,7 +8,7 @@ Progress is shown in a `list-item` using `color`, `progress`, and a status `labe
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2z-QoO-\_f4ZycKRz0uWo-20250521-115828.gif" size="66" position="center" caption="File status" alt="File status" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2z-QoO-\_f4ZycKRz0uWo-20250521-115828.gif"}
+<figure><img src="../../../.gitbook/assets/DF-status-file.gif" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

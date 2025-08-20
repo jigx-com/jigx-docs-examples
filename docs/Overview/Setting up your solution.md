@@ -3,10 +3,6 @@ title: Setting up your solution
 slug: 1gfe-setting-up-your-solution
 createdAt: Mon Jun 13 2022 19:39:00 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Jan 18 2024 14:09:17 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to publish and use a sample solution with JigxBuilder in this
-  comprehensive document. Discover the step-by-step instructions for publishing
-  and viewing the solution in JigxManagement, as wel
 ---
 
 # Setting up your solution

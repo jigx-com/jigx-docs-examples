@@ -8,7 +8,7 @@ This example displays a department's expenses in a list. The expense receipt is 
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" size="66" position="center" caption="Download files" alt="Download files" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kO4coGy8ka-0U4N52rwxp-20250521-064340.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}&#x20;
+<figure><img src="../../../.gitbook/assets/DF-download-file.gif" alt="" width="341"><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

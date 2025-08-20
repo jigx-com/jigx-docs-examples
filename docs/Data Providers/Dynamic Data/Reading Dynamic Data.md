@@ -20,7 +20,7 @@ In this example, we **read** the employee data records we created in the employe
 
 This example uses the Dynamic Data table, columns, and data records created in the [Creating Dynamic Data](<Creating Dynamic Data.md>) example to create a list of employees with their details.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-INvHFGW3XIisjDMFXvQ\_a-20250306-083847.png" size="78" position="center" caption="Reading Dynamic Data " alt="Reading Dynamic Data "}
+<figure><img src="../../../.gitbook/assets/DD-list-emp.png" alt="Reading Dynamic Data" width="563"><figcaption><p>Reading Dynamic Data</p></figcaption></figure>
 
 Here is what the data table employee resembles in [Data](https://docs.jigx.com/data) in Jigx Management.
 

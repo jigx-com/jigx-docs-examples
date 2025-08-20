@@ -18,7 +18,7 @@ Creating Dynamic Data can be achieved in several ways, one of which is by using 
 
 ### Examples and code snippets
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-i6ehWvPp7BFJyRJURpPe2-20250306-083004.png" size="66" position="center" caption="Form creating Dynamic Data" alt="Form creating Dynamic Data"}
+<figure><img src="../../../.gitbook/assets/DD-new-employee.png" alt="Form creating Dynamic Data" width="563"><figcaption><p>Form creating Dynamic Data</p></figcaption></figure>
 
 ![Dynamic data database](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BBlDwFNCg9r4DSlmAFOO8_dd-employee-mngt.png)
 

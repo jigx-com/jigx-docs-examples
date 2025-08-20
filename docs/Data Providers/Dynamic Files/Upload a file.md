@@ -10,7 +10,7 @@ The `media-field` is configured to accept `any` file type, with a `maximumFileSi
 {% endcolumn %}
 
 {% column %}
-&#x20;::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uCb0bqIVvxwoDdMihP0My-20250519-074426.gif" size="66" position="center" caption="Upload file" alt="Upload file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uCb0bqIVvxwoDdMihP0My-20250519-074426.gif"}&#x20;
+&#x20;![](../../../.gitbook/assets/DF-upload-files.gif)
 {% endcolumn %}
 {% endcolumns %}
 
@@ -93,7 +93,7 @@ actions:
 
 In Management the record is created in the **expense** dynamic data table and the file is linked to the record. The file and metadata is displayed in the file tab of the record. The file thumbnail is displayed in the system file column (use column settings to set the column to visible).
 
-![Files in Management](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--_meerV3mLUQB6DlK4OWi-20250519-075245.gif)
+<figure><img src="../../../.gitbook/assets/DF-files-management.gif" alt="iles in Management"><figcaption><p>Files in Management</p></figcaption></figure>
 
 ## Upload a file in Jigx Management
 
