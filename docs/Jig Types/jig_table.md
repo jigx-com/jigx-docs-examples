@@ -2,7 +2,7 @@
 
 The table jig displays structured data in rows and columns, allowing users to view and interact with multiple records within the app.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a64VzmoGUKu3y7C4X9jSH-20250522-070201.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a64VzmoGUKu3y7C4X9jSH-20250522-070201.png" size="80" width="3532" height="2496" position="center" caption="Table jig" alt="Table jig"}
+<figure><img src="../../.gitbook/assets/table-iPad3.png" alt="Table jig" width="563"><figcaption><p>Table jig</p></figcaption></figure>
 
 ### Configuration options
 
@@ -97,7 +97,7 @@ sort:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Q6Xuu9UZU6giW3xvBsO3A-20250410-141717.png" size="66" position="center" caption="Basic table with color" alt="Basic table with color" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Q6Xuu9UZU6giW3xvBsO3A-20250410-141717.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+<figure><img src="../../.gitbook/assets/tableBasic-color.png" alt="Basic table with color" width="188"><figcaption><p>Basic table with color</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -181,7 +181,7 @@ See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/b
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-1MvDKuZ881LLxe7MJc2Oo-20250414-095314.png" size="66" position="center" caption="Table with colored header & footer" alt="Table with colored header & footer" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-1MvDKuZ881LLxe7MJc2Oo-20250414-095314.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+<figure><img src="../../.gitbook/assets/table-sort-header-footer.png" alt="Table with colored header &#x26; footer" width="188"><figcaption><p>Table with colored header &#x26; footer</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -199,8 +199,6 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOh
       })
     ```
 3. The `sort` property configured at the root level to configure descending or ascending.
-
-:::CodeblockTabs&#x20;
 
 {% tabs %}
 {% tab title="jig-header-footer-sorting" %}
@@ -285,7 +283,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HQa4y6l2wh5CVhWpfLJF5-20250414-094024.png" size="66" position="center" caption="Table widths & column definitions" alt="Table widths & column definitions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HQa4y6l2wh5CVhWpfLJF5-20250414-094024.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/table-width-definition.png" alt="Table widths &#x26; column definitions" width="188"><figcaption><p>Table widths &#x26; column definitions</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -403,7 +401,7 @@ options:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-KKLCvuvPRRcqH5KOOm2sS-20250415-101720.gif" size="66" position="center" caption="Editing the table" alt="Editing the table" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-KKLCvuvPRRcqH5KOOm2sS-20250415-101720.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+<figure><img src="../../.gitbook/assets/table-edit.gif" alt="Editing the table" width="170"><figcaption><p>Editing the table</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -557,7 +555,7 @@ See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/b
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4HmPM7d4fpngJ5iMCYcvY-20250415-115154.gif" size="66" position="center" caption="Delete rows in table" alt="Delete rows in table" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4HmPM7d4fpngJ5iMCYcvY-20250415-115154.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+<figure><img src="../../.gitbook/assets/table-delete-rows.gif" alt="Delete rows in table" width="170"><figcaption><p>Delete rows in table</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -621,7 +619,7 @@ selectionToolbar:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-DOECrBky8\_6OfgxTC8tCd-20250415-112009.gif" size="66" position="center" caption="Add row to table" alt="Add row to table" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-DOECrBky8\_6OfgxTC8tCd-20250415-112009.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+<figure><img src="../../.gitbook/assets/table-add-row.gif" alt="Add row to table" width="170"><figcaption><p>Add row to table</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
