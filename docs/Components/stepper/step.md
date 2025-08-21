@@ -2,7 +2,7 @@
 
 This component displays consecutive steps in a stepper component. You can divide the task into steps, mark them as completed, and gradually get closer to completing the entire task.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pHqn9aSU9OrBRvwBxvDw1\_cc-step.png" size="66" position="center" caption="Step component" alt="Step component" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pHqn9aSU9OrBRvwBxvDw1\_cc-step.png" width="800" height="800" darkWidth="800" darkHeight="800"}
+<figure><img src="../../../.gitbook/assets/cc-step-intro.png" alt="Step component" width="375"><figcaption><p>Step component</p></figcaption></figure>
 
 ## Configuration options
 
@@ -24,19 +24,19 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hSkErBLejyQpuODS8-\_4p\_xukzynxiz0pfnomjm8eyostepiphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hSkErBLejyQpuODS8-\_4p\_xukzynxiz0pfnomjm8eyostepiphone13blueportrait.png" size="70" width="1570" height="2932" position="center" caption="Step in Stepper" alt="Step in Stepper"}
+<figure><img src="../../../.gitbook/assets/cc-step-1.png" alt="Step in Stepper" width="188"><figcaption><p>Step in Stepper</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 This example shows the steps of delivering a shipment. In this case, the goods have already been ordered, and the shipment is in transit.
 
-**Examples:** \
-See the full example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stepper/static-data/stepper-example/stepper-example.jigx). \
+**Examples:**\
+See the full example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stepper/static-data/stepper-example/stepper-example.jigx).\
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stepper/dynamic-data/stepper-example/stepper-example-dynamic.jigx).
 
-**Datasource:** \
-See the full datasource for static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/steps.jigx). \
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/steps-dynamic.jigx).&#x20;
+**Datasource:**\
+See the full datasource for static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/steps.jigx).\
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/steps-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

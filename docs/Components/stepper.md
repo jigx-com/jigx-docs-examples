@@ -6,7 +6,7 @@ This component displays the progress status of a task. Useful when tracking deli
 {% endcolumn %}
 
 {% column width="50%" %}
-&#x20;![Stepper Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lRGV6B3arl4EitmWCT0SE_stepper.png)&#x20;
+<figure><img src="../../.gitbook/assets/cc-stepper-overview.png" alt="Stepper Preview"><figcaption><p>Stepper Preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -24,7 +24,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3q5XYI9fcgYMnxTTSMBaa\_xqldilpo0dsaonqcdwm8ostepperiphone13blueportrait.png" size="88" position="center" caption="Stepper for shipment status" alt="Stepper for shipment status" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3q5XYI9fcgYMnxTTSMBaa\_xqldilpo0dsaonqcdwm8ostepperiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}&#x20;
+<figure><img src="../../.gitbook/assets/cc-stepper-1.png" alt="Stepper for shipment status" width="177"><figcaption><p>Stepper for shipment status</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

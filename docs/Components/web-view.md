@@ -3,7 +3,7 @@
 This component displays a webpage from a specified URL, content from a datasource, or custom HTML.
 
 {% hint style="info" %}
-&#x20;You can also use the [jig.document](<../Jig Types/jig_document.md>) type to display web pages in full-screen mode or pass messages from your HTML content via JavaScript to the Jigx App.
+You can also use the [jig.document](<../Jig Types/jig_document.md>) type to display web pages in full-screen mode or pass messages from your HTML content via JavaScript to the Jigx App.
 {% endhint %}
 
 ## Configuration options
@@ -24,7 +24,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE\_SLn\_img9582iphone13blueportrait.png" size="80" position="center" caption="Web-view with URL " alt="Web-view with URL " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VeM3NrBpP0oAm20xE\_SLn\_img9582iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+<figure><img src="../../.gitbook/assets/cc-webview-url.png" alt="Web-view with URL" width="178"><figcaption><p>Web-view with URL</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -101,7 +101,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv\_img9581iphone13blueportrait.png" size="80" position="center" caption="Web-view with HTML content" alt="Web-view with HTML content" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUGy63w8idJuWWfsn9RKv\_img9581iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+<figure><img src="../../.gitbook/assets/cc-webview-html.png" alt="Web-view with HTML content" width="188"><figcaption><p>Web-view with HTML content</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -137,7 +137,7 @@ In this example, the web-view component is used to make notes on a job. It is co
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4yhXXgCmRFjbhuG8YuyU--20250519-104335.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4yhXXgCmRFjbhuG8YuyU--20250519-104335.gif" size="66" width="681" height="1377" position="center" caption="Editable web-view" alt="Editable web-view"}
+<figure><img src="../../.gitbook/assets/cc-webviewfullscreen.gif" alt="Editable web-view" width="170"><figcaption><p>Editable web-view</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

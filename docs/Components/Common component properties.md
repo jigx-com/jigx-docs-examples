@@ -23,7 +23,7 @@ Below are the settings to use with the `when` property:
 
 The example below demonstrates how the `when` property is used at a component level to display a `component.text-field` (Note requirements) only when the `component.checkbox` (Special Diet) is selected.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Xic9Zc-dcHhgZJ\_-\_qata-20250225-095457.png" size="62" position="center" caption="When-Display a field " alt="When-Display a field "}
+<figure><img src="../../.gitbook/assets/cc-when-lunch.png" alt="When-Display a field" width="563"><figcaption><p>When-Display a field</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="When.jigx" %}

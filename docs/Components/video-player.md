@@ -6,7 +6,7 @@ This component is used to play a video in [headers](jig-header.md), or as compon
 
 Some properties are common to all components, see [Common component properties](video-player.md) for a list and their configuration options.
 
-<table><thead><tr><th width="127.81640625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>URL</code></td><td><p>Specify the URL for the video. The URL format can be:</p><ul><li>A direct URL, for example, - An embeded URL, for example, <br><code>&#x3C;iframe src="https://player.vimeo.com/video/76979871?quality=720p">&#x3C;/iframe></code></li><li>A URL referenced in a datasource, for example, <code>url: =@ctx.datasources.video-player-dynamic.uri</code></li></ul></td></tr></tbody></table>
+<table><thead><tr><th width="127.81640625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>URL</code></td><td><p>Specify the URL for the video. The URL format can be:</p><ul><li>A direct URL, for example, - An embeded URL, for example,<br><code>&#x3C;iframe src="https://player.vimeo.com/video/76979871?quality=720p">&#x3C;/iframe></code></li><li>A URL referenced in a datasource, for example, <code>url: =@ctx.datasources.video-player-dynamic.uri</code></li></ul></td></tr></tbody></table>
 
 <table><thead><tr><th width="124.70703125">Other options</th><th></th></tr></thead><tbody><tr><td><code>autoplay</code></td><td>Set to <code>true</code> will automatically start playing the video. Set to <code>false</code> requires you to press the play button. Default setting is <code>false</code>.</td></tr><tr><td><code>loop</code></td><td>For continuous looping of the video set the property to <code>true</code>. Default setting is <code>false</code>.</td></tr><tr><td><code>ratio</code></td><td><p>There are 2 options:</p><ul><li>16:9</li><li>4:3</li></ul></td></tr><tr><td><code>title</code></td><td><p>The title of the video.</p><ul><li>With a <code>16:9</code> ratio, the text overlays at the bottom left of the video.</li><li>With a <code>4:3</code> ratio the text displays under the video.</li></ul><p><code>Title</code> and <code>subtitle</code> must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed.</p></td></tr><tr><td><code>subtitle</code></td><td><p>The subtitle of the video.</p><ul><li>With a <code>16:9</code> ratio, the text overlays at the bottom left of the video.</li><li>With a <code>4:3</code> ratio the text displays under the video.</li></ul><p><code>Title</code> and <code>subtitle</code> must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed.</p></td></tr></tbody></table>
 
@@ -25,17 +25,17 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-kpulDNlHd1-TlkW\_6Hc0\_cc-videoinjig.PNG" size="80" position="center" caption="video-player" alt="video-player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-kpulDNlHd1-TlkW\_6Hc0\_cc-videoinjig.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}&#x20;
+<figure><img src="../../.gitbook/assets/cc-videoinJig.PNG" alt="video-player" width="188"><figcaption><p>video-player</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 This example shows a video player inside a jig. The ratio is only set for non-YouTube videos.
 
 **Examples**:\
-See the full example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/video-player/static-data/video-player-in-jig/video-player-in-jig.jigx). \
+See the full example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/video-player/static-data/video-player-in-jig/video-player-in-jig.jigx).\
 See the full example using dynamic data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/video-player/dynamic-data/video-player-in-jig/video-player-jig-dynamic.jigx).
 
-**Datasource**: \
+**Datasource**:\
 See the full datasource for dynamic data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/video-player-dynamic.jigx)
 {% endcolumn %}
 {% endcolumns %}
@@ -94,7 +94,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/syc3quPN1\_3GaWZtNVxPY\_cc-videoinheader.PNG" size="80" position="center" caption="video - player" alt="video - player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/syc3quPN1\_3GaWZtNVxPY\_cc-videoinheader.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/cc-videoinHeader.PNG" alt="video-player in header" width="188"><figcaption><p>video-player in header</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
