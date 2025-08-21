@@ -1,16 +1,14 @@
 # summary
 
 {% columns %}
-{% column %}
+{% column width="50%" %}
 Summarize the information in the jig at the bottom of the screen using the summary component. For example, a count of the number orders, or the number of items in a cart for an online shopping app.
 
 The summary is fixed and displays even when the screen is scrolled. Make the summary actionable by combining it with an [action](../Actions.md).
 {% endcolumn %}
 
-{% column %}
-&#x20;![Summary Preview](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qvA_G2dUG6m5hTRuSzrwS-20250515-070710.png)&#x20;
-
-
+{% column width="50%" %}
+&#x20;![Summary](../../.gitbook/assets/summary-intro.png)&#x20;
 {% endcolumn %}
 {% endcolumns %}
 
@@ -43,7 +41,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8KO0c\_Gob5Y71dIkYhi37-20250515-065249.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8KO0c\_Gob5Y71dIkYhi37-20250515-065249.png" size="80" width="1224" height="2466" position="center" caption="Default layout" alt="Default layout"}
+<figure><img src="../../.gitbook/assets/summary-default.png" alt="Default layout" width="188"><figcaption><p>Default layout</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -96,7 +94,7 @@ The full example of the summary type: cart using expander is on [GitHub](https:/
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cRcH3caCDaCROlthQTsvC-20250515-065436.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cRcH3caCDaCROlthQTsvC-20250515-065436.png" size="80" width="1224" height="2466" position="center" caption="Cart layout" alt="Cart layout"}
+<figure><img src="../../.gitbook/assets/summary-Cart layout.png" alt="Cart layout" width="188"><figcaption><p>Cart layout</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -314,7 +312,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-q8MySAMTMx1Xkxjn3sDXv-20250515-065617.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-q8MySAMTMx1Xkxjn3sDXv-20250515-065617.png" size="80" width="1224" height="2466" position="center" caption="Counter layout" alt="Counter layout"}&#x20;
+<figure><img src="../../.gitbook/assets/summary-Counter layout.png" alt="Counter layout" width="188"><figcaption><p>Counter layout</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -545,7 +543,7 @@ In this example the `cart` layout property is used in a `jig.list` with the `exp
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Z9TXyir8aI7GgqI4dPQM9-20250515-070027.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Z9TXyir8aI7GgqI4dPQM9-20250515-070027.png" size="70" width="1224" height="2466" position="center" caption="Summary with action" alt="Summary with action"}
+<figure><img src="../../.gitbook/assets/summaryaction.png" alt="Summary with action" width="188"><figcaption><p>Summary with action</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
