@@ -6,7 +6,7 @@ The entity component is a container for the following components:
 * [entity-field](entity/entity-field.md)
 * [section](entity/section.md)
 
-### Considerations
+## Considerations
 
 * The `component.entity` used with the above-mentioned components is configurable on a `jig.default`.
 * [Section](entity/section.md) and [field-row](entity/field-row.md) are also available under the `component.form` as its container. Here the [entity-field](entity/entity-field.md) is replaced by the [form's](form.md) children field.
@@ -15,13 +15,13 @@ The entity component is a container for the following components:
   * An entity containing [section(s)](entity/section.md) and [entity-field](entity/entity-field.md)An entity containing [rows](entity/field-row.md) and [entity-field](entity/entity-field.md)
   * An entity containing [entity fields](entity/entity-field.md)
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](entity.md) for a list and their configuration options.
 
 <table><thead><tr><th width="138.28515625">Other options</th><th></th></tr></thead><tbody><tr><td><code>isCompact</code></td><td>When this property is set to <code>true</code> the entity-field will cover the entire row. This compact variant does not allow usage of field-row components. By default, a label is at the top and the value below. <code>isCompact</code> will place the label on the left and the value on the right. Columns are not supported.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% columns %}
 {% column %}
@@ -33,7 +33,7 @@ Some properties are common to all components, see [Common component properties](
 {% endcolumn %}
 {% endcolumns %}
 
-#### Entity example
+### Entity example
 
 **Compact**
 
@@ -197,7 +197,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### See also
+### See also
 
 * [entity-field](entity/entity-field.md)
 * [field-row](entity/field-row.md)

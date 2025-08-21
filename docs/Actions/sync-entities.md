@@ -12,9 +12,9 @@ This action can be used to sync your local database with your live database on t
 `sync-entities` can't be used if you using [Static Data](https://docs.jigx.com/examples/static).&#x20;
 {% endhint %}
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### sync-entities in action
+### sync-entities in action
 
 {% columns %}
 {% column %}
@@ -41,7 +41,7 @@ actions:
 ```
 {% endcode %}
 
-#### sync-entities in the action list
+### sync-entities in the action list
 
 {% columns %}
 {% column %}
@@ -74,7 +74,7 @@ actions:
 ```
 {% endcode %}
 
-#### sync-entities in onPress/onChange event
+### sync-entities in onPress/onChange event
 
 {% columns %}
 {% column %}
@@ -160,7 +160,7 @@ item:
 {% endtab %}
 {% endtabs %}
 
-#### sync-entities in onRefresh/onFocus
+### sync-entities in onRefresh/onFocus
 
 {% columns %}
 {% column %}
@@ -204,17 +204,17 @@ onFocus:
 {% endtab %}
 {% endtabs %}
 
-### Dynamically sync multiple entities
+## Dynamically sync multiple entities
 
 When building a solution, the number of entities to sync and the parameters for each are not always known; for example, when syncing the attachments, files, or documents for a message, there can be zero, one, or more. It is necessary to dynamically specify a list of the entities, functions, and function parameters to return from the database using an expression.
 
-#### Considerations
+### Considerations
 
 * The expression is specified in the `action.sync-entities` action either as a local action in the jig or as a global action.
 * Dynamic sync-entities apply to the REST, OneDrive, and Salesforce data providers.
 * Any of the following can be synced dynamically: entity, functions, and function parameters.
 
-#### Expression structure
+### Expression structure
 
 * The **basic expression** structure is `=$.map(array, function)`.
   * Specify the array you will consult, i.e., a datasource `@ctx.datasources.{datasourceName}`.
@@ -245,7 +245,7 @@ actions:
 ```
 {% endcode %}
 
-#### Example sync-entities dynamically for calendars (full input source)
+### Example sync-entities dynamically for calendars (full input source)
 
 To return all records from the input source use `$item.id`. In this example, a jig has two lists; the first list shows all the user's calendars, and the second list uses the `ids` from the first list to return all the events for all the calendars. A summary component shows a count of the number of events.
 
@@ -394,7 +394,7 @@ useLocalCall: true
 {% endtab %}
 {% endtabs %}
 
-#### Example sync-entities dynamically for a selected calendar
+### Example sync-entities dynamically for a selected calendar
 
 To return all records for a selected calendar use `=$map(@ctx.action.parameters.selected, function($item)` in the global action. In this example, a jig has a dropdown to select the calendar and a _Show events_ button syncs the entries in the selected calendar. A summary component shows a count of the number of events in the selected calendar.
 

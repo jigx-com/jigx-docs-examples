@@ -9,7 +9,7 @@ This feature is currently in its **Alpha** stage of development.
 * We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
 {% endhint %}
 
-### Chat
+## Chat
 
 ::::LinkArray :::LinkArrayItem{headerImage headerColor} ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-w4IMOUyDgTFlDGocR2tkZ-20241114-063548.png" size="48" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-w4IMOUyDgTFlDGocR2tkZ-20241114-063548.png" caption width="800" height="1611" darkWidth="800" darkHeight="1611"}
 
@@ -20,7 +20,7 @@ This feature is currently in its **Alpha** stage of development.
 
 :::::ExpandableHeading
 
-### Gallery
+## Gallery
 
 ::::LinkArray :::LinkArrayItem{headerImage headerColor} ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QEHD0ONOEuSBIu-N1G\_yx-20241114-063627.png" size="48" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QEHD0ONOEuSBIu-N1G\_yx-20241114-063627.png" width="800" height="1611" darkWidth="800" darkHeight="1611"}
 
@@ -38,7 +38,7 @@ This feature is currently in its **Alpha** stage of development.
 
 :::::ExpandableHeading
 
-### Lists
+## Lists
 
 ::::LinkArray :::LinkArrayItem{headerImage headerColor} ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qoQvgB87AqMKZCFEV3mcH-20241114-063746.png" size="48" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qoQvgB87AqMKZCFEV3mcH-20241114-063746.png" caption width="800" height="1611" darkWidth="800" darkHeight="1611"}
 
@@ -84,7 +84,7 @@ This feature is currently in its **Alpha** stage of development.
 
 :::::ExpandableHeading
 
-### Profile
+## Profile
 
 ::::LinkArray :::LinkArrayItem{headerImage headerColor} ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Ompd9EsZKdF3Rr4g-6b5q-20241114-064226.png" size="48" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Ompd9EsZKdF3Rr4g-6b5q-20241114-064226.png" width="800" height="1611" darkWidth="800" darkHeight="1611"}
 

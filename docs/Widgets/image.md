@@ -24,7 +24,7 @@ The images can be preloaded and cached using the asset folder's _images_ file. T
 
 ## Examples and code snippets
 
-### Image widget 2x2
+## Image widget 2x2
 
 {% columns %}
 {% column %}
@@ -73,7 +73,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Image widget 2x4
+## Image widget 2x4
 
 {% columns %}
 {% column %}
@@ -125,7 +125,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Image widget 4x2
+## Image widget 4x2
 
 {% columns %}
 {% column %}
@@ -178,7 +178,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Image widget in group widget 4x2
+## Image widget in group widget 4x2
 
 {% columns %}
 {% column %}
@@ -245,7 +245,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Image widget in group widget 4x4
+## Image widget in group widget 4x4
 
 {% columns %}
 {% column %}

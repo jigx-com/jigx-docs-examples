@@ -16,7 +16,7 @@ Image\[]{alt="Checkbox preview" src="https://archbee-image-uploads.s3.amazonaws.
 The `checkbox` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.&#x20;
 {% endhint %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](checkbox.md) for a list and their configuration options.
 
@@ -35,9 +35,9 @@ Some properties are common to all components, see [Common component properties](
 There's also the option to configure checkboxes as part of [entity-field](../entity/entity-field.md) or [list-item](../list/list-item.md).&#x20;
 {% endhint %}
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Checkbox on Form - Single Selection (Yes/No Question)
+### Checkbox on Form - Single Selection (Yes/No Question)
 
 {% columns %}
 {% column %}
@@ -106,7 +106,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Checkbox on Form - Multiple Selection
+### Checkbox on Form - Multiple Selection
 
 {% columns %}
 {% column %}

@@ -13,17 +13,17 @@ The icon component can be integrated into custom components to enhance their vis
 
 For steps on creating a custom component, see [How to create a custom component](<../Custom components _Alpha_.md>).
 
-### Configuration options
+## Configuration options
 
 You can use `when` and `instanceId` with `component.icon`, add the properties before the `options:` property. The available list of options is shown below. For the full list of properties, see [jc-icon](https://docs.jigx.com/jigx-icons) .
 
 <table><thead><tr><th width="129.93359375">Options</th><th>value</th></tr></thead><tbody><tr><td><code>color</code></td><td>Multiple, use IntelliSense to view the available list.</td></tr><tr><td><code>emphasis</code></td><td>Changing the color, for example, brighter, bolder, or a contrasting hue. <code>extra-low</code> <code>high</code> <code>low</code> <code>low-medium</code> <code>medium</code></td></tr><tr><td><code>onPress</code></td><td>Multiple, use IntelliSense to view the list of available to call. The action is called when the icon is pressed.</td></tr><tr><td><code>shape</code></td><td>Determine the shape around the icon. <code>circle</code> <code>rounded</code> (default) <code>square</code></td></tr><tr><td><code>size</code></td><td>Enter a number value or use an expression to determine the size of the icon.</td></tr><tr><td><code>type</code></td><td>Configure the icon's display as a standalone icon, within a shape, or in a duotone style. The following options are available: <code>basic</code> (default) <code>duotone</code> <code>contained</code></td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
 The examples use a set of custom components called _sections_. The sections are for titles, spacing, and context. The _sections_ code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
 
-#### Icon sizes
+### Icon sizes
 
 {% columns %}
 {% column %}
@@ -140,7 +140,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Icon shapes & types
+### Icon shapes & types
 
 {% columns %}
 {% column %}
@@ -262,7 +262,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Icon bar
+### Icon bar
 
 {% columns %}
 {% column %}

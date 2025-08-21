@@ -8,13 +8,13 @@ Jigx has a set of variables that can be used in expressions to manipulate data s
 
 The `organization` variable is used to get information about the actual organization in Jigx, such as your Jigx organization's id.
 
-### Configuration
+## Configuration
 
 | Result | Expression              |
 | ------ | ----------------------- |
 | id     | `=@ctx.organization.id` |
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% columns %}
 {% column %}
@@ -43,15 +43,15 @@ children:
 
 The system variable in an expression is used to get information about devices, for example, you can find information about the internet connection of the device, the language preference, the device's timezone and location details. System expressions are configured by `=@ctx.system.` followed by the specific variable name.
 
-### Configuration
+## Configuration
 
 The supported variables for the system variable are:
 
 <table><thead><tr><th width="146.71875">Variable</th><th width="261.40234375">Expression</th><th>Results</th></tr></thead><tbody><tr><td>appVersion</td><td><code>=@ctx.system.appVersion</code></td><td>This variable returns the current version of the installed app, which is useful for troubleshooting, crash tracing, and debugging issues. E.g. 1.110.7</td></tr><tr><td>deviceType</td><td><code>=@ctx.system.deviceType</code></td><td>The variable returns the current user's device type, such as tablet or handset.</td></tr><tr><td>geocodes</td><td><code>=@ctx.system.geocodes</code></td><td></td></tr><tr><td>isOffline</td><td><code>=@ctx.system.isOffline</code></td><td>Boolean</td></tr><tr><td>isOnline</td><td><code>=@ctx.system.isOnline</code></td><td>Boolean</td></tr><tr><td>isPortrait</td><td><code>=@ctx.system.isPortrait</code></td><td>The variable is set with a boolean and is used to configure the behavior of components in either portrait or landscape mode.</td></tr><tr><td>locale</td><td><code>=@ctx.system.locale</code></td><td></td></tr><tr><td>user</td><td><code>=@ctx.user.email</code> or <code>=@ctx.user.id</code></td><td>or XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</td></tr><tr><td>isLocationSharingEnabled</td><td><code>=@ctx.system.isLocationSharingEnabled</code></td><td>Boolean</td></tr><tr><td>solution</td><td><code>=@ctx.solution.id</code></td><td>XXXXXXXX-XXX-XXXX-XXXX-XXXXXXXXXXXX</td></tr><tr><td>timezone</td><td><code>=@ctx.system.timezone.offset</code></td><td>Get the information about the device's timezone, it can be: -<code>name</code>: e.g. Europe/Prague -<code>offset</code>: e.g. +200</td></tr><tr><td>geolocation</td><td></td><td><p><strong>Accuracy:</strong> <code>=@ctx.system.geolocation.coords.accuracy</code></p><p><strong>Altitude:</strong> <code>=@ctx.system.geolocation.coords.altitude</code></p><p><strong>Altitude Accuracy:</strong> <code>=@ctx.system.geolocation.coords.altitudeAccuracy</code></p><p><strong>Location - Heading:</strong> <code>=@ctx.system.geolocation.coords.heading</code></p><p><strong>Location - Latitude:</strong> <code>=@ctx.system.geolocation.coords.latitude</code></p><p><strong>Location - Longitude:</strong> <code>=@ctx.system.geolocation.coords.longitude</code></p><p><strong>Location - Speed:</strong> <code>=@ctx.system.geolocation.coords.speed</code></p><p><strong>Location - Timestamp:</strong> <code>=@ctx.system.geolocation.timestamp</code></p><p><strong>Location - Entire array (All details):</strong> <code>=$string(@ctx.system.geolocation)</code></p></td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### System isOffline
+### System isOffline
 
 {% columns %}
 {% column %}
@@ -80,7 +80,7 @@ actions:
 ```
 {% endcode %}
 
-#### System timezone
+### System timezone
 
 {% columns %}
 {% column %}
@@ -109,7 +109,7 @@ children:
             value: =@ctx.system.timezone.offset
 ```
 
-#### System geolocation
+### System geolocation
 
 {% columns %}
 {% column %}
@@ -168,7 +168,7 @@ children:
 
 ```
 
-#### System appVersion & deviceType
+### System appVersion & deviceType
 
 Device information is important to identify the types of devices and the app version users are using. This is useful for troubleshooting issues and diagnosing app crashes. The details can be retrieved in multiple ways when using the system variable, such as on the app screen or when connected to Jigx dev tools in Jigx Builder.
 
@@ -189,7 +189,7 @@ children:
             value: =@ctx.system.deviceType 
 ```
 
-#### System isLocationSharingEnabled
+### System isLocationSharingEnabled
 
 {% columns %}
 {% column %}
@@ -221,11 +221,11 @@ See the example using dynamic data in GitHub.
 
 ## User
 
-### Configuration
+## Configuration
 
 <table><thead><tr><th width="115.625">Result</th><th>Expression</th></tr></thead><tbody><tr><td>Name</td><td><code>=@ctx.user.displayName</code></td></tr><tr><td>Email</td><td><code>=@ctx.user.email</code></td></tr><tr><td>id</td><td><code>=@ctx.user.id</code></td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% columns %}
 {% column %}
@@ -268,13 +268,13 @@ children:
 
 The `solution` variable is used to get information about the specific Jigx solution, for example, name, and id. [Custom variables](<Jigx Variables.md>) can be set in [Solution Settings](<Jigx Variables.md>) in Jigx Management, and the variable value referenced in the solution expression.
 
-### Configuration
+## Configuration
 
 <table><thead><tr><th width="133.98046875">Result</th><th>Expression</th></tr></thead><tbody><tr><td>name</td><td><code>=@ctx.solution.name</code></td></tr><tr><td>id</td><td><code>=@ctx.solution.id</code></td></tr><tr><td>variable value</td><td><code>=@ctx.solution.settings.custom.variableName</code></td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Solution Id and name
+### Solution Id and name
 
 {% columns %}
 {% column %}
@@ -303,7 +303,7 @@ children:
             value: =@ctx.solution.name
 ```
 
-#### Solution settings - custom variable
+### Solution settings - custom variable
 
 {% columns %}
 {% column %}

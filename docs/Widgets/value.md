@@ -20,7 +20,7 @@ Show values and amounts for a quick overview or visual representation on a widge
 
 ## Examples and code snippets
 
-### Value widget (2x2)
+## Value widget (2x2)
 
 {% columns %}
 {% column %}
@@ -117,7 +117,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Value widget (2x4)
+## Value widget (2x4)
 
 {% columns %}
 {% column %}
@@ -220,7 +220,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Value widget (4x2)
+## Value widget (4x2)
 
 {% columns %}
 {% column %}

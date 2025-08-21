@@ -1,6 +1,6 @@
 # Download a file
 
-### Download a file in jig
+## Download a file in jig
 
 {% columns %}
 {% column %}
@@ -179,7 +179,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Downloading multiple files
+## Downloading multiple files
 
 In scenarios where multiple files must be downloaded, use the `execute-entities` action. In the `data` property, configure an expression using the `$map`  JSONATA [Path Operators](<Download a file.md>) to handle multiple entries.
 
@@ -206,7 +206,7 @@ In scenarios where multiple files must be downloaded, use the `execute-entities`
 ```
 {% endcode %}
 
-### Download a file in Jigx Management
+## Download a file in Jigx Management
 
 Files can be uploaded in Management by following these steps:
 

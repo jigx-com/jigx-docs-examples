@@ -112,14 +112,14 @@ This is especially useful in scenarios where devices are shared among multiple e
 
 <table><thead><tr><th width="279.625">Properties</th><th>Description</th></tr></thead><tbody><tr><td><code>Profile</code></td><td>Adding the property with it's values to the index.jigx file will insert the referenced jigs into the header section of the Profile screen.</td></tr><tr><td><code>isPersonalInfoMenuItemVisible</code></td><td>Determine whether the Personal Information menu should be hidden (<code>false</code>) or visible (<code>true</code>). The default setting is <code>true</code>. This menu opens a screen displaying the user's name, email, and avatar, and provides an option to delete the account. Customizing the Profile screen allows this information to be integrated directly, eliminating the need for a menu option.</td></tr><tr><td><code>jigId</code></td><td>Provide the <code>jigId</code> for the jigs that will be displayed in the Profile screen.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * No additional padding is added to the jigs, which may affect the screen's UI. You can use properties such as `background` or `padding` to ensure proper content alignment. This issue is particularly noticeable when using `list-items` versus custom components or other components.
 * When combining or using custom components, it is recommended to manually add `padding` and `margins` for consistent spacing and layout.
 
 ## Examples and code snippets
 
-### Extended Profile screen with hidden personal information menu
+## Extended Profile screen with hidden personal information menu
 
 {% columns %}
 {% column %}
@@ -212,7 +212,7 @@ profile:
 {% endtab %}
 {% endtabs %}
 
-### Extended Profile screen with list
+## Extended Profile screen with list
 
 {% columns %}
 {% column %}
@@ -305,7 +305,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-### Extended Profile screen using custom components (alpha)
+## Extended Profile screen using custom components (alpha)
 
 {% columns %}
 {% column %}

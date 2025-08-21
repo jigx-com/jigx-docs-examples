@@ -14,14 +14,14 @@ Some properties are common to all components, see [Common component properties](
 
 <table data-header-hidden><thead><tr><th width="156.296875">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>Choose from the provided list of available actions, for example, use the <code>go-to</code> action to open a different jig.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * _Jig-level:_ The card component is only available for use in a [default](<../Jig Types/jig_default.md>) jig.
 * _Component-level_: The [carousel](carousel.md) component has the option to use the card component within the carousel to create a visually appealing carousel.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Card containing a form
+### Card containing a form
 
 {% columns %}
 {% column %}
@@ -102,7 +102,7 @@ actions:
 ```
 {% endcode %}
 
-#### Card in a carousel
+### Card in a carousel
 
 {% columns %}
 {% column %}
@@ -152,7 +152,7 @@ children:
 ```
 {% endcode %}
 
-#### Cards with color
+### Cards with color
 
 {% columns %}
 {% column %}
@@ -323,7 +323,7 @@ options:
 {% endtab %}
 {% endtabs %}
 
-#### Card with style
+### Card with style
 
 {% columns %}
 {% column %}
@@ -383,7 +383,7 @@ children:
 ```
 {% endcode %}
 
-#### Card with onPress
+### Card with onPress
 
 {% columns %}
 {% column width="41.66666666666667%" %}

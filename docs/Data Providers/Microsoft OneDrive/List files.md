@@ -11,24 +11,24 @@ Often there is a requirement to list files or get one specific file from OneDriv
 
 <figure><img src="../../../.gitbook/assets/OneDtiveList.PNG" alt="List OneDrive files" width="188"><figcaption><p>List OneDrive files</p></figcaption></figure>
 
-### Properties
+## Properties
 
 The following properties are required in the YAML:
 
 * `entity` - path in OneDrive
 * `tokenType` - OAuth token credentials name
 
-### Component
+## Component
 
 There are a number of elements that can be used to display the file(s), for example, `component.list`, `component.form` with a dropdown, or `jig.list`.
 
-### Considerations
+## Considerations
 
 * Getting or listing files from OneDrive does not download the file it just displays the details of the file from the path (`entity`) specified
 * All files in a OneDrive directory can be listed and some directories may have many files. Consider the amount of items you want returned when creating the query for the local data provider.
 * A delay or time lag of several minutes could be experienced when files are syncing between the device and OneDrive
 
-### Code Example
+## Code Example
 
 The code example below provides an example of a list of invoices in the `myfiles` directory of OneDrive.
 
@@ -85,7 +85,7 @@ actions:
 ```
 {% endcode %}
 
-#### See also
+### See also
 
 * [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
 * [Create a file](<Create a file.md>)

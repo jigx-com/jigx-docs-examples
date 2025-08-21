@@ -11,7 +11,7 @@ You can create a file in OneDrive from a solution in the Jigx App. Use the [medi
 
 <figure><img src="../../../.gitbook/assets/OneDriveCreate.PNG" alt="Create a fle in OneDrive"><figcaption><p>Create a fle in OneDrive</p></figcaption></figure>
 
-### Properties
+## Properties
 
 The following properties are required in the YAML:
 
@@ -21,18 +21,18 @@ The following properties are required in the YAML:
 * `tokenType` - OAuth token credentials name
 * `method: create`
 
-### Component
+## Component
 
 To create a file use the `media-field` component to select the file. Use the `image`, or `any` property in the `media-field` component to specify the `mediaType`.
 
-### Considerations
+## Considerations
 
 * The create method does not allow you to create a file with a filename that already exists and an error will occur. To ensure the cause of the error is understood Jigx recommends you build in logic using a `modal` to show a message that the filename is already in use.
 * A new file is created even when an `id` is specified.
 * Using the `method: save` will create a new file if the filename does not exist, otherwise the save will function as an update method.
 * A delay or time lag of several minutes could be experienced when files are syncing between the device and OneDrive.
 
-### Code example
+## Code example
 
 The code below provides an example for creating an invoice in the `myfiles` directory of OneDrive.
 
@@ -179,7 +179,7 @@ actions:
 ```
 {% endcode %}
 
-#### See also
+### See also
 
 * [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
 * [Update/Save a file](<Update_Save a file.md>)

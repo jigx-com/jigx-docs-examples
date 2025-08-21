@@ -6,7 +6,7 @@
 Execute-entities can't be used if you're using [Static Data](https://docs.jigx.com/examples/static).&#x20;
 {% endhint %}
 
-### Configuration options
+## Configuration options
 
 An `execute-entities` action can be used in multiple areas:
 
@@ -15,7 +15,7 @@ An `execute-entities` action can be used in multiple areas:
 3. In onPress/onChange events (if the component has these options)
 4. In onRefresh/onFocus
 
-### Reference data properties and values as a group
+## Reference data properties and values as a group
 
 With the `execute-entities` action, you can reference data properties and values as a group instead of listing them individually to be saved or created. See the data-grouped example below:
 
@@ -57,13 +57,13 @@ actions:
 {% endtab %}
 {% endtabs %}
 
-### Offline remote data handling
+## Offline remote data handling
 
 Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](https://docs.jigx.com/offline-remote-data-handling) explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities, and provides examples and code samples.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Execute-entities in action
+### Execute-entities in action
 
 {% columns %}
 {% column %}
@@ -91,7 +91,7 @@ actions:
 ```
 {% endcode %}
 
-#### Execute-entities in action list
+### Execute-entities in action list
 
 **Example:** See the full example of execute-entities in an action list in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-actionlist.jigx).
 
@@ -128,7 +128,7 @@ actions:
 ```
 {% endcode %}
 
-#### Execute-entities in onPress/onChange event
+### Execute-entities in onPress/onChange event
 
 Here is the example of execute-entities in onPress/onChange event in [list-item](../Components/list/list-item.md).
 
@@ -168,7 +168,7 @@ onChange:
 {% endtab %}
 {% endtabs %}
 
-#### Execute-entities in onRefresh/onFocus
+### Execute-entities in onRefresh/onFocus
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S3C6VXWWnlIVhWPXbXlXh\_actioneenitiesonfocus.PNG" size="80" position="center" caption="Execute-entites" alt="Execute-entites" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S3C6VXWWnlIVhWPXbXlXh\_actioneenitiesonfocus.PNG"}
 
@@ -202,7 +202,7 @@ onFocus:
 {% endtab %}
 {% endtabs %}
 
-#### Deleting multiple data records using execute-entities
+### Deleting multiple data records using execute-entities
 
 To delete multiple data records in a Dynamic data table use the execute entities action with an expression as shown below.
 
@@ -226,7 +226,7 @@ actions:
 ```
 {% endcode %}
 
-#### Updating multiple data records using execute-entities
+### Updating multiple data records using execute-entities
 
 To update multiple data records in a Dynamic data table use the execute entities action with an expression as shown below.
 
@@ -248,6 +248,6 @@ actions:
           data: =@ctx.datasources.penguin-species ~> | $ | {"endangered":"Yes"} |    
 ```
 
-#### Updating multiple data records in a single REST call
+### Updating multiple data records in a single REST call
 
 See [Update multiple records in a single REST call](<../Data Providers/REST/Create an app using REST APIs/Update multiple records in a single REST call.md>) for an example of using execute-entities with REST.

@@ -31,7 +31,7 @@ Some properties are common to all components, see [Common component properties](
 
 :::::ExpandableHeading
 
-### Set solution state
+## Set solution state
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -51,7 +51,7 @@ Some properties are common to all components, see [Common component properties](
 
 :::::ExpandableHeading
 
-### Set solution state in the onFocus event
+## Set solution state in the onFocus event
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -71,7 +71,7 @@ Some properties are common to all components, see [Common component properties](
 
 :::::ExpandableHeading
 
-### Set and reset solution state in a jig (not sure this is makes sense?)
+## Set and reset solution state in a jig (not sure this is makes sense?)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -89,4 +89,4 @@ Some properties are common to all components, see [Common component properties](
 
 :::::
 
-###
+##

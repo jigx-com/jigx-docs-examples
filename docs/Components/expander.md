@@ -4,7 +4,7 @@ The expander component is a collapsible element that initially displays a small 
 
 ![Expander Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xDQizxD7Vjjgr1tbdQpPr_expander.png)
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](expander.md) for a list and their configuration options.
 
@@ -14,9 +14,9 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="204.4375"></th><th></th></tr></thead><tbody><tr><td><code>onContentPress</code></td><td>Action triggered while pressing on the content in the expander. Use IntelliSense (ctrl+space) to see the available list of actions.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Expander with titles in a header, entity-fields and bar-chart
+### Expander with titles in a header, entity-fields and bar-chart
 
 {% columns %}
 {% column %}
@@ -153,7 +153,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Expander with stage in header and entity-field
+### Expander with stage in header and entity-field
 
 {% columns %}
 {% column %}
@@ -341,7 +341,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Expander with variant, divider & expandIcon
+### Expander with variant, divider & expandIcon
 
 {% columns %}
 {% column %}

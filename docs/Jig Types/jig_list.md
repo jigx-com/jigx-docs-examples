@@ -10,7 +10,7 @@ Use the `jig.list` to create a list from a datasource and style that list to you
 {% endcolumn %}
 {% endcolumns %}
 
-### Considerations
+## Considerations
 
 * This jig type is similar to the component List, with the only exception that [list components](../Widgets/list.md) is a component that you use on a [Default jig](jig_default.md) with other items, whereas the List jig is a jig dedicated to a list only.
 * Each item in a list can be called individually through indexing. Lists are a compound data type made up of smaller parts and are very flexible because they can have values added, removed, and changed.
@@ -66,13 +66,13 @@ rating:
 
 <table><thead><tr><th width="211.640625">State Configuration</th><th width="227.34765625">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.jig.state.</code></td><td>activeItem activeItemId amounts filter isHorizontal isRefreshing isSelectable isSelectActive searchText selected value</td><td>State is set by the creator in the YAML. State applies to the jig</td></tr><tr><td><code>=@ctx.current.state.</code></td><td>amount checked</td><td>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="success" %}
 The code below is an extract from the full _jigx-samples_ solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full _jigx-samples_ project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples), and follow the instructions in [Setting up your solution](jig_list.md).
 {% endhint %}
 
-#### Simple List
+### Simple List
 
 {% columns %}
 {% column %}
@@ -174,7 +174,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Lists with styles
+### Lists with styles
 
 {% columns %}
 {% column %}
@@ -348,7 +348,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### List with Expanders (using Titles)
+### List with Expanders (using Titles)
 
 {% columns %}
 {% column %}
@@ -470,7 +470,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### List with Stages
+### List with Stages
 
 {% columns %}
 {% column %}
@@ -597,7 +597,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### List with Product-items
+### List with Product-items
 
 {% columns %}
 {% column %}
@@ -701,7 +701,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### List with Avatars
+### List with Avatars
 
 {% columns %}
 {% column %}
@@ -806,7 +806,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### List with right numbered badges
+### List with right numbered badges
 
 {% columns %}
 {% column %}
@@ -915,7 +915,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### List with Pie Charts
+### List with Pie Charts
 
 {% columns %}
 {% column %}
@@ -1000,7 +1000,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Horizontal list
+### Horizontal list
 
 {% columns %}
 {% column %}
@@ -1132,7 +1132,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Lists with Search functionality
+### Lists with Search functionality
 
 {% columns %}
 {% column %}
@@ -1249,7 +1249,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Lists with Filter functionality
+### Lists with Filter functionality
 
 {% columns %}
 {% column %}
@@ -1367,7 +1367,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Lists with Search and Filter functionality
+### Lists with Search and Filter functionality
 
 {% columns %}
 {% column %}
@@ -1476,7 +1476,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Filtered list with default tab set
+### Filtered list with default tab set
 
 {% columns %}
 {% column %}
@@ -1566,7 +1566,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Selectable lists
+### Selectable lists
 
 {% columns %}
 {% column %}
@@ -1675,7 +1675,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Lists with active items
+### Lists with active items
 
 {% columns %}
 {% column %}
@@ -1792,7 +1792,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### List with Sections
+### List with Sections
 
 {% columns %}
 {% column %}
@@ -1900,7 +1900,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### List with items contained in a card
+### List with items contained in a card
 
 {% columns %}
 {% column %}
@@ -1948,7 +1948,7 @@ item:
 ```
 {% endcode %}
 
-#### List with ratings as a value
+### List with ratings as a value
 
 {% columns %}
 {% column %}
@@ -2111,7 +2111,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### List with ratings with a value, minimum, maximum and icon
+### List with ratings with a value, minimum, maximum and icon
 
 {% columns %}
 {% column %}
@@ -2269,7 +2269,7 @@ options:
 {% endtab %}
 {% endtabs %}
 
-#### List with ratings as a percentage
+### List with ratings as a percentage
 
 {% columns %}
 {% column %}
@@ -2356,7 +2356,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### List with ratings with a percentage, minimum, maximum and icon
+### List with ratings with a percentage, minimum, maximum and icon
 
 {% columns %}
 {% column %}
@@ -2518,7 +2518,7 @@ options:
 {% endtab %}
 {% endtabs %}
 
-#### List with multiple tags
+### List with multiple tags
 
 {% columns %}
 {% column %}
@@ -2604,7 +2604,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### List with ratings and tags
+### List with ratings and tags
 
 {% columns %}
 {% column %}

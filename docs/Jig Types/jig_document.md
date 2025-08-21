@@ -17,7 +17,7 @@ The document jig type is used to display documents connected to your solution. T
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all jig types, see [Common jig type properties](jig_document.md) for a list and their configuration options.
 
@@ -25,13 +25,13 @@ Some properties are common to all jig types, see [Common jig type properties](ji
 
 <table><thead><tr><th width="147.6171875">Other options</th><th></th></tr></thead><tbody><tr><td><code>description</code></td><td>The general description of the document.</td></tr><tr><td><code>badge</code></td><td>Enhance your widget with customizable badges, for instance, show the number of documents. Add the <code>badge</code> property to the jig YAML with an expression.</td></tr><tr><td><code>icon</code></td><td>The icon will be displayed on the widget of this jig. Start typing the name of the icon to invoke the available list in IntelliSense. See <a href="jig_document.md">Jigx icons</a> for information on working with icons.</td></tr><tr><td><code>placeholders</code></td><td>Create a placeholder to show when there is no data to use yet. See tips and tricks -use a placeholder for a placeholder example.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="success" %}
 The code below is an extract from the full _jigx-samples_ solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full _jigx-samples_ project from :Link\[GitHub]{href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples" newTab="true" hasDisabledNofollow="false"}, and follow the instructions in [Setting up your solution](jig_document.md).
 {% endhint %}
 
-#### PDF Document Example
+### PDF Document Example
 
 {% columns %}
 {% column %}
@@ -110,7 +110,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### HTML Document Example (URL)
+### HTML Document Example (URL)
 
 {% columns %}
 {% column %}
@@ -189,7 +189,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### HTML Document Example (Content)
+### HTML Document Example (Content)
 
 You can also use this jig type to pass raw HTML into the webview (without linked CSS, JS etc.).
 
@@ -248,7 +248,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### HTML Document Example (Content with Message Listener)
+### HTML Document Example (Content with Message Listener)
 
 {% columns %}
 {% column %}

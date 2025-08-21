@@ -9,14 +9,14 @@ updatedAt: Thu Mar 06 2025 08:38:51 GMT+0000 (Coordinated Universal Time)
 
 In this example, we **read** the employee data records we created in the employee Dynamic Data table ([Creating Dynamic Data](<Creating Dynamic Data.md>)), to create a list of the employees and their details.
 
-### Datasources, jig & component
+## Datasources, jig & component
 
 1. **default.jigx** is the database where the Dynamic Data table is defined.
 2. [sqlite](../../Datasource/sqlite.md) datasource calls the Dynamic Data provider, using an SQL query to return the data.
 3. [jig.list](<../../Jig Types/jig_list.md>) is the type of jig we will use to list the data.
 4. [expander](../../Components/expander.md) component to show the Dynamic Data in.
 
-### Examples and code snippets
+## Examples and code snippets
 
 This example uses the Dynamic Data table, columns, and data records created in the [Creating Dynamic Data](<Creating Dynamic Data.md>) example to create a list of employees with their details.
 

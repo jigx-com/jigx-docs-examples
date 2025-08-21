@@ -18,7 +18,7 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2X
 
 ## Examples and code snippets
 
-### Avatar widget example
+## Avatar widget example
 
 {% columns %}
 {% column %}
@@ -86,7 +86,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Avatar widget with title
+## Avatar widget with title
 
 {% columns %}
 {% column %}
@@ -135,7 +135,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Avatar widget/group with list
+## Avatar widget/group with list
 
 {% columns %}
 {% column %}
@@ -220,7 +220,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Avatar widget/group with title and list
+## Avatar widget/group with title and list
 
 {% columns %}
 {% column %}

@@ -9,9 +9,9 @@ updatedAt: Tue Mar 04 2025 11:24:36 GMT+0000 (Coordinated Universal Time)
 
 The web-view component allows the user to use an URL or pass raw HTML as the preview content.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Long-press on a widget
+### Long-press on a widget
 
 {% columns %}
 {% column %}
@@ -58,7 +58,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Long-press - onPress action
+### Long-press - onPress action
 
 {% columns %}
 {% column %}

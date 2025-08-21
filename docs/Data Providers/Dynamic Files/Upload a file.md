@@ -1,6 +1,6 @@
 # Upload a file
 
-### Upload file in a jig
+## Upload file in a jig
 
 {% columns %}
 {% column %}

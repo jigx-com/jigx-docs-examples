@@ -10,7 +10,7 @@ Image\[]{alt="Titles Preview" src="https://archbee-image-uploads.s3.amazonaws.co
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](titles.md) for a list and their configuration options.
 
@@ -18,13 +18,13 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="169.18359375">Other options</th><th></th></tr></thead><tbody><tr><td><code>align</code></td><td><p>The alignment of the content inside of your component. Where the container and text should be aligned, the options are:</p><ul><li><code>left</code></li><li><code>right</code></li><li><code>center</code></li></ul></td></tr><tr><td><code>icon</code></td><td>Add an icon to the title. A list of icons is available. See for more information.</td></tr><tr><td><code>iconColor</code></td><td>Sets the color of the icon, choose a color from the provided color palette. Default color is black if the property is not specified in the YAML. See the list of available colors in .</td></tr><tr><td><code>style</code></td><td><p>The following styling sets are available:</p><ul><li><code>isNegative</code></li><li><code>isPositive</code></li><li><code>isWarning</code></li></ul></td></tr><tr><td><code>subtitle</code></td><td>Add a <code>subtitle</code>/ short description of the component.</td></tr></tbody></table>
 
-### Consideration
+## Consideration
 
 * `component.titles` can only be used in the `centerElement` of the `component.expander`
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Expander with titles in a header
+### Expander with titles in a header
 
 {% columns %}
 {% column %}

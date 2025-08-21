@@ -2,7 +2,7 @@
 
 This action redirects you to another jig. The `go-to` action can be used with elements like `swipeable` and `rightElement` or combined with another action. When paired with another action, it is triggered after the main action to navigate to a specified screen, for example, saving a date in a form and then opening a list of customers. `go-to` helps configure navigation, ensuring a seamless app flow. See [Navigation](https://docs.jigx.com/navigation) for more information.
 
-### Configuration option
+## Configuration option
 
 A go-to action can be set up in various ways:
 
@@ -13,7 +13,7 @@ A go-to action can be set up in various ways:
 5. Use the `go-to` to open a jig as a modal using the `isModal` property set to `true`. Set to `false` opens navigates to the specified jig.
 6. Use the `behaviour` property to determine if you want to push the jig into the history of navigation, by using the `new` value, or reuse the one you already have in history by using the `existing` value.
 
-### Considerations
+## Considerations
 
 * Current known limitations when using the `isModal` property include:
   * Unable to send a value from the jig modal to the parent jig.
@@ -23,9 +23,9 @@ A go-to action can be set up in various ways:
         1. When the drawer is open, it will only open in the jig panel.
         2. When the drawer is closed, it will cover the entire screen, but it will not display as a modal.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### go-to as an action
+### go-to as an action
 
 {% columns %}
 {% column %}
@@ -52,7 +52,7 @@ actions:
 ```
 {% endcode %}
 
-#### go-to swipeable left/right
+### go-to swipeable left/right
 
 {% columns %}
 {% column %}
@@ -113,7 +113,7 @@ item:
 {% endtab %}
 {% endtabs %}
 
-#### go-to right button element
+### go-to right button element
 
 {% columns %}
 {% column %}
@@ -150,7 +150,7 @@ item:
 ```
 {% endcode %}
 
-#### go-to onSuccess
+### go-to onSuccess
 
 {% columns %}
 {% column %}
@@ -192,7 +192,7 @@ actions:
 ```
 {% endcode %}
 
-#### go-to open a jig as a modal
+### go-to open a jig as a modal
 
 {% columns %}
 {% column %}
@@ -395,7 +395,7 @@ options:
 {% endtab %}
 {% endtabs %}
 
-#### go-to using new & existing behaviour
+### go-to using new & existing behaviour
 
 In this example, three jigs are configured to create a stack of data for each guest, including their Name, Age, and Address. Each jig's `go-to` action is set with the `behaviour` property as `new`, enabling new guest details to be pushed into the app history. In the final jig, a secondary `go-to` action is added. This action introduces a button to review each guest's data by setting the `behaviour` property to `existing` and linking to the first jig in the stack via the `linkTo` property. The review process will cycle through each guest's details in the stack before completing.
 

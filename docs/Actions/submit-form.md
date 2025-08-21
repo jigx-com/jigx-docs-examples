@@ -9,13 +9,13 @@ The `submit-form` action can be set up as a primary action on default jig with a
 3. On the default jig you need to create a component. form, the instance Id, which will be the id of the form.
 4. You can use the form's components in the form, and the instanceId of each component will be the name of the column of the data row that will be saved.
 
-### Offline remote data handling
+## Offline remote data handling
 
 Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](https://docs.jigx.com/offline-remote-data-handling) explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities and provides examples and code samples.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### submit-form example
+### submit-form example
 
 Example of submit-form to save a new employee into the dynamic-data table. The first name, last name, and phone number will be saved in the employees' data table.
 

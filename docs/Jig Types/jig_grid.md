@@ -12,7 +12,7 @@ The `jig.grid` enables you to create grid layouts in your app, organizing conten
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 The `jig.grid` has two available configuration options:
 
@@ -36,9 +36,9 @@ The `jig.grid` has two available configuration options:
   * If an `icon` is specified in the `component.widget` of the `grid-item`, it overrides all other icon settings.
 * A jig with inputs in it's `title` will display without a title (blank) as the jig would not have received those inputs.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Custom grid jig
+### Custom grid jig
 
 {% columns %}
 {% column %}
@@ -399,7 +399,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Auto grid jig
+### Auto grid jig
 
 {% columns %}
 {% column %}
@@ -466,7 +466,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Custom grid jig with default widget icons and titles
+### Custom grid jig with default widget icons and titles
 
 {% columns %}
 {% column %}
@@ -766,7 +766,7 @@ actions:
 {% endtab %}
 {% endtabs %}
 
-#### Custom grid with jig icons
+### Custom grid with jig icons
 
 {% columns %}
 {% column %}
@@ -1076,7 +1076,7 @@ actions:
 {% endtab %}
 {% endtabs %}
 
-#### Custom grid jig with custom widget icons
+### Custom grid jig with custom widget icons
 
 {% columns %}
 {% column %}
@@ -1396,7 +1396,7 @@ actions:
 {% endtab %}
 {% endtabs %}
 
-#### Custom grid jig with no widget and image titles
+### Custom grid jig with no widget and image titles
 
 {% columns %}
 {% column %}
@@ -1722,7 +1722,7 @@ actions:
 {% endtab %}
 {% endtabs %}
 
-#### Custom grid with custom widget and image titles
+### Custom grid with custom widget and image titles
 
 {% columns %}
 {% column %}
@@ -2056,7 +2056,7 @@ actions:
 {% endtab %}
 {% endtabs %}
 
-#### Custom grid widgets with OnPress event
+### Custom grid widgets with OnPress event
 
 {% columns %}
 {% column %}

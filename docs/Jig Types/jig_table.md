@@ -4,37 +4,37 @@ The table jig displays structured data in rows and columns, allowing users to vi
 
 <figure><img src="../../.gitbook/assets/table-iPad3.png" alt="Table jig" width="563"><figcaption><p>Table jig</p></figcaption></figure>
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all jig types, see [Common jig type properties](jig_table.md) for a list and their configuration options.
 
 The table Jigx type includes multiple child components, each of which can be configured individually based on the desired table layout. The properties for each component are described below.
 
-#### component.table-row
+### component.table-row
 
 `component.table-row`- The table jig is configured with a datasource, and a single `component.table-row` is configured and iterates through the datasource to display each row. This is a required component.
 
 <table><thead><tr><th width="192.47265625">Structure</th><th></th></tr></thead><tbody><tr><td><code>component.table-row</code></td><td><p>This is similar in configuration to a where a single <code>table-row</code> is configured and iterates through the datasource.</p><ul><li><code>instanceId</code> - Unique identifier of the table-row component. When defined its possible to address its state. <code>InstanceId:</code> Expects a string.</li><li><code>when</code> - used to determine under which conditions the table will display. If the property is set to <code>false</code>, the component won't be displayed. Default is <code>true</code>. An expression can be configured in this property.</li></ul></td></tr><tr><td><code>color</code></td><td>Highlight the row(s) with a distinct background color for emphasis or status. For example, <code>color:</code> <code>- when: =@ctx.current.item.age > 60</code> <code>color: warning</code></td></tr><tr><td><code>data</code></td><td>Reference the defined datasource to use in the <code>component.table-row</code>.</td></tr><tr><td><code>datasources</code></td><td>Configure a datasource to call the data to display in the table rows.</td></tr><tr><td><code>onPress</code></td><td>Action that will be triggered by pressing on the table row.</td></tr></tbody></table>
 
-#### component.table-cell
+### component.table-cell
 
 This component is part of the `columnDefinition` setup, allowing reusable configurations for customizing column cells and ensuring consistent, flexible table layouts.
 
 <table><thead><tr><th width="186.359375">structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td>Define the cell <code>value</code> by using a , or <a href="../Custom components _Alpha_/Text _Alpha_.md">component.text</a>. Specify a value for the cell, this can be text that can be evaluated, translated, and formatted.</td></tr><tr><td><code>onPress</code></td><td>Action that will be triggered by pressing on the table cell for a specific column.</td></tr></tbody></table>
 
-#### component.table-header-cell
+### component.table-header-cell
 
 This component is part of the `columnDefinition` setup, allowing reusable configurations for column header cells and ensuring consistent, flexible table layouts.This component targets the cells in the columns' header.
 
 <table><thead><tr><th width="153.8515625">Structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td>Define the cell value by using a or by using a <a href="../Custom components _Alpha_/Text _Alpha_.md">component.text</a>. Specify a value for the cell, this can be text that can be evaluated, translated, and formatted.</td></tr><tr><td><code>onPress</code></td><td>Action that will be triggered by pressing on the text in the table header's cell for a specific column.</td></tr></tbody></table>
 
-#### component.table-footer-cell
+### component.table-footer-cell
 
 This component is part of the `columnDefinition` setup, allowing reusable configurations for column footer cells and ensuring consistent, flexible table layouts.This component targets the cells in the columns' footer.
 
 <table><thead><tr><th width="148.1015625">Structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td>Define the cell value by using a , or by using <a href="../Custom components _Alpha_/Text _Alpha_.md">component.text</a>. Specify a value for the cell, this can be text that can be evaluated, translated, formatted.</td></tr><tr><td><code>onPress</code></td><td>Action that will be triggered by pressing on the text in the table footer's cell for a specific column.</td></tr></tbody></table>
 
-#### component.table-footer
+### component.table-footer
 
 * This component targets the entire table footer. All configured properties will be applied uniformly to it.
 *   This property works in conjunction with the `component.table-footer-cell`. When a `component.table-footer-cell` is defined within the `columnDefinition`, ensure that the `component.table-footer` property is also included to enable the footer component to render. See the YAML example below.
@@ -46,7 +46,7 @@ This component is part of the `columnDefinition` setup, allowing reusable config
 
 <table><thead><tr><th width="148.25390625">Structure</th><th></th></tr></thead><tbody><tr><td><code>color</code></td><td>Add a distinct background color for emphasis or status to the table footer. For example, <code>color:</code> <code>- when: true</code> <code>color: color4</code></td></tr></tbody></table>
 
-#### component.table-header
+### component.table-header
 
 * This component targets the entire table header. All configured properties will be applied uniformly to it.
 *   Specifying the component without additional properties will render the header columns using the `column.id` as the header text.
@@ -56,7 +56,7 @@ This component is part of the `columnDefinition` setup, allowing reusable config
       type: component.table-header
     ```
 
-#### columns
+### columns
 
 <table><thead><tr><th width="179.921875">Other options</th><th></th></tr></thead><tbody><tr><td><code>columns</code></td><td><p>Defines the structure and configuration for a single table column, either through inline definitions or by referencing a reusable column definition. Columns can also be dynamically set using a single expression for flexible configuration across all columns.</p><ul><li><code>id:</code>Specifies a unique identifier for the column, used to reference the column’s data. The name must be the same as the datasource column name for the data to display.</li><li><code>columnDefinition</code>- a reusable configuration for a column, providing consistency across multiple columns. A <code>columnDefinitionId:</code> is required as an identifier of the column definition to be used.</li></ul></td></tr><tr><td><code>columnDefinition</code></td><td><p>Defines reusable configurations for table columns, including properties like width, header, footer, and cell customization, allowing for flexible and consistent table layouts.</p><ul><li><code>Column Name</code>- must match the name in the <code>column:id</code></li><li><code>cell</code> - Sets the value for the individual cells in the column. You can use <code>=@ctx.current.item.</code>, <code>=@ctx.current.column.id</code>, or <code>=@ctx.current.cell.value</code></li><li><code>footer</code> - <code>=@ctx.current.column.id</code></li><li><code>header</code> - <code>=@ctx.current.column.id</code></li><li><code>width</code> - Customizes the width of columns to improve visibility and fit specific content, offering flexibility in the table layout. Options include <code>large</code>, <code>regular</code>, <code>small</code>.</li></ul></td></tr><tr><td><code>selectionToolbar</code></td><td>The <code>selectionToolbar</code> appears at the bottom of the table when rows are selected. To enable row selection, <code>isSelectable: true</code> must be set at the root level of the jig. The toolbar displays a tag with the number of selected rows, followed by the configured action. Avoid overloading the <code>selectionToolbar</code> with too many actions or long labels, as it may compress, break layout, or disappear if space runs out.</td></tr><tr><td><code>tableHeader</code></td><td>Define the appearance and behavior of all table headers, including <code>color</code> or <code>onPress</code> actions.</td></tr><tr><td><code>tableFooter</code></td><td>Define the appearance and behavior of all table footers, including <code>color</code> or <code>onPress</code> actions.</td></tr><tr><td><code>toolbar</code></td><td>The <code>toolbar</code> appears at the top of the table as a buttons. The toolbar is configured with actions, such as <code>got-to</code> or <code>execute-entity</code> to create a new row.</td></tr><tr><td><code>sort</code></td><td><p>Initial sort configuration for the table.</p><ul><li><code>columnId</code> - Provide the column name that the sorting will be applied to.</li><li><code>isDescending</code> - set to <code>true</code> sorts descending, set to <code>false</code> sorts ascending. <code>=@ctx.jig.state.sort</code> is used to access the sort state within the jig. To add sorting to a table the <code>jig.table</code> must be configured with the following: 1) <code>isSortable: true</code> at the root level. 2) The <code>data</code> property must be set with an expression to sort the data in the columns. See <em>data-yaml</em> code example below. 3) The <code>sort</code> property configured at the root level to configure descending or ascending. See <em>sort-yaml</em> code example below.</li></ul></td></tr></tbody></table>
 
@@ -84,16 +84,16 @@ sort:
 
 <table><thead><tr><th width="173.3203125">State Configuration</th><th width="107.90234375">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.jig.state.</code></td><td>sort</td><td>Used to access the sorting state in the table.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * There is no horizontal scroll. Depending on the device, some columns may not be visible. For the best experience when viewing tables with many columns in the app, we recommend using a tablet.
 * To enable sorting in a table, set `isSortable: true` at the root level. The `data` property must include an expression for _sorting_ and _lookup_, and the `sort: isDescending` property must be set to either `false` for ascending or `true` for descending.
 * To enable row selection, `isSelectable: true` must be set at the root level of the jig. The `selectableToolbar` becomes visible only when rows are selected and appears at the bottom of the table. It displays a tag showing the number of selected rows, followed by the configured action.
 * Avoid overloading the `selectionToolbar` with too many actions or long labels, as it may compress, break layout, or disappear if space runs out.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Basic table with color
+### Basic table with color
 
 {% columns %}
 {% column %}
@@ -170,7 +170,7 @@ columns:
 ```
 {% endcode %}
 
-#### Table with header, footer and sorting
+### Table with header, footer and sorting
 
 {% columns %}
 {% column %}
@@ -279,7 +279,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Table with column widths, columnDefinitions, header and footer
+### Table with column widths, columnDefinitions, header and footer
 
 {% columns %}
 {% column %}
@@ -397,7 +397,7 @@ options:
 {% endtab %}
 {% endtabs %}
 
-#### Edit table rows using onPress
+### Edit table rows using onPress
 
 {% columns %}
 {% column %}
@@ -542,7 +542,7 @@ options:
 {% endtab %}
 {% endtabs %}
 
-#### Delete selected rows (selectableToolbar)
+### Delete selected rows (selectableToolbar)
 
 {% columns %}
 {% column %}
@@ -615,7 +615,7 @@ selectionToolbar:
 ```
 {% endcode %}
 
-#### Add a new row (toolbar)
+### Add a new row (toolbar)
 
 {% columns %}
 {% column %}

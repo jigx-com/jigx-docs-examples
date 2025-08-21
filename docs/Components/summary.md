@@ -12,7 +12,7 @@ The summary is fixed and displays even when the screen is scrolled. Make the sum
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](summary.md) for a list and their configuration options.
 
@@ -22,7 +22,7 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="146.0390625">Actions</th><th></th></tr></thead><tbody><tr><td><code>OnPress</code></td><td>The action is triggered while pressing on the <code>LeftIcon</code> in the summary. Use IntelliSense (ctrl+space) to see the available list of actions.</td></tr><tr><td><a href="../Actions.md">Actions</a></td><td>By using the summary component along with actions, you can unlock a powerful feature that enables you to take necessary actions based on the information available from the summary. For instance, adding a sales opportunity. This feature can significantly enhance the usability of your jig and make it more efficient.</td></tr></tbody></table>
 
-### Consideration
+## Consideration
 
 * The summary component is available on all [Jig Types](<../Jig Types.md>).
 * To show an empty `title` use `title: ' '`.
@@ -35,9 +35,9 @@ Some properties are common to all components, see [Common component properties](
   * If only the parent has an `action` or `summary`, it automatically applies to the child.
   * If only the child has an `action` or `summary`, it is used in the parent jig as well.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Summary - default
+### Summary - default
 
 {% columns %}
 {% column %}
@@ -83,7 +83,7 @@ item:
 ```
 {% endcode %}
 
-#### Summary - cart
+### Summary - cart
 
 {% columns %}
 {% column %}
@@ -308,7 +308,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Summary - counter
+### Summary - counter
 
 {% columns %}
 {% column %}
@@ -533,7 +533,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Summary with action
+### Summary with action
 
 {% columns %}
 {% column %}

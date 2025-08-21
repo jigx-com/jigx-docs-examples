@@ -13,13 +13,13 @@ The _card_ component adds context or highlights information in the jig. The card
 
 For steps on creating a custom component, see [How to create a custom component](<../Custom components _Alpha_.md>).
 
-### Configuration options
+## Configuration options
 
 You can use `when` and `instanceId` with `component.card`, add the properties before the `options` property. The available list of options is shown below.
 
 <table><thead><tr><th width="135.02734375">Options</th><th>Value</th></tr></thead><tbody><tr><td><code>color</code></td><td>Multiple, use IntelliSense to view the available list.</td></tr><tr><td><code>direction</code></td><td><code>row</code> - creates a vertical layout in a row. <code>column</code> - creates a horizontal layout in a column.</td></tr><tr><td><code>emphasis</code></td><td><code>extra-low</code>, <code>low</code>, <code>low-medium</code>, <code>medium</code>, <code>high</code></td></tr><tr><td><code>onPress</code></td><td>Multiple, use IntelliSense to view the available list of . The action is called when the card is pressed.</td></tr><tr><td><code>style</code></td><td><code>isDisabled</code> - true or false</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * The card component has predefined behavior for its children, ensuring the children's components, such as images, are flexible by default.
 * The [View (Alpha)](<View _Alpha_.md>) component combined with the card enables the precision of the layout design. For example, the view can be used to create rows to contain cards and provide spacing between the cards.
@@ -27,9 +27,9 @@ You can use `when` and `instanceId` with `component.card`, add the properties be
 * The recommended approach when using `component.image` is to use [component view](<View _Alpha_.md>) as a wrapper component with a defined `height,` e.g., 100, and setting `isFlexible: true` for each image. This allows the images to grow into the parent component space.
 * By default, `children` components are stacked in a column.
 
-### Example and code snippets
+## Example and code snippets
 
-#### Card
+### Card
 
 {% columns %}
 {% column %}
@@ -139,7 +139,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Cards with images
+### Cards with images
 
 {% columns %}
 {% column %}
@@ -443,7 +443,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Cards in a list
+### Cards in a list
 
 {% columns %}
 {% column %}
@@ -572,7 +572,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Card with charts
+### Card with charts
 
 {% columns %}
 {% column %}
@@ -826,7 +826,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Multiple horizontal cards
+### Multiple horizontal cards
 
 {% columns %}
 {% column %}
@@ -985,7 +985,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Other card examples
+### Other card examples
 
 Explore a variety of additional code examples demonstrating the use of the card component on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/templates/cards). These examples showcase different configurations and use cases to help you get the most out of the card component.
 

@@ -1,6 +1,6 @@
 # List product images (GET)
 
-### Scenario
+## Scenario
 
 {% columns %}
 {% column %}
@@ -12,7 +12,7 @@ From the list of customers, swipe left and select the _View_ button. The custome
 {% endcolumn %}
 {% endcolumns %}
 
-### How does this work
+## How does this work
 
 The REST APIs GET operator for the customer and images table is used in the Jigx functions with an `outputTransform` to specify the exact data to be returned to be shown in the list and view. A `composite` jig with a `location` header, combines the view-customer.jigx and list-customer-images.jigx and uses `inputs` to know which customer's details to show. A global action is configured to sync the data in the app with the REST data provider calling the function. In turn, the global action is called in the index.jigx file to load the data when the app is opened. In the jigs the local data provider is used to configure the components.
 
@@ -20,11 +20,11 @@ The REST APIs GET operator for the customer and images table is used in the Jigx
 This code sample builds upon the previous [List customers (GET)](<List customers _GET_.md>) step, to develop a complete and functional solution.
 {% endhint %}
 
-### REST API
+## REST API
 
 <table><thead><tr><th width="165.15234375">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/images?custId={custId}&#x26;includeImage=true</td></tr><tr><td>Operation/Method</td><td>GET</td></tr></tbody></table>
 
-### Function
+## Function
 
 Specify the REST API url and operation (method), parameters to include authentication in the header and in the `outputTransform` define the image metadata properties to be returned. The customer images are stored in the REST service in base64, Jigx requires the logo in local-uri format for display. A `conversion` is configured in the function to change the base64 to local-uri.
 
@@ -74,7 +74,7 @@ conversions:
 ```
 {% endcode %}
 
-### Action (global)
+## Action (global)
 
 Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or is in focus on the device.
 
@@ -101,7 +101,7 @@ action:
 ```
 {% endcode %}
 
-### Jig (screen)
+## Jig (screen)
 
 * Use a list jig type to configure a list of customers.
 * Use a list jig type to configure a list of customer product images.
@@ -411,7 +411,7 @@ actions:
 {% endtab %}
 {% endtabs %}
 
-### Index
+## Index
 
 For performance and offline support the data is synced from the REST service as soon as the app is opened or recieves focus. This is achieved by calling the global action in the `OnFocus` and `onLoad` events.
 

@@ -10,7 +10,7 @@ By combining regular (regex) expressions in your JSONata expressions in Jigx Bui
 
 The JSONata + regex examples below create validation for `text-fields` in a `form`.
 
-### Phone number validation
+## Phone number validation
 
 **Expected results:** Between 9 and 13 numbers with no spaces, can include a symbol for dialing code, e.g., +271234556789.
 
@@ -36,7 +36,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.telephone.state.value , /^((\+|0{0,2})([0-9]){1,3})?[-.●\s]?\(?([0-9]{2,3})\)?[-.●\s]?([0-9]{3})[-.●\s]?([0-9]{4})$/) ? '' :'not a phone number'  
 ```
 
-### Email validation
+## Email validation
 
 **Expected result:** [name@example.com](mailto:name@example.com)
 
@@ -58,7 +58,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.email.state.value, /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/) ? '' :'not an email'      
 ```
 
-### Credit card validation
+## Credit card validation
 
 **Expected result:** Typically 13-16 digits, with spaces or dashes optional, and includes checks for Visa, MasterCard, American Express, and Discover. E.g. 1111-1111-1111-1111 or 1111 1111 1111 1111.
 
@@ -80,7 +80,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.credit-card.state.value, /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9]{2})[0-9]{12}|3[47][0-9]{13})$/) ? '' :'not a credit card number'    
 ```
 
-### ZIP/Postal code (US) validation
+## ZIP/Postal code (US) validation
 
 **Expected result:** 5-digit codes, e.g. 10036.
 
@@ -102,7 +102,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.zip.state.value, /^\d{5}(-\d{4})?$/) ? '' :'not a ZIP/ Postal code'    
 ```
 
-### Social Security Number (US) validation
+## Social Security Number (US) validation
 
 **Expected result:** XXX-XX-XXXX
 
@@ -124,7 +124,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.social-security-number.state.value, /^\d{3}-\d{2}-\d{4}$/) ? '' :'not a social security number'    
 ```
 
-### National Insurance Number (UK) validation
+## National Insurance Number (UK) validation
 
 **Expected result:** AA123456C
 
@@ -146,7 +146,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.national-insurance-number.state.value, /^(?!BG|GB|NK|KN|TN|NT|ZZ)[A-CEGHJ-PR-TW-Z][A-CEGHJ-NPR-TW-Z]\d{2}(?:\s*\d{2}){2}\s*[A-D]$/) ? '' :'not a national-insurance-number'    
 ```
 
-### US Date (DD/MM/YYYY) validation
+## US Date (DD/MM/YYYY) validation
 
 **Expected result:** DD/MM/YYYY, e.g. 23/07/2024.
 
@@ -168,7 +168,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.us-date.state.value, /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/) ? '' :'not a valid date (DD/MM/YYYY)'
 ```
 
-### Date (MM/DD/YYYY) validation
+## Date (MM/DD/YYYY) validation
 
 **Expected result:** MM/DD/YYYY, e.g. 03/28/2023.
 
@@ -190,7 +190,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.date.state.value, /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d{2}$/) ? '' :'not a valid date (MM/DD/YYYY)'    
 ```
 
-### Date (DD Month YYYY) validation
+## Date (DD Month YYYY) validation
 
 **Expected result:** DD Month YYYY, e.g. 25 July 2024.
 
@@ -212,7 +212,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.date-with-month.state.value, /^(0[1-9]|[12][0-9]|3[01])\s(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(19|20)\d{2}$/) ? '' :'not a valid date (DD Month YYYY)'    
 ```
 
-### Date (yyyy/mm/dd) validation
+## Date (yyyy/mm/dd) validation
 
 **Expected result:** yyyy/mm/dd, e.g. 2024/08/30.
 
@@ -236,7 +236,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.date-year-first.state.value, /^(19|20)\d{2}\/(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])$/) ? '' :'not a valid date format (YYYY/MM/DD)'    
 ```
 
-### Decimal validation
+## Decimal validation
 
 **Expected result:** 1234,00
 
@@ -258,7 +258,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.decimal.state.value, /^[0-9]+([,.][0-9]{1,2})?$/) ? '' :'not a decimal number'    
 ```
 
-### Time (H:MM AM/PM) validation
+## Time (H:MM AM/PM) validation
 
 **Expected result:** H:MM AM/PM e.g. 12:15 AM or 08:45 PM
 
@@ -280,7 +280,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.time.state.value, /^((0?[1-9]|1[0-2]):[0-5][0-9] (AM|PM))$/) ? '' :'not a valid time format, use HH:MM AM/PM'    
 ```
 
-### Time (MM:SS / or HH:MM) validation
+## Time (MM:SS / or HH:MM) validation
 
 **Expected result:** MM:SS / or HH:MM, e.g. 08:10.
 
@@ -302,7 +302,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
      errorText: =$contains(@ctx.components.time-2.state.value, /^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$/) ? '' :'not a valid time format, use MM:SS / or HH:MM'   
 ```
 
-### Time in 24-hour format
+## Time in 24-hour format
 
 **Expected result:** 01:00
 
@@ -324,7 +324,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.time-3.state.value, /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/) ? '' :'not a valid time format, use 24 hour format'    
 ```
 
-### URL validation
+## URL validation
 
 **Expected result:** example.com or [http://example.com](http://example.com)
 
@@ -346,7 +346,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.url.state.value, /^((https?|ftp|file):\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/) ? '' :'not a valid url format'    
 ```
 
-### ISBN validation
+## ISBN validation
 
 **Expected result:** 978-1-4302-1998-9
 
@@ -368,7 +368,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.isbn.state.value, /((978[\--– ])?[0-9][0-9\--– ]{10}[\--– ][0-9xX])|((978)?[0-9]{9}[0-9Xx])/) ? '' :'not a valid ISBN format'    
 ```
 
-### Strict Alpha Numeric validation
+## Strict Alpha Numeric validation
 
 **Expected result:** JohnSmith
 
@@ -390,7 +390,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.string.state.value, /^[a-zA-Z0-9]+$/) ? '' :'not a valid string, spaces are not allowed'    
 ```
 
-### Alpha Numeric with spaces allowed validation
+## Alpha Numeric with spaces allowed validation
 
 **Expected result:** John Smith
 
@@ -412,7 +412,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
     errorText: =$contains(@ctx.components.string-2.state.value, /^[a-zA-Z0-9\s]*$/) ? '' :'not a valid string, spaces are allowed'    
 ```
 
-### validation of numbers and Spaces only
+## validation of numbers and Spaces only
 
 **Expected result:** 56575 76 6
 

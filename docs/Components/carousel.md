@@ -10,7 +10,7 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2X
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](carousel.md) for a list and their configuration options.
 
@@ -18,7 +18,7 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="147.49609375">Other options</th><th></th></tr></thead><tbody><tr><td><code>counter</code></td><td>Set to <code>true</code> adds a counter to the top right corner of the carousel in the style similar to 1/4 to indicate the number of images or cards in the carousel. set to <code>false</code> hides the counter. The counter and pagination can be used together or individually, depending on the requirement.</td></tr><tr><td><code>isContained</code></td><td>Set to <code>true</code> places the content (type) in a container which creates a visually appealing frame around the content. Set to <code>false</code> the content fills the entire carousel.</td></tr><tr><td><code>pagination</code></td><td><p>Pagination is shown as dots at the bottom of the carousel. The following options exist:</p><ul><li><code>isContained</code> - created a grey container around the pagination dots improving visibility.</li><li><code>isHidden</code> - <code>false</code> hides the pagination, <code>true</code> shows the pagination.</li><li><code>position</code> - The pagination dots can be places <code>inside</code> or <code>outside</code> the carousel.</li></ul></td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * Carousel can only be used in a [jig.default](<../Jig Types/jig_default.md>).
 * Styling, functionality, events can be configured on the `type` component, for example, `onPress` or `height` settings.
@@ -27,9 +27,9 @@ Some properties are common to all components, see [Common component properties](
 * Consider limiting the number of images used for the carousel to have maximum effect.
 * The card component is versatile, allowing you to combine multiple components into the carousel. For an example, see the carousel with card containing avatars, expander & location.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Image carousel
+### Image carousel
 
 {% columns %}
 {% column %}
@@ -128,7 +128,7 @@ children:
 ```
 {% endcode %}
 
-#### Card carousel
+### Card carousel
 
 {% columns %}
 {% column %}
@@ -178,7 +178,7 @@ children:
 ```
 {% endcode %}
 
-#### Carousel contained
+### Carousel contained
 
 {% columns %}
 {% column %}
@@ -257,7 +257,7 @@ children:
 ```
 {% endcode %}
 
-#### Carousel with pagination (inside & outside)
+### Carousel with pagination (inside & outside)
 
 {% columns %}
 {% column %}
@@ -337,7 +337,7 @@ children:
 ```
 {% endcode %}
 
-#### Carousel with counter
+### Carousel with counter
 
 {% columns %}
 {% column %}
@@ -491,7 +491,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Carousel with pagination (contained)
+### Carousel with pagination (contained)
 
 {% columns %}
 {% column %}
@@ -581,7 +581,7 @@ children:
 ```
 {% endcode %}
 
-#### Carousel with card containing avatars & entity-fields
+### Carousel with card containing avatars & entity-fields
 
 {% columns %}
 {% column %}

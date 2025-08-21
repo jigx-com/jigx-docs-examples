@@ -10,7 +10,7 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2X
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](stage.md) for a list and their configuration options.
 
@@ -20,13 +20,13 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="161.8515625">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>The action is triggered while pressing on an item in the stage. Use IntelliSense (ctrl+space) to see the list of available actions.</td></tr></tbody></table>
 
-### Consideration
+## Consideration
 
 * `component.stage` can only be used in the `component.list` or an [expander](../expander.md).
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### List with stage
+### List with stage
 
 {% columns %}
 {% column %}
@@ -180,7 +180,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### List with expander and stage as a Header
+### List with expander and stage as a Header
 
 {% columns %}
 {% column %}

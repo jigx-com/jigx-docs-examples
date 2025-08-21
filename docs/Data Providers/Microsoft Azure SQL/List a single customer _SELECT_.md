@@ -6,17 +6,17 @@ Best practice for production apps is to use REST as the data layer to access dat
 
 {% columns %}
 {% column %}
-### Scenario
+## Scenario
 
 View the customer's details by pressing on the customer in the list, which opens the customer's details in a default jig.
 
-#### Resources
+### Resources
 
 * Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<Database Scripts.md>).
 * [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection).
 * This sample depends on [List customers (SELECT)](<List customers _SELECT_.md>).
 
-#### Jigx Code
+### Jigx Code
 
 The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs)&#x20;
 {% endcolumn %}
@@ -26,17 +26,17 @@ The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samp
 {% endcolumn %}
 {% endcolumns %}
 
-### How it works
+## How it works
 
 This example selects a customer from the list and uses the CustomerId to return the customer's details to the default jig on the device, using the SQL data provider's function, where it is stored in the SQLite database. In the default jig the data is selected from the SQLite database using a SQL query in a data source which in turn is used by the jig to render the details in entity fields. The functions used to return a single record use **forRowsWithMatchingIds: true**. Only records in the SQLite table with a matching id will be updated. When forRowsWithMatchingIds is false or omitted, all records in the SQLite table will be deleted, and only the records returned by the stored procedure, or query statement will be inserted.
 
-### Functions
+## Functions
 
 {% hint style="info" %}
 The Jigx function is listed twice, once for executing a stored procedure and once for executing a query.
 {% endhint %}
 
-#### A store procedure-based version of get-customer.jigx
+### A store procedure-based version of get-customer.jigx
 
 {% code title="get-customer.jigx" fullWidth="false" %}
 ```yaml
@@ -56,7 +56,7 @@ forRowsWithMatchingIds: true
 ```
 {% endcode %}
 
-#### A query-based version of get-customer.jigx
+### A query-based version of get-customer.jigx
 
 {% code title="get-customers.jigx" fullWidth="false" %}
 ```yaml
@@ -92,9 +92,9 @@ forRowsWithMatchingIds: true
 ```
 {% endcode %}
 
-### Jigs
+## Jigs
 
-#### Modifying the list customers jig
+### Modifying the list customers jig
 
 The listCustomers.jigx file must be modified to include an onPress action. When pressing on a list item in the customer list, Jigx will navigate to the viewCustomer.jigx. **customerId** is specified as a `parameter` that should be passed to the viewCustomer.jigx, where it is used in the WHERE clause of the SQLite query to load the selected customer.
 
@@ -187,7 +187,7 @@ item:
 ```
 {% endcode %}
 
-#### View customer jig
+### View customer jig
 
 The WHERE clause in the query contains a token for a `parameter` called `customerId` that is defined in `queryParameters` and is passed to the viewCustomer jig as an input from the listCustomer jig.
 
@@ -310,7 +310,7 @@ children:
 ```
 {% endcode %}
 
-### index
+## index
 
 Add the list of customers jig to the home screen.
 

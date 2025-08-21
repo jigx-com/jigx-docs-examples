@@ -17,16 +17,16 @@ Best practice for production apps is to use REST as the data layer to access dat
 
 {% columns %}
 {% column %}
-### Scenario
+## Scenario
 
 Create a list of customers showing their names, email addresses, and locations. On the left is an avatar, and on the right is the country the customer resides in.
 
-### Resources
+## Resources
 
 * Scripts for creating Azure SQL tables and stored procedures [Database Scripts](<Database Scripts.md>)
 * [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection)
 
-### Jigx Code
+## Jigx Code
 
 The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs)
 {% endcolumn %}
@@ -34,23 +34,23 @@ The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samp
 {% column %}
 <figure><img src="../../../.gitbook/assets/AzureSql-listCustomer.png" alt=""><figcaption></figcaption></figure>
 
-### &#x20;&#x20;
+## &#x20;&#x20;
 
 
 {% endcolumn %}
 {% endcolumns %}
 
-### How it works
+## How it works
 
 This example selects a list of data from a customer table in an Azure SQL database and returns it to the Jigx solution on the device using the SQL data provider's function, where it is stored in the SQLite database. In the list jig the data is selected from the SQLite database using a SQL query in a data source which in turn is used by the list jig to render the items.
 
-### Functions
+## Functions
 
 {% hint style="info" %}
 The Jigx function is listed twice, once for executing a stored procedure and once for executing a query.&#x20;
 {% endhint %}
 
-#### A store procedure-based version of get-customers.jigx
+### A store procedure-based version of get-customers.jigx
 
 The following Jigx function uses a stored procedure to fetch a list of data from Azure SQL.
 
@@ -64,7 +64,7 @@ procedure: sp_GetAllCustomers
 ```
 {% endcode %}
 
-#### A query-based version of get-customers.jigx
+### A query-based version of get-customers.jigx
 
 The following Jigx function uses a SQL query to fetch a list of data from Azure SQL.
 
@@ -92,7 +92,7 @@ query: |
 ```
 {% endcode %}
 
-### jig (screen)
+## jig (screen)
 
 * Use a list type to configure a list of customers.
 * Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured with a query to provide the data for use in the list.
@@ -176,7 +176,7 @@ item:
 ```
 {% endcode %}
 
-### index
+## index
 
 Add the list of customers jig to the home screen.
 

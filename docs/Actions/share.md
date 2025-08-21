@@ -10,13 +10,13 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOh
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](share.md) for a list and their configuration options.
 
 <table><thead><tr><th width="151.31640625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>email</code></td><td>Provide an email address, this optional property allows a string or expression. It is used to set the To address if sharing with email. If an email is supplied the share action will automatically open up the default email app on the phone to compose and fill in the supplied details. If email is not supplied, you will be able to share via other methods or apps. For iOS you can only supply a single email address. If you supply more, the To field will be left blank. This is not an issue on Android but for consistency it is best to keep to one email address.</td></tr><tr><td><code>fileUri</code></td><td>Provide the uri for the file you want to share, either from a datasource, in an expression, or from an action, such as the <code>action.generate-pdf</code>. You can reference the PDF or the local uri of the PDF document using the action's output uri <code>=@ctx.actions.generatePDF.outputs.uri</code>. The <code>fileUri</code> needs to be the full uri of the local file.</td></tr><tr><td><code>message</code></td><td>Add a text message to send with the shared file.</td></tr><tr><td><code>subject</code></td><td>Add a subject when sharing the file. The subject will only appear in apps that support a subject property, such as email.</td></tr><tr><td><code>title</code></td><td>Provide the action button with a title, for example, Share file.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * All properties are optional but you need to at least supply a `message` or `fileUri`.
 * You can select from the apps or methods available on your device for sharing.
@@ -24,9 +24,9 @@ Some properties are common to all components, see [Common component properties](
 * You can also share one or more files. If there is more than one file it needs to evaluate to a string array.
 * For best results, share files that are stored locally (e.g., images or PDFs). Files stored in a datasource as base64, data URI, or buffers will be returned as unreadable binary (.bin) files.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Share images
+### Share images
 
 {% columns %}
 {% column %}
@@ -101,7 +101,7 @@ actions:
 ```
 {% endcode %}
 
-#### Generate a pdf, save and share
+### Generate a pdf, save and share
 
 {% columns %}
 {% column %}
@@ -350,7 +350,7 @@ options:
 {% endtab %}
 {% endtabs %}
 
-#### Share by email
+### Share by email
 
 {% columns %}
 {% column %}

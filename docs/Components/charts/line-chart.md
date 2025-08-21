@@ -10,7 +10,7 @@ Image\[]{alt="Line Chart Preview" src="https://archbee-image-uploads.s3.amazonaw
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](line-chart.md) for a list and their configuration options.
 
@@ -18,7 +18,7 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="152.0078125">Other options</th><th></th></tr></thead><tbody><tr><td><code>chart</code></td><td><ul><li><code>title</code> and <code>subtitle</code> - Name and a short description of your chart.</li><li><code>height</code> and <code>width</code> - The parameters of the chart displayed (in pixels).</li></ul></td></tr><tr><td><code>legend</code></td><td><code>isHidden</code> - The setting of a boolean value if the legend (naming of the series) should be displayed under the chart.</td></tr><tr><td><code>plotBands</code></td><td><p>Use <code>plotbands</code> to highlight specific regions or ranges on the chart, making it easier for users to interpret and analyze the data. The <code>from</code> and <code>to</code> properties define the area to be filled with color. Specify the range using the from and to properties with numeric values.</p><ul><li><code>area</code></li><li><code>area-gradient</code></li><li><code>line</code></li><li><code>name</code> - The naming of the actual series.</li></ul></td></tr><tr><td><code>xAxis</code></td><td><ul><li><code>isFirstLabelHidden</code> value is either <code>true</code> to hide the first label or <code>false</code> to display the first label. The property doesn't have to be defined, by default the first label is shown.</li><li><code>isFirstTickHidden</code> value is either true/false. Set to <code>true</code> hides the whole axis.</li><li><code>isHidden</code> value is either true/false.</li><li><code>isLastLabelHidden</code> value is either <code>true</code> to hide the last label or <code>false</code> to display the last label. The property doesn't have to be defined, by default the last label are shown.</li><li><code>isLastTickHidden</code> value is either <code>true</code> to hide the last line and label or <code>false</code> to display the last line and label. The property doesn't have to be defined, by default the last label and line are shown.</li><li><code>labels</code> - Label of axis, a selection of different formats such as <code>dateFormat</code>, <code>currency</code>, <code>unit</code>, and <code>signDisplay</code> are available. <code>min</code> and <code>max</code> - Minimum and maximum values that should be displayed on the x-axis.</li><li><code>minPadding</code> - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).</li><li><code>tickAmount</code> - The number of ticks to display on the x-axis. The final amount doesn't have to be exactly the same number as you pass into it. Round up to 6 to give the chart a good set of numbers 0, 20, 40, 60, 80, 100. Set ticks to 3 will be honored and shows 0, 50, and 100.</li></ul></td></tr><tr><td><code>yAxis</code></td><td><ul><li><code>isFirstLabelHidden</code> value is either true/false. Set to <code>true</code> hides the first label. The property doesn't have to be defined, by default the first label is shown.</li><li><code>isFirstTickHidden</code> value is either true/false. Set to <code>true</code> hides the whole axis.</li><li><code>isHidden</code> value is either true/false. Set to <code>true</code> the last label is hidden.</li><li><code>isLastLabelHidden</code> value is either <code>true</code> to hide the last label and line or <code>false</code> to display the last label and line. The property doesn't have to be defined, by default the last label and line are shown.</li><li><code>isLastTickHidden</code> value is either <code>true</code> to hide the last line and label or <code>false</code> to display the last line and label. The property doesn't have to be defined, by default the last label and line are shown.</li><li><code>labels</code> - Label of axis, a selection of different formats such as <code>currency</code>, <code>numberStyle</code>, <code>compactDisplay</code> and <code>notation</code> is available.</li><li><code>minPadding</code> - When no categories set, a 1% space is made on the left and right of the chart so the id doesn't start on the left or ends on the right edge exactly. The default is set to 0.02 (x-axis) and 0.05 (y-axis).</li><li><code>min</code> and <code>max</code> - Minimum and maximum values that should be displayed on the y-axis.</li><li><code>tickAmount</code> - The number of ticks to display on the x-axis. The final amount doesn't have to be exactly the same number as you pass into it. Round up to 6 to give the chart a good set of numbers 0, 20, 40, 60, 80, 100. Set ticks to 3 will be honored and shows 0, 50, and 100.</li></ul></td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 The line-chart control expects a JSON object. Using a REST call can return data as text. To get the JSON object for the REST call there are two options:
 
@@ -59,9 +59,9 @@ datasources:
          - temperatures_min
 ```
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Line-chart financial
+### Line-chart financial
 
 {% columns %}
 {% column %}
@@ -160,7 +160,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Line-chart multiple series
+### Line-chart multiple series
 
 {% columns %}
 {% column %}
@@ -305,7 +305,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Line-chart with plot bands
+### Line-chart with plot bands
 
 {% columns %}
 {% column %}
@@ -367,7 +367,7 @@ children:
 ```
 {% endcode %}
 
-#### line-chart using expressions
+### line-chart using expressions
 
 {% columns %}
 {% column %}

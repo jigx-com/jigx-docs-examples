@@ -17,18 +17,18 @@ With SQLite, you can write your datasources as SQL queries. You can use the quer
 If you are not familiar with datasources yet, see the [data](https://docs.jigx.com/aI2F-data) section.
 {% endhint %}
 
-### Configuration options
+## Configuration options
 
 When setting up a SQLite datasource, you use the datasource in the following ways:
 
 1. In your jig file as a locally configured datasource under the `datasource` section.
 2. In the global datasource file, that will allow you to use it across all the jig files. The global datasource files are located under the datasources folder in Jigx Builder.
 
-### Examples and code snippets
+## Examples and code snippets
 
 View common examples of using SQLite below, you can use these as a guideline to configure the same in your solutions.
 
-#### sqlite in a jig file
+### sqlite in a jig file
 
 {% columns %}
 {% column %}
@@ -61,7 +61,7 @@ datasources:
 ```
 {% endcode %}
 
-#### sqlite as a global datasource
+### sqlite as a global datasource
 
 {% columns %}
 {% column %}
@@ -105,9 +105,9 @@ item:
 {% endtab %}
 {% endtabs %}
 
-### SQLite query cheatsheet
+## SQLite query cheatsheet
 
-#### Count rows in the table
+### Count rows in the table
 
 {% columns %}
 {% column %}
@@ -179,7 +179,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Converting dates
+### Converting dates
 
 Here is an example of using a SQLite query to convert dates in a dynamic data table.
 
@@ -205,7 +205,7 @@ datasources:
 ```
 {% endcode %}
 
-#### Joining data from tables and using subquery
+### Joining data from tables and using subquery
 
 Using a SQLite query, one can join data from different tables by utilizing subqueries. This allows for the combination of information from multiple tables based on specified conditions. By employing subqueries, one can retrieve and manipulate data ensuring accurate and comprehensive results. Below is an example of joining tables and then using a subquery.
 
@@ -243,7 +243,7 @@ datasources
 ```
 {% endcode %}
 
-#### Joining tables
+### Joining tables
 
 Often you want to use data in your solution but the data is stored in different tables. Use a SQLite query to join the data from tables and extract the exact information you want to use. When joining two tables there must be the same identifier in both tables. In the example below both tables has a `$.date` column. _**Result**_: The result of the example below is  date: 5 finished\_date: 5.11
 
@@ -277,7 +277,7 @@ datasources:
 ```
 {% endcode %}
 
-#### JSON array length
+### JSON array length
 
 The query below provides the JSON array length from a table called battles.
 

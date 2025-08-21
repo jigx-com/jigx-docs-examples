@@ -9,7 +9,7 @@ updatedAt: Thu Jan 18 2024 14:09:17 GMT+0000 (Coordinated Universal Time)
 
 With the sample solution in your possession, you are now equipped with all the necessary tools to assist you on your journey toward becoming an extraordinary Jigx Builder.
 
-### Publishing and using the sample solution
+## Publishing and using the sample solution
 
 To see the samples in the Jigx App, and experience the functionality first-hand, you must first publish the solution:
 
@@ -22,7 +22,7 @@ To see the samples in the Jigx App, and experience the functionality first-hand,
 The solution will not be visible in Jigx Management until the solution is published.
 {% endhint %}
 
-### **Assigning users to the solution**
+## **Assigning users to the solution**
 
 Now that the solution has been published, the right people need access.
 
@@ -33,7 +33,7 @@ Now that the solution has been published, the right people need access.
 &#x20;If at any time you don't want the sample solution visible in the application, you can set your rights to Deny.
 {% endhint %}
 
-### Uploading databases
+## Uploading databases
 
 Dynamic Data tables require data to be populated, as your new solution will not have any data stored. Follow the steps below to add data:
 
@@ -43,6 +43,6 @@ Dynamic Data tables require data to be populated, as your new solution will not 
 
 Once your data has been populated, your sample solutions are ready for use on the Jigx App.
 
-### Consulting the sample solution
+## Consulting the sample solution
 
 Whenever you come across a new jig and wish to consult an example, navigate to the jigx-samples solution in your app.

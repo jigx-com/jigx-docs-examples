@@ -6,7 +6,7 @@ This component displays a webpage from a specified URL, content from a datasourc
 &#x20;You can also use the [jig.document](<../Jig Types/jig_document.md>) type to display web pages in full-screen mode or pass messages from your HTML content via JavaScript to the Jigx App.
 {% endhint %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](web-view.md) for a list and their configuration options.
 
@@ -14,13 +14,13 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="281.4453125">Other options</th><th></th></tr></thead><tbody><tr><td><code>content</code></td><td>HTML to render in the web-view.</td></tr><tr><td><code>height</code></td><td>The height of the web-view.</td></tr><tr><td><code>isEditable</code></td><td>A very basic implementation, if set to <code>true</code>, the web-view <code>content</code> becomes editable. This works only with <code>content</code>, not with a <code>uri</code>. The <code>isEditable</code> property is only available when using the web-view in a .</td></tr><tr><td><code>isTrackingTransparencyRequired</code></td><td>If set to <code>true</code> tracking transparency permission modal is shown before opening the URL. The default setting is <code>true</code>.</td></tr></tbody></table>
 
-### Consideration
+## Consideration
 
 * The `component.web-view` can be used in [jig.fullscreen](<../Jig Types/jig_fullscreen.md>), if the content needs to fill the screen.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Web-view example (URL)
+### Web-view example (URL)
 
 {% columns %}
 {% column %}
@@ -97,7 +97,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Web-view example (HTML Content)
+### Web-view example (HTML Content)
 
 {% columns %}
 {% column %}
@@ -129,7 +129,7 @@ children:
 ```
 {% endcode %}
 
-#### Editable web-view content (Fullscreen)
+### Editable web-view content (Fullscreen)
 
 {% columns %}
 {% column %}

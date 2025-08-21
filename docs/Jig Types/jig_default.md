@@ -15,23 +15,23 @@ Type `jig.default` is the most versatile jig allowing you to create a jig with v
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all jig types, see [Common jig type properties](jig_default.md) for a list and their configuration options.
 
 <table><thead><tr><th width="167.3359375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td>Add the UI elements () under the children property, for example, <code>component.form</code>. Use Intellisense (ctrl+space) to select a component from the available list.</td></tr><tr><td><code>title</code></td><td>Provide the name of the screen. If you do not want to show a title in a jig use <code>title: ' '</code> or add an expression.</td></tr></tbody></table>
 
-### Other options
+## Other options
 
 The `jig.default` is the most versatile jig available allowing you to create a variety of screens. Many options are available for configuration on this jig.
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="success" %}
 The code below is an extract from the full _jigx-samples_ solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full _jigx-samples_ project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples), and follow the instructions in [Setting up your solution](jig_default.md).
 {% endhint %}
 
-#### Jig.default as a Form
+### Jig.default as a Form
 
 {% columns %}
 {% column %}
@@ -161,7 +161,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Jig.default as a List
+### Jig.default as a List
 
 {% columns %}
 {% column %}
@@ -282,7 +282,7 @@ tables:
 {% endtab %}
 {% endtabs %}
 
-#### Other examples of jig.default
+### Other examples of jig.default
 
 {% columns %}
 {% column %}

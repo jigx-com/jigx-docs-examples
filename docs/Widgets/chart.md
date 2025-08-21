@@ -22,7 +22,7 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2X
 
 ## Examples and code snippets
 
-### Chart widget: line-chart component (2x2)
+## Chart widget: line-chart component (2x2)
 
 {% columns %}
 {% column %}
@@ -124,7 +124,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Chart widget: line-chart component (2x4)
+## Chart widget: line-chart component (2x4)
 
 {% columns %}
 {% column %}
@@ -219,7 +219,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Chart widget: line-chart component (4x4)
+## Chart widget: line-chart component (4x4)
 
 {% columns %}
 {% column %}
@@ -413,7 +413,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Chart widget - line-chart component (4x2)
+## Chart widget - line-chart component (4x2)
 
 {% columns %}
 {% column %}
@@ -528,7 +528,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Chart widget: line-chart component in group widget (4x4)
+## Chart widget: line-chart component in group widget (4x4)
 
 {% columns %}
 {% column %}
@@ -766,7 +766,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Chart widget: bar-chart component (2x2)
+## Chart widget: bar-chart component (2x2)
 
 {% columns %}
 {% column %}
@@ -868,7 +868,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Chart widget: bar-chart component (4x2)
+## Chart widget: bar-chart component (4x2)
 
 {% columns %}
 {% column %}
@@ -956,7 +956,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Chart widget: bar-chart component (4x2)
+## Chart widget: bar-chart component (4x2)
 
 {% columns %}
 {% column %}
@@ -1067,7 +1067,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Chart widget: pie-chart component (2x2)
+## Chart widget: pie-chart component (2x2)
 
 {% columns %}
 {% column %}
@@ -1152,7 +1152,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Chart widget: pie-chart component (2x4)
+## Chart widget: pie-chart component (2x4)
 
 {% columns %}
 {% column %}
@@ -1236,7 +1236,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Chart widget: pie-chart component in group widget (4x4)
+## Chart widget: pie-chart component in group widget (4x4)
 
 {% columns %}
 {% column %}

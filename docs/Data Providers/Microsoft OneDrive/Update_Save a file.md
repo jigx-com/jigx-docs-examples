@@ -11,7 +11,7 @@ Files often change and need to be edited or updated with additional information;
 
 <figure><img src="../../../.gitbook/assets/OneDrive-update.png" alt="Updating a file on OneDrive"><figcaption><p>Updating a file on OneDrive</p></figcaption></figure>
 
-### Properties
+## Properties
 
 The following properties are required in the YAML:
 
@@ -21,11 +21,11 @@ The following properties are required in the YAML:
 * `tokenType` - OAuth token credentials name
 * `method: update`
 
-### Component
+## Component
 
 To upload a file use the `media-field` component to select the file. Use the `image`, or `any` property in the `media-field` component to specify the `mediaType`.
 
-### Considerations
+## Considerations
 
 * When no `id` is provided, a new record is created if it is not a duplicate filename
 * **Important:** When updating a file and changing the filename, if the new name is the same as an existing file name, the amended file is saved to the existing file with no warning that the file will be overwritten
@@ -37,7 +37,7 @@ To upload a file use the `media-field` component to select the file. Use the `im
 * Using the `method: save` will create a new file if the filename does not exist, otherwise the save will function as an update method
 * A delay or time lag of several minutes could be experienced when files are syncing between the device and OneDrive
 
-### Code Example
+## Code Example
 
 The code below provides an example of a list of invoices in the `myfiles` directory of OneDrive. When selecting the file in the dropdown list, the file name is displayed and the media picker is used to uploade the updated file. Pressing the _Update Invoice_ button updates the file on OneDrive.
 
@@ -146,7 +146,7 @@ modal:
 ```
 {% endcode %}
 
-#### See also
+### See also
 
 * [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
 * [Create a file](<Create a file.md>)

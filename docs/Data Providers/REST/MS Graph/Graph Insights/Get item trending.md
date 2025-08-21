@@ -9,7 +9,7 @@ updatedAt: Wed Mar 05 2025 18:25:25 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column %}
-### Scenario
+## Scenario
 
 Get insights that include a list of documents trending around the user using a GET REST function and display the list in a list jig.
 
@@ -29,13 +29,13 @@ Sites.Read.All Sites.ReadWrite.All&#x20;
 {% endcolumn %}
 {% endcolumns %}
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="success" %}
 When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).&#x20;
 {% endhint %}
 
-### General
+## General
 
 {% code title="index.jigx" %}
 ```yaml
@@ -53,7 +53,7 @@ tabs:
 ```
 {% endcode %}
 
-### Functions
+## Functions
 
 MS Graph list trending function in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/functions/general/get-items-trending.jigx).
 
@@ -87,7 +87,7 @@ continuation:
 ```
 {% endcode %}
 
-### Jigs
+## Jigs
 
 MS Graph list trending jigs in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/jigs/general)
 

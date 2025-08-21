@@ -2,11 +2,11 @@
 
 Certain properties are shared across all actions, ensuring consistency and flexibility in configuration. These common properties allow you to define behaviors, appearance, and functionality that apply universally, regardless of the specific actions used. This simplifies the setup process and helps maintain uniformity across different jigs.
 
-### Icons in actions
+## Icons in actions
 
 Adding an `icon` property in an action only applies to `swipeable`, `secondary`, and `header` actions. Primary actions do not support icon setups.
 
-### Working with parent & child actions
+## Working with parent & child actions
 
 When configuring actions across parent and child jigs, the following behavior applies:
 
@@ -14,7 +14,7 @@ When configuring actions across parent and child jigs, the following behavior ap
 * If only the parent has an `action`, it automatically applies to the child.
 * If only the child has an `action`, it is used in the parent jig as well.
 
-### Dual action buttons
+## Dual action buttons
 
 {% columns %}
 {% column %}

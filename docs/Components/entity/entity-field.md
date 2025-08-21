@@ -2,7 +2,7 @@
 
 Entity fields display data such as text, numbers, dates, and currency from a datasource to the user. These entity fields are found on a `jig.default` and can be nested under [field-row](field-row.md) and/or [section](section.md) components but not under `component.form` as it is used for display purposes only.
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](entity-field.md) for a list and their configuration options.
 
@@ -17,9 +17,9 @@ Some properties are common to all components, see [Common component properties](
   * This is the entity component's property, not the entity-field.
 * When using the `contentType: phone`, ensure the phone number entered contains no spaces; this allows you to click on the field to initiate a call from your device.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Different types of entity fields
+### Different types of entity fields
 
 {% columns %}
 {% column %}
@@ -180,7 +180,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Entity fields with a connected datasource
+### Entity fields with a connected datasource
 
 {% columns %}
 {% column %}
@@ -455,7 +455,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Entity-fields with right icons in color
+### Entity-fields with right icons in color
 
 {% columns %}
 {% column %}

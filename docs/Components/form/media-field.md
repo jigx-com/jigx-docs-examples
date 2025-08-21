@@ -13,7 +13,7 @@ The `media-field` component allows users to upload images, videos, or files, eit
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_mqghZMZFLnlAv3Hoqu5V-20250624-095618.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_mqghZMZFLnlAv3Hoqu5V-20250624-095618.png" size="90" width="5328" height="2681" position="center" caption="Media Field Preview" alt="Media Field Preview"}
 
-### Configuration options
+## Configuration options
 
 * The `media-field` can only be used in a [jig.default](<../../Jig Types/jig_default.md>).
 * The `media-field` requires a datasource to store the files, you can configure one of the [Data Providers](<../../Data Providers.md>) for this.
@@ -33,7 +33,7 @@ When using a `media-field` in Jigx, storing and loading certain files, such as i
 
 <table><thead><tr><th width="171.6640625">Datasource</th><th>Storing data</th><th>Loading data</th></tr></thead><tbody><tr><td>Dynamic Data with Dynamic Files</td><td>Use <code>action.execute-entities</code> with <code>DATA_PROVIDER_DYNAMIC</code> , including the <code>file</code> property. Files are stored in Amazon S3. See <a href="https://docs.jigx.com/examples/dynamic-files">Dynamic files</a> for setup.</td><td>Files are retrieved via a datasource query using <code>DATA_PROVIDER_DYNAMIC</code>. The file is linked to the record and can be accessed based on query results.</td></tr><tr><td>REST</td><td>Use <code>action.execute-entities</code> with <a href="https://docs.jigx.com/file-handling#wHsEh">conversions</a> in the Jigx function to transform <code>local-uri</code> to a format suitable for uploading to your backend (e.g., base64, buffer). Use a <code>create</code> or <code>save</code> method in the <code>DATA_PROVIDER_REST</code> to send the data.</td><td>On loading, <a href="https://docs.jigx.com/file-handling#F6ROc">convert</a> the backend format (e.g., buffer or base64) back into a <code>local-uri</code> in the Jigx function, so the file can be displayed. Files are retrieved via a datasource query using <code>DATA_PROVIDER_REST</code>.</td></tr><tr><td>SQL</td><td>Use <code>action.execute-entities</code> with <a href="https://docs.jigx.com/file-handling#wHsEh">conversions</a> in the Jigx function to transform <code>local-uri</code> into a suitable format (e.g., base64 or buffer) for storing in the database. Use the <code>create</code> or <code>save</code> method in the <code>DATA_PROVIDER_SQL</code> to send the data.</td><td>On load, <a href="https://docs.jigx.com/file-handling#F6ROc">convert</a> the stored SQL file format back into a <code>local-uri</code> in the Jigx function, to display in the <code>media-field</code>. Files are retrieved via a datasource query using <code>DATA_PROVIDER_SQL</code>.</td></tr><tr><td>iOS device</td><td>When storing files from iOS, use the <a href="https://docs.jigx.com/file-handling#3fzfX">convertHeicToJpg</a> property to ensure compatibility across devices.</td><td>iOS reads standard file formats like JPG or PNG via <code>local-uri</code>. If the file is HEIC, conversion may be required for cross-device viewing.</td></tr><tr><td>Android device</td><td>Store media using one of the data providers; ensure files are correctly referenced from their captured <code>local-uri</code>. No special conversion needed for common formats like JPG or PNG.</td><td>Android can read from <code>local-uri</code>. Ensure file paths are valid. Cross-device issues may occur with platform-specific formats if not converted (e.g., HEIC).</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * To discard selected or recorded images, videos or files before submitting them, click on the media thumbnail at the bottom of the selection modal.
 * An image, video, or file can be referenced for upload from a datasource, for example, in the `initialValue` property.
@@ -42,9 +42,9 @@ When using a `media-field` in Jigx, storing and loading certain files, such as i
 * Files captured using the `media-field` component can be saved to [Dynamic Files](<../../Data Providers/Dynamic Files.md>) by assigning them to the `file` property of a dynamic data entity, enabling seamless upload and storage in Amazon S3.
 * You can use the [open-media-picker](../../Actions/open-media-picker.md) action to invoke the `media-field` component to either open the device's camera when tapping the action button, or to select media files and output selected paths.
 
-### Examples using media-field configurations
+## Examples using media-field configurations
 
-#### Restrict or filter the upload of media file types
+### Restrict or filter the upload of media file types
 
 {% columns %}
 {% column %}
@@ -156,7 +156,7 @@ actions:
 ```
 {% endcode %}
 
-#### Upload image & use freestyle cropping
+### Upload image & use freestyle cropping
 
 This component _uploads_ an image using the `mediaType: image` property. Clicking on the paperclip icon will display a menu where you can choose to upload an existing image from your device or use the camera to take a new image. After selecting or capturing the image, and cropping the image to the specified size, the media-field is first validated, then the upload button becomes enabled. Pressing the Upload image button at the bottom will trigger an action to create an entry with the image.
 
@@ -206,7 +206,7 @@ actions:
 ```
 {% endcode %}
 
-#### Upload multiple files
+### Upload multiple files
 
 In this example we set the `isMultiple` property to `true` which allows for the selection of multiple media to be uploaded and `MediaType` to `any` which caters for images, videos and documents. The selected media display as thumbnails at the bottom of the modal. Discard media by pressing on the thumbnail, the media is deleted.
 
@@ -284,7 +284,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Upload video
+### Upload video
 
 In this example multiple videos are uploaded, using the `mediaType: video` and `isMultiple: true` properties. Select videos from the library or record videos to be uploaded. Tap the + icon in the bottom left corner to add multiple videos. The `execute-entities` action uploads the videos and the metadata configured under `data` to the required datasource.
 
@@ -345,7 +345,7 @@ actions:
 ```
 {% endcode %}
 
-#### Upload image or video
+### Upload image or video
 
 In this example multiple images and videos are uploaded, using the `mediaType: imageAndVideo` and `isMultiple: true` properties. Select images and videos from the library, take a picture or record videos to be uploaded. Tap the + icon in the bottom left corner to add multiple images and videos. The `execute-entities` action uploads the images, videos and metadata to the required datasource.
 
@@ -411,9 +411,9 @@ actions:
 ```
 {% endcode %}
 
-### Example using the media-field in an action
+## Example using the media-field in an action
 
-#### Use open-media-picker action to capture an image
+### Use open-media-picker action to capture an image
 
 In this example, the button opens the media-picker. The configuration is set to take a picture or choose from a library. The image is saved to the local database.
 
@@ -490,9 +490,9 @@ the action's output when saved as data.
 ```
 {% endcode %}
 
-### Examples of saving & loading media-field as data
+## Examples of saving & loading media-field as data
 
-#### Upload image using Dynamic files
+### Upload image using Dynamic files
 
 {% columns %}
 {% column %}
@@ -573,7 +573,7 @@ actions:
 ```
 {% endcode %}
 
-#### Upload images using REST
+### Upload images using REST
 
 {% columns %}
 {% column %}
@@ -738,7 +738,7 @@ conversions:
 {% endtab %}
 {% endtabs %}
 
-#### Use intialValue to show multiple images using REST
+### Use intialValue to show multiple images using REST
 
 This example shows how multiple images can be loaded in the media-field using the `intialValue` property. Take note of the following configuration:
 
@@ -959,7 +959,7 @@ conversions:
 {% endtab %}
 {% endtabs %}
 
-#### Convert files in SQL function
+### Convert files in SQL function
 
 Jigx stores files as local files on the device and returns the file's URI as the default value. When saving these files to a datasource, you must convert files from the local-uri to base64, data-uri, or buffer. The opposite is true when handling the files returned from the datasource, you need to convert them from their saved state (base64, data-uri, or buffer) to a local-uri. In this example we upload a profile photo and convert from local-uri on the device to buffer for storage in SQL and then get the photo back from SQL and convert it from buffer to local-uri to display the photo as an avatar in a list. See [File handling](https://docs.jigx.com/file-handling) for more information.
 
@@ -1206,7 +1206,7 @@ conversions:
 {% endtab %}
 {% endtabs %}
 
-### See also
+## See also
 
 * [Upload product images (POST)](<../../Data Providers/REST/Create an app using REST APIs/Upload product images _POST_.md>)
 * [File handling](https://docs.jigx.com/file-handling)

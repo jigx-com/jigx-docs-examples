@@ -26,9 +26,9 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="162.4140625">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>The ability to add any of the actions (please refer to the list of Actions). This action(s) will be triggered as a reaction to the press event.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Pie chart
+### Pie chart
 
 {% columns %}
 {% column %}
@@ -115,7 +115,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Pie chart type arch
+### Pie chart type arch
 
 {% columns %}
 {% column %}

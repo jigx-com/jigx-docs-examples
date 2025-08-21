@@ -45,7 +45,7 @@ Key factors to keep in mind when using this event.
 
 ## Examples and code snippets
 
-### Single data table
+## Single data table
 
 This example demonstrates how to use the `onTableChanged` event to monitor data changes in a single table from a remote data system. When a data change occurs on the remote system, the event executes and resets the solutions state.
 
@@ -78,7 +78,7 @@ tables:
 {% endtab %}
 {% endtabs %}
 
-### Multiple data tables
+## Multiple data tables
 
 This example demonstrates how to use the `onTableChanged` event to monitor data changes across multiple tables and different data providers within the solution. When a data change occurs, the event executes the defined actions for each configured data provider.
 
@@ -144,7 +144,7 @@ tables:
 {% endtab %}
 {% endtabs %}
 
-### Action data changes from one table to another table
+## Action data changes from one table to another table
 
 In the example below, the `send-notifications` table is monitored for changes. Once notifications are sent, the event executes and updates the `customer` table with the relevant data.
 

@@ -21,7 +21,7 @@ mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XX
 
 ## Examples and code snippets
 
-### Example of actions widget
+## Example of actions widget
 
 {% columns %}
 {% column %}

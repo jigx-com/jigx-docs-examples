@@ -9,7 +9,7 @@ updatedAt: Thu Apr 24 2025 07:14:20 GMT+0000 (Coordinated Universal Time)
 
 In this component, you add left and right elements, typically showing a start-and-end concept, such as flight schedules.
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
@@ -19,13 +19,13 @@ Some properties are common to all components, see [Common component properties](
 
 <table data-header-hidden><thead><tr><th width="166.58984375">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>The action is triggered while pressing on the content in the stage. Use IntelliSense (ctrl+space) to see the list of available actions.</td></tr></tbody></table>
 
-### Consideration
+## Consideration
 
 * `component.stage` can only be used in the `component.expander` or a [list](../list/stage.md).
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Stage in expander
+### Stage in expander
 
 {% columns %}
 {% column %}
@@ -117,7 +117,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Stage in list
+### Stage in list
 
 {% columns %}
 {% column %}

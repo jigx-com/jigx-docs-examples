@@ -6,7 +6,7 @@ The `jig-header` component can be used in any type of jig. It serves as a contai
 &#x20;The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/assets).&#x20;
 {% endhint %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](jig-header.md) for a list and their configuration options.
 
@@ -16,9 +16,9 @@ Some properties are common to all components, see [Common component properties](
 Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K.&#x20;
 {% endhint %}
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Jig-header with image
+### Jig-header with image
 
 {% columns %}
 {% column %}
@@ -65,7 +65,7 @@ header:
 {% endtab %}
 {% endtabs %}
 
-#### Jig-header with location
+### Jig-header with location
 
 {% columns %}
 {% column %}
@@ -172,7 +172,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Jig-header with video-player
+### Jig-header with video-player
 
 {% columns %}
 {% column %}
@@ -221,7 +221,7 @@ header:
 {% endtab %}
 {% endtabs %}
 
-#### Jig-header with an action (text link)
+### Jig-header with an action (text link)
 
 {% columns %}
 {% column %}
@@ -279,7 +279,7 @@ children:
 ```
 {% endcode %}
 
-#### Jig-header with multiple actions (icons)
+### Jig-header with multiple actions (icons)
 
 {% columns %}
 {% column %}
@@ -358,7 +358,7 @@ children:
 ```
 {% endcode %}
 
-#### Jig-header actions without header children
+### Jig-header actions without header children
 
 {% columns %}
 {% column %}

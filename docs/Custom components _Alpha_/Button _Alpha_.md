@@ -13,17 +13,17 @@ The _button_ custom component provides predefined options for designing the UI a
 
 For steps on creating a custom component, see [How to create a custom component](<../Custom components _Alpha_.md>).
 
-### Configuration options
+## Configuration options
 
 You can use `when` and `instanceId` with `component.button`, add the properties before the `options` property. The available list of options is shown below.
 
 <table><thead><tr><th width="134.7265625">Options</th><th>Value</th></tr></thead><tbody><tr><td><code>icon</code></td><td><code>left</code> - select an icon from the provided list. <code>right</code> - select an icon from the provided list.</td></tr><tr><td><code>isCompact</code></td><td><code>false</code> <code>true</code></td></tr><tr><td><code>onPress</code></td><td>Multiple, use IntelliSense to view the list of available to call. The action is called when the button is pressed.</td></tr><tr><td><code>style</code></td><td><code>isBusy</code> - true/false <code>isDisabled</code> - true/false</td></tr><tr><td><code>title</code></td><td>Provide the text to display on the button. You can use to cater for multiple languages.</td></tr><tr><td><code>type</code></td><td><code>primary</code> - the main button that guides you to complete the most important action on the screen, for example, <em>Approve</em>. <code>secondary</code> - the option that shows when the ellipsis menu is tapped, for example, <em>Reject</em>. <code>tertiary</code> - the second option that shows when the ellipsis menu is tapped, for example, <em>Rework</em>.</td></tr></tbody></table>
 
-### Example and code snippets
+## Example and code snippets
 
 The examples use a set of custom components called _sections_. The sections are for titles, spacing, and context. The _sections_ code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
 
-#### Buttons-basic
+### Buttons-basic
 
 {% columns %}
 {% column %}
@@ -157,7 +157,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Buttons-compact
+### Buttons-compact
 
 {% columns %}
 {% column %}
@@ -304,7 +304,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Buttons-busy
+### Buttons-busy
 
 {% columns %}
 {% column %}
@@ -470,7 +470,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Buttons-disabled
+### Buttons-disabled
 
 {% columns %}
 {% column %}
@@ -640,7 +640,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Buttons-disabled and busy
+### Buttons-disabled and busy
 
 {% columns %}
 {% column %}

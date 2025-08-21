@@ -16,7 +16,7 @@ It helps to ensure data consistency and ease of use, especially for workers in f
 The `duration-picker` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 {% endhint %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](duration-picker.md) for a list and their configuration options.
 
@@ -28,16 +28,16 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="213.7421875">State Configuration</th><th width="145.26953125">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>value</td><td>State is the variable of the component. When used in the <code>initialValue</code>, its set as a string. When the value of the component changes, its set as a number.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * The duration-picker component can only be used in a **form** component on a **default** jig.
 * The duration-picker is an input control.
 * Maximum duration allowed is 23h 59 mins.
 * In properties that allow you to specify the duration, for example, `initialValue` and `value`, the duration is specified in seconds, for example, 1800 for 30 mins.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Basic duration-picker
+### Basic duration-picker
 
 {% columns %}
 {% column %}
@@ -152,7 +152,7 @@ actions:
 ```
 {% endcode %}
 
-#### Duration-picker with hours and steps
+### Duration-picker with hours and steps
 
 {% columns %}
 {% column %}
@@ -251,7 +251,7 @@ actions:
 ```
 {% endcode %}
 
-#### Duration-picker with minutes and steps
+### Duration-picker with minutes and steps
 
 {% columns %}
 {% column %}
@@ -357,7 +357,7 @@ actions:
 ```
 {% endcode %}
 
-#### Duration-picker with an onChange event
+### Duration-picker with an onChange event
 
 {% columns %}
 {% column %}
@@ -479,7 +479,7 @@ children:
 ```
 {% endcode %}
 
-#### Duration-picker with initialValue
+### Duration-picker with initialValue
 
 ![Duration-picker with initialValue](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Erx7M0rnyDqmU1rLYTLky-20241023-151348.PNG)
 
@@ -595,7 +595,7 @@ actions:
 ```
 {% endcode %}
 
-#### Duration-picker with color
+### Duration-picker with color
 
 {% columns %}
 {% column %}

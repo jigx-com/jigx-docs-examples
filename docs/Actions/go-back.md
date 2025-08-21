@@ -9,7 +9,7 @@ updatedAt: Mon Nov 04 2024 09:47:02 GMT+0000 (Coordinated Universal Time)
 
 This action is used to return to the previous page. Most jigs include this action automatically as an arrow to the left of the title of the jig. This action can be used in a list of actions, such as swipeable and rightElement, or used together with another action, where go-back is called after the main action and returns the user to the previous page.
 
-### Configuration options
+## Configuration options
 
 A go-back action can be set up in various ways:
 
@@ -22,9 +22,9 @@ A go-back action can be set up in various ways:
 A go-back action associated with another action under onSuccess can only be used with dynamic data.
 {% endhint %}
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### go-back as an action
+### go-back as an action
 
 {% columns %}
 {% column %}
@@ -51,7 +51,7 @@ actions:
 ```
 {% endcode %}
 
-#### go-back swipeable left/right
+### go-back swipeable left/right
 
 {% columns %}
 {% column %}
@@ -92,7 +92,7 @@ swipeable:
 {% endtab %}
 {% endtabs %}
 
-#### go-back rightElement
+### go-back rightElement
 
 {% columns %}
 {% column %}
@@ -118,7 +118,7 @@ rightElement:
 ```
 {% endcode %}
 
-#### go-back-on-success
+### go-back-on-success
 
 {% columns %}
 {% column %}

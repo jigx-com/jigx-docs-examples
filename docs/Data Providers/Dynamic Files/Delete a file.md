@@ -1,6 +1,6 @@
 # Delete a file
 
-### Delete a file in a jig
+## Delete a file in a jig
 
 {% columns %}
 {% column %}

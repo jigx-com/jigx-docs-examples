@@ -12,7 +12,7 @@ This feature enables you to generate hard copies of invoices, receipts, articles
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](print.md) for a list and their configuration options.
 
@@ -20,13 +20,13 @@ Some properties are common to all components, see [Common component properties](
 
 <table data-header-hidden><thead><tr><th width="142.82421875">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>Select an to display when the action is configured as the secondary button or in a <a href="../Components/jig-header.md">header action</a>.</td></tr><tr><td><code>isHidden</code></td><td><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</td></tr><tr><td><code>styles</code></td><td><ul><li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li><li><code>isDisabled</code> - Displays the action button as greyed out.</li><li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li><li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li></ul></td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * The `action.print` requires raw HTML. This can be configured in the action, in an expression, or in JavaScript.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Basic print action
+### Basic print action
 
 {% columns %}
 {% column %}
@@ -124,7 +124,7 @@ actions:
 ```
 {% endcode %}
 
-#### Print with web-view component
+### Print with web-view component
 
 This example demonstrates configuring `action.print` to display a button for printing HTML content shown in the `component.web-view`. The `state` of the component is used to reference the raw HTML used in the component.
 
@@ -241,7 +241,7 @@ actions:
 ```
 {% endcode %}
 
-#### Document jig with print action
+### Document jig with print action
 
 {% columns %}
 {% column %}
@@ -550,7 +550,7 @@ actions:
 ```
 {% endcode %}
 
-#### Print action in a jig header
+### Print action in a jig header
 
 {% columns %}
 {% column %}

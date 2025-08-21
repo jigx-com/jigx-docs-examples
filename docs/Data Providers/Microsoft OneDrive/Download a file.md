@@ -11,14 +11,14 @@ In a Jigx you can download a file from a specific location in OneDrive to your m
 
 <figure><img src="../../../.gitbook/assets/OneDriveDownload.PNG" alt="Download a file from OneDrive" width="375"><figcaption><p>Download a file from OneDrive</p></figcaption></figure>
 
-### Device storage location
+## Device storage location
 
 OneDrive downloads are stored in the following location depending on the device's operating system.
 
 * **Android** - File apps/Internal Storage/Documents
 * **iOS** - File apps/On My iPhone/Jigx/
 
-### Properties
+## Properties
 
 The following properties are required in the YAML to successfully download a file:
 
@@ -27,13 +27,13 @@ The following properties are required in the YAML to successfully download a fil
 * `tokenType` - OAuth token credentials name
 * `method: download`
 
-### Considerations
+## Considerations
 
 * Downloading a file that already exists in the device's storage will overwrite the existing file based on the file name.
 * Downloading large files will impact the storage on the device.
 * A delay or time lag of several minutes could be experienced when files are syncing between the device and OneDrive.
 
-### Code Example
+## Code Example
 
 The code example below provides an example of a list of invoices in the `myfiles` directory of OneDrive. To download a file from the list to your mobile device, swipe left and press the _Download_ button.
 
@@ -156,7 +156,7 @@ actions:
 {% endtab %}
 {% endtabs %}
 
-#### See also
+### See also
 
 * [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
 * [Create a file](<Create a file.md>)

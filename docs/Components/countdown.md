@@ -10,7 +10,7 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2X
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](countdown.md) for a list and their configuration options.
 
@@ -20,7 +20,7 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="153.1484375">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>Choose from the provided list of available actions, for example, use the <code>go-to</code> action to open a different jig.</td></tr><tr><td><code>onFinish</code></td><td>Choose from the provided list of available actions. For example, <code>go-back</code> action.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * This component's function is to countdown to a predefined date/time. It is not recommended to use the component as a timer.
 * The `component.countdown` can only be used in a `jig.default`.
@@ -29,9 +29,9 @@ Some properties are common to all components, see [Common component properties](
 * Use any inputs for the countdown configuration, for example, different types of datasources, states and inputs.
 * Use the `set-state` and `reset-state` actions to set and reset the countdown.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Countdown with inputs (static, dynamic, expression, & datasource)
+### Countdown with inputs (static, dynamic, expression, & datasource)
 
 {% columns %}
 {% column %}
@@ -119,7 +119,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Countdown with alignment
+### Countdown with alignment
 
 {% columns %}
 {% column %}
@@ -174,7 +174,7 @@ children:
 ```
 {% endcode %}
 
-#### Countdown with different sizes
+### Countdown with different sizes
 
 {% columns %}
 {% column %}
@@ -229,7 +229,7 @@ children:
 ```
 {% endcode %}
 
-#### Countdown onPress
+### Countdown onPress
 
 {% columns %}
 {% column %}
@@ -335,7 +335,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Countdown onFinish
+### Countdown onFinish
 
 {% columns %}
 {% column width="41.66666666666667%" %}
@@ -366,7 +366,7 @@ In this example the `onFinish` property is used to show a modal when the `compon
 ```
 {% endcode %}
 
-#### Countdown started from another jig
+### Countdown started from another jig
 
 {% columns %}
 {% column %}

@@ -85,7 +85,7 @@ The ChatGPT REST API allows prompts in the JSON body parameter you send to the C
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W-o\_ZWcHkRq83E4Yj4YA5\_ai-diagram.png" size="66" position="center" caption="OpenAI integration " alt="OpenAI integration " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W-o\_ZWcHkRq83E4Yj4YA5\_ai-diagram.png" width="800" height="256" darkWidth="800" darkHeight="256"}
 
-### High-level steps
+## High-level steps
 
 1. Open Jigx Builder in VS Code and create a Jigx solution.
 2. Under the functions folder create a function.jigx file to configure the OpenAI [REST](https://docs.jigx.com/examples/rest) API. For more information on configuring a REST function see [REST Overview](https://docs.jigx.com/rest-overview).
@@ -95,7 +95,7 @@ The ChatGPT REST API allows prompts in the JSON body parameter you send to the C
 6. Add [Components (controls)](https://docs.jigx.com/components-controls) to the jig and configure accordingly.
 7. Configure an [action](https://docs.jigx.com/actions) to call the OpenAI function. In most instances a [sync-entities](Actions/sync-entities.md) action is configured to return the reponse from the AI server.
 
-### Function configuration
+## Function configuration
 
 Jigx functions are used to configure the REST integration with AI models such as ChatGPT. Once a Jigx function has been configured you can call it anywhere from your visual components. See the section on [REST](<Data Providers/REST.md>) integration to understand how to use REST in Jigx. Below is an explanation describing how the parameters are configured to integrate Jigx and the AI model. It is important to refer to the AI model REST API you have selected to use, to ensure you have provided the required input and configured the output to return the correct response from the model.
 
@@ -103,7 +103,7 @@ Jigx functions are used to configure the REST integration with AI models such as
 
 ## Examples and code samples
 
-### Chatbot with OpenAI
+## Chatbot with OpenAI
 
 In this example, you set up an AI chat experience using the Jigx chatbot visual component configured to integrate with the OpenAI ChatGPT REST endpoint - [https://api.openai.com/v1/chat/completions](https://api.openai.com/v1/chat/completions). The REST API is configured in the ai-function.jigx and the chat component in the ai-chat.jigx file.
 
@@ -353,7 +353,7 @@ action:
 {% endtab %}
 {% endtabs %}
 
-### Anaylze images with OpenAI
+## Anaylze images with OpenAI
 
 In this example, an image is analyzed by integrating with the OpenAI ChatGPT REST service to analyze the image to provide a general reponse. An image is uploaded in a jig using the [media-field](Components/form/media-field.md) component. When the _Analyze image_ button is pressed a [sync-entities](Actions/sync-entities.md) action is configured which calls the function to execute the OpenAI REST API call. The result returned from the OpenAI call is used to add a description for the image in an [entity-field](Components/entity/entity-field.md) component.
 

@@ -19,7 +19,7 @@ View common uses for the static datasource below and how you can configure the s
 
 We've gone ahead and expanded the first one for you. Feel free to view any others you'd like to inspect.
 
-#### Static datasource configured locally on a jig
+### Static datasource configured locally on a jig
 
 {% columns %}
 {% column %}
@@ -82,7 +82,7 @@ item:
 ```
 {% endcode %}
 
-#### Static datasource configured globally on a jig
+### Static datasource configured globally on a jig
 
 {% columns %}
 {% column %}
@@ -141,7 +141,7 @@ item:
 {% endtab %}
 {% endtabs %}
 
-#### Static datasource configured inside a component
+### Static datasource configured inside a component
 
 You can also create static data right inside your component or as an `initialValue`, without a need to specify the datasource.
 
@@ -193,7 +193,7 @@ children:
 ```
 {% endcode %}
 
-#### Static datasource configured inside a dropdown component
+### Static datasource configured inside a dropdown component
 
 {% columns %}
 {% column %}

@@ -4,7 +4,7 @@ The info-modal is a pop-up window that provides additional information or contex
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GT3z8bVI4Thn1WDWMkgPB\_cc-infom-intro.png" size="86" position="center" caption="Info-modal" alt="Info-modal" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GT3z8bVI4Thn1WDWMkgPB\_cc-infom-intro.png" width="800" height="538" darkWidth="800" darkHeight="538"}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](info-modal.md) for a list and their configuration options.
 
@@ -14,7 +14,7 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="159.22265625">Actions</th><th></th></tr></thead><tbody><tr><td><code>onConfirmed</code></td><td><p>The action is triggered when the button is pressed. Use IntelliSense to see the list of available actions. Action to execute when the info-modal button is pressed.</p><ul><li>If the action is not defined, the info-modal will be closed.</li><li>If defined, the info-modal closes after the action is executed.</li><li>The button will have primary action style.</li></ul></td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * The info-modal only has one action (button).
 * If the action on the button is not defined, the info-modal closes automatically and no action is performed.
@@ -26,9 +26,9 @@ Some properties are common to all components, see [Common component properties](
 * In the info-modal the `buttonText` displays as a link, if the `onConfirmed` event is added the link visually changes to a button.
 * Consider the [confirm](confirm.md) action, which also provides a modal with two buttons, allowing you to cancel or proceed.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### info-modal with avatar
+### info-modal with avatar
 
 {% columns %}
 {% column %}
@@ -83,7 +83,7 @@ actions:
 ```
 {% endcode %}
 
-#### info-modal with icon
+### info-modal with icon
 
 {% columns %}
 {% column %}
@@ -139,7 +139,7 @@ actions:
 ```
 {% endcode %}
 
-#### info-modal with image
+### info-modal with image
 
 {% columns %}
 {% column %}
@@ -194,7 +194,7 @@ actions:
 ```
 {% endcode %}
 
-#### info-modal in calendar jig
+### info-modal in calendar jig
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42pa6T1c-ZmK3uaq-Fb-Y\_cc-infom-calendar.PNG" size="90" position="center" caption="Info-modal in a calendar jig" alt="Info-modal in a calendar jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42pa6T1c-ZmK3uaq-Fb-Y\_cc-infom-calendar.PNG" width="800" height="389" darkWidth="800" darkHeight="389"}
 
@@ -290,7 +290,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### info-modal in default jig
+### info-modal in default jig
 
 {% columns %}
 {% column %}
@@ -434,7 +434,7 @@ options:
 {% endtab %}
 {% endtabs %}
 
-#### info-modal in list jig
+### info-modal in list jig
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gCf59HwaD\_adrk5tU5b\_z\_cc-infom-list2.PNG" size="80" position="center" caption="Info-modal in a list jig" alt="Info-modal in a list jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gCf59HwaD\_adrk5tU5b\_z\_cc-infom-list2.PNG" width="800" height="538" darkWidth="800" darkHeight="538"}
 
@@ -645,7 +645,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### info-modal in onPress action on a widget
+### info-modal in onPress action on a widget
 
 ![Info-modal on widget](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x16UEinXJlMDbA6LAMVXp_cc-infom-widget.png)
 

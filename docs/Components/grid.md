@@ -11,9 +11,9 @@ The grid component has two available configuration options:
 
 <table><thead><tr><th width="153.90234375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>type</code></td><td>Within a grid component, the component is used to define each of the elements in the grid layout. Within the <code>grid-item</code> a select set of components can be configured.</td></tr><tr><td><code>data</code></td><td>Configure a datasource to call the data in the grid layout. The data property is required for the Auto Grid, but is optional for the Custom Grid selection.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Auto grid
+### Auto grid
 
 {% columns %}
 {% column %}
@@ -82,7 +82,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Custom grid
+### Custom grid
 
 {% columns %}
 {% column %}

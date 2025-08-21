@@ -2,7 +2,7 @@
 
 This action is used to scan a QR code. The `open-scanner` can be used in a list of actions, such as the swipe action and the right element, or with another action where the `open-scanner` action is invoked after the main action is performed, opening access to the camera.
 
-### Configuration options
+## Configuration options
 
 An `open-scanner` action can be set up in various ways:
 
@@ -11,9 +11,9 @@ An `open-scanner` action can be set up in various ways:
 3. As a `rightElement` in the list.
 4. As an associated action in the action list.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Open-scanner action
+### Open-scanner action
 
 {% columns %}
 {% column %}
@@ -54,7 +54,7 @@ actions:
 ```
 {% endcode %}
 
-#### Open-scanner swipeable left/right
+### Open-scanner swipeable left/right
 
 {% columns %}
 {% column %}
@@ -104,7 +104,7 @@ item:
 ```
 {% endcode %}
 
-#### Open-scanner rightElement
+### Open-scanner rightElement
 
 {% columns %}
 {% column %}
@@ -144,7 +144,7 @@ item:
 ```
 {% endcode %}
 
-#### Open-scanner onSuccess
+### Open-scanner onSuccess
 
 {% columns %}
 {% column %}

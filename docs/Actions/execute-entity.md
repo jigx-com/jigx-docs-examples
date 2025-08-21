@@ -15,7 +15,7 @@ For the Dynamic datasource, values will be saved under the `data` option. For SQ
 This action can't be used if you are using [Static Data](https://docs.jigx.com/examples/static).&#x20;
 {% endhint %}
 
-### Configuration options
+## Configuration options
 
 An `execute-entity` action can be used in multiple areas:
 
@@ -28,13 +28,13 @@ An `execute-entity` action can be used in multiple areas:
 The execute-entity has a `go-back` option, which is set to on by default. That means when you run execute-entity, it will automatically return you to the previous jig.
 {% endhint %}
 
-### Offline remote data handling
+## Offline remote data handling
 
 Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](https://docs.jigx.com/offline-remote-data-handling) explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities and provides examples and code samples.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Execute-entity in action
+### Execute-entity in action
 
 {% columns %}
 {% column %}
@@ -68,7 +68,7 @@ actions:
 ```
 {% endcode %}
 
-#### Execute-entity in action list
+### Execute-entity in action list
 
 {% columns %}
 {% column %}
@@ -117,7 +117,7 @@ actions:
 ```
 {% endcode %}
 
-#### Execute-entity in onPress/onChange event
+### Execute-entity in onPress/onChange event
 
 {% columns %}
 {% column %}
@@ -184,7 +184,7 @@ item:
 {% endtab %}
 {% endtabs %}
 
-#### Execute-entity in onRefresh/onFocus
+### Execute-entity in onRefresh/onFocus
 
 {% columns %}
 {% column %}
@@ -229,7 +229,7 @@ onFocus:
 {% endtab %}
 {% endtabs %}
 
-#### Deleting data using execute-entity
+### Deleting data using execute-entity
 
 Here is an example of deleting different data using execute-entity. There are always 2 options for how you can delete a record:
 

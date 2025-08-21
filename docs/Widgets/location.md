@@ -64,7 +64,7 @@ markers:
 
 ## Examples and code snippets
 
-### location widget using address (4x2)
+## location widget using address (4x2)
 
 {% columns %}
 {% column %}
@@ -200,7 +200,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### location widget with multiple markers (4x2)
+## location widget with multiple markers (4x2)
 
 {% columns %}
 {% column %}
@@ -308,7 +308,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### location widget displaying path (4x4)
+## location widget displaying path (4x4)
 
 {% columns %}
 {% column %}
@@ -412,7 +412,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### location widget with longitude and latitude (2x4)\\/col
+## location widget with longitude and latitude (2x4)\\/col
 
 {% columns %}
 {% column %}

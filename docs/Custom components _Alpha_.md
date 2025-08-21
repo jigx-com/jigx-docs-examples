@@ -2,7 +2,7 @@
 
 ## Custom components (Alpha)
 
-### Custom components (Alpha)
+## Custom components (Alpha)
 
 {% hint style="danger" %}
 This feature is currently in its **Alpha** stage of development.
@@ -26,7 +26,7 @@ Custom components extend the standard set of components in Jigx to provide addit
    4. [Text (Alpha)](<Custom components _Alpha_/Text _Alpha_.md>)
    5. [View (Alpha)](<Custom components _Alpha_/View _Alpha_.md>)
 
-### How to create a custom component
+## How to create a custom component
 
 1. In Jigx Builder in the components folder, create a new jigx file, e.g., custom-button.jigx.
 2. Select the `type: component.default`. All custom components require this type.
@@ -37,7 +37,7 @@ Custom components extend the standard set of components in Jigx to provide addit
 7. Open the jig where you want to use the custom component and reference `component.custom-component`. Use the `componentId` property to reference the name of the custom component file, e.g., `componentId: custom-button`.
 8. Test the jig on a mobile device to ensure the button is rendering correctly.
 
-### Considerations
+## Considerations
 
 * [Localization](https://docs.jigx.com/localization) can be applied to custom components such as [Button (Alpha)](<Custom components _Alpha_/Button _Alpha_.md>) and [Text (Alpha)](<Custom components _Alpha_/Text _Alpha_.md>).
 *   You can nest custom components by using `component.custom-component` and referencing the desired component in the `componentId` property.

@@ -9,7 +9,7 @@ updatedAt: Wed Mar 05 2025 15:04:19 GMT+0000 (Coordinated Universal Time)
 
 There is always a need to ensure records are kept up to date and have the latest contact details, sales figures, or case details. The Salesforce _Save_ or _Update_ methods allow you to update records in Salesforce directly from your mobile device.
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="warning" %}
 Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.

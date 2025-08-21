@@ -293,7 +293,7 @@ rating:
 ## Examples and code snippets
 
 :::::ExpandableHeading
-### Simple list
+## Simple list
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -482,7 +482,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### Simple list with dividers
+## Simple list with dividers
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -673,7 +673,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with colored progress bars
+## List with colored progress bars
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -858,7 +858,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with charts
+## List with charts
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -1128,7 +1128,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with avatars
+## List with avatars
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -1197,7 +1197,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with left avatar
+## List with left avatar
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -1378,7 +1378,7 @@ datasources:
 :::::
 
 ::::::ExpandableHeading
-### List with left checkboxes
+## List with left checkboxes
 
 :::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -1561,7 +1561,7 @@ datasources:
 ::::::
 
 :::::ExpandableHeading
-### List with the left icons
+## List with the left icons
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -1744,7 +1744,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with the left image
+## List with the left image
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -1931,7 +1931,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with left progress
+## List with left progress
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -2106,7 +2106,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### Swipeable list (left)
+## Swipeable list (left)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -2337,7 +2337,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with the right amount control
+## List with the right amount control
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -2531,7 +2531,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with the right badges
+## List with the right badges
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -2724,7 +2724,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with right numbered badges
+## List with right numbered badges
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -2840,7 +2840,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with right Buttons
+## List with right Buttons
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -3035,7 +3035,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with the right icons
+## List with the right icons
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -3233,7 +3233,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with the right switch
+## List with the right switch
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -3425,7 +3425,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with the right value
+## List with the right value
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -3648,7 +3648,7 @@ options:
 :::::
 
 :::::ExpandableHeading
-### Swipeable list (right)
+## Swipeable list (right)
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -3889,7 +3889,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with active item
+## List with active item
 
 This allows you to see when you are interacting with a specific list-item. Whilst interacting, the list item changes slightly making it clear which item you are interacting with.
 
@@ -4104,7 +4104,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List with sections
+## List with sections
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -4305,7 +4305,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List items contained in a card
+## List items contained in a card
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -4357,7 +4357,7 @@ item:
 :::::
 
 :::::ExpandableHeading
-### List-item with ratings as a value
+## List-item with ratings as a value
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -4526,7 +4526,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List-item with ratings as a percentage
+## List-item with ratings as a percentage
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -4619,7 +4619,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List-item with ratings with a percentage, minimum, maximum and icon
+## List-item with ratings with a percentage, minimum, maximum and icon
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -4787,7 +4787,7 @@ options:
 :::::
 
 :::::ExpandableHeading
-### List-item with multiple tags
+## List-item with multiple tags
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -4878,7 +4878,7 @@ datasources:
 :::::
 
 :::::ExpandableHeading
-### List-item with ratings and tags
+## List-item with ratings and tags
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -4994,7 +4994,7 @@ options:
 :::::
 
 :::::ExpandableHeading
-### List-item outside a list
+## List-item outside a list
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -5062,7 +5062,7 @@ children:
 :::::
 
 :::::ExpandableHeading
-### List-item with multiple lines in right element
+## List-item with multiple lines in right element
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem

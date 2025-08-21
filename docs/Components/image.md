@@ -12,7 +12,7 @@ Image\[]{alt="Image Preview" src="https://archbee-image-uploads.s3.amazonaws.com
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](image.md) for a list and their configuration options.
 
@@ -22,14 +22,14 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="158.0703125">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>The action is triggered when pressing on the image. Use IntelliSense (ctrl+space) to see the list of available actions.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * Dynamic Data cannot save images larger than 350K. Jigx does not recommend storing images in Dynamic Data or storing images as base64 in the Dynamic Data database.
 * The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/assets).
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Image in Header
+### Image in Header
 
 {% columns %}
 {% column %}
@@ -128,7 +128,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Image in jig/default
+### Image in jig/default
 
 {% columns %}
 {% column %}

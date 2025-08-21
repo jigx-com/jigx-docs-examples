@@ -16,7 +16,7 @@ The date-picker component provides the functionality to select specific dates, t
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](date-picker.md) for a list and their configuration options.
 
@@ -28,15 +28,15 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="220.2734375">State Configuration</th><th width="162.203125">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>value</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * The `date-picker` component requires dates to be input in an ISO format when statically specified or from a datasource.
 * The `format` property is set to show for the outputs of the field and are ready only.
 * For setting the date format taking into account time zones see [Expressions - cheatsheet](https://docs.jigx.com/expressions-cheatsheet) for example expressions.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Date picker for selecting a specific date
+### Date picker for selecting a specific date
 
 {% columns %}
 {% column %}
@@ -68,7 +68,7 @@ children:
 ```
 {% endcode %}
 
-#### Date picker for selecting time
+### Date picker for selecting time
 
 {% columns %}
 {% column %}
@@ -99,7 +99,7 @@ children:
 ```
 {% endcode %}
 
-#### Date picker with a minimum and maximum date
+### Date picker with a minimum and maximum date
 
 {% columns %}
 {% column %}
@@ -129,6 +129,6 @@ children:
 ```
 {% endcode %}
 
-### See also
+## See also
 
 * [State](https://docs.jigx.com/state)

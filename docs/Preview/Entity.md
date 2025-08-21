@@ -2,7 +2,7 @@
 
 The entity component allows the user to use entity (sections, field-rows and entity-fields) as the preview content.
 
-#### Long-press on a widget
+### Long-press on a widget
 
 {% columns %}
 {% column %}
@@ -79,7 +79,7 @@ preview:
 ```
 {% endcode %}
 
-#### Long-press onPress action
+### Long-press onPress action
 
 {% columns %}
 {% column %}
@@ -268,7 +268,7 @@ preview:
 {% endtab %}
 {% endtabs %}
 
-#### Longpress on Calendar jig
+### Longpress on Calendar jig
 
 ::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8AC46n2hv\_cJz5EWmcOcz\_img7957iphone13blueportrait.png" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8AC46n2hv\_cJz5EWmcOcz\_img7957iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
 

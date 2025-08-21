@@ -9,15 +9,15 @@ updatedAt: Thu Mar 06 2025 09:13:20 GMT+0000 (Coordinated Universal Time)
 
 With the ability to create and update data, you must be able to delete data that is no longer needed. This example shows how to delete a single row of data and then how to delete multiple rows of data from a jig.
 
-### Datasources, jigs, component & actions
+## Datasources, jigs, component & actions
 
 1. **default.jigx** is the database where the Dynamic Data table is defined.
 2. [sqlite](../../Datasource/sqlite.md) datasource calls the Dynamic Data provider, using an SQL query to return the data.
 3. [jig.list](<../../Jig Types/jig_list.md>) is the type of jig used to list the data with a `swipeable: left` action that uses the Dynamic Data provider's `delete` method.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Delete a single data record using execute-entity
+### Delete a single data record using execute-entity
 
 <figure><img src="../../../.gitbook/assets/DD-delete.png" alt="Deleting Dynamic Data" width="563"><figcaption><p>Deleting Dynamic Data</p></figcaption></figure>
 
@@ -125,7 +125,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Deleting multiple data records using execute-entities
+### Deleting multiple data records using execute-entities
 
 To delete all employees (multiple data records) in the Dynamic Data table use the `action.execute-entities` action with an expression that as shown below. This will delete all records in the table when the _Delete all employees_ button is pressed.
 

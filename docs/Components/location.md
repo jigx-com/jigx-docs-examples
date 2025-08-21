@@ -55,14 +55,14 @@ markers:
 
 <table><thead><tr><th width="240.703125">System variable Configuration</th><th width="203.80859375">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.system.geolocation.</code></td><td>coords timestamp</td><td>See example.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * Test the layout of the location component when combining it with other components, as it can cause spacing issues.
 * To display a location as a full screen, use the [jig.fullscreen](<../Jig Types/jig_fullscreen.md>) type with the `component.location`. See the [Fullscreen location](https://docs.jigx.com/examples/location#autxL) example down below.
 
 ## Examples and code snippets
 
-### Location using address
+## Location using address
 
 {% columns %}
 {% column %}
@@ -165,7 +165,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-### Location using latitude and longitude
+## Location using latitude and longitude
 
 {% columns %}
 {% column %}
@@ -228,7 +228,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-### Location with multiple markers
+## Location with multiple markers
 
 {% columns %}
 {% column %}
@@ -290,7 +290,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-### Location displaying paths
+## Location displaying paths
 
 {% columns %}
 {% column %}
@@ -385,7 +385,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-### Location radius
+## Location radius
 
 {% columns %}
 {% column %}
@@ -449,7 +449,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-### Location full screen
+## Location full screen
 
 {% columns %}
 {% column %}
@@ -521,7 +521,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-### Location as a header
+## Location as a header
 
 {% columns %}
 {% column %}
@@ -625,6 +625,6 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-### See also
+## See also
 
 * [State](https://docs.jigx.com/state)

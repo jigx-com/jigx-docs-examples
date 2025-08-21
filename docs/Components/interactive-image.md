@@ -4,7 +4,7 @@ An interactive image has clickable links that can be used in various ways. For i
 
 ![Interactive images](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OZ2ahxGqIKn7vTYf5BExY_cc-interactiveimage.png)
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](interactive-image.md) for a list and their configuration options.
 
@@ -12,7 +12,7 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="138.90234375">Other options</th><th></th></tr></thead><tbody><tr><td><code>data</code></td><td>Provide the x and y coordinates to be placed on the image.</td></tr><tr><td><code>groups</code></td><td>This property includes <code>title</code> and <code>id</code>, with the additional option of adding a <code>color</code> for your group and <code>maximumPoints</code>, which defines the maximum possible number of selected points. The <code>groups</code> property is used to specify certain groups to distinguish between selected/unselected and otherwise specified areas.</td></tr><tr><td><code>imageHeight</code></td><td>The height of the image is specific. If the height is bigger than the image ratio (width/height), the height is correlated based on the image dimensions.</td></tr><tr><td><code>item</code></td><td>There is only one available option, which is .</td></tr><tr><td><code>pointColor</code></td><td>The color of the point(s) marked on the image. The default color for point items is inactive state.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * The interactive component serves as a container for the [interactive-image-item](interactive-image/interactive-image-item.md) component.
 * The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/assets).

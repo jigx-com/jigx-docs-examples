@@ -14,7 +14,7 @@ Image\[]{alt="Avatar Field Preview" src="https://archbee-image-uploads.s3.amazon
 The `avatar-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 {% endhint %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](avatar-field.md) for a list and their configuration options.
 
@@ -26,14 +26,14 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="206.37109375">State Configuration</th><th width="156.9296875">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>value</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * The `avatar-field` can only be used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](../form.md) component.
 * Only Dynamic Data or SQL data can be used to ensure that the image can be saved.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Avatar-field example
+### Avatar-field example
 
 {% columns %}
 {% column %}

@@ -12,7 +12,7 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOh
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](generate-pdf.md) for a list and their configuration options.
 
@@ -20,15 +20,15 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="149.015625">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>Select a icon to display when the action is configured as the secondary button or in a <a href="../Components/jig-header.md">jig-header</a>.</td></tr><tr><td><code>isHidden</code></td><td><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</td></tr><tr><td><code>styles</code></td><td><ul><li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li><li><code>isDisabled</code> - Displays the action button as greyed out.</li><li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li><li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li></ul></td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * You can reference the local PDF file using the action's output uri in other actions or components, `=@ctx.actions.generatePDF.outputs.uri`. For example, generate the PDF file then [share](share.md) the file.
 * Depending on where you save and use the saved PDF, you might need to use [conversions](https://docs.jigx.com/file-handling).
 * The .pdf extension is automatically added to the `fileName`.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Basic generate a PDF and share
+### Basic generate a PDF and share
 
 {% columns %}
 {% column %}
@@ -146,7 +146,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Generate a pdf, save and share
+### Generate a pdf, save and share
 
 {% columns %}
 {% column %}
@@ -382,7 +382,7 @@ actions:
 ```
 {% endcode %}
 
-#### Generate pdf from JavaScript HTML function
+### Generate pdf from JavaScript HTML function
 
 This example demonstrates how to use a JavaScript function to generate an HTML invoice. The invoice is populated with customer details retrieved from a Dynamic Data datasource named invoices. The JavaScript function is referenced in an expression used by `action.generate-pdf`, after which the invoice is shared using the `action.share` via the device's apps.
 

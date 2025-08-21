@@ -2,7 +2,7 @@
 
 The `set-state` action sets the global state (also called the solution state). Multiple components and jigs can access the state's value across the solution. Effectively managing the global state ensures that all parts of the app that depend on this data are updated consistently. To understand how to use states, see [State](https://docs.jigx.com/state).
 
-### Configuration options
+## Configuration options
 
 A `set-state` action can be set up in various ways:
 
@@ -11,9 +11,9 @@ A `set-state` action can be set up in various ways:
 3. As the main action on the jig, and when you press the action, the `set-state` action will be executed.
 4. The `onPress` and `onChange` actions will be executed when you trigger these events.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### set-state as onFocus/onRefresh
+### set-state as onFocus/onRefresh
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/biw9t9RyNz-0XOfnu92pv\_set-state-onfocus.PNG" size="80" position="center" caption="Count triggers with set-sate" alt="Count triggers with set-sate" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/biw9t9RyNz-0XOfnu92pv\_set-state-onfocus.PNG"}
 
@@ -43,7 +43,7 @@ onRefresh:
 {% endtab %}
 {% endtabs %}
 
-#### set-state as action
+### set-state as action
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_gb30xllbsbqiIK8YENCT\_set-state-action.PNG" size="80" position="center" caption="Set-state action" alt="Set-state action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_gb30xllbsbqiIK8YENCT\_set-state-action.PNG"}
 
@@ -63,7 +63,7 @@ actions:
 ```
 {% endcode %}
 
-#### set-state as onPress/onChange
+### set-state as onPress/onChange
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qSwlxC1hjffY06BLuvK7u\_set-state-onpress.PNG" size="78" position="center" caption="Set-state onPress/onChange" alt="Set-state onPress/onChange" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qSwlxC1hjffY06BLuvK7u\_set-state-onpress.PNG"}
 

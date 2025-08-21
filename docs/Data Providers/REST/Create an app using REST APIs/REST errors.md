@@ -1,6 +1,6 @@
 # REST errors
 
-### Scenario
+## Scenario
 
 {% columns %}
 {% column %}
@@ -16,15 +16,15 @@ When trying to view a customer and their details or create a new customer in the
 {% endcolumn %}
 {% endcolumns %}
 
-### How does this work
+## How does this work
 
 An `error` section is added to the REST endpoint functions for creating customers (POST), viewing customers (GET), and updating customers (PUT). In this section, the `when` property is configured with an expression that returns the response status from the endpoint, for example, `=@ctx.response.status = 403`. There are multiple `when` properties configured to catch a 401 and 403 error; all other response statuses are caught in the Unexpected error. Each `when` property has a `title`, `icon`, and `description`, which provides a user-friendly explanation of the error. Errors are written to the customers\_error `table`, and the data written to the table is configured in the `transform` property. The `table,` in conjunction with the `commandQueue` is used to troubleshoot the error and create jigs that allows you to retry the REST call or delete the error from the `commandQueue`. See [REST error handling](<REST errors.md>) for more information.
 
-### REST API
+## REST API
 
 <table><thead><tr><th width="216.125">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/customers</td></tr><tr><td>Operation/Method</td><td>POST,GET,PUT</td></tr></tbody></table>
 
-### Function
+## Function
 
 In each of the REST function files (GET, POST, PUT), add an `error` section and configure the YAML to cater for a 401 and 403 error, and a section to cater for all other response errors.
 
@@ -461,7 +461,7 @@ error:
 {% endtab %}
 {% endtabs %}
 
-### Datasources
+## Datasources
 
 Add a file under the datasource folder to configure the local data provider with the data returned from the customers\_error table. This data is used to provide detail of the error in a jig and to configure actions allowing the item to be retried or deleted.
 
@@ -489,14 +489,14 @@ options:
 ```
 {% endcode %}
 
-### Jigs (screens)
+## Jigs (screens)
 
 There are a number of options available to process items that are in an error state.
 
 1. Use the **commandQueue**. Items that return an error from the REST endpoint will remain on the commandQueue and are not automatically processed by the queue. You must configure an action to either retry the item or delete the item from the queue. The retry executes the REST call again.
 2. Use the _**customer\_error**_ table configured in the function. Use the data from the table in a jig to allow app users to resolve the error or delete the item in error.
 
-### Use the commandQueue
+## Use the commandQueue
 
 Create two jigs to work with the items in the [commandQueue](<REST errors.md>). This is helpful for the solution owner or administrator to take action and `delete` errors in the queue or possibly `retry` the REST call to process the items in the queue that are in an error state. Configure a list jig containing all items in the commandQueue, add a left `swipeable` action to cater for the delete and retry actions, also add an `onPress` event to go to view the payload details of the item in error.
 
@@ -670,7 +670,7 @@ actions:
 {% endtab %}
 {% endtabs %}
 
-### Use the customers\_error table
+## Use the customers\_error table
 
 Create a list jig to list the records in the customers\_error table. Provide detail of the error in the `title` and `subtitle` properties.
 
@@ -1156,7 +1156,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Index
+## Index
 
 For performance and offline support the data is synced from the REST service as soon as the app is opened or receives focus. This is achieved by calling the global action in the `onFocus` events. The `action.sync-entities` action will delete any items from the local data provider that were deleted from the commandQueue.
 

@@ -9,20 +9,20 @@ updatedAt: Thu Mar 06 2025 08:30:25 GMT+0000 (Coordinated Universal Time)
 
 Creating Dynamic Data can be achieved in several ways, one of which is by using a form. In this example, we will demonstrate how to create a new employee form that will create the employee table, columns, and data record in the Dynamic Data database when the form is submitted.
 
-### Data provider, jig, component & action
+## Data provider, jig, component & action
 
 1. **default.jigx** is the database where the Dynamic Data table is defined.
 2. [jig.default](<../../Jig Types/jig_default.md>) is the type of jig we will use to contain the form.
 3. [form](../../Components/form.md) is the component used with text and date fields.
 4. [submit-form](../../Actions/submit-form.md) is the action that executes the create method of the Dynamic Dataprovider
 
-### Examples and code snippets
+## Examples and code snippets
 
 <figure><img src="../../../.gitbook/assets/DD-new-employee.png" alt="Form creating Dynamic Data" width="563"><figcaption><p>Form creating Dynamic Data</p></figcaption></figure>
 
 ![Dynamic data database](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BBlDwFNCg9r4DSlmAFOO8_dd-employee-mngt.png)
 
-### Create the Dynamic Data table
+## Create the Dynamic Data table
 
 {% columns %}
 {% column %}
@@ -39,7 +39,7 @@ tables:
 {% endcolumn %}
 {% endcolumns %}
 
-### Create the jig, form and action
+## Create the jig, form and action
 
 The code example below is for the `jig.default` with the `component.form` that uses `componet.text` and `component.date-picker` to create the fields on the form. The `action.submit-form` executes the `DATA_PROVIDER_DYNAMIC` that uses the `save/create` method to create columns and data records.
 
@@ -150,7 +150,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-### View the Dynamic Data in Jigx Management
+## View the Dynamic Data in Jigx Management
 
 1. Open [Management](https://docs.jigx.com/management-overview) , navigate to your solution (employees).
 2. Navigate to **Data** option

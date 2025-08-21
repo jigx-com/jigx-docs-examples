@@ -9,7 +9,7 @@ updatedAt: Wed Jul 24 2024 09:33:13 GMT+0000 (Coordinated Universal Time)
 
 The field-row component contains other components and displays them on the same row. This component does not indicate a new row; all components are automatically placed in a new row. Instead, this component ensures that items are placed next to instead of underneath each other.
 
-### Considerations
+## Considerations
 
 * Rows can contain [entity-field](entity-field.md) components:
   * On a [default jig](<../../Jig Types/jig_default.md>) or children components
@@ -19,9 +19,9 @@ The field-row component contains other components and displays them on the same 
 
 Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Field-row components with entity-fields (Display only)
+### Field-row components with entity-fields (Display only)
 
 {% columns %}
 {% column %}
@@ -239,7 +239,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Field-row components on form with children components (Display and input)
+### Field-row components on form with children components (Display and input)
 
 {% columns %}
 {% column %}

@@ -2,7 +2,7 @@
 
 This action generates files such as PDFs, CSVs, or text files. It accepts content to be written to the file, along with an optional encoding parameter. Once generated, the file's URI is returned and included in the action instance output.
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](https://docs.jigx.com/examples/common-component-properties) for a list and their configuration options.
 
@@ -10,15 +10,15 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="155.33984375">Other options</th><th></th></tr></thead><tbody><tr><td><code>encoding</code></td><td><p>The <code>encoding</code> parameter specifies how an already encoded file should be interpreted when it is read. It does not encode the file itself but rather determines how the provided file content is decoded. Accepted encoding options:</p><ul><li><code>utf8</code> - default</li><li><code>ascii</code></li><li><code>base64</code> - All three encoding types are supported and will return errors if the provided file content is incompatible with the selected encoding. If a plain text string (e.g., "Hello World") is supplied with base64 encoding, the file will appear empty because it is not a valid base64-encoded string. When a valid base64 string (e.g., "SGVsbG8sIFdvcmx" for "Hello World") is provided, it will be decoded correctly, resulting in a readable file with the expected content. After reading the file, can be configured if needed.</li></ul></td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * You can reference the local file using the action's output uri in other actions or components, `=@ctx.actions.generateFile.outputs.uri`. For example, generate the file then [share](share.md) the file.
 * Depending on where you save and use the saved file, you might need to use [conversions](https://docs.jigx.com/file-handling).
 * The file extension must be included in the `fileName`, e.g., FormA.docx.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Generate and share the file
+### Generate and share the file
 
 {% columns %}
 {% column %}

@@ -9,7 +9,7 @@ updatedAt: Wed Feb 12 2025 13:35:58 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column width="50%" %}
-### Scenario
+## Scenario
 
 Gets a user's profile and photo in Microsoft Graph using Jigx functions, and displays the profile and photo on a jig using the `image` and `entity` component.
 
@@ -29,13 +29,13 @@ User.Read User.ReadWrite User.ReadBasic.All User.Read.All User.ReadWrite.All Dir
 {% endcolumn %}
 {% endcolumns %}
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="success" %}
 When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
 {% endhint %}
 
-### General
+## General
 
 {% tabs %}
 {% tab title="index.jigx" %}
@@ -129,7 +129,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Functions
+## Functions
 
 MS Graph User functions in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/functions/User).
 
@@ -181,7 +181,7 @@ conversions:
 {% endtab %}
 {% endtabs %}
 
-### Jigs
+## Jigs
 
 MS Graph User jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/user/view-user-jigx.jigx).
 
@@ -367,6 +367,6 @@ widgets:
 ```
 {% endcode %}
 
-### See Also
+## See Also
 
 * [Update Profile Photo](<Update Profile Photo.md>)

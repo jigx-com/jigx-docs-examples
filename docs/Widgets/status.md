@@ -22,7 +22,7 @@ The status returned is based on a Boolean condition.
 
 ## Examples and code snippets
 
-### Status widget (2x2)
+## Status widget (2x2)
 
 {% columns %}
 {% column %}
@@ -126,7 +126,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Status widget (2x4)
+## Status widget (2x4)
 
 {% columns %}
 {% column %}
@@ -242,7 +242,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Status widget(4x2)
+## Status widget(4x2)
 
 {% columns %}
 {% column %}

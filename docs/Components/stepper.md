@@ -10,7 +10,7 @@ This component displays the progress status of a task. Useful when tracking deli
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](stepper.md) for a list and their configuration options.
 
@@ -18,9 +18,9 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="208.49609375">Other options</th><th></th></tr></thead><tbody><tr><td><code>isExpandable</code></td><td>Set to <code>true</code> the stepper will be expandable into steps. Set to <code>false</code> the stepper is not expandable.</td></tr><tr><td><code>style</code></td><td><p>The styling determines the color of the chart. There are three colors options, determined by the standard colors or by your branding color configuration. For example if the status is complete use <code>isPositive</code> to show the chart in green (standard). If no style is specified the chart shows in blue (standard). Available options:</p><ul><li><code>isNegative</code> - red (standard)</li><li><code>isPositive</code> - green (standard)</li><li><code>isWarning</code> - orange (standard)</li></ul></td></tr><tr><td><code>subtitle</code></td><td>The subtitle/short description of the stepper to display under the title. You can use an expression to set the subtitle.</td></tr><tr><td><code>title</code></td><td>The title for the stepper, you can use an expression to set the title.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Stepper example
+### Stepper example
 
 {% columns %}
 {% column %}

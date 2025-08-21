@@ -10,7 +10,7 @@ The composite jig is a jig made up of several parts or elements. In this case, a
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all jig types, see [Common jig type properties](jig_composite.md) for a list and their configuration options.
 
@@ -18,7 +18,7 @@ Some properties are common to all jig types, see [Common jig type properties](ji
 
 <table><thead><tr><th width="150.23828125">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>The icon will be displayed on the widget of this jig. Start typing the name of the icon to invoke the available list in IntelliSense. See <a href="jig_composite.md">Jigx icons</a> for information on working with icons.</td></tr><tr><td><code>inputs</code></td><td>If you are setting up a <code>jig.composite</code> where jigs rely on input to display or otherwise interact with very specific data, you'll need to use <code>inputs</code>. Here you set the data you would like to transfer to the composite jig. There are 2 options to make data available for input: 1) Set them in <code>output</code> inside the jig. 2) Set them as a <code>global</code> variable by using <code>set-state action</code>.</td></tr><tr><td><code>isTitleHidden</code></td><td>The boolean value allows you to hide the title of your jig in the composite jig. Even if the jig's title is set to <code>true</code> , because the title is a mandatory property.</td></tr><tr><td><code>when</code></td><td>The ability to include or exclude a jig for display on a composite jig. If set to <code>true</code> the jig is included, if set to <code>false</code> the jig will not appear on the composite jig. Dynamically set this property by using expressions.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * When calling a jig in a composite jig for example, `jigId: personal-details`, you can add an `instanceId` on the composite jig. This allows you to interact with the referenced jig, such as saving or calling a control on the referenced jig. If no `instanceId` exists, IntelliSense cannot show it in the composite jig configuration.
 
@@ -76,13 +76,13 @@ actions:
 ```
 {% endcode %}
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="success" %}
 The code below is an extract from the full _jigx-samples_ solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full _jigx-samples_ project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples) and follow the instructions in [Setting up your solution](jig_composite.md).
 {% endhint %}
 
-#### Composite Jig without any form of input
+### Composite Jig without any form of input
 
 {% columns %}
 {% column %}
@@ -261,7 +261,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Composite Jig with input
+### Composite Jig with input
 
 This example shows how a Composite jig can be used to only display certain data based on the input received.
 

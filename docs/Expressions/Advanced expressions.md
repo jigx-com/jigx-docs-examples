@@ -4,7 +4,7 @@ Use [Advanced Expressions](<Advanced expressions.md>) to filter an array of reco
 
 ## Examples and code snippets
 
-### Create a filtered list from an array of records
+## Create a filtered list from an array of records
 
 {% columns %}
 {% column %}
@@ -80,7 +80,7 @@ item:
 ```
 {% endcode %}
 
-### Define functions to run the expressions
+## Define functions to run the expressions
 
 As part of advanced expressions, you can define functions that will run the expressions. It can be a function for date transformations, maths calculations, or any string transformations. By using functions you will have cleaner code that is easier to read.
 

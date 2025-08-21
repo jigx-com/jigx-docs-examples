@@ -9,7 +9,7 @@ updatedAt: Wed Mar 05 2025 18:00:17 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column %}
-### Scenario
+## Scenario
 
 Get a list of To-do tasks for a user in Microsoft Graph using a GET REST function and display the tasks in a list jig.
 
@@ -29,13 +29,13 @@ Tasks.Read Tasks.ReadWrite
 {% endcolumn %}
 {% endcolumns %}
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="success" %}
 When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
 {% endhint %}
 
-### General
+## General
 
 {% tabs %}
 {% tab title="index.jigx" %}
@@ -129,7 +129,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Functions
+## Functions
 
 MS Graph list To-do tasks function in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator/functions/tasks).
 
@@ -201,7 +201,7 @@ errorTransform: |
 {% endtab %}
 {% endtabs %}
 
-### Jigs
+## Jigs
 
 MS Graph list To-do tasks jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/tasks/list-task-lists.jigx).
 

@@ -9,7 +9,7 @@ updatedAt: Mon Feb 24 2025 09:57:20 GMT+0000 (Coordinated Universal Time)
 
 This action allows for multiple actions to be run while only requiring the user to press a single button. The actions can be set to run sequentially or executed as a bulk functionality.
 
-### Configuration options
+## Configuration options
 
 An `action list` can be set up in various ways:
 
@@ -17,9 +17,9 @@ An `action list` can be set up in various ways:
 2. In onPress/onChange events - usually triggered by [list](../Widgets/list.md) or [jig.list](<../Jig Types/jig_list.md>) related items.
 3. In onRefresh/onFocus events on any type of jig.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Action-list as a primary action button
+### Action-list as a primary action button
 
 {% columns %}
 {% column %}
@@ -76,7 +76,7 @@ children:
 ```
 {% endcode %}
 
-#### Action list as onPress/onChange
+### Action list as onPress/onChange
 
 {% columns %}
 {% column %}
@@ -148,7 +148,7 @@ item:
 {% endtab %}
 {% endtabs %}
 
-#### Action list as onRefresh/onFocus
+### Action list as onRefresh/onFocus
 
 In this example when we refresh the jig/jig is focused, we call set-state and sync-entities actions.
 

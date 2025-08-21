@@ -9,13 +9,13 @@ updatedAt: Wed Mar 05 2025 15:03:54 GMT+0000 (Coordinated Universal Time)
 
 Reading data from Salesforce using the Salesforce provider is easy. The provider is intuitive, and once you have synced the data from the Salesforce provider to the local data provider, you can design lists, charts, and widgets to show your organization's Salesforce metrics, accounts, opportunities, and more.
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="warning" %}
 Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.
 {% endhint %}
 
-#### List of accounts
+### List of accounts
 
 {% columns %}
 {% column %}
@@ -91,7 +91,7 @@ children:
         
 ```
 
-#### List of Opportunities
+### List of Opportunities
 
 {% columns %}
 {% column %}
@@ -167,7 +167,7 @@ children:
 ```
 {% endcode %}
 
-#### Create a Stage detail jig
+### Create a Stage detail jig
 
 {% columns %}
 {% column %}
@@ -259,7 +259,7 @@ summary:
     options:
       title: >
         ='Total: $' & $formatNumber(@ctx.datasources.total-sales.totalsales ,
-        '#,###.00')
+        '#,##.00')
       subtitle: Quarter sales to date
       layout: default
       leftIcon:

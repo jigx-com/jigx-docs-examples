@@ -10,11 +10,11 @@ These common properties include:
 * [when](<../Components/Common component properties.md>)
 * Home button visibility
 
-### bottomSheet (Beta)
+## bottomSheet (Beta)
 
 The bottomSheet element slides up from the bottom of the screen to present additional content, actions, or contextual information. See [bottomSheet (Beta)](<Common jig type properties/bottomSheet _Beta_.md>) for more information.
 
-### Home button visibility
+## Home button visibility
 
 By default, the home button is visible on all jigs except the Home Hub. You can hide the home button on a jig if needed by setting the `isHomeButtonVisible` property to `false`. You can even dynamically show or hide the home button.
 

@@ -9,7 +9,7 @@ updatedAt: Thu Mar 06 2025 08:57:54 GMT+0000 (Coordinated Universal Time)
 
 The employee's details are updated using the Dynamic Data provider's **update** method in this example. The same employee list ([Reading Dynamic Data](<Reading Dynamic Data.md>)) is used to select the employee and then populate the employee form ([Creating Dynamic Data](<Creating Dynamic Data.md>)) with the employee's existing details. Edit the required details and update the record in the Dynamic Data table.
 
-### Datasources, jigs, components & actions
+## Datasources, jigs, components & actions
 
 1. **default.jigx** is the database where the Dynamic Data table is defined.
 2. [sqlite](../../Datasource/sqlite.md) datasource calls the Dynamic Data provider, using an SQL query to return the data.
@@ -17,7 +17,7 @@ The employee's details are updated using the Dynamic Data provider's **update** 
 4. [form](../../Components/form.md) is the component used with `initialValue` properties to populate the employee data into the form fields.
 5. [submit-form](../../Actions/submit-form.md) is the action that executes the **update** method of the Dynamic Dataprovider with the `recordId` property configured to identify the record in the table that must be updated
 
-### Examples and code snippets
+## Examples and code snippets
 
 <figure><img src="../../../.gitbook/assets/DD-update.png" alt="Update Dynamic Data record"><figcaption><p>Update Dynamic Data record</p></figcaption></figure>
 

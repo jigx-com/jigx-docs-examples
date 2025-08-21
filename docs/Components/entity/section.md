@@ -22,9 +22,9 @@ A `component.section` can be set up with the following combinations:
 
 Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### The Entity with sections, rows, and entity fields (Display only)
+### The Entity with sections, rows, and entity fields (Display only)
 
 {% columns %}
 {% column width="41.66666666666667%" %}
@@ -260,7 +260,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Form with sections, rows, and children components (Display and input)
+### Form with sections, rows, and children components (Display and input)
 
 {% columns %}
 {% column %}
@@ -376,7 +376,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Entity with sections and entity-fields (Display only)
+### Entity with sections and entity-fields (Display only)
 
 {% columns %}
 {% column %}
@@ -699,7 +699,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Form with sections and entity-fields (Display and input)
+### Form with sections and entity-fields (Display and input)
 
 {% columns %}
 {% column %}

@@ -4,7 +4,7 @@ This component displays consecutive steps in a stepper component. You can divide
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pHqn9aSU9OrBRvwBxvDw1\_cc-step.png" size="66" position="center" caption="Step component" alt="Step component" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pHqn9aSU9OrBRvwBxvDw1\_cc-step.png" width="800" height="800" darkWidth="800" darkHeight="800"}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](step.md) for a list and their configuration options.
 
@@ -14,13 +14,13 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="153.859375">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>The action is triggered when pressing on the step item. Use IntelliSense to see the list of available actions.</td></tr></tbody></table>
 
-### Consideration
+## Consideration
 
 * The step component can only be used inside the [stepper](https://docs.jigx.com/examples/stepper) component.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Step Example
+### Step Example
 
 {% columns %}
 {% column %}

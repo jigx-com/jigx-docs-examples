@@ -2,7 +2,7 @@
 
 The component can only be used in the [jig.calendar](<../Jig Types/jig_calendar.md>) to display events related to data records. All events have a start and end date. Additional elements can be added, such as people attending the event or where the event will take place.
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](event.md) for a list and their configuration options.
 
@@ -14,9 +14,9 @@ Certain actions can be executed on the event; for example, when pressing on the 
 
 <table><thead><tr><th width="172.33203125">Actions</th><th></th></tr></thead><tbody><tr><td><code>onButtonPress</code></td><td>You can set any action in this property just like in the <code>onPress</code> property. The difference is that if only <code>onButtonPress</code> is configured, after pressing on the event, a modal window with the event's details opens. The modal contains a button for the action configured in the <code>onButtonPress</code> property. When <code>isHidden</code> is used with <code>when:false</code> , the <code>isHidden</code> property is automatically overwritten on the mobile device and set to <code>isHidden:true</code> and the button automatically hides.</td></tr><tr><td><code>onPress</code></td><td>When pressing on the event an action executes. Use IntelliSense to select an action or refer to the list of available . When the <code>onPress</code> is configured, the <code>onButtonPress</code> configuration is ignored.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Event of meeting
+### Event of meeting
 
 {% columns %}
 {% column %}
@@ -134,7 +134,7 @@ options:
 {% endtab %}
 {% endtabs %}
 
-#### Event of training
+### Event of training
 
 {% columns %}
 {% column %}
@@ -219,7 +219,7 @@ options:
 {% endtab %}
 {% endtabs %}
 
-#### Event with action
+### Event with action
 
 {% columns %}
 {% column %}

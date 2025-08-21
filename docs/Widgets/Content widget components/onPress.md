@@ -9,14 +9,14 @@ updatedAt: Fri Mar 07 2025 13:44:35 GMT+0000 (Coordinated Universal Time)
 
 Use the `onPress` event to add an action directly on the widget. This is particularly helpful in scenarios where you do not want to open a jig to perform an action, for example, tapping on a widget opens a URL or a modal.
 
-### Configuration options
+## Configuration options
 
 | `onPress` | Choose from the provided list of available actions, for example, use the `open-url` action to open a specific URL. |
 | --------- | ------------------------------------------------------------------------------------------------------------------ |
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Widget with onPress
+### Widget with onPress
 
 {% columns %}
 {% column %}

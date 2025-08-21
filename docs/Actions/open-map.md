@@ -10,7 +10,7 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOh
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](open-map.md) for a list and their configuration options.
 
@@ -18,9 +18,9 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="160.21484375">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>Select an to display when the action is configured as the secondary button or in a <a href="../Components/jig-header.md">header action</a>.</td></tr><tr><td><code>isHidden</code></td><td><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</td></tr><tr><td><code>styles</code></td><td><p><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</p><ul><li><code>isDisabled</code> - Displays the action button as greyed out.</li><li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li><li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li></ul></td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Open map action button
+### Open map action button
 
 {% columns %}
 {% column %}
@@ -77,7 +77,7 @@ actions:
 ```
 {% endcode %}
 
-#### Open map from a list (onPress)
+### Open map from a list (onPress)
 
 {% columns %}
 {% column %}
@@ -160,7 +160,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Open the map from a secondary action button
+### Open the map from a secondary action button
 
 {% columns %}
 {% column %}
@@ -221,7 +221,7 @@ actions:
 ```
 {% endcode %}
 
-#### Jig header with open-map action icon
+### Jig header with open-map action icon
 
 {% columns %}
 {% column %}

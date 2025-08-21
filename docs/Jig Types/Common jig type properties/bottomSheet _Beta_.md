@@ -8,7 +8,7 @@ The bottomSheet element slides up from the bottom of the screen to present addit
 
 <figure><img src="../../../.gitbook/assets/BS-intro.png" alt="BottomSheets" width="563"><figcaption><p>BottomSheets</p></figcaption></figure>
 
-### Configuration options
+## Configuration options
 
 <table><thead><tr><th width="231.0625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>jigId</code></td><td>Provide the <code>jigId</code> for the jigs that will be displayed when the bottomSheet is opened. - <code>instanceId</code> - Give the bottomSheet jig a unique identifier allowing you to reference the jig in expressions. - <code>inputs</code>- Specify the inputs related to the the jigs.</td></tr></tbody></table>
 
@@ -23,9 +23,9 @@ The bottomSheet element slides up from the bottom of the screen to present addit
 * **Local properties (per jig):** BottomSheet properties can also be set individually for each jig. For instance, when multiple bottomSheets are configured, each jig may require unique settings, such as different heights or content. These properties are configured directly under each `jigId` property.
 * **Navigating to jigs**: To navigate to another screen from the bottomSheet specify `isModal: false` to explicitly open the jig outside of the bottomSheet.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Basic bottomSheet
+### Basic bottomSheet
 
 {% columns %}
 {% column %}
@@ -192,7 +192,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### BottomSheet with pan down to close disabled
+### BottomSheet with pan down to close disabled
 
 {% columns %}
 {% column %}
@@ -356,7 +356,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### BottomSheet set to open by default when the parent jig opens
+### BottomSheet set to open by default when the parent jig opens
 
 {% columns %}
 {% column %}
@@ -515,7 +515,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### BottomSheet with backdrop
+### BottomSheet with backdrop
 
 {% columns %}
 {% column width="41.66666666666667%" %}
@@ -691,7 +691,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### BottomSheet with backdrop that appears & disappears on index
+### BottomSheet with backdrop that appears & disappears on index
 
 {% columns %}
 {% column %}
@@ -870,7 +870,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Detached bottomSheet
+### Detached bottomSheet
 
 {% columns %}
 {% column %}
@@ -1024,7 +1024,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### BottomSheet with snapPoints
+### BottomSheet with snapPoints
 
 {% columns %}
 {% column %}
@@ -1195,7 +1195,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Multiple bottomSheets with local properties set
+### Multiple bottomSheets with local properties set
 
 {% columns %}
 {% column %}

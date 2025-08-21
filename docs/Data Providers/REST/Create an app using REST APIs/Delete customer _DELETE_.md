@@ -1,6 +1,6 @@
 # Delete customer (DELETE)
 
-### Scenario
+## Scenario
 
 {% columns %}
 {% column %}
@@ -12,7 +12,7 @@ Add the ability to delete a customer from the list of customers by swiping left 
 {% endcolumn %}
 {% endcolumns %}
 
-### How does this work
+## How does this work
 
 A delete function is configured to call the REST APIs DELETE operation and identify the record to delete using the customer Id (CustID). The function is referenced in the `execute-entity` action which will delete the customer from the list and from the datasource via the REST API when the Delete button is pressed.
 
@@ -20,11 +20,11 @@ A delete function is configured to call the REST APIs DELETE operation and ident
 This code sample builds upon the previous [List customers (GET)](<List customers _GET_.md>) step, to develop a complete and functional solution.&#x20;
 {% endhint %}
 
-### REST API
+## REST API
 
 <table><thead><tr><th width="213.92578125">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/customers?id={custId}</td></tr><tr><td>Operation/Method</td><td>DELETE</td></tr></tbody></table>
 
-### Function
+## Function
 
 Specify the REST API url and operation (method), parameters to include authentication in the header and the customer id (custId) to use as the identification of the record to delete.
 
@@ -54,7 +54,7 @@ parameters:
 ```
 {% endcode %}
 
-### Action (global)
+## Action (global)
 
 Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or is in focus on the device.
 
@@ -74,7 +74,7 @@ action:
 ```
 {% endcode %}
 
-### Jig (screen)
+## Jig (screen)
 
 * Use a list jig type to configure a list of customers.
 * Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured using the local provider with a query to provide the data for use in the list.
@@ -181,7 +181,7 @@ item:
 ```
 {% endcode %}
 
-### Index
+## Index
 
 For performance and offline support the data is synced from the REST service as soon as the app is opened or receives focus. This is achieved by calling the global action in the `OnFocus` and `onLoad` events.
 

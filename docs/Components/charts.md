@@ -25,7 +25,7 @@ The component can display statistics related to data records (categorical variab
 
 :::LinkArrayItem{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XWHCno5Z1WQ5HDglihnNr\_charts-line-plotbands-s.png"} [Show more](charts/line-chart.md) ::: ::::
 
-### Understanding chart data
+## Understanding chart data
 
 Chart data is structured in a way that makes it easy to display. To understand how to create the YAML for a chart in Jigx Builder let's look at the data in various formats and how you can use the data in Jigx.
 
@@ -41,11 +41,11 @@ Chart data is structured in a way that makes it easy to display. To understand h
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dz517cISeRt0lkq-Y5v7y\_c-json.png" size="80" position="center" caption="JSON data" alt="JSON data"}
 
-### Using the data in YAML
+## Using the data in YAML
 
 Now that you have your data you can convert it into the YAML needed for the charts. The data can be used as a static datasource or a dynamic datasource.
 
-#### YAML - Static data
+### YAML - Static data
 
 Using the _finance-data.json_ it was easy to convert the data into YAML as shown below.
 
@@ -74,7 +74,7 @@ datasources:
 ```
 {% endcode %}
 
-#### YAML - Dynamic Data
+### YAML - Dynamic Data
 
 In Jigx you can use the data from the dynamic data table, in this instance _data-Finance-data_, then create a file under datasource folder. Use the Dynamic data provider that references the finance-data table with a query selecting the data you want to use, quarters and year in this example.
 
@@ -99,7 +99,7 @@ options:
 ```
 {% endcode %}
 
-#### YAML - Chart
+### YAML - Chart
 
 In the YAML for charts the following keys are used: - `yAxis` - `xAxis` - `categories` - `series`
 

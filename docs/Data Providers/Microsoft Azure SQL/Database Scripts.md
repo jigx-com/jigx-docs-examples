@@ -13,7 +13,7 @@ Best practice for production apps is to use REST as the data layer to access dat
 
 The following Azure SQL scripts create the customer table and store the procedures used in the examples in this section. These scripts should be executed against an existing database in your Azure SQL environment.
 
-### Create Customer Table
+## Create Customer Table
 
 The following script creates a sample customer table in Microsoft Azure SQL.
 
@@ -35,7 +35,7 @@ CREATE TABLE customers (
 ```
 {% endcode %}
 
-### Insert sample records in the Customer table
+## Insert sample records in the Customer table
 
 The following script inserts sample customers into the table.
 
@@ -63,7 +63,7 @@ VALUES
 ```
 {% endcode %}
 
-### Stored procedure for selecting a list of customers
+## Stored procedure for selecting a list of customers
 
 The following script creates a store procedure that will return all the customers in the customer table.
 
@@ -90,7 +90,7 @@ END;
 ```
 {% endcode %}
 
-### Stored procedure for selecting one customer
+## Stored procedure for selecting one customer
 
 The following script will create a store procedure to return a single customer record for the provided customer id.
 
@@ -120,7 +120,7 @@ END;
 ```
 {% endcode %}
 
-### Stored procedure for creating or updating a customer record
+## Stored procedure for creating or updating a customer record
 
 The following script creates a stored procedure that will add a new customer record if the customer id does not exist. It will update an existing customer if the id does exist.
 

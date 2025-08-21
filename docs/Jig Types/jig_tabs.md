@@ -10,7 +10,7 @@ Tabs allow you to navigate between different jigs with ease, enhancing the user 
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all jig types, see [Common jig type properties](jig_tabs.md) for a list and their configuration options.
 
@@ -24,15 +24,15 @@ The `jig.tabs` can be configured in the following way in Jigx Builder.
 
 <table data-header-hidden><thead><tr><th width="195.4375">State Configuration</th><th width="135.16796875">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.jig.state.</code></td><td>activeTabId</td><td>Applies to the active tab in the <code>jig.tab</code> type.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>tab</td><td>Global variable for the tab used throughout a solution.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * Specifying a background color for tabs is currently not supported.
 * `jig.headers` do not display in the children tabs.
 * Using `areTabsScrollable: false` aligns the tabs in the center, aligns the tabs at the center, enhancing visual consistency.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Basic tabs
+### Basic tabs
 
 {% columns %}
 {% column %}
@@ -275,7 +275,7 @@ source:
 {% endtab %}
 {% endtabs %}
 
-#### Scrollable tabs
+### Scrollable tabs
 
 {% columns %}
 {% column %}
@@ -393,7 +393,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Swipeable tabs
+### Swipeable tabs
 
 {% columns %}
 {% column %}
@@ -461,7 +461,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Tabs with initialTabId
+### Tabs with initialTabId
 
 {% columns %}
 {% column %}
@@ -527,7 +527,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Tabs with icons
+### Tabs with icons
 
 {% columns %}
 {% column %}
@@ -601,7 +601,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Tabs with inputs
+### Tabs with inputs
 
 {% columns %}
 {% column %}
@@ -738,7 +738,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Set tab's content from a single jig
+### Set tab's content from a single jig
 
 {% columns %}
 {% column %}

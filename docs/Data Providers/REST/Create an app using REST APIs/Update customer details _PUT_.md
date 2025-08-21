@@ -1,6 +1,6 @@
 # Update customer details (PUT)
 
-### Scenario
+## Scenario
 
 {% columns %}
 {% column %}
@@ -12,7 +12,7 @@ Add the ability to update a customer's details by pressing on the customer in th
 {% endcolumn %}
 {% endcolumns %}
 
-### How does this work
+## How does this work
 
 The customer details are loaded using the customer id as the `inputs` from the list-customer jig. An update function to call the REST APIs PUT operation is configured. The function and function parameters are referenced in the `execute-entity` action in the jig, which will update the customer's details when the _Update Customer_ button is pressed on the form. A Post operation is performed in the REST service.
 
@@ -20,11 +20,11 @@ The customer details are loaded using the customer id as the `inputs` from the l
 This code sample builds upon the previous [List customers (GET)](<List customers _GET_.md>) step, to develop a complete and functional solution.
 {% endhint %}
 
-### REST API
+## REST API
 
 <table><thead><tr><th width="177.6328125">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/customers</td></tr><tr><td>Operation/Method</td><td>PUT</td></tr></tbody></table>
 
-### Function
+## Function
 
 The REST APIs PUT operator is used in a Jigx function with body parameters to specify the exact columns to be updated for the record. The `inputTransform` specifies how the data should be structured or formatted when being sent to the REST service. This transformation process ensures that the data adheres to the expected schema or format required by the REST service for processing the request.
 
@@ -131,7 +131,7 @@ inputTransform: |
 ```
 {% endcode %}
 
-### Action (global)
+## Action (global)
 
 Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or is in focus on the device.
 
@@ -154,7 +154,7 @@ action:
 ```
 {% endcode %}
 
-### Jig (screen)
+## Jig (screen)
 
 * On the list of customers jig configure an `on-press` action in the `swipable: left` event that adds the _View_ button to the list and links to the update-customer jig.
 * Add a form component to load the customer details with each field's instanceId containing the same name as the body parameters in the function.
@@ -485,7 +485,7 @@ item:
 {% endtab %}
 {% endtabs %}
 
-### Index
+## Index
 
 For performance and offline support the data is synced from the REST service as soon as the app is opened or receives focus. This is achieved by calling the global action in the `OnFocus` and `onLoad` events.
 

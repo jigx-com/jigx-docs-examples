@@ -16,7 +16,7 @@ Simply draw your signature on your mobile screen to approve and proceed. This co
 The `signature-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.&#x20;
 {% endhint %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](signature-field.md) for a list and their configuration options.
 
@@ -28,9 +28,9 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="219.45703125">State Configuration</th><th width="138.8125">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>value</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Signature Field on Form
+### Signature Field on Form
 
 {% columns %}
 {% column %}
@@ -60,6 +60,6 @@ children:
 ```
 {% endcode %}
 
-### See also
+## See also
 
 * [State](https://docs.jigx.com/state)

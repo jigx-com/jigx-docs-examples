@@ -9,13 +9,13 @@ updatedAt: Tue Nov 05 2024 12:04:01 GMT+0000 (Coordinated Universal Time)
 
 Using the Salesforce provider's Delete method, you can delete records in a Salesforce object. This is helpful when a data cleanup is needed due to outdated, incorrect, or irrelevant data. It is essential to exercise caution when deleting records, as the action is irreversible. In Jigx Builder use an `action.confirm` with a `modal` to provide a message before deleting the record permanently. Ensure you have sufficient rights in Salesforce to delete a record in an object.
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="warning" %}
 Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.
 {% endhint %}
 
-#### Delete a Salesforce Account record
+### Delete a Salesforce Account record
 
 {% columns %}
 {% column %}

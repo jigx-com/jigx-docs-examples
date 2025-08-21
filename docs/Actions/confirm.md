@@ -13,16 +13,16 @@ This action can also be used as a confirmation to provide feedback after an acti
 
 The action allows for customizable wording on the confirmation modal and can be set to take place automatically or not.
 
-### Configuration options
+## Configuration options
 
 A `confirm` action can be set up in various ways:
 
 1. You can use it as a confirmation to request confirmation before performing an action
 2. You can use it as a confirmation after an action has successfully been performed
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Confirm action with modal
+### Confirm action with modal
 
 {% columns %}
 {% column %}
@@ -69,7 +69,7 @@ actions:
 ```
 {% endcode %}
 
-#### Confirm action
+### Confirm action
 
 {% columns %}
 {% column %}

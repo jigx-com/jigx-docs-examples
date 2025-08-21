@@ -26,7 +26,7 @@ Image\[]{alt="Form Preview" src="https://archbee-image-uploads.s3.amazonaws.com/
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](form.md) for a list and their configuration options.
 
@@ -36,9 +36,9 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="264.63671875">State Configuration</th><th width="185.23046875">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>data isValid isDirty response</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Form for creating a record
+### Form for creating a record
 
 {% columns %}
 {% column %}
@@ -80,7 +80,7 @@ children:
 ```
 {% endcode %}
 
-#### Form for updating records
+### Form for updating records
 
 {% columns %}
 {% column %}
@@ -175,7 +175,7 @@ puts message
 {% endtab %}
 {% endtabs %}
 
-#### Form with section and field-row
+### Form with section and field-row
 
 {% columns %}
 {% column %}
@@ -246,7 +246,7 @@ children:
 ```
 {% endcode %}
 
-#### Form with initialValue
+### Form with initialValue
 
 {% columns %}
 {% column %}

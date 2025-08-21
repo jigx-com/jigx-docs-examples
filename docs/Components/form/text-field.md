@@ -14,7 +14,7 @@ Image\[]{alt="Text Field Preview" src="https://archbee-image-uploads.s3.amazonaw
 The `text-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.&#x20;
 {% endhint %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](text-field.md) for a list and their configuration options.
 
@@ -26,13 +26,13 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="229.3046875">State Configuration</th><th width="146.16015625">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>value</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * When using the `contentType: phone`, ensure the phone number entered contains no spaces; this allows you to click on the field to initiate a call from your device.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Text fields on a Form
+### Text fields on a Form
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2QrorTKAQD9Zq\_WBOyoYt\_cc-text-field.png" size="80" position="center" caption="Form with text-fields" alt="Form with text-fields" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2QrorTKAQD9Zq\_WBOyoYt\_cc-text-field.png" width="800" height="791" darkWidth="800" darkHeight="791"}
 
@@ -146,7 +146,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Use textContentTypes to autofill text-fields
+### Use textContentTypes to autofill text-fields
 
 {% columns %}
 {% column %}
@@ -233,6 +233,6 @@ children:
 ```
 {% endcode %}
 
-### See also
+## See also
 
 * [State](https://docs.jigx.com/state)

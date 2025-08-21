@@ -14,7 +14,7 @@ Trend is available in the following content widgets:
 
 ## Examples and code snippets
 
-### Trend on value widget
+## Trend on value widget
 
 {% columns %}
 {% column %}
@@ -99,7 +99,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Trend on chart widget
+## Trend on chart widget
 
 {% columns %}
 {% column %}
@@ -230,7 +230,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Trend on list widget
+## Trend on list widget
 
 {% columns %}
 {% column %}

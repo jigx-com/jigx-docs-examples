@@ -13,17 +13,17 @@ The custom component _text_ allows adding text inside custom components. For exa
 
 For steps on creating a custom component, see [How to create a custom component](<../Custom components _Alpha_.md>).
 
-### Configuration options
+## Configuration options
 
 You can use `when` and `instanceId` with `component.text`, add the properties before the `options` property. The available list of options is shown below.
 
 <table><thead><tr><th width="153.96875">Options</th><th></th></tr></thead><tbody><tr><td><code>align</code></td><td>Determine the text alignment, options are: <code>center</code> <code>left</code> <code>right</code></td></tr><tr><td><code>color</code></td><td>Multiple, use IntelliSense to view the available list. See to view the different colors.</td></tr><tr><td><code>decoration</code></td><td><code>line-through</code> <code>underline</code></td></tr><tr><td><code>emphasis</code></td><td>Change the text's brightness and boldness. <code>high</code> <code>low</code> <code>low-medium</code> <code>medium</code></td></tr><tr><td><code>numberOfLines</code></td><td>Use a number to indicate the number of lines of text. Use an expression to determine the number of lines needed.</td></tr><tr><td><code>onPress</code></td><td>Multiple, use IntelliSense to view the list of available to call.</td></tr><tr><td><code>size</code></td><td>Adjust the size of the text, the following sizes are available: <code>extra-large</code> <code>large</code> <code>medium</code> <code>regular</code> <code>small</code> <code>tiny</code></td></tr><tr><td><code>value</code></td><td>Provide the text to be used. You can use an , as well as <a href="https://docs.jigx.com/localization">Localization</a>.</td></tr><tr><td><code>weight</code></td><td>Determine how thick or bold the text must be, the following weights are available: <code>bold</code> <code>extra-bold</code> <code>extra-light</code> <code>light</code> <code>regular</code> <code>semi-bold</code></td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
 The examples use a set of custom components called _sections_. The sections are for titles, spacing, and context. The _sections_ code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
 
-#### Text font sizes
+### Text font sizes
 
 {% columns %}
 {% column %}
@@ -101,7 +101,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Text with line through
+### Text with line through
 
 {% columns %}
 {% column %}
@@ -185,7 +185,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Text with underlining
+### Text with underlining
 
 {% columns %}
 {% column %}
@@ -269,7 +269,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Text with emphasis
+### Text with emphasis
 
 {% columns %}
 {% column %}
@@ -346,7 +346,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Text with alignment
+### Text with alignment
 
 {% columns %}
 {% column %}
@@ -430,7 +430,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Text over multiple lines
+### Text over multiple lines
 
 {% columns %}
 {% column %}
@@ -516,7 +516,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Text with color
+### Text with color
 
 {% columns %}
 {% column %}
@@ -612,7 +612,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Text weights
+### Text weights
 
 {% columns %}
 {% column %}

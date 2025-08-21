@@ -10,7 +10,7 @@ The `group widget` allows widgets to be combined to create a single widget. The 
 
 ## Examples and code snippets
 
-### Group with chart and list (size: 4x4, split: horizontal)
+## Group with chart and list (size: 4x4, split: horizontal)
 
 {% columns %}
 {% column %}
@@ -115,7 +115,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Group with chart and list (size: 4x4, split: vertical)
+## Group with chart and list (size: 4x4, split: vertical)
 
 {% columns %}
 {% column %}
@@ -206,7 +206,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Group with avatar and list (size: 4x2)
+## Group with avatar and list (size: 4x2)
 
 {% columns %}
 {% column %}
@@ -290,7 +290,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Group with value and bar-chart (size: 2x4)
+## Group with value and bar-chart (size: 2x4)
 
 {% columns %}
 {% column %}

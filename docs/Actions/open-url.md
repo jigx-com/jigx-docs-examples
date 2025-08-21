@@ -13,9 +13,9 @@ An open-url action can be set up in various ways:
 
 <table><thead><tr><th width="147.0703125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Provide a title for opening the URL, you can use expressions in the title field.</td></tr><tr><td><code>url</code></td><td><p>Specify the URL you want opened. The following formats are supported:</p><p>https://</p><p><a href="open-url.md">www</a>. sitename.com external app link (See the deep link to an external app example)</p></td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### open-url as an action
+### open-url as an action
 
 {% columns %}
 {% column %}
@@ -38,7 +38,7 @@ actions:
           url: https://docs.jigx.com/examples/open-url
 ```
 
-#### open-url swipeable left/right
+### open-url swipeable left/right
 
 {% columns %}
 {% column %}
@@ -77,7 +77,7 @@ item:
               url: https://docs.jigx.com/examples/open-url
 ```
 
-#### open-url rightElement
+### open-url rightElement
 
 {% columns %}
 {% column %}
@@ -110,7 +110,7 @@ item:
           url: https://docs.jigx.com/examples/open-url
 ```
 
-#### open-url onSuccess
+### open-url onSuccess
 
 {% columns %}
 {% column %}
@@ -151,7 +151,7 @@ actions:
 ```
 {% endcode %}
 
-#### Use open-url to deep link to an external app
+### Use open-url to deep link to an external app
 
 {% columns %}
 {% column %}

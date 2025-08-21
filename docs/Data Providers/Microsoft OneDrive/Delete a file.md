@@ -11,7 +11,7 @@ You can delete existing files in OneDrive from a solution in the Jigx App. This 
 
 <figure><img src="../../../.gitbook/assets/OneDriveDelete.png" alt="Delete file n OneDrive&#x22;" width="375"><figcaption><p>Delete file n OneDrive"</p></figcaption></figure>
 
-### Properties
+## Properties
 
 The following properties are required in the YAML:
 
@@ -20,13 +20,13 @@ The following properties are required in the YAML:
 * `tokenType` - OAuth token credentials name
 * `method: delete`
 
-### Considerations
+## Considerations
 
 * The path `entity` is not used in the deletion process
 * Files are deleted in all folders as expected, even when the incorrect folder is specified as the delete method uses `id`
 * A delay or time lag of several minutes could be experienced when files are syncing between the device and OneDrive
 
-### Code Example
+## Code Example
 
 The code example below provides an example of a list of invoices in the `myfiles` directory of OneDrive. When swiping left and pressing the _Delete_ button deletes the file on OneDrive.
 
@@ -101,7 +101,7 @@ item:
 ```
 {% endcode %}
 
-#### See also
+### See also
 
 * [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
 * [Create a file](<Create a file.md>)

@@ -2,7 +2,7 @@
 
 Programmatically set the next active tab to display in the [jig.tabs](<../Jig Types/jig_tabs.md>). The action determines which tab will open next. For example, if you are on the third tab, the action button can be set to open the first tab.
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](set-active-tab.md) for a list and their configuration options.
 
@@ -10,19 +10,19 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="181.921875">State configuration</th><th width="144.46484375">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.jig.state.</code></td><td><code>initialTabId</code> </td><td>A state variable used to reference the tab designated as the default.</td></tr><tr><td><code>=@ctx.jig.state.</code></td><td><code>activeTabId</code></td><td>A state variable that references the currently active tab.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * The `action.set-active-tab` can only be used in [jig.tabs](<../Jig Types/jig_tabs.md>).
 * The `action.set-active-tab` needs to be referenced as a callback action which is used in conjunction with the `action.execute-action`.
 
-### How to configure the action
+## How to configure the action
 
 1. The action is configured under the `jigId` in the `jig.tabs` file. Give the action a unique name (`action identifier`) that will be used to reference the action in the tab's corresponding jig.
 2. In the corresponding jig configure the `action.execute-action` and specify the unique name (`action identifier`) in the action property's value.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Basic set active tab
+### Basic set active tab
 
 {% columns %}
 {% column %}

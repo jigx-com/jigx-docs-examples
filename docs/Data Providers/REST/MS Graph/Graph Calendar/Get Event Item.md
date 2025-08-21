@@ -9,7 +9,7 @@ updatedAt: Wed May 08 2024 14:27:40 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column %}
-### **Resource links:**
+## **Resource links:**
 
 * [List Event](https://learn.microsoft.com/en-us/graph/api/user-list-events?view=graph-rest-1.0\&tabs=http) - MS Graph documentation
 * [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
@@ -29,13 +29,13 @@ This example uses [Get Calendar List](<Get Calendar List.md>) and [Get Event Lis
 {% endcolumn %}
 {% endcolumns %}
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="success" %}
 When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
 {% endhint %}
 
-### General
+## General
 
 {% tabs %}
 {% tab title="index.jigx" %}
@@ -129,7 +129,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Functions
+## Functions
 
 {% hint style="info" %}
 We will use `forRowsWithValues` in the get-calendar-event-details function to update only one record in the calendarEvents table when called from `onRefresh` on the view-calendar-event-details jig. If you don't specify `forRowsWithValues` the entire table is wiped by the REST call and only the result is inserted. See [REST Overview](https://docs.jigx.com/rest-overview) for more information on using `forRowsWithValues` with REST calls.
@@ -166,7 +166,7 @@ forRowsWithValues:
 ```
 {% endcode %}
 
-### Jigs
+## Jigs
 
 MS Graph Calendar Events jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/calendar/view-calendar-events.jigx).
 
@@ -338,7 +338,7 @@ preview:
 ```
 {% endcode %}
 
-### See Also
+## See Also
 
 * [Get Event List](<Get Event List.md>)
 * [Get Calendar List](<Get Calendar List.md>)

@@ -13,13 +13,13 @@ You can use the [object reference for Salesforce](https://developer.salesforce.c
 
 <figure><img src="../../../.gitbook/assets/SalesforceSchema.png" alt="Salesforce schema builder"><figcaption><p>Salesforce schema builder</p></figcaption></figure>
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="warning" %}
 Examples are based on test data in a Jigx demo Salesforce environment. Copying the sample code must be adjusted to represent your own Salesforce environment.
 {% endhint %}
 
-#### Create a Salesforce Account record
+### Create a Salesforce Account record
 
 {% columns %}
 {% column %}
@@ -115,7 +115,7 @@ actions:
 ```
 {% endcode %}
 
-#### Create a Salesforce Opportunity record
+### Create a Salesforce Opportunity record
 
 {% columns %}
 {% column %}

@@ -9,7 +9,7 @@ updatedAt: Wed Feb 12 2025 13:41:56 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column %}
-### Scenario
+## Scenario
 
 Get a list of available calendars for a user in Microsoft Graph using a GET REST function and displaying the list of calendars in a list jig.
 
@@ -34,13 +34,13 @@ Calendars.Read Calendars.Read.Shared Calendars.ReadWrite
 {% endcolumn %}
 {% endcolumns %}
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="success" %}
 When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
 {% endhint %}
 
-### General
+## General
 
 {% code title="index.jigx" %}
 ```yaml
@@ -99,7 +99,7 @@ onRefresh:
 ```
 {% endcode %}
 
-### Functions
+## Functions
 
 MS Graph Calendar function in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/functions/calendar/get-calendar-list.jigx).
 
@@ -129,7 +129,7 @@ continuation:
 ```
 {% endcode %}
 
-### Jigs
+## Jigs
 
 MS Graph Calendar jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/calendar/view-calendar-list.jigx).
 
@@ -201,7 +201,7 @@ item:
 ```
 {% endcode %}
 
-### See Also
+## See Also
 
 * [Get Event List](<Get Event List.md>)
 * [Get Event Item](<Get Event Item.md>)

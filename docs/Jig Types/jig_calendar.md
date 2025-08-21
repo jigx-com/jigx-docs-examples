@@ -10,7 +10,7 @@ The calendar jig displays an agenda calendar view. `jig.calendar` contains data 
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all jig types, see [Common jig type properties](jig_calendar.md) for a list and their configuration options.
 
@@ -22,13 +22,13 @@ Certain actions can be executed on the event; for example, when pressing on the 
 
 <table><thead><tr><th width="160.2734375">Actions</th><th></th></tr></thead><tbody><tr><td><code>onButtonPress</code></td><td>You can set any action in this property just like in the <code>onPress</code> property. The difference is that if only <code>onButtonPress</code> is configured, after pressing on the event, a modal window with the event's details opens. The modal contains a button for the action configured in the <code>onButtonPress</code> property. When <code>isHidden</code> is used with <code>when:false</code> , the <code>isHidden</code> property is automatically overwritten on the mobile device and set to <code>isHidden:true</code> and the button automatically hides.</td></tr><tr><td><code>onPress</code></td><td>When pressing on the event an action executes. Use IntelliSense to select an action or refer to the list of available . When the <code>onPress</code> is configured, the <code>onButtonPress</code> configuration is ignored.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="success" %}
 The code below is an extract from the full _jigx-samples_ solution. The code snippets describe the component discussed in this section. For the solution to function in the Jigx app download the full _jigx-samples_ project from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples), and follow the instructions in [Setting up your solution](jig_calendar.md).
 {% endhint %}
 
-#### Calendar jig
+### Calendar jig
 
 In this example, we show the daily agenda, by tapping we can get the details about the actual event and the overview for a month is also available. You can easily recognize the days we have an event planned thanks to the markings.
 
@@ -156,7 +156,7 @@ tabs:
 {% endtab %}
 {% endtabs %}
 
-#### Considerations
+### Considerations
 
 * The sample above is for illustrative purposes only, and shows how to use a SQL statement to always return dates with events from the next day onwards.
 * A dynamic data table defines the event data, and a JSON view of one of the records can be seen in Dynamic Data.
@@ -164,7 +164,7 @@ tabs:
 * The SQL select statement that returns the `startDT` and `endDT` takes today’s date, adds the day offset as specified in the start field in Dynamic Data, and appends the time in the start field. The complete start dates and times are built up by concatenating the two values. Similarly for the end date except add an hour to the SQL statement.
 * When using applications such as Microsoft Exchange and Microsoft Graph as a datasource, replace the date part of the `datetime` with the same formula while using the time part of the graph calendar item.
 
-#### Calendar with preview
+### Calendar with preview
 
 This example displays a preview after long-pressing the event in the Calendar jig (on the event).
 

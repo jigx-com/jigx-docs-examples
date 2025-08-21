@@ -17,7 +17,7 @@ This approach encourages modular development, fostering scalability and adaptabi
 
 Here are code examples to illustrate combining custom and standard components to build advanced features.
 
-### Considerations
+## Considerations
 
 * When using `component.image` in a custom component, the `height` property must be specified as part of the `size` property. Otherwise, validation errors occur, see below:
 
@@ -48,11 +48,11 @@ Here are code examples to illustrate combining custom and standard components to
 {% endtab %}
 {% endtabs %}
 
-### Example and code samples
+## Example and code samples
 
 The examples use a set of custom components called _sections_. The sections are for titles, spacing, and context. The _sections_ code is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/sections).
 
-#### Countdown
+### Countdown
 
 {% columns %}
 {% column %}
@@ -212,7 +212,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Progress Bar
+### Progress Bar
 
 {% columns %}
 {% column %}
@@ -582,7 +582,7 @@ More examples of customized progress bars are available on [GitHub](https://gith
 | [Progress-bar sizes](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-sizes-dynamic.jigx) (Dynamic) | [Progress-bar with bottom labels](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-bottom-labels.jigx) |
 | [Progress-bar steps](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/progressbar/progressbar-steps-dynamic.jigx)(Dynamic)  |                                                                                                                                                                                                                                         |
 
-#### Ratings
+### Ratings
 
 {% columns %}
 {% column %}
@@ -1086,7 +1086,7 @@ children:
 ```
 {% endcode %}
 
-#### Sections
+### Sections
 
 {% columns %}
 {% column %}
@@ -1290,7 +1290,7 @@ More examples of customized sections are available on [GitHub](https://github.co
 | [Section sizes - medium](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-med.jigx)      | [Section sizes - extra large](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-sizes-extra-large.jigx)       |
 | [Section header with subtitle](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/sections/section-header-subtitle.jigx) |                                                                                                                                                                                                                                               |
 
-#### Stepper
+### Stepper
 
 {% columns %}
 {% column %}
@@ -1654,7 +1654,7 @@ More examples of customized sections are available on [GitHub](https://github.co
 | [Stepper style 4](<Combine custom _ standard components _Alpha_.md>)                                                                                                                                     | [Stepper style 8](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style8.jigx) |
 | [Stepper style 5](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/stepper/stepper-style5.jigx) |                                                                                                                                                                                                          |
 
-#### Tabs
+### Tabs
 
 {% columns %}
 {% column %}
@@ -2543,7 +2543,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Tags
+### Tags
 
 {% columns %}
 {% column %}
@@ -2701,7 +2701,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-#### Toggles
+### Toggles
 
 {% columns %}
 {% column %}

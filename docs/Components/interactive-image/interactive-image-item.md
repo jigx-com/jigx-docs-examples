@@ -2,7 +2,7 @@
 
 The interactive-image-item is used in the `item` property of the [interactive-image](../interactive-image.md) component that servers as a container. The `interactive-image-item` can be set in various ways using the properties of the [interactive-image](../interactive-image.md) as well as the properties described below.
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](interactive-image-item.md) for a list and their configuration options.
 
@@ -14,9 +14,9 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="217.06640625">State Configuration</th><th width="130.71875">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>selected</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Restaurant table booking example
+### Restaurant table booking example
 
 {% columns %}
 {% column %}
@@ -254,7 +254,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Hot seat and meeting room booking example
+### Hot seat and meeting room booking example
 
 {% columns %}
 {% column %}
@@ -366,6 +366,6 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-### See also
+## See also
 
 * [State](https://docs.jigx.com/state)

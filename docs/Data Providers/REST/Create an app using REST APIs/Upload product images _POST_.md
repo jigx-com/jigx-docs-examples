@@ -1,6 +1,6 @@
 # Upload product images (POST)
 
-### Scenario
+## Scenario
 
 {% columns %}
 {% column width="41.66666666666667%" %}
@@ -12,7 +12,7 @@ From the [view customer ](<List _ View customers _GET_.md>)On the screen, tap th
 {% endcolumn %}
 {% endcolumns %}
 
-### How does this work
+## How does this work
 
 The REST APIs POST operator for the images table is used in a Jigx function with an `inputTransform` to capture the image metadata. configuring the `conversion` property ensures that the images are uploaded in the correct format to the REST service. Specifying the id in the `ouputTransform` in the function enables the local data provider temp\_id to be automatically updated with the REST id once the images are created in the datastore. The `media-field` takes a photo or selects from existing images on the device.
 
@@ -20,11 +20,11 @@ The REST APIs POST operator for the images table is used in a Jigx function with
 This code sample builds upon the previous [List customers (GET)](<List customers _GET_.md>) step, to develop a complete and functional solution.
 {% endhint %}
 
-### REST API
+## REST API
 
 <table data-header-hidden><thead><tr><th width="192.49609375">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/images</td></tr><tr><td>Operation/Method</td><td>POST</td></tr></tbody></table>
 
-### Function
+## Function
 
 The REST APIs POST operator is used in a Jigx function with body parameters to specify the exact columns to be created for the image record. The `inputTransform` specifies the image metadata that is sent to the REST service. This transformation process ensures that the data adheres to the expected schema or format required by the REST service for processing the request. In the `outputTransform` the id is configured to ensure that the properties are automatically returned once the image is created and the local provider's temp\_id is updated with the actual id. The customer images are stored in the REST service in base64, Jigx stores the iamges in local-uri format for display. A `conversion` is configured in the function to change the images from local-uri to base64.
 
@@ -93,7 +93,7 @@ conversions:
 ```
 {% endcode %}
 
-### Action (global)
+## Action (global)
 
 Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or is in focus on the device.
 
@@ -120,7 +120,7 @@ action:
 ```
 {% endcode %}
 
-### Jig (screen)
+## Jig (screen)
 
 * On the customer-composite jig add a `go-to` action to add a button that links to the add-customer-images jig.
 * Add parameters to the `go-to` action to use the customer id as `inputs`.
@@ -461,7 +461,7 @@ actions:
 {% endtab %}
 {% endtabs %}
 
-### Index
+## Index
 
 For performance and offline support the data is synced from the REST service as soon as the app is opened or receives focus. This is achieved by calling the global action in the `OnFocus` and `onLoad` events.
 

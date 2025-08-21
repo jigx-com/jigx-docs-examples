@@ -19,7 +19,7 @@ POST {{baseURL}}/tool/organizations/{{orgId}}/notifications
 ```
 {% endcode %}
 
-### Base URL
+## Base URL
 
 Replace \{{baseUrl\}} with the appropriate URL for your region.
 

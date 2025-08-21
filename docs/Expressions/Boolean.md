@@ -17,7 +17,7 @@ Be careful when using complex expressions, such as expressions that iterate one 
 
 ## Examples and code snippets
 
-### Evaluating fields
+## Evaluating fields
 
 {% columns %}
 {% column %}
@@ -60,7 +60,7 @@ children:
 ```
 {% endcode %}
 
-### Placeholder
+## Placeholder
 
 {% columns %}
 {% column %}

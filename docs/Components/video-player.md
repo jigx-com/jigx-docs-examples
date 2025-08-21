@@ -2,7 +2,7 @@
 
 This component is used to play a video in [headers](jig-header.md), or as components in a [jig.default](<../Jig Types/jig_default.md>).
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](video-player.md) for a list and their configuration options.
 
@@ -10,7 +10,7 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="124.70703125">Other options</th><th></th></tr></thead><tbody><tr><td><code>autoplay</code></td><td>Set to <code>true</code> will automatically start playing the video. Set to <code>false</code> requires you to press the play button. Default setting is <code>false</code>.</td></tr><tr><td><code>loop</code></td><td>For continuous looping of the video set the property to <code>true</code>. Default setting is <code>false</code>.</td></tr><tr><td><code>ratio</code></td><td><p>There are 2 options:</p><ul><li>16:9</li><li>4:3</li></ul></td></tr><tr><td><code>title</code></td><td><p>The title of the video.</p><ul><li>With a <code>16:9</code> ratio, the text overlays at the bottom left of the video.</li><li>With a <code>4:3</code> ratio the text displays under the video.</li></ul><p><code>Title</code> and <code>subtitle</code> must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed.</p></td></tr><tr><td><code>subtitle</code></td><td><p>The subtitle of the video.</p><ul><li>With a <code>16:9</code> ratio, the text overlays at the bottom left of the video.</li><li>With a <code>4:3</code> ratio the text displays under the video.</li></ul><p><code>Title</code> and <code>subtitle</code> must be configured together for the text to display on the video. Using either one on their own will result in no text being displayed.</p></td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * We recommend using a paid Vimeo subscription which gives you access to the mp4 link that allows the byline and other attributes to be hidden. You require a paid Vimeo membership to obtain the mp4 Vimeo link. Follow the steps in [Vimeo direct links to video files](https://help.vimeo.com/hc/en-us/articles/12426150952593-Direct-links-to-video-files) to copy the mp4 link.
 * For Vimeo videos, set up your OAuth token once in the Vimeo app and then use it for all videos. See the following resources on creating tokens:
@@ -19,9 +19,9 @@ Some properties are common to all components, see [Common component properties](
   3. [How-can-I-test-the-API-on-the-Developer-Site](https://help.vimeo.com/hc/en-us/articles/12427789133201-How-can-I-test-the-API-on-the-Developer-Site).
 * When configuring video settings for Vimeo and YouTube videos, preferably use the settings within the respective apps first before setting URL parameters, this ensure videos display as expected in the Jigx App.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Video player as children of the jig
+### Video player as children of the jig
 
 {% columns %}
 {% column %}
@@ -90,7 +90,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Video player in header
+### Video player in header
 
 {% columns %}
 {% column %}

@@ -1,12 +1,12 @@
 # Create customer (POST)
 
-### Scenario
+## Scenario
 
 Press the _Add Customer_ button in the customer list to create a customer. Complete the new customer form and press the _Create_ button.
 
 <figure><img src="../../../../.gitbook/assets/REST-create.png" alt="Add new customer"><figcaption><p>Add new customer</p></figcaption></figure>
 
-### How does this work
+## How does this work
 
 A function to call the REST API's POST operation is configured, allowing the record to be created in the backend. The function is referenced in the `execute-entity` action on the form. The customer is created using the REST data provider with a create method which creates the record in the local data provider with a temp\_id, calling the rest-create-customer function and providing the parameters for the data values to be created in the REST service. Specifying the id in the `ouputTransform` in the function enables the local data provider temp\_id to be automatically updated with the REST id once it is created in the datastore.
 
@@ -14,11 +14,11 @@ A function to call the REST API's POST operation is configured, allowing the rec
 This code sample builds upon the previous [List customers (GET)](<List customers _GET_.md>) step, to develop a complete and functional solution.
 {% endhint %}
 
-### REST API
+## REST API
 
 <table><thead><tr><th width="162.53515625">REST</th><th>Detail</th></tr></thead><tbody><tr><td>URL</td><td>https://[your_rest_service]/api/customers</td></tr><tr><td>URL</td><td>https://[your_rest_service]/api/us_states (To get a list of states for selection in the form)</td></tr><tr><td>Operation/Method</td><td>POST</td></tr></tbody></table>
 
-### Function
+## Function
 
 The REST APIs POST operator is used in a Jigx function with body parameters to specify the exact columns to be created for the record. The `inputTransform` specifies how the data should be structured or formatted when being sent to the REST service. This transformation process ensures that the data adheres to the expected schema or format required by the REST service for processing the request. In the `outputTransform` the id and status are configured to ensure that the properties are automatically returned once the record is created and the local provider's temp\_id is updated with the actual id and status.
 
@@ -153,7 +153,7 @@ outputTransform: |
 {% endtab %}
 {% endtabs %}
 
-### Action (global)
+## Action (global)
 
 Create a load-data.jigx file under the actions folder. This file is configured with an action that syncs the data from the REST service, by calling the function, to the local Sqlite table. The action file is referenced in the index.jigx file to load the data when the app is opened or is in focus on the device.
 
@@ -173,7 +173,7 @@ action:
 ```
 {% endcode %}
 
-### Datasource
+## Datasource
 
 Add a file under the datasource folder to configure the local data provider with the data to return from the us-states table.
 
@@ -201,7 +201,7 @@ options:
 ```
 {% endcode %}
 
-### Jig (screen)
+## Jig (screen)
 
 * On the list of customers jig configure a `go-to` action that adds the _Add Customer_ button to the list and links to the create-customer jig.
 * In a default jig add a local data provider datasource with a query to get the us\_states data. Add a query parameter to set the state of the region field once the state field is selected.
@@ -505,7 +505,7 @@ actions:
 {% endtab %}
 {% endtabs %}
 
-### Index
+## Index
 
 For performance and offline support the data is synced from the REST service as soon as the app is opened or receives focus. This is achieved by calling the global action in the `OnFocus` and `onLoad` events.
 

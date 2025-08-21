@@ -9,7 +9,7 @@ This feature is currently in its **Alpha** stage of development.
 * We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
 {% endhint %}
 
-### Health
+## Health
 
 ::::LinkArray :::LinkArrayItem{headerImage headerColor} ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Vi50C2MNtI0jdWzZPoI2a-20241114-074822.png" size="48" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Vi50C2MNtI0jdWzZPoI2a-20241114-074822.png" caption}
 
@@ -31,7 +31,7 @@ This feature is currently in its **Alpha** stage of development.
 
 :::::ExpandableHeading
 
-### News
+## News
 
 ::::LinkArray :::LinkArrayItem{headerImage headerColor} ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-f-YhyaImMxp6r70ROP7NZ-20241114-075012.png" size="50" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-f-YhyaImMxp6r70ROP7NZ-20241114-075012.png" caption}
 
@@ -62,7 +62,7 @@ This feature is currently in its **Alpha** stage of development.
 
 :::::ExpandableHeading
 
-### Field service
+## Field service
 
 ::::LinkArray :::LinkArrayItem{headerImage headerColor} ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FAXZJfZrLaqb86XIz-tt6-20241114-075105.png" size="48" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FAXZJfZrLaqb86XIz-tt6-20241114-075105.png" caption}
 

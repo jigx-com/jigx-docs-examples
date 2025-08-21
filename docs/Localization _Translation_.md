@@ -12,7 +12,7 @@ Adding dynamic values in localized jigs use **ICU message** definitions. Try it 
 
 ## Examples and code snippets
 
-### Form localized in five languages with static values
+## Form localized in five languages with static values
 
 In this example, the new employee form is translated into German, French, and Czech. To see the form in each of the languages change your device language setting to one of the configured languages.
 
@@ -165,7 +165,7 @@ create: Vytvořit zaměstnance
 {% endtab %}
 {% endtabs %}
 
-### Jig translated into German with dynamic values
+## Jig translated into German with dynamic values
 
 In this example, a jigwith today's activites is translated into German. The translation is configured dynamically agains the `Text Locale` values. To see the form in each of the languages change your device language setting to one of the configured languages.
 

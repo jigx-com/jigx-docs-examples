@@ -9,7 +9,7 @@ updatedAt: Mon Jul 31 2023 09:13:59 GMT+0000 (Coordinated Universal Time)
 
 Use [JSONata Predicate Queries](https://docs.jsonata.org/predicate) at any location path; the selected items can be filtered using a predicate - **\<expr>** where expr evaluates to a Boolean value. With that, you can select values from the array based on the specific type set as the predicate expression.
 
-### Configuration
+## Configuration
 
 <table><thead><tr><th width="284.3515625">Result</th><th>Expression</th></tr></thead><tbody><tr><td>Evaluate if true and show the name</td><td><code>=@ctx.datasources.mydata[title='Nurse' and color='blue'].name</code></td></tr></tbody></table>
 
@@ -17,7 +17,7 @@ Use [JSONata Predicate Queries](https://docs.jsonata.org/predicate) at any locat
 Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.&#x20;
 {% endhint %}
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% columns %}
 {% column %}

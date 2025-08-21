@@ -2,7 +2,7 @@
 
 The grid-item component serves as the child component whenever any grid component has been configured, as discussed in the [grid](../grid.md) section. The component determines how the grid items are displayed, allowing you to customize the UI elements in the grid.
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](grid-item.md) for a list and their configuration options.
 
@@ -10,7 +10,7 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="170.640625">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>The icon will be displayed on the of the jig. Start typing the name of the icon to invoke the available list in IntelliSense. See <a href="https://docs.jigx.com/jigx-icons">Jigx icons</a> for information on working with icons. The <code>icon</code> property applies to <code>component.jig-widget</code> without a <code>widgetId</code>. See the considerations below for the rules governing icon behavior.</td></tr><tr><td><code>title</code></td><td>By default, the jig's title is displayed. You can override it by adding the <code>title</code> property to the <code>grid-item</code>, either with a custom <code>title</code> or with <code>''</code> (a blank space) to remove the title entirely.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * When using the `grid-item` with a `component.jig-widget`, note the following:
   * A `widgetId` is required if the referenced jig includes a widget configuration. This value should match the `Widget Name` specified in the referenced jig.
@@ -21,9 +21,9 @@ Some properties are common to all components, see [Common component properties](
   * If an `icon` is specified in the `component.widget` in the `grid-item`, it overrides all other icon settings.
 * A jig with inputs in it's `title` will display without a title (blank) as the jig would not have received those inputs.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Grid-item with image and widget
+### Grid-item with image and widget
 
 {% columns %}
 {% column %}
@@ -195,7 +195,7 @@ widgets:
 {% endtab %}
 {% endtabs %}
 
-#### Grid-item options
+### Grid-item options
 
 {% columns %}
 {% column %}

@@ -26,7 +26,7 @@ Some properties are common to all components, see [Common component properties](
 
 :::::ExpandableHeading
 
-### Reset solution state
+## Reset solution state
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -46,7 +46,7 @@ Some properties are common to all components, see [Common component properties](
 
 :::::ExpandableHeading
 
-### Reset solution state in the onRefresh event
+## Reset solution state in the onRefresh event
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -66,7 +66,7 @@ Some properties are common to all components, see [Common component properties](
 
 :::::ExpandableHeading
 
-### Reset solution state in a jig
+## Reset solution state in a jig
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem

@@ -2,7 +2,7 @@
 
 This action lets you immediately open the media picker, enabling you to capture images and videos or select media files, then output the selected files.
 
-### Configuration options
+## Configuration options
 
 <table><thead><tr><th width="154.51171875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Provide a short title to display on the action button. You can use text, an expression or a datasource to set the title.</td></tr><tr><td><code>mediaType</code></td><td>By default the value is set to <code>image</code>. The following options are available for selection: 1) <code>any</code> is for files of any extension such as pdf, jpeg, png, mpeg, txt, or docx. Set to <code>any</code> allows you to take a picture, record a video, select an image or video from the library, or select a document. Using <code>mediaType: any</code> is recommended when uploading multiple media files as it caters for any file type. 2) <code>csv</code> - select CSV files. 3) <code>doc</code> - select DOC or DOCX files. 4) <code>image</code> - used to take a picture or select from the image library. 5) <code>imageAndVideo</code> - take a picture, record a video or select an image or video from the library. 6) <code>pdf</code> - select PDF files. 7) <code>plainText</code> - select plain text files. 8) <code>ppt</code> - select PPT or PPTX files. 9) <code>video</code> - record a video or upload one from the library. 10) <code>xls</code> - select XLS or XLSX files. Configure filters to restrict media types based on your app’s requirements, for example, only allow document files DOC, PDF or plain text. <code>mediaType:</code> <code>- doc</code> <code>- pdf</code></td></tr></tbody></table>
 
@@ -10,13 +10,13 @@ This action lets you immediately open the media picker, enabling you to capture 
 
 <table><thead><tr><th width="304.3984375">Outputs</th><th width="117.82421875">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.actions.instanceId.outputs.</code></td><td>newItems</td><td>string[] Used for newly added items that were successfully uploaded.</td></tr><tr><td><code>=@ctx.actions.instanceId.outputs.</code></td><td>invalidItems</td><td>string[] Used for options that are invalid or failed to upload successfully.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * Files captured using the `media-field` component can be saved to [Dynamic Files](<../Data Providers/Dynamic Files.md>) by assigning them to the `file` property of a dynamic data entity, enabling seamless upload and storage in Amazon S3.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Open-media-picker to capture an image
+### Open-media-picker to capture an image
 
 In this example, the button opens the media-picker. The configuration is set to take a picture or choose from library. The image is saved to the local database. **Example:** See the full code example in GitHub.
 

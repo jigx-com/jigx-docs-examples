@@ -10,7 +10,7 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOh
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](chat.md) for a list and their configuration options.
 
@@ -18,7 +18,7 @@ Some properties are common to all components, see [Common component properties](
 
 <table data-header-hidden><thead><tr><th width="154.65234375">Other options</th><th></th></tr></thead><tbody><tr><td><code>isAuthor</code></td><td>Used to visually distinguish between the chat participants. When set to <code>true</code>, the chat bubble is blue, when set to <code>false</code> the bubble is set to white.</td></tr><tr><td><code>onPress</code></td><td>Configure an action that executes when you press on one of the chat bubbles, for example, <code>action.go-to</code>.</td></tr><tr><td><code>onRefresh</code></td><td>Use the <code>onRefresh</code> to sync new chat messages to the mobile device by swiping <strong>up (</strong>⬆️) on the screen as new messages load at the bottom of the screen. The <code>onRefresh</code> is a jig configuration and is not part of the chat component.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * The `component.chat` can only be configured in the [jig.full-screen](<../Jig Types/jig_fullscreen.md>) type.
 * Only text messages can be sent in the chat bubbles.
@@ -32,9 +32,9 @@ Some properties are common to all components, see [Common component properties](
     * senderId
 * _Optional_: To improve performance, limit the number of chat message bubbles displayed on the screen by limiting the number that is returned in the datasource query.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Chatbot with OpenAI
+### Chatbot with OpenAI
 
 In this example, you set up an AI chat experience using the Jigx chat component configured to integrate with the OpenAI ChatGPT REST endpoint - [https://api.openai.com/v1/chat/completions](https://api.openai.com/v1/chat/completions). The REST API is configured in the ai-function.jigx and the chat component in the ai-chat.jigx file. See [OpenAI integration](<../OpenAI integration.md>) for more examples and information on using OpenAI.
 

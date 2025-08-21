@@ -26,7 +26,7 @@ In the code examples below replace `YOUR_ORG_ID` with your actual Organization I
 Click here to go there directly: [https://manage.jigx.com/settings/org-details](https://manage.jigx.com/organization/org-details)&#x20;
 {% endhint %}
 
-### Notification sent when submitting a form
+## Notification sent when submitting a form
 
 In this example we are using hidden form components (e.g. `organizationId`) to pass required parameters to the function. The emails field contains a comma-separated list of recipients. You could also use [Expressions](https://docs.jigx.com/expressions) to create that comma-separated string dynamically at runtime.
 
@@ -168,7 +168,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Send notification with execute-entity
+## Send notification with execute-entity
 
 You can also send notifications using an [execute-entity](Actions/execute-entity.md) action if you want to have more control over what's being sent to the function.
 
@@ -289,7 +289,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Send notification with a target jig with input parameters
+## Send notification with a target jig with input parameters
 
 You can also target a specific jig with input parameters from your push notification. An example of this would be a notification about a new product promotion with the promotion detail jig as the target. When the user taps on the notification (either on the native push notification or the in-app notification), the app will navigate to the specific promotion
 
@@ -483,6 +483,6 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Sending push notifications using the Jigx notification Endpoint
+## Sending push notifications using the Jigx notification Endpoint
 
 See [External push notifications (API)](<Notifications/External push notifications _API_.md>) for more information and examples.&#x20;

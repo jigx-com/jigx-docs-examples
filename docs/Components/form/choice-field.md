@@ -10,7 +10,7 @@ The choice-field component allows you to select one or more options from a prede
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-bBqh\_WETCy6CgvD8nBr8c-20240826-164834.png" size="80" position="center" caption="Choice-field" alt="Choice-field" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-bBqh\_WETCy6CgvD8nBr8c-20240826-164834.png" width="800" height="498" darkWidth="800" darkHeight="498"}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](choice-field.md) for a list and their configuration options.
 
@@ -24,16 +24,16 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="238.9765625">State Configuration</th><th width="160.3359375">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>selected value</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * The choice-field component can only be used in a form component on a default jig.
 * The choice-field is an input control.
 * Only text can be displayed in the `title` property.
 * Using `itemPerRow` for long text is not recommended due to the limited space available in each item and the need for visual consistency among the choices. The property supports up to two lines of text per item.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Choice-field with single selection
+### Choice-field with single selection
 
 {% columns %}
 {% column %}
@@ -159,7 +159,7 @@ actions:
 ```
 {% endcode %}
 
-#### Choice-field with multiple selection
+### Choice-field with multiple selection
 
 {% columns %}
 {% column width="50%" %}
@@ -305,7 +305,7 @@ actions:
 ```
 {% endcode %}
 
-### Loading of multiple selected options
+## Loading of multiple selected options
 
 In this example, we want to load the patient's form that they completed in the example above, and show their selected details and allergies. Each patient can have multiple allergies, and the data would be saved as an object in the database. To deserialize the object the `jsonProperties` property is configured with the column containing the object of multiple allergies. In the `choice-field` component the `intialValue` is then configured to return the selected allergies for the specific patient. The `execute-entity` action is configured to update the patient data.
 
@@ -540,7 +540,7 @@ item:
 {% endtab %}
 {% endtabs %}
 
-#### Choice-field with three items per row
+### Choice-field with three items per row
 
 {% columns %}
 {% column %}
@@ -621,7 +621,7 @@ actions:
 ```
 {% endcode %}
 
-#### Choice-field with an initial selection
+### Choice-field with an initial selection
 
 {% columns %}
 {% column %}
@@ -700,7 +700,7 @@ actions:
 ```
 {% endcode %}
 
-#### Choice-field with onChange
+### Choice-field with onChange
 
 {% columns %}
 {% column %}

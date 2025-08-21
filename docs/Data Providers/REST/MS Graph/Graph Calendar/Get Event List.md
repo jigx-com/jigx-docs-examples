@@ -9,7 +9,7 @@ updatedAt: Wed Mar 05 2025 17:58:07 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column %}
-### Scenario
+## Scenario
 
 Get a list of the next week's events on a user's calendar from Microsoft Graph using GET REST functions and show the events in a calendar jig.
 
@@ -34,13 +34,13 @@ This example uses [Get Calendar List](<Get Calendar List.md>) to provide the cal
 {% endcolumn %}
 {% endcolumns %}
 
-### Examples and code snippets
+## Examples and code snippets
 
 {% hint style="success" %}
 When using the code and samples in this topic, remember that they are designed to function as part of a comprehensive solution. To fully benefit from the intended functionality and ensure compatibility, it is recommended that you use the entire solution rather than selecting individual components in isolation. Alternatively, you can use these samples as a guide to understand the underlying concepts and MS Graph API, which can help you integrate similar solutions into your projects more effectively. The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).
 {% endhint %}
 
-### General
+## General
 
 {% code title="index.jigx" %}
 ```yaml
@@ -79,7 +79,7 @@ onFocus:
 ```
 {% endcode %}
 
-### Functions
+## Functions
 
 MS Graph Event List function in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/functions/calendar/get-calendar-event-list.jigx).
 
@@ -163,7 +163,7 @@ continuation:
 {% endtab %}
 {% endtabs %}
 
-### Jigs
+## Jigs
 
 MS Graph Calendar Events List jig in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/jigs/calendar/view-calendar-events.jigx).
 
@@ -284,7 +284,7 @@ actions:
 ```
 {% endcode %}
 
-### See Also
+## See Also
 
 * [Get Calendar List](<Get Calendar List.md>)
 * [Get Event Item](<Get Event Item.md>)

@@ -4,15 +4,15 @@ This action allows users to update specific information about themselves, which 
 
 This action can be configured within a jig in various ways, such as: An action button A header action link or icon An event, e.g., `onPress`
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](update-profile.md) for a list and their configuration options.
 
 <table><thead><tr><th width="142.3046875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>instanceId</code></td><td>Provide the action with an <code>instanceId</code>.</td></tr><tr><td><code>avatarUrl</code></td><td>Configure the property with an expression, datasource, or input to update the user's avatar.</td></tr><tr><td><code>displayName</code></td><td>Configure the property with an expression, datasource, or input to update the user's preferred name, for example, Rob instead of Robert.</td></tr><tr><td><code>firstName</code></td><td>Configure the property with an expression, datasource, or input to update the user's last name (surname).</td></tr><tr><td><code>lastName</code></td><td>Configure the property with an expression, datasource or input to update the user's name.</td></tr><tr><td><code>title</code></td><td>Defines the title for the action button, such as Update your details.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Update-profile button in a jig
+### Update-profile button in a jig
 
 {% columns %}
 {% column %}
@@ -78,7 +78,7 @@ actions:
 ```
 {% endcode %}
 
-#### Update-profile in a jig-header link
+### Update-profile in a jig-header link
 
 {% columns %}
 {% column %}
@@ -140,7 +140,7 @@ children:
 ```
 {% endcode %}
 
-#### Update-profile in a jig-header icon
+### Update-profile in a jig-header icon
 
 {% columns %}
 {% column %}
@@ -205,7 +205,7 @@ children:
 ```
 {% endcode %}
 
-#### Update-profile with onPress event
+### Update-profile with onPress event
 
 {% columns %}
 {% column %}

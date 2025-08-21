@@ -10,7 +10,7 @@ Image\[]{alt="Avatar preview" src="https://archbee-image-uploads.s3.amazonaws.co
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](avatar.md) for a list and their configuration options.
 
@@ -18,9 +18,9 @@ Some properties are common to all components, see [Common component properties](
 
 <table data-header-hidden><thead><tr><th width="146.9296875">Other options</th><th></th></tr></thead><tbody><tr><td><code>align</code></td><td><p>By default the avatar is aligned <code>left</code> but can be changed to:</p><ul><li><code>center</code></li><li><code>left</code></li><li><code>right</code></li></ul></td></tr><tr><td><code>size</code></td><td><p>The size of the avatar can be set to:</p><ul><li><code>small</code></li><li><code>regular</code></li><li><code>large</code></li></ul></td></tr><tr><td><code>uri</code></td><td>Source of the image to display as the avatar.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Avatar as children of jig (profile picture)
+### Avatar as children of jig (profile picture)
 
 {% columns %}
 {% column %}
@@ -129,7 +129,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Avatar as children of jig (initials)
+### Avatar as children of jig (initials)
 
 {% columns %}
 {% column %}

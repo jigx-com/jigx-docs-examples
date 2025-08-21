@@ -10,7 +10,7 @@ The count-up component is a display-only component that continuously updates in 
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](count-up.md) for a list and their configuration options.
 
@@ -18,9 +18,9 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="153.80078125">Other options</th><th></th></tr></thead><tbody><tr><td><code>labels</code></td><td><p>The count-up label displays time in the format Days: Hours: Minutes: Seconds. The Days section appears only when the timer exceeds 24 hours. Configuration options are:</p><ul><li><code>isVisible</code> (default: <code>true</code>)- Controls visibility of the count-up labels. Setting it to <code>false</code> hides the labels.</li><li><code>position</code> - Determines whether the count-up labels (Days: Hours: Minutes: Seconds) appear at the top or bottom of the count-up display.</li></ul></td></tr><tr><td><code>size</code></td><td>Choose between <code>extra-large</code> and <code>medium</code> sizes, with <code>extra-large</code> as the default if the property is not specified in the YAML.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Count-up basic
+### Count-up basic
 
 {% columns %}
 {% column %}
@@ -64,7 +64,7 @@ children:
 ```
 {% endcode %}
 
-#### Count-up sizes and labels
+### Count-up sizes and labels
 
 {% columns %}
 {% column %}
@@ -126,7 +126,7 @@ children:
 ```
 {% endcode %}
 
-#### Count-up using a datasource
+### Count-up using a datasource
 
 {% columns %}
 {% column %}
@@ -187,7 +187,7 @@ children:
 ```
 {% endcode %}
 
-#### Count-up using state in a when condition
+### Count-up using state in a when condition
 
 {% columns %}
 {% column %}

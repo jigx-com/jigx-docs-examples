@@ -12,7 +12,7 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2X
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](product-item.md) for a list and their configuration options.
 
@@ -24,9 +24,9 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="208.36328125">State Configuration</th><th width="125.23828125">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.current.state.</code></td><td>amount</td><td>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</td></tr><tr><td><code>=@ctx.component.state.</code></td><td>amount</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Simple product-item with tags
+### Simple product-item with tags
 
 {% columns %}
 {% column %}
@@ -100,7 +100,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Product-item with onChange, amountControl and search
+### Product-item with onChange, amountControl and search
 
 {% columns %}
 {% column %}
@@ -176,7 +176,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Product-item with summary
+### Product-item with summary
 
 {% columns %}
 {% column %}
@@ -263,6 +263,6 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-### See also
+## See also
 
 * [State](https://docs.jigx.com/state)

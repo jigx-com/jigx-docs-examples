@@ -186,7 +186,7 @@ The `Extended List Widget` can only be used on a list jig . The purpose of using
 ## Examples and code snippets
 
 :::::ExpandableHeading
-### Automatic widget display because of list jig type (Simple)
+## Automatic widget display because of list jig type (Simple)
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
@@ -248,7 +248,7 @@ children:
 :::::
 
 :::::ExpandableHeading
-### Automatic widget display because of list jig type (UI elements)
+## Automatic widget display because of list jig type (UI elements)
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
@@ -317,7 +317,7 @@ children:
 :::::
 
 :::::ExpandableHeading
-### List widget with stage component items
+## List widget with stage component items
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
@@ -396,7 +396,7 @@ children:
 :::::
 
 :::::ExpandableHeading
-### List widget with product items
+## List widget with product items
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -475,7 +475,7 @@ children:
 :::::
 
 :::::ExpandableHeading
-### List widget with list items
+## List widget with list items
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -551,7 +551,7 @@ children:
 :::::
 
 ::::ExpandableHeading
-### Extended list widget 2x4, 4x2, 4x4
+## Extended list widget 2x4, 4x2, 4x4
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/s4ML69T6TZa5bCeOaYjKr_widget-extend.PNG" size="80" position="center" caption="Extended list widget" alt="Extended list widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/s4ML69T6TZa5bCeOaYjKr_widget-extend.PNG" width="800" height="785" darkWidth="800" darkHeight="785"}
 
@@ -716,7 +716,7 @@ children:
 :::
 ::::
 
-### Group list widgets
+## Group list widgets
 
 See the following examples under groups:
 

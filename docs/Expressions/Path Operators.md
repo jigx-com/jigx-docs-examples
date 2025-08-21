@@ -13,7 +13,7 @@ description: >-
 
 JSONata path operators are used for navigating and accessing specific elements or properties within a data set.
 
-### Path operators
+## Path operators
 
 The operators include:
 
@@ -27,7 +27,7 @@ The operators include:
 * [# (Positional variable binding)](https://docs.jsonata.org/path-operators#-positional-variable-binding)
 * [@ (Context variable binding)](https://docs.jsonata.org/path-operators#-context-variable-binding)
 
-### Configuration
+## Configuration
 
 <table><thead><tr><th width="257.97265625">Result</th><th>Expression</th></tr></thead><tbody><tr><td>Filter a list according to a value</td><td><code>=$filter(@ctx.datasources.filter-list, function($v){$contains($string($v.status), $string(@ctx.components.filter-list.state.filter != null ? @ctx.components.filter-list.state.filter:'')) })[]</code></td></tr></tbody></table>
 
@@ -35,9 +35,9 @@ The operators include:
 Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.&#x20;
 {% endhint %}
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Filtering data
+### Filtering data
 
 {% columns %}
 {% column %}
@@ -115,7 +115,7 @@ item:
 ```
 {% endcode %}
 
-#### Searching data
+### Searching data
 
 Write an expression to add a search field when using **static data**. The character **\[]** at the end is very important. Even one item only will be displayed.
 

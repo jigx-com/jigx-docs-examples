@@ -11,7 +11,7 @@ As far as the functionality goes, the same list options are available as with th
 5. [Product item](https://docs.jigx.com/examples/product-item)
 6. [Stage](list/stage.md)
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](list.md) for a list and their configuration options.
 
@@ -21,13 +21,13 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="209.51171875">State Configuration</th><th width="129.65234375">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.current.state.</code></td><td>amount checked</td><td>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</td></tr><tr><td><code>=@ctx.component.state.</code></td><td>amount checked</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * When using the `value` property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.
 
-### List functionality
+## List functionality
 
-#### List with Search functionality
+### List with Search functionality
 
 {% columns %}
 {% column %}
@@ -207,7 +207,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### List with Filter functionality
+### List with Filter functionality
 
 {% columns %}
 {% column %}
@@ -403,7 +403,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Filtered list with default tab set
+### Filtered list with default tab set
 
 {% columns %}
 {% column %}
@@ -494,7 +494,7 @@ children:
 ```
 {% endcode %}
 
-#### List with Search and Filter functionality
+### List with Search and Filter functionality
 
 {% columns %}
 {% column %}
@@ -701,7 +701,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Horizontal list
+### Horizontal list
 
 {% columns %}
 {% column %}
@@ -900,6 +900,6 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-### See also
+## See also
 
 * [State](https://docs.jigx.com/state)

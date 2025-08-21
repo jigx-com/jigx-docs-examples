@@ -12,7 +12,7 @@ Be careful when using complex expressions, such as expressions that iterate one 
 
 ## Examples and code snippets
 
-### Compare values
+## Compare values
 
 {% columns %}
 {% column %}
@@ -54,7 +54,7 @@ children:
 ```
 {% endcode %}
 
-### Variables in content
+## Variables in content
 
 {% columns %}
 {% column %}
@@ -84,7 +84,7 @@ source:
 ```
 {% endcode %}
 
-### Multiple select in a dropdown
+## Multiple select in a dropdown
 
 {% columns %}
 {% column %}

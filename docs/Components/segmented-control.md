@@ -19,7 +19,7 @@ Some properties are common to all components, see [Common component properties](
 
 ## Examples and code snippets
 
-### Basic segmented-control
+## Basic segmented-control
 
 {% columns %}
 {% column %}
@@ -69,7 +69,7 @@ children:
 ```
 {% endcode %}
 
-### Segmented-control with a datasource
+## Segmented-control with a datasource
 
 {% columns %}
 {% column %}
@@ -135,7 +135,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-### Disabled segmented-control
+## Disabled segmented-control
 
 {% columns %}
 {% column %}
@@ -175,7 +175,7 @@ children:
 ```
 {% endcode %}
 
-### Preselected segmented-control
+## Preselected segmented-control
 
 {% columns %}
 {% column %}
@@ -221,7 +221,7 @@ children:
                 value: =@ctx.components.default-segment.state.value    
 </code></pre>
 
-### Segmented-control using state
+## Segmented-control using state
 
 {% columns %}
 {% column %}

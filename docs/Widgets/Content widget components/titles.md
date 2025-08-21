@@ -19,7 +19,7 @@ Titles are available in the following content widgets:
 
 ## Examples and code snippets
 
-### Titles in the image widget
+## Titles in the image widget
 
 {% columns %}
 {% column %}
@@ -122,7 +122,7 @@ children:
 {% endtab %}
 {% endtabs %}
 
-### Titles in the location widget
+## Titles in the location widget
 
 {% columns %}
 {% column %}

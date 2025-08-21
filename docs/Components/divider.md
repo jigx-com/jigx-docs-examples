@@ -9,7 +9,7 @@ updatedAt: Mon Feb 03 2025 08:08:23 GMT+0000 (Coordinated Universal Time)
 
 A divider is a simple yet effective UI component that creates a visual separation between components. It helps improve readability, structure content, and enhance user experience by distinguishing different sections. Common use cases include grouping related content or enhancing visual hierarchy.
 
-#### Examples and code snippets
+### Examples and code snippets
 
 {% columns %}
 {% column %}

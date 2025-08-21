@@ -27,7 +27,7 @@ Some properties are common to all components, see [Common component properties](
 
 ## Examples and code snippets
 
-### Progress bar with title and subtitle
+## Progress bar with title and subtitle
 
 {% columns %}
 {% column %}
@@ -103,7 +103,7 @@ This example shows the different ways the `title` and `subtitle` can be configur
 ```
 {% endcode %}
 
-### Progress bar with error and helper text
+## Progress bar with error and helper text
 
 {% columns %}
 {% column %}
@@ -155,7 +155,7 @@ children:
 ```
 {% endcode %}
 
-### Progress bar with colors
+## Progress bar with colors
 
 {% columns %}
 {% column %}
@@ -210,7 +210,7 @@ children:
 ```
 {% endcode %}
 
-### Progress bar size
+## Progress bar size
 
 {% columns %}
 {% column %}
@@ -274,7 +274,7 @@ children:
 ```
 {% endcode %}
 
-### Progress bar with steps
+## Progress bar with steps
 
 {% columns %}
 {% column %}
@@ -336,7 +336,7 @@ children:
 ```
 {% endcode %}
 
-### Progress bar with onPress
+## Progress bar with onPress
 
 {% columns %}
 {% column %}
@@ -383,7 +383,7 @@ onRefresh:
 ```
 {% endcode %}
 
-### Dynamic Progress bar
+## Dynamic Progress bar
 
 {% columns %}
 {% column %}

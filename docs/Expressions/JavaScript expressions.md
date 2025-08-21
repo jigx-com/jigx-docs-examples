@@ -11,7 +11,7 @@ Refer to the section on [JavaScript expressions](https://docs.jigx.com/expressio
 
 ## Text formatting
 
-### Return a string
+## Return a string
 
 {% columns %}
 {% column %}
@@ -73,7 +73,7 @@ export function helloWorld() {
 {% endtab %}
 {% endtabs %}
 
-### Concatenate first and last name
+## Concatenate first and last name
 
 {% columns %}
 {% column %}
@@ -145,7 +145,7 @@ export function getFullName(firstName, lastName) {
 {% endtab %}
 {% endtabs %}
 
-### Capitalize job title
+## Capitalize job title
 
 {% columns %}
 {% column %}
@@ -244,7 +244,7 @@ export function capitalizeJobTitle(str) {
 
 ## Numbers and dates
 
-### Calculate tax plus total
+## Calculate tax plus total
 
 {% columns %}
 {% column %}
@@ -367,7 +367,7 @@ export function formatCurrency(amount, currencySymbol) {
 {% endtab %}
 {% endtabs %}
 
-### Calculate loan payment
+## Calculate loan payment
 
 {% columns %}
 {% column %}
@@ -470,7 +470,7 @@ export function formatCurrency(amount, currencySymbol) {
 {% endtab %}
 {% endtabs %}
 
-### Calculate age
+## Calculate age
 
 {% columns %}
 {% column %}
@@ -570,7 +570,7 @@ export function calculateAge(dateOfBirth) {
 {% endtab %}
 {% endtabs %}
 
-### Distance between two cities
+## Distance between two cities
 
 {% columns %}
 {% column %}
@@ -828,7 +828,7 @@ export function distanceApart(from_long, from_lat, to_long, to_lat) {
 {% endtab %}
 {% endtabs %}
 
-### Days to next state holiday
+## Days to next state holiday
 
 {% columns %}
 {% column %}
@@ -980,7 +980,7 @@ export function daysUntil(targetDate) {
 {% endtab %}
 {% endtabs %}
 
-### Work days left in a month
+## Work days left in a month
 
 {% columns %}
 {% column %}
@@ -1082,7 +1082,7 @@ export function workdaysLeftInMonth(date) {
 {% endtab %}
 {% endtabs %}
 
-### Next work day
+## Next work day
 
 {% columns %}
 {% column %}
@@ -1171,7 +1171,7 @@ export function getNextBusinessDay(date) {
 
 ## If conditions
 
-### Format phone number
+## Format phone number
 
 {% columns %}
 {% column %}
@@ -1266,7 +1266,7 @@ export function formatPhoneNumber(phoneNumber) {
 
 ## Working with objects
 
-### Get employee details
+## Get employee details
 
 {% columns %}
 {% column %}
