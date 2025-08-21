@@ -6,7 +6,7 @@ The count-up component is a display-only component that continuously updates in 
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2\_vVUe8H-20250319-072422.png
+<figure><img src="../../.gitbook/assets/cc-countup-basic.png" alt="Count-up" width="188"><figcaption><p>Count-up</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -30,7 +30,7 @@ This example shows how to set up a basic `count-up` component that starts counti
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nW6zJJxYorLEl2\_vVUe8H-20250319-072422.png
+<figure><img src="../../.gitbook/assets/cc-countup-basic.png" alt="Basic count-up" width="188"><figcaption><p>Basic count-up</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -68,7 +68,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FzoIGzYYYvnodUOpxXzJF-20250319-110311.png
+<figure><img src="../../.gitbook/assets/cc-count-up-sizeLabel.png" alt="Different sized count-ups" width="188"><figcaption><p>Different sized count-ups</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -136,7 +136,7 @@ This example showcases two `count-up` components using a datasource with timesta
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ZNs61T\_KydUti3vw3y1gc-20250319-110401.png
+<figure><img src="../../.gitbook/assets/cc-countup-datasource.png" alt="Count-up from a datasource" width="188"><figcaption><p>Count-up from a datasource</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -191,9 +191,7 @@ children:
 
 {% columns %}
 {% column %}
-&#x20;![count-up condition](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gTZBlyV4cONAWWhje5ule-20250319-124254.png)&#x20;
-
-
+<figure><img src="../../.gitbook/assets/cc-count-up-when.png" alt="Count-up condition"><figcaption><p>Count-up condition</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
