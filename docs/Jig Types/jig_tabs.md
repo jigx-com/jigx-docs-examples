@@ -6,7 +6,7 @@ Tabs allow you to navigate between different jigs with ease, enhancing the user 
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E\_iRppiL-20250206-182545.gif" size="66" position="center" caption="Tabs " alt="Tabs " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E\_iRppiL-20250206-182545.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
+<figure><img src="../../.gitbook/assets/tabs-icons.gif" alt="Tabs" width="188"><figcaption><p>Tabs</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -36,7 +36,7 @@ The `jig.tabs` can be configured in the following way in Jigx Builder.
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gXY6EX-Uq2C9RtFI5kPcb-20250206-181546.gif" size="66" position="center" caption="Basic tab jig" alt="Basic tab jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gXY6EX-Uq2C9RtFI5kPcb-20250206-181546.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
+<figure><img src="../../.gitbook/assets/tab-basic.gif" alt="Basic tab jig" width="188"><figcaption><p>Basic tab jig</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -46,8 +46,6 @@ This example demonstrates the simplest use of the `jig.tabs`. Four tabs are conf
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-basic.jigx). Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/supporting-jigs).
 {% endcolumn %}
 {% endcolumns %}
-
-:::CodeblockTabs&#x20;
 
 {% tabs %}
 {% tab title="jig-tabs-basic.jigx" %}
@@ -281,7 +279,7 @@ source:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-lBrVY3woIBnimDwWulEHH-20250110-093815.gif" size="66" position="center" caption="Scrollable tabs" alt="Scrollable tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-lBrVY3woIBnimDwWulEHH-20250110-093815.gif" width="366" height="730" darkWidth="366" darkHeight="730"}
+<figure><img src="../../.gitbook/assets/tabs-scrollable.gif" alt="Scrollable tabs" width="183"><figcaption><p>Scrollable tabs</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -399,7 +397,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UdPtwouumvXFSZS6\_4cU5-20250206-181844.gif" size="66" position="center" caption="Swipeable tabs" alt="Swipeable tabs tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UdPtwouumvXFSZS6\_4cU5-20250206-181844.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}&#x20;
+<figure><img src="../../.gitbook/assets/tabs-swipeable.gif" alt="Swipeable tabs" width="188"><figcaption><p>Swipeable tabs</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -467,7 +465,7 @@ tabs:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fMURvK7rblWigmQqdUPWv-20250206-182207.png" size="66" position="center" caption="Initial tab specified" alt="Initial tab specified" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fMURvK7rblWigmQqdUPWv-20250206-182207.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/tabs-initialtabid.png" alt="Initial tab specified" width="188"><figcaption><p>Initial tab specified</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -533,7 +531,7 @@ tabs:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E\_iRppiL-20250206-182545.gif" size="66" position="center" caption="Tabs with icons" alt="Tabs with icons" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OMOVs8U637zq2E\_iRppiL-20250206-182545.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
+<figure><img src="../../.gitbook/assets/tabs-icons.gif" alt="Tabs with icons" width="188"><figcaption><p>Tabs with icons</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -607,7 +605,7 @@ tabs:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MsVwU6nEEHgimuiowkBQ7-20250206-183000.gif" size="66" position="center" caption="Tabs with inputs" alt="Tabs with inputs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MsVwU6nEEHgimuiowkBQ7-20250206-183000.gif" width="1080" height="2166" darkWidth="1080" darkHeight="2166"}
+<figure><img src="../../.gitbook/assets/tabs-inputs.gif" alt="Tabs with inputs" width="188"><figcaption><p>Tabs with inputs</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -744,7 +742,7 @@ tabs:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-y\_xWPxX2BR2mdsyMN72Ar-20250227-155626.gif" size="66" position="center" caption="Tabs using single tab" alt="Tabs using single tab" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-y\_xWPxX2BR2mdsyMN72Ar-20250227-155626.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+<figure><img src="../../.gitbook/assets/tab-single-jig.gif" alt="Tabs using single tab" width="170"><figcaption><p>Tabs using single tab</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
