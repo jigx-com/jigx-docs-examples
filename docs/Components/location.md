@@ -2,7 +2,7 @@
 
 The location component enables users to display a location on a map within a jig. It can be configured to appear in different formats, including the standard component layout, the jig header, or fullscreen mode. Additionally, display options can be set up to show the current location with markers or paths.
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](location.md) for a list and their configuration options.
 
@@ -60,9 +60,9 @@ markers:
 * Test the layout of the location component when combining it with other components, as it can cause spacing issues.
 * To display a location as a full screen, use the [jig.fullscreen](<../Jig Types/jig_fullscreen.md>) type with the `component.location`. See the [Fullscreen location](https://docs.jigx.com/examples/location#autxL) example down below.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Location using address
+### Location using address
 
 {% columns %}
 {% column %}
@@ -165,7 +165,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Location using latitude and longitude
+### Location using latitude and longitude
 
 {% columns %}
 {% column %}
@@ -228,7 +228,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Location with multiple markers
+### Location with multiple markers
 
 {% columns %}
 {% column %}
@@ -290,7 +290,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Location displaying paths
+### Location displaying paths
 
 {% columns %}
 {% column %}
@@ -385,7 +385,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Location radius
+### Location radius
 
 {% columns %}
 {% column %}
@@ -449,7 +449,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Location full screen
+### Location full screen
 
 {% columns %}
 {% column %}
@@ -521,7 +521,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Location as a header
+### Location as a header
 
 {% columns %}
 {% column %}

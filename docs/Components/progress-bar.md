@@ -10,7 +10,7 @@
 {% endcolumn %}
 {% endcolumns %}
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](progress-bar.md) for a list and their configuration options.
 
@@ -20,14 +20,14 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="154.18359375">Actions</th><th></th></tr></thead><tbody><tr><td><code>onPress</code></td><td>Choose from the provided list of available actions, for example, use the <code>go-to</code> action to open a different jig. The action is triggered when the progress-bar is pressed; e.g., navigate to another jig.</td></tr></tbody></table>
 
-### Considerations
+## Considerations
 
 * The title, subtitle, and bar can use a `color` property. Ensure the property is added at the correct YAML level for each.
 * The `component.progress-bar` can only be used on a `jig.default`.
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Progress bar with title and subtitle
+### Progress bar with title and subtitle
 
 {% columns %}
 {% column %}
@@ -103,7 +103,7 @@ This example shows the different ways the `title` and `subtitle` can be configur
 ```
 {% endcode %}
 
-#### Progress bar with error and helper text
+### Progress bar with error and helper text
 
 {% columns %}
 {% column %}
@@ -155,7 +155,7 @@ children:
 ```
 {% endcode %}
 
-#### Progress bar with colors
+### Progress bar with colors
 
 {% columns %}
 {% column %}
@@ -210,7 +210,7 @@ children:
 ```
 {% endcode %}
 
-#### Progress bar size
+### Progress bar size
 
 {% columns %}
 {% column %}
@@ -274,7 +274,7 @@ children:
 ```
 {% endcode %}
 
-#### Progress bar with steps
+### Progress bar with steps
 
 {% columns %}
 {% column %}
@@ -383,7 +383,7 @@ onRefresh:
 ```
 {% endcode %}
 
-#### Dynamic Progress bar
+### Dynamic Progress bar
 
 {% columns %}
 {% column %}
