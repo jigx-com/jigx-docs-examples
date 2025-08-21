@@ -5,8 +5,8 @@
 Add a preview for the following [Components](Components.md):
 
 * [widgets](Widgets.md)
-* [list-item](Components/list/list-item.md)
-* [event](Components/event.md) The preview is triggered by _long-pressing_ the widget or item. The _long-press_ action can be used on:
+* [list-item](broken-reference)
+* [event](broken-reference) The preview is triggered by _long-pressing_ the widget or item. The _long-press_ action can be used on:
 
 1. Widgets
 2. List-items on widget
@@ -24,5 +24,5 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2X
 
 {% hint style="warning" %}
 1. Currently issues could be experienced when displaying the header's `title` and `subtitle` in the preview.
-2. Using the `action.go-to` within an action [action-list](Actions/action-list.md) does not trigger the preview popup.
+2. Using the `action.go-to` within an action [action-list](broken-reference) does not trigger the preview popup.
 {% endhint %}

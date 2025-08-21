@@ -9,7 +9,7 @@ updatedAt: Wed Feb 12 2025 13:40:09 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column %}
-## Scenario
+### Scenario
 
 Update a user's profile photo in Microsoft Graph using the `media-field` component in a jig to select the photo. A Jigx REST function is used in the `execute-entity` action to make the update.
 

@@ -9,7 +9,7 @@ updatedAt: Wed Mar 05 2025 18:00:17 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column %}
-## Scenario
+### Scenario
 
 Get a list of To-do tasks for a user in Microsoft Graph using a GET REST function and display the tasks in a list jig.
 

@@ -33,8 +33,8 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOh
 Template categories include:
 
 * [Cards & Charts (Alpha)](<Templates _Alpha_/Cards _ Charts _Alpha_.md>)
-* [Generic (Alpha)](<Templates _Alpha_/Generic _Alpha_.md>)
-* [Industry Specific (Alpha)](<Templates _Alpha_/Industry Specific _Alpha_.md>)
+* [Generic (Alpha)](broken-reference)
+* [Industry Specific (Alpha)](broken-reference)
 * [Travel (Alpha)](<Templates _Alpha_/Travel _Alpha_.md>)
 {% endcolumn %}
 {% endcolumns %}

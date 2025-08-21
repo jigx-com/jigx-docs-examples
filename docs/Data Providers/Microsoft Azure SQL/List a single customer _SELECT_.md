@@ -1,24 +1,24 @@
 # List a single customer (SELECT)
 
 {% hint style="warning" %}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](https://docs.jigx.com/microsoft-azure-sql) for more information.&#x20;
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](https://docs.jigx.com/microsoft-azure-sql) for more information.
 {% endhint %}
 
 {% columns %}
 {% column %}
-## Scenario
+### Scenario
 
 View the customer's details by pressing on the customer in the list, which opens the customer's details in a default jig.
 
-### Resources
+#### Resources
 
 * Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<Database Scripts.md>).
 * [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection).
 * This sample depends on [List customers (SELECT)](<List customers _SELECT_.md>).
 
-### Jigx Code
+#### Jigx Code
 
-The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs)&#x20;
+The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs)
 {% endcolumn %}
 
 {% column %}

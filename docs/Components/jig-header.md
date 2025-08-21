@@ -3,7 +3,7 @@
 The `jig-header` component can be used in any type of jig. It serves as a container for specifying headers. It cannot be used without a component [image](../Widgets/image.md), [location](location.md), or [video-player](video-player.md) inside the component.
 
 {% hint style="info" %}
-&#x20;The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/assets).&#x20;
+The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/assets).
 {% endhint %}
 
 ## Configuration options
@@ -13,7 +13,7 @@ Some properties are common to all components, see [Common component properties](
 <table><thead><tr><th width="154.484375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td><p>Specifies which component will be used inside the jig-header. There are three options:</p><ul><li><a href="location.md">component.location</a></li><li><a href="video-player.md">component.video player</a></li></ul></td></tr><tr><td><code>height</code></td><td><p>Specifies the height of the header.</p><ul><li><code>small</code></li><li><code>medium</code></li></ul></td></tr><tr><td><code>actions</code></td><td>Choose an action from the available list, such as <code>go-to</code> to open a different jig or <code>open-url</code> to navigate to a website. The selected action appears as a link in the top right corner of the header. Set the <code>icon</code> property in the action to display the action link as an icon instead of text. Styles of actions are inherited, for example, disabling the link. You can add multiple action links in the header, but ensure they accommodate the jig title and overall screen design. To prevent the jig <code>title</code> and header action links from overlapping while scrolling, use either one text action or up to three icon actions.</td></tr></tbody></table>
 
 {% hint style="warning" %}
-Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K.&#x20;
+Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K.
 {% endhint %}
 
 ## Examples and code snippets
@@ -22,17 +22,17 @@ Jigx does not recommend storing images in Dynamic Data (via any conversion), as 
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RQPQfkwE0vOo6no2yvRYW\_header-image-smalliphone13blueportrait.png" size="76" position="center" caption="Header with image" alt="Header with image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RQPQfkwE0vOo6no2yvRYW\_header-image-smalliphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+<figure><img src="../../.gitbook/assets/jig-header-small.png" alt="Header with image - small" width="178"><figcaption><p>Header with image - small</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TtPV4N7FAxx1F2vm-lvSH\_header-image-mediumiphone13blueportrait.png" size="74" position="center" caption="Header with image" alt="Header with image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TtPV4N7FAxx1F2vm-lvSH\_header-image-mediumiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+<figure><img src="../../.gitbook/assets/jig-header-medium.png" alt="Header with image - medium" width="180"><figcaption><p>Header with image - medium</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
-This example shows a `component.jig-header` with property  `children: component.image` and the difference between the set heights.
+This example shows a `component.jig-header` with property `children: component.image` and the difference between the set heights.
 
-**Examples**: \
+**Examples**:\
 See the code samples using static data in GitHub for [small](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-image/jig-header-image-small.jigx) and [medium](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-image/jig-header-image-medium.jigx) headers.
 
 {% tabs %}
@@ -69,14 +69,14 @@ header:
 
 {% columns %}
 {% column %}
-&#x20;![Location in header](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cQZEvoQcr1J_SDuWosHd7-20250221-091813.png)&#x20;
+<figure><img src="../../.gitbook/assets/location-header.png" alt="Location in header"><figcaption><p>Location in header</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 This example shows a `component.jig-header` with property `children: component.location` and the difference between the set heights. Refer to the [location](location.md) component for additional location setup options.
 
-**Examples**: \
-See the code samples using static data in GitHub for [small](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/jig-header/static-data/jig-header-location/jig-header-location-small.jigx) and [medium](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-medium.jigx) headers.&#x20;
+**Examples**:\
+See the code samples using static data in GitHub for [small](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/jig-header/static-data/jig-header-location/jig-header-location-small.jigx) and [medium](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-medium.jigx) headers.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -112,8 +112,6 @@ header:
                   # Define the icon in the datasource.
                   icon: =@ctx.datasources.sites[0].icon
 ```
-
-
 {% endtab %}
 
 {% tab title="location-as-header(medium)" %}
@@ -176,17 +174,17 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/I2ErZFzeEDrRwupEWmysV\_cc-header-small.PNG" size="76" position="center" caption="Small - header with video player" alt="Header with video player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/I2ErZFzeEDrRwupEWmysV\_cc-header-small.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/CC-header-small.png" alt="Small - header with video player" width="188"><figcaption><p>Small - header with video player</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N468nPuSNoW9OEiZaf\_EW\_cc-header-medium.PNG" size="74" position="center" caption="Medium - header with video player" alt="Header with video player" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N468nPuSNoW9OEiZaf\_EW\_cc-header-medium.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}&#x20;
+<figure><img src="../../.gitbook/assets/CC-header-medium.png" alt="Medium - header with video player" width="188"><figcaption><p>Medium - header with video player</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 This example shows a `component.jig-header` with property `children: component.video-player.` and the difference between the set heights.
 
-**Examples**: \
+**Examples**:\
 See the code samples using static data in GitHub for [small](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-video-player/jig-header-videoplayer-small.jigx) and [medium](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-video-player/jig-header-videoplayer-medium.jigx) headers.
 
 {% tabs %}
@@ -225,11 +223,11 @@ header:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ffdFGQ8eLAPkrZ5vRK48-20250224-072301.png" size="70" position="center" caption="Jig header with an action" alt="Jig header with an action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2ffdFGQ8eLAPkrZ5vRK48-20250224-072301.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-jigheader-action-link.png" alt="Jig header with an action" width="188"><figcaption><p>Jig header with an action</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-This example shows a `component.jig-header` configured with an action. The action displays as a link in the top right corner of the header. Ensure the action is visible and not obscured by the header image or video. The `open-url` action is configured to open the Jigx website.&#x20;
+This example shows a `component.jig-header` configured with an action. The action displays as a link in the top right corner of the header. Ensure the action is visible and not obscured by the header image or video. The `open-url` action is configured to open the Jigx website.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -283,11 +281,11 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m2qCNX2Ka63cThTwIfJDO-20250210-134415.png" size="70" position="center" caption="Jig header with icon actions" alt="Jig header with icon actions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-m2qCNX2Ka63cThTwIfJDO-20250210-134415.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-jigheader-IconAction.png" alt="Jig header with icon actions" width="188"><figcaption><p>Jig header with icon actions</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-This example demonstrates a `component.jig-header` configured with three `open-url` actions, displayed as icons in the top right corner of the header. Styling is applied to two of the icons to ensure visibility. Make sure the actions are not obscured by the header image/video or the jig `title` when scrolling. The `open-url` actions open various Jigx websites.&#x20;
+This example demonstrates a `component.jig-header` configured with three `open-url` actions, displayed as icons in the top right corner of the header. Styling is applied to two of the icons to ensure visibility. Make sure the actions are not obscured by the header image/video or the jig `title` when scrolling. The `open-url` actions open various Jigx websites.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -368,9 +366,7 @@ The `jig-header` has no children (such as an image, location, or video player), 
 {% endcolumn %}
 
 {% column %}
-&#x20;![Jig-header action](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-es18hlzOsipHXjKwDCgMR-20250407-075200.png)&#x20;
-
-
+<figure><img src="../../.gitbook/assets/CC-headerAction-noChildren.PNG" alt="Jig-header action"><figcaption><p>Jig-header action</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

@@ -9,7 +9,7 @@ updatedAt: Wed Mar 05 2025 18:00:49 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column %}
-## Scenario
+### Scenario
 
 Get a list of emails for a user in Microsoft Graph using a GET REST function and displaying the emails in a list jig. Press on an email to view the content of the email.
 
@@ -21,7 +21,7 @@ Get a list of emails for a user in Microsoft Graph using a GET REST function and
 
 **Required OAuth scope** (least to most privilege):
 
-Mail.ReadBasic Mail.ReadWrite Mail.Read&#x20;
+Mail.ReadBasic Mail.ReadWrite Mail.Read
 {% endcolumn %}
 
 {% column %}

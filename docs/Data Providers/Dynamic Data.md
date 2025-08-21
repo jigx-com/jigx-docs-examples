@@ -16,10 +16,10 @@ Jigx Dynamic Data is a built-in database used to create, read, update, and delet
 
 The following examples with code snippets are provided in this section:
 
-* [Creating Dynamic Data](<Dynamic Data/Creating Dynamic Data.md>)
-* [Reading Dynamic Data](<Dynamic Data/Reading Dynamic Data.md>)
-* [Updating Dynamic Data](<Dynamic Data/Updating Dynamic Data.md>)
-* [Deleting Dynamic Data](<Dynamic Data/Deleting Dynamic Data.md>)
+* [Creating Dynamic Data](broken-reference)
+* [Reading Dynamic Data](broken-reference)
+* [Updating Dynamic Data](broken-reference)
+* [Deleting Dynamic Data](broken-reference)
 
 {% hint style="warning" %}
 Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K.

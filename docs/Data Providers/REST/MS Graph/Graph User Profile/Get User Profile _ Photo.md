@@ -9,7 +9,7 @@ updatedAt: Wed Feb 12 2025 13:35:58 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column width="50%" %}
-## Scenario
+### Scenario
 
 Gets a user's profile and photo in Microsoft Graph using Jigx functions, and displays the profile and photo on a jig using the `image` and `entity` component.
 

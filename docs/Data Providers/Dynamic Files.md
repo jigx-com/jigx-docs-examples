@@ -4,7 +4,7 @@ Dynamic Files extend Jigx's Dynamic Data entities to include file references, al
 
 The following examples with code snippets are provided in this section:
 
-- [Upload a file](<./Dynamic Files/Upload a file.md>)
-- [Download a file](<./Dynamic Files/Download a file.md>)
-- [Delete a file](<./Dynamic Files/Delete a file.md>)
-- [Status of a file](<./Dynamic Files/Status of a file.md>)
+* [Upload a file](broken-reference)
+* [Download a file](broken-reference)
+* [Delete a file](broken-reference)
+* [Status of a file](<Dynamic Files/Status of a file.md>)

@@ -30,8 +30,6 @@ markers:
    data: |
       =@ctx.datasources.jobs.{"lng": $number($.lng), "lat": $number($.lat)}
 ```
-
-
 {% endtab %}
 
 {% tab title="path-multi-points" %}
@@ -72,12 +70,12 @@ markers:
 {% column %}
 An interactive map displaying the location using the address.
 
-**Examples**: \
-See the example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-with-address.jigx). \
+**Examples**:\
+See the example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-with-address.jigx).\
 See the example using dynamic data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/dynamic-data/location-with-address-dynamic.jigx).
 
-**Datasource**: \
-See the full datasource for static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-with-address.jigx). \
+**Datasource**:\
+See the full datasource for static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-with-address.jigx).\
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/location.jigx).
 {% endcolumn %}
 {% endcolumns %}
@@ -238,10 +236,10 @@ datasources:
 {% column %}
 An interactive map displaying multiple points.
 
-**Examples**: \
+**Examples**:\
 See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-multiple-markers.jigx).
 
-**Datasources**: \
+**Datasources**:\
 See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-multiple-markers.jigx).
 {% endcolumn %}
 {% endcolumns %}
@@ -300,10 +298,10 @@ datasources:
 {% column %}
 An interactive map displaying a path with three points, a starting point, middle and end point, with a marker-item at each point.
 
-**Examples**: \
+**Examples**:\
 See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-path.jigx).
 
-**Datasources**: \
+**Datasources**:\
 See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-path.jigx).
 {% endcolumn %}
 {% endcolumns %}
@@ -453,14 +451,14 @@ datasources:
 
 {% columns %}
 {% column %}
-&#x20;In this example the `component.location` is used in the `jig.fullscreen` ensuring the map covers the entire jig.
+In this example the `component.location` is used in the `jig.fullscreen` ensuring the map covers the entire jig.
 
 **Examples**: See the example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/dynamic-data/location-fullscreen-dynamic.jigx).
 
 **Datasource**: See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/location.jigx).
 
 {% hint style="success" %}
-Using the code below requires data in the database, the _jigx.sample_ solution has the data provided for location. You can use the location.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/location.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.&#x20;
+Using the code below requires data in the database, the _jigx.sample_ solution has the data provided for location. You can use the location.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/location.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
 {% endhint %}
 {% endcolumn %}
 
@@ -525,13 +523,13 @@ datasources:
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/location-header.png" alt="Location in header"><figcaption><p>Location in header</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/location-header (1).png" alt="Location in header"><figcaption><p>Location in header</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 The location component can be used as a `small` or `medium` size header in a jig. In the screenshot the difference between the set heights is shown.
 
-**Examples:** See the code samples using static data in GitHub for [small](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-small.jigx) and [medium](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-medium.jigx) headers.&#x20;
+**Examples:** See the code samples using static data in GitHub for [small](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-small.jigx) and [medium](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-medium.jigx) headers.
 {% endcolumn %}
 {% endcolumns %}
 

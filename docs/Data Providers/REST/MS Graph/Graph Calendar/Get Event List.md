@@ -9,7 +9,7 @@ updatedAt: Wed Mar 05 2025 17:58:07 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column %}
-## Scenario
+### Scenario
 
 Get a list of the next week's events on a user's calendar from Microsoft Graph using GET REST functions and show the events in a calendar jig.
 
@@ -26,7 +26,7 @@ Calendars.Read Calendars.ReadWrite
 
 **Related Sample**
 
-This example uses [Get Calendar List](<Get Calendar List.md>) to provide the calendar input to the view-calendar-events jig and navigates to [Get Event Item](<Get Event Item.md>) when the event item is pressed.&#x20;
+This example uses [Get Calendar List](<Get Calendar List.md>) to provide the calendar input to the view-calendar-events jig and navigates to [Get Event Item](<Get Event Item.md>) when the event item is pressed.
 {% endcolumn %}
 
 {% column %}
