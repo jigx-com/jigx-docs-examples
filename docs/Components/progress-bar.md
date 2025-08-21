@@ -6,7 +6,7 @@
 {% endcolumn %}
 
 {% column %}
-&#x20;![Progress-bar](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/C5arwmcV2kwcKSeQFcphN_pb-dynmicl.PNG)
+<figure><img src="../../.gitbook/assets/PB-DynmicL.PNG" alt="Progress-bar"><figcaption><p>Progress-bar</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -31,7 +31,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eA95E59FNaw43UiZXEPXA\_pbar-titlesubtitlel.PNG" size="80" position="center" caption="Title & Subtitle configurations" alt="Title & Subtitle configurations" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eA95E59FNaw43UiZXEPXA\_pbar-titlesubtitlel.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/PBar-titleSubtitleL.PNG" alt="Title &#x26; Subtitle configurations" width="188"><figcaption><p>Title &#x26; Subtitle configurations</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -113,7 +113,7 @@ You can use the `helperText` property to provide a tip or hint to help users rea
 {% endcolumn %}
 
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5Z-7WeMNUx7rKF8-wPlIq\_pbar-hetextl.PNG" size="80" position="center" caption="Error and Helper text" alt="Error and Helper text" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5Z-7WeMNUx7rKF8-wPlIq\_pbar-hetextl.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/PBar-HETextL.PNG" alt="Error and Helper text" width="188"><figcaption><p>Error and Helper text</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -159,7 +159,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoNceOmjQ1FfCmWR2Wf3b\_pbar-colorl.PNG" size="80" position="center" caption="Progress bar colors" alt="Progress bar colors" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoNceOmjQ1FfCmWR2Wf3b\_pbar-colorl.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/PBar-colorL.PNG" alt="Progress bar colors" width="188"><figcaption><p>Progress bar colors</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -220,7 +220,7 @@ The progress-bar can be sized from a thin (`tiny`) to extra thick (`extra-large`
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mNOMbWsZNebw\_4O9Ws--4\_pb-sizel.PNG" size="80" position="center" caption="Progess-bar sizes" alt="Progess-bar sizes" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mNOMbWsZNebw\_4O9Ws--4\_pb-sizel.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} &#x20;
+<figure><img src="../../.gitbook/assets/PB-sizeL.PNG" alt="Progess-bar sizes" width="188"><figcaption><p>Progess-bar sizes</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -278,11 +278,11 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rW68pWlspMXujseDLvuO-\_cc-progbar-steps.PNG" size="80" position="center" caption="Progress-bar with various steps" alt="Progress-bar with various steps" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rW68pWlspMXujseDLvuO-\_cc-progbar-steps.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/PB-stepsL.PNG" alt="Progress-bar with various steps" width="188"><figcaption><p>Progress-bar with various steps</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-The progress-bar can be shown as a continous bar or broken up into segments. Use the `step` property to determine the number of segments required. The larger the number of steps, the smaller the segments as shown in the bars on the left.
+The progress-bar can be shown as a continuous bar or broken up into segments. Use the `step` property to determine the number of segments required. The larger the number of steps, the smaller the segments as shown in the bars on the left.
 
 **Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-steps.jigx).
 {% endcolumn %}
@@ -346,7 +346,7 @@ In this example the `onPress` property uses the `action.set-state` set to `true`
 {% endcolumn %}
 
 {% column %}
-&#x20;![Progress-bar onPress](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/y_-JkPxb7zc5NSbZ4gtyK_pb-onpressl.PNG)&#x20;
+<figure><img src="../../.gitbook/assets/PB-onPressL.PNG" alt="Progress-bar onPress"><figcaption><p>Progress-bar onPress</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -387,7 +387,7 @@ onRefresh:
 
 {% columns %}
 {% column %}
-&#x20;![Dynamic progress-bar](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/JWj45CBY9iXf6dxxHo2_J_pb-dynmicl.PNG)
+<figure><img src="../../.gitbook/assets/PB-DynmicL (1).PNG" alt="Dynamic progress-bar" width="375"><figcaption><p>Dynamic progress-bar</p></figcaption></figure>
 
 
 {% endcolumn %}
