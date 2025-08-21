@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Jigx Examples](docs/Overview.md)
+* [Jigx Examples](README.md)
   * [Setting up your solution](<docs/Overview/Setting up your solution.md>)
   * [Data Providers](<docs/Data Providers.md>)
     * [Dynamic Data](<docs/Data Providers/Dynamic Data.md>)
