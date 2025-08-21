@@ -7,7 +7,7 @@ This component enhances user experience by providing a quick and intuitive way t
 * Keeping the number of segments minimal for readability
 * Providing immediate visual feedback when a selection is made
 
-### Configuration options
+## Configuration options
 
 Some properties are common to all components, see [Common component properties](https://docs.jigx.com/examples/common-component-properties) for a list and their configuration options.
 
@@ -17,13 +17,13 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="218.76953125">State Configuration</th><th width="148.5390625">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>value</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
-### Examples and code snippets
+## Examples and code snippets
 
-#### Basic segmented-control
+### Basic segmented-control
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pHtkDiH6Gt4WbxB3RqjTn-20250210-123111.gif" size="70" position="center" caption="Segmented-controls" alt="Segmented-controls" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pHtkDiH6Gt4WbxB3RqjTn-20250210-123111.gif" width="957" height="1920" darkWidth="957" darkHeight="1920"}
+<figure><img src="../../.gitbook/assets/segmented-control-basic.gif" alt="Segmented-controls" width="188"><figcaption><p>Segmented-controls</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -69,11 +69,11 @@ children:
 ```
 {% endcode %}
 
-#### Segmented-control with a datasource
+### Segmented-control with a datasource
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iP2xku1EYLHyeMpFIT6kY-20250210-123945.gif" size="70" position="center" caption="Segment-control with a datasource" alt="Segment-control with a datasource" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iP2xku1EYLHyeMpFIT6kY-20250210-123945.gif" width="957" height="1920" darkWidth="957" darkHeight="1920"}&#x20;
+<figure><img src="../../.gitbook/assets/segmented-control-datasource.gif" alt="Segment-control with a datasource" width="188"><figcaption><p>Segment-control with a datasource</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -135,11 +135,11 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-#### Disabled segmented-control
+### Disabled segmented-control
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-tKWjaJY0548jX\_q1W9VxD-20250210-124219.png" size="70" position="center" caption="Disabled segmented-controls" alt="Disabled segmented-controls" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-tKWjaJY0548jX\_q1W9VxD-20250210-124219.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/segmetned-control-disabled.png" alt="Disabled segmented-controls" width="188"><figcaption><p>Disabled segmented-controls</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -175,11 +175,11 @@ children:
 ```
 {% endcode %}
 
-#### Preselected segmented-control
+### Preselected segmented-control
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MCjH8aCTNSekHLyZVyObM-20250210-124737.gif" size="70" position="center" caption="Segmented-controls" alt="Segmented-controls" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MCjH8aCTNSekHLyZVyObM-20250210-124737.gif" width="957" height="1920" darkWidth="957" darkHeight="1920"}
+<figure><img src="../../.gitbook/assets/segmented-control-preselected.gif" alt="Segmented-controls" width="188"><figcaption><p>Segmented-controls</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -221,7 +221,7 @@ children:
                 value: =@ctx.components.default-segment.state.value    
 </code></pre>
 
-#### Segmented-control using state
+### Segmented-control using state
 
 {% columns %}
 {% column %}
@@ -231,7 +231,7 @@ This example demonstrates how to configure the `entity-field` and `form` compone
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bh2ApSeAzFg1cn7wN\_ef4-20250331-134936.gif" size="66" position="center" caption="Segmented-control using state" alt="Segmented-control using state" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bh2ApSeAzFg1cn7wN\_ef4-20250331-134936.gif" width="536" height="1080" darkWidth="536" darkHeight="1080"}
+<figure><img src="../../.gitbook/assets/segmented-control-state.gif" alt="Segmented-control using state" width="134"><figcaption><p>Segmented-control using state</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
