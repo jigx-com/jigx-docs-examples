@@ -2,18 +2,18 @@
 
 {% columns %}
 {% column %}
-&#x20;Number fields in forms simplify the process of entering numerical information. They feature built-in validation to ensure only valid numbers are input. This optimizes user experience by automatically presenting a numeric keypad, facilitating quicker and more accurate data entry.
+Number fields in forms simplify the process of entering numerical information. They feature built-in validation to ensure only valid numbers are input. This optimizes user experience by automatically presenting a numeric keypad, facilitating quicker and more accurate data entry.
 
-The component can only be used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](../form.md) component for an input of a numeric value.&#x20;
+The component can only be used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](../form.md) component for an input of a numeric value.
 {% endcolumn %}
 
 {% column %}
-Image\[]{alt="Number Field Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KwkJpkkJwrkIiXLBfWABo\_number.png" size="84" caption="Number Field Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KwkJpkkJwrkIiXLBfWABo\_number.png" width="800" height="495" darkWidth="800" darkHeight="495"}&#x20;
+<figure><img src="../../../.gitbook/assets/cc-number-intro.png" alt="v"><figcaption><p>Number Field Preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 {% hint style="info" %}
-The `number-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.&#x20;
+The `number-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 {% endhint %}
 
 ## Configuration options
@@ -32,7 +32,7 @@ Some properties are common to all components, see [Common component properties](
 
 ### Number Field on Form
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZehuKgdayEDjBvecia7S7\_cc-numberfield.png" size="82" position="center" caption="Form with number field" alt="Form with number fields" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZehuKgdayEDjBvecia7S7\_cc-numberfield.png" width="800" height="805" darkWidth="800" darkHeight="805"}
+<figure><img src="../../../.gitbook/assets/CC-numberField.png" alt="Form with number fields" width="375"><figcaption><p>Form with number fields</p></figcaption></figure>
 
 The form use multiple `number-fields` property for numeric values with the following optional properties set:
 

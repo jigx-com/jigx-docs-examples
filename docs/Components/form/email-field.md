@@ -2,20 +2,18 @@
 
 {% columns %}
 {% column %}
-&#x20;Email fields in forms provide a user-friendly way to collect email addresses, incorporating validation to ensure data is entered correctly.
+Email fields in forms provide a user-friendly way to collect email addresses, incorporating validation to ensure data is entered correctly.
 
-The `email-field` component can only be used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](../form.md) component for capturing an email address.&#x20;
+The `email-field` component can only be used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](../form.md) component for capturing an email address.
 {% endcolumn %}
 
 {% column %}
-&#x20;![Email Field Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dSjO63W1F7TwFYsE8SIUK_cc-emailfield.png)
-
-
+<figure><img src="../../../.gitbook/assets/cc-email-intro.png" alt="Email Field Preview"><figcaption><p>Email Field Preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 {% hint style="info" %}
-The `email-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.&#x20;
+The `email-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 {% endhint %}
 
 ## Configuration options
@@ -36,7 +34,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dRoZqXtjnoY-wVwNMAaEM\_cc-email-fieldsample.PNG" size="80" position="center" caption="Form with an email field" alt="Form with an email field" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dRoZqXtjnoY-wVwNMAaEM\_cc-email-fieldsample.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}&#x20;
+<figure><img src="../../../.gitbook/assets/CC-email-fieldSample.PNG" alt="Form with an email field" width="188"><figcaption><p>Form with an email field</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -44,7 +42,7 @@ The example below displays a form input for the email address with an `icon` and
 
 **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/email-field/static-data/email-field.jigx). \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/email-field/static-data/email-field.jigx).\
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/email-field/dynamic-data/email-field-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}

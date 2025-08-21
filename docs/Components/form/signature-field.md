@@ -6,14 +6,12 @@ Simply draw your signature on your mobile screen to approve and proceed. This co
 {% endcolumn %}
 
 {% column %}
-&#x20;![Signature Field Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xFXGhidiImIpwwIhQy4kU_signature.png)&#x20;
-
-
+<figure><img src="../../../.gitbook/assets/cc-signature-intro.png" alt="Signature Field Preview"><figcaption><p>Signature Field Preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 {% hint style="info" %}
-The `signature-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.&#x20;
+The `signature-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 {% endhint %}
 
 ## Configuration options
@@ -34,7 +32,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;![Form signature](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tCKu2RtpBmPBLyNyCEbL1_ofk8slzh8-djfwqstadycsignature-field.png)&#x20;
+<figure><img src="../../../.gitbook/assets/cc-signature.png" alt="Form signature" width="188"><figcaption><p>Form signature</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -42,7 +40,7 @@ The widget displays the signature input. After clicking on it, the user can crea
 
 **Example:**
 
-See the full example in [GitHub](signature-field.md).&#x20;
+See the full example in [GitHub](signature-field.md).
 {% endcolumn %}
 {% endcolumns %}
 

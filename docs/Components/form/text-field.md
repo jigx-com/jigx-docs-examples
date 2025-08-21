@@ -2,16 +2,16 @@
 
 {% columns %}
 {% column %}
-The text field is a versatile component, allowing many variations and configurations. It allows users to enter letters, numbers, and special signs on a single or multiple lines.&#x20;
+The text field is a versatile component, allowing many variations and configurations. It allows users to enter letters, numbers, and special signs on a single or multiple lines.
 {% endcolumn %}
 
 {% column %}
-Image\[]{alt="Text Field Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zbpFBEDL54rUVnRZH8gFa\_text.png" size="76" caption="Text Field Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zbpFBEDL54rUVnRZH8gFa\_text.png" width="800" height="495" darkWidth="800" darkHeight="495"}
+<figure><img src="../../../.gitbook/assets/cc-text-field-intro.png" alt="Text Field Preview"><figcaption><p>Text Field Preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 {% hint style="info" %}
-The `text-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.&#x20;
+The `text-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 {% endhint %}
 
 ## Configuration options
@@ -34,7 +34,7 @@ Some properties are common to all components, see [Common component properties](
 
 ### Text fields on a Form
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2QrorTKAQD9Zq\_WBOyoYt\_cc-text-field.png" size="80" position="center" caption="Form with text-fields" alt="Form with text-fields" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2QrorTKAQD9Zq\_WBOyoYt\_cc-text-field.png" width="800" height="791" darkWidth="800" darkHeight="791"}
+<figure><img src="../../../.gitbook/assets/CC-text-field.png" alt="cc-text-field.png" width="375"><figcaption><p>cc-text-field.png</p></figcaption></figure>
 
 In this example five text-fields are used, namely:
 
@@ -46,7 +46,7 @@ In this example five text-fields are used, namely:
 
 **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/text-field/static-data/text-field.jigx). \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/text-field/static-data/text-field.jigx).\
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/text-field/dynamic-data/text-field-dynamic.jigx).
 
 {% tabs %}
@@ -154,7 +154,7 @@ Setting certain information in your device, for example in _Settings_ on iPhone,
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-IBEOlcBj16-e73Qgk9MdA-20240822-073444.gif" size="90" position="center" caption="Autofill text fields" alt="Autofill text fields" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-IBEOlcBj16-e73Qgk9MdA-20240822-073444.gif" width="648" height="1300" darkWidth="648" darkHeight="1300"}&#x20;
+<figure><img src="../../../.gitbook/assets/cc-textfield-auto.gif" alt="Autofill text fields" width="162"><figcaption><p>Autofill text fields</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

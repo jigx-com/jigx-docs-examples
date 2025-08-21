@@ -4,16 +4,16 @@
 {% column %}
 Checkboxes on mobile app forms offer a straightforward way to make selections, especially for multiple options, enhancing usability and interaction.
 
-The component is used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](../form.md) component and supports single- and multiple-selection options. The checkbox's initial checkbox status and required checkbox status can be set.&#x20;
+The component is used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](../form.md) component and supports single- and multiple-selection options. The checkbox's initial checkbox status and required checkbox status can be set.
 {% endcolumn %}
 
 {% column %}
-Image\[]{alt="Checkbox preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/C108AXi\_xo5aRgmBnjo\_9\_checkboxes.png" size="90" caption="Checkbox preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/C108AXi\_xo5aRgmBnjo\_9\_checkboxes.png" width="800" height="348" darkWidth="800" darkHeight="348"}
+<figure><img src="../../../.gitbook/assets/cc-checkbox-into.png" alt="Checkbox preview"><figcaption><p>Checkbox preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 {% hint style="info" %}
-The `checkbox` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.&#x20;
+The `checkbox` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 {% endhint %}
 
 ## Configuration options
@@ -32,7 +32,7 @@ Some properties are common to all components, see [Common component properties](
 <table><thead><tr><th width="211.01953125">State Configuration</th><th width="143.390625">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>value</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
 {% hint style="info" %}
-There's also the option to configure checkboxes as part of [entity-field](../entity/entity-field.md) or [list-item](../list/list-item.md).&#x20;
+There's also the option to configure checkboxes as part of [entity-field](../entity/entity-field.md) or [list-item](../list/list-item.md).
 {% endhint %}
 
 ## Examples and code snippets
@@ -41,14 +41,14 @@ There's also the option to configure checkboxes as part of [entity-field](../ent
 
 {% columns %}
 {% column %}
-&#x20;![Checkbox on a form](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IJK_lSaGyt3T1vku2VDAY_mdjjmgfkxmndvtxfd8ru5checkbox-yes-no.png)&#x20;
+<figure><img src="../../../.gitbook/assets/checkbox-yesno.png" alt="Checkbox on a form" width="188"><figcaption><p>Checkbox on a form</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 The component displays a yes/no question about the agreement to the Terms and Conditions. The option is preselected as the agreement is in our case required.
 
-**Examples:** \
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/checkbox/static-data/yes-no-question/checkbox-yes-no-question.jigx). \
+**Examples:**\
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/checkbox/static-data/yes-no-question/checkbox-yes-no-question.jigx).\
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/checkbox/dynamic-data/yes-no-question/checkbox-yes-no-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
@@ -110,7 +110,7 @@ datasources:
 
 {% columns %}
 {% column %}
-&#x20;![Multiple checkbox selection](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/MCeJFm_9bW3uwfB47U1Uk_ikqrb22eirxfob4os15bcheckbox-multi.PNG)&#x20;
+<figure><img src="../../../.gitbook/assets/checkbox-multi.png" alt="Multiple checkbox selection" width="188"><figcaption><p>Multiple checkbox selection</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -118,7 +118,7 @@ This example displays a question you can answer by selecting multiple checkboxes
 
 **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/checkbox/static-data/multiple-selection/checkbox-multiple-selection.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/checkbox/dynamic-data/multiple-selection/checkbox-multiple-dynamic.jigx)&#x20;
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/checkbox/static-data/multiple-selection/checkbox-multiple-selection.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/checkbox/dynamic-data/multiple-selection/checkbox-multiple-dynamic.jigx)
 {% endcolumn %}
 {% endcolumns %}
 

@@ -2,7 +2,7 @@
 
 An interactive image has clickable links that can be used in various ways. For instance, it can be clicked on to reveal information about a specific point, indicate a selection, such as a booking, or use it as a multi-selection. This is typically used when the information you need to convey is better presented visually than in text.
 
-![Interactive images](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OZ2ahxGqIKn7vTYf5BExY_cc-interactiveimage.png)
+<figure><img src="../../.gitbook/assets/CC-interactiveImage.png" alt="Interactive images" width="563"><figcaption><p>Interactive images</p></figcaption></figure>
 
 ## Configuration options
 

@@ -20,22 +20,22 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8\_rest-1iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CMhbVlUlzyLfHdBw3tyE8\_rest-1iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+<figure><img src="../../../.gitbook/assets/cc-inrtactiveItem-1.png" alt="Table booking" width="176"><figcaption><p>Table booking</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj\_WAUzvJz1S\_rest-2iphone13blueportrait.png" size="80" position="center" caption="Table booking" alt="Table booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/isZZRxFP0Mj\_WAUzvJz1S\_rest-2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}&#x20;
+<figure><img src="../../../.gitbook/assets/cc-interactiveitem2.png" alt="Table booking" width="188"><figcaption><p>Table booking</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 The example shows tables in a restaurant that are available for booking, the `pointColor` property is set to blue to show availabilty. Once a table is reserved the `icon` and `color` property are set to show that the tables are reserved and cannot be booked.
 
-**Examples:** \
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/static-data/interactive-image-rest-sd.jigx) \
+**Examples:**\
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/static-data/interactive-image-rest-sd.jigx)\
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/dynamic-data/interactive-image-rest-dd.jigx)
 
-**Datasource:** \
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/interactive-image/floorplan-restaurant-static.jigx) \
+**Datasource:**\
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/interactive-image/floorplan-restaurant-static.jigx)\
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/interactive-image/floorplan-restaurant-dynamic.jigx)
 
 {% tabs %}
@@ -258,11 +258,11 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ\_interactive-image-1iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2s0Sja4waFBBBLOPViRiQ\_interactive-image-1iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+<figure><img src="../../../.gitbook/assets/cc-interactive-office-1.png" alt="Office desk booking" width="188"><figcaption><p>Office desk booking</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ\_HVAl1AUyX\_interactive-image-2iphone13blueportrait.png" size="80" position="center" caption="Office desk booking" alt="Office desk booking" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQ3a9vG8LXZ\_HVAl1AUyX\_interactive-image-2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+<figure><img src="../../../.gitbook/assets/cc-interactive-office-2.png" alt="Office desk booking" width="176"><figcaption><p>Office desk booking</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -270,7 +270,7 @@ The example shows how hot seats and meeting rooms at an office can be booked. Th
 
 **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/static-data/interactive-image-office-sd.jigx)&#x20;
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/interactive-image/static-data/interactive-image-office-sd.jigx)
 
 {% tabs %}
 {% tab title="interactive-image (static)" %}
