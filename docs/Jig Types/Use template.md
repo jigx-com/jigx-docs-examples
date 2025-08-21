@@ -13,6 +13,16 @@ Use the scenario templates to create a complete solution, for example, a contact
 
 For steps on how to use jig templates see [Jig Templates](<Use template.md>) .
 
-&#x20;![Jig templates](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/y6iCDCC0XZxJJfEOULU_Z_templatejig.png)&#x20;
+{% columns %}
+{% column %}
+<figure><img src="../../.gitbook/assets/templatejig.png" alt="Jig templates"><figcaption><p>Jig templates</p></figcaption></figure>
+{% endcolumn %}
 
-&#x20;![Jig template option](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5Jz4WQO_dTc9mhrz7144W_templatesjigcode.png)&#x20;
+{% column %}
+<figure><img src="../../.gitbook/assets/TemplatesJigCode.png" alt="Jig template options" width="563"><figcaption><p>Jig template options</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
+
+&#x20;&#x20;
+
+&#x20;&#x20;

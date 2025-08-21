@@ -22,8 +22,6 @@ Some properties are common to all components, see [Common component properties](
         - latitude: 40.76479429122513
           longitude: -73.97429291692742 
 ```
-
-
 {% endtab %}
 
 {% tab title="markers-datasource" %}
@@ -68,7 +66,7 @@ markers:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UFZdb7OyH1n4qiLOUrfKR-20250221-065903.png" size="80" position="center" caption="Location from address" alt="Location from address" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UFZdb7OyH1n4qiLOUrfKR-20250221-065903.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/location-address.png" alt="Location from address" width="188"><figcaption><p>Location from address</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -171,7 +169,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SNmxyLzQ0Z2t6OnyCEYDv-20250221-075843.png" size="80" position="center" caption="Address - Latitude & Longitude" alt="Address - Latitude & Longitude" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SNmxyLzQ0Z2t6OnyCEYDv-20250221-075843.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/location-lat-long.png" alt="Address - Latitude &#x26; Longitude" width="188"><figcaption><p>Address - Latitude &#x26; Longitude</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -234,7 +232,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_G08LkK\_JYJE7lY18vhAQ-20250221-073344.png" size="80" position="center" caption="Multiple markers" alt="Multiple markers" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_G08LkK\_JYJE7lY18vhAQ-20250221-073344.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/location-multiple-markers.png" alt="Multiple markers" width="188"><figcaption><p>Multiple markers</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -296,7 +294,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HyprtOZYo43vA857u8iYz-20250221-074256.png" size="80" position="center" caption="Location paths" alt="Location paths" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HyprtOZYo43vA857u8iYz-20250221-074256.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+<figure><img src="../../.gitbook/assets/location-paths.png" alt="Location paths" width="188"><figcaption><p>Location paths</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -397,7 +395,7 @@ This example demonstrates how to add a circular `radius` around the specified lo
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cDA1fuYtVPJqgPh81VW6l-20250226-085626.png" size="66" position="center" caption="Location with a radius" alt="Location with a radius" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cDA1fuYtVPJqgPh81VW6l-20250226-085626.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/location-radius.png" alt="Location with a radius" width="188"><figcaption><p>Location with a radius</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -467,7 +465,7 @@ Using the code below requires data in the database, the _jigx.sample_ solution h
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RV6o93L\_kcfzE1pfggkwo-20250221-082705.png" size="68" position="center" caption="Fullscreen location" alt="Fullscreen location" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RV6o93L\_kcfzE1pfggkwo-20250221-082705.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/location-fullscreen.png" alt="Fullscreen location" width="188"><figcaption><p>Fullscreen location</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -527,7 +525,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cQZEvoQcr1J\_SDuWosHd7-20250221-091813.png" size="98" position="center" caption="Location in header" alt="Location in header" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cQZEvoQcr1J\_SDuWosHd7-20250221-091813.png" width="800" height="788" darkWidth="800" darkHeight="788"}
+<figure><img src="../../.gitbook/assets/location-header.png" alt="Location in header"><figcaption><p>Location in header</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
