@@ -6,7 +6,7 @@ The `jig.full-screen` allows you to configure a component that covers the entire
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sMnc2OSlftv\_\_5xUbT0lS-20250221-132107.png" size="74" position="center" caption="Location in full screen" alt="Location in full screen" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sMnc2OSlftv\_\_5xUbT0lS-20250221-132107.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/jig.fullscreen.png" alt="Location in full screen" width="188"><figcaption><p>Location in full screen</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -31,11 +31,11 @@ The `jig.full-screen` can be configured in the following way in Jigx Builder.
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sMnc2OSlftv\_\_5xUbT0lS-20250221-132107.png" size="80" position="center" caption="Location in full screen" alt="Location in full screen" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sMnc2OSlftv\_\_5xUbT0lS-20250221-132107.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/jig.fullscreen.png" alt="Full screen jig" width="188"><figcaption><p>Full screen jig</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-In this example the location to the Seattle Aquarium is shown in full screen using jigtype `jig.full-screen`, `component.location` and Dynamic Data datasource called address.
+In this example the location to the Seattle Aquarium is shown in full screen using jig type `jig.full-screen`, `component.location` and Dynamic Data datasource called address.
 
 Refer to the [location](../Components/location.md) component for additional location setup options.
 

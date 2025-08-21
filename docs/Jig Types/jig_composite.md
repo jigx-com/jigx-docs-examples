@@ -6,7 +6,7 @@ The composite jig is a jig made up of several parts or elements. In this case, a
 {% endcolumn %}
 
 {% column %}
-Image\[]{alt="Jig Composite Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ\_xkWBnn-yCDc\_composite.png" size="90" caption="Jig Composite Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7guWK3dQZ\_xkWBnn-yCDc\_composite.png" width="800" height="996" darkWidth="800" darkHeight="996"}&#x20;
+<figure><img src="../../.gitbook/assets/composite.png" alt="Jig Composite Preview" width="188"><figcaption><p>Jig Composite Preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -86,7 +86,7 @@ The code below is an extract from the full _jigx-samples_ solution. The code sni
 
 {% columns %}
 {% column %}
-&#x20;![Composite jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CdvFnDVAGN7W5UQc00w_N_brj8ppzfa99c5cmqx-wsucomposite-withoutiphone13blueportrait.png)
+<figure><img src="../../.gitbook/assets/composite-example1.png" alt="Basic Composite jig " width="188"><figcaption><p>Basic Composite jig</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -94,7 +94,7 @@ This example shows the simplest way in which a `Composite Jig` can be set up - r
 
 **Examples:**
 
-See the compsite jig code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/jig-composite.jigx%22). See the [location](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/location/static-data/location-with-address.jigx) code and [country list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/country-list-sd.jigx) code examples in GitHub. See the static country datasource code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/country-data-static.jigx). See the index.jigx code below to add the jig to the Home Hub.
+See the composite jig code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/jig-composite.jigx%22). See the [location](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/location/static-data/location-with-address.jigx) code and [country list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/country-list-sd.jigx) code examples in GitHub. See the static country datasource code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/country-data-static.jigx). See the index.jigx code below to add the jig to the Home Hub.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -267,15 +267,13 @@ This example shows how a Composite jig can be used to only display certain data 
 
 {% columns %}
 {% column %}
-&#x20;![Composite jig with input](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/11o2jArG-3bPKeQT7w0pi_comiphone13blueportrait.png)
+<figure><img src="../../.gitbook/assets/composite-inputs.png" alt="Composite jig with inputs" width="188"><figcaption><p>Composite jig with inputs</p></figcaption></figure>
 
 
 {% endcolumn %}
 
 {% column %}
-&#x20;![Composite jig with input](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8ycT7LBXUDhtkDoz8pdUc_compiphone13blueportrait.png)
-
-
+<figure><img src="../../.gitbook/assets/composite-inputs2.png" alt="composite with inputs" width="188"><figcaption><p>Composite with inputs</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

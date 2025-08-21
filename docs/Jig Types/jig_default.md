@@ -11,9 +11,7 @@ Type `jig.default` is the most versatile jig allowing you to create a jig with v
 {% endcolumn %}
 
 {% column %}
-&#x20;![Jig Default Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gQ4hbnjxlyTp0AqHB3Abz_default.png)
-
-
+<figure><img src="../../.gitbook/assets/Basicdefault.png" alt="Default jig" width="188"><figcaption><p>Default jig</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -37,9 +35,7 @@ The code below is an extract from the full _jigx-samples_ solution. The code sni
 
 {% columns %}
 {% column %}
-&#x20;![Form jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9eZFxhRcmQLZppDM0sY_1_def1iphone13blueportrait.png)
-
-
+<figure><img src="../../.gitbook/assets/default-form.png" alt="jig default with a form" width="188"><figcaption><p>Jig default with a form</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -169,9 +165,7 @@ tabs:
 
 {% columns %}
 {% column %}
-&#x20;![Default jig as a list](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/svSY3C1rR0c7fLoQ5vS5D_def4iphone13blueportrait.png)
-
-
+<figure><img src="../../.gitbook/assets/default-list.png" alt="Default jig with a list" width="188"><figcaption><p>Default jig with a list</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -292,7 +286,7 @@ tables:
 
 {% columns %}
 {% column %}
-&#x20;![Employee default jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ARfHxPHSMCnhUcRfMkpAI_def2iphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/default-default1.png" alt="Default employee jig" width="188"><figcaption><p>Default employee jig</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -477,7 +471,7 @@ tables:
 
 {% columns %}
 {% column %}
-&#x20;![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LJG6xDMsV4HJ4kjLn7DKK_def3iphone13blueportrait.png)
+<figure><img src="../../.gitbook/assets/default-jig2.png" alt="Default jig" width="188"><figcaption><p>Default jig</p></figcaption></figure>
 
 
 {% endcolumn %}

@@ -6,7 +6,7 @@ The calendar jig displays an agenda calendar view. `jig.calendar` contains data 
 {% endcolumn %}
 
 {% column %}
-Image\[]{alt="Jig Calendar Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/soEBniAbtE5Ia\_\_YoZDrw\_calendarmain.png" size="80" caption="Jig Calendar Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/soEBniAbtE5Ia\_\_YoZDrw\_calendarmain.png" width="800" height="1620" darkWidth="800" darkHeight="1620"}
+<figure><img src="../../.gitbook/assets/calendarmain.png" alt="Jig Calendar Preview" width="188"><figcaption><p>Jig Calendar Preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -34,21 +34,21 @@ In this example, we show the daily agenda, by tapping we can get the details abo
 
 {% columns %}
 {% column %}
-Image\[]{alt="Calendar jig events" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/leFvY-3-iDe8str7O0H6d\_calendarmain.png" size="86" caption="Calendar jig events" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/leFvY-3-iDe8str7O0H6d\_calendarmain.png" width="800" height="1620" darkWidth="800" darkHeight="1620"}
+<figure><img src="../../.gitbook/assets/calendarmain.png" alt="Calendar jig events" width="188"><figcaption><p>Calendar jig events</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{alt=" Event details" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SplwcoBsb4CiF3nXDBm9r\_calendareventdetail.png" size="86" caption=" Event details" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SplwcoBsb4CiF3nXDBm9r\_calendareventdetail.png" width="800" height="1620" darkWidth="800" darkHeight="1620"}
+<figure><img src="../../.gitbook/assets/CalendarEventDetail.png" alt="Event details" width="188"><figcaption><p>Event details</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 {% columns %}
 {% column %}
-Image\[]{alt="Meeting details & link" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IqXVVr7I3J7naESvgjZWZ\_calendareventdetail2.png" size="86" caption="Meeting details & link" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IqXVVr7I3J7naESvgjZWZ\_calendareventdetail2.png" width="800" height="1620" darkWidth="800" darkHeight="1620"}
+<figure><img src="../../.gitbook/assets/CalendarEventDetail2.png" alt="Meeting details &#x26; link" width="188"><figcaption><p>Meeting details &#x26; link</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{alt="Month with event markers" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g4RQkjSGj73R4dM3uJ5i8\_calendarfull.PNG" size="86" caption="Month with event markers" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g4RQkjSGj73R4dM3uJ5i8\_calendarfull.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/CalendarFull.png" alt="Month with event markers" width="188"><figcaption><p>Month with event markers</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -174,11 +174,11 @@ Only [Entity](../Preview/Entity.md) and [Web-view](../Preview/Web-view.md) are a
 
 {% columns %}
 {% column %}
-&#x20;![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/INfH1Ok873_PEOLp8N4zz_cal-prew.png)&#x20;
+<figure><img src="../../.gitbook/assets/calendar-preview.png" alt="Calendar preview" width="188"><figcaption><p>Calendar preview</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-&#x20;![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/I_AMevUwmBQnVwpdv2_GI_3uap-p2or6r5o9qqiec8eimg7960iphone13blueportrait.png)
+<figure><img src="../../.gitbook/assets/calendar-longpress.png" alt="Long-press on the event" width="188"><figcaption><p>Long-press on the event</p></figcaption></figure>
 
 
 {% endcolumn %}

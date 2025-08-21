@@ -4,11 +4,11 @@ The `jig.grid` enables you to create grid layouts in your app, organizing conten
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" size="52" position="center" caption="Custom Grid " alt="Custom Grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/JJ-Grid-auto.png" alt="Custom Grid" width="188"><figcaption><p>Custom Grid</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" size="52" position="center" caption="Auto Grid " alt="Auto Grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/JJ-grid-list.png" alt="Auto Grid" width="188"><figcaption><p>Auto Grid</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -42,7 +42,7 @@ The `jig.grid` has two available configuration options:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" size="60" position="center" caption="Custom Grid - Delivery " alt="Custom Grid - Delivery " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/JJ-Grid-auto.png" alt="Custom Grid - Delivery " width="188"><figcaption><p>Custom Grid - Delivery </p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -403,7 +403,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" size="60" position="center" caption="Auto Grid -Image Gallery " alt="Auto Grid -Image Gallery " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AA7qAcJ34IJsD36GlpeAm-20241205-080912.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/JJ-grid-list.png" alt="Auto Grid -Image Gallery" width="188"><figcaption><p>Auto Grid -Image Gallery</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -470,7 +470,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OKrZ-aPdkRLtb-y-wYsci-20250605-062154.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OKrZ-aPdkRLtb-y-wYsci-20250605-062154.png" size="66" width="1313" height="2676" position="center" caption="Default icons" alt="Default icons"}
+<figure><img src="../../.gitbook/assets/grid-default-icons.png" alt="Default icons" width="188"><figcaption><p>Default icons</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -774,7 +774,7 @@ In this example, the widget `icons` are configured in each jig, and the jig `tit
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-jF1rEGTotK6gMI6Yr3SMk-20250605-062807.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-jF1rEGTotK6gMI6Yr3SMk-20250605-062807.png" size="66" width="1313" height="2676" position="center" caption="Jig icons " alt="Jig icons "}
+<figure><img src="../../.gitbook/assets/grid-jig-icons.png" alt="Jig icons" width="188"><figcaption><p>Jig icons</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -1080,7 +1080,7 @@ actions:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pPENIb9VM7Y5emq97n8fa-20250605-074146.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pPENIb9VM7Y5emq97n8fa-20250605-074146.png" size="66" width="1313" height="2676" position="center" caption="Custom icons" alt="Custom icons"}
+<figure><img src="../../.gitbook/assets/grid-custom-icons.png" alt="Custom icons" width="188"><figcaption><p>Custom icons</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -1404,7 +1404,7 @@ This example demonstrates that setting the `title` property in the`component.wid
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Va-TuCoDex7BnFZwAaCZp-20250605-075319.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Va-TuCoDex7BnFZwAaCZp-20250605-075319.png" size="66" width="1313" height="2676" position="center" caption="Widgets with no titles" alt="Widgets with no titles"
+<figure><img src="../../.gitbook/assets/grid-custom-no-titles.png" alt="Widgets with no titles" width="188"><figcaption><p>Widgets with no titles</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -1726,7 +1726,7 @@ actions:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-W6\_bRSRg3PqeSS47-WjXp-20250605-080654.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-W6\_bRSRg3PqeSS47-WjXp-20250605-080654.png" size="66" width="1313" height="2676" position="center" caption="Custom titles" alt="Custom titles"}
+<figure><img src="../../.gitbook/assets/grid-custom-titles.png" alt="Custom titles" width="188"><figcaption><p>Custom titles</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -2064,7 +2064,7 @@ In this example, each `component.widget` is configured with an `onPress` event t
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ys9CzEMHsUELDhiBg37KY-20250605-092415.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ys9CzEMHsUELDhiBg37KY-20250605-092415.gif" size="66" width="681" height="1377" position="center" caption="Widget with onpress" alt="Widget with onpress"}
+<figure><img src="../../.gitbook/assets/grid-onpress.gif" alt="Widget with onpress" width="170"><figcaption><p>Widget with onpress</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

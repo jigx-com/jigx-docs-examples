@@ -11,7 +11,7 @@ The document jig type is used to display documents connected to your solution. T
 {% endcolumn %}
 
 {% column %}
-&#x20;![Jig Document Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/JLby7gG3QE9amF9juIjOB_document.png)
+<figure><img src="../../.gitbook/assets/jig-document-intro.png" alt="Document jig" width="188"><figcaption><p>Document jig</p></figcaption></figure>
 
 
 {% endcolumn %}
@@ -35,9 +35,7 @@ The code below is an extract from the full _jigx-samples_ solution. The code sni
 
 {% columns %}
 {% column %}
-&#x20;![PDF document jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1TFIe7dRl7t_4htbo1Zck_ksh-eh642hpw7uszthpedocument-pdfiphone13blueportrait.png)&#x20;
-
-
+<figure><img src="../../.gitbook/assets/document-pdf.png" alt="PDF document jig" width="188"><figcaption><p>PDF document jig</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -116,9 +114,7 @@ tabs:
 
 {% columns %}
 {% column %}
-&#x20;![HTML Document jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BvMH_mkZJ_idMyXtQlDVO_5zwbzha-ohev7arducssfdocument-htmliphone13blueportrait.png)&#x20;
-
-
+<figure><img src="../../.gitbook/assets/document-html.png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -207,7 +203,7 @@ If your HTML content does not render as expected e.g. font too small, embed this
 
 {% columns %}
 {% column %}
-&#x20;![HTML Document jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2-hef4bxogjQfpMVrfRIe_document-content.PNG)
+<figure><img src="../../.gitbook/assets/document-content-html.png" alt="Document jig with HTML content" width="188"><figcaption><p>Document jig with HTML content</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -256,9 +252,7 @@ tabs:
 
 {% columns %}
 {% column %}
-&#x20;![HTML Document jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Nd9RXpf3nHjf4FZLITiKG_img5019a1d0eb6f-1iphone13blueportrait.png)
-
-
+<figure><img src="../../.gitbook/assets/document-message.png" alt="HTML Document" width="188"><figcaption><p>HTML Document</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
