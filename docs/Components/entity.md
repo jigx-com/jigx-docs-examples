@@ -25,11 +25,11 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-![Entity with sections, row & field](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xQ6vW15SRw79rWRz5aMxz_img9802iphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/cc-entity-1.png" alt="Entity with sections, row &#x26; field" width="188"><figcaption><p>Entity with sections, row &#x26; field</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-![Entity with sections & field](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/P7cVpxb09Yx1ZnvKqqhc8_img9803iphone13blueportrait.png)
+<figure><img src="../../.gitbook/assets/cc-enttiy-2.png" alt="Entity with sections &#x26; field" width="188"><figcaption><p>Entity with sections &#x26; field</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

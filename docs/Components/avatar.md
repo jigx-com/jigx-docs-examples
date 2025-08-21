@@ -6,7 +6,7 @@ Using the avatar component, display a profile photo, company logo, initials, or 
 {% endcolumn %}
 
 {% column %}
-Image\[]{alt="Avatar preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jzGEzQeNzQZUvB-bk3iM\_\_avatar.png
+<figure><img src="../../.gitbook/assets/cc-avatar-intro.png" alt="avatar"><figcaption><p>Avatars</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -24,23 +24,21 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-![Avatar - Profile picture](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TTYP3M3nKqHyamgxhEdjY_avatars-picturesiphone13blueportrait.png)
+<figure><img src="../../.gitbook/assets/cc-avatar-1.png" alt="Avatar - Profile picture" width="188"><figcaption><p>Avatar - Profile picture</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 This example shows the avatar component in a jig. It can be used for employee headshots, company logos, or flags.
 
-**Examples:** \
-See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/static-data/avatar-as-children-of-jig/avatar-picture.jigx). \
+**Examples:**\
+See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/static-data/avatar-as-children-of-jig/avatar-picture.jigx).\
 See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/dynamic-data/avatar-as-children-of-jig/avatar-picture-dynamic.jigx).
 
-**Datasources:** \
-See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global.jigx). \
-See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/dynamic-global.jigx).&#x20;
+**Datasources:**\
+See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global.jigx).\
+See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/dynamic-global.jigx).
 {% endcolumn %}
 {% endcolumns %}
-
-:::CodeblockTabs&#x20;
 
 {% tabs %}
 {% tab title="avatar-profile-picture (static)" %}
@@ -133,18 +131,18 @@ datasources:
 
 {% columns %}
 {% column %}
-&#x20;![Avatar with initials](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xzz8dVt34c8Y2tLAOQd-W_avatars-lettersiphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/cc-avatar-2.png" alt="Avatar with initials" width="188"><figcaption><p>Avatar with initials</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 As in the previous example, we use the avatar component for detail. In this case, we use the initials of the user or employee. It's useful if you don't have a picture of them.
 
-**Examples:** \
-See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/static-data/avatar-as-children-of-jig/avatar-initials.jigx). \
+**Examples:**\
+See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/static-data/avatar-as-children-of-jig/avatar-initials.jigx).\
 See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/avatar/dynamic-data/avatar-as-children-of-jig/avatar-initials-dynamic.jigx).
 
-**Datasources:** \
-See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global.jigx). \
+**Datasources:**\
+See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/static-global.jigx).\
 See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/dynamic-global.jigx)
 {% endcolumn %}
 {% endcolumns %}

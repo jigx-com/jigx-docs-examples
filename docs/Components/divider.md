@@ -13,7 +13,7 @@ A divider is a simple yet effective UI component that creates a visual separatio
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wbWNQ7aP448sIxR7cCoQW-20250203-075934.png
+<figure><img src="../../.gitbook/assets/CC-divider.png" alt="Divider" width="188"><figcaption><p>Divider</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

@@ -2,11 +2,11 @@
 
 {% columns %}
 {% column %}
-The titles component displays a title, subtitle, /comment, or any type of text content with an icon which is optional.&#x20;
+The titles component displays a title, subtitle, /comment, or any type of text content with an icon which is optional.
 {% endcolumn %}
 
 {% column %}
-Image\[]{alt="Titles Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/URj78rz7Ik4FkLEZN1I8u\_titles.png" size="86" caption="Titles Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/URj78rz7Ik4FkLEZN1I8u\_titles.png" width="800" height="172" darkWidth="800" darkHeight="172"}
+<figure><img src="../../../.gitbook/assets/cc-expander-titles-intro.png" alt="Titles Preview"><figcaption><p>Titles Preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -28,17 +28,17 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/evtS4oSL4t4yGt7Gcg4AV\_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png" size="80" position="center" caption="Expander with titles" alt="Expander with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/evtS4oSL4t4yGt7Gcg4AV\_bzjgtccktzcmqfgs-mdseexpander-with-titles-in-a-headeriphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+<figure><img src="../../../.gitbook/assets/cc-expander-titles1.png" alt="Expander with titles" width="177"><figcaption><p>Expander with titles</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2gXn9HMZZgzoE38Wt91ZE\_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png" size="80" position="center" caption alt="Expander with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2gXn9HMZZgzoE38Wt91ZE\_ivsv2bndlkg7ebc6cdb8zexpander-with-titles-in-a-header2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+<figure><img src="../../../.gitbook/assets/cc-expander-titles2.png" alt="Expander with titles" width="176"><figcaption><p>Expander with titles</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/static-data/expander.jigx). \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/static-data/expander.jigx).\
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/expander/dynamic-data/expander-dynamic-data.jigx).
 
 **Datasource:**

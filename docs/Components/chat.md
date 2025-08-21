@@ -6,7 +6,7 @@ Experience seamless communication on the go with our chat-message component, kee
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WqoBhXkDyLGY8so3dYBHO-20240806-111124.png
+<figure><img src="../../.gitbook/assets/CC-chatOverview.png" alt="Chat" width="188"><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -52,7 +52,7 @@ Configure the jig file called **ai**-**chat.jigx** with:
 3. `component-chat` configured to show the message and sender details.
 4. `onSend` action executes the global action that pushes the chat message (input) to the local data provider and then a `sync-entities` action syncs chat with the REST API by executing the function to return the answer (response).
 
-![AI chatbot](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-S4CYksahsIsJkfrCo6d8_-20240806-103549.png)
+<figure><img src="../../.gitbook/assets/AI-chatbot.png" alt="AI chatbot" width="563"><figcaption><p>AI chatbot</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="ai-chat.jigx (function)" %}
