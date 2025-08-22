@@ -6,7 +6,7 @@ The component can display statistics related to data records (categorical variab
 {% endcolumn %}
 
 {% column %}
-Image\[]{alt="Bar Chart Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNwqF58yNsXcKrMxDsANE\_bar-chart.png
+<figure><img src="../../../.gitbook/assets/bar-chart (1).png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -24,9 +24,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;![Finance bar-chart](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8Z28MLwf3pqS_7EEZqmRC_weml0oui8khi-mqiu-dbbbar-chart-singleiphone13blueportrait.png)&#x20;
-
-
+<figure><img src="../../../.gitbook/assets/bar-chart-static.png" alt="Finance bar-chart" width="188"><figcaption><p>Finance bar-chart</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -34,11 +32,9 @@ The jig displays a bar chart with an annual overview of finances. The x-axis sho
 
 **Examples:** See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/static-data/bar-chart-finance-statistic/bar-chart-finance-statistic.jigx). See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic/bar-chart-finance-dynamic.jigx).
 
-**Datasources:** See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic).&#x20;
+**Datasources:** See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-finance-dynamic).
 {% endcolumn %}
 {% endcolumns %}
-
-:::CodeblockTabs&#x20;
 
 {% tabs %}
 {% tab title="bar-chart (static)" %}
@@ -170,11 +166,11 @@ The jig displays a bar chart with four series that compares amounts for three ye
 
 **Examples:** See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/static-data/bar-chart-multiple-series/bar-chart-multiple-series.jigx). See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/bar-chart/dynamic-data/bar-chart-multiple-series-dynamic/bar-chart-multiple-dynamic.jigx).
 
-**Datasources in order series1 and series2:** See the full datasource code sample for dynamic data [series 1](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx) and [series 2](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx) in GitHub.&#x20;
+**Datasources in order series1 and series2:** See the full datasource code sample for dynamic data [series 1](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx) and [series 2](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx) in GitHub.
 {% endcolumn %}
 {% endcolumns %}
 
-:::CodeblockTabs
+
 
 {% tabs %}
 {% tab title=" bar-chart-multiple (static)" %}

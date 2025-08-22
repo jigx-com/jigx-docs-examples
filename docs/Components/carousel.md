@@ -6,7 +6,7 @@ The carousel is an interactive component that enables you to browse through a se
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pLg81p\_Qw\_0sw3Cpl7fOT\_cc-carousel-image.gif
+<figure><img src="../../.gitbook/assets/CC-carousel-image.gif" alt="" width="166"><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -33,13 +33,13 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/j-Pmuzvmaecc7tfl8Yz8q\_cc-carousel-image.gif"
+<figure><img src="../../.gitbook/assets/CC-carousel-image.gif" alt="Basic carousel" width="166"><figcaption><p>Basic carousel</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 This examples displays images in the carousel. The `image` component is used with an overlapping `title` and `subtitle`. The `paginatio`n is configured to show `outside` of the carousel. An `onPress` event is added to the image component to open an `info-modal` displaying further information, in this case to book a test-drive.
 
-**Example:** See the example in [GitHub](carousel.md).&#x20;
+**Example:** See the example in [GitHub](carousel.md).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -132,14 +132,14 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C\_cc-carousel-card2.gif
+<figure><img src="../../.gitbook/assets/CC-carousel-card2 (1).gif" alt="Card in a carousel" width="144"><figcaption><p>Card in a carousel</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 In this example the carousel uses a `card` component with a color property, within the card, there is an `image` component used to display the images, an `entity-field` component to describe the product. The card component creates a visually appealing container for the images. The `pagination` is configured `outside` of the carousel.
 
-**Example:** \
-See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/carousel/carousel-card.jigx).&#x20;
+**Example:**\
+See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/carousel/carousel-card.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -187,12 +187,12 @@ This example uses a static datasource with an image component in the carousel. T
 1. The first carousel is configured to `isContained: true` which creates a frame around the image, and rounds the image border. Pagination is also set with `isContained: true` to create a gray frame around the pagination dots.
 2. The second carousel is set with `isContained: false` to display the image across the full screen. Pagination is also set to `isContained: false` to show the pagination dots in black.
 
-**Example:** \
+**Example:**\
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/carousel/carousel-contained.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9gbNHXGLefsRDubTljt7l\_cc-carousel-contained.gif"
+<figure><img src="../../.gitbook/assets/CC-carousel-contained.gif" alt="Carousel contained" width="144"><figcaption><p>Carousel contained</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -261,7 +261,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lZduG0Ik22bypmuuyutye\_cc-carousel-pagination.gif
+<figure><img src="../../.gitbook/assets/CC-carousel-pagination.gif" alt="Pagination" width="142"><figcaption><p>Pagination</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -270,7 +270,7 @@ This example uses a static datasource and shows how pagination can be placed eit
 1. The first carousel is in a `card` with `color` and configured with `pagination: outside` which places the pagination outside under the carousel.
 2. The second carousel is configured in an `image` with `pagination: inside` which overlays the image with the pagination. Pagination is also set to `isContained: true` to enhance the visibility of the pagination dots.
 
-**Example:** \
+**Example:**\
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/carousel/carousel-pagination-inside-outside.jigx).
 {% endcolumn %}
 {% endcolumns %}
@@ -343,12 +343,12 @@ children:
 {% column %}
 The carousel in this example uses Dynamic Data and a `counter` in the top right corner instead of pagination. The counter displays the number of items in the carousel and position of the current item. The example uses a `composite` jig to create a master detail jig, allowing you to tap on the image in the carousel and the corresponding detail is shown below.
 
-**Example:** \
+**Example:**\
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/carousel/carousel-counter.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ypD9O\_llX4-cvZGwXkM1L\_cc-carousel-counter.gif
+<figure><img src="../../.gitbook/assets/CC-carousel-counter.gif" alt="Carousel with counter" width="142"><figcaption><p>Carousel with counter</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -500,12 +500,12 @@ In this example there are two carousels:
 1. The first shows the pagination with `isContained: true` with `position: inside` the carousel.
 2. The second shows the pagination with `isContained: true` with `position:outside` the carousel.
 
-**Example:** \
+**Example:**\
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/carousel/carousel-pagination-contained.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/sj8QxKZPoS3jYJdhiCvS7\_cc-carousel-pag-contained.gif
+<figure><img src="../../.gitbook/assets/CC-carousel-pag-contained.gif" alt="Carousel - pagination and contained" width="144"><figcaption><p>Pagination &#x26; contained</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -591,7 +591,7 @@ The carousel in this example uses Dynamic Data with a colored `card` component. 
 {% endcolumn %}
 
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X\_GIlacEm0Nc0eLOwKiTt\_cc-carousel-avatar.gi
+<figure><img src="../../.gitbook/assets/CC-carousel-avatar.gif" alt="Carousel with card " width="142"><figcaption><p>Carousel with card</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

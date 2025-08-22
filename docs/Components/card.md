@@ -2,7 +2,7 @@
 
 The card is a versatile and visually appealing UI element that encapsulates and presents information or interactive content in a structured, consistent, and user-friendly manner. It enhances the app's usability by organizing content into manageable, self-contained units that are easy to navigate and interact with. Each card typically includes a mix of text, images, and interactive elements, creating a self-contained unit of content.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LFWTucW7Hd-Gh2mU4HA29\_cc-card-overview.png" size="80" position="center" caption="Cards" alt="Cards" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LFWTucW7Hd-Gh2mU4HA29\_cc-card-overview.png"}
+<figure><img src="../../.gitbook/assets/CC-card-overview.png" alt="Card" width="563"><figcaption><p>cards</p></figcaption></figure>
 
 ## Configuration options
 
@@ -25,13 +25,13 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AGHA6ALv3\_4Jlm-EYHqE4\_cc-card.PNG" size="80" position="center" caption="Card containing a form" alt="Card containing a form" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AGHA6ALv3\_4Jlm-EYHqE4\_cc-card.PNG
+<figure><img src="../../.gitbook/assets/CC-card.png" alt="Card containing a form" width="188"><figcaption><p>Card containing a form</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-&#x20;In this example the card component wraps the form component to create a visual container around the form.
+In this example the card component wraps the form component to create a visual container around the form.
 
-**Example:**&#x20;
+**Example:**
 
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-basic.jigx).
 {% endcolumn %}
@@ -106,14 +106,14 @@ actions:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1EXfr7epzL-6O3iIBpG-C\_cc-carousel-card2.gif
+<figure><img src="../../.gitbook/assets/CC-carousel-card2.gif" alt="Card in a carousel" width="144"><figcaption><p>Card in a carousel</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 In this example the carousel uses a `card` component with a color property, within the card, there is an `image` component used to display the images, an `entity-field` component to describe the product. The card component creates a visually appealing container for the images. The `pagination` is configured `outside` of the carousel.
 
-**Example:** \
-See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/carousel/carousel-card.jigx).&#x20;
+**Example:**\
+See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/carousel/carousel-card.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -162,14 +162,12 @@ This example shows three cards.
 2. The second card contains a `line-chart` component with the `color: color14` property set.
 3. The third card contains an `image` and `entity-field` components with the `color: color6` property set.
 
-**Example:** \
+**Example:**\
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-color.jigx).
 {% endcolumn %}
 
 {% column %}
-&#x20;![Cards with color](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BnatBgEmVsruHZlnCqBlK_cc-card-color.PNG)&#x20;
-
-
+<figure><img src="../../.gitbook/assets/CC-card-color.png" alt="Cards with color"><figcaption><p>Cards with color</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -327,14 +325,14 @@ options:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/St6oYKOw2poUb2nO16RLi\_cc-card-disabled.PNG
+<figure><img src="../../.gitbook/assets/CC-card-disabled.png" alt="Card style disabled" width="188"><figcaption><p>Card style disabled</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 This jig contains two cards, the first appears disabled using the `isDisabled: true` property and the second card the `isDisabled` property is set to `false`.
 
-**Example:** \
-See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-style.jigx).&#x20;
+**Example:**\
+See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-style.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -386,17 +384,15 @@ children:
 ### Card with onPress
 
 {% columns %}
-{% column width="41.66666666666667%" %}
-&#x20;The card component can be configured with an `onPress` event. In this example when the card is pressed a `go-to` component is configured to take you to the product list jig with items on sale.
+{% column %}
+The card component can be configured with an `onPress` event. In this example when the card is pressed a `go-to` component is configured to take you to the product list jig with items on sale.
 
-**Example:** \
+**Example:**\
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/card/card-onPress.jigx).
 {% endcolumn %}
 
-{% column width="58.33333333333333%" %}
-&#x20;![Card with onPress](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/E7GRbm2QRkLlrDR9NkuwC_cc-card-onpress.PNG)&#x20;
-
-
+{% column %}
+<figure><img src="../../.gitbook/assets/CC-card-onpress.png" alt="Card with onPress"><figcaption><p>Card with onPress</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
