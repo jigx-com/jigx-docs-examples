@@ -8,7 +8,7 @@ Use [Advanced Expressions](<Advanced expressions.md>) to filter an array of reco
 
 {% columns %}
 {% column %}
-&#x20;![Result with Advanced Expressions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LGvYapk-Ctp7XNjyF1AhK_ldcfoljjvzbydshpyny6img1005iphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/exp- advancedFilter.png" alt="Result with Advanced Expressions" width="188"><figcaption><p>Result with Advanced Expressions</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -86,7 +86,7 @@ As part of advanced expressions, you can define functions that will run the expr
 
 {% columns %}
 {% column %}
-&#x20;![Divided by 10](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w4D0z4M_5GZfbVYTORcV1_hncb97qurvw7muuy4qigeimg1002iphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/exp-advancedFunction.png" alt="Divided by 10" width="188"><figcaption><p>Divided by 10</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

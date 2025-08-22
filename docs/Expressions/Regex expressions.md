@@ -14,19 +14,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected results:** Between 9 and 13 numbers with no spaces, can include a symbol for dialing code, e.g., +271234556789.
 
-{% columns %}
-{% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Wtp8QVXWi56sJFxTHuOb9\_phone-valid.PNG" size="84" position="center" caption="Valid phone number" alt="Valid phone number" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Wtp8QVXWi56sJFxTHuOb9\_phone-valid.PNG" width="800" height="435" darkWidth="800" darkHeight="435"} :::
-
-
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid phone number](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/MVDIqg6Q2JFQU9-Rlw8OL_phone-invalid.PNG)
-
-
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-phone.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -40,15 +28,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** [name@example.com](mailto:name@example.com)
 
-{% columns %}
-{% column %}
-&#x20;![Valid email address](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/NP-TE2sDghjEcBbxXZURF_email-valid.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid email address](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/47lx4W1RTiP8bQd4wCB_u_email-invalid.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-textfield.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -62,15 +42,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** Typically 13-16 digits, with spaces or dashes optional, and includes checks for Visa, MasterCard, American Express, and Discover. E.g. 1111-1111-1111-1111 or 1111 1111 1111 1111.
 
-{% columns %}
-{% column %}
-&#x20;![Valid  credit card number](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/raKfpW2ipLxhcMuLFtEfW_valid-cc.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid  credit card number](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/PPPDn3zEIyobdLqLSu6kL_invalid-cc.PNG)
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-creditCard.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -84,15 +56,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** 5-digit codes, e.g. 10036.
 
-{% columns %}
-{% column %}
-&#x20;![Valid ZIP code](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0BGX8SwNKHVRWtvtVtvSY_valid-zip.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid ZIP code](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Jl5cVZIbKuq4R4lR1h2vB_invalid-zip.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-postal.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -106,15 +70,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** XXX-XX-XXXX
 
-{% columns %}
-{% column %}
-&#x20;![Valid Social Security number](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G6AVB6tYoliWEBumc5Kjr_valid-ss.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid Social Security number](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xN7CGa7nPUj-yEBFb2tlQ_invalid-ss.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-socialSec.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -128,15 +84,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** AA123456C
 
-{% columns %}
-{% column %}
-&#x20;![Valid National Insurance number](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/znto1cjyTCMyE9avaFet0_valid-ni.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid National Insurance number](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-H4t0H6dwa0tQhypYVM4__invalid-ni.PNG)
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-nationalIns.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -150,15 +98,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** DD/MM/YYYY, e.g. 23/07/2024.
 
-{% columns %}
-{% column %}
-&#x20;![Valid date format](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BfJyiQNFhzO8EMVQXkC_m_valid-dd-mm-yyyy.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid date format](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x02lJfwhDU681kClzh8qc_invalid-dd-mm-yyyy.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-dateFormat.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -172,15 +112,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** MM/DD/YYYY, e.g. 03/28/2023.
 
-{% columns %}
-{% column %}
-&#x20;![Valid date format](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/JOggsXvLB82nmQAdcVxDy_valid-mm-dd.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid date format](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/d3dz8IUWb6Cs0MXT4g-Qa_invalid-mm-dd.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-dateFormat1.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -194,15 +126,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** DD Month YYYY, e.g. 25 July 2024.
 
-{% columns %}
-{% column %}
-&#x20;![Valid date format](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pxR29s8XaU71Yg1fvzv09_valid-month.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid date format](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_PGk4cAZ_E5sq1F-grjWn_invalid-month.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-dateFormat2.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -216,17 +140,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** yyyy/mm/dd, e.g. 2024/08/30.
 
-{% columns %}
-{% column %}
-&#x20;![Valid date format](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/b-dLT9gj-atCGF4-2GbET_valid-yyyymmdd.PNG)&#x20;
-
-
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid date format](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fr-WSmJFjbkE1QjFzeN-2_invalid-yyyymmdd.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-DateFormat3.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -240,15 +154,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** 1234,00
 
-{% columns %}
-{% column %}
-&#x20;![Valid decimal number](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9LW6cC_1pPDevWNocl3pJ_valid-decimal.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid decimal number](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lkFIgHhVKEv-FmE0TBFuN_invalid-decimal.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-decimal.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -262,15 +168,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** H:MM AM/PM e.g. 12:15 AM or 08:45 PM
 
-{% columns %}
-{% column %}
-&#x20;![Valid time format](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7SYz1j770opjA65qRgbpX_valid-time-am.PNG)
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid time format](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fKD528Sn3FIv4aMZBVGuX_invalid-time-am.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-time.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -284,15 +182,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** MM:SS / or HH:MM, e.g. 08:10.
 
-{% columns %}
-{% column %}
-&#x20;![Valid time format](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/78ig1l7uYyvJ9pV2ZKByi_valid-hhmm.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid time format](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eIH6pgBEAvFgfMkBRCC6N_invalid-hhmm.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-time1.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -306,15 +196,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** 01:00
 
-{% columns %}
-{% column %}
-&#x20;![Valid time format](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bpfR2Forp61sTD-4jmy9v_valid-24.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid time format](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ur681lwZagDKy-J0fmxQz_invalid-24.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-24Hour.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -328,15 +210,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** example.com or [http://example.com](http://example.com)
 
-{% columns %}
-{% column %}
-&#x20;![Valid URL](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kBs2eilNTa2FEBUawSeTH_valid-url.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid URL](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/478vm6U2BFe_sdihLOey-_invalid-url.PNG)
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-url.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-fiel
@@ -350,15 +224,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** 978-1-4302-1998-9
 
-{% columns %}
-{% column %}
-&#x20;![Valid ISBN](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LJZqMS9Fg3dPLAzu0X9Nr_valid-isbn.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid ISBN](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/L6V4uAF0UpazHhgfBTdxf_invalid-isbn.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-isbn.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -372,15 +238,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** JohnSmith
 
-{% columns %}
-{% column %}
-&#x20;![Valid string -no spaces](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bdn0isKFPTwR4pthDzlXI_valid-string-space.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid string -no spaces](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UugX-AGkcahdXHnFo2iiq_invalid-string-space.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-stringStrict.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -394,15 +252,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** John Smith
 
-{% columns %}
-{% column %}
-&#x20;![Valid string with spaces](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KFr9CxuqV01zvjCSxxArS_valid-string.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid string with spaces](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZobDaOJvNVS7fhQPqV8jw_invalid-string.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-spaces.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field
@@ -416,15 +266,7 @@ The JSONata + regex examples below create validation for `text-fields` in a `for
 
 **Expected result:** 56575 76 6
 
-{% columns %}
-{% column %}
-&#x20;![Valid numbers with spaces](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mMUC0JaR-I9cRDEiSPCx8_valid-num-space.PNG)&#x20;
-{% endcolumn %}
-
-{% column %}
-&#x20;![Invalid numbers with spaces](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nae9RyMC6R9FSxDM6khVK_invalid-num-space.PNG)&#x20;
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/regex-numberSpaces.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ```yaml
 - type: component.text-field

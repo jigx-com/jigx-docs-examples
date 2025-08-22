@@ -229,7 +229,7 @@ See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/bl
 {% endcolumn %}
 
 {% column %}
-![User expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YjBuEhcG9PqMOYLrSR02f_img7979iphone13blueportrait.png)
+<figure><img src="../../.gitbook/assets/exp-systemUser.png" alt="User expression" width="188"><figcaption><p>User expression</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -268,7 +268,7 @@ The `solution` variable is used to get information about the specific Jigx solut
 
 {% columns %}
 {% column %}
-![Solution expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oViCGP9PqleD7r5MC51mk_img7981iphone13blueportrait.png)
+<figure><img src="../../.gitbook/assets/exp-systemsSolution.png" alt="Solution expression" width="188"><figcaption><p>Solution expression</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -295,15 +295,7 @@ children:
 
 ### Solution settings - custom variable
 
-{% columns %}
-{% column %}
-![Setting Custom Variables](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xXC42Y_pvmCKo34wfapvo-20240819-091011.png)
-{% endcolumn %}
-
-{% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG" size="86" position="center" caption="Showing variable value" alt="Showing variable value" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} ::: ::::
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../../.gitbook/assets/exp-customVari.png" alt=""><figcaption></figcaption></figure>
 
 ```yaml
 children:

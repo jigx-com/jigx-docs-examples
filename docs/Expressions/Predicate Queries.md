@@ -14,14 +14,14 @@ Use [JSONata Predicate Queries](https://docs.jsonata.org/predicate) at any locat
 <table><thead><tr><th width="284.3515625">Result</th><th>Expression</th></tr></thead><tbody><tr><td>Evaluate if true and show the name</td><td><code>=@ctx.datasources.mydata[title='Nurse' and color='blue'].name</code></td></tr></tbody></table>
 
 {% hint style="warning" %}
-Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.&#x20;
+Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.
 {% endhint %}
 
 ## Examples and code snippets
 
 {% columns %}
 {% column %}
-&#x20;![Predicate queries](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pJL_aAds1bbqRl0w5trhY_qfbtw3l1pzojf6xyfwlvvimg0976iphone13blueportrait.png)
+<figure><img src="../../.gitbook/assets/exp-predicate.png" alt="Predicate queries" width="188"><figcaption><p>Predicate queries</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

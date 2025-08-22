@@ -15,15 +15,13 @@ Refer to the section on [JavaScript expressions](https://docs.jigx.com/expressio
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sS6PAehgDxXFhL9p0MOSe-20240919-062431.PNG" size="70" position="center" caption="JavaScript function returning a string" alt="JavaScript function returning a string" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sS6PAehgDxXFhL9p0MOSe-20240919-062431.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} :::
-
-
+<figure><img src="../../.gitbook/assets/JS-HelloWorld.PNG" alt="JavaScript function returning a string" width="188"><figcaption><p>JavaScript function returning a string</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 In this example, a JavaScript function called helloWorld is created to return a string showing _Hello World_ in a [text-field](../Components/form/text-field.md). In the `value` property an expression calling the function is used.
 
-**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-string.jigx). &#x20;
+**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-string.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -68,8 +66,6 @@ export function helloWorld() {
   return "Hello World";
 }
 ```
-
-
 {% endtab %}
 {% endtabs %}
 
@@ -83,9 +79,7 @@ Create a full name by joining a first and last name using a simple JavaScript fu
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--3XKaQJ8QzDJviYHr82mq-20240919-064930.PNG" size="70" position="center" caption="Concatenate JavaScript Function " alt="Concatenate JavaScript Function " signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--3XKaQJ8QzDJviYHr82mq-20240919-064930.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/JS-GetFullName.PNG" alt="Concatenate JavaScript Function" width="188"><figcaption><p>Concatenate JavaScript Function</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -149,15 +143,13 @@ export function getFullName(firstName, lastName) {
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Rxqd\_ngkDbzh4qCeqA-kW-20240919-065058.PNG" size="70" position="center" caption="Capatilize job title function" alt="Capatilize job title function" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Rxqd\_ngkDbzh4qCeqA-kW-20240919-065058.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} :::
-
-
+<figure><img src="../../.gitbook/assets/JS-CapitalizeJobTitle.PNG" alt="Capatilize job title function" width="188"><figcaption><p>Capatilize job title function</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 The function capitalizes the first letter of each word in a string while fully capitalizing specific acronyms such as CEO, COO, CFO, CTO, CIO, CMO, CSO, CPO, CHRO, and CDO. This ensures that job titles are formatted accurately, respecting the conventions for common acronyms. In the `value` property an expression is used that calls the function to capitalize the job title. The functions variables values are defined in the form's text-field components.
 
-**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-capitalize-text.jigx).&#x20;
+**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-capitalize-text.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -247,7 +239,7 @@ export function capitalizeJobTitle(str) {
 ## Calculate tax plus total
 
 {% columns %}
-{% column %}
+{% column width="58.333333333333336%" %}
 In this example three functions are used:
 
 * The **calculateTax** function is designed to compute the tax amount based on a given subtotal and a specified tax rate. It takes two parameters: subtotal, which represents the pre-tax amount, and taxRate, which is the tax percentage to be applied.
@@ -259,10 +251,8 @@ In the `value` property of the `text-field` an expression is used that calls the
 **Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-calculation.jigx).
 {% endcolumn %}
 
-{% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-KAFfpDrBMtsqtzdjsS6d0-20240919-065231.PNG" size="70" position="center" caption="Function calculating tax" alt="Function calculating tax" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-KAFfpDrBMtsqtzdjsS6d0-20240919-065231.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} ::: ::::
-
-
+{% column width="41.666666666666664%" %}
+<figure><img src="../../.gitbook/assets/JS-calculateTaxTotal.PNG" alt="Function calculating tax" width="188"><figcaption><p>Function calculating tax</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -370,20 +360,18 @@ export function formatCurrency(amount, currencySymbol) {
 ## Calculate loan payment
 
 {% columns %}
-{% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Fpz7MLSFjObQEogI1-XhE-20240919-070345.PNG" size="70" position="center" caption="Calulate loan payment function" alt="Calulate loan payment function" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Fpz7MLSFjObQEogI1-XhE-20240919-070345.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} :::
-
-
+{% column width="41.66666666666667%" %}
+<figure><img src="../../.gitbook/assets/JS-CalculateLoanPay.PNG" alt="Calulate loan payment function" width="188"><figcaption><p>Calulate loan payment function</p></figcaption></figure>
 {% endcolumn %}
 
-{% column %}
+{% column width="58.33333333333333%" %}
 The **calculateLoanPayment** function calculates the monthly loan payment based on the principal amount, annual interest rate (as a percentage), and loan term in years. This function is useful for financial applications that calculate monthly mortgage or loan payments based on the principal amount, annual interest rate, and loan term in years. It helps users determine their monthly payment obligations accurately.
 
 The **formatCurrency** function converts a numerical amount into a string formatted as currency, including commas for thousands and two decimal places, and prefixes it with the specified currency symbol.
 
 In the `value` property of the `text-field` an expression is used that calls the function to show the monthly repayment amount. The functions variables values are defined in the form's `text-field` components.
 
-**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-loan-payment.jigx).&#x20;
+**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-loan-payment.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -482,9 +470,7 @@ A `date-picker` is used to select the date of birth, which is set as a state usi
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-v8Gc91Be3cfzuVlTQwVU0-20240919-070438.PNG" size="70" position="center" caption="Function to calulate age" alt="Function to calulate age" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-v8Gc91Be3cfzuVlTQwVU0-20240919-070438.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/JS-CalulateAge.PNG" alt="Function to calculate age" width="188"><figcaption><p>Function to calculate age</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -576,13 +562,11 @@ export function calculateAge(dateOfBirth) {
 {% column %}
 The **distanceApart** function takes the longitude and latitude coordinates of two cities and calculates the straight-line distance between them, as the crow flies. Use a dropdown to select the to and from cities. When a selection is made the `onChange` sets the state of the dropdown by using a function in the expression to work out the latitude and longitude of the selected city and the distance between them. The distance is shown in a `text-field`.
 
-**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-distance-apart.jigx).&#x20;
+**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-distance-apart.jigx).
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-34cdIrfKMEk4HmN3eBiOo-20240919-070527.PNG" size="70" position="center" caption="Function to calculate distance" alt="Function to calculate distance" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-34cdIrfKMEk4HmN3eBiOo-20240919-070527.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/JS-DistanceApart.PNG" alt="Function to calculate distance" width="188"><figcaption><p>Function to calculate distance</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -832,9 +816,7 @@ export function distanceApart(from_long, from_lat, to_long, to_lat) {
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-zdFI128LpCKcf65Goy\_tI-20240919-070950.PNG" size="70" position="center" caption="Function calculating dates" alt="Function calculating dates" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-zdFI128LpCKcf65Goy\_tI-20240919-070950.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} :::
-
-
+<figure><img src="../../.gitbook/assets/JS-DaysUntil.PNG" alt="Function calculating dates" width="188"><figcaption><p>Function calculating dates</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -842,7 +824,7 @@ The **daysUntil** function calculates the number of days remaining from today's 
 
 Use a `dropdown` to select holiday. When a selection is made the `onChange` sets the state of the dropdown by using a function in the expression to work out the number of days to the date of the holiday. The number of days is shown in a `text-field`.
 
-**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-days-until.jigx).&#x20;
+**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-days-until.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -992,9 +974,7 @@ A `date-picker` is used to select the current date. An expression with the funct
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Pva5AwlWD10wNpLtoKIJv-20240919-071234.PNG" size="70" position="center" caption="Function calulating dates" alt="Function calulating dates" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Pva5AwlWD10wNpLtoKIJv-20240919-071234.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/Js-WorkDaysLeft.PNG" alt="Function calulating dates" width="188"><figcaption><p>Function calulating dates</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -1086,15 +1066,13 @@ export function workdaysLeftInMonth(date) {
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T89tiGP1BRtcfVbTCfH4i-20240919-071417.PNG" size="70" position="center" caption="Function calulating dates" alt="Function calulating dates" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T89tiGP1BRtcfVbTCfH4i-20240919-071417.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} :::
-
-
+<figure><img src="../../.gitbook/assets/JS-GetNextBusDay.PNG" alt="Function calulating dates" width="188"><figcaption><p>Function calulating dates</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 The **getNextBusinessDay** function calculates the next business day from a given date. It returns the next valid business day in the format "Month Day, Year". A `date-picker` is used to select the current date. An expression with the function is used to calulate the number of days and shows it in a `text-field`.
 
-**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-next-business-day.jigx).&#x20;
+**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-next-business-day.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -1175,9 +1153,7 @@ export function getNextBusinessDay(date) {
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BIw\_ynmL8VIQBmMbPevzB-20240919-071457.PNG" size="70" position="center" caption="Function to format numbers" alt="Function to format numbers" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BIw\_ynmL8VIQBmMbPevzB-20240919-071457.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} :::
-
-
+<figure><img src="../../.gitbook/assets/JS-formatPhoneNumber.PNG" alt="Function to format numbers" width="188"><figcaption><p>Function to format numbers</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -1272,13 +1248,11 @@ export function formatPhoneNumber(phoneNumber) {
 {% column %}
 The **getEmployeeInfo** function constructs a formatted string from an object that includes an employee's first name, last name, position, and email address. The `value` property of the entity-field uses an expression that calls the function.
 
-**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-format-string-object.jigx).&#x20;
+**Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-format-string-object.jigx).
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JoQEp6Les6BrVKrp2oBmq-20240919-072252.PNG" size="70" position="center" caption="Function returning an object" alt="Function returning an object" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JoQEp6Les6BrVKrp2oBmq-20240919-072252.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/JS-EmployeeInfo.PNG" alt="Function returning an object" width="188"><figcaption><p>Function returning an object</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

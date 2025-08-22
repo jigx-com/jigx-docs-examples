@@ -2,11 +2,11 @@
 
 {% columns %}
 {% column %}
-You can send Notifications using Jigx Management or programmatically in your solutions, see [Notifications](https://docs.jigx.com/notifications). Notifications can be configured to be sent to a single user, the entire organization, users of a specific solution, and even users of a specific jig in a specific solution.&#x20;
+You can send Notifications using Jigx Management or programmatically in your solutions, see [Notifications](https://docs.jigx.com/notifications). Notifications can be configured to be sent to a single user, the entire organization, users of a specific solution, and even users of a specific jig in a specific solution.
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{alt="In-app & push notifications" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7b3RWMHmrLLf2Li44h3sC\_jm-notifications.PNG" size="74" caption="In-app & push notifications" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7b3RWMHmrLLf2Li44h3sC\_jm-notifications.PNG" width="800" height="787" darkWidth="800" darkHeight="787"} ::: ::::
+<figure><img src="../.gitbook/assets/jm-notifications.PNG" alt="In-app &#x26; push notifications"><figcaption><p>In-app &#x26; push notifications</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -23,7 +23,7 @@ You can send Notifications using Jigx Management or programmatically in your sol
 {% hint style="info" %}
 In the code examples below replace `YOUR_ORG_ID` with your actual Organization Id. You can find it in the Organization Settings section of the Jigx Management or use the expression `=@ctx.organization.id`.
 
-Click here to go there directly: [https://manage.jigx.com/settings/org-details](https://manage.jigx.com/organization/org-details)&#x20;
+Click here to go there directly: [https://manage.jigx.com/settings/org-details](https://manage.jigx.com/organization/org-details)
 {% endhint %}
 
 ## Notification sent when submitting a form
@@ -34,7 +34,7 @@ Once you submitted the form, the recipients should receive both a push notificat
 
 Add a function definition called _send-notification.jigx_ to the _functions_ folder of your solution and copy & paste the following snippet into it. Replace the {organizationId} in the `url` with your organization's Id.
 
-![Submit form to send notification](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5slfiQWIuZSdPSI5768Ku_notification-submit-form.png)
+<figure><img src="../.gitbook/assets/notification-submit-form.png" alt="Submit form to send notification" width="563"><figcaption><p>Submit form to send notification</p></figcaption></figure>
 
 See the code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-notifications/basic/send-submit-form.jigx).
 
@@ -174,7 +174,7 @@ You can also send notifications using an [execute-entity](Actions/execute-entity
 
 In this example we are using state to access the two form fields `title` and `text`. All other function's parameters are set in the execute-entity action. Note that you don't have to use form fields as you could also assign all `parameters` in the action itself.
 
-![Notification sent with execute entity](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2i6PSLJ_8e_lEs6fQxyS5_notification-execute-entity.png)
+<figure><img src="../.gitbook/assets/notification-execute-entity.png" alt="Notification sent with execute entity" width="563"><figcaption><p>Notification sent with execute entity</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="send-notification.jigx (function)" %}
@@ -293,21 +293,9 @@ children:
 
 You can also target a specific jig with input parameters from your push notification. An example of this would be a notification about a new product promotion with the promotion detail jig as the target. When the user taps on the notification (either on the native push notification or the in-app notification), the app will navigate to the specific promotion
 
-![Target a jig with a notification](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/n8OyVvUVWmJdUI2wsfefh_notification-target-jig.png)
+<figure><img src="../.gitbook/assets/notification-target-jig.png" alt="Target a jig with a notification" width="563"><figcaption><p>Target a jig with a notification</p></figcaption></figure>
 
-{% columns %}
-{% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{alt="Push Notification" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Sd0XI6wwYa6AQ3W7iKK\_k\_notifications3iphone13blueportrait.png" size="90" caption="Push Notification" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Sd0XI6wwYa6AQ3W7iKK\_k\_notifications3iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
-
-
-{% endcolumn %}
-
-{% column %}
-:::VerticalSplitItem ::Image\[]{alt="Target Jig" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-7AaQQ4OLs957bbfIyQln\_notifications4iphone13blueportrait.png" size="90" caption="Target Jig" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-7AaQQ4OLs957bbfIyQln\_notifications4iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} ::: ::::
-
-
-{% endcolumn %}
-{% endcolumns %}
+<figure><img src="../.gitbook/assets/notification-target.png" alt="" width="375"><figcaption></figcaption></figure>
 
 For this, you need an adjusted REST function definition (see 1), a Jig that invokes the REST function (see 2), and a target jig that will be displayed when the user taps on the notification (see 3).
 
@@ -485,4 +473,4 @@ children:
 
 ## Sending push notifications using the Jigx notification Endpoint
 
-See [External push notifications (API)](<Notifications/External push notifications _API_.md>) for more information and examples.&#x20;
+See [External push notifications (API)](<Notifications/External push notifications _API_.md>) for more information and examples.

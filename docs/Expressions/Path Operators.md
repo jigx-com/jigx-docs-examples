@@ -32,7 +32,7 @@ The operators include:
 <table><thead><tr><th width="257.97265625">Result</th><th>Expression</th></tr></thead><tbody><tr><td>Filter a list according to a value</td><td><code>=$filter(@ctx.datasources.filter-list, function($v){$contains($string($v.status), $string(@ctx.components.filter-list.state.filter != null ? @ctx.components.filter-list.state.filter:'')) })[]</code></td></tr></tbody></table>
 
 {% hint style="warning" %}
-Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.&#x20;
+Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.
 {% endhint %}
 
 ## Examples and code snippets
@@ -41,7 +41,7 @@ Be careful when using complex expressions, such as expressions that iterate one 
 
 {% columns %}
 {% column %}
-&#x20;![Static filter](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3_4ZHyfoqvLE8CUmHcoCg_img9730iphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/exp-pathOperFilter.png" alt="Static filter" width="188"><figcaption><p>Static filter</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -117,21 +117,15 @@ item:
 
 ### Searching data
 
+{% columns %}
+{% column %}
 Write an expression to add a search field when using **static data**. The character **\[]** at the end is very important. Even one item only will be displayed.
 
 **Search:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/search.jigx).
-
-{% columns %}
-{% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/j\_q3THPfmpWfkzUBqoR4S\_search1iphone13blueportrait.png" size="70" position="center" caption="Search static data" alt="Search static data"} :::
-
-
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kxfQ-YPzrNiVWsXDgWXaf\_search2iphone13blueportrait.png" size="70" position="center" caption="Search static data" alt="Search static data"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/expr-pathSearch.png" alt="Search static data" width="188"><figcaption><p>Search static data</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

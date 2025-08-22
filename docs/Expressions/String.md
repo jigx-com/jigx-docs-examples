@@ -40,7 +40,7 @@ The string functions include:
 
 {% columns %}
 {% column %}
-&#x20;![String expressions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0ZtwGqI1_Axa_fo3SqwC4_img6601iphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/exp-string.png" alt="String expressions" width="188"><figcaption><p>String expressions</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
