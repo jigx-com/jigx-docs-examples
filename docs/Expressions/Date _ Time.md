@@ -43,9 +43,7 @@ Be careful when using complex expressions, such as expressions that iterate one 
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rLyfpAJd6UWubCCOtnOx8\_img6600iphone13blueportrait.png" size="72" position="center" caption="Date & time expressions" alt="Date & time expressions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rLyfpAJd6UWubCCOtnOx8\_img6600iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
-
-
+<figure><img src="../../.gitbook/assets/exp-dateTime.png" alt="Date &#x26; time expressions" width="188"><figcaption><p>Date &#x26; time expressions</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

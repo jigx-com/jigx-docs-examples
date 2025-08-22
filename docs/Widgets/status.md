@@ -8,9 +8,7 @@ The status returned is based on a Boolean condition.
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tXAcZO-9QGzYEwDiMbZNh\_img3839.PNG" size="74" position="center" caption="Status widget" alt="Status widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tXAcZO-9QGzYEwDiMbZNh\_img3839.PNG" width="800" height="1732" darkWidth="800" darkHeight="1732"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/wd-status-intro.png" alt="Status widget" width="188"><figcaption><p>Status widget</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -26,15 +24,13 @@ The status returned is based on a Boolean condition.
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tnCD7-eQIE\_OqJABIWIRi\_statusiphone13blueportrait.png" size="74" position="center" caption="Status widget" alt="Status widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tnCD7-eQIE\_OqJABIWIRi\_statusiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
-
-
+<figure><img src="../../.gitbook/assets/WD-status22.png" alt="Status widget" width="188"><figcaption><p>Status widget</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 In this example the status widget is configured to show a positive icon for the `when: true` property.
 
-**Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/status/static-data/status-static.jigx). See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/status/dynamic-data/status-dynamic.jigx).&#x20;
+**Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/status/static-data/status-static.jigx). See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/status/dynamic-data/status-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -130,15 +126,13 @@ children:
 
 {% columns %}
 {% column %}
-&#x20;In this example the `status` widget is configured to show different `icons` and details depending on the status of a mobile device's battery. The `when:` property is used three times to detemine the status and depending if the `when` evaluates to `true` then the details for that `when` property is shown.
+In this example the `status` widget is configured to show different `icons` and details depending on the status of a mobile device's battery. The `when:` property is used three times to determine the status and depending if the `when` evaluates to `true` then the details for that `when` property is shown.
 
 **Examples**: See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x4/status-1_2x4.jigx).
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WTumYhYzqm5kEe-lKlCCK-20240808-084743.PNG" size="74" position="center" caption="Status widget 2x4" alt="Status widget 2x4" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WTumYhYzqm5kEe-lKlCCK-20240808-084743.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/W-status2x4.PNG" alt="Status widget 2x4" width="188"><figcaption><p>Status widget 2x4</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -246,9 +240,7 @@ children:
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7VYbPDMKaVncUxzZOFVTz\_wd-status4x2.PNG" size="74" position="center" caption="Status Widget 4x2" alt="Status Widget 4x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7VYbPDMKaVncUxzZOFVTz\_wd-status4x2.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
-
-
+<figure><img src="../../.gitbook/assets/WD-status4x2.PNG" alt="Status Widget 4x2" width="188"><figcaption><p>Status Widget 4x2</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

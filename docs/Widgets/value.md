@@ -2,13 +2,11 @@
 
 {% columns %}
 {% column %}
-Show values and amounts for a quick overview or visual representation on a widget, such as sales targets or the number of orders to date. The value can be a number or date and time.&#x20;
+Show values and amounts for a quick overview or visual representation on a widget, such as sales targets or the number of orders to date. The value can be a number or date and time.
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OcTCGbkBbgy4XAiSLXL8F\_img92bc27cc2344-1.jpeg" size="72" position="center" caption="Value widget" alt="Value widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OcTCGbkBbgy4XAiSLXL8F\_img92bc27cc2344-1.jpeg" width="800" height="1732" darkWidth="800" darkHeight="1732"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/wd-value-intro.png" alt="Value widgets" width="188"><figcaption><p>Value widgets</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -24,13 +22,13 @@ Show values and amounts for a quick overview or visual representation on a widge
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYzrsAD8f1eWOTTTZwaBG\_img7893iphone13blueportrait.png" size="74" position="center" caption="Value widget with number" alt="Value widget with number" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYzrsAD8f1eWOTTTZwaBG\_img7893iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
+<figure><img src="../../.gitbook/assets/wd-value1.png" alt="Value widget with number" width="177"><figcaption><p>Value widget with number</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 This example shows a value widget configured with a number value, a `format` unit and `align` right. A `component.title` is added at the `top` and `component.trend` at the `bottom` to show additional information.
 
-**Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-2x2.jigx). See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-2x2.jigx).&#x20;
+**Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-2x2.jigx). See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-2x2.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -121,15 +119,13 @@ children:
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pXxBUeIjMcGUuZkQPjG9g\_img7894iphone13blueportrait.png" size="78" position="center" caption="Value widget with date and time" alt="Value widget with date and time" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pXxBUeIjMcGUuZkQPjG9g\_img7894iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
-
-
+<figure><img src="../../.gitbook/assets/wd-valueDateTime.png" alt="Value widget with date and time" width="188"><figcaption><p>Value widget with date and time</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 This example shows a value widget configured with a date and time value and a `dateFormat` to show HH:mm and `align` center. A `component.title` is added at the `top` and at the `bottom` to provide additional information about the meeting.
 
-**Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-2x4.jigx). See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-2x4.jigx)&#x20;
+**Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/static/value-static-2x4.jigx). See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/value/dynamic/value-dynamic-2x4.jigx)
 {% endcolumn %}
 {% endcolumns %}
 
@@ -224,7 +220,7 @@ children:
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mTH88SQVn-lvJEtmPiR5\_\_img7895iphone13blueportrait.png" size="80" position="center" caption="Value widget with currency format" alt="Value widget with currency format" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mTH88SQVn-lvJEtmPiR5\_\_img7895iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
+<figure><img src="../../.gitbook/assets/wd-value42.png" alt="Value widget with currency format" width="188"><figcaption><p>Value widget with currency format</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

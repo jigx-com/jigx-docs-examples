@@ -14,9 +14,7 @@ Use JSONata aggregation to return the results of values to find a maximum, minim
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="left"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X11pn0BVv4LsvZydrxLVL\_img6602iphone13blueportrait.png" size="78" position="center" caption="Aggregated expression" alt="Aggregated expression" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X11pn0BVv4LsvZydrxLVL\_img6602iphone13blueportrait.png"} :::
-
-
+<figure><img src="../../.gitbook/assets/epx-aggregation.png" alt="Aggregated expression" width="188"><figcaption><p>Aggregated expression</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

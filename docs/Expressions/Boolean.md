@@ -21,7 +21,7 @@ Be careful when using complex expressions, such as expressions that iterate one 
 
 {% columns %}
 {% column %}
-&#x20;![Boolean expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IB2sIUMi98vlAC-8zpawb_booleaniphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/exp-boolean.png" alt="Boolean expression" width="188"><figcaption><p>Boolean expression</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -72,7 +72,7 @@ See [tips and tricks when using placeholders](https://community.jigx.com/t/tips-
 {% endcolumn %}
 
 {% column %}
-&#x20;![Placeholder](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XMqGfRfgof-WsZJq6qYtE_placeholderiphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/exp-placeholder.png" alt="Placeholder" width="188"><figcaption><p>Placeholder</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

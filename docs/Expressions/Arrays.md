@@ -102,7 +102,7 @@ children:
 
 {% columns %}
 {% column %}
-&#x20;![Result with Advanced Expressions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LGvYapk-Ctp7XNjyF1AhK_ldcfoljjvzbydshpyny6img1005iphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/exp-arrays.png" alt="Expression-array" width="188"><figcaption><p>Expression-array</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

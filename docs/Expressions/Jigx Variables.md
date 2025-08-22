@@ -18,13 +18,11 @@ The `organization` variable is used to get information about the actual organiza
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="left"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/l9Evc2zPxdR6ZYdCJIOcm\_img7983iphone13blueportrait.png" size="92" position="flex-end" caption="Organization expression" alt="Organization expression" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/l9Evc2zPxdR6ZYdCJIOcm\_img7983iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
-
-
+<figure><img src="../../.gitbook/assets/exp-system-org (1).png" alt="Organization expression" width="188"><figcaption><p>Organization expression</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-This example returns the organization's  `id` . Each organization configured in [Organization Settings](<Jigx Variables.md>) in Jigx Management and will have a unique id. See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/organization.jigx).
+This example returns the organization's `id` . Each organization configured in [Organization Settings](<Jigx Variables.md>) in Jigx Management and will have a unique id. See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/organization.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -55,9 +53,7 @@ The supported variables for the system variable are:
 
 {% columns %}
 {% column %}
-&#x20;![System expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dozQmeZtycpfLoEgq34Zb_vexno05ey8qanp2ahvm8wimg1073iphone13blueportrait.png)&#x20;
-
-
+<figure><img src="../../.gitbook/assets/exp-system-offline.png" alt="System expression" width="188"><figcaption><p>System expression</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -90,7 +86,7 @@ See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/bl
 {% endcolumn %}
 
 {% column %}
-&#x20;![System timezone expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oANyCp8ANnxLlVQO8SP9t_br9tnyrzt6xxavl6azvoeimg1075iphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/exp-system-timezone.png" alt="System timezone expression" width="188"><figcaption><p>System timezone expression</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -113,13 +109,13 @@ children:
 
 {% columns %}
 {% column %}
-&#x20;![system geolocation expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Zw09RzF0UJDUm3XaEwrcM_img7975iphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/exp-system-geolocation.png" alt="system geolocation expression" width="188"><figcaption><p>system geolocation expression</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 This example shows how you can use `system.geolocation` to get the device's location (details).
 
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/geolocation.jigx).&#x20;
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/geolocation.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -172,7 +168,7 @@ children:
 
 Device information is important to identify the types of devices and the app version users are using. This is useful for troubleshooting issues and diagnosing app crashes. The details can be retrieved in multiple ways when using the system variable, such as on the app screen or when connected to Jigx dev tools in Jigx Builder.
 
-![Jigx dev tools for debugging](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-G4rE3IMKVCIOs3HqHfnwf-20250225-112949.png)
+<figure><img src="../../.gitbook/assets/exp-system-app.png" alt="Jigx dev tools for debugging" width="563"><figcaption><p>Jigx dev tools for debugging</p></figcaption></figure>
 
 ```yaml
 children:
@@ -197,9 +193,7 @@ See the example using dynamic data in GitHub.
 {% endcolumn %}
 
 {% column %}
-&#x20;![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6PYMLSP1mvgXAyOVdRTl3_systemexpress.png)&#x20;
-
-
+<figure><img src="../../.gitbook/assets/exp-systemlocationShare.png" alt="" width="188"><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -231,15 +225,11 @@ See the example using dynamic data in GitHub.
 {% column %}
 The _user_ is used to get information about the logged-in user, for example, name, and email.
 
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/user.jigx).&#x20;
-
-
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/user.jigx).
 {% endcolumn %}
 
 {% column %}
-&#x20;![User expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YjBuEhcG9PqMOYLrSR02f_img7979iphone13blueportrait.png)&#x20;
-
-
+![User expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YjBuEhcG9PqMOYLrSR02f_img7979iphone13blueportrait.png)
 {% endcolumn %}
 {% endcolumns %}
 
@@ -278,7 +268,7 @@ The `solution` variable is used to get information about the specific Jigx solut
 
 {% columns %}
 {% column %}
-&#x20;![Solution expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oViCGP9PqleD7r5MC51mk_img7981iphone13blueportrait.png)
+![Solution expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oViCGP9PqleD7r5MC51mk_img7981iphone13blueportrait.png)
 {% endcolumn %}
 
 {% column %}
@@ -307,15 +297,11 @@ children:
 
 {% columns %}
 {% column %}
-&#x20;![Setting Custom Variables](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xXC42Y_pvmCKo34wfapvo-20240819-091011.png)&#x20;
-
-
+![Setting Custom Variables](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xXC42Y_pvmCKo34wfapvo-20240819-091011.png)
 {% endcolumn %}
 
 {% column %}
 :::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG" size="86" position="center" caption="Showing variable value" alt="Showing variable value" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-L6LdkmoDZq3iZw0CsGaXk-20240819-130652.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} ::: ::::
-
-
 {% endcolumn %}
 {% endcolumns %}
 

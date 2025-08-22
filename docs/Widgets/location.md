@@ -2,13 +2,11 @@
 
 {% columns %}
 {% column %}
-The location widget displays a map or location on its surface. Configure it within a jig under the `widgets` property, then reference its name (`widgetId`) and define its `size` in a [grid-item](../Components/grid/grid-item.md) component.&#x20;
+The location widget displays a map or location on its surface. Configure it within a jig under the `widgets` property, then reference its name (`widgetId`) and define its `size` in a [grid-item](../Components/grid/grid-item.md) component.
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-IHfRNYw2yKgG5R2FL99Mv-20240808-083715.PNG" size="78" position="center" caption="Location widgets" alt="Location widgets" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-IHfRNYw2yKgG5R2FL99Mv-20240808-083715.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/wd-locationintro.png" alt="Location widgets" width="188"><figcaption><p>Location widgets</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -68,9 +66,7 @@ markers:
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ygetPIUnrxb2slx34WxQr-20250221-115406.png" size="80" position="center" caption="Location widget with address" alt="Location widget with address" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ygetPIUnrxb2slx34WxQr-20250221-115406.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} :::
-
-
+<figure><img src="../../.gitbook/assets/WL-address.png" alt="Location widget with address" width="188"><figcaption><p>Location widget with address</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -204,9 +200,7 @@ children:
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iplr68BNQY9Z3L1UuqbYY-20250221-120651.png" size="78" position="center" caption="Location widget with mutiple markers" alt="Location widget with mutiple markers" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-iplr68BNQY9Z3L1UuqbYY-20250221-120651.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} :::
-
-
+<figure><img src="../../.gitbook/assets/WL-Multi-markers.png" alt="Location widget with multiple markers" width="188"><figcaption><p>Location widget with multiple markers</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -214,7 +208,7 @@ This example demonstrates how to configure a `widget` within a `default` jig and
 
 **Examples:**
 
-See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/static-data/location-multiple-markers/location-widget-multiple-markers.jigx).&#x20;
+See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/location/static-data/location-multiple-markers/location-widget-multiple-markers.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -312,7 +306,7 @@ children:
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kUnaPExBNn5pQjxfochEc-20250221-122931.png" size="80" position="center" caption="Location widget with path" alt="Location widget with path" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kUnaPExBNn5pQjxfochEc-20250221-122931.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} :::
+<figure><img src="../../.gitbook/assets/WL-Paths.png" alt="Location widget with path" width="188"><figcaption><p>Location widget with path</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -407,8 +401,6 @@ children:
           jigId: location-widget-path
           widgetId: widgetPath
 ```
-
-
 {% endtab %}
 {% endtabs %}
 
@@ -416,13 +408,11 @@ children:
 
 {% columns %}
 {% column %}
-This example demonstrates how to configure a `widget` within a `default` jig and display it on a `jig.grid` using a `2x4` layout with `longitude` and `latitude` coordinates. A `component.title` is configured to display the name and address of the location.&#x20;
+This example demonstrates how to configure a `widget` within a `default` jig and display it on a `jig.grid` using a `2x4` layout with `longitude` and `latitude` coordinates. A `component.title` is configured to display the name and address of the location.
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VBTTtn5XYrJZxvt2nsjtR-20250221-122800.png" size="80" position="center" caption="Location widget with coordinates" alt="Location widget with coordinates" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VBTTtn5XYrJZxvt2nsjtR-20250221-122800.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/WL-latLong.png" alt="Location widget with coordinates" width="188"><figcaption><p>Location widget with coordinates</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

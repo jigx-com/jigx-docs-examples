@@ -16,7 +16,7 @@ Be careful when using complex expressions, such as expressions that iterate one 
 
 {% columns %}
 {% column %}
-&#x20;![Functional expressions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0uqaFEwFcsgWqmsxHy1uN_mk6aixjb8o06to7dpzsifimg0979iphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/exp-functional.png" alt="Functional expressions" width="188"><figcaption><p>Functional expressions</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -58,7 +58,7 @@ children:
 
 {% columns %}
 {% column %}
-&#x20;![Content](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VAw06TIFPwJhNmAezMiwA_contentiphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/exp-content.png" alt="Content" width="188"><figcaption><p>Content</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -88,13 +88,13 @@ source:
 
 {% columns %}
 {% column %}
-&#x20;![Multiple selector expression](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9ObXqaGM9y4_deRVoVdX_multipleselectiphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/exp-multiSelect.png" alt="Multiple selector expression" width="188"><figcaption><p>Multiple selector expression</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 In this example, we use the notation in which we select the instanceId of our component from the components, and extract the selected from the state of the component, then choose the required value. For example id, name,...
 
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/multipleSelect.jigx).&#x20;
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/multipleSelect.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

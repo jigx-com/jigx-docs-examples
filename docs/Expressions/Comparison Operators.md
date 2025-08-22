@@ -26,9 +26,7 @@ Be careful when using complex expressions, such as expressions that iterate one 
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="left"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LfmaXu2WwFEdyH\_mHHYMw\_pjyuafcqtnxtwl2rfyrgjimg0977iphone13blueportrait.png" size="82" position="center" caption="Comparison operators" alt="Comparison operators" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LfmaXu2WwFEdyH\_mHHYMw\_pjyuafcqtnxtwl2rfyrgjimg0977iphone13blueportrait.png"} :::
-
-
+<figure><img src="../../.gitbook/assets/exp-comparison.png" alt="Comparison operators" width="188"><figcaption><p>Comparison operators</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

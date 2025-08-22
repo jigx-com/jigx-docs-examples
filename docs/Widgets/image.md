@@ -6,14 +6,12 @@ The image widget is set up primarily for displaying an image on the Home Hub or 
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BNwALszoXt-3CorKq-BBL\_img3836.PNG" size="40" position="center" caption="Image widgets with title component" alt="Image widgets with title component" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BNwALszoXt-3CorKq-BBL\_img3836.PNG" width="800" height="1732" darkWidth="800" darkHeight="1732"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/wd-image-intro.png" alt="Image widgets with title component" width="188"><figcaption><p>Image widgets with title component</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 {% hint style="info" %}
-The images can be preloaded and cached using the asset folder's _images_ file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/assets).&#x20;
+The images can be preloaded and cached using the asset folder's _images_ file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/assets).
 {% endhint %}
 
 ## Configuration options
@@ -28,7 +26,7 @@ The images can be preloaded and cached using the asset folder's _images_ file. T
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IvjeY42pnn7Fwh6zp\_bzb\_wd-image22.PNG" size="80" position="center" caption="Image widget " alt="Image widget 2x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IvjeY42pnn7Fwh6zp\_bzb\_wd-image22.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
+<figure><img src="../../.gitbook/assets/WD-image22.PNG" alt="Image widget" width="188"><figcaption><p>Image widget</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -83,9 +81,7 @@ An `image` widget using 2x4 size with `component.titles` at the `top` to add a n
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qi0EVHoh4A4-Gv7lgFHo\_\_wd-image24.PNG" size="80" position="center" caption="Image widget 2x4" alt="Image widget 2x4" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qi0EVHoh4A4-Gv7lgFHo\_\_wd-image24.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/WD-image24.PNG" alt="Image widget 2x4" width="188"><figcaption><p>Image widget 2x4</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -129,9 +125,7 @@ children:
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/45b1aY0d9UNmxrtFAC8wl\_wd-image42.PNG" size="80" position="center" caption="Image widget 4x2" alt="Image widget 4x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/45b1aY0d9UNmxrtFAC8wl\_wd-image42.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
-
-
+<figure><img src="../../.gitbook/assets/WD-image42.PNG" alt="Image widget 4x2" width="188"><figcaption><p>Image widget 4x2</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -182,9 +176,7 @@ children:
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/c34eu2ef8d\_IEH5l4Ydno\_wd-imagegroup.PNG" size="80" position="center" caption="Group image widget 4x2" alt="Group image widget 4x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/c34eu2ef8d\_IEH5l4Ydno\_wd-imagegroup.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
-
-
+<figure><img src="../../.gitbook/assets/WD-imageGroup.PNG" alt="Group image widget 4x2" width="188"><figcaption><p>Group image widget 4x2</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -249,13 +241,11 @@ children:
 
 {% columns %}
 {% column %}
-The 4x4 `image` widget in this example is a simple widget with just an image shown. This is great when you want to combine the widget in another jig.&#x20;
+The 4x4 `image` widget in this example is a simple widget with just an image shown. This is great when you want to combine the widget in another jig.
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/D\_FnGdR1a4YduCE4mOwd1\_wd-image44.PNG" size="80" position="center" caption="Image widget 4x4" alt="Image widget 4x4" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/D\_FnGdR1a4YduCE4mOwd1\_wd-image44.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/WD-image44.PNG" alt="Image widget 4x4" width="188"><figcaption><p>Image widget 4x4</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
