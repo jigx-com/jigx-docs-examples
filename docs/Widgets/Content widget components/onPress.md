@@ -26,7 +26,7 @@ In this example, tapping on the widget opens the [info-modal](../../Actions/info
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZgGAqF9hDC6MTTMJC2h3i\_jw-widget-onpress.PNG" size="60" position="center" caption="Widget with onPress" alt="Widget with onPress"}&#x20;
+<figure><img src="../../../.gitbook/assets/JW-widget-onpress.PNG" alt="Widget with onPress" width="188"><figcaption><p>Widget with onPress</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

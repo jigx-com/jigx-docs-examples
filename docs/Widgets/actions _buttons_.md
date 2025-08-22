@@ -9,7 +9,7 @@ This widget allows you to add primary and/or secondary actions (buttons) to a wi
 {% endcolumn %}
 
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bXQzrMgA9C2WU-VcYpOYU\_wd-actions.png" size="58" position="center" caption="Action widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bXQzrMgA9C2WU-VcYpOYU\_wd-actions.png" width="800" height="840" darkWidth="800" darkHeight="840"}
+<figure><img src="../../.gitbook/assets/WD-actions.png" alt="Action widget"><figcaption><p>Action widget</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -25,7 +25,7 @@ mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XX
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VtuoNb4XzobXvjv\_YNiP9\_actionsiphone13blueportrait.png" size="80" position="center" caption="Actions widget" alt="Actions widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VtuoNb4XzobXvjv\_YNiP9\_actionsiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../.gitbook/assets/wd-action.png" alt="Actions widget" width="188"><figcaption><p>Actions widget</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -57,8 +57,6 @@ widgets:
           options:
             linkTo: color-palete
 ```
-
-
 {% endtab %}
 
 {% tab title="grid-item" %}

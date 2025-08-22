@@ -20,7 +20,7 @@ This action lets you immediately open the media picker, enabling you to capture 
 
 In this example, the button opens the media-picker. The configuration is set to take a picture or choose from library. The image is saved to the local database. **Example:** See the full code example in GitHub.
 
-![Action open media-picker](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a3B29qbky6oi4N7auiU5F-20250220-173914.png)
+<figure><img src="../../.gitbook/assets/action-openMediaPicker.png" alt="" width="563"><figcaption></figcaption></figure>
 
 {% code title="action-open-media-picker.jigx" %}
 ```yaml

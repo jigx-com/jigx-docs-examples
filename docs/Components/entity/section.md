@@ -28,7 +28,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-<figure><img src="../../../.gitbook/assets/cc-entity-section.png" alt="Jig with sections" width="188"><figcaption><p>Jig with sections</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cc-entity-section (1).png" alt="Jig with sections" width="188"><figcaption><p>Jig with sections</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -264,7 +264,7 @@ datasources:
 
 {% columns %}
 {% column %}
-<figure><img src="../../../.gitbook/assets/cc-entity-sction1.png" alt="Jig with sections &#x26; rows" width="188"><figcaption><p>Jig with sections &#x26; rows</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cc-entity-sction1 (1).png" alt="Jig with sections &#x26; rows" width="188"><figcaption><p>Jig with sections &#x26; rows</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

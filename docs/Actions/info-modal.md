@@ -2,7 +2,7 @@
 
 The info-modal is a pop-up window that provides additional information or context without navigating away from the current screen. It is used to display additional information and offer guidance or instructions. The modal appears as a temporary overlay on top of the current screen, dimming the background to focus your attention on the modal content. The Info-modal includes interactive elements like buttons, images, icons, or links.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GT3z8bVI4Thn1WDWMkgPB\_cc-infom-intro.png" size="86" position="center" caption="Info-modal" alt="Info-modal" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GT3z8bVI4Thn1WDWMkgPB\_cc-infom-intro.png" width="800" height="538" darkWidth="800" darkHeight="538"}
+<figure><img src="../../.gitbook/assets/CC-infoM-intro.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ## Configuration options
 
@@ -32,13 +32,13 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;In this example, the info-modal is configured on an action. When the button is pressed the info-modal opens and displays an avatar. The avatar `uri` property is used to set the avatar image. The `buttonText` is configured to close the info-modal.
+In this example, the info-modal is configured on an action. When the button is pressed the info-modal opens and displays an avatar. The avatar `uri` property is used to set the avatar image. The `buttonText` is configured to close the info-modal.
 
 **Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-avatar.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VJwrxIQhnivZs1hnS-Glo\_cc-infom-avatar.PNG" size="70" position="center" caption="Info-modal with avatar" alt="Info-modal with avatar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VJwrxIQhnivZs1hnS-Glo\_cc-infom-avatar.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/CC-InfoM-avatar.PNG" alt="Info-modal with avatar" width="188"><figcaption><p>Info-modal with avatar</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -87,7 +87,7 @@ actions:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nHMaSdrD4gXN3E5WClJKO\_cc-infom-icon.PNG" size="70" position="center" caption="Info-modal with icon" alt="Info-modal with icon" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nHMaSdrD4gXN3E5WClJKO\_cc-infom-icon.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}&#x20;
+<figure><img src="../../.gitbook/assets/CC-InfoM-icon.PNG" alt="Info-modal with icon" width="188"><figcaption><p>Info-modal with icon</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -143,11 +143,11 @@ actions:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7FLQDKXDKA4e1UCDKLEcx\_cc-infom-image.PNG" size="70" position="center" caption="Info-modal with an image" alt="Info-modal with an image" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7FLQDKXDKA4e1UCDKLEcx\_cc-infom-image.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/CC-InfoM-image.PNG" alt="Info-modal with an image" width="188"><figcaption><p>Info-modal with an image</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Tapping on the action button opens the info-modal showing an image of Thialand. The image property uses `resizeMode` ensuring it is contained in the modal. The `buttonText` allows you to close the modal.
+Tapping on the action button opens the info-modal showing an image of Thailand. The image property uses `resizeMode` ensuring it is contained in the modal. The `buttonText` allows you to close the modal.
 
 **Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/info-modal/info-modal-image.jigx).
 {% endcolumn %}
@@ -196,7 +196,7 @@ actions:
 
 ### info-modal in calendar jig
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42pa6T1c-ZmK3uaq-Fb-Y\_cc-infom-calendar.PNG" size="90" position="center" caption="Info-modal in a calendar jig" alt="Info-modal in a calendar jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42pa6T1c-ZmK3uaq-Fb-Y\_cc-infom-calendar.PNG" width="800" height="389" darkWidth="800" darkHeight="389"}
+<figure><img src="../../.gitbook/assets/CC-InfoM-calendar.PNG" alt="Info-modal in a calendar jig" width="563"><figcaption><p>Info-modal in a calendar jig</p></figcaption></figure>
 
 In this example the info-modal is used four places in the jig:
 
@@ -294,7 +294,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T\_RsT3Q\_vvFf2sJUSbFr4\_cc-infom-default.PNG" size="70" position="center" caption="Info-modal on a default jig" alt="Info-modal on a default jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T\_RsT3Q\_vvFf2sJUSbFr4\_cc-infom-default.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/CC-infoM-default.PNG" alt="Info-modal on a default jig" width="188"><figcaption><p>Info-modal on a default jig</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -436,7 +436,7 @@ options:
 
 ### info-modal in list jig
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gCf59HwaD\_adrk5tU5b\_z\_cc-infom-list2.PNG" size="80" position="center" caption="Info-modal in a list jig" alt="Info-modal in a list jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gCf59HwaD\_adrk5tU5b\_z\_cc-infom-list2.PNG" width="800" height="538" darkWidth="800" darkHeight="538"}
+<figure><img src="../../.gitbook/assets/CC-infoM-list2.PNG" alt="Info-modal in a list jig" width="563"><figcaption><p>Info-modal in a list jig</p></figcaption></figure>
 
 In this example the info-modal is used three places in the jig:
 
@@ -647,7 +647,7 @@ datasources:
 
 ### info-modal in onPress action on a widget
 
-![Info-modal on widget](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x16UEinXJlMDbA6LAMVXp_cc-infom-widget.png)
+<figure><img src="../../.gitbook/assets/CC-InfoM-widget.png" alt="Info-modal on widget" width="563"><figcaption><p>Info-modal on widget</p></figcaption></figure>
 
 In this example the info-modal is added to the `onPress` event of the widgets.
 

@@ -22,7 +22,7 @@ This example shows how to set up the `open-app-settings` action for cases where 
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xQi39F4P1b8CRXDHmRtj\_-20250415-085249.gif" size="66" position="center" caption="Open app settings" alt="Open app settings" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xQi39F4P1b8CRXDHmRtj\_-20250415-085249.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+<figure><img src="../../.gitbook/assets/action-openAppSetting.gif" alt="Open app settings" width="170"><figcaption><p>Open app settings</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

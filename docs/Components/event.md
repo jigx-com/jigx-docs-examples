@@ -20,7 +20,7 @@ Certain actions can be executed on the event; for example, when pressing on the 
 
 {% columns %}
 {% column %}
-&#x20;![Meeting event](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qH20EHiZsEqMm-1fydZau_tii6byi98kqitscdlxevent-meetingeventiphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/cc-entity-section.png" alt="Meeting event" width="188"><figcaption><p>Meeting event</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -28,11 +28,9 @@ The jig displays the event on the calendar. We immediately see what time the mee
 
 **Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/static-data/event-of-meeting/event-of-meeting.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-of-meeting/event-of-meeting-dynamic.jigx).
 
-**Datasources**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-training.jigx) See the full datasource for dynamic data in [GitHub](event.md)&#x20;
+**Datasources**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-training.jigx) See the full datasource for dynamic data in [GitHub](event.md)
 {% endcolumn %}
 {% endcolumns %}
-
-:::CodeblockTabs&#x20;
 
 {% tabs %}
 {% tab title="event-of-meeting" %}
@@ -138,17 +136,15 @@ options:
 
 {% columns %}
 {% column %}
-&#x20;![Training event](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rZqCjnEYr20cKgcuryWYA_event-training.PNG)&#x20;
-
-
+<figure><img src="../../.gitbook/assets/cc-entity-sction1.png" alt="Training event" width="188"><figcaption><p>Training event</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-&#x20;The jig displays a multi-day event on the calendar.
+The jig displays a multi-day event on the calendar.
 
 **Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/static-data/multi-day-event/multi-day-event.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/multi-day-event/multi-day-event-dynamic.jigx).
 
-**Datasources**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-vacation.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-vacation-dynamic.jigx).&#x20;
+**Datasources**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-vacation.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-vacation-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -223,28 +219,22 @@ options:
 
 {% columns %}
 {% column %}
-&#x20;![Event with action](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VRUxBeE5caQr5pntG0EYD_img8568iphone13blueportrait.png)&#x20;
-
-
+<figure><img src="../../.gitbook/assets/cc-event3.png" alt="Event with action"><figcaption><p>Event with action</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-&#x20;![Event with action](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YeceMRw6Rbi1bKY6Yfxpe_img8569iphone13blueportrait.png)&#x20;
+The jig displays an event on the calendar with actions on the main screen or in the detail of the event.
+
+**Examples**:\
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/event-with-action.jigx).\
+See also the supporting files [create event](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/create-event.jigx) and [add event users](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/add-event-user.jigx) in GitHub.
+
+**Datasource**:\
+See the full datasource using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/calendar-data-dynamic.jigx).
 
 
 {% endcolumn %}
 {% endcolumns %}
-
-The jig displays an event on the calendar with actions on the main screen or in the detail of the event.
-
-**Examples**: \
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/event-with-action.jigx). \
-See also the supporting files [create event](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/create-event.jigx) and [add event users](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-with-action/add-event-user.jigx) in GitHub.
-
-**Datasource**: \
-See the full datasource using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/calendar-data-dynamic.jigx).
-
-:::CodeblockTabs&#x20;
 
 {% tabs %}
 {% tab title="event-with-action.jigx" %}

@@ -6,7 +6,7 @@ The avatar widget can be used as a unique visual identifier, for example, to dis
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dfGetxkAlt3Vcv55GBnnm\_wd-avatar.PNG" size="70" position="center" caption="Avatar widgets" alt="Avatar widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dfGetxkAlt3Vcv55GBnnm\_wd-avatar.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/WD-Avatar.PNG" alt="Avatar widgets" width="188"><figcaption><p>Avatar widgets</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -22,7 +22,7 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2X
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2zMUlETjxsJBNeE0fHc0e\_avatariphone13blueportrait.png" size="80" position="center" caption="Avatar widget" alt="Avatar widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2zMUlETjxsJBNeE0fHc0e\_avatariphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../.gitbook/assets/wd-avatar1.png" alt="Avatar widget" width="188"><figcaption><p>Avatar widget</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -92,11 +92,11 @@ children:
 {% column %}
 This is example shows the avatar widget using the `component.title` to add a name and icon to the widget.
 
-**Examples**: See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/avatar-2_2x2.jigx).&#x20;
+**Examples**: See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x2/avatar-2_2x2.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_U1nDQMrehHQwSgcfmuRF\_wd-avatartitle.PNG" size="74" position="center" caption="Avatar widget with title" alt="Avatar widget with title" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_U1nDQMrehHQwSgcfmuRF\_wd-avatartitle.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}&#x20;
+<figure><img src="../../.gitbook/assets/WD-avatarTitle.PNG" alt="Avatar widget with title" width="188"><figcaption><p>Avatar widget with title</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -139,7 +139,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQMj-dwf5\_KkhMH4AMvys\_avatargroupiphone13blueportrait.png" size="80" position="center" caption="Avatar in a group widget" alt="Avatar in a group widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQMj-dwf5\_KkhMH4AMvys\_avatargroupiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../.gitbook/assets/wd-avatar2.png" alt="Avatar in a group widget" width="188"><figcaption><p>Avatar in a group widget</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -230,7 +230,7 @@ In this example the avatar widget is combined with the list widget inside the gr
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-52t4bV7-5EmSZicDP\_BNb-20240808-080947.PNG" size="74" position="center" caption="Avatar widget in group widget" alt="Avatar widget in group widget" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-52t4bV7-5EmSZicDP\_BNb-20240808-080947.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
+<figure><img src="../../.gitbook/assets/wd-avatar3.png" alt="Avatar widget in group widget" width="188"><figcaption><p>Avatar widget in group widget</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

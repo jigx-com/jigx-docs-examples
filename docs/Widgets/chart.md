@@ -6,7 +6,7 @@ The chart widget is suitable for displaying the <[line-chart](https://docs.jigx.
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/adjbqUzKWPTPOznhe57WH\_wd-charts.PNG" size="64" position="center" caption="Chart widgets" alt="Chart widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/adjbqUzKWPTPOznhe57WH\_wd-charts.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/WD-charts.PNG" alt="Chart widgets" width="188"><figcaption><p>Chart widgets</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -26,7 +26,7 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2X
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/J6pNWuARKgPksDAqWwkzK\_wd-chartline22.PNG" size="74" position="center" caption="Line-chart 2x2" alt="Line-chart 2x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/J6pNWuARKgPksDAqWwkzK\_wd-chartline22.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/WD-chartline22.PNG" alt="Line-chart 2x2" width="188"><figcaption><p>Line-chart 2x2</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -134,7 +134,7 @@ In this example select the `chart` widget and add a `component.line-chart` and a
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9x1YJjqI0mnBBDuf9rBh\_wd-chartline24.PNG" size="84" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/q9x1YJjqI0mnBBDuf9rBh\_wd-chartline24.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/WD-chartline24.PNG" alt="Line Chart widget" width="188"><figcaption><p>Line Chart widget</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -223,13 +223,13 @@ children:
 
 {% columns %}
 {% column %}
-&#x20;![Line-chart widget 4x4](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YwBcJsDpeAgYRh0HOhte2_wd-line44.PNG)&#x20;
+<figure><img src="../../.gitbook/assets/WD-line44.PNG" alt="Line-chart widget 4x4"><figcaption><p>Line-chart widget 4x4</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 In this example select the `chart` widget and add a `component.line-chart` and add a `component.title` at the `top` and at the `bottom`.
 
-**Example:** See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x4/chart-line-2_4x4.jigx) for the Sales performance line-chart widget. See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x4/chart-line-1_4x4.jigx) for the Quarterly Company Progress.&#x20;
+**Example:** See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x4/chart-line-2_4x4.jigx) for the Sales performance line-chart widget. See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x4/chart-line-1_4x4.jigx) for the Quarterly Company Progress.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -417,7 +417,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mqh4r9GH4TOTnBy1\_kXtQ\_linechartiphone13blueportrait.png" size="80" position="center" caption="line-chart widget" alt="line-chart widget 4" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mqh4r9GH4TOTnBy1\_kXtQ\_linechartiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../.gitbook/assets/wd-linechart-4x2.png" alt="line-chart widget" width="188"><figcaption><p>line-chart widget</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -425,7 +425,7 @@ This example is configured using a line-chart to display in the chart widget.
 
 **Examples**: See the complete example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/static-data/chart-widget-with-line-chart/chart-widget-line-chart.jigx). See the complete example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/chart/dynamic-data/chart-widget-with-line-chart/chart-widget-line-dynamic.jigx).
 
-**Datasources**: See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx). See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx)&#x20;
+**Datasources**: See the complete datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/static/series1.jigx). See the complete datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx)
 {% endcolumn %}
 {% endcolumns %}
 
@@ -532,7 +532,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/klbestBzZ9mIfpOu6q7D\_\_wd-linegroup.PNG" size="80" position="center" caption="Group widget with line-charts" alt="Group widget with line-charts" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/klbestBzZ9mIfpOu6q7D\_\_wd-linegroup.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"
+<figure><img src="../../.gitbook/assets/WD-lineGroup.PNG" alt="Group widget with line-charts" width="188"><figcaption><p>Group widget with line-charts</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -776,7 +776,7 @@ In this example select the `chart` widget and add a `component.bar-chart` and ad
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fp7s1B\_\_h9Bjo1bbuR9-k\_wd-bar22.PNG" size="80" position="center" caption="Bar-chart widget 2x2" alt="Bar-chart widget 2x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fp7s1B\_\_h9Bjo1bbuR9-k\_wd-bar22.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/WD-bar22.PNG" alt="Bar-chart widget 2x2" width="188"><figcaption><p>Bar-chart widget 2x2</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -872,7 +872,7 @@ children:
 
 {% columns %}
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y3CKSyi1KM2u5eeo3bFHz\_wd-bar42.PNG" size="80" position="center" caption="Bar-chart widget 4x2" alt="Bar-chart widget 4x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y3CKSyi1KM2u5eeo3bFHz\_wd-bar42.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/WD-bar42.PNG" alt="Bar-chart widget 4x2" width="188"><figcaption><p>Bar-chart widget 4x2</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -960,9 +960,7 @@ children:
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2aOyKeqQJOsjZiJRMpoIO\_barchartiphone13blueportrait.png" size="80" position="center" caption="Bar-chart widget" alt="Bar-chart widget" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2aOyKeqQJOsjZiJRMpoIO\_barchartiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
-
-
+<figure><img src="../../.gitbook/assets/wd-barchart42.png" alt="Bar-chart widget" width="188"><figcaption><p>Bar-chart widget</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -1071,9 +1069,7 @@ children:
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9aLZHIlMWl2SxoD9rn2V9\_piechartiphone13blueportrait.png" size="80" position="center" caption="Pie-chart widget 2x" alt="Pie-chart widget 2x2" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9aLZHIlMWl2SxoD9rn2V9\_piechartiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
-
-
+<figure><img src="../../.gitbook/assets/wd-piechart22.png" alt="Pie-chart widget 2x2" width="188"><figcaption><p>Pie-chart widget 2x2</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -1158,13 +1154,11 @@ children:
 {% column %}
 In this example a chart widget is used with the `component.pie-chart` and `component.titles` at the `top` and `bottom` to add additional information.
 
-**Example:** See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x4/chart-pie-1_2x4.jigx).&#x20;
+**Example:** See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/2x4/chart-pie-1_2x4.jigx).
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FA-eiRkpMZ-BpHy1o-b6s\_wd-pie2x4.PNG" size="80" position="center" caption="Pie-chart widget 2x4" alt="Pie-chart widget 2x4" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FA-eiRkpMZ-BpHy1o-b6s\_wd-pie2x4.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/WD-pie2x4.PNG" alt="Pie-chart widget 2x4" width="188"><figcaption><p>Pie-chart widget 2x4</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -1242,13 +1236,11 @@ children:
 {% column %}
 In this example a `group` widget is used to combine a `chart` and `list` widget with `component.pie-chart` and `component.titles` at the `top` to add additional information.
 
-**Example:** See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/combined-chart-list-1_4x2.jigx).&#x20;
+**Example:** See the complete example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/4x2/combined-chart-list-1_4x2.jigx).
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zS66aUyNJyNwAzzhSZ1pP\_wd-combinedpie.PNG" size="80" position="center" caption="Group widget 4x" alt signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zS66aUyNJyNwAzzhSZ1pP\_wd-combinedpie.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
-
-
+<figure><img src="../../.gitbook/assets/WD-combinedpie.PNG" alt="Group widget 4x4" width="188"><figcaption><p>Group widget 4x4</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
