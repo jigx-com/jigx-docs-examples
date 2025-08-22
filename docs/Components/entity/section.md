@@ -27,11 +27,11 @@ Some properties are common to all components, see [Common component properties](
 ### The Entity with sections, rows, and entity fields (Display only)
 
 {% columns %}
-{% column width="41.66666666666667%" %}
-&#x20;![Jig with sections](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5SKtUcADiqdQ1iYCL3z1M_sec1iphone13blueportrait.png)&#x20;
+{% column %}
+<figure><img src="../../../.gitbook/assets/cc-entity-section.png" alt="Jig with sections" width="188"><figcaption><p>Jig with sections</p></figcaption></figure>
 {% endcolumn %}
 
-{% column width="58.33333333333333%" %}
+{% column %}
 Using sections, rows, and entity fields to create relevant display sections for the information to be functional yet elegant and neatly organized.
 
 **Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-row-entity-field-sd) See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-row-entity-field-dd.jigx).
@@ -264,9 +264,7 @@ datasources:
 
 {% columns %}
 {% column %}
-&#x20;![Jig with sections & rows](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9vfRyetsrPXmlodRx0toQ_form-with-sectionsiphone13blueportrait.png)&#x20;
-
-
+<figure><img src="../../../.gitbook/assets/cc-entity-sction1.png" alt="Jig with sections &#x26; rows" width="188"><figcaption><p>Jig with sections &#x26; rows</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -274,7 +272,7 @@ Similar to the above example, this has the same functionality, except that this 
 
 **Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-row-children-dd.jigx).
 
-**Datasource:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).&#x20;
+**Datasource:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -380,29 +378,21 @@ datasources:
 
 {% columns %}
 {% column %}
-**Basic**
-
-![Jig with display sections & fields](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nMs-BfhD6R1UM-4N3Q6BL_img9804iphone13blueportrait.png)
+<figure><img src="../../../.gitbook/assets/cc-enttiy-2.png" alt="Entity with sections and entity-fields" width="188"><figcaption><p>Entity with sections and entity-fields</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-**Compact**
-
-![Jig with display sections & fields](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hNKX2CKxIPamHFP1U0RPu_img9803iphone13blueportrait.png)&#x20;
-
-
-{% endcolumn %}
-{% endcolumns %}
-
 This is another example for display purposes only, but this time without the rows. Note the difference in the fields as they now display below each other instead of numerous entity-fields in a row.
 
-**Examples:** \
-**Basic**- See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd.jigx). \
+**Examples:**\
+**Basic**- See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd.jigx).\
 **Compact** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/static-data/section-entity-field-sd-compact.jigx).
 
-**Datasources:** \
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). \
+**Datasources:**\
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).\
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
 {% tabs %}
 {% tab title="section-entity-field (static)" %}
@@ -703,7 +693,7 @@ datasources:
 
 {% columns %}
 {% column %}
-&#x20;![Form with sections](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/U_yPbJflLyS_T1tiIygID_secc3iphone13blueportrait.png)&#x20;
+<figure><img src="../../../.gitbook/assets/cc-entity-section3.png" alt="Form with sections" width="188"><figcaption><p>Form with sections</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -711,7 +701,7 @@ This is the same as the above, again with the exception of being used in a form 
 
 **Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-children-dd.jigx).
 
-**Datasources:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-children-dd.jigx).&#x20;
+**Datasources:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/form-section-children-dd.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

@@ -25,7 +25,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-![Field-row](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VA6mlFjt5KI9NaTxqInAb_mv9-5gc8jut5xwtpdtsmock-fieldiphone13blueportrait.png)&#x20;
+<figure><img src="../../../.gitbook/assets/cc-field-row1.png" alt="Field-row" width="188"><figcaption><p>Field-row</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -243,9 +243,7 @@ datasources:
 
 {% columns %}
 {% column %}
-&#x20;![field-row on form](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O9ZlnWKC7QQAQScg2Klh4_8uyi918oalwk7j3rzytb1mock-field2iphone13blueportrait.png)&#x20;
-
-
+<figure><img src="../../../.gitbook/assets/cc-field-row2.png" alt="field-row on form" width="188"><figcaption><p>field-row on form</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -254,8 +252,6 @@ datasources:
 **Datasource:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
-
-:::CodeblockTabs&#x20;
 
 {% tabs %}
 {% tab title="form-rows-children (dynamic)" %}

@@ -158,7 +158,7 @@ datasources:
 
 {% columns %}
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y0mOpU1tdF-6Q5inYOHBx\_c-barmultiseries.PNG
+<figure><img src="../../../.gitbook/assets/C-BarMultiSeries.png" alt="Chart with multiple series" width="188"><figcaption><p>Chart with multiple series</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -308,7 +308,7 @@ The jig displays a bar chart with an annual overview of finances. The x-axis sho
 {% endcolumn %}
 
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EP5F4QeY\_kyU4tfa\_QRG-\_charts-bar-plotbands.PNG
+<figure><img src="../../../.gitbook/assets/charts-bar-plotbands.png" alt="Bar-chart with plot bands" width="188"><figcaption><p>Bar-chart with plot bands</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -396,7 +396,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QoIeM\_NRC-TWN5R079CYy\_cc-barchartexpression.PNG
+<figure><img src="../../../.gitbook/assets/CC-barChartExpression.png" alt="Chart using expressions" width="188"><figcaption><p>Chart using expressions</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

@@ -6,7 +6,7 @@ The countdown component functionality counts down from a date, date/time, and ti
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD\_bJvdgslD-\_cd-inputsl.PNG
+<figure><img src="../../.gitbook/assets/CD-InputsL.png" alt="Countdown" width="188"><figcaption><p>Countdown</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -35,15 +35,13 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-laofo1T3WD\_bJvdgslD-\_cd-inputsl.PNG
+<figure><img src="../../.gitbook/assets/CD-InputsL.png" alt="Countdown with inputs" width="188"><figcaption><p>Countdown with inputs</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 This example shows the `expiresAt` property value set using a static value, an expression, a static datasource, and a dynamic datasource.
 
-**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-input.jigx%22).&#x20;
-
-
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-input.jigx%22).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -129,7 +127,7 @@ You can choose to `align` the `component.countdown` to the `left`, `right`, `cen
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5fs13z66fs4frrvBiL0V6\_cd-alignl.PNG
+<figure><img src="../../.gitbook/assets/CD-alignL.PNG" alt="Countdown with alignment" width="188"><figcaption><p>Countdown with alignment</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -178,7 +176,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/InsX4GIv9T12zvbtQjiDp\_cd-sizel.PNG
+<figure><img src="../../.gitbook/assets/CD-SizeL.png" alt="Countdown sizes" width="188"><figcaption><p>Countdown sizes</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -233,9 +231,7 @@ children:
 
 {% columns %}
 {% column %}
-&#x20;![Action when pressed](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w0GIWssJYaMr0muw1PZwb_cd-onpressl.PNG)&#x20;
-
-
+<figure><img src="../../.gitbook/assets/CD-onPressLPNG.PNG" alt="Action when pressed"><figcaption><p>Action when pressed</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -338,16 +334,14 @@ children:
 ### Countdown onFinish
 
 {% columns %}
-{% column width="41.66666666666667%" %}
+{% column %}
 In this example the `onFinish` property is used to show a modal when the `component.countdown` `expiresAt` property reaches zero.
 
 **Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-onfinish.jigx).
 {% endcolumn %}
 
-{% column width="58.33333333333333%" %}
-&#x20;![Modal when countdown expires](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_Cmtlj3SADsfj7CruXBXF-20240822-125634.PNG)
-
-
+{% column %}
+<figure><img src="../../.gitbook/assets/CD-OnFinishL.PNG" alt="Modal when countdown expires"><figcaption><p>Modal when countdown expires</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -370,9 +364,7 @@ In this example the `onFinish` property is used to show a modal when the `compon
 
 {% columns %}
 {% column %}
-&#x20;![Countdown from jig input](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-R9XOjo8mV7rhiI2DHdOQW-20250304-070603.png)&#x20;
-
-
+<figure><img src="../../.gitbook/assets/CD-jigInputL2.PNG" alt="Countdown from jig input"><figcaption><p>Countdown from jig input</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

@@ -23,23 +23,23 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;**Basic**
+**Basic**
 
-![Entity fields](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/u1TWldxzruaOe5VzA2yum_en1iphone13blueportrait.png)&#x20;
+<figure><img src="../../../.gitbook/assets/cc-entity-field1.png" alt="Entity fields" width="188"><figcaption><p>Entity fields</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 **Compact**
 
-![Entity fields compact](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/MBzXs2Ep3g7RSPFz0SD-5_en11iphone13blueportrait.png)&#x20;
+<figure><img src="../../../.gitbook/assets/cc-entity-field2.png" alt="Entity fields compact" width="188"><figcaption><p>Entity fields compact</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 This example demonstrates the visual display and behavior of the entity-fields on this default jig.
 
-**Examples:**&#x20;
+**Examples:**
 
-**Basic** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-examples-static.jigx).&#x20;
+**Basic** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-examples-static.jigx).
 
 **Compact** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-sd-compact.jigx).
 
@@ -186,27 +186,27 @@ children:
 {% column %}
 **Basic**
 
-![Entity fields with datasource](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4VyGLZcUwDOFQlXtnqkdO_en2iphone13blueportrait.png)&#x20;
+<figure><img src="../../../.gitbook/assets/cc-entity-field3.png" alt="Entity fields with datasource" width="188"><figcaption><p>Entity fields with datasource</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 **Compact**
 
-![Entity fields with datasource](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0-XRxNGthxp7W2jqHMZii_en22iphone13blueportrait.png)&#x20;
+<figure><img src="../../../.gitbook/assets/cc-entity-field4.png" alt="Entity fields with datasource" width="188"><figcaption><p>Entity fields with datasource</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 An example to show how entity fields display when linked to a datasource.
 
-**Examples:** \
-**Basic** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-sd.jigx). \
+**Examples:**\
+**Basic** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-sd.jigx).\
 **Compact** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/static-data/entity-field-sd-compact.jigx).
 
-**Basic** - See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/dynamic-data/entity-field-dd.jigx). \
+**Basic** - See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/dynamic-data/entity-field-dd.jigx).\
 **Compact** - See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/entity-field/dynamic-data/entity-field-dd-compact.jigx)
 
-**Datasources:** \
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). \
+**Datasources:**\
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).\
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dd.jigx).
 
 {% tabs %}
@@ -465,7 +465,7 @@ In this example, the `rightIcons` color is determined by adding a `style` proper
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RtiAb3SAzNGz-QOMG3s8L\_cc-entityfield-color.PNG
+<figure><img src="../../../.gitbook/assets/CC-entityfield-color.png" alt="Entity-field with color" width="188"><figcaption><p>Entity-field with color</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

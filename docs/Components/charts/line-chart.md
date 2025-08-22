@@ -2,11 +2,11 @@
 
 {% columns %}
 {% column %}
-The component can display statistics related to data records represented in a line chart. This can show a single or multiple data series for comparative purposes and highlight specific regions or ranges on the chart to make it easier for users to interpret and analyze the data. Mostly used in [jig.default](<../../Jig Types/jig_default.md>) or [jig.list](<../../Jig Types/jig_list.md>).&#x20;
+The component can display statistics related to data records represented in a line chart. This can show a single or multiple data series for comparative purposes and highlight specific regions or ranges on the chart to make it easier for users to interpret and analyze the data. Mostly used in [jig.default](<../../Jig Types/jig_default.md>) or [jig.list](<../../Jig Types/jig_list.md>).
 {% endcolumn %}
 
 {% column %}
-Image\[]{alt="Line Chart Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/87b0VKGM9ub8wccKGbXvz\_line-chart.png
+<figure><img src="../../../.gitbook/assets/line-chart.png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -65,7 +65,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a8Eczez-B9FhlY1DgccaP\_cc-linechartfinance.PNG"
+<figure><img src="../../../.gitbook/assets/CC-linechartFinance.png" alt="Line-chart financial" width="188"><figcaption><p>Line-chart financial</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -73,7 +73,7 @@ The widget displays an annual overview of finances. The x-axis shows the months 
 
 **Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/static-data/line-chart-financial/line-chart-financial.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/dynamic-data/line-chart-financial/line-chart-financial-dynamic.jigx)
 
-**Datasources:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/finance-dynamic.jigx).&#x20;
+**Datasources:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/finance-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -164,7 +164,7 @@ datasources:
 
 {% columns %}
 {% column %}
-&#x20;![Multiple series](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-8GXThFXyg72KBY-Bqw6m_l7gpsdv4391wozh5boekfline-chartiphone13blueportrait.png)&#x20;
+<figure><img src="../../../.gitbook/assets/cc-lineChart-multiSeries.png" alt="Multiple series" width="188"><figcaption><p>Multiple series</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -172,7 +172,7 @@ The widget displays an annual overview of finances. The x-axis shows the months 
 
 **Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/static-data/line-chart-multiple-series/line-chart-multiple-series.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/dynamic-data/line-chart-multiple-series/line-chart-multiple-dynamic.jigx).
 
-**Datasources in order series1 and series2:** See the full datasource for dynamic data [series 1](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx) and [series 2](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx) in GitHub.&#x20;
+**Datasources in order series1 and series2:** See the full datasource for dynamic data [series 1](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series1-dynamic.jigx) and [series 2](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx) in GitHub.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -315,7 +315,7 @@ The chart shows an annual overview of finances. The x-axis shows the months and 
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Q28ZbI6Gwo1zas-YV1bWU\_charts-line-plotbands.PNG
+<figure><img src="../../../.gitbook/assets/Charts-Line-plotbands.png" alt="Chart with plot bands" width="188"><figcaption><p>Chart with plot bands</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -371,7 +371,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2oguMl295fgFqnaXqr06u\_cc-linechartexpression.PNG
+<figure><img src="../../../.gitbook/assets/CC-lineChartExpression.png" alt="Chart using expressions" width="188"><figcaption><p>Chart using expressions</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -379,7 +379,7 @@ In this example expressions are used to dertermine the `min`, `max`, and `tickAm
 
 **Examples:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/line-chart/dynamic-data/line-chart-multiple-series/line-chart-multiple-dynamic.jigx)
 
-**Datasources** See the datasource code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx).&#x20;
+**Datasources** See the datasource code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/series2-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

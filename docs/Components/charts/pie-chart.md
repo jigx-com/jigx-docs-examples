@@ -6,9 +6,7 @@ The component can be used to display statistics related to data records. Mostly 
 {% endcolumn %}
 
 {% column %}
-&#x20;![Pie Chart Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CEsXqKXctc_APbWr9-1G9_pie-chart.png)&#x20;
-
-
+<figure><img src="../../../.gitbook/assets/CC-pieChart-intro.png" alt="Pie Chart preview"><figcaption><p>Pie Chart preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -32,20 +30,18 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;![Pie Chart](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CAWSPzutiCMFmb4gxIrya_w40z-dj51d0ecr9n92ccvpiechartiphone13blueportrait.png)&#x20;
-
-
+<figure><img src="../../../.gitbook/assets/pie-chart.png" alt="Pie chart"><figcaption><p>Pie chart</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 This jig displays a complete pie chart. In this example, these are issues where green shows resolved issues, yellow issues in progress, and red unresolved issues.
 
-**Examples:** \
-See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/static-data/pie-chart/pie-chart.jigx). \
+**Examples:**\
+See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/static-data/pie-chart/pie-chart.jigx).\
 See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/dynamic-data/pie-chart/pie-chart-dynamic.jigx).
 
-**Datasources:** \
-See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-dynamic.jigx). &#x20;
+**Datasources:**\
+See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -119,7 +115,7 @@ datasources:
 
 {% columns %}
 {% column %}
-&#x20;![Pie chart - arch](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4-g91a_Saz9YXCiIcWHcR_bco9qdkyaolqvlk3xgf8gpie-chart-archchartiphone13blueportrait.png)&#x20;
+<figure><img src="../../../.gitbook/assets/cc-pieChart2.png" alt="Pie chart - arch" width="188"><figcaption><p>Pie chart - arch</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -127,13 +123,9 @@ This jig displays an arc pie chart. This example shows the occupancy in a wareho
 
 **Examples:** See the full code sample using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/static-data/pie-chart-arch/pie-chart-arch.jigx). See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/pie-chart/dynamic-data/pie-chart-arch/pie-chart-arch-dynamic.jigx).
 
-**Datasources:** See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-arch-chart-dynamic.jigx).&#x20;
+**Datasources:** See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-arch-chart-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
-
-:::VerticalSplitItem&#x20;
-
-:::CodeblockTabs&#x20;
 
 {% tabs %}
 {% tab title="arch-chart (static)" %}
