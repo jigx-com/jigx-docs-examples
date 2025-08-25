@@ -83,7 +83,7 @@ The ChatGPT REST API allows prompts in the JSON body parameter you send to the C
 * Configure the [REST API](<Data Providers/REST.md>) integration.
 * Show it in your Jigx mobile app.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W-o\_ZWcHkRq83E4Yj4YA5\_ai-diagram.png" size="66" position="center" caption="OpenAI integration " alt="OpenAI integration " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W-o\_ZWcHkRq83E4Yj4YA5\_ai-diagram.png" width="800" height="256" darkWidth="800" darkHeight="256"}
+<figure><img src="../.gitbook/assets/AI-diagram.png" alt="" width="525"><figcaption></figcaption></figure>
 
 ## High-level steps
 
@@ -99,7 +99,7 @@ The ChatGPT REST API allows prompts in the JSON body parameter you send to the C
 
 Jigx functions are used to configure the REST integration with AI models such as ChatGPT. Once a Jigx function has been configured you can call it anywhere from your visual components. See the section on [REST](<Data Providers/REST.md>) integration to understand how to use REST in Jigx. Below is an explanation describing how the parameters are configured to integrate Jigx and the AI model. It is important to refer to the AI model REST API you have selected to use, to ensure you have provided the required input and configured the output to return the correct response from the model.
 
-<table><thead><tr><th width="180.13671875">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>method</code></td><td><code>POST</code> -The POST request can be used to send training data to the server where the AI model is hosted. The server can then use this data to train the model.</td></tr><tr><td><code>url</code></td><td>Specify the URL for the AI model's REST API. For example, the URL for ChatGPT is: <a href="https://api.openai.com/v1/chat/completions">https://api.openai.com/v1/chat/completions</a></td></tr><tr><td><code>outputTransform</code></td><td>The ouputTransform is where you configure the AI reponse. Check the AI API response to ensure you add the correct configuration. For example, <strong>OpenAPI response</strong> shows the following code: <code>{ "id": "chatcmpl-123", "object": "chat.completion", "created": 1677652288, "model": "gpt-3.5-turbo-0125", "system_fingerprint": "fp_44709d6fcb", "choices": [{ "index": 0, "message": { "role": "assistant", "content": "\n\nHello there, how may I assist you today?", }, "logprobs": null, "finish_reason": "stop" }], "usage": { "prompt_tokens": 9, "completion_tokens": 12, "total_tokens": 21 } }</code> In the <strong>outputTransform</strong> you configure the following: <code>outputTransform: | { "content": $.choices[0].message.content}</code></td></tr><tr><td><code>inputTransform</code></td><td>Provide the AI with the information it requires to return the response/chat message. <code>model</code> - is the name and version of the AI model. <code>response_format</code> - the expected input type, for example, json_object. <code>message</code> - under this property configure the prompts to train the AI, by specifying the <code>role</code> and <code>content</code>. You can configure multiple sets.</td></tr><tr><td><code>parameters</code></td><td>Configure authorization and authentication depending on the AI model you using. Configure the <code>type</code>, <code>required</code> , and <code>location</code> of the parameters.</td></tr></tbody></table>
+<table><thead><tr><th width="180.13671875">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>method</code></td><td><code>POST</code> -The POST request can be used to send training data to the server where the AI model is hosted. The server can then use this data to train the model.</td></tr><tr><td><code>url</code></td><td>Specify the URL for the AI model's REST API. For example, the URL for ChatGPT is: <a href="https://api.openai.com/v1/chat/completions">https://api.openai.com/v1/chat/completions</a></td></tr><tr><td><code>outputTransform</code></td><td>The ouputTransform is where you configure the AI response. Check the AI API response to ensure you add the correct configuration. For example, <strong>OpenAPI response</strong> shows the following code:<br> <code>{ "id": "chatcmpl-123", "object": "chat.completion", "created": 1677652288, "model": "gpt-3.5-turbo-0125", "system_fingerprint": "fp_44709d6fcb", "choices": [{ "index": 0, "message": { "role": "assistant", "content": "\n\nHello there, how may I assist you today?", }, "logprobs": null, "finish_reason": "stop" }], "usage": { "prompt_tokens": 9, "completion_tokens": 12, "total_tokens": 21 } }</code> <br>In the <strong>outputTransform</strong> you configure the following: <code>outputTransform: | { "content": $.choices[0].message.content}</code></td></tr><tr><td><code>inputTransform</code></td><td>Provide the AI with the information it requires to return the response/chat message. <code>model</code> - is the name and version of the AI model. <code>response_format</code> - the expected input type, for example, json_object. <code>message</code> - under this property configure the prompts to train the AI, by specifying the <code>role</code> and <code>content</code>. You can configure multiple sets.</td></tr><tr><td><code>parameters</code></td><td>Configure authorization and authentication depending on the AI model you using. Configure the <code>type</code>, <code>required</code> , and <code>location</code> of the parameters.</td></tr></tbody></table>
 
 ## Examples and code samples
 
@@ -122,10 +122,10 @@ Configure the jig **ai-chat.jigx** file with:
 4. `onSend` action executes the global action that pushes the chat message (input) to the local data provider and then a `sync-entities` action syncs chat with the REST API by executing the function to return the answer (response).
 
 {% hint style="info" %}
-The `component.chat`  is currently in preview. Contact [support@jigx.com](mailto:support@jigx.com) for access to the component.
+The `component.chat` is currently in preview. Contact [support@jigx.com](mailto:support@jigx.com) for access to the component.
 {% endhint %}
 
-![AI chatbot](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-S4CYksahsIsJkfrCo6d8_-20240806-103549.png)
+<figure><img src="../.gitbook/assets/AI-chatbot.png" alt="AI chatbot" width="563"><figcaption><p>AI chatbot</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="ai-chat.jigx (function)" %}
@@ -357,7 +357,7 @@ action:
 
 In this example, an image is analyzed by integrating with the OpenAI ChatGPT REST service to analyze the image to provide a general reponse. An image is uploaded in a jig using the [media-field](Components/form/media-field.md) component. When the _Analyze image_ button is pressed a [sync-entities](Actions/sync-entities.md) action is configured which calls the function to execute the OpenAI REST API call. The result returned from the OpenAI call is used to add a description for the image in an [entity-field](Components/entity/entity-field.md) component.
 
-![AI description for image](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UtDyO1lwAsT6IQR-i3bZe_ai-imagedescrip.png)
+<figure><img src="../.gitbook/assets/AI-ImageDescrip.png" alt="AI description for image" width="563"><figcaption><p>AI description for image</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="ai-image-function.jigx" %}

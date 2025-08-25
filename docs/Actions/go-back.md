@@ -28,7 +28,7 @@ A go-back action associated with another action under onSuccess can only be used
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1BxcmGrBKayAJDjL1mdFT\_qfq8vyqssxkg7hk1329ugo-backiphone13blueportrait.png" size="80" position="center" caption="go-back as an action" alt="go-back as an action"}
+<figure><img src="../../.gitbook/assets/ac-goback1.png" alt="go-back as an action" width="188"><figcaption><p>go-back as an action</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -36,7 +36,7 @@ The simplest example of a go-back action is to use it as a separate action. When
 
 **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-action/go-back-action.jigx). \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-action/go-back-action.jigx).\
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-action/go-back-action-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
@@ -55,7 +55,7 @@ actions:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wHC\_QgeGKS4eLonetgUDH\_c-t3oukoehdqalzuaazzcgo-back-swipeableiphone13blueportrait.png" size="80" position="center" caption="swipeable go-back " alt="swipeable go-back "}
+<figure><img src="../../.gitbook/assets/ac-goback2.png" alt="swipeable go-back" width="188"><figcaption><p>swipeable go-back</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -96,14 +96,14 @@ swipeable:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/f59eQfajBmOoVwstlCTxe\_8n2xgcq2o-rtnrp7hgdmwgo-back-rightelementiphone13blueportrait.png" size="80" position="center" caption="rightElement go-back " alt="rightElement go-back "}
+<figure><img src="../../.gitbook/assets/ac-goback3.png" alt="rightElement go-back" width="188"><figcaption><p>rightElement go-back</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 In this example, we use the go-back action as the rightElement in the list-item component. There is a button for each item.
 
-**Examples:** \
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-right-element/go-back-right-element.jigx). \
+**Examples:**\
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-right-element/go-back-right-element.jigx).\
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/dynamic-data/go-back-right-element/go-back-right-element-dynamic.jigx)
 {% endcolumn %}
 {% endcolumns %}
@@ -124,12 +124,12 @@ rightElement:
 {% column %}
 In this example, we use the `action.go-back` with `onSuccess` to take you back to the main list after signing a form.
 
-**Examples:** \
+**Examples:**\
 See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-back/static-data/go-back-on-success/go-back-on-success.jigx).
 {% endcolumn %}
 
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IHyr3vBgqg8v34h9wMu2E\_go-back-onsucces.PNG" size="80" position="center" caption="go-back onSuccess" alt="go-back onSuccess"}
+<figure><img src="../../.gitbook/assets/ac-goback4.png" alt="go-back onSuccess" width="188"><figcaption><p>go-back onSuccess</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

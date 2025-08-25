@@ -29,14 +29,14 @@ A go-to action can be set up in various ways:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MFStH4Yrw\_PUJ4y5tc7Cj-20250225-070717.png" size="80" position="center" caption="go-to action" alt="go-to action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MFStH4Yrw\_PUJ4y5tc7Cj-20250225-070717.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/ac-go-to1.png" alt="go-to action" width="188"><figcaption><p>go-to action</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 The simplest example of using a go-to action is to use it as a separate action. When configured, a button will appear at the bottom, redirecting us to the details page when pressed.
 
-**Examples:** \
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-action/go-to-action.jigx). \
+**Examples:**\
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-action/go-to-action.jigx).\
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-action/go-to-action-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
@@ -56,7 +56,7 @@ actions:
 
 {% columns %}
 {% column %}
-&#x20;![go-to with swipeable](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-94FRrFAw2MmmyUYjMB80f-20250225-071002.png)&#x20;
+<figure><img src="../../.gitbook/assets/action-go-to-swipeable.png" alt="go-to with swipeable"><figcaption><p>go-to with swipeable</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -64,7 +64,7 @@ This example uses the go-to action as a swipeable property. We can choose the sw
 
 **Examples left:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-swipeable/go-to-swipeable-left.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-swipeable/go-to-left-dynamic.jigx).
 
-**Examples right:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-swipeable/go-to-swipeable-right.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-swipeable/go-to-right-dynamic.jigx).&#x20;
+**Examples right:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-swipeable/go-to-swipeable-right.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-swipeable/go-to-right-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -117,15 +117,15 @@ item:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TVkSZkXqMnIyfLztOYUmk-20250225-071246.png" size="80" position="center" caption="go-to button" alt="go-to button" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TVkSZkXqMnIyfLztOYUmk-20250225-071246.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/action-go-to-rightelement.png" alt="go-to button" width="188"><figcaption><p>go-to button</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 In this example, we use the go-to action as the rightElement in the list-item component. There is a button for each item.
 
-**Examples:** \
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-right-element/go-to-right-element.jigx). \
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-right-element/go-to-right-element-dynamic.jigx).&#x20;
+**Examples:**\
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/static/go-to-right-element/go-to-right-element.jigx).\
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-right-element/go-to-right-element-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -154,13 +154,13 @@ item:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-o3gCYRbZdD4iyLoJ-oCNJ-20250225-071422.png" size="82" position="center" caption="Go to onSuccess" alt="go-to onSuccess" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-o3gCYRbZdD4iyLoJ-oCNJ-20250225-071422.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+<figure><img src="../../.gitbook/assets/action-go-to-onSuccess.png" alt="go-to onSuccess" width="188"><figcaption><p>go-to onSuccess</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 In this example, the go-back action is associated with the submit-form action. After we enter the signature and press the "Sign" button, the submit-form action is performed and then the go-to action redirects us to the next page.
 
-**Examples:** \
+**Examples:**\
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/go-to/dynamic/go-to-on-success/go-to-on-success.jigx).
 {% endcolumn %}
 {% endcolumns %}
@@ -198,12 +198,12 @@ actions:
 {% column %}
 In this example, we use the `go-to` action as the `rightElement` in the `list-item` component. There is a button for each item. When tapped the `go-to` will open the jig as a modal when the `isModal` property is set to `true`.
 
-**Examples:** \
+**Examples:**\
 See the full example using dynamic data in GitHub.
 {% endcolumn %}
 
 {% column %}
-&#x20;![Open jig in a modal](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-j3LEPMTcK3_9xbDHC3dKC-20250225-080141.png)
+<figure><img src="../../.gitbook/assets/action-go-to-modal.png" alt="Open jig in a modal"><figcaption><p>Open jig in a modal</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -401,11 +401,11 @@ In this example, three jigs are configured to create a stack of data for each gu
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07\_99i4UGP-20250225-083249.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07\_99i4UGP-20250225-083249.gif" size="60" position="center" caption="Go-to new guest" alt="Go-to new guest " width="681" height="1377" darkWidth="681" darkHeight="1377"}
+<figure><img src="../../.gitbook/assets/ac-go-to-new.gif" alt="Go-to new guest" width="170"><figcaption><p>Go-to new guest</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc\_azd0-20250225-083738.gif" size="60" position="center" caption="Review guests" alt="Review guests" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc\_azd0-20250225-083738.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+<figure><img src="../../.gitbook/assets/ac-go-to-existing.gif" alt="Review guests" width="170"><figcaption><p>Review guests</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

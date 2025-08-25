@@ -22,9 +22,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;![Generate text file](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-E4cstXhDfxhYT1MEwriiu-20250226-120629.png)&#x20;
-
-
+<figure><img src="../../.gitbook/assets/action-gen-file.png" alt="Generate text file"><figcaption><p>Generate text file</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

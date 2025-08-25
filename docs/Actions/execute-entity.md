@@ -12,7 +12,7 @@ Execute-entity can save, update, or delete data in a **single row** from a datab
 For the Dynamic datasource, values will be saved under the `data` option. For SQL/REST datasource, values will be saved under the `Parameters` option.
 
 {% hint style="warning" %}
-This action can't be used if you are using [Static Data](https://docs.jigx.com/examples/static).&#x20;
+This action can't be used if you are using [Static Data](https://docs.jigx.com/examples/static).
 {% endhint %}
 
 ## Configuration options
@@ -38,11 +38,11 @@ Dealing with offline remote data is fundamental to ensuring data synchronization
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FNJS6iz-l7FhJtP82\_Kae\_ex-actioniphone13blueportrait.png" size="80" position="center" caption="Execute enitity" alt="Execute entity"}
+<figure><img src="../../.gitbook/assets/ac-executeEntity.png" alt="Execute enitity" width="188"><figcaption><p>Execute enitity</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-&#x20;In this example, execute entity is used in _action_ with the _create_ method. This example results in creating a new record with the First name, Last name, Email, and Phone number information. Execute entity is called by the press of the _Save details_ button on the bottom.
+In this example, execute entity is used in _action_ with the _create_ method. This example results in creating a new record with the First name, Last name, Email, and Phone number information. Execute entity is called by the press of the _Save details_ button on the bottom.
 
 **Example:** See the full example of execute-entity in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-action.jigx).
 {% endcolumn %}
@@ -72,7 +72,7 @@ actions:
 
 {% columns %}
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZEf\_uXB3562SxaHxxh\_ae\_ex-a-listiphone13blueportrait.png" size="82" position="center" caption="Execute entity in action-list" alt="Execute entity in action-list"}
+<figure><img src="../../.gitbook/assets/ac-exex-Entity-actionlist.png" alt="Execute entity in action-list" width="188"><figcaption><p>Execute entity in action-list</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -121,7 +121,7 @@ actions:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fHcCpIywUK-qDL8nRfoO3\_tjvfgtwpkgot3fa73lrbex-onchangeiphone13blueportrait.png" size="80" position="center" caption="Execute-entity in onPress" }&#x20;
+<figure><img src="../../.gitbook/assets/ac-execEntity-onchange.png" alt="Execute-entity in onPress" width="188"><figcaption><p>Execute-entity in onPress</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -188,13 +188,13 @@ item:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ODgGFijGrBYtf6\_qv57VK\_actioneentityrefresh.PNG" size="80" position="center" caption="Execute entity" alt="Execute entity"}
+<figure><img src="../../.gitbook/assets/ac-exec-entity-onRefresh.png" alt="Execute entity"><figcaption><p>Execute entity</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 Here is the example of execute-entity in onRefresh/onFocus.
 
-See the full example using onRefresh in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onRefresh.jigx). \
+See the full example using onRefresh in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onRefresh.jigx).\
 See the full example using onFocus in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/ja-execute-entity/ja-execute-entity-onFocus.jigx)
 {% endcolumn %}
 {% endcolumns %}

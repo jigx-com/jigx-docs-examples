@@ -18,7 +18,7 @@ In this example, the new employee form is translated into German, French, and Cz
 
 **Examples**: See the jig example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-localization/localized-form-static.jigx). See the translation file examples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/translations).
 
-![Chez, German, English](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2I1zBOgZCHFr3k64gXtrb_trans-form-static.PNG)
+<figure><img src="../.gitbook/assets/Trans-form-static.PNG" alt="Chez, German, English" width="563"><figcaption><p>Chez, German, English</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="localized-form-static.jigx" %}
@@ -169,7 +169,7 @@ create: Vytvořit zaměstnance
 
 In this example, a jigwith today's activites is translated into German. The translation is configured dynamically agains the `Text Locale` values. To see the form in each of the languages change your device language setting to one of the configured languages.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoK-35uG5y6FomN9LyI0s\_trans-dynamic.PNG" size="82" position="center" caption="One jig in two languages" alt="One jig in two languages" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hoK-35uG5y6FomN9LyI0s\_trans-dynamic.PNG" width="800" height="787" darkWidth="800" darkHeight="787"}
+<figure><img src="../.gitbook/assets/Trans-dynamic.PNG" alt="One jig in two languages" width="375"><figcaption><p>One jig in two languages</p></figcaption></figure>
 
 **Examples**: See the jig example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-localization/localized-activities-dynamic.jigx). See the translation file examples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/translations).
 

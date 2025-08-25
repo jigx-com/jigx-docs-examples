@@ -2,13 +2,11 @@
 
 {% columns %}
 {% column %}
-By default, the user profile in Jigx includes various menu options, such as Personal Information, Notifications, Settings, and more. Certain user information and UI elements can be customized to fit specific needs.&#x20;
+By default, the user profile in Jigx includes various menu options, such as Personal Information, Notifications, Settings, and more. Certain user information and UI elements can be customized to fit specific needs.
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0aw583ODqedI-VNze0iU-20250429-115921.png" size="66" position="center" caption="Default Profile screen" alt="Default Profile screen" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n0aw583ODqedI-VNze0iU-20250429-115921.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} ::: ::::
-
-
+<figure><img src="../.gitbook/assets/cc-profileScreen.png" alt="Default Profile screen" width="188"><figcaption><p>Default Profile screen</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -123,13 +121,11 @@ This is especially useful in scenarios where devices are shared among multiple e
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wECb6jB\_d0KV8RZks0JhF-20250429-115657.png" size="64" position="center" caption="Extended Profile " alt="Extended Profile" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wECb6jB\_d0KV8RZks0JhF-20250429-115657.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} :::
-
-
+<figure><img src="../.gitbook/assets/Profile-Extended.png" alt="Extended Profile" width="188"><figcaption><p>Extended Profile</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-In this example, the Profile screen is extended to display the user's **avatar** along with their details in an expander component. Additionally, the personal information menu option is hidden from the list.&#x20;
+In this example, the Profile screen is extended to display the user's **avatar** along with their details in an expander component. Additionally, the personal information menu option is hidden from the list.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -220,7 +216,7 @@ This example demonstrates how to add a `list` of emergency contacts to a jig, wh
 {% endcolumn %}
 
 {% column %}
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-H0Dgln2rHI2yHTQ3h6dN\_-20250429-115802.png" size="66" position="center" caption="Profile extended with list" alt="Profile extended with list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-H0Dgln2rHI2yHTQ3h6dN\_-20250429-115802.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} ::: ::::
+<figure><img src="../.gitbook/assets/cc-profile-list.png" alt="Profile extended with list" width="188"><figcaption><p>Profile extended with list</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -309,9 +305,7 @@ datasources:
 
 {% columns %}
 {% column %}
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FH4wEyKl1W6fCjOeD1Cbi-20250429-115844.png" size="64" position="center" caption="Custom Profile" alt="Custom Profile" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-FH4wEyKl1W6fCjOeD1Cbi-20250429-115844.png" width="800" height="1611" darkWidth="800" darkHeight="1611"} :::
-
-
+<figure><img src="../.gitbook/assets/Profile-custom.png" alt="Custom Profile" width="188"><figcaption><p>Custom Profile</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

@@ -18,11 +18,11 @@ When configuring actions across parent and child jigs, the following behavior ap
 
 {% columns %}
 {% column %}
-Configure `actions` to display two action buttons on the jig's main screen. In this example, the first button has a secondary button `style` applied, by default, the button normally uses the primary color. Additionally, you can set up a third action, referred to as a secondary action button, that appears when the ellipsis (...) is tapped. This allows multiple action options to be accessible within a single jig.&#x20;
+Configure `actions` to display two action buttons on the jig's main screen. In this example, the first button has a secondary button `style` applied, by default, the button normally uses the primary color. Additionally, you can set up a third action, referred to as a secondary action button, that appears when the ellipsis (...) is tapped. This allows multiple action options to be accessible within a single jig.
 {% endcolumn %}
 
 {% column %}
-&#x20;![Dual action buttons & secondary button](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TZVU6r07hz0LEPo_3zZ2W-20250225-092012.png)&#x20;
+<figure><img src="../../.gitbook/assets/action-dual-buttons.png" alt="Dual action buttons &#x26; secondary button"><figcaption><p>Dual action buttons &#x26; secondary button</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

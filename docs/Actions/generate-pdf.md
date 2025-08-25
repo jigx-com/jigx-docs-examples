@@ -8,7 +8,7 @@ The URI of the generated file is returned and is available as part of the action
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O\_Flk4q6qp9u-20250218-113955.gif" size="60" position="center" caption="Generate a PDF file" alt="Generate a PDF file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O\_Flk4q6qp9u-20250218-113955.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+<figure><img src="../../.gitbook/assets/ac-genPDFIntro.gif" alt="Generate a PDF file" width="170"><figcaption><p>Generate a PDF file</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -32,13 +32,13 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O\_Flk4q6qp9u-20250218-113955.gif" size="70" position="center" caption="Generate and share PDF" alt="Generate and share PDF" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kjDY250z7O\_Flk4q6qp9u-20250218-113955.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}&#x20;
+<figure><img src="../../.gitbook/assets/ac-genPDFIntro.gif" alt="Generate and share PDF" width="170"><figcaption><p>Generate and share PDF</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 In this example, an action list contains two actions: the first generates a PDF of a checklist, the second shares the PDF via a messaging app on the device.
 
-**Example:** See the full code sample in GitHub.&#x20;
+**Example:** See the full code sample in GitHub.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -156,7 +156,7 @@ In this example, an action list contains three actions: the first generates a PD
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" size="70" position="center" caption="Generate PDF, save & share" alt="Generate PDF, save & share" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}&#x20;
+<figure><img src="../../.gitbook/assets/ac-genpdfSaveShare.gif" alt="Generate PDF, save &#x26; share" width="170"><figcaption><p>Generate PDF, save &#x26; share</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -388,7 +388,7 @@ This example demonstrates how to use a JavaScript function to generate an HTML i
 
 **Example:** See the full code sample in GitHub.
 
-![PDF from JavaScript function](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wZMGFJvxtv3534txsjD9R-20250228-132836.png)
+<figure><img src="../../.gitbook/assets/action-gen-pdf-java.png" alt="PDF from JavaScript function"><figcaption><p>PDF from JavaScript function</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="action-pdf-javascript.jigx" %}

@@ -23,13 +23,13 @@ An `action list` can be set up in various ways:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9DlW77ErmICtx4FdonAhb\_ou82sm6mjtwuv1o3jo2zonsubmitiphone13blueportrait.png" size="80" position="center" caption="Action List" alt="Action List"}
+<figure><img src="../../.gitbook/assets/ac-actionlist.png" alt="Action List" width="188"><figcaption><p>Action List</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 This example shows an action-list with two actions. The first action is [submit-form](https://docs.jigx.com/examples/submit-form), which will save the entered data, and the second action, [go-back](https://docs.jigx.com/examples/go-back), will redirect us back to the previous page.
 
-**Example:** See the full example of action-list in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-primary.jigx)&#x20;
+**Example:** See the full example of action-list in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-primary.jigx)
 {% endcolumn %}
 {% endcolumns %}
 
@@ -80,7 +80,7 @@ children:
 
 {% columns %}
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_QIAeOQBiGMj4eE2lrAkM\_dxwftvt0qk-ombng7ba1onrefreshiphone13blueportrait.png" size="78" position="center" caption="Action-list with onPress" alt="Action-list with onPress"}
+<figure><img src="../../.gitbook/assets/ac-actionlist-onpress.png" alt="Action-list with onPress" width="188"><figcaption><p>Action-list with onPress</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -172,8 +172,6 @@ onRefresh:
           entities:
             - default/employees
 ```
-
-
 {% endtab %}
 
 {% tab title="action-list-onFocus" %}

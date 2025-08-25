@@ -26,7 +26,7 @@ A `confirm` action can be set up in various ways:
 
 {% columns %}
 {% column %}
-![Confirm](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QCU14bRGTq8hi9CRQMjJC_con-hiphone13blueportrait.png)
+<figure><img src="../../.gitbook/assets/ac-confirm.png" alt="Confirm" width="188"><figcaption><p>Confirm</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -73,7 +73,7 @@ actions:
 
 {% columns %}
 {% column %}
-&#x20;![Confirm action](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DIJdtpUUQiTJCb7aHzUht_img9732iphone13blueportrait.png)
+<figure><img src="../../.gitbook/assets/ac-confirmExample.png" alt="Confirm action" width="188"><figcaption><p>Confirm action</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
