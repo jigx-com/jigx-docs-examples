@@ -56,7 +56,7 @@ The examples use a set of custom components called _sections_. The sections are 
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3qwiIlmNqKU\_\_uU3e5yrB-20241114-092231.png" size="48" position="center" caption="Countdown" alt="Countdown" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3qwiIlmNqKU\_\_uU3e5yrB-20241114-092231.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+<figure><img src="../../.gitbook/assets/CC-custCountdown.png" alt="Countdown" width="188"><figcaption><p>Countdown</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -226,7 +226,7 @@ In this example, the `component.progress-bar`, is customized by adding a `compon
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k9S-WX-dQLP59hWunApnu-20241114-094230.png" size="48" position="center" caption="Progress-bar" alt="Progress-bar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k9S-WX-dQLP59hWunApnu-20241114-094230.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-custProgressBar.png" alt="Progress-bar" width="188"><figcaption><p>Progress-bar</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -586,7 +586,7 @@ More examples of customized progress bars are available on [GitHub](https://gith
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Npl-iTbt3CbHZqYsyA1Xf-20241114-095208.png" size="48" position="center" caption="Ratings " alt="Ratings" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Npl-iTbt3CbHZqYsyA1Xf-20241114-095208.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-customRating.png" alt="Ratings" width="188"><figcaption><p>Ratings</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -1099,7 +1099,7 @@ This example demonstrates how you can create one custom component and reuse it m
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_czeKbMWCCPZwwMK3bo5k-20241114-102305.png" size="48" position="center" caption="Sections" alt="Sections" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_czeKbMWCCPZwwMK3bo5k-20241114-102305.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-Greetings.png" alt="Sections" width="188"><figcaption><p>Sections</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -1294,7 +1294,7 @@ More examples of customized sections are available on [GitHub](https://github.co
 
 {% columns %}
 {% column %}
-&#x20;![Steppers](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SqhIJwlC1MtJGk9LMqLBA-20241114-102836.png)&#x20;
+<figure><img src="../../.gitbook/assets/CC-customStepper.png" alt="Steppers" width="375"><figcaption><p>Steppers</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -1668,7 +1668,7 @@ This example demonstrates how you can create custom components and reuse them mu
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a-MnTk6l7a1IoAevGnBKt-20241114-103014.png" size="48" position="center" caption="Tabs" alt="Tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a-MnTk6l7a1IoAevGnBKt-20241114-103014.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+<figure><img src="../../.gitbook/assets/CC-customTabs.png" alt="Tabs" width="188"><figcaption><p>Tabs</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -2547,7 +2547,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CUZSlXSPFZahDNId27IH7-20241114-103058.png" size="50" position="center" caption="Tags" alt="Tags" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CUZSlXSPFZahDNId27IH7-20241114-103058.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-custom-tags.png" alt="Tags" width="188"><figcaption><p>Tags</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -2651,8 +2651,6 @@ children:
           options:
             value: =@ctx.inputs.info.title
 ```
-
-
 {% endtab %}
 
 {% tab title="add-button.jigx" %}
@@ -2710,11 +2708,11 @@ This example demonstrates how you can create a custom component providing the fu
 **Example:**
 
 1. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/components/molecules-organisms/toggles).
-2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/toggles/toggles.jigx).&#x20;
+2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/molecules-organisms/toggles/toggles.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_frjcbq6BgaicVmNICaMG-20241114-103225.png" size="48" position="center" caption="Toggles" alt="Toggles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_frjcbq6BgaicVmNICaMG-20241114-103225.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-CustomToggles.png" alt="Toggles" width="188"><figcaption><p>Toggles</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

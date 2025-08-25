@@ -6,7 +6,7 @@ This feature is currently in its **Alpha** stage of development.
 * As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 * In this phase, the feature may contain bugs or behave unpredictably.
 * Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
-* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.&#x20;
+* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
 {% endhint %}
 
 The _card_ component adds context or highlights information in the jig. The card itself is a container with integrated padding, background, and row rules, meaning every component placed in the card will be represented as a separate row with spaces between the rows.
@@ -42,7 +42,7 @@ This example shows a basic `component.card` containing a `component.image`. A `c
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xu6plj0\_UXQr2p6ZU0A9b-20241113-134242.png" size="70" position="center" caption="Card with icon & text" alt="Card with icon & text" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xu6plj0\_UXQr2p6ZU0A9b-20241113-134242.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-cardL.png" alt="Card with icon &#x26; text" width="188"><figcaption><p>Card with icon &#x26; text</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -110,8 +110,6 @@ children:
                 options:
                   icon: arrow-right  
 ```
-
-
 {% endtab %}
 
 {% tab title="card-example2.jigx" %}
@@ -152,7 +150,7 @@ This example shows creating a custom component using the `card` and `image` comp
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-yVUEECMv8rR-zpnchQuul-20241113-134635.png" size="70" position="center" caption="Cards with images" alt="Cards with images" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-yVUEECMv8rR-zpnchQuul-20241113-134635.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-cardImageL.png" alt="Cards with images" width="188"><figcaption><p>Cards with images</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -456,7 +454,7 @@ This example shows how to use the `component.card` in a `component.list`. In the
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Jpza9g4DzeGCJooR4iHUD-20241113-140257.png" size="70" position="center" caption="List of cards" alt="List of cards" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Jpza9g4DzeGCJooR4iHUD-20241113-140257.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-CardListL.png" alt="List of cards" width="188"><figcaption><p>List of cards</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -576,12 +574,10 @@ children:
 
 {% columns %}
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CBewb4RUcoflmgy-4DNmY-20241113-140607.png" size="70" position="center" caption="Chart in a card" alt="Chart in a card" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CBewb4RUcoflmgy-4DNmY-20241113-140607.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-cardChartL.png" alt="Chart in a card" width="188"><figcaption><p>Chart in a card</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-
-
 This example demonstrates how to show a `line-chart` component in a `component.card`. Take note of how the layout configuration is created by using the `component.view` multiple times and even inside another `component.view`. In the jig configuration `inputs` are required for the chart in the custom component to reference the datasource.
 
 **Examples:**
@@ -841,7 +837,7 @@ Take note of how the layout configuration is created by using the `view` compone
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-0BkXyptpToSajxceBFq8L-20241113-141922.png" size="70" position="center" caption="Multiple cards shown horizontally" alt="Multiple cards shown horizontally" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-0BkXyptpToSajxceBFq8L-20241113-141922.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-cardsHorizontal.png" alt="Multiple cards shown horizontally" width="188"><figcaption><p>Multiple cards shown horizontally</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

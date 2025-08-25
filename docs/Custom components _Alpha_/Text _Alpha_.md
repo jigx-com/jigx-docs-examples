@@ -27,7 +27,7 @@ The examples use a set of custom components called _sections_. The sections are 
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-dxYQtS-bNSkPWJeZxXb-h-20241113-113134.png" size="70" position="center" caption="Text font size" alt="Text font size" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-dxYQtS-bNSkPWJeZxXb-h-20241113-113134.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-text-sizeL.png" alt="Text font size" width="188"><figcaption><p>Text font size</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -115,7 +115,7 @@ This example shows how to apply strikethrough formatting to font of various size
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qbyUXtdunBGIQRffCKP8C-20241113-113923.png" size="70" position="center" caption="Text with line through" alt="Text with line through" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qbyUXtdunBGIQRffCKP8C-20241113-113923.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-textLineThroughL.png" alt="Text with line through" width="188"><figcaption><p>Text with line through</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -189,7 +189,7 @@ children:
 
 {% columns %}
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Hw1klMA74o6\_8I9xaduNU-20241113-114815.png" size="70" position="center" caption="Underlined text" alt="Underlined text" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Hw1klMA74o6\_8I9xaduNU-20241113-114815.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-text-underlineL.png" alt="Underlined text" width="188"><figcaption><p>Underlined text</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -283,7 +283,7 @@ This example shows the `component.text` with various font sizes and emphasis sty
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QEETvY3gSRqzzh4tSWD1V-20241113-115730.png" size="70" position="center" caption="Text with emphasis" alt="Text with emphasis" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QEETvY3gSRqzzh4tSWD1V-20241113-115730.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-textEmphasisL.png" alt="Text with emphasis" width="188"><figcaption><p>Text with emphasis</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -350,7 +350,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-b39lj\_DjMe63LB7r\_FopZ-20241113-120533.png" size="70" position="center" caption="Text alignment" alt="Text alignment" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-b39lj\_DjMe63LB7r\_FopZ-20241113-120533.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-text-AlignL.png" alt="Text alignment" width="188"><figcaption><p>Text alignment</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -444,7 +444,7 @@ This example demonstrates how to control the number of text lines displayed in `
 {% endcolumn %}
 
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MjqAbpfVvW0TjoP4M-L2z-20241113-121315.png" size="70" position="center" caption="Multiple lines of text" alt="Multiple lines of text" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-MjqAbpfVvW0TjoP4M-L2z-20241113-121315.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-text-noLinesL.png" alt="Multiple lines of text" width="188"><figcaption><p>Multiple lines of text</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -520,7 +520,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NDvPVznGR9XU44dCTG1Mm-20241113-122018.png" size="70" position="center" caption="Text with color" alt="Text with color" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NDvPVznGR9XU44dCTG1Mm-20241113-122018.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-textColorL.png" alt="Text with color" width="188"><figcaption><p>Text with color</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -586,8 +586,6 @@ children:
             numberOfLines: 3
             color: color5
 ```
-
-
 {% endtab %}
 
 {% tab title="text-colored.jigx" %}
@@ -614,12 +612,8 @@ children:
 
 ### Text weights
 
-{% columns %}
-{% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ZloD22zynAUqeBo0e5---20241113-130811.png" size="92" position="center" caption="text weights" alt="text weights" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ZloD22zynAUqeBo0e5---20241113-130811.png" width="800" height="401" darkWidth="800" darkHeight="401"}
-{% endcolumn %}
+<figure><img src="../../.gitbook/assets/CC-textWeightLL.png" alt="text weights" width="563"><figcaption><p>text weights</p></figcaption></figure>
 
-{% column %}
 These examples demonstrate the various options for using text weights to ensure thickness and boldness of text combined with varying sizes, displayed in a [Card (Alpha)](<Card _Alpha_.md>). By combining the `size`, and `weight` properties, you can achieve the desired appearance.
 
 **Examples:**
@@ -627,8 +621,6 @@ These examples demonstrate the various options for using text weights to ensure 
 1. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/text/text-11.jigx).
 2. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/text/text-regular-weights.jigx).
 3. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
-{% endcolumn %}
-{% endcolumns %}
 
 {% tabs %}
 {% tab title="text-11.jigx" %}

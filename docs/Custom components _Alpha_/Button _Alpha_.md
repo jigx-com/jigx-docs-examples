@@ -6,7 +6,7 @@ This feature is currently in its **Alpha** stage of development.
 * As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 * In this phase, the feature may contain bugs or behave unpredictably.
 * Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
-* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.&#x20;
+* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
 {% endhint %}
 
 The _button_ custom component provides predefined options for designing the UI and tap functionality for a button. For example, your requirement might be a button showing an icon and text with a background color that can be used in multiple jigs in your app.
@@ -33,11 +33,11 @@ This example shows the custom component that uses the button's basic form. Scrol
 
 1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-1.jigx).
-3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-basic.jigx).&#x20;
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-basic.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-p4ZWpa0alO6cEoFrHeoNE-20250224-140438.png" size="70" position="center" caption="Buttons basic" alt="Buttons basic" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-p4ZWpa0alO6cEoFrHeoNE-20250224-140438.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-buttonBasicLight.png" alt="Buttons basic" width="188"><figcaption><p>Buttons basic</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -161,7 +161,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rJ5zvKabEkI9ExMdH1tLI-20250224-140637.png" size="70" position="center" caption="Compact buttons" alt="Compact buttons" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-rJ5zvKabEkI9ExMdH1tLI-20250224-140637.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-buttonCompactLight.png" alt="Compact buttons" width="188"><figcaption><p>Compact buttons</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -314,11 +314,11 @@ This example shows how to set buttons in a custom component to show they are bus
 
 1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-3.jigx).
-3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-busy.jigx).&#x20;
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-busy.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pQC8cHL\_kv7Y\_CqVZGy6t-20250224-141900.png" size="70" position="center" caption="Button busy" alt="Button busy" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pQC8cHL\_kv7Y\_CqVZGy6t-20250224-141900.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-buttonBusyLight.png" alt="Button busy" width="188"><figcaption><p>Button busy</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -474,7 +474,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-E99dmqP9t0r\_Po8DyUgFh-20250224-142050.png" size="70" position="center" caption="Button disabled" alt="Button disabled" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-E99dmqP9t0r\_Po8DyUgFh-20250224-142050.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+<figure><img src="../../.gitbook/assets/CC-buttonDisableLight.png" alt="Button disabled" width="188"><figcaption><p>Button disabled</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -650,11 +650,11 @@ This example shows a custom component with a combination of the buttons as disab
 
 1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section2.jigx).
 2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/buttons/button-5.jigx).
-3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-disabled-busy.jigx).&#x20;
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/custom-components/basic-elements/buttons/buttons-disabled-busy.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-N6w4yX5FZGhPmyRyp83cl-20250224-142236.png" size="70" position="center" caption="Buttons disabled & busy" alt="Buttons disabled & busy" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-N6w4yX5FZGhPmyRyp83cl-20250224-142236.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-buttonDisableBusyL.png" alt="Buttons disabled &#x26; busy" width="188"><figcaption><p>Buttons disabled &#x26; busy</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

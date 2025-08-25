@@ -33,11 +33,11 @@ This example shows the `component.icon` with different icon sizes using the `siz
 
 1. See the _section_ component example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/molecules-organisms/sections/section4.jigx).
 2. See the _custom component_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/basic-elements/icons/icon-sizes.jigx).
-3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons/icons-sizes.jigx).&#x20;
+3. See the _jig_ example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/basic-elements/icons/icons-sizes.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fr7\_n4lVvW220aIUVfsGR-20241113-084145.png" size="70" position="center" caption="Icon sizes" alt="Icon sizes" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fr7\_n4lVvW220aIUVfsGR-20241113-084145.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+<figure><img src="../../.gitbook/assets/CC-iconSizeL.png" alt="Icon sizes" width="188"><figcaption><p>Icon sizes</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -115,8 +115,6 @@ children:
             # Configure the size of the icon.
             size: small
 ```
-
-
 {% endtab %}
 
 {% tab title="icons-sizes.jigx" %}
@@ -144,7 +142,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qvyB3bcmZhUZFyyIrWOHN-20241113-103827.png" size="76" position="center" caption="Icon shapes" alt="Icons shapes" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qvyB3bcmZhUZFyyIrWOHN-20241113-103827.png" width="800" height="528" darkWidth="800" darkHeight="528"}
+<figure><img src="../../.gitbook/assets/CC-iconRBasicL.png" alt="Icons shapes"><figcaption><p>Icons shapes</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -275,7 +273,7 @@ Create an icon bar within in a `component.card` by configuring multiple `compone
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ldb9jwQQ5se9SWGcUOMRO-20241113-104500.png" size="70" position="center" caption="Icon bar" alt="Icon bar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ldb9jwQQ5se9SWGcUOMRO-20241113-104500.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../.gitbook/assets/CC-iconBar.png" alt="Icon bar" width="188"><figcaption><p>Icon bar</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

@@ -26,15 +26,15 @@ With these templates, you get the perfect mix of speed and flexibility, allowing
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_YIPhIaOMRD3hlL5FWb5j-20241129-090748.png" size="62" position="center" caption="Templates" alt="Templates"}&#x20;
+<figure><img src="../../.gitbook/assets/CC-Templates.png" alt="Templates" width="188"><figcaption><p>Templates</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 Template categories include:
 
 * [Cards & Charts (Alpha)](<Templates _Alpha_/Cards _ Charts _Alpha_.md>)
-* [Generic (Alpha)](broken-reference)
-* [Industry Specific (Alpha)](broken-reference)
+* [Generic (Alpha)](<Templates _Alpha_/Generic _Alpha_.md>)
+* [Industry Specific (Alpha)](<Templates _Alpha_/Industry Specific _Alpha_.md>)
 * [Travel (Alpha)](<Templates _Alpha_/Travel _Alpha_.md>)
 {% endcolumn %}
 {% endcolumns %}
