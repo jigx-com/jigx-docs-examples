@@ -2,11 +2,11 @@
 
 {% columns %}
 {% column %}
-The open map action lets you tap the on-screen button to open your device's default map app (e.g., Google Maps, Apple Maps, or Waze) with the provided destination address. If multiple map apps are available, they will be listed for you to select one.&#x20;
+The open map action lets you tap the on-screen button to open your device's default map app (e.g., Google Maps, Apple Maps, or Waze) with the provided destination address. If multiple map apps are available, they will be listed for you to select one.
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR\_gXAWqyOYxwwBly0Kx-20250217-110927.gif" size="66" position="center" caption="Open map action" alt="Open map action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR\_gXAWqyOYxwwBly0Kx-20250217-110927.gif" width="1080" height="2167" darkWidth="1080" darkHeight="2167"}
+<figure><img src="../../.gitbook/assets/ac-open-map-intro.gif" alt="Open map action" width="188"><figcaption><p>Open map action</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -24,13 +24,13 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR\_gXAWqyOYxwwBly0Kx-20250217-110927.gif" size="66" position="center" caption="Open an address on a map" alt="Open an address on a map" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ceR\_gXAWqyOYxwwBly0Kx-20250217-110927.gif" width="1080" height="2167" darkWidth="1080" darkHeight="2167"}
+<figure><img src="../../.gitbook/assets/ac-open-map-intro.gif" alt="Open an address on a map" width="188"><figcaption><p>Open an address on a map</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 In this example, a button at the bottom of the screen uses the `action.open-map` to open a modal listing the available map apps on the device. Select your preferred app to navigate to the specified address.
 
-**Example:** See the full code example in GitHub. &#x20;
+**Example:** See the full code example in GitHub.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -83,11 +83,11 @@ actions:
 {% column %}
 This example includes a list of people and places in New York. Tapping the `rightElement` button opens a modal, displaying available map apps on the device. Select your preferred app to navigate to the specified `address`. The addresses are defined in a datasource in various formats, including text strings, latitude, and longitude.
 
-**Example:** See the full code example in GitHub.&#x20;
+**Example:** See the full code example in GitHub.
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BWuMO4jXKq6t1f05HH6E6-20250217-115630.gif" size="66" position="center" caption="Open an address from a list" alt="Open an address from a list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BWuMO4jXKq6t1f05HH6E6-20250217-115630.gif" width="1080" height="2167" darkWidth="1080" darkHeight="2167"}
+<figure><img src="../../.gitbook/assets/ac-open-map-list.gif" alt="Open a map from a list" width="188"><figcaption><p>Open a map from a list</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -164,13 +164,13 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-I5St-RlrY0rIm7zN2AEvP-20250217-120353.gif" size="66" width="1080" height="2167" position="center" caption="Open - map as secondary action" alt="Open - map as secondary action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-I5St-RlrY0rIm7zN2AEvP-20250217-120353.gif"}
+<figure><img src="../../.gitbook/assets/ac-open-map-secondary.gif" alt="Open - map as secondary action" width="188"><figcaption><p>Open - map as secondary action</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 This example describes Central Park in New York. Tapping the ellipsis opens the secondary action button, which is configured with an `icon` displayed to the left of the `title`. When tapped, a modal opens, listing available map apps on the device. Select your preferred app to navigate to the specified `address`, defined by latitude and longitude.
 
-**Example:** See the full code example in GitHub.&#x20;
+**Example:** See the full code example in GitHub.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -225,7 +225,7 @@ actions:
 
 {% columns %}
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aOQBSERQ1zpZdhMkFOba3-20250217-132934.gif" size="66" position="center" caption="Action in jig header" alt="Action in jig header" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aOQBSERQ1zpZdhMkFOba3-20250217-132934.gif" width="1080" height="2162" darkWidth="1080" darkHeight="2162"}&#x20;
+<figure><img src="../../.gitbook/assets/ac-open-map-header.gif" alt="Action in jig header" width="188"><figcaption><p>Action in jig header</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

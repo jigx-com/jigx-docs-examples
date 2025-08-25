@@ -2,7 +2,7 @@
 
 {% columns %}
 {% column %}
-Easily share your files directly from the app with just a tap. Whether it's a document, image, or report, the share action lets you quickly send files via apps on the device, such as email, messaging apps, or AirDrop.&#x20;
+Easily share your files directly from the app with just a tap. Whether it's a document, image, or report, the share action lets you quickly send files via apps on the device, such as email, messaging apps, or AirDrop.
 {% endcolumn %}
 
 {% column %}
@@ -30,7 +30,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" size="88" position="center" caption="Share images" alt="Share images" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" width="800" height="794" darkWidth="800" darkHeight="794"}
+<figure><img src="../../.gitbook/assets/ac-share.png" alt="Share images"><figcaption><p>Share images</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -111,7 +111,7 @@ In this example, an action list contains three actions: the first generates a PD
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" size="70" position="center" caption="PDF generated, saved & shared" alt="PDF generated, saved & shared" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-mr09He1lx2C9ojC6KgBaZ-20250228-134244.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+<figure><img src="../../.gitbook/assets/ac-genpdfSaveShare.gif" alt="" width="170"><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -354,7 +354,7 @@ options:
 
 {% columns %}
 {% column %}
-&#x20;![Share by email](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4SZKMO4JiYVgY4Y03Xeur-20250219-082629.png)&#x20;
+<figure><img src="../../.gitbook/assets/ac-share1.png" alt="Share by email"><figcaption><p>Share by email</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -365,7 +365,7 @@ In this example, we demonstrate using the `action.share` to send an `email` to a
 {% endcolumns %}
 
 {% hint style="info" %}
-For best results, share files that are stored locally (e.g., images or PDFs). Files stored in a datasource as base64, data URI, or buffers will be returned as unreadable binary (.bin) files.&#x20;
+For best results, share files that are stored locally (e.g., images or PDFs). Files stored in a datasource as base64, data URI, or buffers will be returned as unreadable binary (.bin) files.
 {% endhint %}
 
 {% tabs %}

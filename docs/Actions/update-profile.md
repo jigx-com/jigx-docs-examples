@@ -16,7 +16,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;![Update Profile details](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NhdCeFqRkSdYEjyKBdnIQ-20250514-093621.png)&#x20;
+<figure><img src="../../.gitbook/assets/action-update-profile.png" alt="Update Profile details"><figcaption><p>Update Profile details</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -86,7 +86,7 @@ This example demonstrates how a form captures basic personal information and upd
 {% endcolumn %}
 
 {% column %}
-&#x20;![Update profile -header link](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-S3VYcMTayd_F6Z6AXR5aq-20250514-094006.png)
+<figure><img src="../../.gitbook/assets/action-update-profile-header.png" alt="Update profile -header link"><figcaption><p>Update profile -header link</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -144,11 +144,11 @@ children:
 
 {% columns %}
 {% column %}
-&#x20;![Update profile - header icon](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-6IbgXLdFBoLHrp0wab0U4-20250514-095340.png)&#x20;
+<figure><img src="../../.gitbook/assets/action-update-profile-header-icon.png" alt="Update profile - header icon"><figcaption><p>Update profile - header icon</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-This example demonstrates how a form captures basic personal information and updates the profile screen when the user taps the _icon_ in the `jig-header`, which triggers the `action.update-profile`.&#x20;
+This example demonstrates how a form captures basic personal information and updates the profile screen when the user taps the _icon_ in the `jig-header`, which triggers the `action.update-profile`.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -213,7 +213,7 @@ This example demonstrates how to use the `onPress` event with `action.update-pro
 {% endcolumn %}
 
 {% column %}
-&#x20;![Update profile - onPress](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-K-J4yCmos33-L-KO8H9cF-20250429-125242.png)&#x20;
+<figure><img src="../../.gitbook/assets/action-update-profile-onpress.png" alt="Update profile - onPress"><figcaption><p>Update profile - onPress</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

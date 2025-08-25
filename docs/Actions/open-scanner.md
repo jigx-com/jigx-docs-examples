@@ -17,17 +17,16 @@ An `open-scanner` action can be set up in various ways:
 
 {% columns %}
 {% column %}
-:Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v3Bc3PbWnemwhWHwoukqp\_qriphone13blueportrait.png" size="80" position="center" caption="Open scanner" alt="Open scanner" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v3Bc3PbWnemwhWHwoukqp\_qriphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}&#x20;
+<figure><img src="../../.gitbook/assets/action-openScanner.png" alt="Open scanner"><figcaption><p>Open scanner</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nhr5pFPGp-1uzLA36zhrQ\_qr2iphone13blueportrait.png" size="80" position="center" caption="Open Scanner" alt="Open scanner" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nhr5pFPGp-1uzLA36zhrQ\_qr2iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+This is an example of using the open-scanner as a stand-alone action. In this case, the button appears at the bottom, and when pressed, it accesses the camera and allows us to scan the QR code.\
+\
+**Examples**:\
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-action.jigx).
 {% endcolumn %}
 {% endcolumns %}
-
-This is an example of using the open-scanner as a stand-alone action. In this case, the button appears at the bottom, and when pressed, it accesses the camera and allows us to scan the QR code. \
-**Examples**: \
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-action.jigx).
 
 {% code title="open-scanner-action.jigx" %}
 ```yaml
@@ -58,7 +57,7 @@ actions:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S7\_-YinLbOlXYVMqu2jN7\_open-scanner-swipeableiphone13blueportrait.png" size="80" position="center" caption="Swipe to open scanner" alt="Swipe to open scanner" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S7\_-YinLbOlXYVMqu2jN7\_open-scanner-swipeableiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}&#x20;
+<figure><img src="../../.gitbook/assets/ac-openScanner1.png" alt="Swipe to open scanner" width="176"><figcaption><p>Swipe to open scanner</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -108,7 +107,7 @@ item:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rr130IXx\_ih2HdFw\_K3le\_open-scanner-rightelementiphone13blueportrait.png" size="80" position="center" caption="Button to open scanner" alt="Button to open scanner" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rr130IXx\_ih2HdFw\_K3le\_open-scanner-rightelementiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../.gitbook/assets/ac-openScanner2.png" alt="Button to open scanner" width="188"><figcaption><p>Button to open scanner</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -148,13 +147,13 @@ item:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_srtmYTzi7GHJ9ectDHSA\_open-scanner-onsuccer3iphone13blueportrait.png" size="82" position="center" caption="Open scanner onSuccess" alt="Open scanner onSuccess" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_srtmYTzi7GHJ9ectDHSA\_open-scanner-onsuccer3iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}&#x20;
+<figure><img src="../../.gitbook/assets/ac-open-scanner4.png" alt="Open scanner onSuccess" width="180"><figcaption><p>Open scanner onSuccess</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 In this example, the open-scanner action is associated with the submit-form action. After we enter the signature and press the "Sign" button, the submit-form action is performed and the action for open-scanner is shown. Access to the camera is not shown automatically. You have to click on "Scan QR code".
 
-**Examples:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-onSuccess.jigx).&#x20;
+**Examples:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-scanner/open-scanner-onSuccess.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

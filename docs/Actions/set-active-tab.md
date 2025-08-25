@@ -8,7 +8,7 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="179.25390625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>Action Identifier</code></td><td>Give the action a unique name that will be used to reference the action in another jig's action. See the example below.</td></tr><tr><td><code>id</code></td><td>Provide the <code>jigId</code> for the jig that will be opened next.</td></tr></tbody></table>
 
-<table><thead><tr><th width="181.921875">State configuration</th><th width="144.46484375">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.jig.state.</code></td><td><code>initialTabId</code> </td><td>A state variable used to reference the tab designated as the default.</td></tr><tr><td><code>=@ctx.jig.state.</code></td><td><code>activeTabId</code></td><td>A state variable that references the currently active tab.</td></tr></tbody></table>
+<table><thead><tr><th width="181.921875">State configuration</th><th width="144.46484375">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.jig.state.</code></td><td><code>initialTabId</code></td><td>A state variable used to reference the tab designated as the default.</td></tr><tr><td><code>=@ctx.jig.state.</code></td><td><code>activeTabId</code></td><td>A state variable that references the currently active tab.</td></tr></tbody></table>
 
 ## Considerations
 
@@ -26,11 +26,11 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-v9n12mYoxQdQcvO9V0ehS-20250212-115144.gif" size="70" position="center" caption="Set next active tab" alt="Set next active tab" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-v9n12mYoxQdQcvO9V0ehS-20250212-115144.gif" width="1080" height="2162" darkWidth="1080" darkHeight="2162"}
+<figure><img src="../../.gitbook/assets/ac-set-active-tab.gif" alt="Set next active tab" width="188"><figcaption><p>Set next active tab</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-In this example, when you are on the third tab (timelogs), a `Next Appointment` button at the bottom of the screen will open the first tab (appointments). **Note:** The `action.set-active-tab` works in conjunction with `action.execute-action` using an `action identifier`.&#x20;
+In this example, when you are on the third tab (timelogs), a `Next Appointment` button at the bottom of the screen will open the first tab (appointments). **Note:** The `action.set-active-tab` works in conjunction with `action.execute-action` using an `action identifier`.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -67,8 +67,6 @@ children:
     title: Help   
     icon: book-book-pages
 ```
-
-
 {% endtab %}
 
 {% tab title="timelogs.jigx" %}

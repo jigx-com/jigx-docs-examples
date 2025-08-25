@@ -2,13 +2,11 @@
 
 {% columns %}
 {% column %}
-This feature enables you to generate hard copies of invoices, receipts, articles, or any rendered content in raw HTML, providing a smooth, native experience that works across different devices and printers.&#x20;
+This feature enables you to generate hard copies of invoices, receipts, articles, or any rendered content in raw HTML, providing a smooth, native experience that works across different devices and printers.
 {% endcolumn %}
 
 {% column %}
-&#x20;![Print HTML action](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wFDCewCVoIO0COQ0OYTYR-20250211-082455.png)&#x20;
-
-
+<figure><img src="../../.gitbook/assets/action-print-basic.png" alt="Print HTML action"><figcaption><p>Print HTML action</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -30,11 +28,11 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;![Print HTML](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-wFDCewCVoIO0COQ0OYTYR-20250211-082455.png)&#x20;
+<figure><img src="../../.gitbook/assets/action-print-basic.png" alt="Print HTML"><figcaption><p>Print HTML</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-This example demonstrates configuring `action.print` to display a button for printing HTML content. &#x20;
+This example demonstrates configuring `action.print` to display a button for printing HTML content.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -245,11 +243,11 @@ actions:
 
 {% columns %}
 {% column %}
-&#x20;![Print from a document jig](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Qo1Yno0o5cJkS20VHRALl-20250211-124914.png)&#x20;
+<figure><img src="../../.gitbook/assets/action-print-document-jig.png" alt="Print from a document jig"><figcaption><p>Print from a document jig</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-This example demonstrates configuring `action.print` to display a button for printing raw HTML content from a `jig.document` type.&#x20;
+This example demonstrates configuring `action.print` to display a button for printing raw HTML content from a `jig.document` type.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -554,11 +552,11 @@ actions:
 
 {% columns %}
 {% column %}
-&#x20;![Print from the header](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-EQWfal-j1SxV9GUW-R1iE-20250212-063817.png)&#x20;
+<figure><img src="../../.gitbook/assets/action-print-header.png" alt="Print from the header"><figcaption><p>Print from the header</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-This example demonstrates configuring `action.print` in the `jig.header`. A print `icon` is used to trigger the action. The raw HTML content is configured in the `action.print`.&#x20;
+This example demonstrates configuring `action.print` in the `jig.header`. A print `icon` is used to trigger the action. The raw HTML content is configured in the `action.print`.
 {% endcolumn %}
 {% endcolumns %}
 

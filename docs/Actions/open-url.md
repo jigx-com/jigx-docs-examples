@@ -19,7 +19,7 @@ An open-url action can be set up in various ways:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T3ZC0Rad-LbIo-TwkAz0n\_gtzweo29zg0gybp4gfc9paiphone13blueportrait.png" size="80" position="center" caption="Open URL" alt="Open URL" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T3ZC0Rad-LbIo-TwkAz0n\_gtzweo29zg0gybp4gfc9paiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../.gitbook/assets/ac-openURL1.png" alt="Open URL" width="188"><figcaption><p>Open URL</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -42,7 +42,7 @@ actions:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/85MfW1I1rRzJZ2nViXGqn\_lwkiwhqm9jefwzaddms2sopen-url-swipeableiphone13blueportrait.png" size="78" position="center" caption="Swipe to open URL" alt="Swipe to open URL " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/85MfW1I1rRzJZ2nViXGqn\_lwkiwhqm9jefwzaddms2sopen-url-swipeableiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}&#x20;
+<figure><img src="../../.gitbook/assets/ac-openURL2.png" alt="Swipe to open URL" width="188"><figcaption><p>Swipe to open URL</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -81,7 +81,7 @@ item:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYadDhjMgTy2NrPEZyzmh\_udarll0iezuhktkkwiufopen-url-rightiphone13blueportrait.png" size="80" position="center" caption="Button to open URL" alt="Button to open URL" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GYadDhjMgTy2NrPEZyzmh\_udarll0iezuhktkkwiufopen-url-rightiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../.gitbook/assets/ac-openURL3.png" alt="Button to open URL" width="188"><figcaption><p>Button to open URL</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -114,7 +114,7 @@ item:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w6iMDziHnqSet6KtsHYWi\_scmmooymdeswthvqltsmbopen-url-onsuccessiphone13blueportrait.png" size="80" position="center" caption="Open URL onSuccess" alt="Open URL onSuccess" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/w6iMDziHnqSet6KtsHYWi\_scmmooymdeswthvqltsmbopen-url-onsuccessiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}&#x20;
+<figure><img src="../../.gitbook/assets/ac-openURL4.png" alt="Open URL onSuccess" width="188"><figcaption><p>Open URL onSuccess</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -159,7 +159,7 @@ In this example, the `action.open-url` is used with a deep link that opens the G
 {% endcolumn %}
 
 {% column %}
-&#x20;![Open Google Maps](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-4baP6op8VhWdNkzk2mhU_cc-appdeeplink.PNG)
+<figure><img src="../../.gitbook/assets/CC-AppDeeplink.PNG" alt="Open Google Maps"><figcaption><p>Open Google Maps</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

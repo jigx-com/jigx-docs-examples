@@ -9,7 +9,7 @@ This action can be used to sync your local database with your live database on t
 5. Dynamically sync multiple entities
 
 {% hint style="warning" %}
-`sync-entities` can't be used if you using [Static Data](https://docs.jigx.com/examples/static).&#x20;
+`sync-entities` can't be used if you using [Static Data](https://docs.jigx.com/examples/static).
 {% endhint %}
 
 ## Examples and code snippets
@@ -24,7 +24,7 @@ In this example, when tapping the Sync entities button the `action.sync-entities
 {% endcolumn %}
 
 {% column %}
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy\_Ed5LO5RY\_5j\_action-sync-entities.PNG" size="80" position="center" caption="Sync-entities action" alt="Sync-entities action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0loGd9Ahy\_Ed5LO5RY\_5j\_action-sync-entities.PNG" width="800" height="791" darkWidth="800" darkHeight="791"}
+<figure><img src="../../.gitbook/assets/ac-sync-entity1.png" alt="Sync-entities action"><figcaption><p>Sync-entities action</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -45,7 +45,7 @@ actions:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mvmPcSbReereFrlWFAo8t\_syncent-actionlist.PNG" size="80" position="center" caption="Sync-entities action" alt="sync-entities action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mvmPcSbReereFrlWFAo8t\_syncent-actionlist.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}&#x20;
+<figure><img src="../../.gitbook/assets/ac-sync-Entity-action.png" alt="sync-entities action" width="188"><figcaption><p>sync-entities action</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -82,11 +82,11 @@ Here is the example of [sync-entities](https://docs.jigx.com/examples/sync-entit
 
 **Example:**
 
-The full example of sync-entities in onChange you can find in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-onChange.jigx). The full example of sync-entities in onPress you can find in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-onPress.jigx).&#x20;
+The full example of sync-entities in onChange you can find in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-onChange.jigx). The full example of sync-entities in onPress you can find in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-onPress.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fSEBZHTaBdKmnRfeiOWlH\_syncent-onpress.PNG" size="80" position="center" caption="Sync-entities action with onPress" alt="sync-entities action with onPress" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fSEBZHTaBdKmnRfeiOWlH\_syncent-onpress.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/ac-sync-entity-onpress.png" alt="Sync-entities action with onPress" width="188"><figcaption><p>Sync-entities action with onPress</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -164,21 +164,19 @@ item:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v-diCoJjp-AGG2UGwZn9n\_syncent-inchange.PNG" size="80" position="center" caption="sync-entities action with onRefresh" alt="sync-entities action with onRefresh" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/v-diCoJjp-AGG2UGwZn9n\_syncent-inchange.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../.gitbook/assets/ac-sync-entity-onchange.png" alt="sync-entities action with onRefresh" width="188"><figcaption><p>sync-entities action with onRefresh</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 **Example:**
 
-See the full example of sync-entities on onRefresh action in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-onRefresh.jigx).&#x20;
+See the full example of sync-entities on onRefresh action in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/sync-entities/sync-entities-onRefresh.jigx).
 
 {% hint style="info" %}
-&#x20;If you want to use onLoad or onFocus just change the `onRefresh` to `onLoad` or `onFocus`
+If you want to use onLoad or onFocus just change the `onRefresh` to `onLoad` or `onFocus`
 {% endhint %}
 {% endcolumn %}
 {% endcolumns %}
-
-:::CodeblockTabs&#x20;
 
 {% tabs %}
 {% tab title="sync-entities-onRefresh.jigx" %}
@@ -249,7 +247,7 @@ actions:
 
 To return all records from the input source use `$item.id`. In this example, a jig has two lists; the first list shows all the user's calendars, and the second list uses the `ids` from the first list to return all the events for all the calendars. A summary component shows a count of the number of events.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GmLSc1g6aMLAAgchgPdQK\_jb-dyn-sync-cals.png" size="70" position="center" caption="Sync calendars and events" alt="Sync calendars and events" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GmLSc1g6aMLAAgchgPdQK\_jb-dyn-sync-cals.png" width="800" height="796" darkWidth="800" darkHeight="796"}
+<figure><img src="../../.gitbook/assets/ac-sync-entity-calendar1.png" alt="Sync calendars and events" width="375"><figcaption><p>Sync calendars and events</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="full-calendar-list" %}
@@ -398,7 +396,7 @@ useLocalCall: true
 
 To return all records for a selected calendar use `=$map(@ctx.action.parameters.selected, function($item)` in the global action. In this example, a jig has a dropdown to select the calendar and a _Show events_ button syncs the entries in the selected calendar. A summary component shows a count of the number of events in the selected calendar.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-9e6Q31g\_zJYZw9ARJCXw\_jb-dyn-sync-cal2.png" size="78" position="center" caption="Sync events for the birthday calendar" alt="Sync events for the birthday calendar" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-9e6Q31g\_zJYZw9ARJCXw\_jb-dyn-sync-cal2.png" width="800" height="803" darkWidth="800" darkHeight="803"}
+<figure><img src="../../.gitbook/assets/ac-sync-entity-calendar2.png" alt="Sync events for the birthday calendar" width="375"><figcaption><p>Sync events for the birthday calendar</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="my-events.jigx" %}
@@ -476,7 +474,7 @@ summary:
 ```
 {% endtab %}
 
-{% tab title=" message = "hello world" puts message sync-dynamic-selected-rest" %}
+{% tab title=" message = " %}
 ```yaml
 # Add the global action under actions folder and use selected in the array
 # mapping. 

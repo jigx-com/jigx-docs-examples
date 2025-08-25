@@ -15,7 +15,7 @@ A `set-state` action can be set up in various ways:
 
 ### set-state as onFocus/onRefresh
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/biw9t9RyNz-0XOfnu92pv\_set-state-onfocus.PNG" size="80" position="center" caption="Count triggers with set-sate" alt="Count triggers with set-sate" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/biw9t9RyNz-0XOfnu92pv\_set-state-onfocus.PNG"}
+<figure><img src="../../.gitbook/assets/Set-state-OnFocus.PNG" alt="Count triggers with set-sate" width="375"><figcaption><p>Count triggers with set-sate</p></figcaption></figure>
 
 Set state action is used when the onFocus/onRefresh event is triggered and a count is shown of the number of triggers.
 
@@ -45,7 +45,7 @@ onRefresh:
 
 ### set-state as action
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_gb30xllbsbqiIK8YENCT\_set-state-action.PNG" size="80" position="center" caption="Set-state action" alt="Set-state action" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_gb30xllbsbqiIK8YENCT\_set-state-action.PNG"}
+<figure><img src="../../.gitbook/assets/Set-state-Action.PNG" alt="Set-state action" width="375"><figcaption><p>Set-state action</p></figcaption></figure>
 
 Set-state action is used as the primary action on the jig, to set the value of the action-key to +1.
 
@@ -65,7 +65,7 @@ actions:
 
 ### set-state as onPress/onChange
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qSwlxC1hjffY06BLuvK7u\_set-state-onpress.PNG" size="78" position="center" caption="Set-state onPress/onChange" alt="Set-state onPress/onChange" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qSwlxC1hjffY06BLuvK7u\_set-state-onpress.PNG"}
+<figure><img src="../../.gitbook/assets/Set-state-onPress.PNG" alt="Set-state onPress/onChange" width="375"><figcaption><p>Set-state onPress/onChange</p></figcaption></figure>
 
 Set-state action used on the list as onPress/onChange action, to set the value of the key to +1.
 
@@ -94,7 +94,5 @@ onChange:
 ::
 ::::
 ```
-
-
 {% endtab %}
 {% endtabs %}

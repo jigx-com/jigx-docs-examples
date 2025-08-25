@@ -22,7 +22,7 @@ There are multiple ways to set up a reset-state action within a jig:
 
 ### reset-state onFocus/onRefresh
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/me\_Ah8R\_TyYAScqJsBsn6\_reset-state-onfocus.PNG" size="80" position="center" caption="Reset-state onFocus/onRefresh" alt="Reset-state onFocus/onRefresh"}
+<figure><img src="../../.gitbook/assets/Reset-state-onFocus.PNG" alt="Reset-state onFocus/onRefresh" width="375"><figcaption><p>Reset-state onFocus/onRefresh</p></figcaption></figure>
 
 1. Reset-state action is used when the onFocus/onRefresh event is triggered to reset the component's state or key.
 2. You can specify instanceId, this will be the name of the UI component.
@@ -52,7 +52,7 @@ onRefresh:
 
 ### reset-state as action
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/c43Ii0P7\_-wNzHN8VeReE\_reset-state-action.PNG" size="80" position="center" caption="Reset-state action" alt="Reset-state action"}
+<figure><img src="../../.gitbook/assets/Reset-state-action.PNG" alt="Reset-state action" width="563"><figcaption><p>Reset-state action</p></figcaption></figure>
 
 1. Reset-state action is used as the primary action on the jig, to reset-state of the component in the jig and its value.
 2. You can specify **instanceId**, this will be the name of the UI component
@@ -75,7 +75,7 @@ actions:
 
 ### reset-state onPress/onChange
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vrFGC9hXE3ufLaIzJ2c-m\_reset-state-onpress.PNG" size="80" position="center" caption="Reset-state onPress/onChange" alt="Reset-state onPress/onChange"}
+<figure><img src="../../.gitbook/assets/Reset-state-onPress.PNG" alt="Reset-state onPress/onChange" width="563"><figcaption><p>Reset-state onPress/onChange</p></figcaption></figure>
 
 1. Reset-state action used on the list as **onPress** or **onChange** action, to reset-state of the component.
 2. You can specify instanceId, this will be the name of the UI component.
