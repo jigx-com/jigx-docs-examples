@@ -2,11 +2,11 @@
 
 {% columns %}
 {% column %}
-Use the `jig.list` to create a list from a datasource and style that list to your requirements. A list is a changeable, ordered sequence of elements and related values. They enable you to keep data that belongs together, condense your code, and perform the same methods and operations on multiple values at once. Looking to add a shopping cart or product list to your app? The [product-item](../Components/list/product-item.md) list comes with great out-of-the-box features that make it easy to build.&#x20;
+Use the `jig.list` to create a list from a datasource and style that list to your requirements. A list is a changeable, ordered sequence of elements and related values. They enable you to keep data that belongs together, condense your code, and perform the same methods and operations on multiple values at once. Looking to add a shopping cart or product list to your app? The [product-item](../Components/list/product-item.md) list comes with great out-of-the-box features that make it easy to build.
 {% endcolumn %}
 
 {% column %}
-&#x20;![Jig List Preview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dcAG7_G32yIHB5eekZoHx_list.png)&#x20;
+<figure><img src="../../.gitbook/assets/jig-listIntro.png" alt="Jig List Preview" width="375"><figcaption><p>Jig List Preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -75,25 +75,23 @@ The code below is an extract from the full _jigx-samples_ solution. The code sni
 ### Simple List
 
 {% columns %}
-{% column %}
-&#x20;![Simple List](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KrF4Iv4VkyKsP_PJP4bK2_simple-list-dd.PNG)&#x20;
-
-
+{% column width="41.66666666666667%" %}
+<figure><img src="../../.gitbook/assets/simple-list-dd.PNG" alt="Simple List" width="188"><figcaption><p>Simple List</p></figcaption></figure>
 {% endcolumn %}
 
-{% column %}
+{% column width="58.33333333333333%" %}
 This example displays the list in its most basic form without any additional properties or elements configured. Scroll down for more examples of how you can implement lists.
 
-**Examples**: \
-See the full code sample using static data [local](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-local.jigx) and [global](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-global.jigx) in GitHub. \
+**Examples**:\
+See the full code sample using static data [local](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-local.jigx) and [global](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-global.jigx) in GitHub.\
 See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/dynamic-data/simple-list-dd.jigx).
 
-**Datasources**: \
-See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). \
+**Datasources**:\
+See the full datasource code sample for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).\
 See the full datasource code sample for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
 
 {% hint style="success" %}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.&#x20;
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
 {% endhint %}
 {% endcolumn %}
 {% endcolumns %}
@@ -177,19 +175,17 @@ tabs:
 ### Lists with styles
 
 {% columns %}
-{% column %}
-![List style](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/P0hJAS3B7oQNCahEcGhSb_4tnep1wfthkbagqmqlirlist-with-styles1iphone13blueportrait.png)
+{% column width="50%" %}
+<figure><img src="../../.gitbook/assets/jig-list-styles.png" alt="List style"><figcaption><p>List style</p></figcaption></figure>
 {% endcolumn %}
 
-{% column %}
-![List style](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dmaS6Mtit9GlG4FEO1Pjs_yywe7py6b949rph21ybslist-with-styles2iphone13blueportrait.png)
-{% endcolumn %}
-{% endcolumns %}
-
-&#x20;This is a very basic example to guide you on the various styles available to you. This is not only useful to see your options but also to see how these options compare to one another.
+{% column width="50%" %}
+This is a very basic example to guide you on the various styles available to you. This is not only useful to see your options but also to see how these options compare to one another.
 
 **Examples:**\
 See the full example using [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/list-with-styles-sd.jigx) in GitHub.
+{% endcolumn %}
+{% endcolumns %}
 
 {% tabs %}
 {% tab title="list-with-styles-sd.jigx" %}
@@ -352,14 +348,6 @@ tabs:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/euImeOtjJPJyRBl7vaWB2\_cxm2r026lekr6luqt2yaexpander-list2iphone13blueportrait.png" size="82" position="center" caption="List with expander" alt="List with expander" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/euImeOtjJPJyRBl7vaWB2\_cxm2r026lekr6luqt2yaexpander-list2iphone13blueportrait.png
-{% endcolumn %}
-
-{% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/y6ucddAuEX8iWobs7D0UP\_ievh5q0gqyaymx-zhxfwzexpander-list1iphone13blueportrait.png" size="80" position="center" caption="List with expander" alt="List with expander" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/y6ucddAuEX8iWobs7D0UP\_ievh5q0gqyaymx-zhxfwzexpander-list1iphone13blueportrait.png
-{% endcolumn %}
-{% endcolumns %}
-
 This example shows a list of Expanders that have used `titles` component as the header element.
 
 Expanders are ideal for displaying additional information without having to navigate away to another page.
@@ -370,6 +358,16 @@ See the full code sample using [GitHub](https://github.com/jigx-com/jigx-samples
 **Datasources:**
 
 See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/expander-on-list.jigx). See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob0/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/expander-on-list-dynamic.jigx) in Github.
+
+
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/jig-list-exander.png" alt="List with expander"><figcaption><p>List with expander</p></figcaption></figure>
+
+
+{% endcolumn %}
+{% endcolumns %}
 
 {% hint style="success" %}
 Using the code below requires data in the database, the jigx.sample solution has the data provided for employees. You can use the employees.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/employees.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
@@ -473,13 +471,11 @@ tabs:
 ### List with Stages
 
 {% columns %}
-{% column %}
-&#x20;![List with stages](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rM6712C8hx3A7D_8L5mo0_fiwh9nwvp9lrc1l9oamvilist-type-list-w-stagesiphone13blueportrait.png)
-
-
+{% column width="41.66666666666667%" %}
+<figure><img src="../../.gitbook/assets/jig-list-stage.png" alt="List with stages" width="375"><figcaption><p>List with stages</p></figcaption></figure>
 {% endcolumn %}
 
-{% column %}
+{% column width="58.33333333333333%" %}
 This example is for list items that would have a left and right element and would typically show a start-and-end concept. A common use of this is usually flight schedules, however, this can be used for a multitude of different uses as you can choose a different icon.
 
 {% hint style="info" %}
@@ -497,8 +493,6 @@ Using the code below requires data in the database, the jigx.sample solution has
 {% endhint %}
 {% endcolumn %}
 {% endcolumns %}
-
-
 
 {% tabs %}
 {% tab title="list-with-stage-dd.jigx" %}
@@ -600,13 +594,11 @@ tabs:
 ### List with Product-items
 
 {% columns %}
-{% column %}
-&#x20;![List with product items](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CEcfPBaZCSgfu-1vgkSwG_udffhlijk0bjckim0cetzlist-with-product-itemsiphone13blueportrait.png)
-
-
+{% column width="41.66666666666667%" %}
+<figure><img src="../../.gitbook/assets/jig-list-productItems.png" alt="List with product items" width="188"><figcaption><p>List with product items</p></figcaption></figure>
 {% endcolumn %}
 
-{% column %}
+{% column width="58.33333333333333%" %}
 This example displays the built-in functionality of displaying product items in a way that allows for impact yet does not require intricate setups.
 
 **Examples:**\
@@ -704,21 +696,21 @@ tabs:
 ### List with Avatars
 
 {% columns %}
-{% column %}
-Image\[]{alt="List with avatars" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bM2-7a1aTMnGq8rXZwkK0\_listwithavatarsdd.PNG" size="78" width="1240" height="2500" caption="List with avatars" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bM2-7a1aTMnGq8rXZwkK0\_listwithavatarsdd.PNG"}
+{% column width="41.66666666666667%" %}
+<figure><img src="../../.gitbook/assets/listwithavatarsdd.PNG" alt="List with avatars" width="188"><figcaption><p>List with avatars</p></figcaption></figure>
 {% endcolumn %}
 
-{% column %}
+{% column width="58.33333333333333%" %}
 This example displays the list items in a way that allows for impact yet does not require intricate setups. Avatars are displayed for each list item.
 
-**Examples:** \
+**Examples:**\
 See the full code samples using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-avatars-sd.jigx) in GitHub. See the full code samples using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-avatars-dd.jigx) in GitHub.
 
-**Datasource**: \
+**Datasource**:\
 See the full datasource code samples for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-avatars-sd.jigx) in GitHub. See the full datasource code samples for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-avatars-dd.jigx) in GitHub.
 
 {% hint style="success" %}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for avatars and employees. You can use the [avatar.csv](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/avatar.csv) and [employees.csv](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/employees.csv) files in GitHub and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.&#x20;
+Using the code below requires data in the database, the jigx.sample solution has the data provided for avatars and employees. You can use the [avatar.csv](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/avatar.csv) and [employees.csv](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/employees.csv) files in GitHub and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
 {% endhint %}
 {% endcolumn %}
 {% endcolumns %}
@@ -809,15 +801,15 @@ tabs:
 ### List with right numbered badges
 
 {% columns %}
-{% column %}
+{% column width="50%" %}
 This example displays a list of task priorities, with the number of tasks in each priority shown in a `badge` on the right. Badges always use the primary color. You cannot change the color of the badge.
 
 **Examples:**\
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-right-numbered-badge.jigx).&#x20;
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-right-numbered-badge.jigx).
 {% endcolumn %}
 
-{% column %}
-Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VNwVsznKhmwyIFL593qRe-20241028-150758.PNG" size="72" position="center" caption="List with numbered badge" alt="List with numbered badge" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VNwVsznKhmwyIFL593qRe-20241028-150758.PNG
+{% column width="50%" %}
+<figure><img src="../../.gitbook/assets/jigx-list-badges.png" alt="List with numbered badge" width="188"><figcaption><p>List with numbered badge</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -919,9 +911,7 @@ datasources:
 
 {% columns %}
 {% column %}
-&#x20;![Pie Chart list](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eRAmhlX5aCuh0VzaEMe6h_wnjybtqqws3yspsocyejdlist-with-pie-chartsiphone13blueportrait.png)
-
-
+<figure><img src="../../.gitbook/assets/jig-list-pie.png" alt="Pie Chart list" width="188"><figcaption><p>Pie Chart list</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -1003,11 +993,11 @@ tabs:
 ### Horizontal list
 
 {% columns %}
-{% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iAXv2THQLhsn2rID-i7pl\_horizontallistdd.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iAXv2THQLhsn2rID-i7pl\_horizontallistdd.PNG
+{% column width="41.66666666666667%" %}
+<figure><img src="../../.gitbook/assets/horizontallistdd.PNG" alt="Horizontal list" width="375"><figcaption><p>Horizontal list</p></figcaption></figure>
 {% endcolumn %}
 
-{% column %}
+{% column width="58.33333333333333%" %}
 This provides an example of a horizontal list with some UI elements like an image and values configured. Horizontal lists are especially helpful when used on a Composite Jig with other Jigs.
 
 **Examples:**\
@@ -1021,22 +1011,8 @@ See the full datasource code sample for [static data](https://github.com/jigx-co
 See more code samples for [horizontal lists](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/horizontal-lists) in GitHub.
 
 {% hint style="success" %}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.&#x20;
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
 {% endhint %}
-{% endcolumn %}
-{% endcolumns %}
-
-{% columns %}
-{% column %}
-&#x20;![Horizontal list](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/NYG4WP5wZRl4GeGoaaf6l_hor-1iphone13blueportrait.png)
-
-
-{% endcolumn %}
-
-{% column %}
-![Horizontal list](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xV9m95LeWxriWLpEccp2D_hor-2iphone13blueportrait.png)
-
-
 {% endcolumn %}
 {% endcolumns %}
 
@@ -1136,23 +1112,21 @@ tabs:
 
 {% columns %}
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DODQZ6\_xGZsyfmm3cvsbr\_oah4dtuwpgsjwjv-9jqrjlist-with-search-functionalityiphone13blueportrait.png" size="82" position="center" caption="List with search" alt="List with search" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DODQZ6\_xGZsyfmm3cvsbr\_oah4dtuwpgsjwjv-9jqrjlist-with-search-functionalityiphone13blueportrait.png
+<figure><img src="../../.gitbook/assets/cc-list-search.png" alt="List with search" width="188"><figcaption><p>List with search</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jBmxLNv17xsQjkcxrXG0p\_iysinzse4zenpjavdfphzlist-with-search-fuctionalitz2iphone13blueportrait.png" size="80" position="center" caption="List with search" alt="List with search" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jBmxLNv17xsQjkcxrXG0p\_iysinzse4zenpjavdfphzlist-with-search-fuctionalitz2iphone13blueportrait.png
-{% endcolumn %}
-{% endcolumns %}
-
 This example displays the search functionality of a basic List Jig that allows the user to filter a list with tons of data instantaneously based on certain keywords they have entered.
 
-**Examples**: \
-See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-search-sd.jigx) in GitHub. \
+**Examples**:\
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-search-sd.jigx) in GitHub.\
 See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-search-dd.jigx) in GitHub.
 
-**Datasources**: \
-See the full datasource code sample for[static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-search-sd.jigx) in GitHub. \
+**Datasources**:\
+See the full datasource code sample for[static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-search-sd.jigx) in GitHub.\
 See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx) in GitHub.
+{% endcolumn %}
+{% endcolumns %}
 
 {% hint style="success" %}
 Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
@@ -1253,23 +1227,21 @@ tabs:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dWqdS3roU3WdS\_abP37U4\_4nbi3jyotqnlueroigqvglist-with-filter-functionalityiphone13blueportrait.png
+<figure><img src="../../.gitbook/assets/cc-list-filter.png" alt="List with filter" width="188"><figcaption><p>List with filter</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OtOK\_didUSXqSV7mc5L2t\_7rotb-eqnt3niy1k-bnh3list-with-filter-functionalitz2iphone13blueportrait.png" size="78" position="center" caption="List with filter" alt="List with filter" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OtOK\_didUSXqSV7mc5L2t\_7rotb-eqnt3niy1k-bnh3list-with-filter-functionalitz2iphone13blueportrait.png
-{% endcolumn %}
-{% endcolumns %}
-
 This example helps to categorically filter the data to create meaningful sections or split the data for ease of use for the users.
 
-**Examples**: \
-See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-label-sd.jigx) in GitHub. \
+**Examples**:\
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-label-sd.jigx) in GitHub.\
 See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-label-dd.jigx) in GitHub.
 
-**Datasources**: \
-See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-label-sd.jigx) in GitHub. \
+**Datasources**:\
+See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-label-sd.jigx) in GitHub.\
 See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-label-dd.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
 {% hint style="success" %}
 Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
@@ -1371,23 +1343,21 @@ tabs:
 
 {% columns %}
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BH3AW-wsrBSLQtb66vQbq\_v94toyltr0-k0a55pao-list-with-search-filteriphone13blueportrait.png" size="82" position="center" caption="List search and filter" alt="List search and filter" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BH3AW-wsrBSLQtb66vQbq\_v94toyltr0-k0a55pao-list-with-search-filteriphone13blueportrait.png
+<figure><img src="../../.gitbook/assets/cc-listfilterSearch.png" alt="List search and filter" width="188"><figcaption><p>List search and filter</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F\_KnGZXdcC4IHTLPIrkkD\_g8wxzvbcrv436umtcujzklist-with-search-filter2iphone13blueportrait.png" size="80" position="center" caption="List search and filter" alt="List search and filter" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F\_KnGZXdcC4IHTLPIrkkD\_g8wxzvbcrv436umtcujzklist-with-search-filter2iphone13blueportrait.png
-{% endcolumn %}
-{% endcolumns %}
-
 To further enhance the search and filter capabilities for the user, there is also an option to combine the search and filter functionality as can be seen in this example.
 
-**Examples**: \
-See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-search-label-sd.jigx) in GitHub. \
+**Examples**:\
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-search-label-sd.jigx) in GitHub.\
 See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-search-label-dd.jigx) in GitHub.
 
-**Datasources**: \
-See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-search-label-sd.jigx) in GitHub. \
+**Datasources**:\
+See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-filter-search-label-sd.jigx) in GitHub.\
 See the full datasource for code sample [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-search-label-dd.jigx) in GitHub.
+{% endcolumn %}
+{% endcolumns %}
 
 {% hint style="success" %}
 Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
@@ -1482,12 +1452,12 @@ tabs:
 {% column %}
 In this example, there are three tabs to filter on. By default we want the jig to open on the second tab (Team B). This is achieved by adding an `initialValue` property to the `filter` property.
 
-**Example**: \
+**Example**:\
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-initialvalue.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-O9xu\_TcOIeO0WfdknAWRe-20240913-143124.PNG"
+<figure><img src="../../.gitbook/assets/ListFilterDefault1.PNG" alt="Filtered list with default tab" width="188"><figcaption><p>Filtered list with default tab</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -1570,26 +1540,24 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5UvBC2OTvvpRPUxgb6S7J\_jjoyudbruwukeskhccb29list-selectableiphone13blueportrait.png
+<figure><img src="../../.gitbook/assets/jig-list-selectable.png" alt="Selectable list"><figcaption><p>Selectable list</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CC\_ySWCN4silK9yP0ADIF\_bghosvpxwt9dtdbfbyaxhlist-selectable2iphone13blueportrait.png
+This example shows functionality that allows users to select one or numerous list items for quick actioning, saving them the time and effort of having to perform numerous repetitive manual tasks.\
+\
+**Examples**:\
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-selectable-sd.jigx) in GitHub.\
+See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-selectable-dd.jigx) in GitHub.
+
+**Datasources**:\
+See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx) in GitHub.\
+See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx) in GitHub.
 {% endcolumn %}
 {% endcolumns %}
 
-This example shows functionality that allows users to select one or numerous list items for quick actioning, saving them the time and effort of having to perform numerous repetitive manual tasks.\
-\
-**Examples**: \
-See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-selectable-sd.jigx) in GitHub. \
-See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-selectable-dd.jigx) in GitHub.
-
-**Datasources**: \
-See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx) in GitHub. \
-See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx) in GitHub.
-
 {% hint style="success" %}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.&#x20;
+Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
 {% endhint %}
 
 {% tabs %}
@@ -1679,23 +1647,21 @@ tabs:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/N-ZQxHpkRPVK1l6HZZMph\_listselected.PNG
+This allows the user to see when they are interacting with a specific list item. Whilst interacting, the list item changes slightly making it clear to the user that they are interacting with this item.
+
+**Examples**:\
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-active-item-sd.jigx) in GitHub.\
+See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-active-item-dd.jigx) in GitHub.
+
+**Datasources**:\
+See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx) in GitHub.\
+See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx) in GitHub.
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/WKPazW\_VhKEFlU1sLBrqw\_kq-c9fqjsclvjwjm23okqlist-type-active-itemiphone13blueportrait.png
+<figure><img src="../../.gitbook/assets/jig-list-active.png" alt="List with active items" width="178"><figcaption><p>List with active items</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
-
-This allows the user to see when they are interacting with a specific list item. Whilst interacting, the list item changes slightly making it clear to the user that they are interacting with this item.
-
-**Examples**: \
-See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-active-item-sd.jigx) in GitHub. \
-See the full code sample using [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-active-item-dd.jigx) in GitHub.
-
-**Datasources**: \
-See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx) in GitHub. \
-See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx) in GitHub.
 
 {% hint style="success" %}
 Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/cleaning-services.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
@@ -1796,23 +1762,21 @@ tabs:
 
 {% columns %}
 {% column %}
-mage\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/u049kALYz\_GNfmw0HxLgK\_8d1mkmehpe7r4pjn43hl5list-with-sectionsiphone13blueportrait.png
+<figure><img src="../../.gitbook/assets/jig-list-sections.png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kzX-FtVAoLn2X\_22doCAi\_96zn0hzblno8u6l6ybhlmlist-with-sections2iphone13blueportrait.png
-{% endcolumn %}
-{% endcolumns %}
-
 This functionality allows you to split your lists into more meaningful sections.
 
-**Examples**: \
-See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-search-sd.jigx) in GitHub. \
+**Examples**:\
+See the full code sample using [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-search-sd.jigx) in GitHub.\
 See the full code sample using[dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-sections-dd.jigx)in GitHub.
 
-**Datasources**: \
-See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx) in GitHub. \
+**Datasources**:\
+See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx) in GitHub.\
 See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx) in GitHub.
+{% endcolumn %}
+{% endcolumns %}
 
 {% hint style="success" %}
 Using the code below requires data in the database, the jigx.sample solution has the data provided for cleaning -services. You can use the cleaning-services.csv file in [GitHub](jig_list.md) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
@@ -1906,12 +1870,12 @@ tabs:
 {% column %}
 This example use the `isContained` property set to `true` to style each item by wrapping it in a card. The code sample below is for a vertical list. You can also wrap list items in a card for a horizontal list.
 
-**Examples:** \
+**Examples:**\
 See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-item-contained.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-5VXNElPVo6tg6sBSmihHT-20241025-144842.png
+<figure><img src="../../.gitbook/assets/jig-list-card.png" alt="List items contained in a card"><figcaption><p>List items contained in a card</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -1954,12 +1918,12 @@ item:
 {% column %}
 This example uses the basic rating configuration to display a `value` with accompanying `text`. By default, the rating shows a single star in the primary color.
 
-**Examples:** \
+**Examples:**\
 See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-rating-value.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T-SdlGk8kb3cvZ8a-BXeM-20241030-064308.png
+<figure><img src="../../.gitbook/assets/jig-list-rating.png" alt="List with ratings" width="188"><figcaption><p>List with ratings</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -2117,12 +2081,12 @@ datasources:
 {% column %}
 Create a product review jig that provides a `rating` using a `value`, an `icon` representing the value, rating `icons` with `color`. The list is styled by wrapping the items in a card using the `isContained` property. A verified `label` is added to the right while the product image is added as an `avatar` to the left.
 
-**Examples:** \
-See the full example in [GitHub](jig_list.md).&#x20;
+**Examples:**\
+See the full example in [GitHub](jig_list.md).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cyxMwXJe2B-rFaKAPriVB-20241030-062312.png
+<figure><img src="../../.gitbook/assets/listRateV.png" alt="List with ratings and icons" width="188"><figcaption><p>List with ratings and icons</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -2279,7 +2243,7 @@ This example uses the simplest configuration of the rating property to display a
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HiL\_AAasWXGM4iXpb76p7-20241030-073308.png
+<figure><img src="../../.gitbook/assets/List-ratePercent.png" alt="List with percentage ratings" width="188"><figcaption><p>List with percentage ratings</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -2368,12 +2332,12 @@ This example sets up a product review jig that displays:
 * A verified `label` placed on the right side of the item.
 * A product image shown as an `avatar` on the left side.
 
-**Examples:** \
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-rating-percentage-max.jigx).&#x20;
+**Examples:**\
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-rating-percentage-max.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_\_u0Q3gtznpmndWy5Y1dU-20241030-101047.png
+<figure><img src="../../.gitbook/assets/List-ratePercent-icon.png" alt="List with percentage ratings and icons" width="188"><figcaption><p>List with percentage ratings and icons</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -2528,12 +2492,12 @@ This example creates a list with multiple `tags` shown on each list-item.
 * The `tags` show the assigned team, priority, and status.
 * A product image shown as an `avatar` on the left side.
 
-**Examples:** \
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-tags-multiple.jigx).&#x20;
+**Examples:**\
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-tags-multiple.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TUsCmx9L6lCnKth7jdpoI-20241030-101514.png
+<figure><img src="../../.gitbook/assets/List-tagsMultiple.png" alt="List with multiple tags" width="188"><figcaption><p>List with multiple tags</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -2616,12 +2580,12 @@ This example show a list of cleaning services that displays:
 * A styled list where each item is displayed within a card format, achieved by enabling the `isContained` property.
 * A numbered `badge` in the `rightElement` of the item shows the number of services available.
 
-**Examples:** \
+**Examples:**\
 See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-tags-rating.jigx).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-t21E3-6z0TBitPqdGueGP-20241030-105810.png
+<figure><img src="../../.gitbook/assets/List-ratingTags.png" alt="List with ratings and tags" width="188"><figcaption><p>List with ratings &#x26; tags</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
