@@ -1,200 +1,34 @@
 # list-item
 
-The list-item component serves as the child component whenever any list-related item has been called, as discussed in the [jig.list](<./../../Jig Types/jig_list.md>) and [list](./../list.md) sections. The component determines how the list items are returned, allowing you to customize the data returned and add UI elements to the lists.
+The list-item component serves as the child component whenever any list-related item has been called, as discussed in the [jig.list](<../../Jig Types/jig_list.md>) and [list](../list.md) sections. The component determines how the list items are returned, allowing you to customize the data returned and add UI elements to the lists.
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties]() for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](list-item.md) for a list and their configuration options.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="124">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>title</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add a <code>title</code> for the list-item. You can use an expression and datasource to set the title. Select <em>Line Options</em> (<code>text</code>), allowing configuration of individual parts of the central element in a list-item. You can set properties such as <code>color</code>, <code>fontSize</code>, <code>bold</code>, <code>format</code>, <code>isSubtle</code> (low opacity), and <code>numberOfLines</code>, rather than applying them globally via the root.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="163.10546875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Add a <code>title</code> for the list-item. You can use an expression and datasource to set the title. Select <em>Line Options</em> (<code>text</code>), allowing configuration of individual parts of the central element in a list-item. You can set properties such as <code>color</code>, <code>fontSize</code>, <code>bold</code>, <code>format</code>, <code>isSubtle</code> (low opacity), and <code>numberOfLines</code>, rather than applying them globally via the root.</td></tr></tbody></table>
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="143">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Other options</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>color</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The color of the list item changes based on conditions. The first evaluating to true will be used.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>description</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The subtitle or description should be displayed with the list-item title. You can format the text of these properties if you select the "Text With Format" option in the builder help (ctrl + space) or select <em>Line Options</em> (<code>text</code>), allowing configuration of individual parts of the central element in a list-item. You can set properties such as <code>color</code>, <code>fontSize</code>, <code>bold</code>, <code>format</code>, <code>isSubtle</code> (low opacity), and <code>numberOfLines</code>, rather than applying them globally via the root. select .</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>divider</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Set the space between two items in the list.</p>
-      <ul>
-      <li><code>none</code> - No divider is shown between items. Set by default.</li>
-      <li><code>transparent</code> - Sets a 1pt margin between two items.</li>
-      <li><code>solid</code> - Displays a colored line between two items. When the list-item is contained in a card, this property will be ignored.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>isContained</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Used to style the list item, <code>true</code> wraps the list item in a card, while <code>false</code> displays the item with no styling. This property can be used with vertical and horizontal lists.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>leftElement</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Set an element to the left of the list. The following elements are available:</p>
-      <ul>
-      <li><code>avatar</code> - configure the <code>color</code>, <code>size</code>, <code>text</code>, <code>uri</code>, and <code>onPress</code> event.</li>
-      <li><code>checkbox</code></li>
-      <li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li>
-      <li><code>image</code> - the image <code>size</code>, <code>shape</code>, <code>resizeMode</code>, and <code>onPress</code> event is configurable. </li>
-      <li><code>progress</code></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>numberOfLines</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Specify the maximum number of lines for the <code>description</code> and <code>subtitle</code> properties at a global root level. Property values are:</p>
-      <ul>
-      <li><code>dynamic</code>- displays all lines of text.</li>
-      <li>Numerical value (e.g., <code>2</code>) - Limits the <code>description</code> and <code>subtitle</code> to the specified number of lines.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>progress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add a colorful visualization (background color of your choice) of the list item's progress. The color displays from left to right, and the range of the allowed values is from  0 to 1.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>rating</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the <code>ratingIcon</code>, <code>color</code>, and accompanying descriptive <code>text</code>. By default, the rating property has only one icon showing a rating-star in the primary color.
-      <code>value</code>- Rating with numerical value.
-      The value of the rating, which can be a simple number.
-      The number of icons is calculated based on this value unless overridden in the icon configuration.
-      Configuring the <code>current</code> and <code>maximum</code> values, shows the value as a fraction, for example 7/10.
-      <code>percentage</code> - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%.
-      <code>ratingIcon</code> - By default the <em>rating-star</em> icon in the <em>primary</em> color is displayed.
-      <code>icon</code> - Add an icon to represent the rating. A list of icons is available. See  for more information.
-      <code>color</code>- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in .
-      <code>current</code> and <code>maximum</code> values - Where maximum is the number of icons to display and current the number of icons to color.
-      <code>text</code> - Add a descriptive text that displays next to the rating.
-      Ratings can set up in the following ways:
-      1) Example of <code>value</code> for a product rating.
-      2) Example of a user rating shown in a <code>percentage</code>.
-      3)Example of <code>value</code> rating showing 2.5/5 as a rating with single star icon.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>rightElement</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Set an element to the right of the list. The following elements are available:</p>
-      <ul>
-      <li><code>amountControl</code></li>
-      <li><code>badge</code> - can be a solid colored badge or a badge with a number in it. Badges  always use the primary color.</li>
-      <li><code>button</code></li>
-      <li><code>checkbox</code></li>
-      <li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li>
-      <li><code>switch</code></li>
-      <li><code>value</code> - When using <code>text</code>, the option to change its <code>color</code> is available.</li>
-      <li><code>text</code> - define up to three  lines of text with styling (color, bold, font size) applied to each line of text.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>subtitle</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The subtitle or description should be displayed together with the title on the list-item. You can format the text of these properties if you select the <code>Text With Format</code> option in the IntelliSense (ctrl + space) or select <em>Line Options</em> (<code>text</code>), allowing configuration of individual parts of the central element in a list-item. You can set properties such as <code>color</code>, <code>fontSize</code>, <code>bold</code>, <code>format</code>, <code>isSubtle</code> (low opacity), and <code>numberOfLines</code>, rather than applying them globally via the root.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>tags</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.</p>
-      <ul>
-      <li><code>text</code> -  The text content displayed within the tag.</li>
-      <li><code>color</code> - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in. </li>
-      </ul>
-      <p>Tags can be set up in three ways: </p>
-      <ol>
-      <li>Using a dynamic expression from a datasource:
-      <code>tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}</code></li>
-      <li>Using a dynamic expression from a list item:
-      <code>tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}</code></li>
-      <li>Using static, predefined tags
-      <code>tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'</code></li>
-      </ol>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="148.41015625">Other options</th><th></th></tr></thead><tbody><tr><td><code>color</code></td><td>The color of the list item changes based on conditions. The first evaluating to true will be used.</td></tr><tr><td><code>description</code></td><td>The subtitle or description should be displayed with the list-item title. You can format the text of these properties if you select the "Text With Format" option in the builder help (ctrl + space) or select <em>Line Options</em> (<code>text</code>), allowing configuration of individual parts of the central element in a list-item. You can set properties such as <code>color</code>, <code>fontSize</code>, <code>bold</code>, <code>format</code>, <code>isSubtle</code> (low opacity), and <code>numberOfLines</code>, rather than applying them globally via the root. select .</td></tr><tr><td><code>divider</code></td><td><p>Set the space between two items in the list.</p><ul><li><code>none</code> - No divider is shown between items. Set by default.</li><li><code>transparent</code> - Sets a 1pt margin between two items.</li><li><code>solid</code> - Displays a colored line between two items. When the list-item is contained in a card, this property will be ignored.</li></ul></td></tr><tr><td><code>isContained</code></td><td>Used to style the list item, <code>true</code> wraps the list item in a card, while <code>false</code> displays the item with no styling. This property can be used with vertical and horizontal lists.</td></tr><tr><td><code>leftElement</code></td><td><p>Set an element to the left of the list. The following elements are available:</p><ul><li><code>avatar</code> - configure the <code>color</code>, <code>size</code>, <code>text</code>, <code>uri</code>, and <code>onPress</code> event.</li><li><code>checkbox</code></li><li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li><li><code>image</code> - the image <code>size</code>, <code>shape</code>, <code>resizeMode</code>, and <code>onPress</code> event is configurable.</li><li><code>progress</code></li></ul></td></tr><tr><td><code>numberOfLines</code></td><td><p>Specify the maximum number of lines for the <code>description</code> and <code>subtitle</code> properties at a global root level. Property values are:</p><ul><li><code>dynamic</code>- displays all lines of text.</li><li>Numerical value (e.g., <code>2</code>) - Limits the <code>description</code> and <code>subtitle</code> to the specified number of lines.</li></ul></td></tr><tr><td><code>progress</code></td><td>Add a colorful visualization (background color of your choice) of the list item's progress. The color displays from left to right, and the range of the allowed values is from 0 to 1.</td></tr><tr><td><code>rating</code></td><td>Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the <code>ratingIcon</code>, <code>color</code>, and accompanying descriptive <code>text</code>. By default, the rating property has only one icon showing a rating-star in the primary color. <code>value</code>- Rating with numerical value. The value of the rating, which can be a simple number. The number of icons is calculated based on this value unless overridden in the icon configuration. Configuring the <code>current</code> and <code>maximum</code> values, shows the value as a fraction, for example 7/10. <code>percentage</code> - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%. <code>ratingIcon</code> - By default the <em>rating-star</em> icon in the <em>primary</em> color is displayed. <code>icon</code> - Add an icon to represent the rating. A list of icons is available. See for more information. <code>color</code>- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in . <code>current</code> and <code>maximum</code> values - Where maximum is the number of icons to display and current the number of icons to color. <code>text</code> - Add a descriptive text that displays next to the rating. Ratings can set up in the following ways: 1) Example of <code>value</code> for a product rating. 2) Example of a user rating shown in a <code>percentage</code>. 3)Example of <code>value</code> rating showing 2.5/5 as a rating with single star icon.</td></tr><tr><td><code>rightElement</code></td><td><p>Set an element to the right of the list. The following elements are available:</p><ul><li><code>amountControl</code></li><li><code>badge</code> - can be a solid colored badge or a badge with a number in it. Badges always use the primary color.</li><li><code>button</code></li><li><code>checkbox</code></li><li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li><li><code>switch</code></li><li><code>value</code> - When using <code>text</code>, the option to change its <code>color</code> is available.</li><li><code>text</code> - define up to three lines of text with styling (color, bold, font size) applied to each line of text.</li></ul></td></tr><tr><td><code>subtitle</code></td><td>The subtitle or description should be displayed together with the title on the list-item. You can format the text of these properties if you select the <code>Text With Format</code> option in the IntelliSense (ctrl + space) or select <em>Line Options</em> (<code>text</code>), allowing configuration of individual parts of the central element in a list-item. You can set properties such as <code>color</code>, <code>fontSize</code>, <code>bold</code>, <code>format</code>, <code>isSubtle</code> (low opacity), and <code>numberOfLines</code>, rather than applying them globally via the root.</td></tr><tr><td><code>tags</code></td><td><p>A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.</p><ul><li><code>text</code> - The text content displayed within the tag.</li><li><code>color</code> - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in.</li></ul><p>Tags can be set up in three ways:</p><ol><li>Using a dynamic expression from a datasource: <code>tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}</code></li><li>Using a dynamic expression from a list item: <code>tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}</code></li><li>Using static, predefined tags <code>tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'</code></li></ol></td></tr></tbody></table>
 
-:::CodeblockTabs
-product-rating-value
-
+{% tabs %}
+{% tab title="product-rating-value" %}
 ```yaml
 rating:
    value: 4.5
    text: based on 1,200 reviews
 ```
+{% endtab %}
 
-user-rating-percentage
-
+{% tab title="user-rating-percentage" %}
 ```yaml
 percentage:
 rating:
    percentage: 0.75
    text: expectations exceeded
 ```
+{% endtab %}
 
-rating-star-ratingicon
-
+{% tab title="rating-star-ratingicon" %}
 ```yaml
 rating:
    value:
@@ -203,119 +37,49 @@ rating:
    ratingIcon:
       icon: rating-star
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="130">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Actions</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>onPress</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The action is available with the <code>swipeable</code> action and is triggered when pressing an item in the list. Use IntelliSense (ctrl+space) to see the list of available actions.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>swipeable</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>Use the <code>swipeable</code> property to add the <code>onPress</code> action. The action will appear and become pressable by swiping the list-item to the left or right.</p>
-    </td>
-  </tr>
-</table>
+| **Actions** |                                                                                                                                                                             |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onPress`   | The action is available with the `swipeable` action and is triggered when pressing an item in the list. Use IntelliSense (ctrl+space) to see the list of available actions. |
+| `swipeable` | Use the `swipeable` property to add the `onPress` action. The action will appear and become pressable by swiping the list-item to the left or right.                        |
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="221,115">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>State Configuration</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Key</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Notes</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.current.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>amount
-      checked</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.component.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>amount
-      checked</p>
-    </td>
-    <td selected="false" align="left">
-      <p>State is the variable of the component.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>=@ctx.solution.state.</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>activeItemId
-      now</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Global state variable that can be used throughout the solution.</p>
-    </td>
-  </tr>
-</table>
+| **State Configuration**  | **Key**          | **Notes**                                                                                                                                                                        |
+| ------------------------ | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `=@ctx.current.state.`   | amount checked   | Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array. |
+| `=@ctx.component.state.` | amount checked   | State is the variable of the component.                                                                                                                                          |
+| `=@ctx.solution.state.`  | activeItemId now | Global state variable that can be used throughout the solution.                                                                                                                  |
 
 ## Considerations
 
-- You can use a list-item outside of the list component. This allows configuring a single list item with all list-item features, such as left and right elements and swipe actions, without requiring a full list. These items typically use static values rather than a datasource. See the *List-item outside a list* code example below. The functionality is available in the following components:
-  - [jig.default](<./../../Jig Types/jig_default.md>) children
-  - [Custom components (Alpha)](<./../../Custom components _Alpha_.md>) children
-  - [expander](./../expander.md)&#x20;
-  - [card](./../card.md)
-  - [section](./../entity/section.md)&#x20;
+* You can use a list-item outside of the list component. This allows configuring a single list item with all list-item features, such as left and right elements and swipe actions, without requiring a full list. These items typically use static values rather than a datasource. See the _List-item outside a list_ code example below. The functionality is available in the following components:
+  * [jig.default](<../../Jig Types/jig_default.md>) children
+  * [Custom components (Alpha)](<../../Custom components _Alpha_.md>) children
+  * [expander](../expander.md)
+  * [card](../card.md)
+  * [section](../entity/section.md)
 
 ## Examples and code snippets
 
-:::::ExpandableHeading
 ## Simple list
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pvZIfHt9BCHVGrc68KMdN-20250723-111006.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pvZIfHt9BCHVGrc68KMdN-20250723-111006.png" size="80" width="1313" height="2676" darkWidth="800" darkHeight="1494" position="center" caption="Simple list" alt="Simple list"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-simple.png" alt="Simple list" width="188"><figcaption><p>Simple list</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example displays the list in its most basic form, with a few additional properties or elements to support layout and data visibility.
 
-**Examples:**
-See the full example using static data [local](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-local.jigx) and [global](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-global.jigx) in GitHub.
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/dynamic-data/simple-list-dd.jigx_).
+**Examples:** See the full example using static data [local](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-local.jigx) and [global](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-global.jigx) in GitHub. See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/dynamic-data/simple-list-dd.jigx_).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
-::::
+**Datasources:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-simple-list (static)
-
+{% tabs %}
+{% tab title="simple-list (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -337,9 +101,9 @@ item:
       isSubtle: true
       numberOfLines: 3
 ```
+{% endtab %}
 
-simple-list (dynamic)
-
+{% tab title="simple-list (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.cleaning-services-dynamic
@@ -359,9 +123,9 @@ item:
       isSubtle: true
       numberOfLines: 3
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   repair-services-static:
@@ -449,9 +213,9 @@ datasources:
           service: Plumbing
           time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -478,33 +242,27 @@ datasources:
         FROM [default/cleaning-services]
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## Simple list with dividers
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-jPUBikiVYHBO0Lct57f-p-20250723-113438.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-jPUBikiVYHBO0Lct57f-p-20250723-113438.png" size="78" width="1313" height="2676" darkWidth="800" darkHeight="1494" position="center" caption="Simple list with dividers" alt="Simple list Simple list with dividers"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-dividers.png" alt="Simple list Simple list with dividers" width="188"><figcaption><p>Simple list Simple list with dividers</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example shows only a slight variation from the previous example, by having a  `divider : solid` properly configured.
+{% column %}
+This example shows only a slight variation from the previous example, by having a `divider : solid` properly configured.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-divider-sd.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/dynamic-data/simple-list-divider-dd.jigx).
+**Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-divider-sd.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/dynamic-data/simple-list-divider-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
-::::
+**Datasources:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-list-w-divider (static)
-
+{% tabs %}
+{% tab title="list-w-divider (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -526,9 +284,9 @@ item:
       isSubtle: true
       numberOfLines: 3
 ```
+{% endtab %}
 
-list-w-divider (dynamic)
-
+{% tab title="list-w-divider (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.cleaning-services-dynamic
@@ -550,9 +308,9 @@ item:
       isSubtle: true
       numberOfLines: 3
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   repair-services-static:
@@ -640,9 +398,9 @@ datasources:
           service: Plumbing
           time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -669,33 +427,27 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with colored progress bars
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BtaCQqtJaD-wNigr8V_4c_vheyzsjwjtnsuar7karelist-item-list-with-colored-progressiphone13blueportrait.png" size="80" position="center" caption="List with colored progress" alt="List with colored progress" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BtaCQqtJaD-wNigr8V_4c_vheyzsjwjtnsuar7karelist-item-list-with-colored-progressiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-colorProgress.png" alt="List with colored progress" width="179"><figcaption><p>List with colored progress</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example showcases two additional properties that have been configured, the `progress` and `colors`. You can use the data along with some expressions to manipulate data to create meaningful list displays.
 
-**Examples:**
-See the full example using static data in [GitHub]().
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-progress-colors-dd.jigx).
+**Examples:** See the full example using static data in [GitHub](list-item.md). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-progress-colors-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
-::::
+**Datasources:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-progress-list (static)
-
+{% tabs %}
+{% tab title="progress-list (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -714,9 +466,9 @@ item:
       - when:  =@ctx.current.item.materials = 'false'
         color: color7
 ```
+{% endtab %}
 
-progress-list (dynamic)
-
+{% tab title="progress-list (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.cleaning-services-dynamic
@@ -735,9 +487,9 @@ item:
       - when:  =@ctx.current.item.indoor = 'false'
         color: color7
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   repair-services-static:
@@ -825,9 +577,9 @@ datasources:
           service: Plumbing
           time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -854,33 +606,27 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with charts
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KDXgTylo397l_GXU5x7KL_qu0gj0krbtqn5vultjlxclist-pie-chartiphone13blueportrait.png" size="82" position="center" caption="List with pie charts" alt="List with pie charts" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KDXgTylo397l_GXU5x7KL_qu0gj0krbtqn5vultjlxclist-pie-chartiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-chart.png" alt="List with pie charts" width="188"><figcaption><p>List with pie charts</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows pie charts displayed on a list - this is great for a visual representation of information.
 
-**Pie chart examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-pie-charts-list-sd.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-pie-charts-dd.jigx).
+**Pie chart examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-pie-charts-list-sd.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-pie-charts-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/interactive-image/floorplan-office-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-list-dynamic.jigx).
-:::
-::::
+**Datasources:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/interactive-image/floorplan-office-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/charts/dynamic/pie-chart-list-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-pie-chart-list (static)
-
+{% tabs %}
+{% tab title="pie-chart-list (static)" %}
 ```yaml
 children:
   - type: component.list
@@ -905,9 +651,9 @@ children:
             - data: =@ctx.current.item.data
               layout: pie
 ```
+{% endtab %}
 
-pie-chart-list (dynamic)
-
+{% tab title="pie-chart-list (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.pie-chart-list-dynamic
@@ -930,9 +676,9 @@ item:
               layout: pie
               color: =@ctx.current.item.color
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   components:
@@ -958,9 +704,9 @@ datasources:
             - y: 67
               color: transparent
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   pie-chart-list-dynamic:
@@ -981,29 +727,25 @@ datasources:
         FROM [default/charts] 
         WHERE '$.category' = "pie-chart-list"
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FfVF3Ub7uRA05qRs8tJWO_jn40-3cl-ltjpncmuxjvgmicrosoftteams-image-15iphone13blueportrait.png" size="80" position="center" caption="List with bar charts" alt="List with bar charts" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FfVF3Ub7uRA05qRs8tJWO_jn40-3cl-ltjpncmuxjvgmicrosoftteams-image-15iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-barChart.png" alt="List with bar charts" width="174"><figcaption><p>List with bar charts</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows bar charts displayed on a list as a visual representation of information.
 
-**Bar chart example:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/list-with-bar-charts-sd.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-bar-charts-dd.jigx).
+**Bar chart example:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/list-with-bar-charts-sd.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-bar-charts-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/interactive-image/floorplan-restaurant-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-bar-charts-dd.jigx).
-:::
-::::
+**Datasources:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/interactive-image/floorplan-restaurant-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-bar-charts-dd.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-bar-chart-list (static)
-
+{% tabs %}
+{% tab title="bar-chart-list (static)" %}
 ```yaml
 
 children:
@@ -1036,9 +778,9 @@ children:
             - data: =@ctx.current.item.data
               color: =@ctx.current.item.color
 ```
+{% endtab %}
 
-bar-chart-list (dynamic)
-
+{% tab title="bar-chart-list (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.finance-charts
@@ -1055,9 +797,9 @@ item:
       - data: =@ctx.datasources.finance-charts.y
         color: =@ctx.datasources.finance-charts.color
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   list-bar:
@@ -1098,9 +840,9 @@ datasources:
           - x: Q4
             y: 2358
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   finance-charts:
@@ -1124,33 +866,27 @@ datasources:
         LEFT JOIN [default/finance-review-dynamic] B ON
         json_extract(A.Data, '$.year') = json_extract(B.Data, '$.year')
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with avatars
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VfZ1PdHxFrUd-MERuTQ3M-20240805-103238.PNG" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VfZ1PdHxFrUd-MERuTQ3M-20240805-103238.PNG" size="82" width="1240" height="2500" position="center" caption="List with avatars" alt="List with avatars"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-avatar.png" alt="List with avatars" width="188"><figcaption><p>List with avatars</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example shows a list of avatars grouped by titles and returns all avatars in the array. In this example, the static datasource has been configured to use the `uri` and `text` properties that are   required for avatars in a list. This makes it easy to configure in the jig by simply using the expression:
-`avatars: =@ctx.current.item.people`
+{% column %}
+This example shows a list of avatars grouped by titles and returns all avatars in the array. In this example, the static datasource has been configured to use the `uri` and `text` properties that are required for avatars in a list. This makes it easy to configure in the jig by simply using the expression: `avatars: =@ctx.current.item.people`
 
-The following expression can be used if your datasource uses different names for  `uri` and `text`, for example:
-`avatars:
-`      `=@ctx.current.item.people.{"text":name,"uri":image}[]`
+The following expression can be used if your datasource uses different names for `uri` and `text`, for example: `avatars: =@ctx.current.item.people.{"text":name,"uri":image}[]`
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-avatars-sd.jigx).
-:::
-::::
+**Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-avatars-sd.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-list-avatars (static)
-
+{% tabs %}
+{% tab title="list-avatars (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.employee-groups
@@ -1161,9 +897,9 @@ item:
     subtitle: = 'Group id:'& ' ' & @ctx.current.item.groupId
     avatars: =@ctx.current.item.people
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   employee-groups:
@@ -1193,33 +929,27 @@ datasources:
             - uri: https://images.unsplash.com/photo-1542740348-39501cd6e2b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80
               text: Lucy Williams
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with left avatar
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nNzwtlzO5f9fhXFXuDY9P-20250723-115516.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nNzwtlzO5f9fhXFXuDY9P-20250723-115516.png" size="80" width="1313" height="2676" position="center" caption="List with avatars (left)" alt="List with avatars (left)"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-list-with-left-avatariphone13blueportrait.png" alt="List with avatars (left)" width="188"><figcaption><p>List with avatars (left)</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example showcases the list of items with a regular sized `avatar` to the left. The `title` text is styled (bold). The `subtitle` allows the text to wrap over three lines.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-left-elements/list-with-left-avatar-sd.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-left-elements/list-with-left-avatar-dd.jigx).
+**Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-left-elements/list-with-left-avatar-sd.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-left-elements/list-with-left-avatar-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
-::::
+**Datasources:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-left-avatar-list (static)
-
+{% tabs %}
+{% tab title="left-avatar-list (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -1241,9 +971,9 @@ item:
       # define the size of the avatar.
       size: regular
 ```
+{% endtab %}
 
-left-avatar-list (dynamic)
-
+{% tab title="left-avatar-list (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.cleaning-services-dynamic
@@ -1257,9 +987,9 @@ item:
       text: $substring($substringBefore(@ctx.current.item.service, " "), 1, 1) & $substring($substringAfter(@ctx.current.item.service, " ") , 1, 1)
       uri: =@ctx.current.item.illustration
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 type: datasource.static
 options:
@@ -1345,9 +1075,9 @@ options:
       service: Plumbing
       time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -1374,37 +1104,35 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-::::::ExpandableHeading
 ## List with left checkboxes
 
-:::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-0-H2RtH4voOm47-wU41-Q-20250723-121143.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-0-H2RtH4voOm47-wU41-Q-20250723-121143.png" size="80" width="1313" height="2676" darkWidth="800" darkHeight="1494" position="center" caption="List with checkboxes" alt="List with checkboxes"}
-:::
+{% columns %}
+{% column width="58.333333333333336%" %}
+This example showcases a list with checkboxes to the left. This can be configured with preset checked values or can just be empty for the user to select themselves. A color is added to the `title` text and the `subtitle` allows the text to wrap over two lines.
 
-::::VerticalSplitItem
-This example showcases a list with checkboxes to the left. This can be configured with preset checked values or can just be empty for the user to select themselves. A color is added to the `title` text and the` subtitle` allows the text to wrap over two lines.
-
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-left-elements/list-with-left-checkbox-sd.jigx).
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-left-elements/list-with-left-checkbox-sd.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-left-elements/list-with-left-checkbox-dd.jigx).
 
-:::hint{type="info"}
+**Datasources:** \
+See the full datasource for static data in [GitHub](list-item.md) \
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).&#x20;
+
+{% hint style="info" %}
 Specifying `initialValue` will determine the value when the list is loaded, however, specifying the value presets the value itself. The latter is handy when you want to display details that don't require much intervention from the user or if you wish to make it easier and faster so they only have to review the current selections for instance.
-:::
+{% endhint %}
+{% endcolumn %}
 
-**Datasources:**
-See the full datasource for static data in [GitHub]()
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-::::
-:::::
+{% column width="41.666666666666664%" %}
+<figure><img src="../../../.gitbook/assets/list-checkboxiphone13blueportrait.png" alt="List with checkboxes" width="188"><figcaption><p>List with checkboxes</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-left-checkbox-list (static)
-
+{% tabs %}
+{% tab title="left-checkbox-list (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -1424,9 +1152,9 @@ item:
       element: checkbox
       initialValue: =(@ctx.current.item.materials) = true ? true :false
 ```
+{% endtab %}
 
-left-checkbox-list (dynamic)
-
+{% tab title="left-checkbox-list (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.cleaning-services-dynamic
@@ -1439,9 +1167,9 @@ item:
       element: checkbox
       initialValue: =(@ctx.current.item.indoor) = 'TRUE' ? true :false
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 type: datasource.static
 options:
@@ -1529,8 +1257,10 @@ options:
 
 ```
 
-datasources (dynamic)
 
+{% endtab %}
+
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -1557,33 +1287,27 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-::::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with the left icons
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AiV7G7f-AcINFFtaLAjkG-20250723-123525.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-AiV7G7f-AcINFFtaLAjkG-20250723-123525.png" size="80" width="1313" height="2676" darkWidth="800" darkHeight="1494" position="center" caption="List with icons" alt="List with icons"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-iconiphone13blueportrait.png" alt="List with icons" width="188"><figcaption><p>List with icons</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example displays icons to the left of the list.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-left-elements/list-with-left-icon-sd.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-left-elements/list-with-left-icon-dd.jigx).
+**Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-left-elements/list-with-left-icon-sd.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-left-elements/list-with-left-icon-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
-::::
+**Datasources:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-left-icon-list (static)
-
+{% tabs %}
+{% tab title="left-icon-list (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -1601,9 +1325,9 @@ item:
       type: contained
       shape: basic
 ```
+{% endtab %}
 
-left-icon-list (dynamic)
-
+{% tab title="left-icon-list (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.repair-services-static
@@ -1621,9 +1345,9 @@ item:
       type: contained
       shape: basic
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   repair-services-static:
@@ -1711,9 +1435,9 @@ datasources:
           service: Plumbing
           time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -1740,33 +1464,27 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with the left image
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Ab5w0jaXwMLKXF_9o_zPA-20250723-125302.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Ab5w0jaXwMLKXF_9o_zPA-20250723-125302.png" size="82" width="1313" height="2676" darkWidth="800" darkHeight="1494" position="center" caption="List with image" alt="List with image"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-list-with-left-imageiphone13blueportrait.png" alt="List with image" width="188"><figcaption><p>List with image</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example displays a list with an `image` to left of the list-item for visual representation. The image `shape` and `size` is defined.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-left-elements/list-with-left-image-sd.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-left-elements/list-with-left-image-dd.jigx).
+**Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-left-elements/list-with-left-image-sd.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-left-elements/list-with-left-image-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
-::::
+**Datasources:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-left-image-list (static)
-
+{% tabs %}
+{% tab title="left-image-list (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -1786,9 +1504,9 @@ item:
       shape: landscape
       size: regular
 ```
+{% endtab %}
 
-left-image-list (dynamic)
-
+{% tab title="left-image-list (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.cleaning-services-dynamic
@@ -1808,9 +1526,9 @@ item:
       shape: landscape
       size: regular
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   repair-services-static:
@@ -1898,9 +1616,9 @@ datasources:
           service: Plumbing
           time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -1927,33 +1645,27 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with left progress
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O_BaCHvoeFbo0DkinncLd_vajg417ory3f3euuo4x2list-item-list-with-left-progressiphone13blueportrait.png" size="80" position="center" caption="List with progress" alt="List with progress" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O_BaCHvoeFbo0DkinncLd_vajg417ory3f3euuo4x2list-item-list-with-left-progressiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-left-progress.png" alt="List with progress" width="177"><figcaption><p>List with progress</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example displays a list with visual progress elements to the left of the list items.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-left-elements/list-with-left-progress-sd.jigx).
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-left-elements/list-with-left-progress-dd.jigx).
+**Examples:** See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-left-elements/list-with-left-progress-sd.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-left-elements/list-with-left-progress-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
-::::
+**Datasources:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx)
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-left-progress-list-dynamic (static)
-
+{% tabs %}
+{% tab title="left-progress-list-dynamic (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -1967,9 +1679,9 @@ item:
       title: Time
       value:  =@ctx.current.item.time/120
 ```
+{% endtab %}
 
-left-progress-list (dynamic)
-
+{% tab title="left-progress-list (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.cleaning-services-dynamic
@@ -1983,9 +1695,9 @@ item:
       title: Time
       value:  =$number(@ctx.current.item.time)/120
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   repair-services-static:
@@ -2073,9 +1785,9 @@ datasources:
           service: Plumbing
           time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -2102,33 +1814,31 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## Swipeable list (left)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-list-with-left-actionsiphone13blueportrait.png" alt=""><figcaption></figcaption></figure>
+{% endcolumn %}
+
+{% column %}
 This example shows using the swipeable action to access the onPress action as well as setting up a primary and secondary action.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-actions/list-with-swipe-left-sd.jigx).
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-actions/list-with-swipe-left-sd.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-actions/list-with-swipe-left-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in \<[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
+**Datasources:** \
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). \
+See the full datasource for dynamic data in <[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::VerticalSplitItem
-![Swipeable list](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-yGBFGpuEmxMesqsw6tn76-20250723-132613.png "swipeable list")
-:::
-::::
-
-:::CodeblockTabs
-swipeable-list (static)
-
+{% tabs %}
+{% tab title="swipeable-list (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -2170,9 +1880,9 @@ item:
           icon: alert-triangle
           color: warning
 ```
+{% endtab %}
 
-swipeable-list (dynamic)
-
+{% tab title="swipeable-list (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.cleaning-services-dynamic
@@ -2216,9 +1926,9 @@ item:
           icon: alert-triangle
           color: warning
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 type: datasource.static
 options:
@@ -2304,9 +2014,9 @@ options:
       service: Plumbing
       time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -2333,35 +2043,33 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with the right amount control
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/MA-q8ZlgaAAAv6K1-lY12_amountiphone13blueportrait.png" size="80" position="center" caption="List with amountControl" alt="List with amountControl" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/MA-q8ZlgaAAAv6K1-lY12_amountiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-amount.png" alt="List with amountControl" width="176"><figcaption><p>List with amount control</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BVgwQwc-u7t3al_T1a1wQ_amount2iphone13blueportrait.png" size="80" position="center" caption="List with amountControl" alt="List with amountControl" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BVgwQwc-u7t3al_T1a1wQ_amount2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
-::::
-
+{% column %}
 **Examples:**
 
-See the full example of amount control options in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/list-item/static-data/list-with-right-elements/list-with-amount-control-sd.jigx).
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-right-elements/list-with-right-amount-sd.jigx).
+See the full example of amount control options in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/list-item/static-data/list-with-right-elements/list-with-amount-control-sd.jigx). \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-right-elements/list-with-right-amount-sd.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-right-elements/list-with-right-amount-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
+**Datasources:** \
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). \
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
 
-:::CodeblockTabs
-amount-control-list (static)
 
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="amount-control-list (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -2379,9 +2087,9 @@ item:
       minimum: 2
       maximum: 5
 ```
+{% endtab %}
 
-amount-control (dynamic)
-
+{% tab title="amount-control (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.cleaning-services-dynamic
@@ -2408,9 +2116,9 @@ item:
             id: =@ctx.current.item.id
             quantity: =@ctx.current.state.amount
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title=" datasources (static)" %}
 ```yaml
 datasources:
   repair-services-static:
@@ -2498,9 +2206,9 @@ datasources:
           service: Plumbing
           time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -2527,33 +2235,32 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with the right badges
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Vg87Px42ls64pQv_x2A1E-20250724-065157.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Vg87Px42ls64pQv_x2A1E-20250724-065157.png" size="80" width="1313" height="2676" darkWidth="800" darkHeight="1494" position="center" caption="List-item with right badge" alt="List-item with right badge"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-list-with-right-badges.png" alt="List-item with right badge&#x22;" width="188"><figcaption><p>List-item with right badge"</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows `badges` that are displayed based on certain input. Badges always use the primary color. You cannot change the color of the badge. The styling has been applied to the `title` and `subtitle`, and each list-item displayed in a container.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-right-elements/list-with-right-badge-sd.jigx).
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-right-elements/list-with-right-badge-sd.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-right-elements/list-with-right-badge-dd.jigx).
 
 **Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in [GitHub]().
-:::
-::::
 
-:::CodeblockTabs
-list-badges (static)
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). \
+See the full datasource for dynamic data in [GitHub](list-item.md).
+{% endcolumn %}
+{% endcolumns %}
 
+{% tabs %}
+{% tab title="list-badges (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -2577,9 +2284,9 @@ item:
       element: badge
       isHidden: =(@ctx.current.item.materials) = true ? true :false
 ```
+{% endtab %}
 
-list-badges (dynamic)
-
+{% tab title="list-badges (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.cleaning-services-dynamic
@@ -2603,9 +2310,9 @@ item:
       element: badge
       isHidden: =(@ctx.current.item.indoor) = 'TRUE' ? true :false
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 type: datasource.static
 options:
@@ -2691,9 +2398,9 @@ options:
       service: Plumbing
       time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -2720,28 +2427,26 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with right numbered badges
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-In this example a list shows the work priorities and how many tasks there are for each priority. The `rightElement` uses a `badge` with an expression. The count is performed in the datasource query rather than in the expression. The expression calls the taskCount from the datasource.  Badges always use the primary color. You cannot change the color of the badge.
+{% columns %}
+{% column %}
+In this example a list shows the work priorities and how many tasks there are for each priority. The `rightElement` uses a `badge` with an expression. The count is performed in the datasource query rather than in the expression. The expression calls the taskCount from the datasource. Badges always use the primary color. You cannot change the color of the badge.
 
-**Examples:**
+**Examples:** \
 See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-right-elements/default-w-numbered-badge-list.jigx).
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Cyft1sYnO8yg0Ap3b2-j0-20241029-103713.png" size="70" position="center" caption="List-item with numbered badge" alt="List-item with numbered badge" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Cyft1sYnO8yg0Ap3b2-j0-20241029-103713.png" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-numberedBadge.PNG" alt="List-item with numbered badge" width="188"><figcaption><p>List-item with numbered badge</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-default-w-number-badge-list.jigx
-
+{% tabs %}
+{% tab title="default-w-number-badge-list.jigx" %}
 ```yaml
 title: Team task priorities list
 description: A list displaying priorities, with a numbered badge for each. 
@@ -2789,10 +2494,10 @@ children:
             element: badge
             value: =@ctx.current.item.taskCount
 ```
+{% endtab %}
 
-datasource
-
-```yaml
+{% tab title="datasource" %}
+```typescript
 datasources:
   team-tasks:
     type: datasource.sqlite
@@ -2836,33 +2541,31 @@ datasources:
           name: Medium
           icon: equal-math-symbol-circle
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with right Buttons
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-91IJ5k-lwrBjzZDSU0DLU-20250724-070244.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-91IJ5k-lwrBjzZDSU0DLU-20250724-070244.png" size="80" width="1313" height="2676" darkWidth="800" darkHeight="1612" position="center" caption="List-item with button" alt="List-item with button"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-right-buttons.png" alt="List-item with button" width="188"><figcaption><p>List-item with button</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example shows a list with actionable buttons, a bold `title`, and the `subtitle` wraps over two lines.&#x20;
+{% column %}
+This example shows a list with actionable buttons, a bold `title`, and the `subtitle` wraps over two lines.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-right-elements/list-with-right-button-sd.jigx).
+**Examples:**\
+&#x20;See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-right-elements/list-with-right-button-sd.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-right-elements/list-with-right-button-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
+**Datasources:** \
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). \
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-list-with-right-button (static)
-
+{% tabs %}
+{% tab title="list-with-right-button (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -2887,9 +2590,9 @@ item:
       onPress:
         type: action.go-back
 ```
+{% endtab %}
 
-list-with-right-button (dynamic)
-
+{% tab title="list-with-right-button (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.cleaning-services-dynamic
@@ -2914,9 +2617,9 @@ item:
       onPress:
         type: action.go-back
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 type: datasource.static
 options:
@@ -3002,9 +2705,9 @@ options:
       service: Plumbing
       time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -3031,33 +2734,31 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with the right icons
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3xMyAhsfx9CVIDvaZ-hKA-20250724-073159.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3xMyAhsfx9CVIDvaZ-hKA-20250724-073159.png" size="80" width="1313" height="2676" darkWidth="800" darkHeight="1494" position="center" caption="List-item with icons" alt="List-item with right icons"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-list-with-right-icons.png" alt="List-item with right icons" width="188"><figcaption><p>List-item with right icons</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example shows icons to the right of the list-items.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-right-elements/list-with-right-icon-sd.jigx).
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-right-elements/list-with-right-icon-sd.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-right-elements/list-with-right-icon-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
-::::
+**Datasources:** \
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).\
+&#x20;See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-right-icon-list (static)
-
+{% tabs %}
+{% tab title="right-icon-list (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -3084,9 +2785,9 @@ item:
       shape: circle
       color: color14
 ```
+{% endtab %}
 
-right-icon-list (dynamic)
-
+{% tab title="right-icon-list (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.cleaning-services-dynamic
@@ -3112,9 +2813,9 @@ item:
       shape: circle
       color: color14
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 type: datasource.static
 options:
@@ -3200,9 +2901,9 @@ options:
       service: Plumbing
       time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="Untitled" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -3229,33 +2930,31 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with the right switch
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JinOaFnJ9CnFRua5BiicH-20250724-074240.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-JinOaFnJ9CnFRua5BiicH-20250724-074240.png" size="80" width="1313" height="2676" darkWidth="800" darkHeight="1494" position="center" caption="List-item with switch" alt="List-item with switch"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-list-with-fight-switch.png" alt="List-item with switch" width="188"><figcaption><p>List-item with switch</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example displays a list with switches/toggle functionality - based on a certain input.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-right-elements/list-with-right-switch-sd.jigx).
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-right-elements/list-with-right-switch-sd.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-right-elements/list-with-right-switch-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
+**Datasources:** \
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). \
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-switch-list (static)
-
+{% tabs %}
+{% tab title="switch-list (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -3279,9 +2978,9 @@ item:
       initialValue: =(@ctx.current.item.materials = true ? true:false)
 
 ```
+{% endtab %}
 
-switch-list (dynamic)
-
+{% tab title="switch-list (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.cleaning-services-dynamic
@@ -3304,9 +3003,9 @@ item:
       element: switch
       initialValue: =(@ctx.current.item.indoor = 'TRUE' ? true:false)
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 type: datasource.static
 options:
@@ -3392,9 +3091,9 @@ options:
       service: Plumbing
       time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -3421,33 +3120,31 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with the right value
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-hQI8D18q0oboNEzqAGG3F-20250724-075254.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-hQI8D18q0oboNEzqAGG3F-20250724-075254.png" size="80" width="1313" height="2676" darkWidth="800" darkHeight="1494" position="center" caption="List-item with right values" alt}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-value.png" alt="List-item with right values" width="188"><figcaption><p>List-item with right values</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
-This example shows the right `values` on a list populated dynamically based on input, and additional configuration using expressions were used to concatenate values. Each list item `isContained` with bold `title`, `subtitle` wrapping over two lines.
+{% column %}
+&#x20;This example shows the right `values` on a list populated dynamically based on input, and additional configuration using expressions were used to concatenate values. Each list item `isContained` with bold `title`, `subtitle` wrapping over two lines.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-right-elements/list-with-right-value-sd.jigx).
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-right-elements/list-with-right-value-sd.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-right-elements/list-with-right-value-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
+**Datasources:** \
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). \
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-list-with-right-elements (static)
-
+{% tabs %}
+{% tab title="list-with-right-elements (static)" %}
 ```yaml
 title: List with Right Value (Static Data)
 description: A list to display values in list items
@@ -3484,9 +3181,9 @@ item:
       text: ='$ ' & @ctx.current.item.hourlyRate
       color: color4
 ```
+{% endtab %}
 
-list-with-right-elements (dynamic)
-
+{% tab title="list-with-right-elements (dynamic)" %}
 ```yaml
 title: List with Right Value (Dynamic Data)
 description: A list to display values in list items
@@ -3526,9 +3223,9 @@ item:
         : '$ ' & $number(@ctx.current.item.onceoffrate) & ' once off'
       color: color4
 ```
+{% endtab %}
 
-datasource (static)
-
+{% tab title="datasource (static)" %}
 ```yaml
 type: datasource.static
 options:
@@ -3614,9 +3311,9 @@ options:
       service: Plumbing
       time: 60
 ```
+{% endtab %}
 
-datasource (dynamic)
-
+{% tab title="datasource (dynamic)" %}
 ```yaml
 type: datasource.sqlite
 
@@ -3644,34 +3341,31 @@ options:
     FROM [default/cleaning-services] 
     WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## Swipeable list (right)
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-right-actions-1.png" alt=""><figcaption></figcaption></figure>
+{% endcolumn %}
+
+{% column %}
 This example demonstrates a `swipeable` action configured to swipe right on each list item, using both primary and secondary actions. The `title`, `subtitle`, and left and right elements are styled with properties such as color, bold text, and number of lines.
 
-**Examples:**
-
-See the full example using static data in \<[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-actions/list-with-swipe-right-sd.jigx).
+**Examples:**\
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-actions/list-with-swipe-right-sd.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-actions/list-with-swipe-right-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
+**Datasources:** \
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). \
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
-:::
+{% endcolumn %}
+{% endcolumns %}
 
-:::VerticalSplitItem
-![Swipeable list-item](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-KzO65DA9tYNKxQrAjI4KD-20250724-082754.png "Swipeable list-item")
-:::
-::::
-
-:::CodeblockTabs
-swipable-right-list (static)
-
+{% tabs %}
+{% tab title="swipable-right-list (static)" %}
 ```yaml
 # Data configured to use datasource (static) 
 data: =@ctx.datasources.repair-services-static
@@ -3716,9 +3410,9 @@ item:
           icon: alert-triangle
           color: warning
 ```
+{% endtab %}
 
-swipable-right-list (dynamic)
-
+{% tab title="swipable-right-list (dynamic)" %}
 ```yaml
 # Data configured to use datasource (dynamic) 
 data: =@ctx.datasources.cleaning-services-dynamic
@@ -3768,9 +3462,9 @@ item:
           icon: alert-triangle
           color: warning
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 type: datasource.static
 options:
@@ -3856,9 +3550,9 @@ options:
       service: Plumbing
       time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -3885,35 +3579,31 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with active item
 
+{% columns %}
+{% column %}
 This allows you to see when you are interacting with a specific list-item. Whilst interacting, the list item changes slightly making it clear which item you are interacting with.
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZXVfNjN34r9oHkPVwn1zU_hrt6p-qzkzkwozswl5gv2active-itemiphone13blueportrait.png" size="80" position="center" caption="List with active item" alt="List with active item" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZXVfNjN34r9oHkPVwn1zU_hrt6p-qzkzkwozswl5gv2active-itemiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
-
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4Yd79ph0o-OvrSky5Lmw6_apvhjt6nuhdxw9ajqgatgdwactiveiphone13blueportrait.png" size="80" position="center" caption="List with active item" alt="List with active item" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4Yd79ph0o-OvrSky5Lmw6_apvhjt6nuhdxw9ajqgatgdwactiveiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
-:::
-::::
-
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-active-item-list-sd.jigx).
+**Examples:** \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-active-item-list-sd.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-active-item-list-dd.jigx).
 
-**Datasources:**
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
+**Datasources:** \
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). \
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
+{% endcolumn %}
 
-:::CodeblockTabs
-active-item-list (static)
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-activeItem.png" alt="List with active item" width="177"><figcaption><p>List with active item</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
+{% tabs %}
+{% tab title="active-item-list (static)" %}
 ```yaml
   children:
   - type: component.entity
@@ -3946,9 +3636,9 @@ active-item-list (static)
               state: =@ctx.solution.state.hasActiveItem
               value: true
 ```
+{% endtab %}
 
-active-item-list (dynamic)
-
+{% tab title="active-item-list (dynamic)" %}
 ```yaml
 children:
   - type: component.entity
@@ -3981,9 +3671,9 @@ children:
               state: =@ctx.solution.state.hasActiveItem
               value: true
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 datasources:
   repair-services-static:
@@ -4071,9 +3761,9 @@ datasources:
           service: Plumbing
           time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="datasources (dynamic)" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -4100,32 +3790,30 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List with sections
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oTF3xsP-EU8Fvxs314z1Q-20250724-084745.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-oTF3xsP-EU8Fvxs314z1Q-20250724-084745.png" size="80" width="1313" height="2676" darkWidth="800" darkHeight="1494" position="center" caption="List with sections" alt="List with sections"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/sections.png" alt="List with sections" width="188"><figcaption><p>List with sections</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This functionality allows you to divide your list into meaningful `sections`. In this example, there are two sections—one including materials and the other excluding them. Each list-item is contained, with the `subtitle` wrapping over two lines. A `label` on the right displays the duration of the job in hours and minutes.
 
-**Examples:**
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-section-list-sd.jigx).
+**Examples:**\
+&#x20;See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-section-list-sd.jigx). \
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-section-list-dd.jigx).
 
-**Datasources:**
+**Datasources:** \
 See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx).
-:::
-::::
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-section-list (static)
-
+{% tabs %}
+{% tab title="section-list (static)" %}
 ```yaml
  children:
   - type: component.list
@@ -4150,9 +3838,9 @@ section-list (static)
           label:
             title: =@ctx.current.item.time & ' mins'
 ```
+{% endtab %}
 
-section-list (dynamic)
-
+{% tab title="section-list (dynamic)" %}
 ```yaml
 children:
   - type: component.entity
@@ -4184,9 +3872,9 @@ children:
             element: value
             text: =(@ctx.current.item.hourlyrate) != 'NA' ? '$ ' & @ctx.current.item.hourlyrate & ' p/hr':'$ ' & @ctx.current.item.onceoffrate & ' ' & 'once-off'
 ```
+{% endtab %}
 
-datasources (static)
-
+{% tab title="datasources (static)" %}
 ```yaml
 type: datasource.static
 options:
@@ -4272,9 +3960,9 @@ options:
       service: Plumbing
       time: 60
 ```
+{% endtab %}
 
-datasources (dynamic)
-
+{% tab title="Untitled" %}
 ```yaml
 datasources:
   cleaning-services-dynamic:
@@ -4301,28 +3989,26 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List items contained in a card
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example use the `isContained` property set to `true` to style each item by wrapping it in a card. The code sample below is for a vertical list. You can also wrap list items in a card for a horizontal list.  &#x20;
+{% columns %}
+{% column %}
+This example use the `isContained` property set to `true` to style each item by wrapping it in a card. The code sample below is for a vertical list. You can also wrap list items in a card for a horizontal list.
 
-**Examples:**
+**Examples:** \
 See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-item-contained.jigx).
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-![List-item in a card](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-5VXNElPVo6tg6sBSmihHT-20241025-144842.png "list-item in a card")
-:::
-::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/cc-ContainListWrap.png" alt="List-item contained in a card"><figcaption><p>List-item contained in a card</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-list-item-contained.jigx
-
+{% tabs %}
+{% tab title="list-item-contained.jigx" %}
 ```yaml
 title: List with items wrapped in a card
 description: A list displaying images on list items styled in a card
@@ -4353,28 +4039,26 @@ item:
       text: =@ctx.current.item.service
       uri: =@ctx.current.item.image
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List-item with ratings as a value
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example uses the basic `rating` configuration to display a `value` with accompanying `text`. By default, the rating shows a single star in the primary color&#x20;
+{% columns %}
+{% column %}
+This example uses the basic `rating` configuration to display a `value` with accompanying `text`. By default, the rating shows a single star in the primary color
 
-**Examples:**
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-rating/list-item-rating-value.jigx).
-:::
+**Examples:** \
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-rating/list-item-rating-value.jigx).&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T-SdlGk8kb3cvZ8a-BXeM-20241030-064308.png" size="70" position="center" caption="List-item with rating - value" alt="List with rating - value" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-T-SdlGk8kb3cvZ8a-BXeM-20241030-064308.png" width="800" height="1608" darkWidth="800" darkHeight="1608"}
-:::
-::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/List-rateValue.png" alt="List-item with rating - value" width="188"><figcaption><p>List-item with rating - value</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-list-item-rating-value.jigx
-
+{% tabs %}
+{% tab title="list-item-rating-value.jigx" %}
 ```yaml
 title: List of cleaning services with ratings
 type: jig.default
@@ -4415,9 +4099,9 @@ children:
             value: =@ctx.current.item.rating
             text: =@ctx.current.item.ratingText
 ```
+{% endtab %}
 
-cleaning-services-static (datasource)
-
+{% tab title="cleaning-services-static (datasource)" %}
 ```yaml
 datasources:
   cleaning-services-static:
@@ -4522,28 +4206,26 @@ datasources:
           ratingText: Excellent service
           rating: 9
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List-item with ratings as a percentage
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example uses the simplest configuration of the rating property to display a `percentage`. By default the rating shows a star in the primary color.
 
-**Examples:**
+**Examples:** \
 See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-rating/list-item-rating-percentage.jigx).
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HiL_AAasWXGM4iXpb76p7-20241030-073308.png" size="66" position="center" caption="List-item with percentage rating" alt="List-item with percentage rating" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-HiL_AAasWXGM4iXpb76p7-20241030-073308.png" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/List-ratePercent.png" alt="List-item with percentage rating" width="188"><figcaption><p>List-item with percentage rating</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-list-with-rating-percentage.jigx
-
+{% tabs %}
+{% tab title="list-with-rating-percentage.jigx" %}
 ```yaml
 title: Manufacturing quality control
 description: List with a percentage rating
@@ -4579,9 +4261,9 @@ children:
             icon: =@ctx.current.item.icon
             isDuotone: true
 ```
+{% endtab %}
 
-control-stats (datasource)
-
+{% tab title="control-stats (datasource)" %}
 ```yaml
 datasources:
   control-stats: 
@@ -4615,34 +4297,32 @@ datasources:
           percentage: 0.9 
           icon: select   
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List-item with ratings with a percentage, minimum, maximum and icon
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
 This example sets up a product review jig that displays:
 
-- A `rating` as a percentage.
-- An `icon `and `color` customized to represent the rating percentage visually.
-- A styled list where each item is displayed within a card format, achieved by enabling the `isContained` property.
-- A verified `label` placed on the right side of the item.
-- A product image shown as an `avatar` on the left side.
+* A `rating` as a percentage.
+* An `icon` and `color` customized to represent the rating percentage visually.
+* A styled list where each item is displayed within a card format, achieved by enabling the `isContained` property.
+* A verified `label` placed on the right side of the item.
+* A product image shown as an `avatar` on the left side.
 
-**Examples:**
+**Examples:** \
 See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/static-data/list-with-rating/list-item-rating-percentage-max.jigx).
-:::
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-__u0Q3gtznpmndWy5Y1dU-20241030-101047.png" size="70" position="center" caption="List-item with customized percentage rating" alt="List-item with customized percentage rating" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-__u0Q3gtznpmndWy5Y1dU-20241030-101047.png" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/List-ratePercent-icon.png" alt="List-item with customized percentage rating" width="188"><figcaption><p>List-item with customized percentage rating</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-list-item-rating-percentage-max.jigx
-
+{% tabs %}
+{% tab title="list-item-rating-percentage-max.jigx" %}
 ```yaml
 title: Product Review
 description: List with percentage rating and icons
@@ -4689,9 +4369,9 @@ children:
               icon: thumb-up-like
               maximum: 5
 ```
+{% endtab %}
 
-product-review\.jigx
-
+{% tab title="product-review.jigx" %}
 ```yaml
 type: datasource.static
 options:
@@ -4751,9 +4431,9 @@ options:
         feels cheap, and I’m not happy with the overall experience.
       title: Disappointing experience
 ```
+{% endtab %}
 
-product-users.jigx
-
+{% tab title="product-users.jigx" %}
 ```yaml
 type: datasource.static
 options:
@@ -4783,32 +4463,30 @@ options:
       product: 3
       text: KL
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List-item with multiple tags
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-This example creates a list with multiple `tags` shown on each list-item.&#x20;
+{% columns %}
+{% column %}
+This example creates a list with multiple `tags` shown on each list-item
 
-- A styled list where each item is displayed within a card format, achieved by enabling the `isContained` property.
-- The `tags` show the assigned team, priority, and status.
-- A product image shown as an `avatar` on the left side.
+* A styled list where each item is displayed within a card format, achieved by enabling the `isContained` property.
+* The `tags` show the assigned team, priority, and status.
+* A product image shown as an `avatar` on the left side.
 
-**Examples:**
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-tags/list-item-tags-multiple.jigx).
-:::
+**Examples:** \
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-tags/list-item-tags-multiple.jigx).&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TUsCmx9L6lCnKth7jdpoI-20241030-101514.png" size="70" position="center" caption="List-item with multiple tags" alt="List-item with multiple tags" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-TUsCmx9L6lCnKth7jdpoI-20241030-101514.png" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/List-tagsMultiple.png" alt="List-item with multiple tags" width="188"><figcaption><p>List-item with multiple tags</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-list-with-tags-multiple.jigx
-
+{% tabs %}
+{% tab title="list-with-tags-multiple.jigx" %}
 ```yaml
 title: Team task list with multiple tags
 description: List displaying multiple tags 
@@ -4850,9 +4528,9 @@ children:
             text: =@ctx.current.item.taskAssignee
             uri: =@ctx.current.item.Profile
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   team-tasks:
@@ -4874,34 +4552,32 @@ datasources:
           '$.priority'         
         FROM [default/tasks]
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List-item with ratings and tags
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/List-ratingTags.png" alt="List-item with rating, tags &#x26; badges" width="188"><figcaption><p>List-item with rating, tags &#x26; badges</p></figcaption></figure>
+{% endcolumn %}
+
+{% column %}
 This example show a list of cleaning services that displays:
 
-- A `rating` as a `value`.
-- An `icon` and `color` customized to represent the rating value visually.
-- Multiple `tags` showing the hourly rate and cleaning area category.
-- A styled list where each item is displayed within a card format, achieved by enabling the `isContained` property.
-- A numbered `badge` in the `rightElement` of the item shows the number of services available.
+* A `rating` as a `value`.
+* An `icon` and `color` customized to represent the rating value visually.
+* Multiple `tags` showing the hourly rate and cleaning area category.
+* A styled list where each item is displayed within a card format, achieved by enabling the `isContained` property.
+* A numbered `badge` in the `rightElement` of the item shows the number of services available.
 
-**Examples:**
-See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-tags/list-item-tags-rating.jigx).
-:::
+**Examples:** \
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-tags/list-item-tags-rating.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-t21E3-6z0TBitPqdGueGP-20241030-105810.png" size="70" position="center" caption="List-item with rating, tags & badges" alt="List-item with rating, tags & badges" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-t21E3-6z0TBitPqdGueGP-20241030-105810.png" width="800" height="1613" darkWidth="800" darkHeight="1613"}
-:::
-::::
-
-:::CodeblockTabs
-list-with-tags-rating.jigx
-
+{% tabs %}
+{% tab title="list-with-tags-rating.jigx" %}
 ```yaml
 title: Cleaning Services
 description: List showing available Cleaning Services
@@ -4961,8 +4637,10 @@ children:
             value: =@ctx.current.item.quantity
 ```
 
-cleaning-services-dynamic.jigx
 
+{% endtab %}
+
+{% tab title="cleaning-services-dynamic.jigx" %}
 ```yaml
 type: datasource.sqlite
 options:
@@ -4990,24 +4668,24 @@ options:
     FROM [default/cleaning-services] 
     WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-:::
-:::::
+{% endtab %}
+{% endtabs %}
 
-:::::ExpandableHeading
 ## List-item outside a list
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-In this example, a single `list-item` is configured inside an `expander` component. The `list-item` uses a static `value` and is configured to use the `left` and `right` element as well as the `swipeable` event that opens an `info-modal`. **Note**, that the list-item is outside of a list component and uses a static value and does not rely on a datasource.&#x20;
-:::
+{% columns %}
+{% column %}
+In this example, a single `list-item` is configured inside an `expander` component. The `list-item` uses a static `value` and is configured to use the `left` and `right` element as well as the `swipeable` event that opens an `info-modal`. **Note**, that the list-item is outside of a list component and uses a static value and does not rely on a datasource.
+{% endcolumn %}
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9y7zIlqrkTb2wbQuwYn2z-20250203-145248.gif" size="80" position="center" caption="List-item outside a list" alt="List-item outside a list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9y7zIlqrkTb2wbQuwYn2z-20250203-145248.gif" width="1080" height="1920" darkWidth="1080" darkHeight="1920"}
-:::
-::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-outside-list.gif" alt="List-item outside a list" width="188"><figcaption><p>List-item outside a list</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
+{% code title="YAML" %}
 ```yaml
-title: Single list item
+title: Single list ite
 type: jig.default
 
 children:
@@ -5059,28 +4737,26 @@ children:
                         description: Bookings for groups of ten or more are charged at $20 per guest.
                         buttonText: rightBook
 ```
-:::::
+{% endcode %}
 
-:::::ExpandableHeading
 ## List-item with multiple lines in right element
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sr5JKVNGIajotd9o4lYuA-20250724-130015.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sr5JKVNGIajotd9o4lYuA-20250724-130015.png" size="80" width="1313" height="2676" position="center" caption="List-item with multiple lines in right element" alt="List-item with multiple lines in right element"}
-:::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/list-item-rightMultiple.png" alt="List-item with multiple lines in right element" width="188"><figcaption><p>List-item with multiple lines in right element</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
+{% column %}
 This example demonstrates list-items configured to display data across multiple lines, with styling applied to the title, subtitle, and the left and right elements.
 
 **Example:**
 
-See the full example in GitHub.
-:::
-::::
+See the full example in GitHub
+{% endcolumn %}
+{% endcolumns %}
 
-:::CodeblockTabs
-list-item-right-lines.jigx
-
+{% tabs %}
+{% tab title="list-item-right-lines.jigx" %}
 ```yaml
 data: =@ctx.datasources.employee-groups
 item:
@@ -5132,9 +4808,9 @@ item:
         fontSize: medium
         color: negative
 ```
+{% endtab %}
 
-datasource (static)
-
+{% tab title="datasource (static)" %}
 ```yaml
 datasources:
   employee-groups:
@@ -5166,12 +4842,18 @@ datasources:
             - rate: $40 per hour
           project: Design project focused on streamlining task management for field technicians.
 ```
-:::
-:::::
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+message = "hello world"
+puts message
+```
+{% endtab %}
+{% endtabs %}
 
 ## See also
 
-- [list](./../list.md)
-- [jig.list](<./../../Jig Types/jig_list.md>)
-- [State](https://docs.jigx.com/state)
-
+* [list](../list.md)
+* [jig.list](<../../Jig Types/jig_list.md>)
+* [State](https://docs.jigx.com/state)
