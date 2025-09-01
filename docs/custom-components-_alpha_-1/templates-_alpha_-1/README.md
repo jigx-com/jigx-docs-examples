@@ -1,2 +1,0 @@
-# Templates \_Alpha\_
-
