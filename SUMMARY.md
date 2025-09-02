@@ -137,7 +137,7 @@
       * [Travel (Alpha)](<docs/Custom components _Alpha_/Templates _Alpha_/Travel _Alpha_.md>)
       * [Generic (Alpha)](<docs/Custom components _Alpha_/Templates _Alpha_/Generic _Alpha_.md>)
       * [Industry Specific (Alpha)](<docs/Custom components _Alpha_/Templates _Alpha_/Industry Specific _Alpha_.md>)
-  * [Actions](docs/Actions.md)
+  * [Actions](docs/Actions/README.md)
     * [Common action properties](<docs/Actions/Common action properties.md>)
     * [action-list](docs/Actions/action-list.md)
     * [confirm](docs/Actions/confirm.md)
