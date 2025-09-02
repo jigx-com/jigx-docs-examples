@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Jigx Examples](README.md)
+* [Jigx Examples](<docs/README.md>)
   * [Setting up your solution](<docs/Overview/Setting up your solution.md>)
   * [Data Providers](<docs/Data Providers.md>)
     * [Dynamic Data](<docs/Data Providers/Dynamic Data.md>)
@@ -73,7 +73,7 @@
     * [jig.table](<docs/Jig Types/jig_table.md>)
     * [jig.tabs](<docs/Jig Types/jig_tabs.md>)
     * [Use template](<docs/Jig Types/Use template.md>)
-  * [Components](docs/Components.md)
+  * [Components](docs/Components/readme.md)
     * [Common component properties](<docs/Components/Common component properties.md>)
     * [avatar](docs/Components/avatar.md)
     * [card](docs/Components/card.md)
