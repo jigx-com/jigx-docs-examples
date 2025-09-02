@@ -2,7 +2,7 @@
 
 {% columns %}
 {% column %}
-Simply draw your signature on your mobile screen to approve and proceed. This component can only be used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](../form.md) component for the input of a signature. It provides the experience of creating, uploading, and saving your eSignature in a few easy steps.
+Simply draw your signature on your mobile screen to approve and proceed. This component can only be used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](form.md) component for the input of a signature. It provides the experience of creating, uploading, and saving your eSignature in a few easy steps.
 {% endcolumn %}
 
 {% column %}

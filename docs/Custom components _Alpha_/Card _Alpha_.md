@@ -11,7 +11,7 @@ This feature is currently in its **Alpha** stage of development.
 
 The _card_ component adds context or highlights information in the jig. The card itself is a container with integrated padding, background, and row rules, meaning every component placed in the card will be represented as a separate row with spaces between the rows.
 
-For steps on creating a custom component, see [How to create a custom component](<../Custom components _Alpha_.md>).
+For steps on creating a custom component, see [How to create a custom component](<Custom components _Alpha_.md>).
 
 ## Configuration options
 

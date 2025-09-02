@@ -13,7 +13,7 @@ Creating Dynamic Data can be achieved in several ways, one of which is by using 
 
 1. **default.jigx** is the database where the Dynamic Data table is defined.
 2. [jig.default](<../../Jig Types/jig_default.md>) is the type of jig we will use to contain the form.
-3. [form](../../Components/form.md) is the component used with text and date fields.
+3. [form](../../Components/form/form.md) is the component used with text and date fields.
 4. [submit-form](../../Actions/submit-form.md) is the action that executes the create method of the Dynamic Dataprovider
 
 ## Examples and code snippets

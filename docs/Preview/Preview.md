@@ -2,9 +2,9 @@
 
 {% columns %}
 {% column %}
-Add a preview for the following [Components](Components.md):
+Add a preview for the following [Components](broken-reference):
 
-* [widgets](Widgets.md)
+* [widgets](../Widgets/Widgets.md)
 * [list-item](broken-reference)
 * [event](broken-reference) The preview is triggered by _long-pressing_ the widget or item. The _long-press_ action can be used on:
 

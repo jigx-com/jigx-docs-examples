@@ -11,8 +11,8 @@ Jigx app solutions integrate with OneDrive, allowing you to interact with your e
 
 The following examples with code snippets are provided in this section:
 
-* [Create a file](broken-reference)
-* [Update/Save a file](broken-reference)
-* [Delete a file](broken-reference)
-* [List files](broken-reference)
-* [Download a file](broken-reference)
+* [Create a file](<Create a file.md>)
+* [Update/Save a file](<Update_Save a file.md>)
+* [Delete a file](<Delete a file.md>)
+* [List files](<List files.md>)
+* [Download a file](<Download a file.md>)

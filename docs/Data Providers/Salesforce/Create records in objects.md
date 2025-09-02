@@ -23,7 +23,7 @@ Examples are based on test data in a Jigx demo Salesforce environment. Copying t
 
 {% columns %}
 {% column %}
-<figure><img src="../../../.gitbook/assets/SalesforceCreate.PNG" alt="Creat an Account object " width="188"><figcaption><p>Creat an Account object </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/SalesforceCreate.PNG" alt="Creat an Account object" width="188"><figcaption><p>Creat an Account object</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -123,7 +123,7 @@ This example uses a default jig type with a `component.form`. Certain of the Sal
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xRt75T6ECDiejwwmNLRR-\_sf-newopp.PNG" size="70" position="center" caption="New opportunity" alt="New opportunity"}
+<figure><img src="../../../.gitbook/assets/SF-NewOpp.PNG" alt="New opportunity" width="188"><figcaption><p>New opportunity</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

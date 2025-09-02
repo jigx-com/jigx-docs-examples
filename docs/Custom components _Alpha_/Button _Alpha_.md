@@ -11,7 +11,7 @@ This feature is currently in its **Alpha** stage of development.
 
 The _button_ custom component provides predefined options for designing the UI and tap functionality for a button. For example, your requirement might be a button showing an icon and text with a background color that can be used in multiple jigs in your app.
 
-For steps on creating a custom component, see [How to create a custom component](<../Custom components _Alpha_.md>).
+For steps on creating a custom component, see [How to create a custom component](<Custom components _Alpha_.md>).
 
 ## Configuration options
 

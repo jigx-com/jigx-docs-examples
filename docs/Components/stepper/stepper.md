@@ -2,11 +2,11 @@
 
 {% columns %}
 {% column width="50%" %}
-This component displays the progress status of a task. Useful when tracking deliveries or claims. This component can only be used in a [jig.default](<../Jig Types/jig_default.md>).
+This component displays the progress status of a task. Useful when tracking deliveries or claims. This component can only be used in a [jig.default](<../../Jig Types/jig_default.md>).
 {% endcolumn %}
 
 {% column width="50%" %}
-<figure><img src="../../.gitbook/assets/cc-stepper-overview.png" alt="Stepper Preview"><figcaption><p>Stepper Preview</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cc-stepper-overview.png" alt="Stepper Preview"><figcaption><p>Stepper Preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -24,7 +24,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/cc-stepper-1.png" alt="Stepper for shipment status" width="177"><figcaption><p>Stepper for shipment status</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cc-stepper-1.png" alt="Stepper for shipment status" width="177"><figcaption><p>Stepper for shipment status</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

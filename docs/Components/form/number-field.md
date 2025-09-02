@@ -4,7 +4,7 @@
 {% column %}
 Number fields in forms simplify the process of entering numerical information. They feature built-in validation to ensure only valid numbers are input. This optimizes user experience by automatically presenting a numeric keypad, facilitating quicker and more accurate data entry.
 
-The component can only be used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](../form.md) component for an input of a numeric value.
+The component can only be used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](form.md) component for an input of a numeric value.
 {% endcolumn %}
 
 {% column %}

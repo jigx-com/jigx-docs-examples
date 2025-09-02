@@ -4,11 +4,11 @@
 {% column width="50%" %}
 Summarize the information in the jig at the bottom of the screen using the summary component. For example, a count of the number orders, or the number of items in a cart for an online shopping app.
 
-The summary is fixed and displays even when the screen is scrolled. Make the summary actionable by combining it with an [action](../Actions.md).
+The summary is fixed and displays even when the screen is scrolled. Make the summary actionable by combining it with an [action](broken-reference).
 {% endcolumn %}
 
 {% column width="50%" %}
-&#x20;![Summary](../../.gitbook/assets/summary-intro.png)&#x20;
+![Summary](../../.gitbook/assets/summary-intro.png)
 {% endcolumn %}
 {% endcolumns %}
 
@@ -20,16 +20,16 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="145.49609375">Other options</th><th></th></tr></thead><tbody><tr><td><code>color</code></td><td>Changing color of <code>title</code> and <code>leftIcon</code> based on <code>when</code> conditions. First condition evaluated to <code>true</code> will be used. If the condition evaluates to <code>false</code> the default color (black) is used. Choose a color from the provided color palette as well as the status colors, e.g. <code>isWarning</code>. Default color is black if the property is not specified in the YAML. See the list of available colors in .</td></tr><tr><td><code>description</code></td><td>Provide third level of supporting text to be displayed. The position of the text is under the <code>subtitle</code> property. This property is only available with <code>layout</code> type <code>cart</code>.</td></tr><tr><td><code>leftIcon</code></td><td>Add an icon to show on the left before the <code>title</code>. A list of icons is available. See for more information. <code>leftIcon</code> is only available with the <code>default</code> layout.</td></tr><tr><td><code>subtitle</code></td><td>Provide supporting text to be displayed as a <code>subtitle</code>. The position of the subtitle text depends on the selected <code>layout</code> property.</td></tr><tr><td><code>value</code></td><td>The actual value in your summary configured by a string or an expression that must equal a number. This property is only available for <code>layout</code> types <code>cart</code> and <code>counter</code>.</td></tr></tbody></table>
 
-<table><thead><tr><th width="146.0390625">Actions</th><th></th></tr></thead><tbody><tr><td><code>OnPress</code></td><td>The action is triggered while pressing on the <code>LeftIcon</code> in the summary. Use IntelliSense (ctrl+space) to see the available list of actions.</td></tr><tr><td><a href="../Actions.md">Actions</a></td><td>By using the summary component along with actions, you can unlock a powerful feature that enables you to take necessary actions based on the information available from the summary. For instance, adding a sales opportunity. This feature can significantly enhance the usability of your jig and make it more efficient.</td></tr></tbody></table>
+<table><thead><tr><th width="146.0390625">Actions</th><th></th></tr></thead><tbody><tr><td><code>OnPress</code></td><td>The action is triggered while pressing on the <code>LeftIcon</code> in the summary. Use IntelliSense (ctrl+space) to see the available list of actions.</td></tr><tr><td><a href="broken-reference">Actions</a></td><td>By using the summary component along with actions, you can unlock a powerful feature that enables you to take necessary actions based on the information available from the summary. For instance, adding a sales opportunity. This feature can significantly enhance the usability of your jig and make it more efficient.</td></tr></tbody></table>
 
 ## Consideration
 
-* The summary component is available on all [Jig Types](<../Jig Types.md>).
+* The summary component is available on all [Jig Types](<../Jig Types/Jig Types.md>).
 * To show an empty `title` use `title: ' '`.
 * To format the `value` property, for example, adding a currency symbol in front of the value or percentage behind the value, use the `Text with Format` option available in IntelliSense (ctrl+space).
 * Only numbers can be shown in the `value` property.
 * If the `value` property exceeds 100 a default 99+ will be displayed in the property.
-* Enhance the usability of your jig and make it more efficient by using the summary component along with an [action](../Actions.md).
+* Enhance the usability of your jig and make it more efficient by using the summary component along with an [action](broken-reference).
 * **Working with Parent and Child Actions and Summaries:** When configuring `actions` or `summary` buttons across parent and child jigs, the following behavior applies:
   * If both the parent and child jigs have an `action` or `summary` configured, the child’s configuration takes precedence and overrides the parent’s.
   * If only the parent has an `action` or `summary`, it automatically applies to the child.
@@ -47,7 +47,7 @@ Some properties are common to all components, see [Common component properties](
 {% column %}
 In this example the `default` layout property is used to show a `title` with a cart as a `leftIcon`.
 
-**Example**: The full example is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary.jigx).&#x20;
+**Example**: The full example is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -87,9 +87,9 @@ item:
 
 {% columns %}
 {% column %}
-n this example the `cart` layout property is used in a `jig.list` with a `product-item` component to show the number of products in the cart. Notice the number of items in the cart is shown in a circle on the right of the `title`. \
-**Example**: \
-The full example of the summary type: cart using product-item is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-cart.jigx). \
+n this example the `cart` layout property is used in a `jig.list` with a `product-item` component to show the number of products in the cart. Notice the number of items in the cart is shown in a circle on the right of the `title`.\
+**Example**:\
+The full example of the summary type: cart using product-item is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-cart.jigx).\
 The full example of the summary type: cart using expander is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-cart-expander.jigx).
 {% endcolumn %}
 
@@ -318,7 +318,7 @@ datasources:
 {% column %}
 In this example the `counter` layout property is used in a `jig.list` with a `product-item` component to show the number of products in the cart. Notice the number of products is show on the left of the `title`.
 
-**Example**: \
+**Example**:\
 The full example of the summary type: counter using product-item is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-counter.jigx). The full example of the summary type: counter using expander is on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-counter-expander.jigx).
 {% endcolumn %}
 {% endcolumns %}

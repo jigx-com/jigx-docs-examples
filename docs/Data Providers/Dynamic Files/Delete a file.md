@@ -14,7 +14,7 @@ In this example, a list of expenses is displayed with the following:
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../../.gitbook/assets/DF-delete-file.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/DF-delete-file.gif" alt="" width="170"><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

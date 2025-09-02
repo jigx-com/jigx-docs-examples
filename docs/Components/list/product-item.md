@@ -1,14 +1,12 @@
 # product-item
 
-
-
 {% columns %}
 {% column %}
-The product item component is suitable for a list of products and should be used with the [list components](../list.md) or the [list jig](<../../Jig Types/jig_list.md>).
+The product item component is suitable for a list of products and should be used with the [list components](list.md) or the [list jig](<../../Jig Types/jig_list.md>).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ydImhfWqF3Ei8FmcgBdc6\_product-item.png" size="78" position="center" caption="Product Item Preview" alt="Product Item Preview" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ydImhfWqF3Ei8FmcgBdc6\_product-item.png" width="800" height="536" darkWidth="800" darkHeight="536"}&#x20;
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ydImhfWqF3Ei8FmcgBdc6\_product-item.png" size="78" position="center" caption="Product Item Preview" alt="Product Item Preview" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ydImhfWqF3Ei8FmcgBdc6\_product-item.png" width="800" height="536" darkWidth="800" darkHeight="536"}
 {% endcolumn %}
 {% endcolumns %}
 
@@ -30,7 +28,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;In this example, a simple list containing a product-item component is shown. Each product contains a title, tag, image, and price. The discount property calculates the price after the discount.
+In this example, a simple list containing a product-item component is shown. Each product contains a title, tag, image, and price. The discount property calculates the price after the discount.
 
 **Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/dynamic-data/product-item-tags-dynamic.jigx).
 {% endcolumn %}
@@ -104,11 +102,11 @@ datasources:
 
 {% columns %}
 {% column %}
-&#x20;![Product-item](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/sCr2-5Hh2_2y2q4BwUcBl_prodiphone13blueportrait.png)
+![Product-item](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/sCr2-5Hh2_2y2q4BwUcBl_prodiphone13blueportrait.png)
 {% endcolumn %}
 
 {% column %}
-&#x20;In this example, a simple list containing a product-item component is shown. Each product contains a title, tag, image, amountControl, and price. The added advantage is that you can search the list making it suitable for a larger number of products. The discount property calculates the price after the discount.
+In this example, a simple list containing a product-item component is shown. Each product contains a title, tag, image, amountControl, and price. The added advantage is that you can search the list making it suitable for a larger number of products. The discount property calculates the price after the discount.
 
 **Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/dynamic-data/product-item-example/product-item-example-dynamic.jigx).
 

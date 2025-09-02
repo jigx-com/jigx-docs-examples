@@ -4,7 +4,7 @@
 
 Press the _Add Customer_ button in the customer list to create a customer. Complete the new customer form and press the _Create_ button.
 
-<figure><img src="../../../../.gitbook/assets/REST-create.png" alt="Add new customer"><figcaption><p>Add new customer</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/REST-create.png" alt="Add new customer" width="563"><figcaption><p>Add new customer</p></figcaption></figure>
 
 ## How does this work
 

@@ -1,6 +1,6 @@
 # grid-item
 
-The grid-item component serves as the child component whenever any grid component has been configured, as discussed in the [grid](../grid.md) section. The component determines how the grid items are displayed, allowing you to customize the UI elements in the grid.
+The grid-item component serves as the child component whenever any grid component has been configured, as discussed in the [grid](grid.md) section. The component determines how the grid items are displayed, allowing you to customize the UI elements in the grid.
 
 ## Configuration options
 

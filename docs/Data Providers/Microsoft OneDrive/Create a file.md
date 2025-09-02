@@ -9,7 +9,7 @@ updatedAt: Wed Mar 05 2025 13:53:04 GMT+0000 (Coordinated Universal Time)
 
 You can create a file in OneDrive from a solution in the Jigx App. Use the [media-field](../../Components/form/media-field.md) component in a form to upload a file or image, then use the OneDrive Data Provider, its create method. and required properties for successful file creation.
 
-<figure><img src="../../../.gitbook/assets/OneDriveCreate.PNG" alt="Create a fle in OneDrive"><figcaption><p>Create a fle in OneDrive</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/OneDriveCreate.PNG" alt="Create a fle in OneDrive" width="563"><figcaption><p>Create a file in OneDrive</p></figcaption></figure>
 
 ## Properties
 

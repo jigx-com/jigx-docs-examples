@@ -4,7 +4,7 @@
 {% column %}
 Type `jig.default` is the most versatile jig allowing you to create a jig with various setup options such as:
 
-* A [form](../Components/form.md)
+* A [form](../Components/form/form.md)
 * A [list](../Widgets/list.md)
 * The jig which can be a part of the [jig.composite](jig_composite.md)
 * Used with a combination of different components and actions.
@@ -39,9 +39,9 @@ The code below is an extract from the full _jigx-samples_ solution. The code sni
 {% endcolumn %}
 
 {% column %}
-**Examples:** \
-See the full default-form.jigx code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-form.jigx). \
-**Datasource:** \
+**Examples:**\
+See the full default-form.jigx code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-form.jigx).\
+**Datasource:**\
 See the full datasource code example for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-default/dynamic-data/default-form.jigx).
 {% endcolumn %}
 {% endcolumns %}
@@ -472,8 +472,6 @@ tables:
 {% columns %}
 {% column %}
 <figure><img src="../../.gitbook/assets/default-jig2.png" alt="Default jig" width="188"><figcaption><p>Default jig</p></figcaption></figure>
-
-
 {% endcolumn %}
 
 {% column %}

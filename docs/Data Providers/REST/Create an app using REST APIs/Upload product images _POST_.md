@@ -3,11 +3,11 @@
 ## Scenario
 
 {% columns %}
-{% column width="41.66666666666667%" %}
-From the [view customer ](<List _ View customers _GET_.md>)On the screen, tap the _Add Images_ button, which will direct you to a screen that allows you to upload multiple images of products for each customer.&#x20;
+{% column %}
+From the [view customer,](<List _ View customers _GET_.md>) on the screen, tap the _Add Images_ button, which will direct you to a screen that allows you to upload multiple images of products for each customer.
 {% endcolumn %}
 
-{% column width="58.33333333333333%" %}
+{% column %}
 <figure><img src="../../../../.gitbook/assets/REST-image2.png" alt="Upload images"><figcaption><p>Upload images</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}

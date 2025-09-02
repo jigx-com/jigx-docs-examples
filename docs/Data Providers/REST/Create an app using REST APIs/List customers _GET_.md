@@ -99,8 +99,6 @@ action:
 * Since the data is already synced to the local Sqlite data provider, the jigs datasource is configured with a query to provide the data for use in the list.
 * Expressions are used to reference the exact data property required in each component.
 
-:::CodeblockTabs&#x20;
-
 {% code title="list-customers.jigx" %}
 ```yaml
 title: Global Customers
@@ -166,8 +164,6 @@ item:
           color: color14
 ```
 {% endcode %}
-
-## :::
 
 ## Index
 

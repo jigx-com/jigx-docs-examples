@@ -2,18 +2,18 @@
 
 The entity component is a container for the following components:
 
-* [entity-field](entity/entity-field.md)
-* [entity-field](entity/entity-field.md)
-* [section](entity/section.md)
+* [entity-field](entity-field.md)
+* [entity-field](entity-field.md)
+* [section](section.md)
 
 ## Considerations
 
 * The `component.entity` used with the above-mentioned components is configurable on a `jig.default`.
-* [Section](entity/section.md) and [field-row](entity/field-row.md) are also available under the `component.form` as its container. Here the [entity-field](entity/entity-field.md) is replaced by the [form's](form.md) children field.
-* When setting up a `component.entity`, either a [default jig](<../Jig Types/jig_default.md>) or `component.form` can be used in the following combinations:
-  * An entity containing [section(s)](entity/section.md) with [rows](entity/field-row.md) and [entity-field](entity/entity-field.md)
-  * An entity containing [section(s)](entity/section.md) and [entity-field](entity/entity-field.md)An entity containing [rows](entity/field-row.md) and [entity-field](entity/entity-field.md)
-  * An entity containing [entity fields](entity/entity-field.md)
+* [Section](section.md) and [field-row](field-row.md) are also available under the `component.form` as its container. Here the [entity-field](entity-field.md) is replaced by the [form's](../form/form.md) children field.
+* When setting up a `component.entity`, either a [default jig](<../../Jig Types/jig_default.md>) or `component.form` can be used in the following combinations:
+  * An entity containing [section(s)](section.md) with [rows](field-row.md) and [entity-field](entity-field.md)
+  * An entity containing [section(s)](section.md) and [entity-field](entity-field.md)An entity containing [rows](field-row.md) and [entity-field](entity-field.md)
+  * An entity containing [entity fields](entity-field.md)
 
 ## Configuration options
 
@@ -25,11 +25,11 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/cc-entity-1.png" alt="Entity with sections, row &#x26; field" width="188"><figcaption><p>Entity with sections, row &#x26; field</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cc-entity-1.png" alt="Entity with sections, row &#x26; field" width="188"><figcaption><p>Entity with sections, row &#x26; field</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../.gitbook/assets/cc-enttiy-2.png" alt="Entity with sections &#x26; field" width="188"><figcaption><p>Entity with sections &#x26; field</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cc-enttiy-2.png" alt="Entity with sections &#x26; field" width="188"><figcaption><p>Entity with sections &#x26; field</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -199,6 +199,6 @@ datasources:
 
 ### See also
 
-* [entity-field](entity/entity-field.md)
-* [field-row](entity/field-row.md)
+* [entity-field](entity-field.md)
+* [field-row](field-row.md)
 * [section](https://docs.jigx.com/docs/jc-section%22)

@@ -4,7 +4,7 @@
 {% column %}
 Email fields in forms provide a user-friendly way to collect email addresses, incorporating validation to ensure data is entered correctly.
 
-The `email-field` component can only be used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](../form.md) component for capturing an email address.
+The `email-field` component can only be used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](form.md) component for capturing an email address.
 {% endcolumn %}
 
 {% column %}

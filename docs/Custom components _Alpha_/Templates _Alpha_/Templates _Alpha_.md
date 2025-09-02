@@ -26,16 +26,16 @@ With these templates, you get the perfect mix of speed and flexibility, allowing
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/CC-Templates.png" alt="Templates" width="188"><figcaption><p>Templates</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CC-Templates.png" alt="Templates" width="188"><figcaption><p>Templates</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 Template categories include:
 
-* [Cards & Charts (Alpha)](<Templates _Alpha_/Cards _ Charts _Alpha_.md>)
-* [Generic (Alpha)](<Templates _Alpha_/Generic _Alpha_.md>)
-* [Industry Specific (Alpha)](<Templates _Alpha_/Industry Specific _Alpha_.md>)
-* [Travel (Alpha)](<Templates _Alpha_/Travel _Alpha_.md>)
+* [Cards & Charts (Alpha)](<Cards _ Charts _Alpha_.md>)
+* [Generic (Alpha)](<Generic _Alpha_.md>)
+* [Industry Specific (Alpha)](<Industry Specific _Alpha_.md>)
+* [Travel (Alpha)](<Travel _Alpha_.md>)
 {% endcolumn %}
 {% endcolumns %}
 

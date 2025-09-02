@@ -9,9 +9,9 @@ updatedAt: Fri May 03 2024 09:32:23 GMT+0000 (Coordinated Universal Time)
 
 In this section code samples are provided for interacting with calendars using Microsoft Graph API.
 
-* [Get Calendar List](broken-reference)
-* [Get Event List](broken-reference)
-* [Get Event Item](broken-reference)
-* [Create Event Item](broken-reference)
+* [Get Calendar List](<Graph Calendar/Get Calendar List.md>)
+* [Get Event List](<Graph Calendar/Get Event List.md>)
+* [Get Event Item](<Graph Calendar/Get Event Item.md>)
+* [Create Event Item](<Graph Calendar/Create Event Item.md>)
 
 The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator).

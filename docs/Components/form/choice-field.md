@@ -5,10 +5,10 @@ The choice-field component allows you to select one or more options from a prede
 **Benefit:** Using the choice-field component over the [checkbox](checkbox.md) component eliminates the need to use numerous checkboxes and complex expressions to achieve the same outcome.
 
 {% hint style="info" %}
-&#x20;The `choice-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.&#x20;
+The `choice-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 {% endhint %}
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-bBqh\_WETCy6CgvD8nBr8c-20240826-164834.png" size="80" position="center" caption="Choice-field" alt="Choice-field" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-bBqh\_WETCy6CgvD8nBr8c-20240826-164834.png" width="800" height="498" darkWidth="800" darkHeight="498"}
+<figure><img src="../../../.gitbook/assets/cc-choiceOverview.png" alt="Choice-field" width="563"><figcaption><p>Choice-field</p></figcaption></figure>
 
 ## Configuration options
 
@@ -37,15 +37,13 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;![Choice-field](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-F2DMxwJXBGFyG_d-CSAoo-20240827-102857.png)&#x20;
-
-
+![Choice-field](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-F2DMxwJXBGFyG_d-CSAoo-20240827-102857.png)
 {% endcolumn %}
 
 {% column %}
 In this example, a `choice-field` component is configured with basic Yes/No options. If you a new customer and select _Yes_, then a `when` property is used with an expression to display additional form fields for the customer to complete. If you an existing customer, select _No_ and click the _Register & place_ \*order \*button to `goTo` the product-item jig to place an order.
 
-**Examples:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/choice-field/choice-field-single.jigx).&#x20;
+**Examples:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/choice-field/choice-field-single.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -169,9 +167,7 @@ In this example, two `choice-field` components are used. The first is a single Y
 {% endcolumn %}
 
 {% column width="50%" %}
-&#x20;![Multiple choice selection](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gDRUtCVRkFn3meuYK0sLO-20240826-150347.PNG)&#x20;
-
-
+![Multiple choice selection](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gDRUtCVRkFn3meuYK0sLO-20240826-150347.PNG)
 {% endcolumn %}
 {% endcolumns %}
 
@@ -309,7 +305,7 @@ actions:
 
 In this example, we want to load the patient's form that they completed in the example above, and show their selected details and allergies. Each patient can have multiple allergies, and the data would be saved as an object in the database. To deserialize the object the `jsonProperties` property is configured with the column containing the object of multiple allergies. In the `choice-field` component the `intialValue` is then configured to return the selected allergies for the specific patient. The `execute-entity` action is configured to update the patient data.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-92ZKPcpsy9TZXXSufKGm--20250318-105534.png" size="70" position="center" caption="Load multiple choices" alt="Load multiple choices" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-92ZKPcpsy9TZXXSufKGm--20250318-105534.png" width="800" height="790" darkWidth="800" darkHeight="790"}
+<figure><img src="../../../.gitbook/assets/cc-choiceMultiple.PNG" alt="Load multiple choices" width="563"><figcaption><p>Load multiple choices</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="update-patient-details.jigx" %}
@@ -544,7 +540,7 @@ item:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-24aUnSddX6OuZIUtlEQRX-20240827-101917.PNG" size="70" position="center" caption="Items per row" alt="Items per row" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-24aUnSddX6OuZIUtlEQRX-20240827-101917.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
+<figure><img src="../../../.gitbook/assets/cc-choice-PerRow1.PNG" alt="Items per row" width="188"><figcaption><p>Items per row</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -625,13 +621,13 @@ actions:
 
 {% columns %}
 {% column %}
-In this example of the choice-field component the form opens with an option already selected. This is configured using an expression in the `initialValue` property. You can change the property. Note that the `onRefresh` event used to reset the form, resets the `choice-field` back to it's orginial state with the `initialValue`selected.
+In this example of the choice-field component the form opens with an option already selected. This is configured using an expression in the `initialValue` property. You can change the property. Note that the `onRefresh` event used to reset the form, resets the `choice-field` back to it's original state with the `initialValue`selected.
 
 **Examples:** See the full example in [GitHub](choice-field.md).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-GapegBAIHUNysuq5uSO2n-20240826-145351.PNG" size="70" position="center" caption="Choice-field" alt="Choice-field" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-GapegBAIHUNysuq5uSO2n-20240826-145351.PNG" width="1240" height="2500" darkWidth="1240" darkHeight="2500"}
+<figure><img src="../../../.gitbook/assets/cc-choiceInitialValue.PNG" alt="Choice-field" width="188"><figcaption><p>Choice-field</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -704,9 +700,7 @@ actions:
 
 {% columns %}
 {% column %}
-&#x20;![Choice-field onChange](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pBfq4DkE6NxBZKZSx-03t-20240826-145121.png)&#x20;
-
-
+<figure><img src="../../../.gitbook/assets/cc-choiceOnchange.png" alt="Choice-field onChange"><figcaption><p>Choice-field onChange</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

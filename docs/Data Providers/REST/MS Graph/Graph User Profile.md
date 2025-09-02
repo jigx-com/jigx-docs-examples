@@ -9,7 +9,7 @@ updatedAt: Fri May 03 2024 09:31:22 GMT+0000 (Coordinated Universal Time)
 
 In this section code samples are provided for the **User** object in Microsoft Graph.
 
-* [Get User Profile & Photo](broken-reference)
-* [Update Profile Photo](broken-reference)
+* [Get User Profile & Photo](<Graph User Profile/Get User Profile _ Photo.md>)
+* [Update Profile Photo](<Graph User Profile/Update Profile Photo.md>)
 
 The entire MS Graph solution is available on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-MS-Graph-demonstrator)

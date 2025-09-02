@@ -8,7 +8,7 @@ The `media-field` component allows users to upload images, videos, or files, eit
 * _Size limits_ and _type filtering_
 
 {% hint style="info" %}
-&#x20;The `media-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.&#x20;
+The `media-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 {% endhint %}
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_mqghZMZFLnlAv3Hoqu5V-20250624-095618.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_mqghZMZFLnlAv3Hoqu5V-20250624-095618.png" size="90" width="5328" height="2681" position="center" caption="Media Field Preview" alt="Media Field Preview"}
@@ -16,7 +16,7 @@ The `media-field` component allows users to upload images, videos, or files, eit
 ## Configuration options
 
 * The `media-field` can only be used in a [jig.default](<../../Jig Types/jig_default.md>).
-* The `media-field` requires a datasource to store the files, you can configure one of the [Data Providers](<../../Data Providers.md>) for this.
+* The `media-field` requires a datasource to store the files, you can configure one of the [Data Providers](<../../Data Providers/Data Providers.md>) for this.
 * [Conversions](https://docs.jigx.com/file-handling) allow you to determine the format the files are stored in and loaded from the datasource.
 * Jigx recommends storing images and files using [Dynamic files](https://docs.jigx.com/dynamic-files), where the files are physically stored in Amazon S3.
 * Some properties are common to all components, see [Common component properties](https://docs.jigx.com/examples/common-component-properties) for a list and their configuration options.
@@ -39,7 +39,7 @@ When using a `media-field` in Jigx, storing and loading certain files, such as i
 * An image, video, or file can be referenced for upload from a datasource, for example, in the `initialValue` property.
 * If a file can’t be displayed using the `initialValue` property, the app will show an icon with the file’s name instead. This usually happens because Android and iOS use different file path formats. To ensure images display correctly on all devices, convert iOS HEIC images to JPG before saving them. See [conversions](https://docs.jigx.com/file-handling) for more information.
 * When uploading multiple files, the media-field displays up to three files by default. If more than three files are selected, the third file is overlaid with a + and the count of additional files (e.g., +2) to indicate how many are not shown. While the total number of files to be added is displayed in the top-right corner of the media-field.
-* Files captured using the `media-field` component can be saved to [Dynamic Files](<../../Data Providers/Dynamic Files.md>) by assigning them to the `file` property of a dynamic data entity, enabling seamless upload and storage in Amazon S3.
+* Files captured using the `media-field` component can be saved to [Dynamic Files](<../../Data Providers/Dynamic Files/Dynamic Files.md>) by assigning them to the `file` property of a dynamic data entity, enabling seamless upload and storage in Amazon S3.
 * You can use the [open-media-picker](../../Actions/open-media-picker.md) action to invoke the `media-field` component to either open the device's camera when tapping the action button, or to select media files and output selected paths.
 
 ## Examples using media-field configurations
@@ -48,7 +48,7 @@ When using a `media-field` in Jigx, storing and loading certain files, such as i
 
 {% columns %}
 {% column %}
-This example shows a form for a new employee, configured with a `media-field` component that allows the employee to upload their signed employment contract. File formats are restricted to DOC and PDF. The media picker opens and displays only PDF and DOC files for selection.&#x20;
+This example shows a form for a new employee, configured with a `media-field` component that allows the employee to upload their signed employment contract. File formats are restricted to DOC and PDF. The media picker opens and displays only PDF and DOC files for selection.
 {% endcolumn %}
 
 {% column %}
@@ -583,9 +583,7 @@ See the example in [Upload product images (POST)](<../../Data Providers/REST/Cre
 {% endcolumn %}
 
 {% column %}
-&#x20;![Upload images using REST](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RiSOkNLzZS31uj9Z5TS-b-20250624-131725.png)
-
-
+![Upload images using REST](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RiSOkNLzZS31uj9Z5TS-b-20250624-131725.png)
 {% endcolumn %}
 {% endcolumns %}
 

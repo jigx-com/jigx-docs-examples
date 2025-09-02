@@ -6,7 +6,7 @@ Use the `jig.list` to create a list from a datasource and style that list to you
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../.gitbook/assets/jig-listIntro.png" alt="Jig List Preview" width="375"><figcaption><p>Jig List Preview</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/jig-listIntro.png" alt="Jig List Preview" width="188"><figcaption><p>Jig List Preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -16,7 +16,7 @@ Use the `jig.list` to create a list from a datasource and style that list to you
 * Each item in a list can be called individually through indexing. Lists are a compound data type made up of smaller parts and are very flexible because they can have values added, removed, and changed.
 * When you need to store a lot of values or iterate over values, and you want to be able to readily modify those values, you’ll likely want to work with list data types.
 * Each element or value inside a list is called an item.
-* A `jig.list` component allows for a few configuration options and is automatically added as a list on a widget if the sizing of the widget exceeds 1x1. See the [list](../Components/list.md) for information on the list widget. This component can also be added to a `jig.default` where the [list](../Widgets/list.md) component is configured along with other content or components.
+* A `jig.list` component allows for a few configuration options and is automatically added as a list on a widget if the sizing of the widget exceeds 1x1. See the [list](../Components/list/list.md) for information on the list widget. This component can also be added to a `jig.default` where the [list](../Widgets/list.md) component is configured along with other content or components.
 * When using the `value` property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.
 
 ## Configuration options
@@ -24,7 +24,7 @@ Use the `jig.list` to create a list from a datasource and style that list to you
 The `jig.list` can be configured in the following ways within the Jigx Builder:
 
 * As a normal list (this is the main type - refer to the [list-item](../Components/list/list-item.md) component section for unique formatting options)
-* As a list with [expanders](../Components/expander.md)
+* As a list with [expanders](../Components/expander/expander.md)
 * As a list with [stages](../Components/expander/stage.md)
 * As a list of [product-items](../Components/list/product-item.md)
 * As a list shown as a [bar-chart](../Components/charts/bar-chart.md)

@@ -1,12 +1,12 @@
 # grid
 
-The grid component enables you to create grid layouts in your app, organizing content into rows and columns for a visually consistent and flexible interface. It helps align elements proportionally, ensuring a structured design. The grid is ideal for creating galleries to display photos or product images, dashboards, menus, and product lists. This component is very similar to the [jig.grid](<../Jig Types/jig_grid.md>) the only exception is that this component can be used in a [jig.default](<../Jig Types/jig_default.md>) with other components.
+The grid component enables you to create grid layouts in your app, organizing content into rows and columns for a visually consistent and flexible interface. It helps align elements proportionally, ensuring a structured design. The grid is ideal for creating galleries to display photos or product images, dashboards, menus, and product lists. This component is very similar to the [jig.grid](<../../Jig Types/jig_grid.md>) the only exception is that this component can be used in a [jig.default](<../../Jig Types/jig_default.md>) with other components.
 
 ## Configuration options
 
 The grid component has two available configuration options:
 
-1. **Auto Grid** - used to create a grid layout from a datasource. This is similar in configuration to a [jig.list](<../Jig Types/jig_list.md>) where a single `grid-item` is configured and iterates through the datasource.
+1. **Auto Grid** - used to create a grid layout from a datasource. This is similar in configuration to a [jig.list](<../../Jig Types/jig_list.md>) where a single `grid-item` is configured and iterates through the datasource.
 2. **Custom Grid** - used to create a custom grid layout using widgets, images, or custom components in various sizes.
 
 <table><thead><tr><th width="153.90234375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>type</code></td><td>Within a grid component, the component is used to define each of the elements in the grid layout. Within the <code>grid-item</code> a select set of components can be configured.</td></tr><tr><td><code>data</code></td><td>Configure a datasource to call the data in the grid layout. The data property is required for the Auto Grid, but is optional for the Custom Grid selection.</td></tr></tbody></table>
@@ -86,11 +86,11 @@ datasources:
 
 {% columns %}
 {% column %}
-This example demonstrates combining the grid component with other components (entity and form) in a default jig. The grid is customized to show an image component (4x2), a list widget (2x2) and chart widget (2x2).&#x20;
+This example demonstrates combining the grid component with other components (entity and form) in a default jig. The grid is customized to show an image component (4x2), a list widget (2x2) and chart widget (2x2).
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U\_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" size="66" position="center" caption="Custom grid " alt="Custom grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U\_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}&#x20;
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U\_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" size="66" position="center" caption="Custom grid " alt="Custom grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U\_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 {% endcolumn %}
 {% endcolumns %}
 

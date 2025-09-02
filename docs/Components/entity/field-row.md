@@ -13,7 +13,7 @@ The field-row component contains other components and displays them on the same 
 
 * Rows can contain [entity-field](entity-field.md) components:
   * On a [default jig](<../../Jig Types/jig_default.md>) or children components
-  * On a [form](../form.md) component
+  * On a [form](../form/form.md) component
   * Nested under [section](section.md) components
 * A maximum of three components can be displayed per row.
 

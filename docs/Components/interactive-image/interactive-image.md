@@ -2,7 +2,7 @@
 
 An interactive image has clickable links that can be used in various ways. For instance, it can be clicked on to reveal information about a specific point, indicate a selection, such as a booking, or use it as a multi-selection. This is typically used when the information you need to convey is better presented visually than in text.
 
-<figure><img src="../../.gitbook/assets/CC-interactiveImage.png" alt="Interactive images" width="563"><figcaption><p>Interactive images</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CC-interactiveImage.png" alt="Interactive images" width="563"><figcaption><p>Interactive images</p></figcaption></figure>
 
 ## Configuration options
 
@@ -14,5 +14,5 @@ Some properties are common to all components, see [Common component properties](
 
 ## Considerations
 
-* The interactive component serves as a container for the [interactive-image-item](interactive-image/interactive-image-item.md) component.
+* The interactive component serves as a container for the [interactive-image-item](interactive-image-item.md) component.
 * The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/assets).

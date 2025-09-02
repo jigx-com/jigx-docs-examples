@@ -2,11 +2,11 @@
 
 {% columns %}
 {% column %}
-A stage is a primary container for displaying various UI components on the left and right, typically showing a start-and-end concept.&#x20;
+A stage is a primary container for displaying various UI components on the left and right, typically showing a start-and-end concept.
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yWymE6Po4TH-JLyB7xKK2\_cc-list-stage.png" size="88" position="center" caption="Stage in a list" alt="Stage in a list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yWymE6Po4TH-JLyB7xKK2\_cc-list-stage.png" width="800" height="531" darkWidth="800" darkHeight="531"}&#x20;
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yWymE6Po4TH-JLyB7xKK2\_cc-list-stage.png" size="88" position="center" caption="Stage in a list" alt="Stage in a list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yWymE6Po4TH-JLyB7xKK2\_cc-list-stage.png" width="800" height="531" darkWidth="800" darkHeight="531"}
 {% endcolumn %}
 {% endcolumns %}
 
@@ -22,7 +22,7 @@ Some properties are common to all components, see [Common component properties](
 
 ## Consideration
 
-* `component.stage` can only be used in the `component.list` or an [expander](../expander.md).
+* `component.stage` can only be used in the `component.list` or an [expander](../expander/expander.md).
 
 ## Examples and code snippets
 
@@ -36,12 +36,12 @@ Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2X
 {% column %}
 This example shows list items with left and right elements and typically shows a start-and-end concept. Flight schedules are used in this example. However, you can choose a different icon for many different use cases.
 
-**Examples:** \
+**Examples:**\
 See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-stage-list-sd.jigx).\
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-stage-list-dd.jigx).
 
-**Datasource:** \
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-static.jigx). \
+**Datasource:**\
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-static.jigx).\
 See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
@@ -184,7 +184,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih\_dHdqqMASbcxefEw-\_rxx3cpwfsmgibkcygpxznlist-with-expander.png" size="80" position="center" caption="Stage in list with expanders" alt="Stage in list with expanders" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih\_dHdqqMASbcxefEw-\_rxx3cpwfsmgibkcygpxznlist-with-expander.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}&#x20;
+Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih\_dHdqqMASbcxefEw-\_rxx3cpwfsmgibkcygpxznlist-with-expander.png" size="80" position="center" caption="Stage in list with expanders" alt="Stage in list with expanders" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih\_dHdqqMASbcxefEw-\_rxx3cpwfsmgibkcygpxznlist-with-expander.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 {% endcolumn %}
 
 {% column %}
@@ -192,13 +192,13 @@ This example shows a list of expanders that have used the stage components as th
 
 Expanders are ideal for displaying additional information without having to navigate to another page.
 
-**Examples:** \
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-exp-stage-list-sd.jigx). \
+**Examples:**\
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/static-data/default-w-exp-stage-list-sd.jigx).\
 See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list/dynamic-data/default-w-exp-stage-list-dd.jigx).
 
-**Datasource:** \
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-static.jigx). \
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-dynamic.jigx).&#x20;
+**Datasource:**\
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-static.jigx).\
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/flight-schedule-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

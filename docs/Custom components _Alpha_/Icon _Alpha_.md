@@ -11,7 +11,7 @@ This feature is currently in its **Alpha** stage of development.
 
 The icon component can be integrated into custom components to enhance their visual appeal and functionality, such as adding an icon within a [Button (Alpha)](<Button _Alpha_.md>) , displaying it in a [Card (Alpha)](<Card _Alpha_.md>) , or embedding it in a [View (Alpha)](<View _Alpha_.md>) . By customizing an icon, you can adjust its size, color, and shape, and even apply animations or conditional styling, ensuring seamless alignment with your application's design system and user experience.
 
-For steps on creating a custom component, see [How to create a custom component](<../Custom components _Alpha_.md>).
+For steps on creating a custom component, see [How to create a custom component](<Custom components _Alpha_.md>).
 
 ## Configuration options
 
@@ -264,7 +264,7 @@ children:
 
 {% columns %}
 {% column %}
-Create an icon bar within in a `component.card` by configuring multiple `component.icon`. Add an `onPress` event to each icon that opens its associated URL. You can configure the `onPress` event to call various available [actions](../Actions.md).
+Create an icon bar within in a `component.card` by configuring multiple `component.icon`. Add an `onPress` event to each icon that opens its associated URL. You can configure the `onPress` event to call various available [actions](broken-reference).
 
 **Example:**
 

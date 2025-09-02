@@ -6,23 +6,23 @@ Using forms in mobile apps enables users to effortlessly input and submit inform
 {% column %}
 The following components are available in a form:
 
-1. [avatar-field](form/avatar-field.md)
-2. [checkbox](form/checkbox.md)
-3. [choice-field](form/choice-field.md)
-4. [date-picker](form/date-picker.md)
-5. [dropdown](form/dropdown.md)
-6. [duration-picker](form/duration-picker.md)
-7. [email-field](form/email-field.md)
-8. [media-field](form/media-field.md)
-9. [number-field](form/number-field.md)
-10. [signature-field](form/signature-field.md)
-11. [text-field](form/text-field.md)
+1. [avatar-field](avatar-field.md)
+2. [checkbox](checkbox.md)
+3. [choice-field](choice-field.md)
+4. [date-picker](date-picker.md)
+5. [dropdown](dropdown.md)
+6. [duration-picker](duration-picker.md)
+7. [email-field](email-field.md)
+8. [media-field](media-field.md)
+9. [number-field](number-field.md)
+10. [signature-field](signature-field.md)
+11. [text-field](text-field.md)
 
 These extra components allow for the easy input and collection of data. Using forms, records in a database can be created, updated, or deleted based on user input information.
 {% endcolumn %}
 
 {% column %}
-Image\[]{alt="Form Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CmFxqLjk6bGCPvquRfLsB\_form.png" size="76" caption="Form Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CmFxqLjk6bGCPvquRfLsB\_form.png" width="800" height="996" darkWidth="800" darkHeight="996"}
+<figure><img src="../../../.gitbook/assets/default-form.png" alt="" width="375"><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -30,7 +30,7 @@ Image\[]{alt="Form Preview" src="https://archbee-image-uploads.s3.amazonaws.com/
 
 Some properties are common to all components, see [Common component properties](form.md) for a list and their configuration options.
 
-<table><thead><tr><th width="266.83984375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td><p>Define the content of the form. The following components can be used in the form:</p><ul><li><a href="form/choice-field.md">choice-field</a></li><li><a href="form/checkbox.md">checkbox</a></li><li><a href="form/date-picker.md">date-picker</a></li><li><a href="form/dropdown.md">dropdown</a></li><li><a href="form/duration-picker.md">duration-picker</a></li><li><a href="form/email-field.md">email-field</a></li><li><a href="entity/field-row.md">field-row</a></li><li><a href="form/media-field.md">media-field</a></li><li><a href="form/number-field.md">number-field</a></li><li><a href="entity/section.md">section</a></li><li><a href="form/signature-field.md">signature-field</a></li><li><a href="form/text-field.md">text-field</a></li></ul></td></tr><tr><td><code>instanceId</code></td><td>The unique identifier for the form.</td></tr></tbody></table>
+<table><thead><tr><th width="266.83984375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td><p>Define the content of the form. The following components can be used in the form:</p><ul><li><a href="choice-field.md">choice-field</a></li><li><a href="checkbox.md">checkbox</a></li><li><a href="date-picker.md">date-picker</a></li><li><a href="dropdown.md">dropdown</a></li><li><a href="duration-picker.md">duration-picker</a></li><li><a href="email-field.md">email-field</a></li><li><a href="../entity/field-row.md">field-row</a></li><li><a href="media-field.md">media-field</a></li><li><a href="number-field.md">number-field</a></li><li><a href="../entity/section.md">section</a></li><li><a href="signature-field.md">signature-field</a></li><li><a href="text-field.md">text-field</a></li></ul></td></tr><tr><td><code>instanceId</code></td><td>The unique identifier for the form.</td></tr></tbody></table>
 
 <table><thead><tr><th width="270.57421875">Other options</th><th></th></tr></thead><tbody><tr><td><code>isDiscardChangesAlertEnabled</code></td><td>When set to <code>true</code> the modal window preventing accidental deletion of your data without saving will pop up.</td></tr><tr><td><code>initialValues</code></td><td>Specify the data to be used as <code>initialValues</code> for fields in the form. Using the <code>reset-state</code> action with <code>initialValues</code> does not clear the form, it resets the form back to it's <code>initialValue</code>. <em><strong>Tip</strong></em>: For <code>initialValues</code> on a to function <code>isDocument: true</code> in the datasource, this way you don't have to set it up in the individual components. It is set up in one place and the form will match the components to the column names of the datasource. See the example below for Form with initialValue.</td></tr></tbody></table>
 
@@ -42,11 +42,11 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-![Simple form](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pB26E4FGL3st46LaEFHU8_ybxpqz2aem5zhq1e3bl8fformiphone13blueportrait.png)&#x20;
+![Simple form](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pB26E4FGL3st46LaEFHU8_ybxpqz2aem5zhq1e3bl8fformiphone13blueportrait.png)
 {% endcolumn %}
 
 {% column %}
-Here is an example of a form for creating records in the database. See [submit-form](../Actions/submit-form.md) for information on how to create a record.
+Here is an example of a form for creating records in the database. See [submit-form](../../Actions/submit-form.md) for information on how to create a record.
 
 **Examples:**
 
@@ -84,15 +84,15 @@ children:
 
 {% columns %}
 {% column %}
-&#x20;![Update data form](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/P9wR9HiQwsUX8AI1jmlK7_img8326iphone13blueportrait.png)&#x20;
+![Update data form](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/P9wR9HiQwsUX8AI1jmlK7_img8326iphone13blueportrait.png)
 {% endcolumn %}
 
 {% column %}
-This example shows how a form is used to update an existing records in the database. Notice that a new variable called **initialValue:** has been added, we load the data that we have stored in the database and then change it. See the [execute-entity](../Actions/execute-entity.md) action for information on how to update a record.
+This example shows how a form is used to update an existing records in the database. Notice that a new variable called **initialValue:** has been added, we load the data that we have stored in the database and then change it. See the [execute-entity](../../Actions/execute-entity.md) action for information on how to update a record.
 
 **Examples**: See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/form/update-form-submit.jigx).
 
-**Datasource**: See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/form/update-form-submit.jigx).&#x20;
+**Datasource**: See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/form/update-form-submit.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -254,7 +254,7 @@ In this example, you tap on a contact in the contact-list and the new-contact fo
 {% endcolumn %}
 
 {% column %}
-&#x20;![Form preloaded with data](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Wpxk0IZiomKR6km8Si7o3-20241111-172919.png)
+![Form preloaded with data](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Wpxk0IZiomKR6km8Si7o3-20241111-172919.png)
 {% endcolumn %}
 {% endcolumns %}
 

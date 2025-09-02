@@ -5,14 +5,12 @@
 The date-picker component provides the functionality to select specific dates, times, or a combination of both. Date/time must be _**input**_ in [ISO Format](https://www.iso.org/iso-8601-date-and-time-format.html). You can configure how the date/time is displayed in the form by formatting the _**output**_.
 
 {% hint style="info" %}
-&#x20;The `date-picker` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.&#x20;
+The `date-picker` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 {% endhint %}
 {% endcolumn %}
 
 {% column %}
-&#x20;![Date Picker](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-EMmv_RApEz18txt2YEbDK-20250318-111938.png)
-
-
+![Date Picker](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-EMmv_RApEz18txt2YEbDK-20250318-111938.png)
 {% endcolumn %}
 {% endcolumns %}
 
@@ -40,9 +38,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;![Date picker- input + output](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lZp4wvPnnYUd7YdOAlSDB_cc-datepicker.png)&#x20;
-
-
+![Date picker- input + output](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lZp4wvPnnYUd7YdOAlSDB_cc-datepicker.png)
 {% endcolumn %}
 
 {% column %}
@@ -72,7 +68,7 @@ children:
 
 {% columns %}
 {% column %}
-&#x20;![Time selector - input + output](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WoqqTGRt53R_ymb-bdSGs-20250318-112250.png)&#x20;
+![Time selector - input + output](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WoqqTGRt53R_ymb-bdSGs-20250318-112250.png)
 {% endcolumn %}
 
 {% column %}
@@ -103,11 +99,11 @@ children:
 
 {% columns %}
 {% column %}
-This example shows how to set a specific date range using the `minimum` and `maximum` properties.&#x20;
+This example shows how to set a specific date range using the `minimum` and `maximum` properties.
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EVYL9aHItYCcYfcSj2J1T\_cc-date-min-max.PNG" size="60" position="center" caption="Date range with minimum & maximum" alt="Date range with minimum & maximum" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EVYL9aHItYCcYfcSj2J1T\_cc-date-min-max.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}&#x20;
+<figure><img src="../../../.gitbook/assets/cc-date-min-max.PNG" alt="Date range with minimum &#x26; maximum" width="188"><figcaption><p>Date range with minimum &#x26; maximum</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

@@ -3,10 +3,6 @@ title: sqlite
 slug: GLSk-sqlite
 createdAt: Thu Jun 09 2022 18:34:04 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 15:06:18 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to utilize SQLite as a datasource in Jig files with this
-  comprehensive guide. Discover how to retrieve data through SQLite queries,
-  configure it as a local or global datasource, and seamless
 ---
 
 # sqlite
@@ -71,7 +67,7 @@ datasources:
 {% column %}
 Datasource with type `sqlite` as global datasource to select name, and email from the employee's table and to display the list of employees.
 
-**Example:** \
+**Example:**\
 See the full example on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/dynamic-data/employees-list.jigx)
 {% endcolumn %}
 {% endcolumns %}
@@ -245,7 +241,7 @@ datasources
 
 ### Joining tables
 
-Often you want to use data in your solution but the data is stored in different tables. Use a SQLite query to join the data from tables and extract the exact information you want to use. When joining two tables there must be the same identifier in both tables. In the example below both tables has a `$.date` column. _**Result**_: The result of the example below is  date: 5 finished\_date: 5.11
+Often you want to use data in your solution but the data is stored in different tables. Use a SQLite query to join the data from tables and extract the exact information you want to use. When joining two tables there must be the same identifier in both tables. In the example below both tables has a `$.date` column. _**Result**_: The result of the example below is date: 5 finished\_date: 5.11
 
 <figure><img src="../../.gitbook/assets/sql-joinTable2.png" alt="" width="563"><figcaption></figcaption></figure>
 

@@ -2,7 +2,7 @@
 
 {% columns %}
 {% column %}
-The titles component displays a title, subtitle, /comment, or any type of text content with an icon which is optional.
+The titles component displays a title, subtitle, comment, or any type of text content with an icon which is optional.
 {% endcolumn %}
 
 {% column %}

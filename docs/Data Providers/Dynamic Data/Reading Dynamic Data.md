@@ -14,7 +14,7 @@ In this example, we **read** the employee data records we created in the employe
 1. **default.jigx** is the database where the Dynamic Data table is defined.
 2. [sqlite](../../Datasource/sqlite.md) datasource calls the Dynamic Data provider, using an SQL query to return the data.
 3. [jig.list](<../../Jig Types/jig_list.md>) is the type of jig we will use to list the data.
-4. [expander](../../Components/expander.md) component to show the Dynamic Data in.
+4. [expander](../../Components/expander/expander.md) component to show the Dynamic Data in.
 
 ## Examples and code snippets
 

@@ -13,8 +13,8 @@ The employee's details are updated using the Dynamic Data provider's **update** 
 
 1. **default.jigx** is the database where the Dynamic Data table is defined.
 2. [sqlite](../../Datasource/sqlite.md) datasource calls the Dynamic Data provider, using an SQL query to return the data.
-3. [jig.list](<../../Jig Types/jig_list.md>) is the type of jig used to list the data in an [expander](../../Components/expander.md) component with an `onContentPress` action with `parameters` to transfer the selected employee's details to the form.
-4. [form](../../Components/form.md) is the component used with `initialValue` properties to populate the employee data into the form fields.
+3. [jig.list](<../../Jig Types/jig_list.md>) is the type of jig used to list the data in an [expander](../../Components/expander/expander.md) component with an `onContentPress` action with `parameters` to transfer the selected employee's details to the form.
+4. [form](../../Components/form/form.md) is the component used with `initialValue` properties to populate the employee data into the form fields.
 5. [submit-form](../../Actions/submit-form.md) is the action that executes the **update** method of the Dynamic Dataprovider with the `recordId` property configured to identify the record in the table that must be updated
 
 ## Examples and code snippets

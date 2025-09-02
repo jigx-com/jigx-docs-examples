@@ -7,9 +7,9 @@ updatedAt: Wed Jan 17 2024 10:18:12 GMT+0000 (Coordinated Universal Time)
 
 # charts
 
-The component can display statistics related to data records (categorical variables). This can be used to show a single series or multiple series of data for comparative purposes and highlight specific regions or ranges on the chart to make it easier for users to interpret and analyze the data.This component is mostly used in [jig.default](<../Jig Types/jig_default.md>) or [jig.list](<../Jig Types/jig_list.md>).
+The component can display statistics related to data records (categorical variables). This can be used to show a single series or multiple series of data for comparative purposes and highlight specific regions or ranges on the chart to make it easier for users to interpret and analyze the data.This component is mostly used in [jig.default](<../../Jig Types/jig_default.md>) or [jig.list](<../../Jig Types/jig_list.md>).
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Bar chart</td><td><a href="charts/bar-chart.md">Show more</a></td><td><a href="../../.gitbook/assets/bar-chart.png">bar-chart.png</a></td></tr><tr><td>Pie chart</td><td><a href="charts/pie-chart.md">Show more</a></td><td><a href="../../.gitbook/assets/pie-chart.png">pie-chart.png</a></td></tr><tr><td>Line chart</td><td><a href="charts/line-chart.md">Show more</a></td><td><a href="../../.gitbook/assets/line-chart.png">line-chart.png</a></td></tr><tr><td>Bar charts -plotbands</td><td><a href="charts/bar-chart.md">Show more</a></td><td><a href="../../.gitbook/assets/charts-bar-plotbands-s.png">charts-bar-plotbands-s.png</a></td></tr><tr><td>Line charts -plotbands</td><td><a href="charts/line-chart.md">Show more</a></td><td><a href="../../.gitbook/assets/Charts-Line-plotbands-s.png">Charts-Line-plotbands-s.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Bar chart</td><td><a href="bar-chart.md">Show more</a></td><td><a href="../../../.gitbook/assets/bar-chart.png">bar-chart.png</a></td></tr><tr><td>Pie chart</td><td><a href="pie-chart.md">Show more</a></td><td><a href="../../../.gitbook/assets/pie-chart.png">pie-chart.png</a></td></tr><tr><td>Line chart</td><td><a href="line-chart.md">Show more</a></td><td><a href="../../../.gitbook/assets/line-chart.png">line-chart.png</a></td></tr><tr><td>Bar charts -plotbands</td><td><a href="bar-chart.md">Show more</a></td><td><a href="../../../.gitbook/assets/charts-bar-plotbands-s.png">charts-bar-plotbands-s.png</a></td></tr><tr><td>Line charts -plotbands</td><td><a href="line-chart.md">Show more</a></td><td><a href="../../../.gitbook/assets/Charts-Line-plotbands-s.png">Charts-Line-plotbands-s.png</a></td></tr></tbody></table>
 
 ## Understanding chart data
 
@@ -17,15 +17,15 @@ Chart data is structured in a way that makes it easy to display. To understand h
 
 * Let's start with the financial data per quarter for three years from a **Microsoft Excel** table, as shown below:
 
-<figure><img src="../../.gitbook/assets/C-ExcelData.png" alt="Excel data table" width="375"><figcaption><p>Excel data table</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/C-ExcelData.png" alt="Excel data table" width="375"><figcaption><p>Excel data table</p></figcaption></figure>
 
 * Next we map out the same data in Jigx [Dynamic Data](https://docs.jigx.com/dynamic-data) in[Jigx Management](https://docs.jigx.com/data). Notice that the data is exactly the same as the Excel data.
 
-<figure><img src="../../.gitbook/assets/C-DD-data.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/C-DD-data.png" alt=""><figcaption></figcaption></figure>
 
 * The same data can also exist in a **JSON** file. Using the _Download_ button at the top-right of the Data-finance-data table shown above will download the data into a JSON file. The JSON is shown below.
 
-<figure><img src="../../.gitbook/assets/C-JSON.png" alt="JSON data" width="355"><figcaption><p>JSON data</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/C-JSON.png" alt="JSON data" width="355"><figcaption><p>JSON data</p></figcaption></figure>
 
 ## Using the data in YAML
 
@@ -91,7 +91,7 @@ In the YAML for charts the following keys are used: - `yAxis` - `xAxis` - `categ
 
 In this example the _finance-data_ would show as follows for each key.
 
-<figure><img src="../../.gitbook/assets/C-YAMLKey.png" alt="Chart YAML data described" width="338"><figcaption><p>Chart YAML data described</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/C-YAMLKey.png" alt="Chart YAML data described" width="338"><figcaption><p>Chart YAML data described</p></figcaption></figure>
 
 Now it is possible to create charts in YAML with the exact same data, for example a bar and line chart with the finance-data in the above YAML keys is shown below. Notice in the YAML below that the same YAML is used for both the bar and line chart.
 
@@ -189,7 +189,7 @@ The `component.bar-chart` in the Jigx App using the finance- data.
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../.gitbook/assets/C-BarMultiExplained.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/C-BarMultiExplained.png" alt="" width="188"><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -199,6 +199,6 @@ The `component.line-chart` in the Jigx App using the finance- data.
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../.gitbook/assets/C-LineExample.png" alt="Line chart in Jigx" width="375"><figcaption><p>Line chart in Jigx</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/C-LineExample.png" alt="Line chart in Jigx" width="375"><figcaption><p>Line chart in Jigx</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}

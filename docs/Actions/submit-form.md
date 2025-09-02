@@ -1,6 +1,6 @@
 # submit-form
 
-The action can be used on a form to save data into any of the [data](https://docs.jigx.com/aI2F-data) types (check out [Forms](https://docs.jigx.com/examples/form) to learn more about forms). `submit-form` has to be used on a [default jig](https://docs.jigx.com/examples/jigdefault) with the [form](../Components/form.md) component. A typical use case of submit-form is saving or updating the records in a table.
+The action can be used on a form to save data into any of the [data](https://docs.jigx.com/aI2F-data) types (check out [Forms](https://docs.jigx.com/examples/form) to learn more about forms). `submit-form` has to be used on a [default jig](https://docs.jigx.com/examples/jigdefault) with the [form](../Components/form/form.md) component. A typical use case of submit-form is saving or updating the records in a table.
 
 The `submit-form` action can be set up as a primary action on default jig with a form component
 

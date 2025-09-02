@@ -4,11 +4,11 @@
 
 {% columns %}
 {% column %}
-This example displays a department's expenses in a list. The expense receipt is downloaded by tapping the button to the right of the expense. A jig opens, displaying the receipt and its metadata. To `download` the receipt to a `localPath`, the `execute-entity`'s `download` method is configured. A `go-to` action opens a jig that displays the downloaded file in an `image` component and the file's metadata in `entity-fields`.&#x20;
+This example displays a department's expenses in a list. The expense receipt is downloaded by tapping the button to the right of the expense. A jig opens, displaying the receipt and its metadata. To `download` the receipt to a `localPath`, the `execute-entity`'s `download` method is configured. A `go-to` action opens a jig that displays the downloaded file in an `image` component and the file's metadata in `entity-fields`.
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../../.gitbook/assets/DF-download-file.gif" alt="" width="341"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/DF-download-file.gif" alt="" width="170"><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -181,7 +181,7 @@ children:
 
 ## Downloading multiple files
 
-In scenarios where multiple files must be downloaded, use the `execute-entities` action. In the `data` property, configure an expression using the `$map`  JSONATA [Path Operators](<Download a file.md>) to handle multiple entries.
+In scenarios where multiple files must be downloaded, use the `execute-entities` action. In the `data` property, configure an expression using the `$map` JSONATA [Path Operators](<Download a file.md>) to handle multiple entries.
 
 {% code title="download-multiple-files" fullWidth="true" %}
 ```yaml

@@ -1,6 +1,6 @@
 # list
 
-This component is very similar to the [jig.list](<../Jig Types/jig_list.md>) the only exception is that this list component can be used in a [jig.default](<../Jig Types/jig_default.md>) with other items, whereas the [jig.list](<../Jig Types/jig_list.md>) is a jig dedicated to a list only. With this component, you can typically combine a list with other components. Another difference is that [jig.list](<../Jig Types/jig_list.md>) automatically display lists on the widget, which is not true with lists on a [jig.default](<../Jig Types/jig_default.md>).
+This component is very similar to the [jig.list](<../../Jig Types/jig_list.md>) the only exception is that this list component can be used in a [jig.default](<../../Jig Types/jig_default.md>) with other items, whereas the [jig.list](<../../Jig Types/jig_list.md>) is a jig dedicated to a list only. With this component, you can typically combine a list with other components. Another difference is that [jig.list](<../../Jig Types/jig_list.md>) automatically display lists on the widget, which is not true with lists on a [jig.default](<../../Jig Types/jig_default.md>).
 
 As far as the functionality goes, the same list options are available as with the List Jig where the list itself can either be a list of values with list items or it can be one of the following:
 
@@ -9,13 +9,13 @@ As far as the functionality goes, the same list options are available as with th
 3. [Expander](https://docs.jigx.com/examples/expander)
 4. [Pie charts](https://docs.jigx.com/examples/pie-chart)
 5. [Product item](https://docs.jigx.com/examples/product-item)
-6. [Stage](list/stage.md)
+6. [Stage](stage.md)
 
 ## Configuration options
 
 Some properties are common to all components, see [Common component properties](list.md) for a list and their configuration options.
 
-<table><thead><tr><th width="197.83984375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>data</code></td><td>The items you want to show in the list.</td></tr><tr><td><code>item</code></td><td><p>There is a list of components available to use:<br><a href="charts/bar-chart.md">bar-chart</a><br><a href="expander.md">expander</a><br><a href="charts/pie-chart.md">pie-chart</a><br><a href="list/product-item.md">product-item</a></p><p><a href="list/stage.md">stage</a><br>If you use the list component in a <a href="../Jig Types/jig_composite.md">jig.composite</a> , the maximum number of displayed items is 8. If you set the <code>maximumItemsToRender</code> to a higher number, the rest of the list will display after clicking on the 'Show more' option.</p></td></tr><tr><td><code>maximumItemsToRender</code></td><td>The number of items you would like to display in your list.</td></tr></tbody></table>
+<table><thead><tr><th width="197.83984375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>data</code></td><td>The items you want to show in the list.</td></tr><tr><td><code>item</code></td><td><p>There is a list of components available to use:<br><a href="../charts/bar-chart.md">bar-chart</a><br><a href="../expander/expander.md">expander</a><br><a href="../charts/pie-chart.md">pie-chart</a><br><a href="product-item.md">product-item</a></p><p><a href="stage.md">stage</a><br>If you use the list component in a <a href="../../Jig Types/jig_composite.md">jig.composite</a> , the maximum number of displayed items is 8. If you set the <code>maximumItemsToRender</code> to a higher number, the rest of the list will display after clicking on the 'Show more' option.</p></td></tr><tr><td><code>maximumItemsToRender</code></td><td>The number of items you would like to display in your list.</td></tr></tbody></table>
 
 <table><thead><tr><th width="190.88671875">Other options</th><th></th></tr></thead><tbody><tr><td><code>badge</code></td><td><p>Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:</p><ul><li>To display as a red dot using the <code>empty</code> value.</li><li>A red dot with a number using an expression to perform a count. For example, counting the number of tasks in the list.</li></ul></td></tr><tr><td><code>filter</code></td><td><p>Allows you to create lists filtered by a key/value. Set the filter to open on a specific tab in a list.</p><ul><li><code>initialValue</code> - Predefine the default selected tab for a filter on the list, when opening the jig the default filter tab is displayed.</li><li><p><code>data</code> - define the filter tabs using:</p><ul><li><code>title</code> - give the filter a name. The text that will be displayed in the tab, for example, in-stock.</li><li><code>value</code> - The value that the list filter returns. Use the following expressions to return this value: - <code>=@ctx.components.my-list.state.filter</code> (for a list in a default jig) - <code>=@ctx.jig.state.filter</code> (for a list jig) For <code>true/false</code> values that are saved as <strong>boolean</strong> ensure the filter has a <strong>boolean</strong> value. For <code>true/false</code> values that are saved as <strong>string</strong> ensure the filter has a <strong>string</strong> value. When using the <code>value</code> property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.</li></ul></li></ul></td></tr><tr><td><code>isHorizontal</code></td><td>The boolean value that transforms the list into a horizontal one.</td></tr><tr><td><code>isSearchable</code></td><td>The boolean value which allows you to add a search bar on the top of your list.</td></tr><tr><td><code>onShowMorePress</code></td><td>Action to be performed when you press on the <em>show more</em> button. This is <code>type: action.go-to</code> with a <code>linkTo:</code> option.</td></tr></tbody></table>
 
@@ -31,7 +31,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/cc-list-search.png" alt="Searchable List" width="188"><figcaption><p>Searchable List</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cc-list-search.png" alt="Searchable List" width="188"><figcaption><p>Searchable List</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -211,7 +211,7 @@ datasources:
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/cc-list-filter.png" alt="List with filter" width="188"><figcaption><p>List with filter</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cc-list-filter.png" alt="List with filter" width="188"><figcaption><p>List with filter</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -413,7 +413,7 @@ In this example, there are four tabs to filter on. By default we want the jig to
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../.gitbook/assets/ListFilterInitialValue.PNG" alt="Filtered list with default tab" width="188"><figcaption><p>Filtered list with default tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ListFilterInitialValue.PNG" alt="Filtered list with default tab" width="188"><figcaption><p>Filtered list with default tab</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -498,7 +498,7 @@ children:
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/cc-listfilterSearch.png" alt="List with search &#x26; filter" width="188"><figcaption><p>List with search &#x26; filter</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cc-listfilterSearch.png" alt="List with search &#x26; filter" width="188"><figcaption><p>List with search &#x26; filter</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -701,7 +701,7 @@ datasources:
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/cc-listHorional.png" alt="Horizontal" width="188"><figcaption><p>Horizontal</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cc-listHorional.png" alt="Horizontal" width="188"><figcaption><p>Horizontal</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -710,7 +710,7 @@ This is an example of a horizontal list with UI elements such as an image and va
 **Datasources**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
 
 {% hint style="warning" %}
-Horizontal lists cannot be used with the [section](entity/section.md) component as an empty white jig will be displayed.
+Horizontal lists cannot be used with the [section](../entity/section.md) component as an empty white jig will be displayed.
 {% endhint %}
 {% endcolumn %}
 {% endcolumns %}

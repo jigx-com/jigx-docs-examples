@@ -6,13 +6,13 @@ You can send Notifications using Jigx Management or programmatically in your sol
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../.gitbook/assets/jm-notifications.PNG" alt="In-app &#x26; push notifications"><figcaption><p>In-app &#x26; push notifications</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/jm-notifications.PNG" alt="In-app &#x26; push notifications"><figcaption><p>In-app &#x26; push notifications</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Configuration options
 
-<table><thead><tr><th width="147.6875">Core structure</th><th></th></tr></thead><tbody><tr><td>function</td><td>Define a function in the <em>Functions</em> folder of your solution. The function has input parameters such as the notification <code>title</code>, the notification <code>text</code> and requires a Jigx <code>accessToken</code> or <a href="https://docs.jigx.com/my-profile#yepji">personal access token (PAT)</a> .</td></tr><tr><td>jig</td><td>jigs will invoke the function for sending notifications either via submitting form values to the function or by using an <a href="Actions/execute-entity.md">execute-entity</a> action for invoking the function.</td></tr></tbody></table>
+<table><thead><tr><th width="147.6875">Core structure</th><th></th></tr></thead><tbody><tr><td>function</td><td>Define a function in the <em>Functions</em> folder of your solution. The function has input parameters such as the notification <code>title</code>, the notification <code>text</code> and requires a Jigx <code>accessToken</code> or <a href="https://docs.jigx.com/my-profile#yepji">personal access token (PAT)</a> .</td></tr><tr><td>jig</td><td>jigs will invoke the function for sending notifications either via submitting form values to the function or by using an <a href="../Actions/execute-entity.md">execute-entity</a> action for invoking the function.</td></tr></tbody></table>
 
 ## Notification URL per region
 
@@ -34,7 +34,7 @@ Once you submitted the form, the recipients should receive both a push notificat
 
 Add a function definition called _send-notification.jigx_ to the _functions_ folder of your solution and copy & paste the following snippet into it. Replace the {organizationId} in the `url` with your organization's Id.
 
-<figure><img src="../.gitbook/assets/notification-submit-form.png" alt="Submit form to send notification" width="563"><figcaption><p>Submit form to send notification</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/notification-submit-form.png" alt="Submit form to send notification" width="563"><figcaption><p>Submit form to send notification</p></figcaption></figure>
 
 See the code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-notifications/basic/send-submit-form.jigx).
 
@@ -170,11 +170,11 @@ children:
 
 ## Send notification with execute-entity
 
-You can also send notifications using an [execute-entity](Actions/execute-entity.md) action if you want to have more control over what's being sent to the function.
+You can also send notifications using an [execute-entity](../Actions/execute-entity.md) action if you want to have more control over what's being sent to the function.
 
 In this example we are using state to access the two form fields `title` and `text`. All other function's parameters are set in the execute-entity action. Note that you don't have to use form fields as you could also assign all `parameters` in the action itself.
 
-<figure><img src="../.gitbook/assets/notification-execute-entity.png" alt="Notification sent with execute entity" width="563"><figcaption><p>Notification sent with execute entity</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/notification-execute-entity.png" alt="Notification sent with execute entity" width="563"><figcaption><p>Notification sent with execute entity</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="send-notification.jigx (function)" %}
@@ -293,9 +293,9 @@ children:
 
 You can also target a specific jig with input parameters from your push notification. An example of this would be a notification about a new product promotion with the promotion detail jig as the target. When the user taps on the notification (either on the native push notification or the in-app notification), the app will navigate to the specific promotion
 
-<figure><img src="../.gitbook/assets/notification-target-jig.png" alt="Target a jig with a notification" width="563"><figcaption><p>Target a jig with a notification</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/notification-target-jig.png" alt="Target a jig with a notification" width="563"><figcaption><p>Target a jig with a notification</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/notification-target.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/notification-target.png" alt="" width="375"><figcaption></figcaption></figure>
 
 For this, you need an adjusted REST function definition (see 1), a Jig that invokes the REST function (see 2), and a target jig that will be displayed when the user taps on the notification (see 3).
 
@@ -473,4 +473,4 @@ children:
 
 ## Sending push notifications using the Jigx notification Endpoint
 
-See [External push notifications (API)](<Notifications/External push notifications _API_.md>) for more information and examples.
+See [External push notifications (API)](<External push notifications _API_.md>) for more information and examples.

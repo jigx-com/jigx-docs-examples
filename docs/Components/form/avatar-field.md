@@ -6,7 +6,7 @@ This component allows you to upload an avatar image. You can choose a picture fr
 {% endcolumn %}
 
 {% column %}
-Image\[]{alt="Avatar Field Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-\_UiZpMFDyAN1buxUcz3m\_avatar-field.png" size="72" caption="Avatar Field Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-\_UiZpMFDyAN1buxUcz3m\_avatar-field.png" width="800" height="463" darkWidth="800" darkHeight="463"}
+<figure><img src="../../../.gitbook/assets/cc-avatar-field-intro.png" alt="Avatar Field" width="206"><figcaption><p>Avatar Field</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -28,7 +28,7 @@ Some properties are common to all components, see [Common component properties](
 
 ## Considerations
 
-* The `avatar-field` can only be used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](../form.md) component.
+* The `avatar-field` can only be used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](form.md) component.
 * Only Dynamic Data or SQL data can be used to ensure that the image can be saved.
 
 ## Examples and code snippets
@@ -37,7 +37,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;![Avatar](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zzGERUU6kEdLrZ3bKcKFy_q75ewfno5lmiohkj-lv9avatarfieldiphone13blueportrait.png)&#x20;
+![Avatar](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zzGERUU6kEdLrZ3bKcKFy_q75ewfno5lmiohkj-lv9avatarfieldiphone13blueportrait.png)
 {% endcolumn %}
 
 {% column %}

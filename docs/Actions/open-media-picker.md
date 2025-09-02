@@ -12,7 +12,7 @@ This action lets you immediately open the media picker, enabling you to capture 
 
 ## Considerations
 
-* Files captured using the `media-field` component can be saved to [Dynamic Files](<../Data Providers/Dynamic Files.md>) by assigning them to the `file` property of a dynamic data entity, enabling seamless upload and storage in Amazon S3.
+* Files captured using the `media-field` component can be saved to [Dynamic Files](<../Data Providers/Dynamic Files/Dynamic Files.md>) by assigning them to the `file` property of a dynamic data entity, enabling seamless upload and storage in Amazon S3.
 
 ## Examples and code snippets
 

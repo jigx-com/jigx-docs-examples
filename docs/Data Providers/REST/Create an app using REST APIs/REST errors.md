@@ -8,11 +8,11 @@ When trying to view a customer and their details or create a new customer in the
 
 * 401 Unauthorized
 * 403 Forbidden
-* Unexpected error&#x20;
+* Unexpected error
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../../../.gitbook/assets/REST-errors.gif" alt="REST Error handling" width="326"><figcaption><p>REST Error handling</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/REST-errors.gif" alt="REST Error handling" width="163"><figcaption><p>REST Error handling</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

@@ -11,7 +11,7 @@ This feature is currently in its **Alpha** stage of development.
 
 The custom component _text_ allows adding text inside custom components. For example, adding text inside a [Card (Alpha)](<Card _Alpha_.md>) or [View (Alpha)](<View _Alpha_.md>).
 
-For steps on creating a custom component, see [How to create a custom component](<../Custom components _Alpha_.md>).
+For steps on creating a custom component, see [How to create a custom component](<Custom components _Alpha_.md>).
 
 ## Configuration options
 

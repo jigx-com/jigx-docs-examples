@@ -1,6 +1,6 @@
 # list-item
 
-The list-item component serves as the child component whenever any list-related item has been called, as discussed in the [jig.list](<../../Jig Types/jig_list.md>) and [list](../list.md) sections. The component determines how the list items are returned, allowing you to customize the data returned and add UI elements to the lists.
+The list-item component serves as the child component whenever any list-related item has been called, as discussed in the [jig.list](<../../Jig Types/jig_list.md>) and [list](list.md) sections. The component determines how the list items are returned, allowing you to customize the data returned and add UI elements to the lists.
 
 ## Configuration options
 
@@ -55,8 +55,8 @@ rating:
 
 * You can use a list-item outside of the list component. This allows configuring a single list item with all list-item features, such as left and right elements and swipe actions, without requiring a full list. These items typically use static values rather than a datasource. See the _List-item outside a list_ code example below. The functionality is available in the following components:
   * [jig.default](<../../Jig Types/jig_default.md>) children
-  * [Custom components (Alpha)](<../../Custom components _Alpha_.md>) children
-  * [expander](../expander.md)
+  * [Custom components (Alpha)](<../../Custom components _Alpha_/Custom components _Alpha_.md>) children
+  * [expander](../expander/expander.md)
   * [card](../card.md)
   * [section](../entity/section.md)
 
@@ -4854,6 +4854,6 @@ puts message
 
 ## See also
 
-* [list](../list.md)
+* [list](list.md)
 * [jig.list](<../../Jig Types/jig_list.md>)
 * [State](https://docs.jigx.com/state)

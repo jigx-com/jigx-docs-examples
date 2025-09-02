@@ -11,7 +11,7 @@ This feature is currently in its **Alpha** stage of development.
 
 The `component.view` is an empty container similar to the \<div> element in CSS or HTML. Use the view component for layouts. The YAML always has the `style:` property under which all style elements such as color and direction for rows and columns are located, and the `children:` property for adding other components such as avatar, text, and icons. Multiple layers of the view component can be used to create UI requirements. You can also place a `component.card` inside the view and vice versa. If you are unfamiliar with CSS or HTML, there are several resources available, such as [https://www.w3schools.com/](https://www.w3schools.com/), that can assist you when configuring a view component.
 
-For steps on creating a custom component, see [How to create a custom component](<../Custom components _Alpha_.md>).
+For steps on creating a custom component, see [How to create a custom component](<Custom components _Alpha_.md>).
 
 ## Configuration options
 

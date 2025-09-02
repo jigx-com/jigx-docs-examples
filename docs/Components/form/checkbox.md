@@ -4,7 +4,7 @@
 {% column %}
 Checkboxes on mobile app forms offer a straightforward way to make selections, especially for multiple options, enhancing usability and interaction.
 
-The component is used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](../form.md) component and supports single- and multiple-selection options. The checkbox's initial checkbox status and required checkbox status can be set.
+The component is used in a [jig.default](<../../Jig Types/jig_default.md>) inside of a [form](form.md) component and supports single- and multiple-selection options. The checkbox's initial checkbox status and required checkbox status can be set.
 {% endcolumn %}
 
 {% column %}
