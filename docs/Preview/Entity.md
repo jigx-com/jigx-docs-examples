@@ -6,15 +6,17 @@ The entity component allows the user to use entity (sections, field-rows and ent
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pFMGQ2qp9ZXaJAlHKv\_oa\_img7944iphone13blueportrait.png" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pFMGQ2qp9ZXaJAlHKv\_oa\_img7944iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+This example displays a preview after long-pressing the widget See the full example on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/entity/entity-longpress-widget.jigx).
+
+
+
+
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6cHqtuQMe8YvODmv628Rw\_img7945iphone13blueportrait.png" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6cHqtuQMe8YvODmv628Rw\_img7945iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../.gitbook/assets/cc-preview-entity-longPress.png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
-
-This example displays a preview after long-pressing the widget See the full example on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/entity/entity-longpress-widget.jigx).
 
 {% code title="entity-longpress-widget" %}
 ```yaml
@@ -83,27 +85,17 @@ preview:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pd2CYId\_2vh5WW2Uk7OtI\_img7947iphone13blueportrait.png" size="80" position="center" caption="Long-press onPress" alt="Long-press onPress" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pd2CYId\_2vh5WW2Uk7OtI\_img7947iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../.gitbook/assets/cc-preview-entity-OnPress.png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g6YrQTptI9s81ccn4V5\_D\_img7948iphone13blueportrait.png" size="80" position="center" caption="Long-press onPress" alt signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g6YrQTptI9s81ccn4V5\_D\_img7948iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../.gitbook/assets/cc-preview-entity-onpress2.png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 This example displays a preview after long-pressing the list-item on the widget
 
-{% columns %}
-{% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SIUSRSP20autIJsntlFBk\_img7949iphone13blueportrait.png" size="80" position="center" caption alt="Long-press onPress" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SIUSRSP20autIJsntlFBk\_img7949iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-{% endcolumn %}
-
-{% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O8Q4knLTs6Ph0-Jm4iYMC\_img7950iphone13blueportrait.png" size="80" position="center" caption alt="Long-press onPress" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O8Q4knLTs6Ph0-Jm4iYMC\_img7950iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
-{% endcolumn %}
-{% endcolumns %}
-
-This example displays a preview after long-pressing the list-item in the jig. It includes the entity component as well as the go-to actions.&#x20;
+This example displays a preview after long-pressing the list-item in the jig. It includes the entity component as well as the go-to actions.
 
 As you can see in the code snippet, the original list doesn't include the preview. Our onPress action allows us to use the preview that is included in the detail jig.
 
@@ -268,19 +260,17 @@ preview:
 {% endtab %}
 {% endtabs %}
 
-### Longpress on Calendar jig
-
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8AC46n2hv\_cJz5EWmcOcz\_img7957iphone13blueportrait.png" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8AC46n2hv\_cJz5EWmcOcz\_img7957iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
-
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KHyBx7y0vC9qwqUWHfdDW\_img7958iphone13blueportrait.png" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KHyBx7y0vC9qwqUWHfdDW\_img7958iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} ::: ::::
+### LongPress on Calendar jig
 
 This example displays a preview after long-pressing the event in the Calendar jig (on the widget)
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xc032ktvr1DGe43CwA7Vz\_img7959iphone13blueportrait.png" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xc032ktvr1DGe43CwA7Vz\_img7959iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} :::
+<figure><img src="../../.gitbook/assets/cc-preview-calendar.png" alt=""><figcaption></figcaption></figure>
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Uap-P2OR6R5O9qQIEC8E\_img7960iphone13blueportrait.png" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Uap-P2OR6R5O9qQIEC8E\_img7960iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"} ::: ::::
+
 
 This example displays a preview after long-pressing the event in the Calendar jig (on the event)
+
+<figure><img src="../../.gitbook/assets/cc-preview-calendar2.png" alt=""><figcaption></figcaption></figure>
 
 See the full example of [entity longpress](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/entity/entity-longpress-calendar.jigx) and [entity-calendar-detail](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/entity/entity-calendar-detail.jigx) in GitHub.
 
