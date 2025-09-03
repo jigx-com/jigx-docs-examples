@@ -6,7 +6,7 @@ Easily share your files directly from the app with just a tap. Whether it's a do
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" size="80" position="center" caption="Share images" alt="Share images" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-k8wyg0NC7VKq3BroMb5Ra-20250213-140041.png" width="800" height="794" darkWidth="800" darkHeight="794"}
+<figure><img src="../../.gitbook/assets/ac-share.png" alt="Share images"><figcaption><p>Share images</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

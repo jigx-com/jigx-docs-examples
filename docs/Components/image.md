@@ -8,7 +8,7 @@ The `image` component can be part of the [header](jig-header.md) and as a child 
 {% endcolumn %}
 
 {% column %}
-Image\[]{alt="Image Preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gZBreuXUNc-zSldzmyWaI\_image.png" size="60" caption="Image Preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gZBreuXUNc-zSldzmyWaI\_image.png" width="800" height="495" darkWidth="800" darkHeight="495"}
+<figure><img src="../../.gitbook/assets/cc-image-intro.png" alt="Image Preview"><figcaption><p>Image Preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -33,7 +33,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;![Image in header](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kBN2nzInf6mQuzw80sqWo_l8cou8hxm5ixnzx3gtni5image-headeriphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/cc-image-header.png" alt="Image in header" width="177"><figcaption><p>Image in header</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -41,7 +41,7 @@ Image is used as a background picture in the header section.
 
 **Examples:** See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/static-data/header-image/header-image.jigx). See the example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/dynamic-data/header-image/header-image-dynamic.jigx).
 
-**Datasource:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/image-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/image.jigx).&#x20;
+**Datasource:** See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/image-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/image.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -132,7 +132,7 @@ datasources:
 
 {% columns %}
 {% column %}
-&#x20;![Image in a jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YaAqpkNpiqadnCkOkHLZE_cjowjjtfwvnbkcesgiy8limage-storyiphone13blueportrait.png)&#x20;
+<figure><img src="../../.gitbook/assets/cc-image-jig.png" alt="Image in a jig" width="176"><figcaption><p>Image in a jig</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -140,7 +140,7 @@ Image as a children component in `default` jig.
 
 **Examples**: See the example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/static-data/default-image/default-image.jigx). See the example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/image/dynamic-data/default-image/default-image-dynamic.jigx).
 
-**Datasource**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/story-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/story.jigx).&#x20;
+**Datasource**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/story-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/story.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -173,8 +173,6 @@ children:
       source:
         uri: =@ctx.datasources.story[2].photo
 ```
-
-
 {% endtab %}
 
 {% tab title="datasources (static)" %}
