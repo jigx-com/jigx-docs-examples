@@ -11,7 +11,7 @@ The `media-field` component allows users to upload images, videos, or files, eit
 The `media-field` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 {% endhint %}
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_mqghZMZFLnlAv3Hoqu5V-20250624-095618.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_mqghZMZFLnlAv3Hoqu5V-20250624-095618.png" size="90" width="5328" height="2681" position="center" caption="Media Field Preview" alt="Media Field Preview"}
+<figure><img src="../../../.gitbook/assets/CC-media-intro.png" alt="Media Field Preview"><figcaption><p>Media Field Preview</p></figcaption></figure>
 
 ## Configuration options
 
@@ -52,7 +52,7 @@ This example shows a form for a new employee, configured with a `media-field` co
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NX6I4Fub\_rxtuUKR4UqHO-20250430-110158.gif" size="66" position="center" caption="Filtered file types" alt="Filtered file types" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NX6I4Fub\_rxtuUKR4UqHO-20250430-110158.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+<figure><img src="../../../.gitbook/assets/cc-media-field-restrict.gif" alt="Filtered file types" width="170"><figcaption><p>Filtered file types</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -162,7 +162,7 @@ This component _uploads_ an image using the `mediaType: image` property. Clickin
 
 **Examples:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/media-field/media-field-image.jigx).
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4NvAylAK0T5coiJg8GoDA-20250624-094121.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4NvAylAK0T5coiJg8GoDA-20250624-094121.png" size="90" width="4004" height="2684" position="center" caption="Image upload" alt="Image upload"}
+<figure><img src="../../../.gitbook/assets/cc-media-field-upload.png" alt="Image upload" width="563"><figcaption><p>Image upload</p></figcaption></figure>
 
 {% code title="media-field" %}
 ```yaml
@@ -210,7 +210,7 @@ actions:
 
 In this example we set the `isMultiple` property to `true` which allows for the selection of multiple media to be uploaded and `MediaType` to `any` which caters for images, videos and documents. The selected media display as thumbnails at the bottom of the modal. Discard media by pressing on the thumbnail, the media is deleted.
 
-![Upload multiple images](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_mqghZMZFLnlAv3Hoqu5V-20250624-095618.png)
+<figure><img src="../../../.gitbook/assets/CC-media-intro.png" alt="Upload multiple images"><figcaption><p>Upload multiple images</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="mulitple-files-mediafield.jigx" %}
@@ -290,7 +290,7 @@ In this example multiple videos are uploaded, using the `mediaType: video` and `
 
 **Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/media-field/media-field-video.jigx).
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_694wIRtMkegcwstUtBQL-20250624-110121.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_694wIRtMkegcwstUtBQL-20250624-110121.png" size="80" width="4006" height="2676" position="center" caption="Media-field upload videos" alt="Media-field upload videos"}
+<figure><img src="../../../.gitbook/assets/CC-media-field-video.PNG" alt="Media-field upload videos" width="563"><figcaption><p>Media-field upload videos</p></figcaption></figure>
 
 {% code title="media-field-video.jigx" %}
 ```yaml
@@ -351,7 +351,7 @@ In this example multiple images and videos are uploaded, using the `mediaType: i
 
 **Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/media-field/media-field-image-video.jigx).
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3knx5eRzTbmRfQ\_0EylVF-20250624-112209.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3knx5eRzTbmRfQ\_0EylVF-20250624-112209.png" size="66" width="2661" height="2676" position="center" caption="Media-field image & video" alt="Media-field image & video"}
+<figure><img src="../../../.gitbook/assets/CC-media-field-ImgVideo.png" alt="Media-field image &#x26; video" width="375"><figcaption><p>Media-field image &#x26; video</p></figcaption></figure>
 
 {% code title="media-field-image-video.jigx" %}
 ```yaml
@@ -417,7 +417,7 @@ actions:
 
 In this example, the button opens the media-picker. The configuration is set to take a picture or choose from a library. The image is saved to the local database.
 
-![Action open media-picker](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-a3B29qbky6oi4N7auiU5F-20250220-173914.png)
+<figure><img src="../../../.gitbook/assets/action-media-picker.png" alt="Action open media-picker" width="563"><figcaption><p>Action open media-picker</p></figcaption></figure>
 
 {% code title="action-open-media-picker.jigx" %}
 ```yaml
@@ -500,7 +500,7 @@ In this example, an expense claim form allows you to capture expense details and
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uCb0bqIVvxwoDdMihP0My-20250519-074426.gif" size="66" position="center" caption="Upload file" alt="Upload file" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-uCb0bqIVvxwoDdMihP0My-20250519-074426.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
+<figure><img src="../../../.gitbook/assets/cc-media-field-dd.gif" alt="Upload file" width="170"><figcaption><p>Upload file</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -583,7 +583,7 @@ See the example in [Upload product images (POST)](<../../Data Providers/REST/Cre
 {% endcolumn %}
 
 {% column %}
-![Upload images using REST](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RiSOkNLzZS31uj9Z5TS-b-20250624-131725.png)
+<figure><img src="../../../.gitbook/assets/cc-media-field-REST.png" alt="Upload images using REST"><figcaption><p>Upload images using REST</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -745,7 +745,7 @@ This example shows how multiple images can be loaded in the media-field using th
 * The load images into the media-field, requires images to be in `local-uri` format, a conversion is set in the REST GET function, converting the file from base64 to local-uri to display the image.
 * When clicking on the `media-field` to add additional images the intial images are loaded in the field. Depending on the function used, for example POST, if the images are not cleared or removed, the initial images will be uploaded as new images, creating duplicates. Using a PATCH or PUT function could avoid duplicates.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CT3vEJON-ZoWYhtqyCtZD-20250624-132902.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-CT3vEJON-ZoWYhtqyCtZD-20250624-132902.png" size="68" width="2684" height="2684" position="center" caption="Load with intial images" alt="Load with intial images"}
+<figure><img src="../../../.gitbook/assets/cc-media-field-intialValue.png" alt="Load with initial images" width="375"><figcaption><p>Load with initial images</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="add-customer-images.jigx" %}
@@ -961,7 +961,7 @@ conversions:
 
 Jigx stores files as local files on the device and returns the file's URI as the default value. When saving these files to a datasource, you must convert files from the local-uri to base64, data-uri, or buffer. The opposite is true when handling the files returned from the datasource, you need to convert them from their saved state (base64, data-uri, or buffer) to a local-uri. In this example we upload a profile photo and convert from local-uri on the device to buffer for storage in SQL and then get the photo back from SQL and convert it from buffer to local-uri to display the photo as an avatar in a list. See [File handling](https://docs.jigx.com/file-handling) for more information.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-YpTN8kMi3gUgmNxRDaWmD-20250624-142109.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-YpTN8kMi3gUgmNxRDaWmD-20250624-142109.png" size="80" width="2540" height="2500" position="center" caption="File conversion in SQL function" alt="File conversion in SQL function"}
+<figure><img src="../../../.gitbook/assets/CC-hiking.png" alt="File conversion in SQL function" width="375"><figcaption><p>File conversion in SQL function</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="update-hiker.jigx" %}
