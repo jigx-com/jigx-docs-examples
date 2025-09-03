@@ -27,7 +27,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-swPsNWBEeUaZR5ulp043w-20250203-103644.png" size="66" position="center" caption="Grid-items" alt="Grid-items" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-swPsNWBEeUaZR5ulp043w-20250203-103644.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../../.gitbook/assets/cc-grid-item-all.png" alt="File conversion in SQL function" width="188"><figcaption><p>File conversion in SQL function</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -210,7 +210,7 @@ This example shows the various configurations available to customize a `grid-ite
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-eWxJs3no2ja7nEJdJ1LMG-20250605-104403.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-eWxJs3no2ja7nEJdJ1LMG-20250605-104403.png" size="66" width="1313" height="2676" position="center" caption}
+<figure><img src="../../../.gitbook/assets/CC-grid-item-custom-all.png" alt="Custom Icons" width="188"><figcaption><p>Custom Icons</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

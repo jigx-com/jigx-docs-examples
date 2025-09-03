@@ -17,7 +17,7 @@ The grid component has two available configuration options:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fJilLcZQaseZ0gjR18gfb-20250107-084107.png" size="60" position="center" caption="Auto grid" alt="Auto grid" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-fJilLcZQaseZ0gjR18gfb-20250107-084107.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../../.gitbook/assets/grid-item-auto.png" alt="Auto grid" width="188"><figcaption><p>Auto grid</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -90,7 +90,7 @@ This example demonstrates combining the grid component with other components (en
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U\_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" size="66" position="center" caption="Custom grid " alt="Custom grid " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U\_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
+<figure><img src="../../../.gitbook/assets/CC-grid-custom.png" alt="Custom grid" width="188"><figcaption><p>Custom grid</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
