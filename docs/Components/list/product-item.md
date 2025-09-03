@@ -6,7 +6,7 @@ The product item component is suitable for a list of products and should be used
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ydImhfWqF3Ei8FmcgBdc6\_product-item.png" size="78" position="center" caption="Product Item Preview" alt="Product Item Preview" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ydImhfWqF3Ei8FmcgBdc6\_product-item.png" width="800" height="536" darkWidth="800" darkHeight="536"}
+<figure><img src="../../../.gitbook/assets/cc-product-item-intro.png" alt="Product-item preview"><figcaption><p>Product-item preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -34,7 +34,7 @@ In this example, a simple list containing a product-item component is shown. Eac
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/didhCaT9vWYQmsSdxiZXT\_cc-product-item-simple.PNG" size="80" position="center" caption="Product-item with tags" alt="Product-item with tags" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/didhCaT9vWYQmsSdxiZXT\_cc-product-item-simple.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../../.gitbook/assets/CC-product-item-simple.PNG" alt="Product-item with tags" width="188"><figcaption><p>Product-item with tags</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -102,7 +102,7 @@ datasources:
 
 {% columns %}
 {% column %}
-![Product-item](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/sCr2-5Hh2_2y2q4BwUcBl_prodiphone13blueportrait.png)
+<figure><img src="../../../.gitbook/assets/cc-product-item-onchange.png" alt="Product-item" width="175"><figcaption><p>Product-item</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -184,7 +184,7 @@ In this example, a list containing a product-item component is shown. Each produ
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/V6T6Og9SB2WN43MPrH8Dw\_cc-productitemsummary.PNG" size="80" position="center" caption="Product-item with summary" alt="Product-item with summary" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/V6T6Og9SB2WN43MPrH8Dw\_cc-productitemsummary.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
+<figure><img src="../../../.gitbook/assets/CC-productItemSummary.PNG" alt="Product-item with summary" width="188"><figcaption><p>Product-item with summary</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
