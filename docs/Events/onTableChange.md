@@ -6,7 +6,7 @@ This event enables a remote system like Acumatica to call into Jigx and trigger 
 
 ## How it works
 
-![](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-kY-lpInKQ8HXoX07BLTSA-20250320-085318.png)
+<figure><img src="../../.gitbook/assets/Event-OntableChange.png" alt="" width="563"><figcaption></figcaption></figure>
 
 **External system data changes**
 
@@ -82,7 +82,7 @@ tables:
 
 This example demonstrates how to use the `onTableChanged` event to monitor data changes across multiple tables and different data providers within the solution. When a data change occurs, the event executes the defined actions for each configured data provider.
 
-In the second table, multiple actions are configured, including `action.sync-entities`, which is dynamically updated by specifying a list of entities, functions, and function parameters using an expression. This is particularly useful when the number of entities to sync and their corresponding parameters are not always known.&#x20;
+In the second table, multiple actions are configured, including `action.sync-entities`, which is dynamically updated by specifying a list of entities, functions, and function parameters using an expression. This is particularly useful when the number of entities to sync and their corresponding parameters are not always known.
 
 {% tabs %}
 {% tab title="index.jigx" %}
@@ -172,8 +172,6 @@ onTableChanged:
           notified: 'Yes'
           date: =$now()
 ```
-
-
 {% endtab %}
 
 {% tab title="default.jigx" %}

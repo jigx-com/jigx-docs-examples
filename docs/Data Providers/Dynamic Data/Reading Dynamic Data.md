@@ -24,7 +24,7 @@ This example uses the Dynamic Data table, columns, and data records created in t
 
 Here is what the data table employee resembles in [Data](https://docs.jigx.com/data) in Jigx Management.
 
-![Employee Dynamic Data](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ryCmLjukF38TWd_rs1Ayw_dd-list-mngt.png)
+<figure><img src="../../../.gitbook/assets/DD-list-mngt.png" alt="Employee Dynamic Data"><figcaption><p>Employee Dynamic Data</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="list-employees.jigx" %}

@@ -6,7 +6,7 @@ A stage is a primary container for displaying various UI components on the left 
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yWymE6Po4TH-JLyB7xKK2\_cc-list-stage.png" size="88" position="center" caption="Stage in a list" alt="Stage in a list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yWymE6Po4TH-JLyB7xKK2\_cc-list-stage.png" width="800" height="531" darkWidth="800" darkHeight="531"}
+<figure><img src="../../../.gitbook/assets/CC-list-stage.png" alt="List with stage"><figcaption><p>List with stage</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -30,7 +30,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RjT9ffFl39FHcgn4CQhU4\_n-v2bpok86ynufyojh-jvlist-default-jig-with-stage-listiphone13blueportrait.png" size="80" position="center" caption="Stage for flights" alt="Stage for flights" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RjT9ffFl39FHcgn4CQhU4\_n-v2bpok86ynufyojh-jvlist-default-jig-with-stage-listiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+<figure><img src="../../../.gitbook/assets/cc-list-stage-flights.png" alt="Stage for flights" width="188"><figcaption><p>Stage for flights</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -184,7 +184,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih\_dHdqqMASbcxefEw-\_rxx3cpwfsmgibkcygpxznlist-with-expander.png" size="80" position="center" caption="Stage in list with expanders" alt="Stage in list with expanders" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHih\_dHdqqMASbcxefEw-\_rxx3cpwfsmgibkcygpxznlist-with-expander.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+<figure><img src="../../../.gitbook/assets/cc-list-stage-header.png" alt="Stage in list with expanders" width="188"><figcaption><p>Stage in list with expanders</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

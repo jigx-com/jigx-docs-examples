@@ -18,7 +18,7 @@ The following information applies specifically to Acumatica integration.
   * \_mod (time)
 * Create a _push_ using the GI to the Jigx API endpoint.
 
-![Acumatica Generic Inquiries](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-8a0TyTsRhDsD2sWCMnaZq-20250403-190245.png)
+<figure><img src="../../../.gitbook/assets/Acumatica-PushNotifications.png" alt="Acumatica Generic Inquiries"><figcaption><p>Acumatica Generic Inquiries</p></figcaption></figure>
 
 ## Jigx
 
@@ -47,9 +47,9 @@ Replace \{{baseUrl\}} with the appropriate URL for your region.
 
 ## Dynamic Data
 
-The Acumatica _GI_ pushes data to the Jigx API endpoint, which then updates the corresponding table in Dynamic Data in :Link\[Jigx Management > Solution > Data >]{href="https://docs.jigx.com/\_5W2-data" newTab="true" hasDisabledNofollow="false"}
+The Acumatica _GI_ pushes data to the Jigx API endpoint, which then updates the corresponding table in Dynamic Data in [Jigx Management > Solution > Data >](https://docs.jigx.com/_5W2-data)
 
-![Dynamic Data](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Av2YtmfA_XiXtOkBVQmeh-20250402-091743.png)
+<figure><img src="../../../.gitbook/assets/Acumatica- cdc-DDTable.png" alt="Dynamic Data"><figcaption><p>Dynamic Data</p></figcaption></figure>
 
 ## Solutions
 

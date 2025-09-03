@@ -2,11 +2,11 @@
 
 {% columns %}
 {% column %}
-Add a preview for the following [Components](broken-reference):
+Add a preview for the following [Components](../components/):
 
 * [widgets](../Widgets/Widgets.md)
-* [list-item](broken-reference)
-* [event](broken-reference) The preview is triggered by _long-pressing_ the widget or item. The _long-press_ action can be used on:
+* [list-item](../Components/list/list-item.md)
+* [event](../Components/event.md) The preview is triggered by _long-pressing_ the widget or item. The _long-press_ action can be used on:
 
 1. Widgets
 2. List-items on widget
@@ -14,7 +14,7 @@ Add a preview for the following [Components](broken-reference):
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4T0YtpHHfAVeSh0QvkAni\_microsoftteams-image-6.jpg" size="84" position="center" caption="Preview " alt="Preview" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4T0YtpHHfAVeSh0QvkAni\_microsoftteams-image-6.jpg" width="800" height="1208" darkWidth="800" darkHeight="1208"}
+<figure><img src="../../.gitbook/assets/cc-preview-intro.png" alt="Preview" width="175"><figcaption><p>Preview</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
