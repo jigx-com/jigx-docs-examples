@@ -11,6 +11,6 @@ updatedAt: Wed Feb 14 2024 09:03:38 GMT+0000 (Coordinated Universal Time)
 
 For steps on how to use component templates, see [Component Templates](https://docs.jigx.com/component-templates)
 
-&#x20;![Component template gallery](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_OsD78JQNeAWwK34pgQ3a_templatecomponent.png)&#x20;
+<figure><img src="../../.gitbook/assets/TemplateComponent.png" alt="" width="563"><figcaption></figcaption></figure>
 
-&#x20;![Component template option](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gOtQ7cHK6CWawkfsxEozh_templatescompcode.png)&#x20;
+<figure><img src="../../.gitbook/assets/TemplatesCompCode.png" alt="" width="563"><figcaption></figcaption></figure>

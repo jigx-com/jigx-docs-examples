@@ -37,7 +37,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-![Avatar](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zzGERUU6kEdLrZ3bKcKFy_q75ewfno5lmiohkj-lv9avatarfieldiphone13blueportrait.png)
+<figure><img src="../../../.gitbook/assets/cc-avatar-field.png" alt="Avatar" width="175"><figcaption><p>Avatar</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

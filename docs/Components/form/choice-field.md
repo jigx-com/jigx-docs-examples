@@ -37,7 +37,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-![Choice-field](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-F2DMxwJXBGFyG_d-CSAoo-20240827-102857.png)
+<figure><img src="../../../.gitbook/assets/cc-choiceBasic.png" alt="Choice-field"><figcaption><p>Choice-field</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -167,7 +167,7 @@ In this example, two `choice-field` components are used. The first is a single Y
 {% endcolumn %}
 
 {% column width="50%" %}
-![Multiple choice selection](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-gDRUtCVRkFn3meuYK0sLO-20240826-150347.PNG)
+<figure><img src="../../../.gitbook/assets/cc-choiceMultiple.PNG" alt="Multiple choice selection"><figcaption><p>Multiple choice selection</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -305,7 +305,7 @@ actions:
 
 In this example, we want to load the patient's form that they completed in the example above, and show their selected details and allergies. Each patient can have multiple allergies, and the data would be saved as an object in the database. To deserialize the object the `jsonProperties` property is configured with the column containing the object of multiple allergies. In the `choice-field` component the `intialValue` is then configured to return the selected allergies for the specific patient. The `execute-entity` action is configured to update the patient data.
 
-<figure><img src="../../../.gitbook/assets/cc-choiceMultiple.PNG" alt="Load multiple choices" width="563"><figcaption><p>Load multiple choices</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cc-choice-field-multiple.png" alt="" width="375"><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="update-patient-details.jigx" %}

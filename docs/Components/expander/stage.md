@@ -29,13 +29,13 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-![Stage in expander](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BQUOSOOooTNZSRT6fBCoU_dqf676mvwvyz4w1feir5qstageiphone13blueportrait.png)&#x20;
+<figure><img src="../../../.gitbook/assets/cc-expander-stage2.png" alt="Stage in expander" width="224"><figcaption><p>Stage in expander</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/static-data/stage.jigx). \
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/static-data/stage.jigx).\
 See the full example using dynamic data [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/stage/dynamic-data/stage-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
@@ -121,7 +121,7 @@ datasources:
 
 {% columns %}
 {% column %}
-&#x20;![Stage in list](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8oR-ecX43O27thnShsgId_mlmkhpfrzwatv8spkkz7vstageiphone13blueportrait.png)&#x20;
+<figure><img src="../../../.gitbook/assets/cc-expander-stagelist.png" alt="Stage in list" width="229"><figcaption><p>Stage in list</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -131,7 +131,7 @@ See the full example using static data in [GitHub](https://github.com/jigx-com/j
 
 **Datasources:**
 
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/trip-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/trip-dynamic.jigx).&#x20;
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/trip-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/trip-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
