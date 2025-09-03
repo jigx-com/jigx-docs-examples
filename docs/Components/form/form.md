@@ -42,7 +42,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-![Simple form](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pB26E4FGL3st46LaEFHU8_ybxpqz2aem5zhq1e3bl8fformiphone13blueportrait.png)
+<figure><img src="../../../.gitbook/assets/cc-form-create.png" alt="Simple form" width="180"><figcaption><p>Simple form</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -84,7 +84,7 @@ children:
 
 {% columns %}
 {% column %}
-![Update data form](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/P9wR9HiQwsUX8AI1jmlK7_img8326iphone13blueportrait.png)
+<figure><img src="../../../.gitbook/assets/cc-form-update.png" alt="Update data form" width="178"><figcaption><p>Update data form</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -179,7 +179,7 @@ puts message
 
 {% columns %}
 {% column %}
-![Form with formating](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6UJEs4mNKl_fBwZiECCwZ_byk8bnoerar2j2b-9colgform-with-sectioniphone13blueportrait.png)
+<figure><img src="../../../.gitbook/assets/cc-form-format.png" alt="Form with formatting" width="176"><figcaption><p>Form with formatting</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -254,7 +254,7 @@ In this example, you tap on a contact in the contact-list and the new-contact fo
 {% endcolumn %}
 
 {% column %}
-![Form preloaded with data](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Wpxk0IZiomKR6km8Si7o3-20241111-172919.png)
+<figure><img src="../../../.gitbook/assets/cc-form-preload.png" alt="Form preloaded with data"><figcaption><p>Form preloaded with data</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
