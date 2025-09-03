@@ -2,10 +2,10 @@
 
 Dropdown fields in forms streamline the user experience by offering a compact, scrollable list of options, saving space and reducing clutter. They help guide users through data selections while minimizing input errors and enhancing form navigation.
 
-::Image\[]{alt="Dropdown preview" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Opq5FI49WK91cD2RFcpO\_dropdown.png" size="90" caption="Dropdown preview" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3Opq5FI49WK91cD2RFcpO\_dropdown.png" width="800" height="457" darkWidth="800" darkHeight="457"}
+<figure><img src="../../../.gitbook/assets/cc-dropdown-intro.png" alt="Dropdown preview" width="375"><figcaption><p>Dropdown preview</p></figcaption></figure>
 
 {% hint style="info" %}
-&#x20;The `dropdown` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.&#x20;
+The `dropdown` component can be used independently or within a `form` component, each offering distinct benefits. As a standalone, it provides flexibility for isolated usage without requiring a form structure. When wrapped in a form, it leverages the form’s instanceId, enabling better coordination and usability when managing multiple fields in a jig.
 {% endhint %}
 
 ## Configuration options
@@ -28,7 +28,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;![Dropdown-items](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_XXgxlmitjefB9T8gvB4u_zomhxdlxcxc7dlkm5z6ydropdown-defaultiphone13blueportrait.png)&#x20;
+<figure><img src="../../../.gitbook/assets/cc-dropdown-basic.png" alt="Dropdown-items" width="178"><figcaption><p>Dropdown-items</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -157,25 +157,23 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A8sWkbH9ukD4sFkCujOot\_ngcd8fozzsjh6nz3j0ogdropdown-multipleiphone13blueportrait.png" size="80" position="center" caption="Multiple dropdown-items " alt="Multiple dropdown-items " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/A8sWkbH9ukD4sFkCujOot\_ngcd8fozzsjh6nz3j0ogdropdown-multipleiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+In this example, we will show you how you can set up your dropdown for multiple selections.
+
+**Examples:**\
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/static-data/dropdown-multiple-select.jigx).\
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/dynamic-data/multiple-select-dynamic.jigx).
+
+**Datasources:**\
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-static.jigx).\
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-dynamic.jigx)
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Cky4zkcmv7RgRSRqw\_SoP\_06x339zv728sfuekadodropdown-multiple2iphone13blueportrait.png" size="78" position="center" caption="Dropdown with multiple selected" alt="Dropdown with multiple selected" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Cky4zkcmv7RgRSRqw\_SoP\_06x339zv728sfuekadodropdown-multiple2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+<figure><img src="../../../.gitbook/assets/cc-dropdown-multi.png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
-In this example, we will show you how you can set up your dropdown for multiple selections.
 
-**Examples:**
-
-See the full example using static data in <[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/static-data/dropdown-multiple-select.jigx). \
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/dynamic-data/multiple-select-dynamic.jigx).
-
-**Datasources:**
-
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-static.jigx). \
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-dynamic.jigx)
 
 {% tabs %}
 {% tab title=" multiple-select-dropdown (static)" %}
@@ -293,23 +291,23 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UjhHKuhR5Xnqy4qpWZY1y\_hwnkejspnia9o0tkhs3tudropdown-searchiphone13blueportrait.png" size="78" position="center" caption="Dropdown with search" alt="Dropdown with search" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UjhHKuhR5Xnqy4qpWZY1y\_hwnkejspnia9o0tkhs3tudropdown-searchiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}&#x20;
+<figure><img src="../../../.gitbook/assets/cc-dropdown-search.png" alt="Dropdown with search"><figcaption><p>Dropdown with search</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F67oAjjxBTXdDph\_dp5dC\_mcvfx2gwtac4mfepaabx6dropdown-search-2iphone13blueportrait.png" size="80" position="center" caption alt="Dropdown with search" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F67oAjjxBTXdDph\_dp5dC\_mcvfx2gwtac4mfepaabx6dropdown-search-2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
+In this example, we can find the search function in our dropdown.
+
+**Examples:**\
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/static-data/dropdown-searchable.jigx).\
+See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/dynamic-data/searchable-dynamic.jigx).
+
+**Datasources:**\
+See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-static.jigx).\
+See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/dynamic-data/searchable-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
-In this example, we can find the search function in our dropdown.
 
-**Examples:** \
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/static-data/dropdown-searchable.jigx). \
-See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/dynamic-data/searchable-dynamic.jigx).
-
-**Datasources:** \
-See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/employees-static.jigx). \
-See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/dynamic-data/searchable-dynamic.jigx).
 
 {% tabs %}
 {% tab title="search-dropdown (static)" %}
@@ -425,8 +423,6 @@ datasources:
       queryParameters:
         '@search': =@ctx.components.dropdown-in.state.searchText
 ```
-
-
 {% endtab %}
 {% endtabs %}
 
@@ -434,9 +430,7 @@ datasources:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZLtcAYaEPxEK7rdQiwCCd\_ddown-default-value.png" size="80" position="center" caption="Dropdown with default value" alt="dropdown with default value" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZLtcAYaEPxEK7rdQiwCCd\_ddown-default-value.png" width="800" height="794" darkWidth="800" darkHeight="794"}
-
-
+<figure><img src="../../../.gitbook/assets/cc-dropdown-defaultValue.png" alt="Dropdown with default value"><figcaption><p>Dropdown with default value</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

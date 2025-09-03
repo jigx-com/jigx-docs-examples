@@ -10,7 +10,7 @@ The `date-picker` component can be used independently or within a `form` compone
 {% endcolumn %}
 
 {% column %}
-![Date Picker](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-EMmv_RApEz18txt2YEbDK-20250318-111938.png)
+<figure><img src="../../../.gitbook/assets/cc-date-picker.png" alt="Date Picker"><figcaption><p>Date Picker</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -38,7 +38,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-![Date picker- input + output](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lZp4wvPnnYUd7YdOAlSDB_cc-datepicker.png)
+<figure><img src="../../../.gitbook/assets/CC-Datepicker.png" alt="Date picker- input + output"><figcaption><p>Date picker- input + output</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -68,7 +68,7 @@ children:
 
 {% columns %}
 {% column %}
-![Time selector - input + output](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-WoqqTGRt53R_ymb-bdSGs-20250318-112250.png)
+<figure><img src="../../../.gitbook/assets/CC-timePicker.png" alt="Time selector - input + output"><figcaption><p>Time selector - input + output</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
