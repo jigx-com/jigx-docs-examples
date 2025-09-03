@@ -8,7 +8,7 @@ It helps to ensure data consistency and ease of use, especially for workers in f
 {% endcolumn %}
 
 {% column width="50%" %}
-&#x20;![Duration-picker](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-KewjMuWwR7tD-pN6cZJG3-20241023-154943.png)
+<figure><img src="../../../.gitbook/assets/duration-picker-overview.png" alt="Duration-picker"><figcaption><p>Duration-picker</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -41,9 +41,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-&#x20;![Duration-picker](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Qcy0wXmkPXQ27wm95IJ9I-20241023-130519.PNG)&#x20;
-
-
+<figure><img src="../../../.gitbook/assets/Duration-picker.PNG" alt="Duration-picker"><figcaption><p>Duration-picker</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -162,9 +160,7 @@ In this example, you can complete a form to make an appointment. In the form you
 {% endcolumn %}
 
 {% column %}
-&#x20;![Duration-picker (hours only)](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-85qJq8cgmO6TpRouCsExh-20241023-134951.PNG)&#x20;
-
-
+<figure><img src="../../../.gitbook/assets/Duratio-picker-hours.PNG" alt="Duration-picker (hours only)"><figcaption><p>Duration-picker (hours only)</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -255,9 +251,7 @@ actions:
 
 {% columns %}
 {% column %}
-&#x20;![Duration-picker (minute only)](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-csuBiLspAWYqC-aW1uBT4-20241023-141007.PNG)&#x20;
-
-
+<figure><img src="../../../.gitbook/assets/Duration-picker-minutes.PNG" alt="Duration-picker (minute only)"><figcaption><p>Duration-picker (minute only)</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -367,9 +361,7 @@ In this example, when the repair time is selected in the `duration-picker` the s
 {% endcolumn %}
 
 {% column %}
-&#x20;![Duration-picker with onChange event](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-YsiaRitZ7znk-LXqflJDa-20241023-154328.PNG)&#x20;
-
-
+<figure><img src="../../../.gitbook/assets/Duration-picker-onchange.PNG" alt="Duration-picker with onChange event"><figcaption><p>Duration-picker with onChange event</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -481,7 +473,7 @@ children:
 
 ### Duration-picker with initialValue
 
-![Duration-picker with initialValue](https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Erx7M0rnyDqmU1rLYTLky-20241023-151348.PNG)
+<figure><img src="../../../.gitbook/assets/Duration-picker-initialvalue.PNG" alt="Duration-picker with initialValue"><figcaption><p>Duration-picker with initialValue</p></figcaption></figure>
 
 In this example, employees select the shifts they want to work. A normal shift is 4 hours. The `initialValue` is used in the `duration-picker` to pre-populate the field with 4h. If more than 4 hours is selected the field displays in red with a message that approval for the extra time is needed. The `duration-picker` is configured with `hours` in intervals (`steps`) of 4, and `minutes` in intervals (`steps`) of 30 minutes. Both `helperText` and `errorText` are used to guide the employee with extra information depending on the selections made.
 
@@ -605,9 +597,7 @@ In this example, the `duration-picker` is added to a site inspection form, and c
 {% endcolumn %}
 
 {% column %}
-&#x20;![Duration-picker with color](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sg9wXwcmijcKw5UrjeE4P-20241023-144830.png)&#x20;
-
-&#x20;
+<figure><img src="../../../.gitbook/assets/Duration-picker-color.png" alt="Duration-picker with color"><figcaption><p>Duration-picker with color</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
