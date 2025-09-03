@@ -14,7 +14,7 @@ The `group widget` allows widgets to be combined to create a single widget. The 
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vZSpwck06Npdts3BCYNB1\_group-wiphone13blueportrait.png" size="82" position="center" caption="Horizontal split widget group " alt="Horizontal split widget group " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vZSpwck06Npdts3BCYNB1\_group-wiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}&#x20;
+<figure><img src="../../../.gitbook/assets/WD-group-charts.png" alt="Widget with group of charts" width="188"><figcaption><p>Widget with group of charts</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -119,7 +119,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vblqyuZ8bZ3CsaQOHpbU3\_verticalgroupiphone13blueportrait.png" size="80" position="center" caption="Vertical split widget group " alt="Vertical split widget group " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vblqyuZ8bZ3CsaQOHpbU3\_verticalgroupiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../../.gitbook/assets/WD-group-chart-list.png" alt="Vertical split widget group " width="188"><figcaption><p>Vertical split widget group </p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -128,8 +128,6 @@ In this example, a combination of a chart and list was configured with a **verti
 **Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-chart-list-vertical.jigx).
 {% endcolumn %}
 {% endcolumns %}
-
-
 
 {% tabs %}
 {% tab title="group-ChartListVertical (static)" %}
@@ -210,11 +208,11 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ku31Kug--owZX3VQ\_NC2G\_4x2iphone13blueportrait.png" size="80" position="center" caption="Group widget with avatar and list" alt="Group widget with avatar and list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ku31Kug--owZX3VQ\_NC2G\_4x2iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../../.gitbook/assets/WD-group-avatar.png" alt="Group widget with avatar and list" width="188"><figcaption><p>Group widget with avatar and list</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-&#x20;This group widget represents a combination of the avatar with a list. After clicking on the widget, the list component is shown.
+This group widget represents a combination of the avatar with a list. After clicking on the widget, the list component is shown.
 
 **Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/static-data/group-avatar-list.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/widgets/group/dynamic-data/group-avatar-list-dynamic.jigx).
 
@@ -294,7 +292,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_nW2If-8vWWmlEVdp0SmL\_2x4iphone13blueportrait.png" size="80" position="center" caption="Group with value and bar-chart" alt="Group with value and bar-chart" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_nW2If-8vWWmlEVdp0SmL\_2x4iphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../../.gitbook/assets/WD-group-value.png" alt="Group with value and bar-chart" width="188"><figcaption><p>Group with value and bar-chart</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

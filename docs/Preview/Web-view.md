@@ -15,17 +15,15 @@ The web-view component allows the user to use an URL or pass raw HTML as the pre
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rHs453JlvtMQiOY3CRkLE\_img7936iphone13blueportrait.png" size="84" position="center" caption}
-{% endcolumn %}
-
-{% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ynxGJXjIvneugkfpDdqXU\_img7937iphone13blueportrait.png" size="80" position="center" caption}
-{% endcolumn %}
-{% endcolumns %}
-
 This example displays a preview after long-pressing the widget.
 
 See the full example on [GitHub](%22https:/github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/web-view/web-longpress-widget.jigx).
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/cc-webview-longPress.png" alt=""><figcaption></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 {% tabs %}
 {% tab title="long-press-on-widget" %}
@@ -62,25 +60,15 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G9P-b\_A0Yi8PEHnt4ro07\_img7938iphone13blueportrait.png" size="82" position="center" caption}
+<figure><img src="../../.gitbook/assets/cc-web-view-onPress.png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_ZljiqklB-58vf72TJihe\_img7939iphone13blueportrait.png" size="80" position="center" caption}
+<figure><img src="../../.gitbook/assets/cc-web-view-onPress2.png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
 This example displays a preview after long-pressing the list-item on the widget.
-
-{% columns %}
-{% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G-oCl4iVXRvDBU9n6IV0C\_img7941iphone13blueportrait.png" size="80" position="center" caption}
-{% endcolumn %}
-
-{% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DTcbLVw4GTnRwxMDKjM-e\_img7942iphone13blueportrait.png" size="80" position="center" caption}&#x20;
-{% endcolumn %}
-{% endcolumns %}
 
 This example displays a preview after long-pressing the list-item in the jig. It includes the web-view component as well as the go-to actions.
 
