@@ -18,7 +18,7 @@ Trend is available in the following content widgets:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YIaF\_yhQk7REdnMJBJB10\_trend-valueiphone13blueportrait.png" size="76" position="center" caption="Upward trend" alt="Upward trend" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YIaF\_yhQk7REdnMJBJB10\_trend-valueiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../../.gitbook/assets/WD-trend-value.png" alt="Upward trend" width="188"><figcaption><p>Upward trend</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -103,7 +103,7 @@ children:
 
 {% columns %}
 {% column %}
-&#x20;![Percentage trend](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/JMOCUzUBcSOdzFhCFq-Y9_trend-chartiphone13blueportrait.png)&#x20;
+<figure><img src="../../../.gitbook/assets/WD-trend-chart.png" alt="Percentage trend" width="188"><figcaption><p>Percentage trend</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -234,7 +234,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/D7VqLAmAop15HaURF\_Dlk\_trend-listiphone13blueportrait.png" size="84" position="center" caption="Patient trend over a period" alt="Patient trend over a period" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/D7VqLAmAop15HaURF\_Dlk\_trend-listiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../../.gitbook/assets/WD-trend-list.png" alt="Patient trend over a period" width="188"><figcaption><p>Patient trend over a period</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

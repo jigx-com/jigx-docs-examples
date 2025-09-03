@@ -23,7 +23,7 @@ Titles are available in the following content widgets:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qzUhfHOAIhwl4ruMOw20K\_title-imgiphone13blueportrait.png" size="78" position="center" caption="Image widget with titles" alt="Image widget with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qzUhfHOAIhwl4ruMOw20K\_title-imgiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}
+<figure><img src="../../../.gitbook/assets/WD-image-titles.png" alt="Image widget with titles" width="188"><figcaption><p>Image widget with titles</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -126,7 +126,7 @@ children:
 
 {% columns %}
 {% column %}
-Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ShMgsX1bPDxAhXNfPFuo1\_title-locationiphone13blueportrait.png" size="80" position="center" caption="Location widget with titles" alt="Location widget with titles" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ShMgsX1bPDxAhXNfPFuo1\_title-locationiphone13blueportrait.png" width="800" height="1493" darkWidth="800" darkHeight="1493"}&#x20;
+<figure><img src="../../../.gitbook/assets/WD-location-titles.png" alt="Location widget with titles" width="188"><figcaption><p>Location widget with titles</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
