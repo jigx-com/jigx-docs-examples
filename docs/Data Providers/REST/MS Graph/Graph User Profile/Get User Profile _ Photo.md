@@ -18,7 +18,7 @@ Gets a user's profile and photo in Microsoft Graph using Jigx functions, and dis
 1. [Profile Photo Graph](https://learn.microsoft.com/en-us/graph/api/resources/profilephoto?view=graph-rest-1.0) documentation
 2. [Graph Get a User](https://learn.microsoft.com/en-us/graph/api/user-get?view=graph-rest-1.0\&tabs=http) documentation
 3. [Graph explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-4. [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
+4. [Configuring OAuth for MS Graph](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest/microsoft-graph-oauth/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):\
 User.Read User.ReadWrite User.ReadBasic.All User.Read.All User.ReadWrite.All Directory.Read.All Directory.ReadWrite.All

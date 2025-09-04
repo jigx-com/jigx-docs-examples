@@ -9,7 +9,7 @@ This component enhances user experience by providing a quick and intuitive way t
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](https://docs.jigx.com/examples/common-component-properties) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](https://docs.jigx.com/examples/readme/components/common-component-properties) for a list and their configuration options.
 
 <table><thead><tr><th width="214.85546875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>data</code></td><td>Specify the <code>title</code> to display in each segment and a data <code>value</code>. Repeat the <code>title</code> and <code>value</code> properties to create the number of segments in the control.</td></tr><tr><td><code>title</code></td><td>The label for the segment. You can use in the title.</td></tr><tr><td><code>value</code></td><td>The data value for the segment that is used to display content when toggled. Can be used in an expression or to set the <code>initialValue</code>.</td></tr></tbody></table>
 

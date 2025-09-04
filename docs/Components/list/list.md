@@ -5,10 +5,10 @@ This component is very similar to the [jig.list](<../../Jig Types/jig_list.md>) 
 As far as the functionality goes, the same list options are available as with the List Jig where the list itself can either be a list of values with list items or it can be one of the following:
 
 1. [List item](https://docs.jigx.com/examples/list-item)
-2. [Bar charts](https://docs.jigx.com/examples/bar-chart)
-3. [Expander](https://docs.jigx.com/examples/expander)
-4. [Pie charts](https://docs.jigx.com/examples/pie-chart)
-5. [Product item](https://docs.jigx.com/examples/product-item)
+2. [Bar charts](../charts/bar-chart.md)
+3. [Expander](../expander/expander.md)
+4. [Pie charts](../charts/pie-chart.md)
+5. [Product item](../list/product-item.md)
 6. [Stage](stage.md)
 
 ## Configuration options
@@ -898,4 +898,4 @@ datasources:
 
 ## See also
 
-* [State](https://docs.jigx.com/state)
+* [State](https://docs.jigx.com/building-apps-with-jigx/logic/state)

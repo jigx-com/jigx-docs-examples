@@ -152,6 +152,6 @@ tabs:
 
 ## View the Dynamic Data in Jigx Management
 
-1. Open [Management](https://docs.jigx.com/management-overview) , navigate to your solution (employees).
+1. Open [Management](https://docs.jigx.com/administration/management-overview), navigate to your solution (employees).
 2. Navigate to **Data** option
 3. Click on the **employee table** and view the **data record** you just created.

@@ -4856,4 +4856,4 @@ puts message
 
 * [list](list.md)
 * [jig.list](<../../Jig Types/jig_list.md>)
-* [State](https://docs.jigx.com/state)
+* [State](https://docs.jigx.com/building-apps-with-jigx/logic/state)

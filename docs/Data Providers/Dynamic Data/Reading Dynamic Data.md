@@ -22,7 +22,7 @@ This example uses the Dynamic Data table, columns, and data records created in t
 
 <figure><img src="../../../.gitbook/assets/DD-list-emp.png" alt="Reading Dynamic Data" width="563"><figcaption><p>Reading Dynamic Data</p></figcaption></figure>
 
-Here is what the data table employee resembles in [Data](https://docs.jigx.com/data) in Jigx Management.
+Here is what the data table employee resembles in [Data](https://docs.jigx.com/building-apps-with-jigx/data) in Jigx Management.
 
 <figure><img src="../../../.gitbook/assets/DD-list-mngt.png" alt="Employee Dynamic Data"><figcaption><p>Employee Dynamic Data</p></figcaption></figure>
 

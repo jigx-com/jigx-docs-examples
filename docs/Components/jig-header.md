@@ -3,7 +3,7 @@
 The `jig-header` component can be used in any type of jig. It serves as a container for specifying headers. It cannot be used without a component [image](../Widgets/image.md), [location](location.md), or [video-player](video-player.md) inside the component.
 
 {% hint style="info" %}
-The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/assets).
+The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/building-apps-with-jigx/ui/assets).
 {% endhint %}
 
 ## Configuration options

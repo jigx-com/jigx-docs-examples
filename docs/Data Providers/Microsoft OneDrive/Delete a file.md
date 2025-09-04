@@ -103,7 +103,7 @@ item:
 
 ### See also
 
-* [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
+* [Microsoft OneDrive](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/microsoft-onedrive)
 * [Create a file](<Create a file.md>)
 * [Update/Save a file](<Update_Save a file.md>)
 * [List files](<List files.md>)

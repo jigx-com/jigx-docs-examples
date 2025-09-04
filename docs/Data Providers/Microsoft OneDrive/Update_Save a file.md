@@ -148,7 +148,7 @@ modal:
 
 ### See also
 
-* [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive)
+* [Microsoft OneDrive](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/microsoft-onedrive)
 * [Create a file](<Create a file.md>)
 * [Delete a file](<Delete a file.md>)
 * [List files](<List files.md>)

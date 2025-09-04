@@ -2,10 +2,10 @@
 
 JavaScript functions allow you to write modular and reusable code. By encapsulating specific functionalities within functions, you can easily reuse them across different parts of your application. This modular approach not only reduces redundancy but also makes the codebase more maintainable and scalable. For example, a function that handles user date and time can be reused in multiple components or screens, ensuring consistency and reducing the likelihood of errors.
 
-Refer to the section on [JavaScript expressions](https://docs.jigx.com/expressions#c3TG-) to learn:
+Refer to the section on [JavaScript expressions](https://docs.jigx.com/building-apps-with-jigx/logic/expressions#javascript-expressions) to learn:
 
-* [What is supported](https://docs.jigx.com/expressions#c_7zb)
-* [How and where to configure the JavaScript functions](https://docs.jigx.com/expressions#wH_c3)
+* [What is supported](https://docs.jigx.com/building-apps-with-jigx/logic/expressions#what-is-supported)
+* [How and where to configure the JavaScript functions](https://docs.jigx.com/building-apps-with-jigx/logic/expressions#how-does-it-work)
 
 ## Examples and code snippets
 

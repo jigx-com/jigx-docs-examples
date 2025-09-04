@@ -7,7 +7,7 @@ updatedAt: Mon Sep 30 2024 12:19:59 GMT+0000 (Coordinated Universal Time)
 
 # reset-state
 
-`Reset-state` action is typically used to reset the state of the key inside the jig file and can be used further to reset the state of UI components and forms. To understand how to use states, see [State](https://docs.jigx.com/state).
+`Reset-state` action is typically used to reset the state of the key inside the jig file and can be used further to reset the state of UI components and forms. To understand how to use states, see [State](https://docs.jigx.com/building-apps-with-jigx/logic/state).
 
 ## Configuration options
 

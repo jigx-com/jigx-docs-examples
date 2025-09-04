@@ -16,7 +16,7 @@ Some properties are common to all components, see [Common component properties](
 
 ## Consideration
 
-* The step component can only be used inside the [stepper](https://docs.jigx.com/examples/stepper) component.
+* The step component can only be used inside the [stepper](stepper.md) component.
 
 ## Examples and code snippets
 

@@ -2,7 +2,7 @@
 
 {% columns %}
 {% column %}
-The [MS Graph](https://docs.jigx.com/microsoft-graph-oauth) examples below use the User, Calendar, Mail, Insights, and To-do tasks resource types to create a powerful Jigx apps with everything you need in one app. The REST data provider requires you to [configure OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph) and the accessToken is used in the Jigx function.
+The [MS Graph](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest/microsoft-graph-oauth) examples below use the User, Calendar, Mail, Insights, and To-do tasks resource types to create a powerful Jigx apps with everything you need in one app. The REST data provider requires you to [configure OAuth for MS Graph](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest/microsoft-graph-oauth/configuring-oauth-for-ms-graph) and the accessToken is used in the Jigx function.
 {% endcolumn %}
 
 {% column %}

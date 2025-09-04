@@ -1,6 +1,6 @@
 # open-url
 
-This action opens a web page depending on the provided URL or [deep links](https://docs.jigx.com/deep-links) to an external app. open-url can be used in a list of actions, such as `swipeable` and `rightElement`, or with another action; after the main action is executed, open-url is called and opens the configured URL.
+This action opens a web page depending on the provided URL or [deep links](https://docs.jigx.com/building-apps-with-jigx/additional-functionality/deep-links) to an external app. open-url can be used in a list of actions, such as `swipeable` and `rightElement`, or with another action; after the main action is executed, open-url is called and opens the configured URL.
 
 ## Configuration options
 
@@ -35,7 +35,7 @@ actions:
       - type: action.open-url
         options:
           title: Jigx Documentation
-          url: https://docs.jigx.com/examples/open-url
+          url: https://docs.jigx.com/examples/readme/actions/open-url
 ```
 
 ### open-url swipeable left/right
@@ -68,13 +68,13 @@ item:
           onPress:
             type: action.open-url
             options:
-              url: https://docs.jigx.com/examples/open-url
+              url: https://docs.jigx.com/examples/readme/actions/open-url
       right:
         - label: Open Url 
           onPress: 
             type: action.open-url
             options:
-              url: https://docs.jigx.com/examples/open-url
+              url: https://docs.jigx.com/examples/readme/actions/open-url
 ```
 
 ### open-url rightElement
@@ -107,7 +107,7 @@ item:
       onPress:
         type: action.open-url
         options:
-          url: https://docs.jigx.com/examples/open-url
+          url: https://docs.jigx.com/examples/readme/actions/open-url
 ```
 
 ### open-url onSuccess

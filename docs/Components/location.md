@@ -56,7 +56,7 @@ markers:
 ## Considerations
 
 * Test the layout of the location component when combining it with other components, as it can cause spacing issues.
-* To display a location as a full screen, use the [jig.fullscreen](<../Jig Types/jig_fullscreen.md>) type with the `component.location`. See the [Fullscreen location](https://docs.jigx.com/examples/location#autxL) example down below.
+* To display a location as a full screen, use the [jig.fullscreen](<../Jig Types/jig_fullscreen.md>) type with the `component.location`. See the [Fullscreen location](https://docs.jigx.com/examples/readme/jig-types/jig_fullscreen#full-screen-of-a-map) example down below.
 
 ## Examples and code snippets
 
@@ -458,7 +458,7 @@ In this example the `component.location` is used in the `jig.fullscreen` ensurin
 **Datasource**: See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/location.jigx).
 
 {% hint style="success" %}
-Using the code below requires data in the database, the _jigx.sample_ solution has the data provided for location. You can use the location.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/location.csv) and upload it via the [Data](https://docs.jigx.com/pWWt-data) configuration in Jigx Management.
+Using the code below requires data in the database, the _jigx.sample_ solution has the data provided for location. You can use the location.csv file in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/location.csv) and upload it via the [Data](https://docs.jigx.com/building-apps-with-jigx/data) configuration in Jigx Management.
 {% endhint %}
 {% endcolumn %}
 
@@ -625,4 +625,4 @@ datasources:
 
 ## See also
 
-* [State](https://docs.jigx.com/state)
+* [State](https://docs.jigx.com/building-apps-with-jigx/logic/state)

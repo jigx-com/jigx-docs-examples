@@ -12,7 +12,7 @@ Execute-entity can save, update, or delete data in a **single row** from a datab
 For the Dynamic datasource, values will be saved under the `data` option. For SQL/REST datasource, values will be saved under the `Parameters` option.
 
 {% hint style="warning" %}
-This action can't be used if you are using [Static Data](https://docs.jigx.com/examples/static).
+This action can't be used if you are using [Static Data](https://docs.jigx.com/examples/readme/datasource/static).
 {% endhint %}
 
 ## Configuration options
@@ -30,7 +30,7 @@ The execute-entity has a `go-back` option, which is set to on by default. That m
 
 ## Offline remote data handling
 
-Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](https://docs.jigx.com/offline-remote-data-handling) explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities and provides examples and code samples.
+Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](https://docs.jigx.com/building-apps-with-jigx/data/offline-remote-data-handling) explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities and provides examples and code samples.
 
 ## Examples and code snippets
 

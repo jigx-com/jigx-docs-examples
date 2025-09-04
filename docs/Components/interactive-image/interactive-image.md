@@ -15,4 +15,4 @@ Some properties are common to all components, see [Common component properties](
 ## Considerations
 
 * The interactive component serves as a container for the [interactive-image-item](interactive-image-item.md) component.
-* The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/assets).
+* The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/building-apps-with-jigx/ui/assets).

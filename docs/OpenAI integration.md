@@ -88,12 +88,12 @@ The ChatGPT REST API allows prompts in the JSON body parameter you send to the C
 ## High-level steps
 
 1. Open Jigx Builder in VS Code and create a Jigx solution.
-2. Under the functions folder create a function.jigx file to configure the OpenAI [REST](https://docs.jigx.com/examples/rest) API. For more information on configuring a REST function see [REST Overview](https://docs.jigx.com/rest-overview).
-3. In the functions file configure the [REST Authentication](https://docs.jigx.com/rest-authentication) required by the REST API.
+2. Under the functions folder create a function.jigx file to configure the OpenAI [REST](https://docs.jigx.com/examples/readme/data-providers/rest) API. For more information on configuring a REST function see [REST Overview](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest).
+3. In the functions file configure the [REST Authentication](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest/rest-authentication) required by the REST API.
 4. Configure the [prompts](<OpenAI integration.md>) to tell AI what it should do and how it must act in the `messages` >`"content:"` property in the `inputTransform` in the functions file.
-5. Create a [Jigs (screens)](https://docs.jigx.com/jigs-screens) under the jigs folder.
-6. Add [Components (controls)](https://docs.jigx.com/components-controls) to the jig and configure accordingly.
-7. Configure an [action](https://docs.jigx.com/actions) to call the OpenAI function. In most instances a [sync-entities](Actions/sync-entities.md) action is configured to return the reponse from the AI server.
+5. Create a [Jigs (screens)](https://docs.jigx.com/building-apps-with-jigx/ui/jigs-_screens_) under the jigs folder.
+6. Add [Components (controls)](https://docs.jigx.com/building-apps-with-jigx/ui/components-_controls_) to the jig and configure accordingly.
+7. Configure an [action](https://docs.jigx.com/building-apps-with-jigx/ui/actions) to call the OpenAI function. In most instances a [sync-entities](Actions/sync-entities.md) action is configured to return the reponse from the AI server.
 
 ## Function configuration
 

@@ -17,7 +17,7 @@ Get a list of To-do tasks for a user in Microsoft Graph using a GET REST functio
 
 * [List tasks](https://learn.microsoft.com/en-us/graph/api/todotasklist-list-tasks?view=graph-rest-1.0\&tabs=http) - MS Graph documentation
 * [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-* [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
+* [Configuring OAuth for MS Graph](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest/microsoft-graph-oauth/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 

@@ -7,7 +7,7 @@ updatedAt: Fri Nov 24 2023 12:02:23 GMT+0000 (Coordinated Universal Time)
 
 # Microsoft OneDrive
 
-Jigx app solutions integrate with OneDrive, allowing you to interact with your existing files or add new ones. Use the [Microsoft OneDrive](https://docs.jigx.com/microsoft-onedrive) data provider to create, update, list, delete, and download files.
+Jigx app solutions integrate with OneDrive, allowing you to interact with your existing files or add new ones. Use the [Microsoft OneDrive](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/microsoft-onedrive) data provider to create, update, list, delete, and download files.
 
 The following examples with code snippets are provided in this section:
 

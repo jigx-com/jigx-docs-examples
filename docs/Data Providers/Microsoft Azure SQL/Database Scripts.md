@@ -8,7 +8,7 @@ updatedAt: Tue May 21 2024 10:42:03 GMT+0000 (Coordinated Universal Time)
 # Database Scripts
 
 {% hint style="warning" %}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](https://docs.jigx.com/rest) instead. See [REST endpoints from Azure SQL](https://docs.jigx.com/microsoft-azure-sql) for more information.
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest) instead. See [REST endpoints from Azure SQL](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/microsoft-azure-sql) for more information.
 {% endhint %}
 
 The following Azure SQL scripts create the customer table and store the procedures used in the examples in this section. These scripts should be executed against an existing database in your Azure SQL environment.

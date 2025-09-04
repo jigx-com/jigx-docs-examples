@@ -3,7 +3,7 @@
 `Execute-entities` is used to modify, create, and delete **multiple rows** in a specific table in a database.
 
 {% hint style="warning" %}
-Execute-entities can't be used if you're using [Static Data](https://docs.jigx.com/examples/static).
+Execute-entities can't be used if you're using [Static Data](https://docs.jigx.com/examples/readme/datasource/static).
 {% endhint %}
 
 ## Configuration options
@@ -59,7 +59,7 @@ actions:
 
 ## Offline remote data handling
 
-Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](https://docs.jigx.com/offline-remote-data-handling) explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities, and provides examples and code samples.
+Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](https://docs.jigx.com/building-apps-with-jigx/data/offline-remote-data-handling) explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities, and provides examples and code samples.
 
 ## Examples and code snippets
 

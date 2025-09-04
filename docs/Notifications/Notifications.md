@@ -2,7 +2,7 @@
 
 {% columns %}
 {% column %}
-You can send Notifications using Jigx Management or programmatically in your solutions, see [Notifications](https://docs.jigx.com/notifications). Notifications can be configured to be sent to a single user, the entire organization, users of a specific solution, and even users of a specific jig in a specific solution.
+You can send Notifications using Jigx Management or programmatically in your solutions, see [Notifications](https://docs.jigx.com/administration/notifications). Notifications can be configured to be sent to a single user, the entire organization, users of a specific solution, and even users of a specific jig in a specific solution.
 {% endcolumn %}
 
 {% column %}
@@ -12,7 +12,7 @@ You can send Notifications using Jigx Management or programmatically in your sol
 
 ## Configuration options
 
-<table><thead><tr><th width="147.6875">Core structure</th><th></th></tr></thead><tbody><tr><td>function</td><td>Define a function in the <em>Functions</em> folder of your solution. The function has input parameters such as the notification <code>title</code>, the notification <code>text</code> and requires a Jigx <code>accessToken</code> or <a href="https://docs.jigx.com/my-profile#yepji">personal access token (PAT)</a> .</td></tr><tr><td>jig</td><td>jigs will invoke the function for sending notifications either via submitting form values to the function or by using an <a href="../Actions/execute-entity.md">execute-entity</a> action for invoking the function.</td></tr></tbody></table>
+<table><thead><tr><th width="147.6875">Core structure</th><th></th></tr></thead><tbody><tr><td>function</td><td>Define a function in the <em>Functions</em> folder of your solution. The function has input parameters such as the notification <code>title</code>, the notification <code>text</code> and requires a Jigx <code>accessToken</code> or <a href="https://docs.jigx.com/my-profile#personal-access-tokens-pat">personal access token (PAT)</a> .</td></tr><tr><td>jig</td><td>jigs will invoke the function for sending notifications either via submitting form values to the function or by using an <a href="../Actions/execute-entity.md">execute-entity</a> action for invoking the function.</td></tr></tbody></table>
 
 ## Notification URL per region
 
@@ -28,9 +28,9 @@ Click here to go there directly: [https://manage.jigx.com/settings/org-details](
 
 ## Notification sent when submitting a form
 
-In this example we are using hidden form components (e.g. `organizationId`) to pass required parameters to the function. The emails field contains a comma-separated list of recipients. You could also use [Expressions](https://docs.jigx.com/expressions) to create that comma-separated string dynamically at runtime.
+In this example we are using hidden form components (e.g. `organizationId`) to pass required parameters to the function. The emails field contains a comma-separated list of recipients. You could also use [Expressions](https://docs.jigx.com/building-apps-with-jigx/logic/expressions) to create that comma-separated string dynamically at runtime.
 
-Once you submitted the form, the recipients should receive both a push notification and an in-app notification. You can also check the delivery status of your notification in the [Notifications](https://docs.jigx.com/notifications) section of the Jigx Management.
+Once you submitted the form, the recipients should receive both a push notification and an in-app notification. You can also check the delivery status of your notification in the [Notifications](https://docs.jigx.com/administration/notifications) section of the Jigx Management.
 
 Add a function definition called _send-notification.jigx_ to the _functions_ folder of your solution and copy & paste the following snippet into it. Replace the {organizationId} in the `url` with your organization's Id.
 

@@ -7,7 +7,7 @@ updatedAt: Tue Nov 28 2023 05:02:23 GMT+0000 (Coordinated Universal Time)
 
 # Salesforce
 
-Jigx easily integrates with your Salesforce instance, through the [Salesforce data provider](https://docs.jigx.com/salesforce). The following examples with code snippets are provided in this section:
+Jigx easily integrates with your Salesforce instance, through the [Salesforce data provider](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/salesforce). The following examples with code snippets are provided in this section:
 
 * [Create records in objects](<Create records in objects.md>)
 * [Delete records in objects](<Delete records in objects.md>)
@@ -28,7 +28,7 @@ Examples are based on test data in a Jigx demo Salesforce environment. Copying t
 {% endcolumn %}
 
 {% column %}
-In this dashboard the Home Hub is configured to call eight jigs and one datasource file. The jigs use various components such as [form](../../Components/form/form.md), [list](../../Components/list/list.md), [widgets](https://docs.jigx.com/widgets), [bar-chart](../../Components/charts/bar-chart.md), and actions to create an informative interactive app. The Salesforce provider references various Salesforce objects as shown below.
+In this dashboard the Home Hub is configured to call eight jigs and one datasource file. The jigs use various components such as [form](../../Components/form/form.md), [list](../../Components/list/list.md), [widgets](https://docs.jigx.com/examples/readme/widgets), [bar-chart](../../Components/charts/bar-chart.md), and actions to create an informative interactive app. The Salesforce provider references various Salesforce objects as shown below.
 {% endcolumn %}
 {% endcolumns %}
 

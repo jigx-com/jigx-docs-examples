@@ -25,7 +25,7 @@ Some properties are common to all components, see [Common component properties](
 ## Considerations
 
 * Dynamic Data cannot save images larger than 350K. Jigx does not recommend storing images in Dynamic Data or storing images as base64 in the Dynamic Data database.
-* The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/assets).
+* The images can be preloaded and cached using the asset folder's images file. The images will be displayed even when you are offline. For more details, refer to [Assets](https://docs.jigx.com/building-apps-with-jigx/ui/assets).
 
 ## Examples and code snippets
 

@@ -30,7 +30,7 @@ Some properties are common to all components, see [Common component properties](
 
 * The `date-picker` component requires dates to be input in an ISO format when statically specified or from a datasource.
 * The `format` property is set to show for the outputs of the field and are ready only.
-* For setting the date format taking into account time zones see [Expressions - cheatsheet](https://docs.jigx.com/expressions-cheatsheet) for example expressions.
+* For setting the date format taking into account time zones see [Expressions - cheatsheet](https://docs.jigx.com/building-apps-with-jigx/logic/expressions/expressions-cheatsheet) for example expressions.
 
 ## Examples and code snippets
 
@@ -127,4 +127,4 @@ children:
 
 ## See also
 
-* [State](https://docs.jigx.com/state)
+* [State](https://docs.jigx.com/building-apps-with-jigx/logic/state)

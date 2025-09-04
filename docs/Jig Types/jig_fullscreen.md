@@ -100,5 +100,5 @@ See the [chatbot with OpenAI](../Components/chat.md) example.
 
 ## See Also
 
-* [Jigs (screens)](https://docs.jigx.com/jigs-screens)
+* [Jigs (screens)](https://docs.jigx.com/building-apps-with-jigx/ui/jigs-_screens_)
 * [location](../Components/location.md)

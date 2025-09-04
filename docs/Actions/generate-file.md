@@ -4,7 +4,7 @@ This action generates files such as PDFs, CSVs, or text files. It accepts conten
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](https://docs.jigx.com/examples/common-component-properties) for a list and their configuration options.
+Some properties are common to all components, see [Common component properties](https://docs.jigx.com/examples/readme/components/common-component-properties) for a list and their configuration options.
 
 <table><thead><tr><th width="154.05078125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>content</code></td><td>The content to be included in the file. You can use datasources, expressions, or text.</td></tr><tr><td><code>fileName</code></td><td>Give the file a name, this name is used as the local file name, and is referenced as part of the uri, which can be accessed via the action's instance output (<code>=@ctx.actions.generateFile.outputs.uri</code>). The file extension must be included in the <code>fileName</code>, e.g., Application.txt.</td></tr><tr><td><code>instanceId</code></td><td>Provide a unique identifier for the action, which provides access to the action's state.</td></tr><tr><td><code>title</code></td><td>Provide the action button with a title, for example, Create Application.</td></tr></tbody></table>
 
@@ -13,7 +13,7 @@ Some properties are common to all components, see [Common component properties](
 ## Considerations
 
 * You can reference the local file using the action's output uri in other actions or components, `=@ctx.actions.generateFile.outputs.uri`. For example, generate the file then [share](share.md) the file.
-* Depending on where you save and use the saved file, you might need to use [conversions](https://docs.jigx.com/file-handling).
+* Depending on where you save and use the saved file, you might need to use [conversions](https://docs.jigx.com/building-apps-with-jigx/data/file-handling).
 * The file extension must be included in the `fileName`, e.g., FormA.docx.
 
 ## Examples and code snippets

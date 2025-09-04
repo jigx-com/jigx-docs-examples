@@ -201,4 +201,4 @@ datasources:
 
 * [entity-field](entity-field.md)
 * [field-row](field-row.md)
-* [section](https://docs.jigx.com/docs/jc-section%22)
+* [section](section.md)

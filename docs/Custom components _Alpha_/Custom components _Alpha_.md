@@ -13,10 +13,10 @@ This feature is currently in its **Alpha** stage of development.
 * We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
 {% endhint %}
 
-Custom components extend the standard set of components in Jigx to provide additional UI capabilities and features. To understand what custom components are, when and why you would use them, see [Custom Components (Alpha)](https://docs.jigx.com/custom-components-alpha).
+Custom components extend the standard set of components in Jigx to provide additional UI capabilities and features. To understand what custom components are, when and why you would use them, see [Custom Components (Alpha)](https://docs.jigx.com/building-apps-with-jigx/ui/custom-components-_alpha_).
 
-1. [Creating custom components (Alpha)](https://docs.jigx.com/creating-custom-components-alpha) explains where and how to create the components and how to reuse them in a jig.
-2. Passing data in and out of custom components is explained in [Inputs & outputs (Alpha)](https://docs.jigx.com/inputs-and-outputs-alpha).
+1. [Creating custom components (Alpha)](https://docs.jigx.com/building-apps-with-jigx/ui/custom-components-_alpha_) explains where and how to create the components and how to reuse them in a jig.
+2. Passing data in and out of custom components is explained in [Inputs & outputs (Alpha)](https://docs.jigx.com/building-apps-with-jigx/ui/custom-components-_alpha_/inputs-_-outputs-_alpha_).
 3. [Combine custom & standard components (Alpha)](<Combine custom _ standard components _Alpha_.md>) to create your own customized components and templates.
 4. Jigx offers a variety of [Templates (Alpha)](<Templates _Alpha_/Templates _Alpha_.md>) ready to use in your app, making development faster and easier. Select the template you want to use, copy the code from GitHub, and customize it to meet your needs.
 5. The components that fall into the custom component category are:
@@ -39,7 +39,7 @@ Custom components extend the standard set of components in Jigx to provide addit
 
 ## Considerations
 
-* [Localization](https://docs.jigx.com/localization) can be applied to custom components such as [Button (Alpha)](<Button _Alpha_.md>) and [Text (Alpha)](<Text _Alpha_.md>).
+* [Localization](https://docs.jigx.com/building-apps-with-jigx/additional-functionality/localization) can be applied to custom components such as [Button (Alpha)](<Button _Alpha_.md>) and [Text (Alpha)](<Text _Alpha_.md>).
 *   You can nest custom components by using `component.custom-component` and referencing the desired component in the `componentId` property.
 
     ```yaml

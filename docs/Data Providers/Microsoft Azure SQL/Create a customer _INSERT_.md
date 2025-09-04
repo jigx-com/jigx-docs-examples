@@ -8,7 +8,7 @@ updatedAt: Tue Nov 05 2024 11:36:55 GMT+0000 (Coordinated Universal Time)
 # Create a customer (INSERT)
 
 {% hint style="warning" %}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](https://docs.jigx.com/rest) instead. See [REST endpoints from Azure SQL](https://docs.jigx.com/microsoft-azure-sql) for more information.
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest) instead. See [REST endpoints from Azure SQL](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/microsoft-azure-sql) for more information.
 {% endhint %}
 
 {% columns %}
@@ -20,7 +20,7 @@ This example uses a default jig with a form that executes an SQL command to crea
 #### **Resources**
 
 * Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<Database Scripts.md>).
-* [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection).
+* [Configuring the SQL Connection](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/microsoft-azure-sql/configuring-the-sql-connection).
 * This sample depends on [List customers (SELECT)](<List customers _SELECT_.md>).
 
 #### Jigx Code
@@ -39,7 +39,7 @@ The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samp
 * The example below uses an `execute-entity` action and maps both the `parameters` of the jig function and the SQLite data in the action's configuration.
 * To improve the user experience, data displayed after it has been created or updated should be updated in the local SQLite database and the backend system in the same action.
 * If the data is only submitted to the backend system, it must be synced back to the device before the local tables are updated, and the information can be displayed. This can cause a significant lag and latency in the user's experience.
-* The example below updates the data in Azure SQL and the SQLite database on the device when the user presses the Save button. This is the best practice for building responsive user experiences when working with remote data. See the [Data lifecycles in Jigx](https://docs.jigx.com/data-lifecycles-in-jigx) section of the documentation for a detailed explanation.
+* The example below updates the data in Azure SQL and the SQLite database on the device when the user presses the Save button. This is the best practice for building responsive user experiences when working with remote data. See the [Data lifecycles in Jigx](https://docs.jigx.com/building-apps-with-jigx/data/data-lifecycles-in-jigx) section of the documentation for a detailed explanation.
 
 ## Functions
 

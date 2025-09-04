@@ -13,7 +13,7 @@ This example uses a default jig with a form that executes an SQL command to upda
 ### Resources
 
 * Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<Database Scripts.md>).
-* [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection)
+* [Configuring the SQL Connection](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/microsoft-azure-sql/configuring-the-sql-connection)
 * This sample depends on [List a single customer (SELECT)](<List a single customer _SELECT_.md>).
 
 ### Jigx Code
@@ -31,7 +31,7 @@ The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samp
 * The `execute-entity` action allows you to specify the function parameters and their values, as well as the data properties for the SQLite table. You have more granular control over the values being saved and can include expressions. The example below uses an `execute- entity` action and maps both the parameters of the jig function and the SQLite data in the action's configuration.
 * To improve the user experience, data displayed after it has been created or updated should be updated in the local SQLite database and the backend SQL system at the same action.
 * If the data is only submitted to the backend system, it must be synced back to the device before the local tables are updated, and the information can be displayed. This can cause a significant lag and latency in the user's experience.
-* The example below updates the data in Azure SQL and the SQLite database on the device when the user presses the Save button. This is the best practice for building responsive user experiences when working with remote data. See the [Data lifecycles in Jigx](https://docs.jigx.com/data-lifecycles-in-jigx) section of the documentation for a detailed explanation.
+* The example below updates the data in Azure SQL and the SQLite database on the device when the user presses the Save button. This is the best practice for building responsive user experiences when working with remote data. See the [Data lifecycles in Jigx](https://docs.jigx.com/building-apps-with-jigx/data/data-lifecycles-in-jigx) section of the documentation for a detailed explanation.
 
 ## Functions
 

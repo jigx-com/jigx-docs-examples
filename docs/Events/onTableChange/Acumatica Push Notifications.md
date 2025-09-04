@@ -38,7 +38,7 @@ Replace \{{baseUrl\}} with the appropriate URL for your region.
 
 ## Authentication
 
-* A **Personal Access Token (PAT)** is required. Get your PAT from [My Profile](https://docs.jigx.com/my-profile#ytp5o) in :Link\[Jigx Management]{href="https://manage.jigx.com" newTab="true" hasDisabledNofollow="false"}.
+* A **Personal Access Token (PAT)** is required. Get your PAT from [My Profile](https://docs.jigx.com/administration/my-profile#personal-access-tokens-pat) in :Link\[Jigx Management]{href="https://manage.jigx.com" newTab="true" hasDisabledNofollow="false"}.
 * Enter the PAT as an API key with the prefix BEARER, for example, BEARER XXXXXXXXXX.
 
 ## Core elements
@@ -47,7 +47,7 @@ Replace \{{baseUrl\}} with the appropriate URL for your region.
 
 ## Dynamic Data
 
-The Acumatica _GI_ pushes data to the Jigx API endpoint, which then updates the corresponding table in Dynamic Data in [Jigx Management > Solution > Data >](https://docs.jigx.com/_5W2-data)
+The Acumatica _GI_ pushes data to the Jigx API endpoint, which then updates the corresponding table in Dynamic Data in [Jigx Management > Solution > Data >](https://docs.jigx.com/administration/solutions/data)
 
 <figure><img src="../../../.gitbook/assets/Acumatica- cdc-DDTable.png" alt="Dynamic Data"><figcaption><p>Dynamic Data</p></figcaption></figure>
 

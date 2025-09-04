@@ -125,4 +125,4 @@ children:
 
 ## See also
 
-* [State](https://docs.jigx.com/state)
+* [State](https://docs.jigx.com/building-apps-with-jigx/logic/state)

@@ -24,7 +24,7 @@ Create a list of customers showing their names, email addresses, and locations. 
 ### Resources
 
 * Scripts for creating Azure SQL tables and stored procedures [Database Scripts](<Database Scripts.md>)
-* [Configuring the SQL Connection](https://docs.jigx.com/configuring-the-sql-connection)
+* [Configuring the SQL Connection](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/microsoft-azure-sql/configuring-the-sql-connection)
 
 ### Jigx Code
 

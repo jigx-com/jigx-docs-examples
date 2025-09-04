@@ -1,6 +1,6 @@
 # Components
 
-Refer to the [Components (controls)](https://docs.jigx.com/components-controls) topic to understand concepts, how to configure components in the different jig types, add data, and actions to components. The topics in this section provide code examples for each component.
+Refer to the [Components (controls)](https://docs.jigx.com/building-apps-with-jigx/ui/components-_controls_) topic to understand concepts, how to configure components in the different jig types, add data, and actions to components. The topics in this section provide code examples for each component.
 
 Here is a list of all components, the type of category the component forms part of, and in which jig type the component can be added.
 

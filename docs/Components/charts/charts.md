@@ -19,7 +19,7 @@ Chart data is structured in a way that makes it easy to display. To understand h
 
 <figure><img src="../../../.gitbook/assets/C-ExcelData.png" alt="Excel data table" width="375"><figcaption><p>Excel data table</p></figcaption></figure>
 
-* Next we map out the same data in Jigx [Dynamic Data](https://docs.jigx.com/dynamic-data) in[Jigx Management](https://docs.jigx.com/data). Notice that the data is exactly the same as the Excel data.
+* Next we map out the same data in Jigx [Dynamic Data](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/dynamic-data) in[Jigx Management](https://docs.jigx.com/administration/solutions/data). Notice that the data is exactly the same as the Excel data.
 
 <figure><img src="../../../.gitbook/assets/C-DD-data.png" alt=""><figcaption></figcaption></figure>
 

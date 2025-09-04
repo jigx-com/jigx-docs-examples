@@ -1,6 +1,6 @@
 # Localization (Translation)
 
-Solutions can easily be translated into any language by using the `Text Locale` property and creating a translation file with the translated text in Jigx Builder. On the device, use the _Profile>Settings>Language_ option and select _Device (Respects device settings)_. To understand how to configure localization in Jigx see [Localization](https://docs.jigx.com/localization).
+Solutions can easily be translated into any language by using the `Text Locale` property and creating a translation file with the translated text in Jigx Builder. On the device, use the _Profile>Settings>Language_ option and select _Device (Respects device settings)_. To understand how to configure localization in Jigx see [Localization](https://docs.jigx.com/building-apps-with-jigx/additional-functionality/localization).
 
 {% hint style="info" %}
 Adding dynamic values in localized jigs use **ICU message** definitions. Try it in the [Online ICU Message Editor](https://format-message.github.io/icu-message-format-for-translators/editor.html) or see the [ICU format messaging](https://unicode-org.github.io/icu/userguide/format_parse/messages/) documentation.

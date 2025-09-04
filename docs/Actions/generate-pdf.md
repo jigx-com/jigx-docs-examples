@@ -23,7 +23,7 @@ Some properties are common to all components, see [Common component properties](
 ## Considerations
 
 * You can reference the local PDF file using the action's output uri in other actions or components, `=@ctx.actions.generatePDF.outputs.uri`. For example, generate the PDF file then [share](share.md) the file.
-* Depending on where you save and use the saved PDF, you might need to use [conversions](https://docs.jigx.com/file-handling).
+* Depending on where you save and use the saved PDF, you might need to use [conversions](https://docs.jigx.com/building-apps-with-jigx/data/file-handling).
 * The .pdf extension is automatically added to the `fileName`.
 
 ## Examples and code snippets

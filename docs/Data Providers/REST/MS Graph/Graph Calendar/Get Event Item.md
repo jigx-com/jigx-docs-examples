@@ -13,7 +13,7 @@ updatedAt: Wed May 08 2024 14:27:40 GMT+0000 (Coordinated Universal Time)
 
 * [List Event](https://learn.microsoft.com/en-us/graph/api/user-list-events?view=graph-rest-1.0\&tabs=http) - MS Graph documentation
 * [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-* [Configuring OAuth for MS Graph](https://docs.jigx.com/configuring-oauth-for-ms-graph)
+* [Configuring OAuth for MS Graph](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest/microsoft-graph-oauth/configuring-oauth-for-ms-graph)
 
 **Required OAuth scope** (least to most privilege):
 
@@ -132,7 +132,7 @@ children:
 ## Functions
 
 {% hint style="info" %}
-We will use `forRowsWithValues` in the get-calendar-event-details function to update only one record in the calendarEvents table when called from `onRefresh` on the view-calendar-event-details jig. If you don't specify `forRowsWithValues` the entire table is wiped by the REST call and only the result is inserted. See [REST Overview](https://docs.jigx.com/rest-overview) for more information on using `forRowsWithValues` with REST calls.
+We will use `forRowsWithValues` in the get-calendar-event-details function to update only one record in the calendarEvents table when called from `onRefresh` on the view-calendar-event-details jig. If you don't specify `forRowsWithValues` the entire table is wiped by the REST call and only the result is inserted. See [REST Overview](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest) for more information on using `forRowsWithValues` with REST calls.
 {% endhint %}
 
 MS Graph Event Item function in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-MS-Graph-demonstrator/functions/calendar/get-calendar-event-details.jigx).

@@ -9,7 +9,7 @@ This action can be used to sync your local database with your live database on t
 5. Dynamically sync multiple entities
 
 {% hint style="warning" %}
-`sync-entities` can't be used if you using [Static Data](https://docs.jigx.com/examples/static).
+`sync-entities` can't be used if you using [Static Data](https://docs.jigx.com/examples/readme/datasource/static).
 {% endhint %}
 
 ## Examples and code snippets
@@ -78,7 +78,7 @@ actions:
 
 {% columns %}
 {% column %}
-Here is the example of [sync-entities](https://docs.jigx.com/examples/sync-entities) in onPress/onChange event in [list-item](https://docs.jigx.com/examples/list-item)
+Here is the example of [sync-entities](https://docs.jigx.com/examples/examples/readme/actions/sync-entities) in onPress/onChange event in [list-item](https://docs.jigx.com/examples/readme/components/list/list-item)
 
 **Example:**
 

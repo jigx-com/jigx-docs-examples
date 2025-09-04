@@ -27,7 +27,7 @@ An `action list` can be set up in various ways:
 {% endcolumn %}
 
 {% column %}
-This example shows an action-list with two actions. The first action is [submit-form](https://docs.jigx.com/examples/submit-form), which will save the entered data, and the second action, [go-back](https://docs.jigx.com/examples/go-back), will redirect us back to the previous page.
+This example shows an action-list with two actions. The first action is [submit-form](https://docs.jigx.com/examples/examples/readme/actions/submit-form), which will save the entered data, and the second action, [go-back](https://docs.jigx.com/examples/readme/actions/go-back), will redirect us back to the previous page.
 
 **Example:** See the full example of action-list in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-primary.jigx)
 {% endcolumn %}

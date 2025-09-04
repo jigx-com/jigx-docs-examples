@@ -10,7 +10,7 @@ description: >-
 
 # section
 
-The section component groups related items together under a single title. A section can be set up on a [jig.default](<../../Jig Types/jig_default.md>) under the [entity](entity.md) component or on a [form](../form/form.md) component as its container. The component can contain [field-row](https://docs.jigx.com/examples/field-row) and [entity-field](entity-field.md) components or children components on a [form](../form/form.md) component.
+The section component groups related items together under a single title. A section can be set up on a [jig.default](<../../Jig Types/jig_default.md>) under the [entity](entity.md) component or on a [form](../form/form.md) component as its container. The component can contain [field-row](https://docs.jigx.com/examples/readme/components/entity/field-row) and [entity-field](entity-field.md) components or children components on a [form](../form/form.md) component.
 
 A `component.section` can be set up with the following combinations:
 
