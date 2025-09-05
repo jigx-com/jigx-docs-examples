@@ -9,7 +9,7 @@ updatedAt: Wed Feb 12 2025 13:41:56 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column %}
-### Scenario
+#### Scenario
 
 Get a list of available calendars for a user in Microsoft Graph using a GET REST function and displaying the list of calendars in a list jig.
 

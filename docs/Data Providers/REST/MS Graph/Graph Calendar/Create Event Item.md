@@ -9,7 +9,7 @@ updatedAt: Wed Feb 12 2025 13:47:07 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column %}
-### Scenario
+#### Scenario
 
 Creates a new calendar event item in a user's specified calendar using the Microsoft Graph POST REST function. A default jig uses a form component to capture the event details.
 

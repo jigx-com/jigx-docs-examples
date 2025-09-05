@@ -9,7 +9,7 @@ updatedAt: Wed Mar 05 2025 18:25:25 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column %}
-### Scenario
+#### Scenario
 
 Get insights that include a list of documents trending around the user using a GET REST function and display the list in a list jig.
 

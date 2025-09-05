@@ -17,16 +17,16 @@ Best practice for production apps is to use REST as the data layer to access dat
 
 {% columns %}
 {% column %}
-### Scenario
+#### Scenario
 
 Create a list of customers showing their names, email addresses, and locations. On the left is an avatar, and on the right is the country the customer resides in.
 
-### Resources
+#### Resources
 
 * Scripts for creating Azure SQL tables and stored procedures [Database Scripts](<Database Scripts.md>)
 * [Configuring the SQL Connection](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/microsoft-azure-sql/configuring-the-sql-connection)
 
-### Jigx Code
+#### Jigx Code
 
 The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs)
 {% endcolumn %}

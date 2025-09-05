@@ -6,17 +6,17 @@ Best practice for production apps is to use REST as the data layer to access dat
 
 {% columns %}
 {% column %}
-### Scenario
+#### Scenario
 
 This example uses a default jig with a form that executes an SQL command to update a customer record.
 
-### Resources
+#### Resources
 
 * Scripts for creating Azure SQL tables and stored procedures: [Database Scripts](<Database Scripts.md>).
 * [Configuring the SQL Connection](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/microsoft-azure-sql/configuring-the-sql-connection)
 * This sample depends on [List a single customer (SELECT)](<List a single customer _SELECT_.md>).
 
-### Jigx Code
+#### Jigx Code
 
 The Azure SQL Docs solution is on [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/guides/azure-sql-docs)
 {% endcolumn %}

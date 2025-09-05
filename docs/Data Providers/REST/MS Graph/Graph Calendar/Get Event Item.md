@@ -9,7 +9,7 @@ updatedAt: Wed May 08 2024 14:27:40 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column %}
-### **Resource links:**
+#### **Resource links:**
 
 * [List Event](https://learn.microsoft.com/en-us/graph/api/user-list-events?view=graph-rest-1.0\&tabs=http) - MS Graph documentation
 * [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)

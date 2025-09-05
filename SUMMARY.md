@@ -68,6 +68,7 @@
     * [jig.default](<docs/Jig Types/jig_default.md>)
     * [jig.document](<docs/Jig Types/jig_document.md>)
     * [jig.fullscreen](<docs/Jig Types/jig_fullscreen.md>)
+    * [jig.gallery](readme/jig-types/jig.gallery.md)
     * [jig.grid](<docs/Jig Types/jig_grid.md>)
     * [jig.list](<docs/Jig Types/jig_list.md>)
     * [jig.table](<docs/Jig Types/jig_table.md>)

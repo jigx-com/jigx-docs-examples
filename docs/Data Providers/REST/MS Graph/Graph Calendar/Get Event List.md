@@ -9,7 +9,7 @@ updatedAt: Wed Mar 05 2025 17:58:07 GMT+0000 (Coordinated Universal Time)
 
 {% columns %}
 {% column %}
-### Scenario
+#### Scenario
 
 Get a list of the next week's events on a user's calendar from Microsoft Graph using GET REST functions and show the events in a calendar jig.
 
