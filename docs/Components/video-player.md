@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # video-player
 
 This component is used to play a video in [headers](jig-header.md), or as components in a [jig.default](<../Jig Types/jig_default.md>).

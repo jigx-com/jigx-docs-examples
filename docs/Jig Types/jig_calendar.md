@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # jig.calendar
 
 {% columns %}
@@ -179,8 +196,6 @@ Only [Entity](../Preview/Entity.md) and [Web-view](../Preview/Web-view.md) are a
 
 {% column %}
 <figure><img src="../../.gitbook/assets/calendar-longpress.png" alt="Long-press on the event" width="188"><figcaption><p>Long-press on the event</p></figcaption></figure>
-
-
 {% endcolumn %}
 {% endcolumns %}
 

@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # jig-header
 
 The `jig-header` component can be used in any type of jig. It serves as a container for specifying headers. It cannot be used without a component [image](../Widgets/image.md), [location](location.md), or [video-player](video-player.md) inside the component.

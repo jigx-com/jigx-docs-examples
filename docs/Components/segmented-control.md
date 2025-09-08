@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # segmented-control
 
 The segmented-control is a horizontal control consisting of segments that allows you to toggle between multiple options in a compact, efficient way. It is commonly used for filtering content, switching views, or selecting categories within an app.

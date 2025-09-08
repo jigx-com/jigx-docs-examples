@@ -3,6 +3,20 @@ title: go-back
 slug: LX00-go-back
 createdAt: Thu Jun 09 2022 18:22:53 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Nov 04 2024 09:47:02 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # go-back

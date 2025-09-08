@@ -3,6 +3,20 @@ title: action-list
 slug: c214-action-list
 createdAt: Thu Jun 09 2022 18:19:16 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Feb 24 2025 09:57:20 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # action-list

@@ -3,6 +3,20 @@ title: Use template
 slug: zQSX-use
 createdAt: Thu May 25 2023 10:24:01 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Feb 16 2024 06:55:49 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Use template

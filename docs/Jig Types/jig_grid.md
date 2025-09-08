@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # jig.grid
 
 The `jig.grid` enables you to create grid layouts in your app, organizing content into rows and columns for a visually consistent and flexible interface. It helps align elements proportionally, ensuring a structured design. The grid is ideal for creating galleries to display photos or product images, as well as dashboards, menus, and product lists.
@@ -42,13 +59,13 @@ The `jig.grid` has two available configuration options:
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/JJ-Grid-auto.png" alt="Custom Grid - Delivery " width="188"><figcaption><p>Custom Grid - Delivery </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/JJ-Grid-auto.png" alt="Custom Grid - Delivery" width="188"><figcaption><p>Custom Grid - Delivery</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 In this example, a delivery company uses a dashboard for drivers to display their daily deliveries, urgent tasks, inspection checklists, logs, and customer ratings or complaints. The `jig.grid` with the `custom grid` option is used, allowing multiple `grid-item` configurations. These items include widgets, images, and custom components in various sizes.
 
-**Examples:** \
+**Examples:**\
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-custom.jigx). Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-grid).
 {% endcolumn %}
 {% endcolumns %}
@@ -409,7 +426,7 @@ children:
 {% column %}
 In this example, a gallery of images is created to showcase the services a company offers. The `jig.grid` type is used with a datasource, enabling a simple configuration based on the records in the datasource. The `component.grid-item` only needs to be configured once using the expression `=@ctx.current.item.` followed by the desired data field. Using `current` loops through the datasource, creating a grid-item for each data record. Note that the specified `size` will apply to all returned records.
 
-**Examples:** \
+**Examples:**\
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-auto.jigx)
 {% endcolumn %}
 {% endcolumns %}
@@ -1732,8 +1749,8 @@ actions:
 {% column %}
 This example demonstrates that setting the `title` property in the `component.widget` `grid-item` overrides the default jig `title`. Custom icons are also configured in the `component.widget` of the grid jig for each widget. For image widgets, the title configured in the `component.image` of the `grid-item` overlays the image.
 
-**Examples:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-custom-icons-titles.jigx). \
-Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-grid).&#x20;
+**Examples:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-grid/grid-custom-icons-titles.jigx).\
+Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-grid).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -2060,7 +2077,7 @@ actions:
 
 {% columns %}
 {% column %}
-In this example, each `component.widget` is configured with an `onPress` event that executes an action, such as `opening-a-map` or displaying an `info-modal`. Note that the configured `onPress` event overrides the default behavior of opening the jig specified in the `jigId`.&#x20;
+In this example, each `component.widget` is configured with an `onPress` event that executes an action, such as `opening-a-map` or displaying an `info-modal`. Note that the configured `onPress` event overrides the default behavior of opening the jig specified in the `jigId`.
 {% endcolumn %}
 
 {% column %}

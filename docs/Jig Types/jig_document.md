@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # jig.document
 
 {% columns %}
@@ -7,13 +24,11 @@ The document jig type is used to display documents connected to your solution. T
 1. PDF file
 2. HTML page - set up using:
    1. A URL (website link)
-   2. HTML&#x20;
+   2. HTML
 {% endcolumn %}
 
 {% column %}
 <figure><img src="../../.gitbook/assets/jig-document-intro.png" alt="Document jig" width="188"><figcaption><p>Document jig</p></figcaption></figure>
-
-
 {% endcolumn %}
 {% endcolumns %}
 
@@ -41,7 +56,7 @@ The code below is an extract from the full _jigx-samples_ solution. The code sni
 {% column %}
 This example displays a `Document Jig` used to display a `PDF document`.
 
-**Examples**: \
+**Examples**:\
 See the full code sample using static data in [GitHub](jig_document.md) See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-document/dynamic-data/document-pdf-dd.jigx).
 
 {% hint style="success" %}

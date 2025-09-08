@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # jig.tabs
 
 {% columns %}
@@ -42,7 +59,7 @@ The `jig.tabs` can be configured in the following way in Jigx Builder.
 {% column %}
 This example demonstrates the simplest use of the `jig.tabs`. Four tabs are configured, each opens the corresponding jig.
 
-**Examples:** \
+**Examples:**\
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-basic.jigx). Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/supporting-jigs).
 {% endcolumn %}
 {% endcolumns %}
@@ -144,8 +161,6 @@ children:
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 {% tabs %}
 {% tab title="inventory.jigx" %}
@@ -285,7 +300,7 @@ source:
 {% column %}
 This example shows the `jig.tabs` with ten tabs. Tab8, Tab9, and Tab10 are not visible. Setting the the `areTabsScrollable: true` property enables scrolling on the tab bar. Each tab opens the corresponding jig when pressed. For demonstration purposes placeholder jigs are used.
 
-**Examples:** \
+**Examples:**\
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-scrollable.jigx). Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/supporting-jigs).
 {% endcolumn %}
 {% endcolumns %}
@@ -403,8 +418,8 @@ children:
 {% column %}
 This example shows the `jig.tabs` with four tabs. Setting the `isSwipeable: true` property allows you to swipe left and right anywhere on the screen to navigate between the tabs instead of pressing on each tab title to display the jigs. Each tab opens the corresponding jig.
 
-**Examples:** \
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-swipeable.jigx)&#x20;
+**Examples:**\
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-swipeable.jigx)
 {% endcolumn %}
 {% endcolumns %}
 
@@ -537,7 +552,7 @@ tabs:
 {% column %}
 This example demonstrates the `jig.tabs` with the `icons`. The active tab's `icon` displays in the primary color.
 
-**Examples:** \
+**Examples:**\
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-icons.jigx).
 {% endcolumn %}
 {% endcolumns %}
@@ -611,8 +626,8 @@ tabs:
 {% column %}
 This example demonstrates `jig.tabs` where the _Logs_ tab is configured to use a jig with inputs. The input values are set within `jig.tabs` under the `jigId` of the corresponding jig.
 
-**Examples:** \
-See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-inputs.jigx). Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/supporting-jigs).&#x20;
+**Examples:**\
+See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-inputs.jigx). Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/supporting-jigs).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -748,7 +763,7 @@ tabs:
 {% column %}
 This example demonstrates how to use a single jig to set the content for each tab by using the jig `inputs`.
 
-**Examples:** \
+**Examples:**\
 See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/jig-tabs-content.jigx) Supporting jig samples in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-tabs/supporting-jigs).
 {% endcolumn %}
 {% endcolumns %}

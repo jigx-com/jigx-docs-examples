@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Actions
 
 Refer to the [actions](https://docs.jigx.com/building-apps-with-jigx/ui/actions) topic to understand concepts such as local and global actions, types of actions, as well as, how and where to configure actions in jigs, and data. The topics in this section provide code examples for each action.

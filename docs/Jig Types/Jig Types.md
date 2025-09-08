@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Jig Types
 
 Refer to the [Jigs (screens)](https://docs.jigx.com/building-apps-with-jigx/ui/jigs-_screens_) topic to understand concepts, use cases, and how to configure the various jig types. The topics in this section provide code examples for each jig type.

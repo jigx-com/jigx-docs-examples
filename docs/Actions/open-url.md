@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # open-url
 
 This action opens a web page depending on the provided URL or [deep links](https://docs.jigx.com/building-apps-with-jigx/additional-functionality/deep-links) to an external app. open-url can be used in a list of actions, such as `swipeable` and `rightElement`, or with another action; after the main action is executed, open-url is called and opens the configured URL.

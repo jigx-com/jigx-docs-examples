@@ -3,6 +3,20 @@ title: confirm
 slug: 41-N-confirm
 createdAt: Thu Jun 09 2022 18:18:56 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 17:44:28 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # confirm

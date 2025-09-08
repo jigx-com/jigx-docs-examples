@@ -1,8 +1,25 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # progress-bar
 
 {% columns %}
 {% column %}
-&#x20;Use the progress-bar component to visually represent a task or process's current status and progression by indicating how much time or work remains until completion.&#x20;
+Use the progress-bar component to visually represent a task or process's current status and progression by indicating how much time or work remains until completion.
 {% endcolumn %}
 
 {% column %}
@@ -109,7 +126,7 @@ This example shows the different ways the `title` and `subtitle` can be configur
 {% column %}
 You can use the `helperText` property to provide a tip or hint to help users read the progress-bar. Use the `errorText` to show an error or negative text at the bottom of the progress-bar. In this example, the `errorText` is used to show that there has been no progress made.
 
-**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-error-helper.jigx).&#x20;
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-error-helper.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -165,7 +182,7 @@ children:
 {% column %}
 In this example we change the `color` of the bar, break the bar up by using `steps` and change the thickness of the bar using the `size` property.
 
-**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-color.jigx).&#x20;
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-color.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -342,7 +359,7 @@ children:
 {% column %}
 In this example the `onPress` property uses the `action.set-state` set to `true`. When the progress-bar is pressed the state is evaluated in the `when` property of the `component.image`, which then shows the image.
 
-**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-onpress.jigx).&#x20;
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-onpress.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -388,14 +405,12 @@ onRefresh:
 {% columns %}
 {% column %}
 <figure><img src="../../.gitbook/assets/PB-DynmicL (1).PNG" alt="Dynamic progress-bar" width="375"><figcaption><p>Dynamic progress-bar</p></figcaption></figure>
-
-
 {% endcolumn %}
 
 {% column %}
 This example shows how the `component.progress-bar` steps are dynamically updated when the list-item checkbox is selected. The `errorText` property and the `helperText` property are dynamically changed using an expression.
 
-**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-dynamic.jigx).&#x20;
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

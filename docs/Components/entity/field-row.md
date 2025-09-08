@@ -3,6 +3,20 @@ title: field-row
 slug: iGAk-field-row
 createdAt: Thu Jun 09 2022 19:32:19 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jul 24 2024 09:33:13 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # field-row

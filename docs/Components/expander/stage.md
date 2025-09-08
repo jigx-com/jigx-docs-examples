@@ -3,6 +3,20 @@ title: stage
 slug: Cw5F-stage
 createdAt: Thu Jun 09 2022 19:58:34 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Apr 24 2025 07:14:20 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # stage

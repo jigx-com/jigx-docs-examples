@@ -1,8 +1,25 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # jig.fullscreen
 
 {% columns %}
 {% column %}
-The `jig.full-screen` allows you to configure a component that covers the entire screen of the jig with no other elements visible. This is useful for creating a full screen of a [location](../Components/location.md) screen.&#x20;
+The `jig.full-screen` allows you to configure a component that covers the entire screen of the jig with no other elements visible. This is useful for creating a full screen of a [location](../Components/location.md) screen.
 {% endcolumn %}
 
 {% column %}
@@ -40,7 +57,7 @@ In this example the location to the Seattle Aquarium is shown in full screen usi
 Refer to the [location](../Components/location.md) component for additional location setup options.
 
 **Examples:**\
-&#x20;See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-fullscreen/fullscreen-location-dd.jigx).
+See the full code sample using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-fullscreen/fullscreen-location-dd.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

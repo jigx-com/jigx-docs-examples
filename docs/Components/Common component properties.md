@@ -3,6 +3,20 @@ title: Common component properties
 slug: LLnT-lg-work-area
 createdAt: Fri Apr 14 2023 12:19:19 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Apr 29 2025 09:46:37 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Common component properties

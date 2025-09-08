@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # grid
 
 The grid component enables you to create grid layouts in your app, organizing content into rows and columns for a visually consistent and flexible interface. It helps align elements proportionally, ensuring a structured design. The grid is ideal for creating galleries to display photos or product images, dashboards, menus, and product lists. This component is very similar to the [jig.grid](<../../Jig Types/jig_grid.md>) the only exception is that this component can be used in a [jig.default](<../../Jig Types/jig_default.md>) with other components.

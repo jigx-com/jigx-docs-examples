@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # bottomSheet (Beta)
 
 {% hint style="danger" %}
@@ -33,7 +50,7 @@ The bottomSheet element slides up from the bottom of the screen to present addit
 {% endcolumn %}
 
 {% column %}
-Here is a simple example of a menu that is configured to open a `bottomSheet` with options to order the food. The Options `jigId` is specified under the bottomSheet property.&#x20;
+Here is a simple example of a menu that is configured to open a `bottomSheet` with options to order the food. The Options `jigId` is specified under the bottomSheet property.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -518,11 +535,11 @@ datasources:
 ### BottomSheet with backdrop
 
 {% columns %}
-{% column width="41.66666666666667%" %}
+{% column %}
 In this example, the backdrop of the bottomSheet completely obscures the menu screen. This is achieved by using the `isVisible: true` and maximum `opacity: 1`. Note: Setting `isVisible: false` allows the menu to be visible.
 {% endcolumn %}
 
-{% column width="58.33333333333333%" %}
+{% column %}
 <figure><img src="../../../.gitbook/assets/BS-Backdrop.png" alt="Backdrop" width="375"><figcaption><p>Backdrop</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}

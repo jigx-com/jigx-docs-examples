@@ -3,6 +3,20 @@ title: Use template
 slug: CNts-use-template
 createdAt: Thu May 25 2023 10:24:29 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 14 2024 09:03:38 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Use template

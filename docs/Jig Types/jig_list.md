@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # jig.list
 
 {% columns %}
@@ -75,11 +92,11 @@ The code below is an extract from the full _jigx-samples_ solution. The code sni
 ### Simple List
 
 {% columns %}
-{% column width="41.66666666666667%" %}
+{% column %}
 <figure><img src="../../.gitbook/assets/simple-list-dd.PNG" alt="Simple List" width="188"><figcaption><p>Simple List</p></figcaption></figure>
 {% endcolumn %}
 
-{% column width="58.33333333333333%" %}
+{% column %}
 This example displays the list in its most basic form without any additional properties or elements configured. Scroll down for more examples of how you can implement lists.
 
 **Examples**:\
@@ -358,14 +375,10 @@ See the full code sample using [GitHub](https://github.com/jigx-com/jigx-samples
 **Datasources:**
 
 See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/expander-on-list.jigx). See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob0/main/quickstart/jigx-samples/datasources/expanders%20and%20stages/expander-on-list-dynamic.jigx) in Github.
-
-
 {% endcolumn %}
 
 {% column %}
 <figure><img src="../../.gitbook/assets/jig-list-exander.png" alt="List with expander"><figcaption><p>List with expander</p></figcaption></figure>
-
-
 {% endcolumn %}
 {% endcolumns %}
 
@@ -471,11 +484,11 @@ tabs:
 ### List with Stages
 
 {% columns %}
-{% column width="41.66666666666667%" %}
+{% column %}
 <figure><img src="../../.gitbook/assets/jig-list-stage.png" alt="List with stages" width="375"><figcaption><p>List with stages</p></figcaption></figure>
 {% endcolumn %}
 
-{% column width="58.33333333333333%" %}
+{% column %}
 This example is for list items that would have a left and right element and would typically show a start-and-end concept. A common use of this is usually flight schedules, however, this can be used for a multitude of different uses as you can choose a different icon.
 
 {% hint style="info" %}
@@ -594,11 +607,11 @@ tabs:
 ### List with Product-items
 
 {% columns %}
-{% column width="41.66666666666667%" %}
+{% column %}
 <figure><img src="../../.gitbook/assets/jig-list-productItems.png" alt="List with product items" width="188"><figcaption><p>List with product items</p></figcaption></figure>
 {% endcolumn %}
 
-{% column width="58.33333333333333%" %}
+{% column %}
 This example displays the built-in functionality of displaying product items in a way that allows for impact yet does not require intricate setups.
 
 **Examples:**\
@@ -608,7 +621,7 @@ See the full code sample using [static data](https://github.com/jigx-com/jigx-sa
 See the full datasource code sample for [static data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products.jigx) in GitHub. See the full datasource code sample for [dynamic data](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/products/products-dynamic.jigx) in GitHub.
 
 {% hint style="success" %}
-Using the code below requires data in the database, the jigx.sample solution has the data provided for products. You can use the products.csv file in <[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/products.csv) and upload it via the [Data](https://docs.jigx.com/administration/solutions/data configuration in Jigx Management.
+Using the code below requires data in the database, the jigx.sample solution has the data provided for products. You can use the products.csv file in <[GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/csv/products.csv) and upload it via the \[Data]\(https://docs.jigx.com/administration/solutions/data configuration in Jigx Management.
 {% endhint %}
 {% endcolumn %}
 {% endcolumns %}
@@ -696,11 +709,11 @@ tabs:
 ### List with Avatars
 
 {% columns %}
-{% column width="41.66666666666667%" %}
+{% column %}
 <figure><img src="../../.gitbook/assets/listwithavatarsdd.PNG" alt="List with avatars" width="188"><figcaption><p>List with avatars</p></figcaption></figure>
 {% endcolumn %}
 
-{% column width="58.33333333333333%" %}
+{% column %}
 This example displays the list items in a way that allows for impact yet does not require intricate setups. Avatars are displayed for each list item.
 
 **Examples:**\
@@ -993,11 +1006,11 @@ tabs:
 ### Horizontal list
 
 {% columns %}
-{% column width="41.66666666666667%" %}
+{% column %}
 <figure><img src="../../.gitbook/assets/horizontallistdd.PNG" alt="Horizontal list" width="375"><figcaption><p>Horizontal list</p></figcaption></figure>
 {% endcolumn %}
 
-{% column width="58.33333333333333%" %}
+{% column %}
 This provides an example of a horizontal list with some UI elements like an image and values configured. Horizontal lists are especially helpful when used on a Composite Jig with other Jigs.
 
 **Examples:**\

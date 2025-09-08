@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # open-app-settings
 
 Certain features, like location services, require user permissions to function properly. On both iOS and Android operating systems, users are prompted to grant these permissions the first time they are needed. However, if a user denies a permission request, especially on iOS, the app cannot prompt them again directly. For instance, if an iOS device user declines to grant location access when prompted, the system prevents the app from requesting that permission again. The only way to enable it afterward is for the user to manually go into their device’s settings and allow location access for the app.

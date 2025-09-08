@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # jig.table
 
 The table jig displays structured data in rows and columns, allowing users to view and interact with multiple records within the app.
@@ -176,7 +193,7 @@ columns:
 {% column %}
 This table example displays a week's shifts per technician using a `jig.table` with Dynamic Data. The table is set up with a colored `header` and `footer`, and sorting is configured in descending order on the Technician Name column.
 
-**Example:** \
+**Example:**\
 See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-table/jig-table-header-footer-sorting.jigx).
 {% endcolumn %}
 
@@ -289,7 +306,7 @@ datasources:
 {% column %}
 In this example, a table summarizes the sale of products for the month. In the `columnDefinition`, the `width`, `footer`, and `cell:format` is configured. The `tableHeader` and tableFooter's appearance is enhanced by adding a color.
 
-**Example:** \
+**Example:**\
 See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-table/jig-table-columndef-width.jigx).
 {% endcolumn %}
 {% endcolumns %}
@@ -409,7 +426,7 @@ In this example, a table displays delivery items and their current status. The s
 
 The modal jig includes a `form` component with a `text-field` that displays the `initialValue` using the status passed from the `onPress` event. An `execute-entity` action is used to update the status, and a `goBack: previous` closes the modal, returning to the table with the updated status shown.
 
-**Example:** \
+**Example:**\
 See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-table/jig-table-onpress-edit.jigx).
 {% endcolumn %}
 {% endcolumns %}
@@ -550,7 +567,7 @@ This example demonstrates how to delete rows from a table. The `isSelectable: tr
 
 **Note:** The `selectableToolbar` only appears when rows are selected. Avoid overloading the `selectionToolbar` with too many actions or long labels, as it may compress, break layout, or disappear if space runs out.
 
-**Example:** \
+**Example:**\
 See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-table/jig-table-delete-select-toolbar.jigx).
 {% endcolumn %}
 
@@ -625,7 +642,7 @@ selectionToolbar:
 {% column %}
 In this example, a table displays recorded sales. An action button in the top `toolbar` allows users to add a new row to the table. Tapping the button opens a jig as a bottom modal using `isModal: true`. The modal contains a `component.form` and an `execute-entity` action to create the new row. Once submitted, the `goBack: previous` property closes the modal, and the table updates to show the newly added row at the bottom.
 
-**Example:** \
+**Example:**\
 See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-table/table-add-row.jigx).
 {% endcolumn %}
 {% endcolumns %}

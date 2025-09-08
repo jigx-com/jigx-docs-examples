@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # list
 
 This component is very similar to the [jig.list](<../../Jig Types/jig_list.md>) the only exception is that this list component can be used in a [jig.default](<../../Jig Types/jig_default.md>) with other items, whereas the [jig.list](<../../Jig Types/jig_list.md>) is a jig dedicated to a list only. With this component, you can typically combine a list with other components. Another difference is that [jig.list](<../../Jig Types/jig_list.md>) automatically display lists on the widget, which is not true with lists on a [jig.default](<../../Jig Types/jig_default.md>).
@@ -8,7 +25,7 @@ As far as the functionality goes, the same list options are available as with th
 2. [Bar charts](../charts/bar-chart.md)
 3. [Expander](../expander/expander.md)
 4. [Pie charts](../charts/pie-chart.md)
-5. [Product item](../list/product-item.md)
+5. [Product item](product-item.md)
 6. [Stage](stage.md)
 
 ## Configuration options

@@ -3,6 +3,20 @@ title: divider
 slug: BFgX-divider
 createdAt: Wed Jan 29 2025 07:48:11 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Feb 03 2025 08:08:23 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # divider

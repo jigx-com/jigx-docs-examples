@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # execute-sql
 
 This action allows the app to execute a SQL statement during local SQLite execution, which is used to edit either local tables or Dynamic Data tables. It's useful for running custom queries or updates in response to user interactions or app events. To improve performance, consider creating indexes on frequently queried columns—this enables SQLite to locate rows more efficiently using optimized lookup structures.
@@ -17,7 +34,7 @@ This action allows the app to execute a SQL statement during local SQLite execut
 
 ### Execute SQL statements to update & delete
 
-This example shows a list with an `onPress` event that executes a SQL statement to update the _Tags_ table in the local database. A `swipeable` event is configured to delete the list item record from the local database.&#x20;
+This example shows a list with an `onPress` event that executes a SQL statement to update the _Tags_ table in the local database. A `swipeable` event is configured to delete the list item record from the local database.
 
 {% tabs %}
 {% tab title="create-tag.jigx" %}

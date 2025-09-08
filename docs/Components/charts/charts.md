@@ -3,6 +3,20 @@ title: charts
 slug: n5MH-charts
 createdAt: Wed Oct 12 2022 08:42:41 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jan 17 2024 10:18:12 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # charts

@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # count-up
 
 {% columns %}
@@ -26,7 +43,7 @@ Some properties are common to all components, see [Common component properties](
 {% column %}
 This example shows how to set up a basic `count-up` component that starts counting from the current moment.
 
-**Examples:** See the full code example in GitHub.&#x20;
+**Examples:** See the full code example in GitHub.
 {% endcolumn %}
 
 {% column %}
@@ -74,7 +91,7 @@ children:
 {% column %}
 This example displays two `count-up` components of different sizes. The first is `extra-large`, with `labels` `positioned` above it, while the second is `medium`-sized with `labels` below.
 
-**Examples:** See the full code example in GitHub.&#x20;
+**Examples:** See the full code example in GitHub.
 {% endcolumn %}
 {% endcolumns %}
 

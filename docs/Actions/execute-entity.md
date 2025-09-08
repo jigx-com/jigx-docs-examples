@@ -3,6 +3,20 @@ title: execute-entity
 slug: jGWl-execute-entity
 createdAt: Thu Jun 09 2022 18:22:55 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Nov 04 2024 15:41:43 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # execute-entity

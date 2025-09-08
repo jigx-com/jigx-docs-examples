@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # interactive-image
 
 An interactive image has clickable links that can be used in various ways. For instance, it can be clicked on to reveal information about a specific point, indicate a selection, such as a booking, or use it as a multi-selection. This is typically used when the information you need to convey is better presented visually than in text.

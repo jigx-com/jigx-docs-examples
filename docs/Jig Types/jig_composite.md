@@ -1,8 +1,25 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # jig.composite
 
 {% columns %}
 {% column %}
-The composite jig is a jig made up of several parts or elements. In this case, a jig is made up of several jigs. This jig allows you to display multiple jigs on one list where you would otherwise be unable to combine the functionality in the same way.&#x20;
+The composite jig is a jig made up of several parts or elements. In this case, a jig is made up of several jigs. This jig allows you to display multiple jigs on one list where you would otherwise be unable to combine the functionality in the same way.
 {% endcolumn %}
 
 {% column %}
@@ -86,7 +103,7 @@ The code below is an extract from the full _jigx-samples_ solution. The code sni
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/composite-example1.png" alt="Basic Composite jig " width="188"><figcaption><p>Basic Composite jig</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/composite-example1.png" alt="Basic Composite jig" width="188"><figcaption><p>Basic Composite jig</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -97,8 +114,6 @@ This example shows the simplest way in which a `Composite Jig` can be set up - r
 See the composite jig code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/jig-composite.jigx%22). See the [location](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/location/static-data/location-with-address.jigx) code and [country list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/country-list-sd.jigx) code examples in GitHub. See the static country datasource code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/country-data-static.jigx). See the index.jigx code below to add the jig to the Home Hub.
 {% endcolumn %}
 {% endcolumns %}
-
-
 
 {% tabs %}
 {% tab title="composite-jig.jigx" %}
@@ -268,8 +283,6 @@ This example shows how a Composite jig can be used to only display certain data 
 {% columns %}
 {% column %}
 <figure><img src="../../.gitbook/assets/composite-inputs.png" alt="Composite jig with inputs" width="188"><figcaption><p>Composite jig with inputs</p></figcaption></figure>
-
-
 {% endcolumn %}
 
 {% column %}
