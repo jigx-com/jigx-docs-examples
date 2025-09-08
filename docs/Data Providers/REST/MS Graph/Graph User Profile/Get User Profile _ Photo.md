@@ -3,6 +3,20 @@ title: Get User Profile & Photo
 slug: Vusj-get-user-profile
 createdAt: Fri Nov 25 2022 19:06:31 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 13:35:58 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Get User Profile & Photo

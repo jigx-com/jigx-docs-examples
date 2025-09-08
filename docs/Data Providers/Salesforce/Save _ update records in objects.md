@@ -3,6 +3,20 @@ title: Save & update records in objects
 slug: 7Wlr-save-or-update-an
 createdAt: Wed Jul 19 2023 12:41:59 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 15:04:19 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Save & update records in objects
@@ -25,7 +39,7 @@ This example shows how to update a Salesforce Opportunity record. From the list 
 {% endcolumn %}
 {% endcolumns %}
 
-:::CodeblockTabs&#x20;
+:::CodeblockTabs
 
 {% tabs %}
 {% tab title="Salesforce-opp-update.jigx" %}

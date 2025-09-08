@@ -3,6 +3,20 @@ title: List files
 slug: qxbO-get-a-file
 createdAt: Mon May 29 2023 08:25:13 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 14:37:02 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # List files

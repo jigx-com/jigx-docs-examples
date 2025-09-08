@@ -3,6 +3,20 @@ title: Creating Dynamic Data
 slug: 4lPS-creating-data-using-a-form
 createdAt: Wed Jul 13 2022 10:20:52 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Mar 06 2025 08:30:25 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Creating Dynamic Data

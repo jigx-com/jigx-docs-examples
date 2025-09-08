@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Upload a file
 
 ## Upload file in a jig
@@ -6,11 +23,11 @@
 {% column %}
 In this example, an expense claim form allows you to capture expense details and upload a file, such as a slip or invoice.
 
-The `media-field` is configured to accept `any` file type, with a `maximumFileSize` set to ensure files remain within acceptable limits. An `execute-entity` action creates the record in the datasource and links the uploaded file to the record by using the `create` method, with the `file` specified in the `localPath` property.&#x20;
+The `media-field` is configured to accept `any` file type, with a `maximumFileSize` set to ensure files remain within acceptable limits. An `execute-entity` action creates the record in the datasource and links the uploaded file to the record by using the `create` method, with the `file` specified in the `localPath` property.
 {% endcolumn %}
 
 {% column %}
-&#x20;![](../../../.gitbook/assets/DF-upload-files.gif)
+![](../../../.gitbook/assets/DF-upload-files.gif)
 {% endcolumn %}
 {% endcolumns %}
 

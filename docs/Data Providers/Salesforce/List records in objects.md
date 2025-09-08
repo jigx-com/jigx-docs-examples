@@ -3,6 +3,20 @@ title: List records in objects
 slug: Cg0q-list
 createdAt: Wed Jul 19 2023 12:39:56 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 15:03:54 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # List records in objects
@@ -23,7 +37,7 @@ Examples are based on test data in a Jigx demo Salesforce environment. Copying t
 {% endcolumn %}
 
 {% column %}
-The code below shows a simple example of a list of accounts in Salesforce. Adding `search` and `filter` properties allows you to easily find the accounts you looking for.&#x20;
+The code below shows a simple example of a list of accounts in Salesforce. Adding `search` and `filter` properties allows you to easily find the accounts you looking for.
 {% endcolumn %}
 {% endcolumns %}
 

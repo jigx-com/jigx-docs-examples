@@ -3,6 +3,20 @@ title: Setting up your solution
 slug: 1gfe-setting-up-your-solution
 createdAt: Mon Jun 13 2022 19:39:00 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Jan 18 2024 14:09:17 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Setting up your solution
@@ -30,7 +44,7 @@ Now that the solution has been published, the right people need access.
 2. You can adjust these rights or assign additional users to this solution. Refer to [Users](https://docs.jigx.com/administration/users) for more information on this.
 
 {% hint style="success" %}
-&#x20;If at any time you don't want the sample solution visible in the application, you can set your rights to Deny.
+If at any time you don't want the sample solution visible in the application, you can set your rights to Deny.
 {% endhint %}
 
 ## Uploading databases

@@ -3,6 +3,20 @@ title: Get list messages
 slug: _wPG-get
 createdAt: Thu May 02 2024 16:42:44 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 18:00:49 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Get list messages

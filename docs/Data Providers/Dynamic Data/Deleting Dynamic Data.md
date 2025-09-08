@@ -3,6 +3,20 @@ title: Deleting Dynamic Data
 slug: NpAf-deleting-dynamic-data-records
 createdAt: Wed Jul 13 2022 10:22:54 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Mar 06 2025 09:13:20 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Deleting Dynamic Data

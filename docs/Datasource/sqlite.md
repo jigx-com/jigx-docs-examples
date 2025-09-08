@@ -3,6 +3,20 @@ title: sqlite
 slug: GLSk-sqlite
 createdAt: Thu Jun 09 2022 18:34:04 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 15:06:18 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # sqlite

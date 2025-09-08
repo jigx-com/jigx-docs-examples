@@ -3,6 +3,20 @@ title: Get Calendar List
 slug: EY7_-get-calendar-list
 createdAt: Sat Nov 26 2022 20:47:57 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 13:41:56 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Get Calendar List

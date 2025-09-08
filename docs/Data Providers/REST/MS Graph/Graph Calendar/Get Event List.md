@@ -3,6 +3,20 @@ title: Get Event List
 slug: eq2E-get-event-list
 createdAt: Sat Nov 26 2022 20:48:07 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 17:58:07 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Get Event List

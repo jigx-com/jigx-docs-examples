@@ -7,6 +7,20 @@ description: >-
   Learn how to execute SQL commands to retrieve a list of customers from an
   Azure SQL database and display it in a list jig. This document includes
   detailed Jigx code examples for executing stored proce
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # List customers (SELECT)

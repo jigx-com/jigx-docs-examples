@@ -3,6 +3,20 @@ title: Graph Calendar
 slug: 8OyO-graph-calendar
 createdAt: Sat Nov 26 2022 20:46:53 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri May 03 2024 09:32:23 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Graph Calendar

@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Delete customer (DELETE)
 
 ## Scenario
@@ -17,7 +34,7 @@ Add the ability to delete a customer from the list of customers by swiping left 
 A delete function is configured to call the REST APIs DELETE operation and identify the record to delete using the customer Id (CustID). The function is referenced in the `execute-entity` action which will delete the customer from the list and from the datasource via the REST API when the Delete button is pressed.
 
 {% hint style="info" %}
-This code sample builds upon the previous [List customers (GET)](<List customers _GET_.md>) step, to develop a complete and functional solution.&#x20;
+This code sample builds upon the previous [List customers (GET)](<List customers _GET_.md>) step, to develop a complete and functional solution.
 {% endhint %}
 
 ## REST API

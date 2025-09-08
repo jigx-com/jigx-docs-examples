@@ -3,6 +3,20 @@ title: Reading Dynamic Data
 slug: KNt_-reading-dynamic-data-tables
 createdAt: Wed Jul 13 2022 10:22:47 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Mar 06 2025 08:38:51 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Reading Dynamic Data

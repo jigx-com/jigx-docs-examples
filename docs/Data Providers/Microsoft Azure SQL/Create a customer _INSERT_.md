@@ -3,6 +3,20 @@ title: Create a customer (INSERT)
 slug: G9nH-creating-a-record
 createdAt: Wed Mar 15 2023 12:45:50 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 11:36:55 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Create a customer (INSERT)

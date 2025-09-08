@@ -3,6 +3,20 @@ title: Update/Save a file
 slug: jhbL-up
 createdAt: Mon May 29 2023 08:24:46 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 13:47:19 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Update/Save a file

@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # static
 
 Static lists are typically used when data needs to be accessed but hardly ever manipulated, handled, or updated. Within Jigx , we have ensured that static data is easily specified but also accessed with the same ease. Static data can be configured as a direct data source on a jig or as a global datasource that can be accessed or referenced across various jigs or components.
@@ -29,7 +46,7 @@ We've gone ahead and expanded the first one for you. Feel free to view any other
 {% column %}
 Below is an example of static data that has been configured locally.
 
-**Examples**: See the full example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-local.jigx%22)&#x20;
+**Examples**: See the full example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/simple-list-sd-local.jigx%22)
 {% endcolumn %}
 {% endcolumns %}
 
@@ -151,7 +168,7 @@ You can also create static data right inside your component or as an `initialVal
 {% endcolumn %}
 
 {% column %}
-In this example static data is used to create the data need for selection in the `component.dropdown`. \
+In this example static data is used to create the data need for selection in the `component.dropdown`.\
 **Example:**\
 See the full code sample on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-static-data/static-datasource/static-list.jigx).
 {% endcolumn %}
@@ -201,8 +218,7 @@ children:
 {% endcolumn %}
 
 {% column %}
-In this example static data is defined and used in the `component.list-item`.\
-
+In this example static data is defined and used in the `component.list-item`.\\
 
 **Example:**\
 See the code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/employees/people.jigx).

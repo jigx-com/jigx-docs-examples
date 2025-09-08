@@ -3,6 +3,20 @@ title: Get Event Item
 slug: e9aK-get-event-item
 createdAt: Sat Nov 26 2022 20:48:33 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed May 08 2024 14:27:40 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Get Event Item

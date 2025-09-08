@@ -3,6 +3,20 @@ title: Create an app using REST APIs
 slug: b2BB-hello
 createdAt: Tue Apr 30 2024 08:11:27 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri May 10 2024 12:35:50 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Create an app using REST APIs

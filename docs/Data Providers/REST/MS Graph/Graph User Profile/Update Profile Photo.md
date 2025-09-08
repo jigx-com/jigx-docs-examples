@@ -3,6 +3,20 @@ title: Update Profile Photo
 slug: rw3S-update-profile-photo
 createdAt: Sat Nov 26 2022 06:49:22 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 13:40:09 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Update Profile Photo

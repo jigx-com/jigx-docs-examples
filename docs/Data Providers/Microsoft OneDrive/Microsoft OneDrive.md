@@ -3,6 +3,20 @@ title: Microsoft OneDrive
 slug: ZIfC-micor
 createdAt: Thu Nov 16 2023 18:03:28 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Nov 24 2023 12:02:23 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Microsoft OneDrive

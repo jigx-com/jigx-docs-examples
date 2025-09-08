@@ -3,6 +3,20 @@ title: Updating Dynamic Data
 slug: P4l1-updating-dynamic-data-records
 createdAt: Wed Jul 13 2022 10:22:51 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Mar 06 2025 08:57:54 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Updating Dynamic Data

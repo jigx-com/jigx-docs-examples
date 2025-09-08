@@ -3,6 +3,20 @@ title: Data Providers
 slug: BPvJ-da
 createdAt: Thu Nov 16 2023 18:01:19 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue May 21 2024 15:22:41 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Data Providers

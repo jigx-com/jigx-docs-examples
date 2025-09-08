@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # REST
 
 Integrating with a REST API is a key step in enhancing your mobile application, allowing it to access and interact with external data and services efficiently. Jigx app solutions integrate with REST API through the REST data provider, for more information on the provider, see [REST](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest), [REST Authentication](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest/rest-authentication), [Local REST Calls](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest/local-rest-calls), [Microsoft Graph OAuth](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest/microsoft-graph-oauth), [REST syncing & loading local Data](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest/rest-syncing-_-loading-local-data) and [REST best practice](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest/rest-best-practice).

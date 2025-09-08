@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Update multiple records in a single REST call
 
 ## Why would you want to update multiple records in a single REST call?
@@ -222,7 +239,7 @@ action:
 * Add an `execute-entities` action to call the function that will update all the customer records in the local table (using `method: update`) and in the REST service (`function: rest-update-customer`). Define the `parameter` property to update the `customerType` property to Bronze. Configuring the `data` property is used to configure the properties that are required to update all records in the list.
 
 {% hint style="success" %}
-An alternate option would be to use the following expression under data, removing the need for functionParameter: `data: =ctx.datasources.customers ~> | $ | { "customerType": "Bronze "} |`&#x20;
+An alternate option would be to use the following expression under data, removing the need for functionParameter: `data: =ctx.datasources.customers ~> | $ | { "customerType": "Bronze "} |`
 {% endhint %}
 
 {% code title="update-customerType.jigx" %}

@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Datasource
 
 Use [Datasources](https://docs.jigx.com/building-apps-with-jigx/data/datasources) to access and reference data surfaced in [Data Providers](<../Data Providers/Data Providers.md>). This section provides examples of code snippets for working with datasources.

@@ -3,6 +3,20 @@ title: Database Scripts
 slug: jQ3e-database-scripts
 createdAt: Wed Mar 15 2023 12:32:13 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue May 21 2024 10:42:03 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Database Scripts

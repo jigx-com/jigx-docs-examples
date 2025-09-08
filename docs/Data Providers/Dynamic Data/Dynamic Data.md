@@ -3,6 +3,20 @@ title: Dynamic Data
 slug: N5pi-dynamic-data
 createdAt: Thu Nov 16 2023 18:01:59 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jan 22 2024 18:58:12 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Dynamic Data

@@ -3,6 +3,20 @@ title: Graph Insights
 slug: 4G23-g
 createdAt: Thu May 02 2024 16:34:35 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri May 03 2024 09:35:04 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Graph Insights

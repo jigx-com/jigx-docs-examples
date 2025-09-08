@@ -3,6 +3,20 @@ title: Salesforce
 slug: X2PD-sa
 createdAt: Thu Nov 16 2023 18:04:02 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 28 2023 05:02:23 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Salesforce

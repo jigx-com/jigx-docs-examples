@@ -3,12 +3,26 @@ title: Microsoft Azure SQL
 slug: mCBI-micor
 createdAt: Thu Nov 16 2023 18:02:24 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed May 22 2024 07:27:21 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Microsoft Azure SQL
 
 {% hint style="warning" %}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](https://docs.jigx.com//building-apps-with-jigx/data/data-providers/rest) instead. See [REST endpoints from Azure SQL](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/microsoft-azure-sql/rest-endpoints-from-azure-sql) for more information.
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/rest) instead. See [REST endpoints from Azure SQL](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/microsoft-azure-sql/rest-endpoints-from-azure-sql) for more information.
 {% endhint %}
 
 Integrating with an Azure SQL database is easy, using the SQL data provider in Jigx provides access to interact with external data efficiently. For more information on how the the provider functions, see [Microsoft Azure SQL](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/microsoft-azure-sql).

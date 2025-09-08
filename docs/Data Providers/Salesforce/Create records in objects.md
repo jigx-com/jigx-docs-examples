@@ -3,6 +3,20 @@ title: Create records in objects
 slug: jsdw-create
 createdAt: Wed Jul 19 2023 12:40:04 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 12:01:57 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Create records in objects

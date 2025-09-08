@@ -3,6 +3,20 @@ title: Create a file
 slug: VOFr-creating-a
 createdAt: Mon May 29 2023 08:23:33 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 13:53:04 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Create a file

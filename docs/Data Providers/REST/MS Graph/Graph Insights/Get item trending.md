@@ -3,6 +3,20 @@ title: Get item trending
 slug: CJ9U-g
 createdAt: Thu May 02 2024 16:35:17 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 18:25:25 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Get item trending

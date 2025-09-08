@@ -3,6 +3,20 @@ title: system
 slug: _E0A-system
 createdAt: Thu Jun 09 2022 18:33:57 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Feb 25 2025 10:32:26 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # system
