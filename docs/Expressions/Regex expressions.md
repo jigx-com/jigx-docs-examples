@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Regex expressions
 
 By combining regular (regex) expressions in your JSONata expressions in Jigx Builder, you can create complex patterns to match specific strings of text. Regex expressions are a sequence of characters that define a search pattern. It is powerful when used in text processing to find, replace, or validate strings of text. Some common uses of regex include:

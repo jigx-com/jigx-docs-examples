@@ -3,6 +3,20 @@ title: Web-view
 slug: pUyK-web-view
 createdAt: Tue Feb 14 2023 10:08:21 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Mar 04 2025 11:24:36 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Web-view

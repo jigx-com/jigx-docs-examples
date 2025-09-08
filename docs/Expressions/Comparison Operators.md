@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Comparison Operators
 
 Use JSONata comparison operators to compare values in your data and return a Boolean result (true or false) based on the comparison result, or use them for conditional logical expressions.

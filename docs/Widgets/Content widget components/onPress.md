@@ -3,6 +3,20 @@ title: onPress
 slug: PAcW-on
 createdAt: Fri May 31 2024 06:53:13 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Mar 07 2025 13:44:35 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # onPress

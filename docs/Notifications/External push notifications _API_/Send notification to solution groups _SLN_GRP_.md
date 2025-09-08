@@ -3,6 +3,20 @@ title: Send notification to solution groups (SLN_GRP)
 slug: v3H4-send-notification-to-solution-groups-slngrp
 createdAt: Fri Apr 04 2025 11:32:23 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Apr 04 2025 11:34:50 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Send notification to solution groups (SLN\_GRP)

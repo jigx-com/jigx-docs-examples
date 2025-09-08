@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # submit-form
 
 The action can be used on a form to save data into any of the [data](https://docs.jigx.com/building-apps-with-jigx/data) types (check out [Forms](https://docs.jigx.com/examples/readme/components/form) to learn more about forms). `submit-form` has to be used on a [default jig](https://docs.jigx.com/examples/readme/jig-types/jig_default) with the [form](../Components/form/form.md) component. A typical use case of submit-form is saving or updating the records in a table.

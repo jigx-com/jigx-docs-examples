@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # JavaScript expressions
 
 JavaScript functions allow you to write modular and reusable code. By encapsulating specific functionalities within functions, you can easily reuse them across different parts of your application. This modular approach not only reduces redundancy but also makes the codebase more maintainable and scalable. For example, a function that handles user date and time can be reused in multiple components or screens, ensuring consistency and reducing the likelihood of errors.
@@ -239,7 +256,7 @@ export function capitalizeJobTitle(str) {
 ## Calculate tax plus total
 
 {% columns %}
-{% column width="58.333333333333336%" %}
+{% column %}
 In this example three functions are used:
 
 * The **calculateTax** function is designed to compute the tax amount based on a given subtotal and a specified tax rate. It takes two parameters: subtotal, which represents the pre-tax amount, and taxRate, which is the tax percentage to be applied.
@@ -251,7 +268,7 @@ In the `value` property of the `text-field` an expression is used that calls the
 **Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-javascript-expressions/js-calculation.jigx).
 {% endcolumn %}
 
-{% column width="41.666666666666664%" %}
+{% column %}
 <figure><img src="../../.gitbook/assets/JS-calculateTaxTotal.PNG" alt="Function calculating tax" width="188"><figcaption><p>Function calculating tax</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
@@ -360,11 +377,11 @@ export function formatCurrency(amount, currencySymbol) {
 ## Calculate loan payment
 
 {% columns %}
-{% column width="41.66666666666667%" %}
+{% column %}
 <figure><img src="../../.gitbook/assets/JS-CalculateLoanPay.PNG" alt="Calulate loan payment function" width="188"><figcaption><p>Calulate loan payment function</p></figcaption></figure>
 {% endcolumn %}
 
-{% column width="58.33333333333333%" %}
+{% column %}
 The **calculateLoanPayment** function calculates the monthly loan payment based on the principal amount, annual interest rate (as a percentage), and loan term in years. This function is useful for financial applications that calculate monthly mortgage or loan payments based on the principal amount, annual interest rate, and loan term in years. It helps users determine their monthly payment obligations accurately.
 
 The **formatCurrency** function converts a numerical amount into a string formatted as currency, including commas for thousands and two decimal places, and prefixes it with the specified currency symbol.

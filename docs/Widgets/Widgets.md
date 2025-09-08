@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Widgets
 
 Refer to the [Widgets](https://docs.jigx.com/widgets) topic to understand how to use widgets on the Home Hub and in jigs, how to change the content and order of widgets. The topics in this section provide code examples for each widget content type.

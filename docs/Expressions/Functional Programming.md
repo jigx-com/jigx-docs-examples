@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Functional Programming
 
 You can use [JSONata Functional programming](https://docs.jsonata.org/programming) to compare values or display data based on certain conditions. You can quickly make any logical statements, and based on the result, you can perform different actions.

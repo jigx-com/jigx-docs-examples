@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Advanced expressions
 
 Use [Advanced Expressions](<Advanced expressions.md>) to filter an array of records to display specific data and perform expression transformations over the data.

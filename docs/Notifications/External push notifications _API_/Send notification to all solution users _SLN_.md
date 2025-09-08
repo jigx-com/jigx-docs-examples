@@ -3,6 +3,20 @@ title: Send notification to all solution users (SLN)
 slug: c6b5-send-notification-to-all-solution-users-sln
 createdAt: Fri Apr 04 2025 11:32:25 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Apr 04 2025 11:33:14 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Send notification to all solution users (SLN)

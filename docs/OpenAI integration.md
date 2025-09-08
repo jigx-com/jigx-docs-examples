@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # OpenAI integration
 
 Integrating OpenAI into your Jigx App offers tremendous potential to enhance functionality, improve user experiences, and drive innovation. By leveraging the power of advanced AI models, you can create smarter, more responsive, and engaging apps that meet users' evolving needs. Whether building a new app or enhancing an existing one, OpenAI provides the tools and capabilities to transform your vision into reality.
@@ -99,7 +116,7 @@ The ChatGPT REST API allows prompts in the JSON body parameter you send to the C
 
 Jigx functions are used to configure the REST integration with AI models such as ChatGPT. Once a Jigx function has been configured you can call it anywhere from your visual components. See the section on [REST](<Data Providers/REST/REST.md>) integration to understand how to use REST in Jigx. Below is an explanation describing how the parameters are configured to integrate Jigx and the AI model. It is important to refer to the AI model REST API you have selected to use, to ensure you have provided the required input and configured the output to return the correct response from the model.
 
-<table><thead><tr><th width="180.13671875">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>method</code></td><td><code>POST</code> -The POST request can be used to send training data to the server where the AI model is hosted. The server can then use this data to train the model.</td></tr><tr><td><code>url</code></td><td>Specify the URL for the AI model's REST API. For example, the URL for ChatGPT is: <a href="https://api.openai.com/v1/chat/completions">https://api.openai.com/v1/chat/completions</a></td></tr><tr><td><code>outputTransform</code></td><td>The ouputTransform is where you configure the AI response. Check the AI API response to ensure you add the correct configuration. For example, <strong>OpenAPI response</strong> shows the following code:<br> <code>{ "id": "chatcmpl-123", "object": "chat.completion", "created": 1677652288, "model": "gpt-3.5-turbo-0125", "system_fingerprint": "fp_44709d6fcb", "choices": [{ "index": 0, "message": { "role": "assistant", "content": "\n\nHello there, how may I assist you today?", }, "logprobs": null, "finish_reason": "stop" }], "usage": { "prompt_tokens": 9, "completion_tokens": 12, "total_tokens": 21 } }</code> <br>In the <strong>outputTransform</strong> you configure the following: <code>outputTransform: | { "content": $.choices[0].message.content}</code></td></tr><tr><td><code>inputTransform</code></td><td>Provide the AI with the information it requires to return the response/chat message. <code>model</code> - is the name and version of the AI model. <code>response_format</code> - the expected input type, for example, json_object. <code>message</code> - under this property configure the prompts to train the AI, by specifying the <code>role</code> and <code>content</code>. You can configure multiple sets.</td></tr><tr><td><code>parameters</code></td><td>Configure authorization and authentication depending on the AI model you using. Configure the <code>type</code>, <code>required</code> , and <code>location</code> of the parameters.</td></tr></tbody></table>
+<table><thead><tr><th width="180.13671875">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>method</code></td><td><code>POST</code> -The POST request can be used to send training data to the server where the AI model is hosted. The server can then use this data to train the model.</td></tr><tr><td><code>url</code></td><td>Specify the URL for the AI model's REST API. For example, the URL for ChatGPT is: <a href="https://api.openai.com/v1/chat/completions">https://api.openai.com/v1/chat/completions</a></td></tr><tr><td><code>outputTransform</code></td><td>The ouputTransform is where you configure the AI response. Check the AI API response to ensure you add the correct configuration. For example, <strong>OpenAPI response</strong> shows the following code:<br><code>{ "id": "chatcmpl-123", "object": "chat.completion", "created": 1677652288, "model": "gpt-3.5-turbo-0125", "system_fingerprint": "fp_44709d6fcb", "choices": [{ "index": 0, "message": { "role": "assistant", "content": "\n\nHello there, how may I assist you today?", }, "logprobs": null, "finish_reason": "stop" }], "usage": { "prompt_tokens": 9, "completion_tokens": 12, "total_tokens": 21 } }</code><br>In the <strong>outputTransform</strong> you configure the following: <code>outputTransform: | { "content": $.choices[0].message.content}</code></td></tr><tr><td><code>inputTransform</code></td><td>Provide the AI with the information it requires to return the response/chat message. <code>model</code> - is the name and version of the AI model. <code>response_format</code> - the expected input type, for example, json_object. <code>message</code> - under this property configure the prompts to train the AI, by specifying the <code>role</code> and <code>content</code>. You can configure multiple sets.</td></tr><tr><td><code>parameters</code></td><td>Configure authorization and authentication depending on the AI model you using. Configure the <code>type</code>, <code>required</code> , and <code>location</code> of the parameters.</td></tr></tbody></table>
 
 ## Examples and code samples
 

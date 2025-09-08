@@ -3,6 +3,20 @@ title: Send notification to users (USR)
 slug: OVjW-send-notification-to-users-usr
 createdAt: Fri Apr 04 2025 11:31:28 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Apr 04 2025 11:32:03 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Send notification to users (USR)

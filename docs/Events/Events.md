@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Events
 
 Events trigger actions that respond to user interactions or system changes. They enable dynamic app behavior by executing specific functions when conditions are met. By leveraging events, you can enhance user experience, automate processes, and ensure seamless data synchronization within the app. The following events are configurable:

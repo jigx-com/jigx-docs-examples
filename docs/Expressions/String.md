@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # String
 
 In [JSONata String Functions](https://docs.jsonata.org/string-functions), you can concat two strings to display multiple data records in one row, or write numbers as strings, or select only a few characters from the whole string, for example, to display a person's initials.

@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # External push notifications (API)
 
 External push notifications are messages sent from a backend system or third-party service to a mobile application, without any action required from within the app itself. These notifications are essential for delivering timely updates, alerts, and personalized content that enhance user engagement and keep your app connected to external workflows and systems.
@@ -11,7 +28,7 @@ When using the Jigx API, external push notifications are triggered through a ded
 
 This scope-based approach gives you and system integrators fine-grained control over who receives what message, making it easy to tailor communication for different roles, departments, or use cases.
 
-## API Notification Endpoint&#x20;
+## API Notification Endpoint
 
 {% code title="POST" %}
 ```none
@@ -40,7 +57,7 @@ Replace \{{baseUrl\}} with the appropriate URL for your region.
 
 ## JSON elements
 
-<table><thead><tr><th width="144.7734375">Element</th><th>Where to find it</th></tr></thead><tbody><tr><td>organizationId</td><td>In Jigx Management under <a href="https://docs.jigx.com/administration/organization-settings">organization settings.</a></td></tr><tr><td>solutionId</td><td>In Jigx Management under <a href="https://docs.jigx.com/administration/solutions/solution-details">solution settings</a></td></tr><tr><td>baseURL</td><td>Refer to the Base URL table above to find the URL for your region.</td></tr><tr><td>scope</td><td>- <strong>USR</strong> – Target specific individual users. <br>- <strong>SLN</strong> – Notify all users within a particular solution. <br>- <strong>SLN_GRP</strong> – Send messages to predefined groups within a solution. <br>- <strong>ORG</strong> – Broadcast notifications to all users across the entire organization.</td></tr><tr><td>jigId</td><td>Target a specific jig with input parameters.When the user taps on the notification (either on the native push notification or the in-app notification), the app will navigate to the specific jig.</td></tr><tr><td>screen</td><td>Default value = "jig"</td></tr><tr><td>title</td><td>Title that shows in the notification message.</td></tr><tr><td>text</td><td>Subtitle text displays under the title in the notification message.</td></tr><tr><td>inputs</td><td>Provide the input parameters to send into the jig specified in the jigId property.</td></tr><tr><td>emails</td><td>Specific the users' email addresses (array) to send the notification to.</td></tr></tbody></table>
+<table><thead><tr><th width="144.7734375">Element</th><th>Where to find it</th></tr></thead><tbody><tr><td>organizationId</td><td>In Jigx Management under <a href="https://docs.jigx.com/administration/organization-settings">organization settings.</a></td></tr><tr><td>solutionId</td><td>In Jigx Management under <a href="https://docs.jigx.com/administration/solutions/solution-details">solution settings</a></td></tr><tr><td>baseURL</td><td>Refer to the Base URL table above to find the URL for your region.</td></tr><tr><td>scope</td><td>- <strong>USR</strong> – Target specific individual users.<br>- <strong>SLN</strong> – Notify all users within a particular solution.<br>- <strong>SLN_GRP</strong> – Send messages to predefined groups within a solution.<br>- <strong>ORG</strong> – Broadcast notifications to all users across the entire organization.</td></tr><tr><td>jigId</td><td>Target a specific jig with input parameters.When the user taps on the notification (either on the native push notification or the in-app notification), the app will navigate to the specific jig.</td></tr><tr><td>screen</td><td>Default value = "jig"</td></tr><tr><td>title</td><td>Title that shows in the notification message.</td></tr><tr><td>text</td><td>Subtitle text displays under the title in the notification message.</td></tr><tr><td>inputs</td><td>Provide the input parameters to send into the jig specified in the jigId property.</td></tr><tr><td>emails</td><td>Specific the users' email addresses (array) to send the notification to.</td></tr></tbody></table>
 
 ## Examples and code snippets
 
