@@ -68,9 +68,17 @@ title: Search List (Dynamic)
 description: A dynamic list displaying search functionality
 type: jig.list
 icon: notes-paper-approve
+# Add the isSearchable property to the jig, this will add the search field 
+# to the top of the jig.
 isSearchable: true
 ```
 {% endcode %}
+
+**Applies to the following jig types:**
+
+1. list
+2. default
+3. grid
 
 **Requirements**:
 
@@ -102,6 +110,7 @@ datasources:
         FROM [default/cleaning-services] 
         WHERE '$.service' LIKE '%'||@search||'%' OR @search IS NULL
       queryParameters:
+        # Add the search parameter to the datasource query. 
         search: =@ctx.jig.state.searchText
 ```
 {% endcode %}
@@ -110,14 +119,75 @@ datasources:
 
 The `filter` property creates tabbed filter options to categorize and filter data.
 
-{% code title="Filter Configuration" %}
+**Applies to the following jig types:**
+
+1. list
+2. default
+3. grid
+
+**Requirements**:
+
+1. **Data Array**: Must contain an array of filter objects with `title` and `value` properties.
+2. **Title Property**: The display name shown in the filter tab.
+3. **Value Property**: The actual filter value used in datasource queries.
+4. **Datasource Integration**: Requires corresponding datasource query parameter binding.
+5. **Simple Values**: Recommended to use simple values like strings or numbers (e.g., 'today', '7d', '14d') rather than objects for strict equality checks.
+
+**Optional Properties**:
+
+* **initialValue**: Sets which filter tab is selected by default when the jig opens.
+
+**State Access**: To access the filter state uses: `=@ctx.jig.state.filter`
+
+{% tabs %}
+{% tab title="Filter Configuration" %}
+{% code title="" %}
 ```yaml
-filter:
-  initialValue: [optional_default_tab_value]
-  data:
-    - title: "Tab Display Name"
-      value: "filter_value"
-    - title: "Tab Display Name"  
-      value: "filter_value"
+title: Filter List (Dynamic)
+description: A dynamic list displaying filter options
+type: jig.list
+# Add the filter tab names and values.
+filter: 
+  data: 
+  - title: All
+    value: ''
+  - title: Indoor
+    value: "TRUE"
+  - title: Outdoor
+    value: "FALSE"
 ```
 {% endcode %}
+
+
+{% endtab %}
+
+{% tab title="datasource" %}
+```yaml
+datasources:
+  cleaning-services-dynamic:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+      entities:
+        - entity: default/cleaning-services
+  
+      query: |
+        SELECT 
+          id, 
+          '$.area', 
+          '$.description', 
+          '$.hourlyrate', 
+          '$.illustration', 
+          '$.image', 
+          '$.indoor', 
+          '$.onceoffrate', 
+          '$.service', 
+          '$.time' 
+        FROM [default/cleaning-services] 
+        WHERE '$.indoor' LIKE @filter or @filter IS NULL
+      # Add the filter state to access the filter data  
+      queryParameters:
+        filter: =@ctx.jig.state.filter
+```
+{% endtab %}
+{% endtabs %}
