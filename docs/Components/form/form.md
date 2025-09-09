@@ -17,25 +17,22 @@ layout:
 
 # form
 
-Using forms in mobile apps enables users to effortlessly input and submit information, enhancing interaction and user engagement.
+Using forms in mobile apps enables users to effortlessly input and submit information, enhancing interaction and user engagement.&#x20;
+
+A `component.form` acts as a **wrapper/container** for your app’s fields and UI components. Any component can be added inside the form, including:
+
+* Nested input field components (text fields, checkboxes, date pickers, etc.)
+* [Custom components](<../../Custom components _Alpha_/Custom components _Alpha_.md>) created in your solution
+* Other [Jigx components](../../components/) (like charts, lists, or layouts)
 
 {% columns %}
 {% column %}
-The following components are available in a form:
+**Benefits**
 
-1. [avatar-field](avatar-field.md)
-2. [checkbox](checkbox.md)
-3. [choice-field](choice-field.md)
-4. [date-picker](date-picker.md)
-5. [dropdown](dropdown.md)
-6. [duration-picker](duration-picker.md)
-7. [email-field](email-field.md)
-8. [media-field](media-field.md)
-9. [number-field](number-field.md)
-10. [signature-field](signature-field.md)
-11. [text-field](text-field.md)
-
-These extra components allow for the easy input and collection of data. Using forms, records in a database can be created, updated, or deleted based on user input information.
+* _Form-wide referencing:_ Each form has a unique `instanceId`, allowing you to reference the entire form in expressions, actions, or functions. This makes it easier to manage validations, submissions, and state.
+* _Unified wrapper_**:** A single `component.form` wraps any `jig.default` children, such as a chart or segmented control, without requiring all form fields to be direct children. You can mix layouts, charts, or non-field components within the same form without breaking form handling.
+* No need to place multiple forms on a single screen to handle different UI structures or separated field groups. You only need _one form_ wrapper per logical form.
+* The form automatically collects and manages all its nested field components.
 {% endcolumn %}
 
 {% column %}
@@ -47,11 +44,11 @@ These extra components allow for the easy input and collection of data. Using fo
 
 Some properties are common to all components, see [Common component properties](form.md) for a list and their configuration options.
 
-<table><thead><tr><th width="266.83984375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td><p>Define the content of the form. The following components can be used in the form:</p><ul><li><a href="choice-field.md">choice-field</a></li><li><a href="checkbox.md">checkbox</a></li><li><a href="date-picker.md">date-picker</a></li><li><a href="dropdown.md">dropdown</a></li><li><a href="duration-picker.md">duration-picker</a></li><li><a href="email-field.md">email-field</a></li><li><a href="../entity/field-row.md">field-row</a></li><li><a href="media-field.md">media-field</a></li><li><a href="number-field.md">number-field</a></li><li><a href="../entity/section.md">section</a></li><li><a href="signature-field.md">signature-field</a></li><li><a href="text-field.md">text-field</a></li></ul></td></tr><tr><td><code>instanceId</code></td><td>The unique identifier for the form.</td></tr></tbody></table>
+<table><thead><tr><th width="266.83984375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td>Define the content of the form by adding any components applicable to <code>jig.default</code>. See the <a href="../../components/">list of available components</a>. </td></tr><tr><td><code>instanceId</code></td><td>The unique identifier for the form.</td></tr></tbody></table>
 
 <table><thead><tr><th width="270.57421875">Other options</th><th></th></tr></thead><tbody><tr><td><code>isDiscardChangesAlertEnabled</code></td><td>When set to <code>true</code> the modal window preventing accidental deletion of your data without saving will pop up.</td></tr><tr><td><code>initialValues</code></td><td>Specify the data to be used as <code>initialValues</code> for fields in the form. Using the <code>reset-state</code> action with <code>initialValues</code> does not clear the form, it resets the form back to it's <code>initialValue</code>. <em><strong>Tip</strong></em>: For <code>initialValues</code> on a to function <code>isDocument: true</code> in the datasource, this way you don't have to set it up in the individual components. It is set up in one place and the form will match the components to the column names of the datasource. See the example below for Form with initialValue.</td></tr></tbody></table>
 
-<table><thead><tr><th width="264.63671875">State Configuration</th><th width="185.23046875">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>data isValid isDirty response</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
+<table><thead><tr><th width="264.63671875">State Configuration</th><th width="185.23046875">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>data<br>isValid<br>isDirty<br>response</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId <br>now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
 ## Examples and code snippets
 
