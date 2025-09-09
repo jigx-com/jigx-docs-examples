@@ -29,6 +29,7 @@ A go-to action can be set up in various ways:
 4. As `rightElement` in the list.
 5. Use the `go-to` to open a jig as a modal using the `isModal` property set to `true`. Set to `false` opens navigates to the specified jig.
 6. Use the `behaviour` property to determine if you want to push the jig into the history of navigation, by using the `new` value, or reuse the one you already have in history by using the `existing` value.
+7. When you navigate to a jig using the `action.go-to`  or open it as a bottom modal (by setting `isModal: true`), you can access the outputs from that jig by referencing its `instanceId` in your context expressions. In the originating jig, use the syntax `=@ctx.jigs.[isntance-id-of-the-jig].outputs.[key-of-output]` to retrieve specific output values. See the [#accessing-jig-outputs-from-a-modal](go-to.md#accessing-jig-outputs-from-a-modal "mention") example.
 
 ## Considerations
 
@@ -611,6 +612,75 @@ actions:
           # Open the first jig in the stack to start cycling through the data
           # for each stack captured.
           linkTo: jig-a
+```
+{% endtab %}
+{% endtabs %}
+
+### Accessing jig outputs from a modal
+
+When you navigate to a jig using the `action.go-to`  or open it as a bottom modal (by setting `isModal: true`), you can access the outputs from that jig by referencing its `instanceId` in your context expressions. In the originating jig, use the syntax `=@ctx.jigs.[isntance-id-of-the-jig].outputs.[key-of-output]` to retrieve specific output values. The `instanceId` must match the one specified in the `instanceId` field of your navigation action, and the key corresponds to the specific output field you want to access from the target jig. This allows for seamless data flow between jigs, whether they're opened as full-screen navigations or modal overlays, enabling you to capture user interactions and form submissions from the modal jig and use them in the parent jig's logic or display.
+
+<figure><img src="../../.gitbook/assets/ac-go-to-output.png" alt="go-to action with outputs"><figcaption><p>go-to action with outputs</p></figcaption></figure>
+
+{% tabs %}
+{% tab title="Jig A-navigation" %}
+```yaml
+title: Personal Details
+type: jig.default
+# Navigate to another jig with go-to action.
+actions:
+  - numberOfVisibleActions: 1
+    children:
+      - type: action.go-to
+        options:
+          title: Get details
+          linkTo: values
+          isModal: true
+          # Specify an instanceID for the target jig (Jig B-target jig)
+          instanceId: MyDetails
+
+children:
+  - type: component.entity
+    options:
+      children:
+        - type: component.entity-field
+          options:
+            label: Name
+            value: =@ctx.user.displayName
+        - type: component.entity-field
+          options:
+            label: Date of Birth
+            # Use the expression in the format 
+            # =@ctx.jigs.[isntance-id-of-the-jig].outputs.[key-of-output],
+            # to display the output of the target jig. 
+            value: =@ctx.jigs.MyDetails.outputs.DOB
+        - type: component.entity-field
+          options:
+            label: Phone number
+            # Display the output of the target jig.
+            value: =@ctx.jigs.MyDetails.outputs.phone
+          
+```
+{% endtab %}
+
+{% tab title="Jig B- target jig" %}
+```yaml
+title: My Details
+type: jig.default
+
+children:
+  - type: component.number-field
+    instanceId: myNumber
+    options:
+      label: Provide a contact number
+  - type: component.date-picker
+    instanceId: myBirth
+    options:
+      label: Provide a contact number
+# Specify the outputs that will be passed and displayed in Jig A      
+outputs:
+  phone: =@ctx.components.myNumber.state.value
+  DOB: =@ctx.components.myBirth.state.value
 ```
 {% endtab %}
 {% endtabs %}

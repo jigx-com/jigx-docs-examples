@@ -39,6 +39,7 @@ The bottomSheet element slides up from the bottom of the screen to present addit
 * **Global properties:** BottomSheet properties can be set globally, applying the same settings to all jigs specified in the bottomSheet. These properties are configured directly under the bottomSheet property.
 * **Local properties (per jig):** BottomSheet properties can also be set individually for each jig. For instance, when multiple bottomSheets are configured, each jig may require unique settings, such as different heights or content. These properties are configured directly under each `jigId` property.
 * **Navigating to jigs**: To navigate to another screen from the bottomSheet specify `isModal: false` to explicitly open the jig outside of the bottomSheet.
+* **Retrieving Outputs from the bottomSheet**: When you navigate to a jig using the `action.go-to`  to open the bottom modal (by setting `isModal: true`), you can access the outputs from that jig by referencing its `instanceId` in your context expressions. In the originating jig, use the syntax `=@ctx.jigs.[isntance-id-of-the-jig].outputs.[key-of-output]` to retrieve specific output values. See the [Accessing jig outputs from a modal](../../Actions/go-to.md#accessing-jig-outputs-from-a-modal) example.
 
 ## Examples and code snippets
 
