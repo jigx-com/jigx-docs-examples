@@ -10,6 +10,7 @@
       * [Deleting Dynamic Data](<docs/Data Providers/Dynamic Data/Deleting Dynamic Data.md>)
     * [Dynamic Files](<docs/Data Providers/Dynamic Files/Dynamic Files.md>)
       * [Upload a file](<docs/Data Providers/Dynamic Files/Upload a file.md>)
+      * [Upload multiple files](readme/data-providers/dynamic-files/upload-multiple-files.md)
       * [Download a file](<docs/Data Providers/Dynamic Files/Download a file.md>)
       * [Delete a file](<docs/Data Providers/Dynamic Files/Delete a file.md>)
       * [Status of a file](<docs/Data Providers/Dynamic Files/Status of a file.md>)
