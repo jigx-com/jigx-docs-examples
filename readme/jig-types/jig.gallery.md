@@ -725,7 +725,7 @@ children:
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/gallery-tabs.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/gallery-tabs.png" alt="" width="188"><figcaption></figcaption></figure>
 
 
 {% endcolumn %}
