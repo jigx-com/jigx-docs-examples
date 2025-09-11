@@ -30,7 +30,7 @@ A `component.form` acts as a **wrapper/container** for your app’s fields and U
 **Benefits**
 
 * _Form-wide referencing:_ Each form has a unique `instanceId`, allowing you to reference the entire form in expressions, actions, or functions. This makes it easier to manage validations, submissions, and state.
-* _Unified wrapper_**:** A single `component.form` wraps any `jig.default` children, such as a chart or segmented control, without requiring all form fields to be direct children. You can mix layouts, charts, or non-field components within the same form without breaking form handling.
+* _Unified wrapper_**:** A single `component.form` can wrap any `jig.default` children, such as a chart or segmented control, as well as all form input fields like text and email fields. This allows you to mix layouts, charts, and non-field components within the same form without breaking form handling.
 * No need to place multiple forms on a single screen to handle different UI structures or separated field groups. You only need _one form_ wrapper per logical form.
 * The form automatically collects and manages all its nested field components.
 {% endcolumn %}
@@ -48,7 +48,7 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="270.57421875">Other options</th><th></th></tr></thead><tbody><tr><td><code>isDiscardChangesAlertEnabled</code></td><td>When set to <code>true</code> the modal window preventing accidental deletion of your data without saving will pop up.</td></tr><tr><td><code>initialValues</code></td><td>Specify the data to be used as <code>initialValues</code> for fields in the form. Using the <code>reset-state</code> action with <code>initialValues</code> does not clear the form, it resets the form back to it's <code>initialValue</code>. <em><strong>Tip</strong></em>: For <code>initialValues</code> on a to function <code>isDocument: true</code> in the datasource, this way you don't have to set it up in the individual components. It is set up in one place and the form will match the components to the column names of the datasource. See the example below for Form with initialValue.</td></tr></tbody></table>
 
-<table><thead><tr><th width="264.63671875">State Configuration</th><th width="185.23046875">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.state.</code></td><td>data<br>isValid<br>isDirty<br>response</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId <br>now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
+<table><thead><tr><th width="264.63671875">State Configuration</th><th width="185.23046875">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.component.myform.state.</code></td><td>data<br>isValid<br>isDirty<br>response</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId <br>now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
 ## Examples and code snippets
 
@@ -160,7 +160,7 @@ children:
 ```
 {% endtab %}
 
-{% tab title="Python" %}
+{% tab title="datasource" %}
 ```yaml
 datasources:
   form-update:
@@ -178,13 +178,6 @@ datasources:
           '$.email',
           '$.category'
         FROM [default/form] WHERE '$.category' = "update-form"
-```
-{% endtab %}
-
-{% tab title="Ruby" %}
-```ruby
-message = "hello world"
-puts message
 ```
 {% endtab %}
 {% endtabs %}
