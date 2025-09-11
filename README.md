@@ -21,7 +21,7 @@ Welcome to the reference documentation for Jigx. This guide provides detailed in
 
 | [Data Providers](<docs/Data Providers/Data Providers.md>)                                  | [Jig Types](<docs/Jig Types/Jig Types.md>)                                                  |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
-| [Components](docs/Components.md)                                                           | [Actions](docs/Actions.md)                                                                  |
+| [Components](docs/components/)                                                             | [Actions](docs/Actions/)                                                                    |
 | [Custom components (Alpha)](<docs/Custom components _Alpha_/Custom components _Alpha_.md>) | [Custom templates](<docs/Custom components _Alpha_/Templates _Alpha_/Templates _Alpha_.md>) |
 | [widgets](docs/Widgets/Widgets.md)                                                         | [Preview](docs/Preview/Preview.md)                                                          |
 | [Expressions](docs/Expressions/Expressions.md)                                             | [Notifications](docs/Notifications/Notifications.md)                                        |
