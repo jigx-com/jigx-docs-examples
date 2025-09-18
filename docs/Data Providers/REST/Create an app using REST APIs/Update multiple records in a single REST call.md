@@ -387,3 +387,48 @@ tabs:
     icon: home-apps-logo
 ```
 {% endcode %}
+
+## Updating multiple images & REST calls in a single REST call
+
+When you have multiple images to upload in multiple REST calls, you can use the following in your configuration.&#x20;
+
+* Use the **`$map()` function** to iterate over the image array.
+* Use **`queueOperation: replace`** for batch operations.
+* **Data structure**: Each mapped item should contain the necessary fields for your REST endpoint.
+
+```yaml
+# Action to upload multiple expense receipt images via REST API
+- type: action.execute-entities
+  # Conditional execution: only run if expense images exist
+  when: |
+    =(@ctx.components.component-expense-receipt.outputs.expenseImage) ? true : false
+  options:
+    # Use REST data provider for API calls
+    provider: DATA_PROVIDER_REST
+    # Target entity for file operations
+    entity: customerfiles
+    # CRUD operation type
+    method: save
+    # UI behavior: stay on current screen after execution
+    goBack: stay
+    # Queue operation strategy: replace existing queued operations
+    queueOperation: replace
+    # Custom REST function to handle file upload logic
+    function: rest-put-expense-file
+    # Map over each image in the expenseImage array
+    # Fixed content type for all images (assumes JPEG format)
+    # Extract filename from full path (gets last segment after "/")
+    # Full file path/data
+    # Flatten the resulting array.
+    data: |
+      =$map(@ctx.components.component-expense-receipt.outputs.expenseImage, function($v, $i, $a) {
+        $.{
+          "expId" : @ctx.datasources.expense-receipts.id,
+                    "Content-Type" : "image/jpeg",
+          "baseurl" : @ctx.datasources.data-solution-settings.data.baseurl,
+          "accessToken" : abcerp,
+          "filename" : $split($v, "/")[-1],
+                   "file" : $v
+        }
+      })[] 
+```
