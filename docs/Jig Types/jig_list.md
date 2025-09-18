@@ -34,7 +34,7 @@ Use the `jig.list` to create a list from a datasource and style that list to you
 * When you need to store a lot of values or iterate over values, and you want to be able to readily modify those values, you’ll likely want to work with list data types.
 * Each element or value inside a list is called an item.
 * A `jig.list` component allows for a few configuration options and is automatically added as a list on a widget if the sizing of the widget exceeds 1x1. See the [list](../Components/list/list.md) for information on the list widget. This component can also be added to a `jig.default` where the [list](../Widgets/list.md) component is configured along with other content or components.
-* When using the `value` property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.
+* When using the `value` property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value. See the [#when-using-a-filter](jig_list.md#when-using-a-filter "mention") best practice.
 
 ## Configuration options
 
@@ -49,7 +49,7 @@ The `jig.list` can be configured in the following ways within the Jigx Builder:
 
 Some properties are common to all jig types, see [Common jig type properties](jig_list.md) for a list and their configuration options.
 
-<table data-header-hidden><thead><tr><th width="138.046875">Other options</th><th></th></tr></thead><tbody><tr><td><code>badge</code></td><td><p>Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:</p><ul><li>To display as a red dot using the <code>empty</code> value.</li><li>A red dot with a number using an expression to perform a count. For example, counting the number of tasks in the list.</li></ul></td></tr><tr><td><code>filter</code></td><td><code>initialValue</code> - Predefine the default selected tab for a filter on the list, so that when opening the default filter tab, it is displayed. <br><code>data</code> - define the filter tabs using: <code>title</code> - Give the filter a name. The text that will be displayed in the tab, for example, in stock. <br><code>value</code> - The value that the list filter returns. Use the following expressions to return this value:<br><code>=@ctx.components.my-list.state.filter</code> (for a list in a default jig) <code>=@ctx.jig.state.filter</code>(for a list jig) <br>For <code>true/false</code> values that are saved as a <strong>boolean</strong> ensure the filter has a <strong>boolean</strong> value. <br>For <code>true/false</code> values that are saved as <strong>strings</strong> ensure the filter has a <strong>string</strong> value. When using the <code>value</code> property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). <br>Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data, such as date ranges elsewhere, based on the selected value.</td></tr><tr><td><code>hasActiveItem</code></td><td>When set to <code>true</code> the list has an active item state.</td></tr><tr><td><code>isHorizontal</code></td><td>Set to <code>true</code> displays the list horizontally, while <code>false</code> displays the list vertically. The default list is displayed vertically.</td></tr><tr><td><code>isContained</code></td><td>Used to style the list item, <code>true</code> wraps the list item in a card, while <code>false</code> displays the item with no styling. This property can be used with vertical and horizontal lists and <code>component.list-item</code>.</td></tr><tr><td><code>isSearchable</code></td><td>Set to <code>true</code> adds a search field to the list. The default list is displayed without a search field.</td></tr><tr><td><code>isSelectable</code></td><td>When set to <code>true</code> the ability to select individual and multiple items in the list is available. Click the *Select *link in the top right of the screen. The default list is displayed without selection options.</td></tr><tr><td><code>leftElement</code></td><td><p>Set an element to the left of the list. The following elements are available:</p><ul><li><code>avatar</code> - configure the <code>color</code>, <code>size</code>, <code>text</code>, <code>uri</code>, and <code>onPress</code> event.</li><li><code>checkbox</code></li><li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li><li><code>image</code> - the image <code>size</code>, <code>shape</code>, <code>resizeMode</code>, and <code>onPress</code> event is configurable.</li><li><code>progress</code></li></ul></td></tr><tr><td><code>rating</code></td><td>Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the <code>ratingIcon</code>, <code>color</code>, and accompanying descriptive <code>text</code>. By default, the rating property has only one icon showing a rating-star in the primary color. <code>value</code>- Rating with numerical value. The value of the rating, which can be a simple number. The number of icons is calculated based on this value unless overridden in the icon configuration. Configuring the <code>current</code> and <code>maximum</code> values, shows the value as a fraction, for example 7/10. <code>percentage</code> - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%. <code>ratingIcon</code> - By default the <em>rating-star</em> icon in the <em>primary</em> color is displayed. <code>icon</code> - Add an icon to represent the rating. A list of icons is available. See for more information. <code>color</code>- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in . <code>current</code> and <code>maximum</code> values - Where maximum is the number of icons to display and current the number of icons to color. <code>text</code> - add descriptive text that displays next to rating. Ratings can set up in the following ways: 1) Example of <code>value</code> for a product rating. 2) Example of a user rating shown in a <code>percentage</code> 3) Example of <code>value</code> rating showing 2.5/5 as a rating with single star icon.</td></tr><tr><td><code>rightElement</code></td><td><p>Set an element to the right of the list. The following elements are available:</p><ul><li><code>amountControl</code></li><li><code>badge</code> - can be a solid colored badge or a badge with a number in it. Badges always use the primary color.</li><li><code>button</code></li><li><code>checkbox</code></li><li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li><li><code>switch</code></li><li><code>value</code> - When using <code>text</code>, the option to change its <code>color</code> is available.</li><li><code>text</code> - define up to three lines of text with styling (color, bold, font size) applied to each line of text.</li></ul></td></tr><tr><td><code>sections</code></td><td>Used for styling a list, when set to <code>true</code> each item in the list displays in its own section, divided by a line. The default is <code>false</code>.</td></tr><tr><td><code>tags</code></td><td><p>A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.</p><ul><li><code>text</code> - The text content displayed within the tag.</li><li><code>color</code> - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in . Tags can be set up in three ways: 1) Using a dynamic expression from a datasource: <code>tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}</code> 2) Using a dynamic expression from a list item: <code>tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}</code> 3) Using static, predefined tags <code>tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'</code></li></ul></td></tr><tr><td><code>title</code></td><td>Add a <code>title</code> for the list-item. You can use an expression and datasource to set the title. Select <em>Line Options</em> (<code>text</code>), allowing configuration of individual parts of the central element in a list-item. You can set properties such as <code>color</code>, <code>fontSize</code>, <code>bold</code>, <code>format</code>, <code>isSubtle</code> (low opacity), and <code>numberOfLines</code>, rather than applying them globally via the root.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="138.046875">Other options</th><th></th></tr></thead><tbody><tr><td><code>badge</code></td><td><p>Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:</p><ul><li>To display as a red dot using the <code>empty</code> value.</li><li>A red dot with a number using an expression to perform a count. For example, counting the number of tasks in the list.</li></ul></td></tr><tr><td><code>filter</code></td><td><code>initialValue</code> - Predefine the default selected tab for a filter on the list, so that when opening the default filter tab, it is displayed. <br><code>data</code> - define the filter tabs using: <code>title</code> - Give the filter a name. The text that will be displayed in the tab, for example, in stock. <br><code>value</code> - The value that the list filter returns. Use the following expressions to return this value:<br><code>=@ctx.components.my-list.state.filter</code> (for a list in a default jig) <code>=@ctx.jig.state.filter</code>(for a list jig) <br>For <code>true/false</code> values that are saved as a <strong>boolean</strong> ensure the filter has a <strong>boolean</strong> value. <br>For <code>true/false</code> values that are saved as <strong>strings</strong> ensure the filter has a <strong>string</strong> value. When using the <code>value</code> property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). <br>Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data, such as date ranges elsewhere, based on the selected value. See the <a data-mention href="jig_list.md#when-using-a-filter">#when-using-a-filter</a> best practice.</td></tr><tr><td><code>hasActiveItem</code></td><td>When set to <code>true</code> the list has an active item state.</td></tr><tr><td><code>isHorizontal</code></td><td>Set to <code>true</code> displays the list horizontally, while <code>false</code> displays the list vertically. The default list is displayed vertically.</td></tr><tr><td><code>isContained</code></td><td>Used to style the list item, <code>true</code> wraps the list item in a card, while <code>false</code> displays the item with no styling. This property can be used with vertical and horizontal lists and <code>component.list-item</code>.</td></tr><tr><td><code>isSearchable</code></td><td>Set to <code>true</code> adds a search field to the list. The default list is displayed without a search field.</td></tr><tr><td><code>isSelectable</code></td><td>When set to <code>true</code> the ability to select individual and multiple items in the list is available. Click the <em>Select</em> link in the top right of the screen. The default list is displayed without selection options.</td></tr><tr><td><code>leftElement</code></td><td><p>Set an element to the left of the list. The following elements are available:</p><ul><li><code>avatar</code> - configure the <code>color</code>, <code>size</code>, <code>text</code>, <code>uri</code>, and <code>onPress</code> event.</li><li><code>checkbox</code></li><li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li><li><code>image</code> - the image <code>size</code>, <code>shape</code>, <code>resizeMode</code>, and <code>onPress</code> event is configurable.</li><li><code>progress</code></li></ul></td></tr><tr><td><code>rating</code></td><td>Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the <code>ratingIcon</code>, <code>color</code>, and accompanying descriptive <code>text</code>. By default, the rating property has only one icon showing a rating-star in the primary color. <code>value</code>- Rating with numerical value. The value of the rating, which can be a simple number. The number of icons is calculated based on this value unless overridden in the icon configuration. Configuring the <code>current</code> and <code>maximum</code> values, shows the value as a fraction, for example 7/10. <code>percentage</code> - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%. <code>ratingIcon</code> - By default the <em>rating-star</em> icon in the <em>primary</em> color is displayed. <code>icon</code> - Add an icon to represent the rating. A list of icons is available. See for more information. <code>color</code>- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in . <code>current</code> and <code>maximum</code> values - Where maximum is the number of icons to display and current the number of icons to color. <code>text</code> - add descriptive text that displays next to rating. Ratings can set up in the following ways: 1) Example of <code>value</code> for a product rating. 2) Example of a user rating shown in a <code>percentage</code> 3) Example of <code>value</code> rating showing 2.5/5 as a rating with single star icon.</td></tr><tr><td><code>rightElement</code></td><td><p>Set an element to the right of the list. The following elements are available:</p><ul><li><code>amountControl</code></li><li><code>badge</code> - can be a solid colored badge or a badge with a number in it. Badges always use the primary color.</li><li><code>button</code></li><li><code>checkbox</code></li><li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li><li><code>switch</code></li><li><code>value</code> - When using <code>text</code>, the option to change its <code>color</code> is available.</li><li><code>text</code> - define up to three lines of text with styling (color, bold, font size) applied to each line of text.</li></ul></td></tr><tr><td><code>sections</code></td><td>Used for styling a list, when set to <code>true</code> each item in the list displays in its own section, divided by a line. The default is <code>false</code>.</td></tr><tr><td><code>tags</code></td><td><p>A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.</p><ul><li><code>text</code> - The text content displayed within the tag.</li><li><code>color</code> - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in . Tags can be set up in three ways: 1) Using a dynamic expression from a datasource: <code>tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}</code> 2) Using a dynamic expression from a list item: <code>tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}</code> 3) Using static, predefined tags <code>tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'</code></li></ul></td></tr><tr><td><code>title</code></td><td>Add a <code>title</code> for the list-item. You can use an expression and datasource to set the title. Select <em>Line Options</em> (<code>text</code>), allowing configuration of individual parts of the central element in a list-item. You can set properties such as <code>color</code>, <code>fontSize</code>, <code>bold</code>, <code>format</code>, <code>isSubtle</code> (low opacity), and <code>numberOfLines</code>, rather than applying them globally via the root.</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="product-rating-value" %}
@@ -81,7 +81,59 @@ rating:
 {% endtab %}
 {% endtabs %}
 
-<table><thead><tr><th width="211.640625">State Configuration</th><th width="227.34765625">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.jig.state.</code></td><td>activeItem activeItemId amounts filter isHorizontal isRefreshing isSelectable isSelectActive searchText selected value</td><td>State is set by the creator in the YAML. State applies to the jig</td></tr><tr><td><code>=@ctx.current.state.</code></td><td>amount checked</td><td>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
+<table><thead><tr><th width="211.640625">State Configuration</th><th width="227.34765625">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.jig.state.</code></td><td>activeItem <br>activeItemId <br>amounts<br>filter<br>isHorizontal<br>isRefreshing<br>isSelectable<br>isSelectActive <br>searchText<br>selected<br>value</td><td>State is set by the creator in the YAML. State applies to the jig</td></tr><tr><td><code>=@ctx.current.state.</code></td><td>amount<br>checked</td><td>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId <br>now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
+
+## Best Practice
+
+### &#x20;When using a filter
+
+* **Use simple, semantic values for filters** - Instead of using complex date objects or calculated values directly in your `filter` configuration, use simple, semantic string values that clearly represent the user's intent.
+
+```yaml
+filter:
+  initialValue: today
+  data:
+    - title: All
+      value: all
+    - title: Today
+      value: today
+    - title: Last 7 Days
+      value: last-7-days
+    - title: Last 30 days
+      value: last-30-days
+```
+
+*   #### Create transformation functions as shared expressions
+
+    Transform simple `filter` values into complex business logic using shared expressions.&#x20;
+
+```yaml
+expressions:
+  getDateRangeByFilter: |
+    =$function($filterValue) {
+       if ($filterValue = 'today') {
+         return $now()
+       }
+
+       if ($filterValue = 'last-7-days') {
+         return $utils.getSOListSQLiteDateFilter('thisweek', @ctx.system.timezone.offset)
+       }
+     }
+
+  getTitleByFilter: |
+    =$function($filterValue) {
+       if ($filterValue = 'today') {
+         return "Today"
+       }
+
+       if ($filterValue = 'last-7-days') {
+         return "Last Week"
+       }
+     }
+```
+
+* **Avoid empty strings and falsy values for "All" options**\
+  Safer SQLite query operations: `... WHERE @filter IS "all"` is more reliable than checking for empty strings. Code clearly shows what "all" means versus an empty value. Falsy values (`NULL`, `false`, `''`) can cause unexpected behavior in conditionals. Better debugging, explicit values are easier to trace and debug.
 
 ## Examples and code snippets
 
@@ -1271,7 +1323,7 @@ icon: notes-paper-approve
 filter: 
   data: 
   - title: All
-    value: ''
+    value: "All"
   - title: Indoor
     value: "TRUE"
   - title: Outdoor
@@ -1325,7 +1377,7 @@ datasources:
           '$.service', 
           '$.time' 
         FROM [default/cleaning-services] 
-        WHERE '$.indoor' LIKE @filter or @filter IS NULL
+        WHERE '$.indoor' LIKE @filter or @filter IS 'All'
       queryParameters:
         filter: =@ctx.jig.state.filter
 ```
@@ -1388,7 +1440,7 @@ isSearchable: true
 filter: 
   data: 
   - title: All
-    value: ''
+    value: "All"
   - title: Indoor
     value: "TRUE"
   - title: Outdoor
@@ -1424,14 +1476,24 @@ item:
 ```yaml
 datasources:
   cleaning-services-dynamic:
-    type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_DYNAMIC
-  
       entities:
-        - entity: default/cleaning-services-dynamic
-  
-      query: SELECT id, '$.area', '$.description', '$.hourlyrate', '$.illustration', '$.image', '$.indoor', '$.onceoffrate', '$.service', '$.time' FROM [default/cleaning-services-dynamic] WHERE ('$.indoor' LIKE @filter OR @filter IS NULL) AND ('$.service' LIKE '%'||@search||'%' OR @search IS NULL)
+        - entity: default/cleaning-services
+      query: >
+        SELECT 
+          id, 
+          '$.area', 
+          '$.description', 
+          '$.hourlyrate', 
+          '$.illustration', 
+          '$.image', 
+          '$.indoor', 
+          '$.onceoffrate', 
+          '$.service', 
+          '$.time' 
+        FROM [default/cleaning-services] 
+        WHERE ('$.indoor' LIKE @filter OR @filter IS 'All') AND ('$.service' LIKE '%'||@search||'%' OR @search IS NULL)
       queryParameters:
         filter: =@ctx.jig.state.filter
         search: =@ctx.jig.state.searchText
@@ -1542,7 +1604,7 @@ datasources:
           '$.Profile'
          
         FROM [default/tasks]
-        WHERE '$.team' LIKE @filter or @filter IS NULL
+        WHERE '$.team' LIKE @filter
       queryParameters:
           filter: =@ctx.jig.state.filter
 ```

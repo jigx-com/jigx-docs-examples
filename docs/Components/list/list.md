@@ -34,13 +34,13 @@ Some properties are common to all components, see [Common component properties](
 
 <table><thead><tr><th width="197.83984375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>data</code></td><td>The items you want to show in the list.</td></tr><tr><td><code>item</code></td><td><p>There is a list of components available to use:<br><a href="../charts/bar-chart.md">bar-chart</a><br><a href="../expander/expander.md">expander</a><br><a href="../charts/pie-chart.md">pie-chart</a><br><a href="product-item.md">product-item</a></p><p><a href="stage.md">stage</a><br>If you use the list component in a <a href="../../Jig Types/jig_composite.md">jig.composite</a> , the maximum number of displayed items is 8. If you set the <code>maximumItemsToRender</code> to a higher number, the rest of the list will display after clicking on the 'Show more' option.</p></td></tr><tr><td><code>maximumItemsToRender</code></td><td>The number of items you would like to display in your list.</td></tr></tbody></table>
 
-<table><thead><tr><th width="190.88671875">Other options</th><th></th></tr></thead><tbody><tr><td><code>badge</code></td><td><p>Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:</p><ul><li>To display as a red dot using the <code>empty</code> value.</li><li>A red dot with a number using an expression to perform a count. For example, counting the number of tasks in the list.</li></ul></td></tr><tr><td><code>filter</code></td><td><p>Allows you to create lists filtered by a key/value. Set the filter to open on a specific tab in a list.</p><ul><li><code>initialValue</code> - Predefine the default selected tab for a filter on the list, when opening the jig the default filter tab is displayed.</li><li><p><code>data</code> - define the filter tabs using:</p><ul><li><code>title</code> - give the filter a name. The text that will be displayed in the tab, for example, in-stock.</li><li><code>value</code> - The value that the list filter returns. Use the following expressions to return this value: - <code>=@ctx.components.my-list.state.filter</code> (for a list in a default jig) - <code>=@ctx.jig.state.filter</code> (for a list jig) For <code>true/false</code> values that are saved as <strong>boolean</strong> ensure the filter has a <strong>boolean</strong> value. For <code>true/false</code> values that are saved as <strong>string</strong> ensure the filter has a <strong>string</strong> value. When using the <code>value</code> property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.</li></ul></li></ul></td></tr><tr><td><code>isHorizontal</code></td><td>The boolean value that transforms the list into a horizontal one.</td></tr><tr><td><code>isSearchable</code></td><td>The boolean value which allows you to add a search bar on the top of your list.</td></tr><tr><td><code>onShowMorePress</code></td><td>Action to be performed when you press on the <em>show more</em> button. This is <code>type: action.go-to</code> with a <code>linkTo:</code> option.</td></tr></tbody></table>
+<table><thead><tr><th width="190.88671875">Other options</th><th></th></tr></thead><tbody><tr><td><code>badge</code></td><td><p>Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:</p><ul><li>To display as a red dot using the <code>empty</code> value.</li><li>A red dot with a number using an expression to perform a count. For example, counting the number of tasks in the list.</li></ul></td></tr><tr><td><code>filter</code></td><td><p>Allows you to create lists filtered by a key/value. Set the filter to open on a specific tab in a list.</p><ul><li><code>initialValue</code> - Predefine the default selected tab for a filter on the list, when opening the jig the default filter tab is displayed.</li><li><p><code>data</code> - define the filter tabs using:</p><ul><li><code>title</code> - give the filter a name. The text that will be displayed in the tab, for example, in-stock.</li><li><code>value</code> - The value that the list filter returns. Use the following expressions to return this value: - <code>=@ctx.components.my-list.state.filter</code> (for a list in a default jig) - <code>=@ctx.jig.state.filter</code> (for a list jig) For <code>true/false</code> values that are saved as <strong>boolean</strong> ensure the filter has a <strong>boolean</strong> value. For <code>true/false</code> values that are saved as <strong>string</strong> ensure the filter has a <strong>string</strong> value. When using the <code>value</code> property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value. See <a data-mention href="../../Jig Types/jig_list.md#when-using-a-filter">#when-using-a-filter</a> best practice.</li></ul></li></ul></td></tr><tr><td><code>isHorizontal</code></td><td>The boolean value that transforms the list into a horizontal one.</td></tr><tr><td><code>isSearchable</code></td><td>The boolean value which allows you to add a search bar on the top of your list.</td></tr><tr><td><code>onShowMorePress</code></td><td>Action to be performed when you press on the <em>show more</em> button. This is <code>type: action.go-to</code> with a <code>linkTo:</code> option.</td></tr></tbody></table>
 
 <table><thead><tr><th width="209.51171875">State Configuration</th><th width="129.65234375">Key</th><th>Notes</th></tr></thead><tbody><tr><td><code>=@ctx.current.state.</code></td><td>amount checked</td><td>Applies to a list, list.item, product-item, and stage components. List's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</td></tr><tr><td><code>=@ctx.component.state.</code></td><td>amount checked</td><td>State is the variable of the component.</td></tr><tr><td><code>=@ctx.solution.state.</code></td><td>activeItemId now</td><td>Global state variable that can be used throughout the solution.</td></tr></tbody></table>
 
 ## Considerations
 
-* When using the `value` property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value.
+* When using the `value` property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data like date ranges elsewhere based on the selected value. See [#when-using-a-filter](<../../Jig Types/jig_list.md#when-using-a-filter> "mention") best practice.
 
 ## List functionality
 
@@ -281,7 +281,7 @@ children:
       maximumItemsToRender: 50
       filter: 
         - title: All
-          value: ''
+          value: "all"
         - title: Indoor
           value: "TRUE"
         - title: Outdoor
@@ -413,7 +413,7 @@ datasources:
           '$.service',
           '$.time'
         FROM [default/cleaning-services]
-        WHERE '$.indoor' LIKE @filter or @filter IS NULL
+        WHERE '$.indoor' LIKE @filter or @filter IS 'all'
       queryParameters:
           filter: =@ctx.components.cleaning_serv_items.state.filter
 ```
@@ -469,7 +469,7 @@ datasources:
           '$.team', 
           '$.Profile'       
         FROM [default/tasks]
-        WHERE '$.taskStatus' LIKE @filter or @filter IS NULL
+        WHERE '$.taskStatus' LIKE @filter or @filter IS 'All'
       queryParameters:
           filter: =@ctx.components.task-progress.state.filter
     
@@ -481,7 +481,7 @@ children:
         initialValue: "In Progress"
         data: 
         - title: All
-          value: ""
+          value: "All"
         - title: Not Started
           value: Not Started  
         - title: In Progress
@@ -541,7 +541,7 @@ children:
       filter:
         data: 
         - title: All
-          value: ''
+          value: all
         - title: Indoor
           value: indoor
         - title: Outdoor
@@ -576,7 +576,7 @@ children:
       filter:
         data: 
         - title: All
-          value: ''
+          value: "All"
         - title: Indoor
           value: "TRUE"
         - title: Outdoor
@@ -706,7 +706,7 @@ datasources:
          '$.service',
          '$.time'
         FROM [default/cleaning-services] 
-        WHERE ('$.indoor' LIKE @filter OR @filter IS NULL) AND ('$.service' LIKE '%'||@search||'%' OR @search IS NULL)
+        WHERE ('$.indoor' LIKE @filter OR @filter IS 'All') AND ('$.service' LIKE '%'||@search||'%' OR @search IS NULL)
       queryParameters:
         filter: =@ctx.components.cleaning_serv_items.state.filter
         search: =@ctx.components.cleaning_serv_items.state.searchText

@@ -43,7 +43,7 @@ The operators include:
 
 ## Configuration
 
-<table><thead><tr><th width="257.97265625">Result</th><th>Expression</th></tr></thead><tbody><tr><td>Filter a list according to a value</td><td><code>=$filter(@ctx.datasources.filter-list, function($v){$contains($string($v.status), $string(@ctx.components.filter-list.state.filter != null ? @ctx.components.filter-list.state.filter:'')) })[]</code></td></tr></tbody></table>
+<table><thead><tr><th width="257.97265625">Result</th><th>Expression</th></tr></thead><tbody><tr><td>Filter a list according to a value</td><td><code>=$filter(@ctx.datasources.filter-list, function($v){$contains($string($v.status), $string(@ctx.components.filter-list.state.filter != null ? @ctx.components.filter-list.state.filter:'all')) })[]</code><br>See <a data-mention href="../Jig Types/jig_list.md#when-using-a-filter">#when-using-a-filter</a>best practice.</td></tr></tbody></table>
 
 {% hint style="warning" %}
 Be careful when using complex expressions, such as expressions that iterate one datasource across another, as your solution performance could become slower. To avoid this, try to use the datasource queries to get the desired result rather than an expression.
@@ -100,14 +100,14 @@ datasources:
 
 filter:
   - title: All
-    value: ""
+    value: "all"
   - title: Active
     value: active
   - title: Inactive
     value: inactive
       
 data:
-  =$filter(@ctx.datasources.filter-list, function($v, $a, $i) { @ctx.jig.state.filter = "" or $v.status = @ctx.jig.state.filter })[]
+  =$filter(@ctx.datasources.filter-list, function($v, $a, $i) { @ctx.jig.state.filter = "all" or $v.status = @ctx.jig.state.filter })[]
     
 item: 
   type: component.list-item
