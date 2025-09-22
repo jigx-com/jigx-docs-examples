@@ -19,7 +19,11 @@ layout:
 
 An overview and explanation of using expressions in Jigx is provided in the [Expressions](https://docs.jigx.com/building-apps-with-jigx/logic/expressions) and [Advanced Expressions](https://docs.jigx.com/building-apps-with-jigx/logic/expressions#advanced-expressions) section in the Guide tab.
 
-Refer to the [Expressions - cheatsheet](https://docs.jigx.com/building-apps-with-jigx/logic/expressions/expressions-cheatsheet) for code snippets that can help you achieve a required result, such as creating a placeholder in a jig.
+Refer to the following topics for more information:
+
+* &#x20;[Expressions - cheatsheet](https://docs.jigx.com/building-apps-with-jigx/logic/expressions/expressions-cheatsheet) for code snippets that can help you achieve a required result, such as creating a placeholder in a jig.
+* [Expression - Common patterns](https://docs.jigx.com/building-apps-with-jigx/logic/expressions/expressions-common-patterns)
+* [Expression - Quick reference](https://docs.jigx.com/building-apps-with-jigx/logic/expressions/expression-quick-reference)&#x20;
 
 In this section, examples with code snippets are provided for working with data using JSONata; these are:
 
