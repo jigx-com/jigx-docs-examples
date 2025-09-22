@@ -146,6 +146,7 @@
     * [execute-entities](docs/Actions/execute-entities.md)
     * [execute-entity](docs/Actions/execute-entity.md)
     * [execute-sql](docs/Actions/execute-sql.md)
+    * [find-replace](readme/actions/find-replace.md)
     * [generate-file](docs/Actions/generate-file.md)
     * [generate-pdf](docs/Actions/generate-pdf.md)
     * [go-back](docs/Actions/go-back.md)
