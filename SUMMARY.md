@@ -79,6 +79,7 @@
     * [Common component properties](<docs/Components/Common component properties.md>)
     * [avatar](docs/Components/avatar.md)
     * [avatar-field](docs/Components/form/avatar-field.md)
+    * [banner](readme/components/banner.md)
     * [card](docs/Components/card.md)
     * [carousel](docs/Components/carousel.md)
     * [charts](docs/Components/charts/charts.md)
