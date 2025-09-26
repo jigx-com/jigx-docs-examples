@@ -66,7 +66,7 @@ The `jig.gallery` creates a gallery layout from a datasource. The YAML structure
 {% column %}
 This example shows how to configure a `jig.gallery` component to pull photos of job-site tasks from a Dynamic Data source and display them in a scrollable gallery. Users can tap the `open-media-picker` action to capture or select new images, which are then saved back to the same datasource and appear instantly in the gallery. \
 **Example**: \
-The full example can be seen in GitHub.
+The full example can be seen in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-gallery/jig-gallery-simple.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -154,7 +154,7 @@ datasources:
 This example demonstrates how to configure the `onSharePress` and `onDeletePress` actions that allow users to share or delete images when tapping on an image in the gallery. The image opens in fullscreen, with share and delete icons displayed at the bottom, providing quick and intuitive interaction with each image.
 
 **Example:** \
-The full example can be seen in GitHub.
+The full example can be seen in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-gallery/jig-gallery-share-delete.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -584,7 +584,7 @@ conversions:
 {% column %}
 This example shows a `jig.gallery` configured with a `bottomSheet` that slides up from the bottom of the screen to display additional information about the related appointment. The `bottomSheet` uses the `jigId` property with a `go-to` action to open the appointments jig, providing a view of the appointment associated with the images. \
 **Example**: \
-The full example is in GitHub.&#x20;
+The full example is in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-gallery/jig-gallery-bottomsheet.jigx).&#x20;
 {% endcolumn %}
 
 {% column %}
@@ -734,7 +734,7 @@ children:
 In this example, `jig.gallery` is used as a tab within a `jig.tabs` screen. The tab, labeled Task Photos, displays a gallery of images related to appointments. Tapping an image opens it in fullscreen, where you can access the share and delete action icons at the bottom. The fullscreen view also supports pinch-and-zoom to explore image details.
 
 **Example:** \
-The full example is available on GitHub.&#x20;
+The full example is available on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-gallery/jig-gallery-tab.jigx).&#x20;
 {% endcolumn %}
 {% endcolumns %}
 

@@ -53,7 +53,7 @@ Some properties are common to all components, see [Common component properties](
 {% column %}
 In this example, a foreman takes multiple images of the job and saves the images to Dynamic Data. When the images are successfully saved the images are shared via the devices message sharing apps.
 
-**Example:** See the full code sample in GitHub.
+**Example:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/share/action-share-images.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -124,7 +124,7 @@ actions:
 {% column %}
 In this example, an action list contains three actions: the first generates a PDF for an invoice, the second saves it to the database, and the third shares the PDF via a messaging app on the device. The file is saved to dynamic files.
 
-**Example:** See the full code sample in GitHub.
+**Example:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/share/action-share-pdf.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -377,7 +377,7 @@ options:
 {% column %}
 In this example, we demonstrate using the `action.share` to send an `email` to a customer with an attachment. The `message`, `subject` and `email` (To) properties are configured as part of the action.
 
-**Example:** See the full code sample in GitHub.
+**Example:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/share/action-share-email.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

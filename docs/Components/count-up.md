@@ -43,7 +43,7 @@ Some properties are common to all components, see [Common component properties](
 {% column %}
 This example shows how to set up a basic `count-up` component that starts counting from the current moment.
 
-**Examples:** See the full code example in GitHub.
+**Examples:** See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/count-up/count-up-basic.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -91,7 +91,7 @@ children:
 {% column %}
 This example displays two `count-up` components of different sizes. The first is `extra-large`, with `labels` `positioned` above it, while the second is `medium`-sized with `labels` below.
 
-**Examples:** See the full code example in GitHub.
+**Examples:** See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/count-up/count-up-sizes.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -149,7 +149,7 @@ children:
 {% column %}
 This example showcases two `count-up` components using a datasource with timestamp records in ISO format and milliseconds. The first component uses the millisecond timestamp, while the second uses the ISO format timestamp.
 
-**Examples:** See the full code example in GitHub.
+**Examples:** See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/count-up/count-up-datasource.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -214,7 +214,7 @@ children:
 {% column %}
 This example demonstrates how to use the jig `state` in a `when` property to initially hide the `count-up` component and reveal it when a start `button` is pressed within a `list-item`.
 
-**Examples:** See the full code example in GitHub
+**Examples:** See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/count-up/count-up-expression.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

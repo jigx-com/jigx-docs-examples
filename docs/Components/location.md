@@ -406,7 +406,7 @@ datasources:
 {% column %}
 This example demonstrates how to add a circular `radius` around the specified location. Determine whether it is in `kilometers` or `miles` and set its size (`value`). Then, select the `color` of the radius.
 
-**Examples:** See the full code example in GitHub.
+**Examples:** See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/location/static-data/location-with-radius.jigx).
 {% endcolumn %}
 
 {% column %}

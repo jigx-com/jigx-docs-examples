@@ -47,7 +47,7 @@ Some properties are common to all components, see [Common component properties](
 {% column %}
 In this example, a button at the bottom of the screen uses the `action.open-map` to open a modal listing the available map apps on the device. Select your preferred app to navigate to the specified address.
 
-**Example:** See the full code example in GitHub.
+**Example:** See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-map/open-map-action.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -100,7 +100,7 @@ actions:
 {% column %}
 This example includes a list of people and places in New York. Tapping the `rightElement` button opens a modal, displaying available map apps on the device. Select your preferred app to navigate to the specified `address`. The addresses are defined in a datasource in various formats, including text strings, latitude, and longitude.
 
-**Example:** See the full code example in GitHub.
+**Example:** See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-map/open-map-onpress.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -187,7 +187,7 @@ datasources:
 {% column %}
 This example describes Central Park in New York. Tapping the ellipsis opens the secondary action button, which is configured with an `icon` displayed to the left of the `title`. When tapped, a modal opens, listing available map apps on the device. Select your preferred app to navigate to the specified `address`, defined by latitude and longitude.
 
-**Example:** See the full code example in GitHub.
+**Example:** See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-map/open-map-secondary.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -248,7 +248,7 @@ actions:
 {% column %}
 In this example, the `action.open-map` is configured in the `jig.header` action to open a modal listing the available map apps on the device. Select your preferred app to navigate to the specified address. The action is configured with an icon rather than a button.
 
-**Example:** See the full code example in GitHub.
+**Example:** See the full code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/open-map/open-map-header.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

@@ -55,7 +55,7 @@ Some properties are common to all components, see [Common component properties](
 {% column %}
 In this example, an action list contains two actions: the first generates a PDF of a checklist, the second shares the PDF via a messaging app on the device.
 
-**Example:** See the full code sample in GitHub.
+**Example:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/generate-pdf/action-generate-pdf.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -169,7 +169,7 @@ datasources:
 {% column %}
 In this example, an action list contains three actions: the first generates a PDF for an invoice, the second saves it to the database, and the third shares the PDF via a messaging app on the device. When saving the file to the database the file is converted from local-uri to data-uri for storage.
 
-**Example:** See the full code sample in GitHub.
+**Example:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/generate-pdf/action-generate-pdf-save-share.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -403,7 +403,7 @@ actions:
 
 This example demonstrates how to use a JavaScript function to generate an HTML invoice. The invoice is populated with customer details retrieved from a Dynamic Data datasource named invoices. The JavaScript function is referenced in an expression used by `action.generate-pdf`, after which the invoice is shared using the `action.share` via the device's apps.
 
-**Example:** See the full code sample in GitHub.
+**Example:** See the full code sample in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/generate-pdf/action-generate-pdf-javascript.jigx).
 
 <figure><img src="../../.gitbook/assets/action-gen-pdf-java.png" alt="PDF from JavaScript function"><figcaption><p>PDF from JavaScript function</p></figcaption></figure>
 
