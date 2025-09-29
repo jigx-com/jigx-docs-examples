@@ -32,6 +32,7 @@ The `jig.full-screen` allows you to configure a component that covers the entire
 * This jig type does not allow for a `description` or `header` properties.
 * The [location](../Components/location.md) component can be used in the `jig.full-screen`.
 * When using an action within the jig, check that the action button does not overlap the fullscreen functionality. The best practice is not to use an action with the full-screen jig, as the action button covers elements shown in the full-screen.
+* Avoid using the [home button](<Common jig type properties.md#home-button-visibility>) with a web-view. This ensures that the web-view can make full use of the available screen space.
 * It is not recommended to use a full-screen jig in a [composite](jig_composite.md) jig, combining the fullscreen with another jig will not provide the optimal layout for the jig.
 
 ## Configuration options
