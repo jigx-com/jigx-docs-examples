@@ -163,6 +163,7 @@
     * [set-state](docs/Actions/set-state.md)
     * [set-active-tab](docs/Actions/set-active-tab.md)
     * [share](docs/Actions/share.md)
+    * [show-alert](readme/actions/show-alert.md)
     * [submit-form](docs/Actions/submit-form.md)
     * [sync-entities](docs/Actions/sync-entities.md)
     * [update-profile](docs/Actions/update-profile.md)
