@@ -17,7 +17,7 @@ layout:
 
 # entity-field
 
-Entity fields display data such as text, numbers, dates, and currency from a datasource to the user. These entity fields are found on a `jig.default` and can be nested under [field-row](field-row.md) and/or [section](section.md) components but not under `component.form` as it is used for display purposes only.
+Entity fields display data such as text, numbers, dates, and currency from a datasource to the user. These entity fields are found on a `jig.default` and can be nested under [field-row](field-row.md) and/or [section](../../../readme/components/section.md) components but not under `component.form` as it is used for display purposes only.
 
 ## Configuration options
 

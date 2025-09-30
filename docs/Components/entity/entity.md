@@ -21,15 +21,15 @@ The entity component is a container for the following components:
 
 * [entity-field](entity-field.md)
 * [entity-field](entity-field.md)
-* [section](section.md)
+* [section](../../../readme/components/section.md)
 
 ## Considerations
 
 * The `component.entity` used with the above-mentioned components is configurable on a `jig.default`.
-* [Section](section.md) and [field-row](field-row.md) are also available under the `component.form` as its container. Here the [entity-field](entity-field.md) is replaced by the [form's](../form/form.md) children field.
+* [Section](../../../readme/components/section.md) and [field-row](field-row.md) are also available under the `component.form` as its container. Here the [entity-field](entity-field.md) is replaced by the [form's](../form/form.md) children field.
 * When setting up a `component.entity`, either a [default jig](<../../Jig Types/jig_default.md>) or `component.form` can be used in the following combinations:
-  * An entity containing [section(s)](section.md) with [rows](field-row.md) and [entity-field](entity-field.md)
-  * An entity containing [section(s)](section.md) and [entity-field](entity-field.md)An entity containing [rows](field-row.md) and [entity-field](entity-field.md)
+  * An entity containing [section(s)](../../../readme/components/section.md) with [rows](field-row.md) and [entity-field](entity-field.md)
+  * An entity containing [section(s)](../../../readme/components/section.md) and [entity-field](entity-field.md)An entity containing [rows](field-row.md) and [entity-field](entity-field.md)
   * An entity containing [entity fields](entity-field.md)
 
 ## Configuration options
@@ -218,4 +218,4 @@ datasources:
 
 * [entity-field](entity-field.md)
 * [field-row](field-row.md)
-* [section](section.md)
+* [section](../../../readme/components/section.md)

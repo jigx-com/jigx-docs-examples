@@ -1082,7 +1082,7 @@ Using the code below requires data in the database, the jigx.sample solution has
 {% endcolumns %}
 
 {% hint style="success" %}
-Horizontal lists cannot be used with the [section](../Components/entity/section.md) component as an empty white jig will be displaye
+Horizontal lists cannot be used with the [section](../../readme/components/section.md) component as an empty white jig will be displaye
 {% endhint %}
 
 {% tabs %}

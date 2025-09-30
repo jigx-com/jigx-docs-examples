@@ -727,7 +727,7 @@ This is an example of a horizontal list with UI elements such as an image and va
 **Datasources**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/repair-services-static.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/services/cleaning-services-dynamic.jigx).
 
 {% hint style="warning" %}
-Horizontal lists cannot be used with the [section](../entity/section.md) component as an empty white jig will be displayed.
+Horizontal lists cannot be used with the [section](../../../readme/components/section.md) component as an empty white jig will be displayed.
 {% endhint %}
 {% endcolumn %}
 {% endcolumns %}

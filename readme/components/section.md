@@ -10,13 +10,13 @@ description: >-
 
 # section
 
-The section component groups related items together under a single title. A section can be set up on a [jig.default](<../../Jig Types/jig_default.md>) under the [entity](entity.md) component or on a [form](../form/form.md) component as its container. The component can contain [field-row](https://docs.jigx.com/examples/readme/components/entity/field-row) and [entity-field](entity-field.md) components or children components on a [form](../form/form.md) component.
+The section component groups related items together under a single title. A section can be set up on a [jig.default](<../../docs/Jig Types/jig_default.md>) under the [entity](../../docs/Components/entity/entity.md) component or on a [form](../../docs/Components/form/form.md) component as its container. The component can contain [field-row](https://docs.jigx.com/examples/readme/components/entity/field-row) and [entity-field](../../docs/Components/entity/entity-field.md) components or children components on a [form](../../docs/Components/form/form.md) component.
 
 A `component.section` can be set up with the following combinations:
 
-1. An entity containing sections with [rows](field-row.md) and [entity-field](entity-field.md) for display purposes.
-2. An entity containing sections and [entity-field](entity-field.md) for display purposes.
-3. A form component containing sections with [rows](field-row.md) and children for display/capturing purposes.
+1. An entity containing sections with [rows](../../docs/Components/entity/field-row.md) and [entity-field](../../docs/Components/entity/entity-field.md) for display purposes.
+2. An entity containing sections and [entity-field](../../docs/Components/entity/entity-field.md) for display purposes.
+3. A form component containing sections with [rows](../../docs/Components/entity/field-row.md) and children for display/capturing purposes.
 4. A form component containing sections and children components for display/capturing purposes.
 5. Horizontal lists cannot be used with the [section](https://docs.jigx.com/examples/section) components as an empty white jig will be displayed.
 
@@ -28,7 +28,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-<figure><img src="../../../.gitbook/assets/cc-entity-section (1).png" alt="Jig with sections" width="188"><figcaption><p>Jig with sections</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cc-entity-section (1).png" alt="Jig with sections" width="188"><figcaption><p>Jig with sections</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -264,7 +264,7 @@ datasources:
 
 {% columns %}
 {% column %}
-<figure><img src="../../../.gitbook/assets/cc-entity-sction1 (1).png" alt="Jig with sections &#x26; rows" width="188"><figcaption><p>Jig with sections &#x26; rows</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cc-entity-sction1 (1).png" alt="Jig with sections &#x26; rows" width="188"><figcaption><p>Jig with sections &#x26; rows</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -378,7 +378,7 @@ datasources:
 
 {% columns %}
 {% column %}
-<figure><img src="../../../.gitbook/assets/cc-enttiy-2.png" alt="Entity with sections and entity-fields" width="188"><figcaption><p>Entity with sections and entity-fields</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cc-enttiy-2.png" alt="Entity with sections and entity-fields" width="188"><figcaption><p>Entity with sections and entity-fields</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -693,7 +693,7 @@ datasources:
 
 {% columns %}
 {% column %}
-<figure><img src="../../../.gitbook/assets/cc-entity-section3.png" alt="Form with sections" width="188"><figcaption><p>Form with sections</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cc-entity-section3.png" alt="Form with sections" width="188"><figcaption><p>Form with sections</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

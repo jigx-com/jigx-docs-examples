@@ -75,7 +75,7 @@ rating:
   * [Custom components (Alpha)](<../../Custom components _Alpha_/Custom components _Alpha_.md>) children
   * [expander](../expander/expander.md)
   * [card](../card.md)
-  * [section](../entity/section.md)
+  * [section](../../../readme/components/section.md)
 
 ## Examples and code snippets
 
