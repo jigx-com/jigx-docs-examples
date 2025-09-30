@@ -4,7 +4,13 @@ hidden: true
 
 # show-alert
 
-The `action.show-alert` provides a way to notify users about important information in your app,  you can choose to show the alert as a **toast** for lightweight updates, or a **modal** for important messages. Alerts can be customized with styling, icons, and interactive elements, allowing you to tailor them to different scenarios.
+The `action.show-alert`  provides a way to notify users about important information in your app,  you can choose to show the alert as a **toast** for lightweight updates, or a **modal** for important messages. Alerts can be customized with styling, icons, and interactive elements, allowing you to tailor them to different scenarios.
+
+The `action.show-alert` is considered a **background action**, meaning it can run automatically or silently without interrupting the current flow. Background actions typically occur behind the scenes, such as syncing data, saving changes, uploading files, or refreshing content.
+
+In most cases, `show-alert` is **configured to run in response to an** [**event**](../../docs/Events/Events.md) such as `onPress`, `onFocus`, `onLoad`, or `onRefresh`.
+
+The alert may not always be triggered directly by the user. Instead, it can be triggered automatically after another action completes. For example, when a user submits a form, the app might attempt to save the data in the background, and if that save fails, `action.show-alert` is triggered to notify the user of the error.
 
 **Example use cases include:**
 
@@ -23,42 +29,94 @@ Some properties are common to all components, see [Common component properties](
 
 ## Considerations
 
-* [The `action.show-alert` is only available when used in an `onPress` event.](#user-content-fn-1)[^1]
+* The `action.show-alert` is only configurable in an [event](../../docs/Events/Events.md) such as `onPress` , `OnFocus`, `onLoad` or `onRefresh`.
 
 ## Examples and code snippets
 
 ### Show-alert as a toast
 
+{% columns %}
+{% column %}
 
+{% endcolumn %}
+
+{% column %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 ### Show-alert as a modal
 
+{% columns %}
+{% column %}
 
+{% endcolumn %}
+
+{% column %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 ### Show-alert with actions
 
+{% columns %}
+{% column %}
 
+{% endcolumn %}
+
+{% column %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 ### Show-alert with styling
 
+{% columns %}
+{% column %}
 
+{% endcolumn %}
+
+{% column %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 ### Show-alert with icons and styling
 
+{% columns %}
+{% column %}
 
+{% endcolumn %}
+
+{% column %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 ### Show-alert with automatic dismissal
 
+{% columns %}
+{% column %}
 
+{% endcolumn %}
+
+{% column %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 ### Show-alert with group id
 
+{% columns %}
+{% column %}
 
+{% endcolumn %}
 
-### Show-alert in a banner ????
+{% column %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 
 
 ### Show-alert in a REST function
-
-[^1]: This cannot be right? Why can i not see it in Intelliscence in actions??
