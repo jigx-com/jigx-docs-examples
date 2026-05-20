@@ -382,12 +382,12 @@ onFocus:
     # Alert title displays below the icon.
     title: Reminder
     # Modal presentation style (overlays the current screen).
-    # Change it to a toast.
+    # Or you can change it to a toast.
     presentAs: modal
     subtitle: Customer signature is required
     # Icon provides a visual engagement
     icon: signature
-    # Visual styling to indicate this is a informative/positive action
+    # Visual styling to indicate this is a informative/positive action.
     style:
       isPositive: true
 
@@ -574,13 +574,19 @@ children:
             initialValue: false
             onChange:
               type: action.show-alert
+              # Configure the condition under which the alert will display.
               when: =@ctx.current.item.available = false
               options:
+               # Give the alert a title.
                 title: =@ctx.current.item.name & " unavailable"
                 description: Tool unavailable, select a different tool for the job."
+                # Modal presentation style (overlays the current screen).
+                # Or you can change it to a toast.
                 presentAs: modal
+                # Visual styling to indicate this is a informative/positive. action
                 style:
                   isNegative: true
+                # Customize the icon that is displayed in the alert.  
                 icon: road-sign-no-entry
 ```
 {% endtab %}
@@ -666,7 +672,7 @@ children:
               options:
                 isSequential: true
                 actions:
-                  # Trigger an alert message
+                  # Trigger an alert message.
                   - type: action.show-alert
                     # Only show if the current item requires PPE.
                     when: =@ctx.current.item.requiresPPE = true
@@ -832,15 +838,151 @@ children:
 ### Show-alert with group id
 
 {% columns %}
-{% column %}
+{% column width="58.333333333333336%" %}
+In this example, a list of team tasks is displayed. Each task can be selected to start work. However, if a user attempts to start a task that isn’t assigned to them, an alert is shown to inform them that the task must first be reassigned or approved.
 
+The alert can appear as a **toast**, or as a **modal** to display information. To prevent multiple alerts from stacking one after another when the user taps several tasks not assigned to them, the alert configuration includes a `groupId` property.
+
+The `groupId` ensures that only one alert from that group, `task-assignment` in this case,is displayed at a time. If several conditions in the list trigger the same alert (for example, the user selects three unassigned tasks in a row), only the first alert appears, and the rest are automatically skipped.
 {% endcolumn %}
 
-{% column %}
-
+{% column width="41.666666666666664%" %}
+<figure><img src="../../.gitbook/assets/action-show-alert-group.gif" alt="Show-alert with groupId" width="265"><figcaption><p>Show-alert with groupId</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
+{% tabs %}
+{% tab title="action-show-alert-group.jigx" %}
+```yaml
+title: Team task list
+description: Team work list, select your task to start working on it.
+type: jig.list
 
+header:
+  type: component.jig-header
+  options:
+    children:
+      options:
+        source:
+          uri: https://images.unsplash.com/photo-1590402494628-9b9acf0b90ae?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+      type: component.image
+    height: medium
+
+data: =@ctx.datasources.team-tasks
+item:
+  type: component.list-item
+  options:
+    isContained: true
+    title: =@ctx.current.item.taskAssignee
+    subtitle: =@ctx.current.item.taskName
+    # Add multiple tags to the list-items.
+    # Each tag can have its own color.
+    # Tags are shown in the order they configured.
+    tags:
+      - text: =@ctx.current.item.team
+        color: primary
+      - text: =@ctx.current.item.priority
+        color: warning
+      - text: =@ctx.current.item.taskStatus
+        color: color2
+    leftElement:
+      element: avatar
+      text: =@ctx.current.item.taskAssignee
+      uri: =@ctx.current.item.Profile
+    rightElement:
+      element: button
+      title: Start
+      onPress:
+        type: action.action-list
+        options:
+          isSequential: true
+          actions:
+            - type: action.show-alert
+              # Configure the condition under which the alert will display.
+              when: =@ctx.user.displayName != @ctx.current.item.taskAssignee
+              options:
+                # Give the alert a title.
+                title: Access denied
+                description: This task is assigned to someone else.
+                # Display the alert as a toast (non-blocking banner-style alert)
+                # Change to modal if preferred.
+                presentAs: toast
+                # Add a groupid to prevent multiple alerts from stacking one after another. 
+                group:
+                  id: task-allocation
+            - type: action.go-to
+              when: =@ctx.user.displayName = @ctx.current.item.taskAssignee
+              options:
+                linkTo: appointments
+```
+{% endtab %}
+
+{% tab title="datasource" %}
+```yaml
+datasources:
+  team-tasks:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+      entities:
+        - entity: default/tasks
+      query: |
+        SELECT 
+          id, 
+          '$.taskAssignee',
+          '$.taskName',
+          '$.taskCost',
+          '$.taskId', 
+          '$.taskStatus',
+          '$.team', 
+          '$.Profile',
+          '$.priority'         
+        FROM [default/tasks]
+```
+{% endtab %}
+
+{% tab title="appointments" %}
+```yaml
+title: Today
+description: My appointments for today
+type: jig.default
+
+datasources:
+  appointments:
+    type: datasource.static
+    options:
+      data:
+        - id: 1
+          time: 8:00am
+          customer: Jay Motors
+          address: 13 Sunnydale Road
+        - id: 2
+          time: 11:30am
+          customer: Elementary School
+          address: 1 Harold Street
+        - id: 3
+          time: 8:00am
+          customer: Becker Consulting
+          address: Suite A, Tower building, Main street
+children:
+  - type: component.form
+    instanceId: schedule-appt
+    options:
+      isDiscardChangesAlertEnabled: false
+      children:
+        - type: component.choice-field
+          instanceId: appointment
+          options:
+            label: Today
+            data: =@ctx.datasources.appointments
+            item:
+              type: component.choice-field-item
+              options:
+                title: =@ctx.current.item.customer
+                value: =@ctx.current.item.address
+
+```
+{% endtab %}
+{% endtabs %}
 
 ### Show-alert in a REST function
