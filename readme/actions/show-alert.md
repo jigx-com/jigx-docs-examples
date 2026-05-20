@@ -48,6 +48,8 @@ This example demonstrates an alert configured to display as a `toast`. It uses a
 {% endcolumn %}
 {% endcolumns %}
 
+{% tabs %}
+{% tab title="action-show-alert-toast.jigx" %}
 {% code title="action-show-alert-toast.jigx" %}
 ```yaml
 title: Alert - toast
@@ -91,6 +93,81 @@ children:
             subtitle: Secondary text that appears below the title, providing additional context or supplementary information.
 ```
 {% endcode %}
+
+
+{% endtab %}
+
+{% tab title="billing-form" %}
+```yaml
+title: Subscribe to marketplace
+type: jig.default
+
+header:
+  type: component.jig-header
+  options:
+    height: small
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://cdn.pixabay.com/photo/2019/09/27/17/23/payment-4509004_1280.jpg
+
+datasources:
+  payment:
+    type: datasource.static
+    options:
+      data:
+        - id: 1
+          method: CASH
+          description: Cash Payment
+        - id: 2
+          method: PYMTLINK
+          description: Payment Link
+        - id: 3
+          method: CHECK
+          description: Check Payment
+
+children:
+  - type: component.form
+    instanceId: payment-form
+    options:
+      isDiscardChangesAlertEnabled: false
+      children:
+        - type: component.section
+          options:
+            title: Payment details
+            children:
+              - type: component.text-field
+                instanceId: pay-amount
+                options:
+                  label: Payment Amount
+              - type: component.choice-field
+                instanceId: pay-method
+                options:
+                  label: Payment method
+                  data: =@ctx.datasources.payment
+                  item:
+                    type: component.choice-field-item
+                    options:
+                      title: =@ctx.current.item.method
+                      value: =@ctx.current.item.description
+              - type: component.number-field
+                instanceId: pay-reference
+                options:
+                  label: Payment reference number
+actions:
+  - numberOfVisibleActions: 1
+    children:
+      - type: action.submit-form
+        options:
+          formId: payment-form
+          provider: DATA_PROVIDER_LOCAL
+          title: Pay
+          entity: payments
+          method: create
+```
+{% endtab %}
+{% endtabs %}
 
 ### Show-alert as a modal
 
