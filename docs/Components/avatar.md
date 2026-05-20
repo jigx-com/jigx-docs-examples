@@ -14,10 +14,6 @@ Using the avatar component, display a profile photo, company logo, initials, or 
 
 {% include "../../.gitbook/includes/common-component-properties.md" %}
 
-<table data-header-hidden><thead><tr><th width="145.1015625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Add a title for the avatar, this is text displayed when the <code>uri</code> is empty. In the visual presentation, the <code>title</code> can be substituted by an image using the <code>uri</code> property. But the content of the text property has to be kept at least to the empty string: "")</td></tr></tbody></table>
-
-<table data-header-hidden><thead><tr><th width="146.9296875">Other options</th><th></th></tr></thead><tbody><tr><td><code>align</code></td><td><p>By default the avatar is aligned <code>left</code> but can be changed to:</p><ul><li><code>center</code></li><li><code>left</code></li><li><code>right</code></li></ul></td></tr><tr><td><code>size</code></td><td><p>The size of the avatar can be set to:</p><ul><li><code>small</code></li><li><code>regular</code></li><li><code>large</code></li></ul></td></tr><tr><td><code>uri</code></td><td>Source of the image to display as the avatar.</td></tr></tbody></table>
-
 ## Examples and code snippets
 
 ### Avatar as children of jig (profile picture)
