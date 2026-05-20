@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # list-item
 
 The list-item component serves as the child component whenever any list-related item has been called, as discussed in the [jig.list](<../../Jig Types/jig_list.md>) and [list](list.md) sections. The component determines how the list items are returned, allowing you to customize the data returned and add UI elements to the lists.

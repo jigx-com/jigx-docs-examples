@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # JavaScript expressions
 
 JavaScript functions allow you to write modular and reusable code. By encapsulating specific functionalities within functions, you can easily reuse them across different parts of your application. This modular approach not only reduces redundancy but also makes the codebase more maintainable and scalable. For example, a function that handles user date and time can be reused in multiple components or screens, ensuring consistency and reducing the likelihood of errors.

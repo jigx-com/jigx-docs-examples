@@ -3,20 +3,6 @@ title: Setting up your solution
 slug: 1gfe-setting-up-your-solution
 createdAt: Mon Jun 13 2022 19:39:00 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Jan 18 2024 14:09:17 GMT+0000 (Coordinated Universal Time)
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Setting up your solution

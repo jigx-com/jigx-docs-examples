@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # External push notifications (API)
 
 External push notifications are messages sent from a backend system or third-party service to a mobile application, without any action required from within the app itself. These notifications are essential for delivering timely updates, alerts, and personalized content that enhance user engagement and keep your app connected to external workflows and systems.

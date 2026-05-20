@@ -1,27 +1,10 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # actions (buttons)
 
 {% columns %}
 {% column %}
 This widget allows you to add primary and/or secondary actions (buttons) to a widget. This is a quick way for users to perform actions without needing to access a jig through the widget first.
 
-* Any of the actions that are available in the [Actions](broken-reference) section can be configured on the widget.
+* Any of the actions that are available in the [Actions](/broken/pages/97n0tlCYgN5mxFzy26Ld) section can be configured on the widget.
 * This widget can be configured in a [group](<Content widget components/group.md>) widget, which allows you to group the actions with other widget types.
 {% endcolumn %}
 

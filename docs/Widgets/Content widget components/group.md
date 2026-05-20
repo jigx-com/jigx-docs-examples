@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # group
 
 The `group widget` allows widgets to be combined to create a single widget. The `group widget` can be used only on `sizes:` 2x4, 4x2, and 4x4.

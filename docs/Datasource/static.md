@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # static
 
 Static lists are typically used when data needs to be accessed but hardly ever manipulated, handled, or updated. Within Jigx , we have ensured that static data is easily specified but also accessed with the same ease. Static data can be configured as a direct data source on a jig or as a global datasource that can be accessed or referenced across various jigs or components.

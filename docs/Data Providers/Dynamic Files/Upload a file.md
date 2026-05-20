@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Upload a file
 
 ## Upload file in a jig
@@ -27,7 +10,7 @@ The `media-field` is configured to accept `any` file type, with a `maximumFileSi
 {% endcolumn %}
 
 {% column %}
-![](../../../.gitbook/assets/DF-upload-files.gif)
+<img src="../../../.gitbook/assets/DF-upload-files.gif" alt="" width="170">
 {% endcolumn %}
 {% endcolumns %}
 

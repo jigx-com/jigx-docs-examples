@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Preview
 
 {% columns %}
@@ -41,5 +24,5 @@ Add a preview for the following [Components](../components/):
 
 {% hint style="warning" %}
 1. Currently issues could be experienced when displaying the header's `title` and `subtitle` in the preview.
-2. Using the `action.go-to` within an action [action-list](broken-reference) does not trigger the preview popup.
+2. Using the `action.go-to` within an action [action-list](/broken/pages/QwWBnb2Fwn2Utfun38Tw) does not trigger the preview popup.
 {% endhint %}

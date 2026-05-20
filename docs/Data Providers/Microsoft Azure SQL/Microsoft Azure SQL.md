@@ -3,20 +3,6 @@ title: Microsoft Azure SQL
 slug: mCBI-micor
 createdAt: Thu Nov 16 2023 18:02:24 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed May 22 2024 07:27:21 GMT+0000 (Coordinated Universal Time)
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Microsoft Azure SQL

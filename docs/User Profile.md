@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # User Profile
 
 {% columns %}
@@ -114,7 +97,7 @@ children:
 
 ## Customize or extend the Profile screen
 
-The Profile screen can be extended by adding [Components](broken-reference) that allow additional user information to be displayed. This can be achieved through the following steps:
+The Profile screen can be extended by adding [Components](/broken/pages/mJEc9sheEFdlhwV1hrF4) that allow additional user information to be displayed. This can be achieved through the following steps:
 
 1. Define a jig containing the components you want to display on the Profile screen.
 2. Set the `jigId` in the `profile` property within the index.jigx file.
