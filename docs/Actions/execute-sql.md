@@ -1,8 +1,10 @@
 # execute-sql
 
-This action allows the app to execute a SQL statement during local SQLite execution, which is used to edit either local tables or Dynamic Data tables. It's useful for running custom queries or updates in response to user interactions or app events. To improve performance, consider creating indexes on frequently queried columns—this enables SQLite to locate rows more efficiently using optimized lookup structures.
+This action allows the app to execute a SQL statement during local SQLite execution, which is used to edit either local tables or Dynamic Data tables. It's useful for running custom queries or updates in response to user interactions or app events. To improve performance, consider creating indexes on frequently queried columns, this enables SQLite to locate rows more efficiently using optimized lookup structures.
 
 ## Configuration options
+
+{% include "../../.gitbook/includes/common-action-properties.md" %}
 
 <table><thead><tr><th width="152.64453125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>entities</code></td><td>The entities/tables affected by the statements. Before executing the statements, a check ensures that the tables exist. After execution any datasources that use these entities will be notified that the database was changed.</td></tr><tr><td><code>statements</code></td><td>List of statements to execute in sequence. Multiple statements can be configured to execute in sequence. <code>statement</code> - the SQL statement to execute against the solution database. <code>parameters</code> - The parameters used in the above statement.</td></tr><tr><td><code>title</code></td><td>Provide the action button with a title, for example, <em>Delete record</em>.</td></tr></tbody></table>
 

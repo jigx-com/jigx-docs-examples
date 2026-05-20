@@ -12,7 +12,7 @@ The component can display statistics related to data records (categorical variab
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](bar-chart.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="158.7578125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>series</code></td><td><code>color</code> - defines the color of the bar used in the chart.</td></tr><tr><td><code>data</code></td><td>values to be used in the chart.</td></tr><tr><td><code>yAxis</code></td><td><code>min</code> and <code>max</code> values that display on the y-axis. The <code>max</code> property doesn't have to be defined, in this case, it will automatically be calculated depending on your data.</td></tr><tr><td><code>xAxis</code></td><td><code>categories</code> to display on the x-axis</td></tr></tbody></table>
 

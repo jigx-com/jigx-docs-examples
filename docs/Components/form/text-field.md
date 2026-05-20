@@ -16,7 +16,7 @@ The `text-field` component can be used independently or within a `form` componen
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](text-field.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="156.3203125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>instanceId</code></td><td>Provide a unique Id for the component that can be referenced elsewhere.</td></tr><tr><td><code>label</code></td><td>Give the field a label. Label is displayed as placeholder when no value is provided.</td></tr></tbody></table>
 

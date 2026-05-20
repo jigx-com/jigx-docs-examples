@@ -43,7 +43,3 @@ options:
 ## Considerations
 
 * For the flag to show you need to use a component or action that has an `icon` property, for example, `leftElement` or `rightElement`.
-
-## See also
-
-* [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/system.jigx)

@@ -20,6 +20,8 @@ A `confirm` action can be set up in various ways:
 1. You can use it as a confirmation to request confirmation before performing an action
 2. You can use it as a confirmation after an action has successfully been performed
 
+{% include "../../.gitbook/includes/common-action-properties.md" %}
+
 ## Examples and code snippets
 
 ### Confirm action with modal

@@ -24,6 +24,8 @@ An `execute-entity` action can be used in multiple areas:
 3. In onPress/onChange events (if the component you are setting up has these options)
 4. In onRefresh/onFocus
 
+{% include "../../.gitbook/includes/common-action-properties.md" %}
+
 {% hint style="warning" %}
 The execute-entity has a `go-back` option, which is set to on by default. That means when you run execute-entity, it will automatically return you to the previous jig.
 {% endhint %}

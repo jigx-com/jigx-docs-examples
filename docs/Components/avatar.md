@@ -12,7 +12,7 @@ Using the avatar component, display a profile photo, company logo, initials, or 
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](avatar.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-component-properties.md" %}
 
 <table data-header-hidden><thead><tr><th width="145.1015625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Add a title for the avatar, this is text displayed when the <code>uri</code> is empty. In the visual presentation, the <code>title</code> can be substituted by an image using the <code>uri</code> property. But the content of the text property has to be kept at least to the empty string: "")</td></tr></tbody></table>
 

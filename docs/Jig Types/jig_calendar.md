@@ -12,7 +12,7 @@ The calendar jig displays an agenda calendar view. `jig.calendar` contains data 
 
 ## Configuration options
 
-Some properties are common to all jig types, see [Common jig type properties](jig_calendar.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-jig-type-properties.md" %}
 
 <table><thead><tr><th width="157.3125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>from</code></td><td>Configure the starting time. You can change the property format by setting the value to the <code>Text With Format</code> property, <em>cntrl+space</em>, and choosing <code>Date</code>. In the <code>format</code> property, select the required date format. The default format saved in the database is <strong>yyyy/mm/ddThour:minute:second</strong> (i.e., 2022-07-27T08:15:00). Expressions for modifying the date and time format can be found in the .</td></tr><tr><td><code>title</code></td><td>Provide the name of the event. If you do not want to show a title in a jig use <code>title: ' '</code> or add an expression.</td></tr><tr><td><code>to</code></td><td>Configure the ending time. You can change the property format by setting the value to the <code>Text With Format</code> property, <em>cntrl+space</em>, and choosing <code>Date</code>. In the <code>format</code> property, select the required date format. The default format saved in the database is <strong>yyyy/mm/ddThour:minute:second</strong> (i.e., 2022-07-27T08:15:00). Expressions for modifying the date and time format can be found in the .</td></tr></tbody></table>
 

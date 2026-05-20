@@ -12,7 +12,7 @@ Experience seamless communication on the go with our chat-message component, kee
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](chat.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="154.95703125">Core Structure</th><th></th></tr></thead><tbody><tr><td><code>instanceId</code></td><td>Used to reference the message data in the action's expression, for example, <code>=@ctx.components.instanceId.state.message</code>.</td></tr><tr><td><code>data</code></td><td>The array of items you want to display in the chat component.</td></tr><tr><td><code>message</code></td><td>The field property used to add the text message in. Referenced for example, <code>=@ctx.current.item.message</code></td></tr><tr><td><code>sender</code></td><td>The <code>name</code> property requires the name of the person sending the message and displays at the top of the chat bubble. Expressions can be used to determine the sender, e.g., <code>=@ctx.current.item.senderName</code></td></tr><tr><td><code>sentAt</code></td><td>Provides the date and time the message was sent at in the format defined by your datasource configuration. For example, 2024-01-08T06:01:29.863Z. If the <code>sentAt</code> property is not configured no date and time shown in the chat bubbles.</td></tr><tr><td><code>onSend</code></td><td>Configure the actions to execute when the send button is tapped in the chat text-editor. The action to send the message data to the database table must be included under <code>onSend</code>; usually, the <code>action: execute-entity</code> with the <code>create</code> method is used.</td></tr></tbody></table>
 

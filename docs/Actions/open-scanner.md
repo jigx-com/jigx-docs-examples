@@ -11,6 +11,8 @@ An `open-scanner` action can be set up in various ways:
 3. As a `rightElement` in the list.
 4. As an associated action in the action list.
 
+{% include "../../.gitbook/includes/common-action-properties.md" %}
+
 ## Examples and code snippets
 
 ### Open-scanner action

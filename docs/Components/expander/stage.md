@@ -11,7 +11,7 @@ In this component, you add left and right elements, typically showing a start-an
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="164.26171875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>left</code></td><td>Add content to the <code>left</code> element as text, or use an expression.</td></tr><tr><td><code>right</code></td><td>Add content to the <code>right</code> element as text, or use an expression.</td></tr><tr><td><code>title</code></td><td>Add <code>titles</code> for the text on the <code>left</code> and <code>right</code> elements.</td></tr></tbody></table>
 

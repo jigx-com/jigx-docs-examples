@@ -93,7 +93,7 @@ The ChatGPT REST API allows prompts in the JSON body parameter you send to the C
 4. Configure the [prompts](<OpenAI integration.md>) to tell AI what it should do and how it must act in the `messages` >`"content:"` property in the `inputTransform` in the functions file.
 5. Create a [Jigs (screens)](https://docs.jigx.com/building-apps-with-jigx/ui/jigs-_screens_) under the jigs folder.
 6. Add [Components (controls)](https://docs.jigx.com/building-apps-with-jigx/ui/components-_controls_) to the jig and configure accordingly.
-7. Configure an [action](https://docs.jigx.com/building-apps-with-jigx/ui/actions) to call the OpenAI function. In most instances a [sync-entities](Actions/sync-entities.md) action is configured to return the reponse from the AI server.
+7. Configure an [action](https://docs.jigx.com/building-apps-with-jigx/ui/actions) to call the OpenAI function. In most instances a [sync-entities](../readme/actions/sync-actions/sync-entities.md) action is configured to return the reponse from the AI server.
 
 ## Function configuration
 
@@ -355,7 +355,7 @@ action:
 
 ## Anaylze images with OpenAI
 
-In this example, an image is analyzed by integrating with the OpenAI ChatGPT REST service to analyze the image to provide a general reponse. An image is uploaded in a jig using the [media-field](Components/form/media-field.md) component. When the _Analyze image_ button is pressed a [sync-entities](Actions/sync-entities.md) action is configured which calls the function to execute the OpenAI REST API call. The result returned from the OpenAI call is used to add a description for the image in an [entity-field](Components/entity/entity-field.md) component.
+In this example, an image is analyzed by integrating with the OpenAI ChatGPT REST service to analyze the image to provide a general reponse. An image is uploaded in a jig using the [media-field](Components/form/media-field.md) component. When the _Analyze image_ button is pressed a [sync-entities](../readme/actions/sync-actions/sync-entities.md) action is configured which calls the function to execute the OpenAI REST API call. The result returned from the OpenAI call is used to add a description for the image in an [entity-field](Components/entity/entity-field.md) component.
 
 <figure><img src="../.gitbook/assets/AI-ImageDescrip.png" alt="AI description for image" width="563"><figcaption><p>AI description for image</p></figcaption></figure>
 

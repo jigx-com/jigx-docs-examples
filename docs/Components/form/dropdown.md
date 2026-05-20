@@ -10,7 +10,7 @@ The `dropdown` component can be used independently or within a `form` component,
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](dropdown.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="229.08984375">Core structure for dropdown</th><th></th></tr></thead><tbody><tr><td><code>instanceId</code></td><td>The unique identifier for the dropdown component.</td></tr><tr><td><code>label</code></td><td>Provide a label/name for the dropdown. 'Label' is displayed as a placeholder when no value is specified.</td></tr><tr><td><code>data</code></td><td>Use an expression that evaluates to either an array of options or sections.</td></tr><tr><td><code>item</code></td><td>The <code>item</code> property use component of <strong>dropdown-item</strong> that includes: <code>title</code> and <code>value</code>.</td></tr></tbody></table>
 

@@ -146,7 +146,7 @@ tabs:
 In the pre-populate _Update Employee_ form add the `action.submit-form` using the Dynamic Data provider with the **update** method to update the data record.
 
 {% hint style="info" %}
-The record is updated instantly and the new employee details are shown in the list
+The record is updated instantly and the new employee details are shown in the list.
 {% endhint %}
 
 {% tabs %}
@@ -156,6 +156,13 @@ The record is updated instantly and the new employee details are shown in the li
 title: Update Employee
 type: jig.default
 
+inputs:
+  employee-detail:
+    type: array
+    arrayItem:
+      type: string
+    required: true
+    
 header:
   type: component.jig-header
   options:
@@ -241,7 +248,10 @@ actions:
           title: Update Record
           entity: default/employee
           method: update
-        # The specify the record that must be updated in the Dynamic Data table by referencing the current data stata of the components in the form  
+          # All queued commands for the specified record and method type are replaced with the current action.
+          # Once the device is back online the queue is cleared and the update command executes.
+          queueOperation: replace
+            # The specify the record that must be updated in the Dynamic Data table by referencing the current data stata of the components in the form  
           recordId: =@ctx.components.update-form.state.data
           onSuccess: 
             type: action.go-back

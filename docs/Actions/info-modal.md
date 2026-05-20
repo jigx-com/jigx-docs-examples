@@ -6,7 +6,7 @@ The info-modal is a pop-up window that provides additional information or contex
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](info-modal.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-action-properties.md" %}
 
 <table><thead><tr><th width="166.40234375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>modal</code></td><td>Modal contains the properties that will determine the button and content in the modal.</td></tr><tr><td><code>instanceId</code></td><td>The unique identifier for the info-modal that can be referenced in other jigs.</td></tr><tr><td><code>title</code></td><td>Provide a short title for display at the top of the info-modal. You can use text, an expression or a datasource to set the title.</td></tr></tbody></table>
 

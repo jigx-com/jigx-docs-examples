@@ -4,7 +4,6 @@ The `media-field` component allows users to upload images, videos, or files, eit
 
 * _Preview and thumbnails_, with built-in delete controls
 * _Single or multiple_ selection
-* _Cropping_ and _quality_ settings
 * _Size limits_ and _type filtering_
 
 {% hint style="info" %}
@@ -18,12 +17,13 @@ The `media-field` component can be used independently or within a `form` compone
 * The `media-field` can only be used in a [jig.default](<../../Jig Types/jig_default.md>).
 * The `media-field` requires a datasource to store the files, you can configure one of the [Data Providers](<../../Data Providers/Data Providers.md>) for this.
 * [Conversions](https://docs.jigx.com/building-apps-with-jigx/data/file-handling) allow you to determine the format the files are stored in and loaded from the datasource.
-* Jigx recommends storing images and files using [Dynamic files](https://docs.jigx.com/dynamic-files), where the files are physically stored in Amazon S3.
-* Some properties are common to all components, see [Common component properties](https://docs.jigx.com/examples/readme/components/common-component-properties) for a list and their configuration options.
+* Jigx recommends storing images and files using [Dynamic files](https://docs.jigx.com/building-apps-with-jigx/data/data-providers/dynamic-files), where the files are physically stored in Amazon S3.
+
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="166.984375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>instanceId</code></td><td>Provide a unique identifier for the <code>media-field</code> component.</td></tr><tr><td><code>label</code></td><td>Label is displayed as a placeholder if there is no value provided. Use this property to provide a value that will guide the user to identify what must be uploaded, such as <code>Upload file</code> or <code>Upload a video</code>.</td></tr><tr><td><code>mediaType</code></td><td>By default the value is set to <code>image</code>. Configure filters to restrict media types based on your app’s requirements, for example, only allow document files DOC, PDF or plain text. Multiple options can be listed to provide greater scope of filtering, i.e. PDF and DOC files. The following options are available for selection: 1) <code>any</code> is for files of any extension such as pdf, jpeg, png, mpeg, txt, or docx. Set to <code>any</code> allows you to take a picture, record a video, select an image or video from the library, or select a document. Using <code>mediaType: any</code> is recommended when uploading multiple media files as it caters for any file type. 2) <code>csv</code> - select CSV files. 3) <code>doc</code> - select DOC or DOCX files. 4) <code>image</code> - used to take a picture or select from the image library. 5) <code>imageAndVideo</code> - take a picture, record a video or select an image or video from the library. 6) <code>pdf</code> - select PDF files. 7) <code>plainText</code> - select plain text files. 8) <code>ppt</code> - select PPT or PPTX files. 9) <code>video</code> - record a video or upload one from the library. 10) <code>xls</code> - select XLS or XLSX files.</td></tr></tbody></table>
 
-<table><thead><tr><th width="172.6484375">Other options</th><th></th></tr></thead><tbody><tr><td><code>intialValue</code></td><td>The <code>initialValue</code> property populates the <code>media-field</code> with the specified files when the field first loads, allowing you to preset default media so users don’t need to select files manually. To update the media, simply tap the <code>media-field</code> and upload a new selection. Note that using the <code>reset-state</code> action will <strong>not</strong> clear the field entirely; it always restores the <code>media-field</code> back to its configured <code>initialValue</code>.</td></tr><tr><td><code>imageCropping</code></td><td><p>You can set any of the following with <code>imageCropping</code> :</p><ul><li><code>isEnabled</code> - allows you to crop an image.</li><li><code>height</code> - maximum allowed is 5000px.</li><li><code>width</code>- maximum allowed is 5000px.</li><li><code>isFreeStyleCropEnabled</code> - when set to <code>true</code> it supports custom cropping to change the size or aspect ratio of an image.</li></ul></td></tr><tr><td><code>imageQuality</code></td><td>Image quality after compression (from 0 to 100, where 100 is the best quality). On iOS, values larger than 80 don't produce a noticeable quality increase in most images, while a value of 80 will reduce the file size by about half or less compared to a value of 100. Default: 100 (Android)/ 80 (iOS).</td></tr><tr><td><code>isMultiple</code></td><td>Set to <code>true</code> allows for multiple files to be added. Set to <code>false</code> allows for a single file.</td></tr><tr><td><code>maximumFileSize</code></td><td><code>maximumFileSize =6 * 1024 * 1024</code> by default. Set the value to <code>none</code> if no size evaluations must be performed. File size format is in bytes. Applies to images and videos.</td></tr></tbody></table>
+<table><thead><tr><th width="182.5078125">Other options</th><th></th></tr></thead><tbody><tr><td><code>intialValue</code></td><td>The <code>initialValue</code> property populates the <code>media-field</code> with the specified files when the field first loads, allowing you to preset default media so users don’t need to select files manually. To update the media, simply tap the <code>media-field</code> and upload a new selection. Note that using the <code>reset-state</code> action will <strong>not</strong> clear the field entirely; it always restores the <code>media-field</code> back to its configured <code>initialValue</code>.</td></tr><tr><td><code>imageCropping</code></td><td><div data-gb-custom-block data-tag="hint" data-style="danger" class="hint hint-danger"><p>The <code>image-cropping</code> property in the <code>media-picker</code> component has been deprecated. Image cropping has shown inconsistent behavior across platforms, and is no longer recommended for use. Please remove or avoid this property in your configurations to ensure a consistent user experience.</p></div><p>You can set any of the following with <code>imageCropping</code> :</p><ul><li><code>isEnabled</code> - allows you to crop an image.</li><li><code>height</code> - maximum allowed is 5000px.</li><li><code>width</code>- maximum allowed is 5000px.</li><li><code>isFreeStyleCropEnabled</code> - when set to <code>true</code> it supports custom cropping to change the size or aspect ratio of an image.</li></ul></td></tr><tr><td><code>imageQuality</code></td><td>Image quality after compression (from 0 to 100, where 100 is the best quality). On iOS, values larger than 80 don't produce a noticeable quality increase in most images, while a value of 80 will reduce the file size by about half or less compared to a value of 100. Default: 100 (Android)/ 80 (iOS).</td></tr><tr><td><code>isMultiple</code></td><td>Set to <code>true</code> allows for multiple files to be added. Set to <code>false</code> allows for a single file.</td></tr><tr><td><code>maximumFileSize</code></td><td><code>maximumFileSize =6 * 1024 * 1024</code> by default. Set the value to <code>none</code> if no size evaluations must be performed. File size format is in bytes. Applies to images and videos.</td></tr><tr><td><code>style</code></td><td><p>The following property settings are available:</p><ul><li><code>flex</code> - Flex property if rendered inside row.</li><li><code>isBusy</code> - Displays spinner on the field. It removes any icon.</li><li><code>isDisabled</code> - set to <code>true</code> disables the media-field. Tapping a disabled media-field opens the detail modal so existing media can be viewed. Add and delete actions remain blocked as expected.</li></ul></td></tr><tr><td><code>videoQualityPreset</code></td><td><p>Controls the video compression quality used when users select videos from your library (iOS only).</p><ul><li><code>passthrough</code> (default), no compression; original quality is preserved.</li><li><code>medium</code>, use the Medium quality preset.</li></ul></td></tr></tbody></table>
 
 <table><thead><tr><th width="230.8828125">Actions</th><th></th></tr></thead><tbody><tr><td><code>action.open-media-picker</code></td><td>Configure the <a href="../../Actions/open-media-picker.md">open-media-picker</a> action to either launch the camera immediately so you can capture a photo or video, or open the media library to select existing files and return their paths.</td></tr></tbody></table>
 
@@ -156,9 +156,9 @@ actions:
 ```
 {% endcode %}
 
-### Upload image & use freestyle cropping
+### Upload image
 
-This component _uploads_ an image using the `mediaType: image` property. Clicking on the paperclip icon will display a menu where you can choose to upload an existing image from your device or use the camera to take a new image. After selecting or capturing the image, and cropping the image to the specified size, the media-field is first validated, then the upload button becomes enabled. Pressing the Upload image button at the bottom will trigger an action to create an entry with the image.
+This component _uploads_ an image using the `mediaType: image` property. Clicking on the paperclip icon will display a menu where you can choose to upload an existing image from your device or use the camera to take a new image. Pressing the Upload image button at the bottom will trigger an action to create an entry with the image.
 
 **Examples:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/media-field/media-field-image.jigx).
 
@@ -181,10 +181,6 @@ children:
             mediaType: image
             label: Upload image
             maximumFileSize: none
-            imageCropping:
-              width: 500
-              height: 450
-              isFreeStyleCropEnabled: true
 
 actions:
   - children:
@@ -286,7 +282,7 @@ datasources:
 
 ### Upload video
 
-In this example multiple videos are uploaded, using the `mediaType: video` and `isMultiple: true` properties. Select videos from the library or record videos to be uploaded. Tap the + icon in the bottom left corner to add multiple videos. The `execute-entities` action uploads the videos and the metadata configured under `data` to the required datasource.
+In this example multiple videos are uploaded, using the `mediaType: video` and `isMultiple: true` properties. Select videos from the library or record videos to be uploaded. Tap the + icon in the bottom left corner to add multiple videos. The `execute-entities` action uploads the videos and the metadata configured under `data` to the required datasource. Set the `videoQualityPreset` to control video compression quality when users select videos from their library on iOS devices.
 
 **Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/media-field/media-field-video.jigx).
 
@@ -347,7 +343,7 @@ actions:
 
 ### Upload image or video
 
-In this example multiple images and videos are uploaded, using the `mediaType: imageAndVideo` and `isMultiple: true` properties. Select images and videos from the library, take a picture or record videos to be uploaded. Tap the + icon in the bottom left corner to add multiple images and videos. The `execute-entities` action uploads the images, videos and metadata to the required datasource.
+In this example multiple images and videos are uploaded, using the `mediaType: imageAndVideo` and `isMultiple: true` properties. Select images and videos from the library, take a picture or record videos to be uploaded. Tap the + icon in the bottom left corner to add multiple images and videos. The `execute-entities` action uploads the images, videos and metadata to the required datasource. Set the `videoQualityPreset` to control video compression quality when users select videos from their library on iOS devices.
 
 **Example:** See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/media-field/media-field-image-video.jigx).
 

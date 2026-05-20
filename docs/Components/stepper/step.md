@@ -6,7 +6,7 @@ This component displays consecutive steps in a stepper component. You can divide
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](step.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="142.51171875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Provide a title for the step item. You can use an expression to set the title.</td></tr><tr><td><code>value</code></td><td>The value of the step item. The value is exposed in the jig's state, making it available for use anywhere inside the jig.</td></tr></tbody></table>
 

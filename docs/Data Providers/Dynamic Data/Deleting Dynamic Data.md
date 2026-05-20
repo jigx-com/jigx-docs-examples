@@ -92,6 +92,11 @@ item:
               provider: DATA_PROVIDER_DYNAMIC
               entity: default/employee
               method: delete
+              # Cater for offline data handling to add the delete command to the queue. 
+              # Once the device is back online the queue is cleared and the delete
+              # command executes. Do not use replace as the queue is cleared without 
+              # executing the delete method.
+              queueOperation: add
               data:
                 id: =@ctx.current.item.id
               onSuccess: 
@@ -221,6 +226,11 @@ actions:
               provider: DATA_PROVIDER_DYNAMIC
               entity: default/employee
               method: delete
+              # Cater for offline data handling to add the delete command to the queue. 
+              # Once the device is back online the queue is cleared and the delete
+              # command executes. Do not use replace as the queue is cleared without 
+              # executing the delete method.
+              queueOperation: add
               data: =@ctx.datasources.employee-list.{"id" :id}[]
               onSuccess: 
                 type: action.go-back

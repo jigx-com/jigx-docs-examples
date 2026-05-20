@@ -4,7 +4,7 @@ Programmatically set the next active tab to display in the [jig.tabs](<../Jig Ty
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](set-active-tab.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-action-properties.md" %}
 
 <table><thead><tr><th width="179.25390625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>Action Identifier</code></td><td>Give the action a unique name that will be used to reference the action in another jig's action. See the example below.</td></tr><tr><td><code>id</code></td><td>Provide the <code>jigId</code> for the jig that will be opened next.</td></tr></tbody></table>
 

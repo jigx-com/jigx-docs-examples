@@ -18,7 +18,7 @@ The `number-field` component can be used independently or within a `form` compon
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](number-field.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="142.83984375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>instanceId</code></td><td>The unique identifier for the number-field.</td></tr><tr><td><code>label</code></td><td>Provide a label/name for the number-field. 'Label' is displayed as a placeholder when no value is specified.</td></tr></tbody></table>
 
@@ -45,7 +45,7 @@ The form use multiple `number-fields` property for numeric values with the follo
 
 **Examples:**
 
-See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/number-field/static-data/number-field.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/number-field/dynamic-data/number-field-dynamic.jigx).
+See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/number-field/static-data/number-field.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/number-field/dynamic-data/number-field-dynamic.jigx).
 
 {% tabs %}
 {% tab title="number-field (static)" %}

@@ -12,7 +12,7 @@ Use the progress-bar component to visually represent a task or process's current
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](progress-bar.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="161.765625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>value</code></td><td><code>current</code> - determines the current status to be shown in the bar. This can be dynamically set with an expression, e.g. <code>=$count(@ctx.components.packList.state.selected)</code> <code>max</code> - numeric, set the maximum value of the progress bar, e.g., the sales target is 5 new customers a month, making the <code>max: 5</code> . You can set the maximum dynamically, e.g., using the datasource <code>=$count(@ctx.datasources.checkbox-list)</code></td></tr></tbody></table>
 
@@ -37,7 +37,7 @@ Some properties are common to all components, see [Common component properties](
 {% column %}
 This example shows the different ways the `title` and `subtitle` can be configured using `position`, `color` and `alignment`.
 
-**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar).
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-title-subtitle.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

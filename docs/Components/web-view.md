@@ -8,7 +8,7 @@ You can also use the [jig.document](<../Jig Types/jig_document.md>) type to disp
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](web-view.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="278.1953125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>uri</code></td><td>The source to be displayed in the web-view, for example, a URL.</td></tr></tbody></table>
 

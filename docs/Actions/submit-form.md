@@ -13,6 +13,8 @@ The `submit-form` action can be set up as a primary action on default jig with a
 
 Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](https://docs.jigx.com/building-apps-with-jigx/data/offline-remote-data-handling) explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities and provides examples and code samples.
 
+{% include "../../.gitbook/includes/common-action-properties.md" %}
+
 ## Examples and code snippets
 
 ### submit-form example

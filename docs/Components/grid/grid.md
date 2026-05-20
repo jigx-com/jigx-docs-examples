@@ -9,6 +9,8 @@ The grid component has two available configuration options:
 1. **Auto Grid** - used to create a grid layout from a datasource. This is similar in configuration to a [jig.list](<../../Jig Types/jig_list.md>) where a single `grid-item` is configured and iterates through the datasource.
 2. **Custom Grid** - used to create a custom grid layout using widgets, images, or custom components in various sizes.
 
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
+
 <table><thead><tr><th width="153.90234375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>type</code></td><td>Within a grid component, the component is used to define each of the elements in the grid layout. Within the <code>grid-item</code> a select set of components can be configured.</td></tr><tr><td><code>data</code></td><td>Configure a datasource to call the data in the grid layout. The data property is required for the Auto Grid, but is optional for the Custom Grid selection.</td></tr></tbody></table>
 
 ## Examples and code snippets

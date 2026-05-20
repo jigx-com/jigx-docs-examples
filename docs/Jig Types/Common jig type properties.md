@@ -6,11 +6,12 @@ These common properties include:
 
 * badges
 * [bottomSheet (Beta)](<Common jig type properties/bottomSheet _Beta_.md>)
+* [filter](<Common jig type properties.md#filter>)
+* [home button visibility](<Common jig type properties.md#home-button-visibility>)
 * icons
-* isSearchable
-* filter
+* [isSearchable](<Common jig type properties.md#issearchable>)
+* [placeholders](<Common jig type properties.md#placeholder>)
 * [when](<../Components/Common component properties.md>)
-* Home button visibility
 
 ## bottomSheet (Beta)
 
@@ -40,6 +41,79 @@ isHomeButtonVisible: false
   * When using two primary actions on a jig with the home button visible, results in the home button displaying above the action bar.
   * Similarly, when using the [summary](../Components/summary.md) component without hiding the home button, the home button is displayed above the summary.
   * Using [bottomSheet (Beta)](<Common jig type properties/bottomSheet _Beta_.md>) or [go-to](../Actions/go-to.md) with `isModal`, the modal overlays the home button on the main jig.
+
+## filter
+
+The `filter` property creates tabbed filter options to categorize and filter data.
+
+**Applies to the following jig types:**
+
+1. list
+2. default
+3. grid
+
+**Requirements**:
+
+1. **Data Array**: Must contain an array of filter objects with `title` and `value` properties.
+2. **Title Property**: The display name shown in the filter tab.
+3. **Value Property**: The actual filter value used in datasource queries.
+4. **Datasource Integration**: Requires corresponding datasource query parameter binding.
+5. **Simple Values**: Recommended to use simple values like strings or numbers (e.g., 'today', '7d', '14d') rather than objects for strict equality checks.
+
+**Optional Properties**:
+
+* **initialValue**: Sets which filter tab is selected by default when the jig opens.
+
+**State Access**: To access the filter state uses: `=@ctx.jig.state.filter`
+
+{% tabs %}
+{% tab title="Filter Configuration" %}
+```yaml
+title: Filter List (Dynamic)
+description: A dynamic list displaying filter options
+type: jig.list
+# Add the filter tab names and values.
+filter: 
+  data: 
+  - title: All
+    value: ''
+  - title: Indoor
+    value: "TRUE"
+  - title: Outdoor
+    value: "FALSE"
+```
+{% endtab %}
+
+{% tab title="datasource" %}
+```yaml
+datasources:
+  cleaning-services-dynamic:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+      entities:
+        - entity: default/cleaning-services
+  
+      query: |
+        SELECT 
+          id, 
+          '$.area', 
+          '$.description', 
+          '$.hourlyrate', 
+          '$.illustration', 
+          '$.image', 
+          '$.indoor', 
+          '$.onceoffrate', 
+          '$.service', 
+          '$.time' 
+        FROM [default/cleaning-services] 
+        WHERE '$.indoor' LIKE @filter or @filter IS NULL
+      # Add the filter state to access the filter data  
+      queryParameters:
+        filter: =@ctx.jig.state.filter
+```
+{% endtab %}
+{% endtabs %}
 
 ## isSearchable&#x20;
 
@@ -98,79 +172,6 @@ datasources:
 ```
 {% endcode %}
 
-## filter
+## placeholder
 
-The `filter` property creates tabbed filter options to categorize and filter data.
-
-**Applies to the following jig types:**
-
-1. list
-2. default
-3. grid
-
-**Requirements**:
-
-1. **Data Array**: Must contain an array of filter objects with `title` and `value` properties.
-2. **Title Property**: The display name shown in the filter tab.
-3. **Value Property**: The actual filter value used in datasource queries.
-4. **Datasource Integration**: Requires corresponding datasource query parameter binding.
-5. **Simple Values**: Recommended to use simple values like strings or numbers (e.g., 'today', '7d', '14d') rather than objects for strict equality checks.
-
-**Optional Properties**:
-
-* **initialValue**: Sets which filter tab is selected by default when the jig opens.
-
-**State Access**: To access the filter state uses: `=@ctx.jig.state.filter`
-
-{% tabs %}
-{% tab title="Filter Configuration" %}
-{% code title="" %}
-```yaml
-title: Filter List (Dynamic)
-description: A dynamic list displaying filter options
-type: jig.list
-# Add the filter tab names and values.
-filter: 
-  data: 
-  - title: All
-    value: ''
-  - title: Indoor
-    value: "TRUE"
-  - title: Outdoor
-    value: "FALSE"
-```
-{% endcode %}
-
-
-{% endtab %}
-
-{% tab title="datasource" %}
-```yaml
-datasources:
-  cleaning-services-dynamic:
-    type: datasource.sqlite
-    options:
-      provider: DATA_PROVIDER_DYNAMIC
-      entities:
-        - entity: default/cleaning-services
-  
-      query: |
-        SELECT 
-          id, 
-          '$.area', 
-          '$.description', 
-          '$.hourlyrate', 
-          '$.illustration', 
-          '$.image', 
-          '$.indoor', 
-          '$.onceoffrate', 
-          '$.service', 
-          '$.time' 
-        FROM [default/cleaning-services] 
-        WHERE '$.indoor' LIKE @filter or @filter IS NULL
-      # Add the filter state to access the filter data  
-      queryParameters:
-        filter: =@ctx.jig.state.filter
-```
-{% endtab %}
-{% endtabs %}
+The placeholder element can be added to any jig-type to enhance empty screens across your app. It appears whenever no data is available and is fully customizable. You can define your own text, description, choose an icon, or use one of the built-in animated icons to create a more engaging experience. For screens that use array-based data (such as lists or dropdown components), by default a placeholder is shown automatically when no data is returned. You can replace or customise this behaviour using the placeholder element. See [placeholders](../../readme/jig-types/common-jig-type-properties/placeholders.md) for more information.<br>

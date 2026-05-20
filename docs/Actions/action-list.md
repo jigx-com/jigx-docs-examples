@@ -17,6 +17,8 @@ An `action list` can be set up in various ways:
 2. In onPress/onChange events - usually triggered by [list](../Widgets/list.md) or [jig.list](<../Jig Types/jig_list.md>) related items.
 3. In onRefresh/onFocus events on any type of jig.
 
+{% include "../../.gitbook/includes/common-action-properties.md" %}
+
 ## Examples and code snippets
 
 ### Action-list as a primary action button

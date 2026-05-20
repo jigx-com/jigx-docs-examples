@@ -1,14 +1,10 @@
----
-hidden: true
----
-
 # show-alert
 
 The `action.show-alert`  provides a way to notify users about important information in your app,  you can choose to show the alert as a **toast** for lightweight updates, or a **modal** for important messages. Alerts can be customized with styling, icons, and interactive elements, allowing you to tailor them to different scenarios.
 
-The `action.show-alert` is considered a **background action**, meaning it can run automatically or silently without interrupting the current flow. Background actions typically occur behind the scenes, such as syncing data, saving changes, uploading files, or refreshing content.
+The `action.show-alert` is considered a **background action**, meaning it can run automatically or silently without interrupting the current flow. It is configurable as a background or secondary action that happens behind the scenes, either as part of other actions or as a result of an action. Background actions typically occur without direct user interaction, such as syncing data, saving changes, uploading files, or refreshing content.
 
-In most cases, `show-alert` is **configured to run in response to an** [**event**](../../docs/Events/Events.md) such as `onPress`, `onFocus`, `onLoad`, or `onRefresh`.
+In most cases, `show-alert` is configured to either run in response to an [**action**](../../docs/Actions/) within an [**event**](../../docs/Events/Events.md) such as sync actions configured in an `onPress`, `onFocus`, `onLoad`, or `onRefresh,`&#x20;
 
 The alert may not always be triggered directly by the user. Instead, it can be triggered automatically after another action completes. For example, when a user submits a form, the app might attempt to save the data in the background, and if that save fails, `action.show-alert` is triggered to notify the user of the error.
 
@@ -23,16 +19,18 @@ The alert may not always be triggered directly by the user. Instead, it can be t
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](https://docs.jigx.com/examples/readme/actions/share) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-action-properties.md" %}
 
 <table><thead><tr><th width="140.36328125">Core Structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>The main heading text displayed at the top of the alert. It should be concise and clearly state the purpose of the message.</td></tr><tr><td><code>presentAs</code></td><td><p>Specifies how the alert is presented to the user. Options include:</p><ul><li> <code>toast</code> (default):  For brief, lightweight notifications. </li><li><code>modal</code>: For important messages that require attention and may include additional information. Modal alerts are more disruptive since they block the UI and are typically used for critical information.</li></ul></td></tr></tbody></table>
 
-<table><thead><tr><th width="139.98046875">Other options</th><th></th></tr></thead><tbody><tr><td><code>action</code></td><td>Interactive buttons or controls displayed within the alert let users respond or take specific actions. Use IntelliSense to see the list of available <a href="../../docs/Actions/">actions</a>.</td></tr><tr><td><code>description</code></td><td>The detailed message content that explains the alert’s purpose, provides instructions, or delivers additional information to the user.</td></tr><tr><td><code>dismiss</code></td><td><p>Configures how users can dismiss the alert. You can enable a gesture dismissal and set an automatic dismissal time.</p><ul><li><code>autoAfter</code> - specify the number of seconds after which the alert is automatically dismissed. Has no effect when <code>dismiss</code> is disabled.</li><li><code>isEnabled</code> - When set to <code>true</code> (default), allowing manual dismissal by swiping down. When set to <code>false</code>, the alert cannot be dismissed manually.</li></ul></td></tr><tr><td><code>group</code></td><td>Grouping allows you to manage multiple alerts under a shared identifier. This ensures that only one alert from a group is visible at a time, preventing alert overload and improving the user experience.<br><code>id</code> - Identifier for the alert group. Only one alert per group can be visible at a time. If a new alert with the same group ID is triggered while another is active, it will be skipped.</td></tr><tr><td><code>icon</code></td><td>The icon displayed alongside the alert content provides visual context and helps users recognize the alert’s type or purpose. The alert’s <code>style</code> property determines the icon color. If no style is set, the default <code>isWarning</code> style is applied.</td></tr><tr><td><code>style</code></td><td><p>Visual styling options let you set the tone of the alert:</p><ul><li><code>isPositive</code> (success/confirmation)</li><li><code>isNegative</code> (error) styling to convey the appropriate tone and urgency. </li><li><code>isWarning</code> (warning) styling is used by default.</li></ul></td></tr><tr><td><code>subtitle</code></td><td>Secondary text that appears below the <code>title</code>, providing additional context or supplementary information.</td></tr></tbody></table>
+<table><thead><tr><th width="139.98046875">Other options</th><th></th></tr></thead><tbody><tr><td><code>action</code></td><td>Interactive buttons or controls displayed within the alert let users respond or take specific actions. Use IntelliSense to see the list of available <a href="../../docs/Actions/">actions</a>.</td></tr><tr><td><code>description</code></td><td>The detailed message content that explains the alert’s purpose, provides instructions, or delivers additional information to the user.</td></tr><tr><td><code>dismiss</code></td><td><p>Configures how users can dismiss the alert. You can enable a gesture dismissal and set an automatic dismissal time.</p><ul><li><code>autoAfter</code> - specify the number of seconds after which the alert is automatically dismissed. Has no effect when <code>dismiss</code> is disabled.</li><li><code>isEnabled</code> - When set to <code>true</code> (default), allowing manual dismissal by swiping down. When set to <code>false</code>, the alert cannot be dismissed manually.</li></ul></td></tr><tr><td><code>group</code></td><td><p>Grouping allows you to manage multiple alerts under a shared identifier. This ensures that only one alert from a group is visible at a time, preventing alert overload and improving the user experience.<br><code>id</code> - Identifier for the alert group. Only one alert per group can be visible at a time. If a new alert with the same group ID is triggered while another is active, the alert will be skipped. </p><p>When using <code>modal</code> presentation, alerts with the same <code>groupId</code> are grouped so that only the first alert appears and subsequent ones are automatically skipped. When using the <code>toast</code> presentation, alerts are grouped, preventing duplicates. Users can tap the <code>toast</code> to view details. If multiple alerts exist, they stack and display a count at the top. Swiping left lets users view each alert’s details within the stack.</p></td></tr><tr><td><code>icon</code></td><td>The icon displayed alongside the alert content provides visual context and helps users recognize the alert’s type or purpose. The alert’s <code>style</code> property determines the icon color. If no style is set, the default <code>isWarning</code> style is applied.</td></tr><tr><td><code>style</code></td><td><p>Visual styling options let you set the tone of the alert:</p><ul><li><code>isPositive</code> (success/confirmation)</li><li><code>isNegative</code> (error) styling to convey the appropriate tone and urgency. </li><li><code>isWarning</code> (warning) styling is used by default.</li></ul></td></tr><tr><td><code>subtitle</code></td><td>Secondary text that appears below the <code>title</code>, providing additional context or supplementary information.</td></tr></tbody></table>
 
 ## Considerations
 
-* The `action.show-alert` is only configurable in an [event](../../docs/Events/Events.md) such as `onPress` , `OnFocus`, `onLoad` or `onRefresh`.
+* The `action.show-alert` is only configurable in an [action](../../docs/Actions/) within an [event](../../docs/Events/Events.md) such as `onPress` , `OnFocus`, `onLoad` or `onRefresh`.
+* The `action.show-alert` is configurable as a background or secondary action that executes, either as part of other actions or as a result of an action. Background actions typically occur without direct user interaction, such as syncing data, saving changes, uploading files, or refreshing content. For example, after submitting a form, you could use an `onSuccess` event to trigger a `show-alert` message if a user attempts to perform an operation without completing required prior steps.
 * When the `show-alert` is shown as a toast, tap on the toast to view additional details configured in the `description` property.
+* If multiple alerts are triggered concurrently, they are displayed in layers. `Modal` alerts take precedence over `toast` alerts and will always appear in the foreground. Any `toast` alerts generated at the same time remain hidden until the `modal` alert is dismissed.
 
 ## Examples and code snippets
 
@@ -40,7 +38,7 @@ Some properties are common to all components, see [Common component properties](
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/ac-show-alert-toast1.png" alt="Show alert as a toast"><figcaption><p>Show alert as a toast</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ac-show-alert-toast.png" alt="Show alert as a toast"><figcaption><p>Show alert as a toast</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -173,7 +171,7 @@ actions:
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/ac-show-alert-modal.png" alt="Show alert as a modal" width="188"><figcaption><p>Show alert as a modal</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ac-show-alert-modal (1).png" alt="Show alert as a modal" width="188"><figcaption><p>Show alert as a modal</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -231,7 +229,7 @@ This example demonstrates how to configure an alert that evaluates a user's app 
 
 <figure><img src="../../.gitbook/assets/ac-show-alert-action-modal.png" alt="Show Alert with an action - modal" width="375"><figcaption><p>Show alert with an action - modal</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/ac-show-alert-action-toast.png" alt="Show alert with an action - toast" width="375"><figcaption><p>Show alert with an action - toast</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ac-show-alert-action-toast (1).png" alt="Show alert with an action - toast"><figcaption><p>Show alert with an action - toast</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="index.jigx" %}
@@ -838,16 +836,16 @@ children:
 ### Show-alert with group id
 
 {% columns %}
-{% column width="58.333333333333336%" %}
-In this example, a list of team tasks is displayed. Each task can be selected to start work. However, if a user attempts to start a task that isn’t assigned to them, an alert is shown to inform them that the task must first be reassigned or approved.
+{% column %}
+This example demonstrates how to `group` multiple alerts under a shared identifier, ensuring that only one alert from the group is visible at a time and preventing alert overload.
 
-The alert can appear as a **toast**, or as a **modal** to display information. To prevent multiple alerts from stacking one after another when the user taps several tasks not assigned to them, the alert configuration includes a `groupId` property.
+When a team member taps _Start_ on a work item that is not assigned to them, an _Access denied_ alert is displayed. If the user taps multiple unassigned work items (for example, four in a row), only a single alert message appears because all alerts share the same group identifier.
 
-The `groupId` ensures that only one alert from that group, `task-assignment` in this case,is displayed at a time. If several conditions in the list trigger the same alert (for example, the user selects three unassigned tasks in a row), only the first alert appears, and the rest are automatically skipped.
+The alert is presented as a warning `toast`, making it clearly noticeable while still allowing the user to continue working without interrupting their workflow.
 {% endcolumn %}
 
-{% column width="41.666666666666664%" %}
-<figure><img src="../../.gitbook/assets/action-show-alert-group.gif" alt="Show-alert with groupId" width="265"><figcaption><p>Show-alert with groupId</p></figcaption></figure>
+{% column %}
+<figure><img src="../../.gitbook/assets/action-show-alert-group.gif" alt="Show-Alert with groupId" width="265"><figcaption><p>Show-Alert with groupId</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -985,4 +983,144 @@ children:
 {% endtab %}
 {% endtabs %}
 
+{% tabs %}
+{% tab title="action-show-alert-group.jigx" %}
+```yaml
+title: Team task list
+description: Team work list, select your task to start working on it.
+type: jig.list
+
+header:
+  type: component.jig-header
+  options:
+    children:
+      options:
+        source:
+          uri: https://images.unsplash.com/photo-1590402494628-9b9acf0b90ae?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+      type: component.image
+    height: medium
+
+data: =@ctx.datasources.team-tasks
+item:
+  type: component.list-item
+  options:
+    isContained: true
+    title: =@ctx.current.item.taskAssignee
+    subtitle: =@ctx.current.item.taskName
+    # Add multiple tags to the list-items.
+    # Each tag can have its own color.
+    # Tags are shown in the order they configured.
+    tags:
+      - text: =@ctx.current.item.team
+        color: primary
+      - text: =@ctx.current.item.priority
+        color: warning
+      - text: =@ctx.current.item.taskStatus
+        color: color2
+    leftElement:
+      element: avatar
+      text: =@ctx.current.item.taskAssignee
+      uri: =@ctx.current.item.Profile
+    rightElement:
+      element: button
+      title: Start
+      onPress:
+        type: action.action-list
+        options:
+          isSequential: true
+          actions:
+            - type: action.show-alert
+              when: =@ctx.user.displayName != @ctx.current.item.taskAssignee
+              options:
+                title: Access denied
+                description: This task is assigned to someone else.
+                presentAs: toast
+                # Group the error messages to manage multiple alerts under a shared identifier.
+                # This ensures that only one alert from a group is visible at a time.
+                group:
+                  id: task-allocation
+            - type: action.go-to
+              when: =@ctx.user.displayName = @ctx.current.item.taskAssignee
+              options:
+                linkTo: appointments
+
+```
+{% endtab %}
+
+{% tab title="datasource" %}
+```yaml
+datasources:
+  team-tasks:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+      entities:
+        - entity: default/tasks
+      query: |
+        SELECT 
+          id, 
+          '$.taskAssignee',
+          '$.taskName',
+          '$.taskCost',
+          '$.taskId', 
+          '$.taskStatus',
+          '$.team', 
+          '$.Profile',
+          '$.priority'         
+        FROM [default/tasks]
+```
+{% endtab %}
+
+{% tab title="appointments.jigx" %}
+```yaml
+
+title: Today
+description: My appointments for today
+type: jig.default
+
+placeholders:
+  - title: No jobs scheduled
+    icon: oil-drop
+    description: Use today to catch up on equipment maintenance and restocking supplies.
+    when: true
+datasources:
+  appointments:
+    type: datasource.static
+    options:
+      data:
+        - id: 1
+          time: 8:00am
+          customer: Jack autoShop
+          address: 14 Kingston Road
+        - id: 2
+          time: 11:30am
+          customer: Elementary School
+          address: 1 Harold Street
+        - id: 3
+          time: 8:00am
+          customer: Becker Consulting
+          address: Suite A, Tower building, Main street
+children:
+  - type: component.form
+    instanceId: schedule-appt
+    options:
+      isDiscardChangesAlertEnabled: false
+      children:
+        - type: component.choice-field
+          instanceId: appointment
+          options:
+            label: Today
+            data: =@ctx.datasources.appointments
+            item:
+              type: component.choice-field-item
+              options:
+                title: =@ctx.current.item.customer
+                value: =@ctx.current.item.address
+
+```
+{% endtab %}
+{% endtabs %}
+
 ### Show-alert in a REST function
+
+View the code examples in [REST errors](<../../docs/Data Providers/REST/Create an app using REST APIs/REST errors.md>) to learn how to configure the show-alert action in a REST function. &#x20;

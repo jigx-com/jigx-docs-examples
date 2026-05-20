@@ -59,6 +59,7 @@ markers:
 
 * Widgets are displayed on jigs in the [grid](../Components/grid/grid.md) component or [jig.grid](<../Jig Types/jig_grid.md>) by referencing the `widgetId` (Widget Name).
 * The location widget can only be used on [grid-items](../Components/grid/grid-item.md) with widget sizes of 2x2, 2x4, 4x2, 4x4.
+* If the address used in a location component is incorrect or incomplete, it may return the nearest estimated location instead of the intended one. This can mislead users and direct them to the wrong address.
 
 ## Examples and code snippets
 

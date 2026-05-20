@@ -14,7 +14,7 @@ The `image` component can be part of the [header](jig-header.md) and as a child 
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](image.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="151.33984375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>uri</code></td><td>The image source (either a remote URL or a local file resource). The currently supported formats are png, jpg, jpeg, bmp, gif, webp (Android only), psd (iOS only).</td></tr></tbody></table>
 

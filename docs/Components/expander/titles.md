@@ -12,7 +12,7 @@ The titles component displays a title, subtitle, comment, or any type of text co
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](titles.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="161.3125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Add text on the <code>centerElements</code> of the <code>component.expander</code>. You can add text, expressions or Text with Format in the field. Text with format includes, currency, decimal, dateTime and more.</td></tr></tbody></table>
 

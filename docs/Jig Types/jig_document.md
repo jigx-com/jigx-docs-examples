@@ -17,11 +17,11 @@ The document jig type is used to display documents connected to your solution. T
 
 ## Configuration options
 
-Some properties are common to all jig types, see [Common jig type properties](jig_document.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-jig-type-properties.md" %}
 
-<table><thead><tr><th width="146.35546875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Provide the name of the screen. If you do not want to show a title in a jig use <code>title: ' '</code> or add an expression.</td></tr><tr><td><code>source</code></td><td>Select from <code>PDF</code> or <code>HTML</code> content.</td></tr></tbody></table>
+<table><thead><tr><th width="146.35546875">Core structure</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td>Provide the name of the screen. If you do not want to show a title in a jig use <code>title: ' '</code> or add an expression.</td></tr><tr><td><code>source</code></td><td>Select from <code>PDF</code> or <code>HTML</code> content.</td></tr></tbody></table>
 
-<table><thead><tr><th width="147.6171875">Other options</th><th></th></tr></thead><tbody><tr><td><code>description</code></td><td>The general description of the document.</td></tr><tr><td><code>badge</code></td><td>Enhance your widget with customizable badges, for instance, show the number of documents. Add the <code>badge</code> property to the jig YAML with an expression.</td></tr><tr><td><code>icon</code></td><td>The icon will be displayed on the widget of this jig. Start typing the name of the icon to invoke the available list in IntelliSense. See <a href="jig_document.md">Jigx icons</a> for information on working with icons.</td></tr><tr><td><code>placeholders</code></td><td>Create a placeholder to show when there is no data to use yet. See tips and tricks -use a placeholder for a placeholder example.</td></tr></tbody></table>
+<table><thead><tr><th width="147.6171875">Other options</th><th>Description</th></tr></thead><tbody><tr><td><code>description</code></td><td>The general description of the document.</td></tr><tr><td><code>badge</code></td><td>Enhance your widget with customizable badges, for instance, show the number of documents. Add the <code>badge</code> property to the jig YAML with an expression.</td></tr><tr><td><code>icon</code></td><td>The icon will be displayed on the widget of this jig. Start typing the name of the icon to invoke the available list in IntelliSense. See <a href="jig_document.md">Jigx icons</a> for information on working with icons.</td></tr><tr><td><code>placeholders</code></td><td>Create a placeholder to show when there is no data to use yet. See tips and tricks -use a placeholder for a placeholder example.</td></tr></tbody></table>
 
 ## Examples and code snippets
 

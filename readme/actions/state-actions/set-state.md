@@ -1,6 +1,6 @@
 # set-state
 
-The `set-state` action sets the global state (also called the solution state). Multiple components and jigs can access the state's value across the solution. Effectively managing the global state ensures that all parts of the app that depend on this data are updated consistently. To understand how to use states, see [State](https://docs.jigx.com/building-apps-with-jigx/logic/state).
+The `set-state` action sets the global state (also called the solution state). Multiple components and jigs can access the state's value across the solution. Effectively managing the global state ensures that all parts of the app that depend on this data are updated consistently. To understand how to use states, see [State](https://docs.jigx.com/building-apps-with-jigx/logic/state).&#x20;
 
 ## Configuration options
 
@@ -11,11 +11,13 @@ A `set-state` action can be set up in various ways:
 3. As the main action on the jig, and when you press the action, the `set-state` action will be executed.
 4. The `onPress` and `onChange` actions will be executed when you trigger these events.
 
+{% include "../../../.gitbook/includes/common-action-properties.md" %}
+
 ## Examples and code snippets
 
-### set-state as onFocus/onRefresh
+### set-state - solution state in onFocus/onRefresh
 
-<figure><img src="../../.gitbook/assets/Set-state-OnFocus.PNG" alt="Count triggers with set-sate" width="375"><figcaption><p>Count triggers with set-sate</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Set-state-OnFocus.PNG" alt="Count triggers with set-sate" width="375"><figcaption><p>Count triggers with set-sate</p></figcaption></figure>
 
 Set state action is used when the onFocus/onRefresh event is triggered and a count is shown of the number of triggers.
 
@@ -45,7 +47,7 @@ onRefresh:
 
 ### set-state as action
 
-<figure><img src="../../.gitbook/assets/Set-state-Action.PNG" alt="Set-state action" width="375"><figcaption><p>Set-state action</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Set-state-Action.PNG" alt="Set-state action" width="375"><figcaption><p>Set-state action</p></figcaption></figure>
 
 Set-state action is used as the primary action on the jig, to set the value of the action-key to +1.
 
@@ -63,9 +65,9 @@ actions:
 ```
 {% endcode %}
 
-### set-state as onPress/onChange
+### set-state - solution state in onPress/onChange
 
-<figure><img src="../../.gitbook/assets/Set-state-onPress.PNG" alt="Set-state onPress/onChange" width="375"><figcaption><p>Set-state onPress/onChange</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Set-state-onPress.PNG" alt="Set-state onPress/onChange" width="375"><figcaption><p>Set-state onPress/onChange</p></figcaption></figure>
 
 Set-state action used on the list as onPress/onChange action, to set the value of the key to +1.
 

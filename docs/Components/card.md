@@ -2,11 +2,11 @@
 
 The card is a versatile and visually appealing UI element that encapsulates and presents information or interactive content in a structured, consistent, and user-friendly manner. It enhances the app's usability by organizing content into manageable, self-contained units that are easy to navigate and interact with. Each card typically includes a mix of text, images, and interactive elements, creating a self-contained unit of content.
 
-<figure><img src="../../.gitbook/assets/CC-card-overview.png" alt="Card" width="563"><figcaption><p>cards</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CC-card-overview (1).png" alt="Card"><figcaption><p>cards</p></figcaption></figure>
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-component-properties.md" %}
 
 <table data-header-hidden><thead><tr><th width="152.88671875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td>Configure a component or multiple components in a card. See <a href="https://docs.jigx.com/examples/readme/components">Components</a> for a list of available components.</td></tr><tr><td><code>instanceId</code></td><td>Give the card component a unique id that can be referenced throughout the jig.</td></tr></tbody></table>
 
@@ -167,7 +167,7 @@ See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/q
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../.gitbook/assets/CC-card-color.png" alt="Cards with color"><figcaption><p>Cards with color</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CC-card-color (1).png" alt="Cards with color"><figcaption><p>Cards with color</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

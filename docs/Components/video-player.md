@@ -4,7 +4,7 @@ This component is used to play a video in [headers](jig-header.md), or as compon
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](video-player.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="127.81640625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>URL</code></td><td><p>Specify the URL for the video. The URL format can be:</p><ul><li>A direct URL, for example, - An embeded URL, for example,<br><code>&#x3C;iframe src="https://player.vimeo.com/video/76979871?quality=720p">&#x3C;/iframe></code></li><li>A URL referenced in a datasource, for example, <code>url: =@ctx.datasources.video-player-dynamic.uri</code></li></ul></td></tr></tbody></table>
 
@@ -104,7 +104,7 @@ This example shows the video player as a jig header. Ideal for product videos.
 
 See the complete example using static data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/video-player/static-data/video-player-in-header/video-player-in-header.jigx). See the complete example using dynamic data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/video-player/dynamic-data/video-player-in-header/video-player-header-dynamic.jigx).
 
-**Datasource**: See the complete datasource for dynamic data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/samples/jigx-samples/datasources/adhoc-components/video-player-dynamic.jigx).
+**Datasource**: See the complete datasource for dynamic data on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/adhoc-components/video-player-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

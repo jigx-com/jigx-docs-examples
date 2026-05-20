@@ -16,7 +16,7 @@ The `date-picker` component can be used independently or within a `form` compone
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](date-picker.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="197.0390625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>instanceId</code></td><td>The unique identifier for the date-picker field that can be referenced elsewhere. This is useful when saving the date to a datasource.</td></tr><tr><td><code>label</code></td><td>Provide a label to guide people on the what they selecting, for example, date of birth or start date.</td></tr></tbody></table>
 

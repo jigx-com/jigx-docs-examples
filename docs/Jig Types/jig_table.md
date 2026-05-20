@@ -6,7 +6,7 @@ The table jig displays structured data in rows and columns, allowing users to vi
 
 ## Configuration options
 
-Some properties are common to all jig types, see [Common jig type properties](jig_table.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-jig-type-properties.md" %}
 
 The table Jigx type includes multiple child components, each of which can be configured individually based on the desired table layout. The properties for each component are described below.
 

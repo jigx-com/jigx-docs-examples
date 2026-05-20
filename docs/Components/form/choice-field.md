@@ -12,7 +12,7 @@ The `choice-field` component can be used independently or within a `form` compon
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](choice-field.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="211.2109375">Core structure for choice-field</th><th></th></tr></thead><tbody><tr><td><code>instanceId</code></td><td>The unique identifier for the choice-field component.</td></tr><tr><td><code>label</code></td><td>Provide a label/name for the choice-field.</td></tr><tr><td><code>data</code></td><td>Use an expression that evaluates to an array of options.</td></tr><tr><td><code>item</code></td><td>The <code>item</code> property uses the component of <code>choice-field-item</code> that includes: <code>title</code> and <code>value</code>.</td></tr></tbody></table>
 

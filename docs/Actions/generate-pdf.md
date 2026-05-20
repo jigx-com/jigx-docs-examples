@@ -14,7 +14,7 @@ The URI of the generated file is returned and is available as part of the action
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](generate-pdf.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-action-properties.md" %}
 
 <table><thead><tr><th width="140.71875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>html</code></td><td>Use standard HTML elements to ensure optimal formatting and compatibility when rendering content in the PDF file, for example, &#x3C;html>&#x3C;body>Invoices are provided monthly.&#x3C;/body&#x3C;/html>. The HTML can be built up using JSONata or JavaScript.</td></tr><tr><td><code>fileName</code></td><td>Give the PDF a name, this name is used as the local file name, and is referenced as part of the uri, which can be accessed via the action's instance output (<code>=@ctx.actions.generatePDF.outputs.uri</code>). The .pdf extension is automatically added to the <code>fileName</code>.</td></tr><tr><td><code>title</code></td><td>Provide the action button with a title, for example, Invoice.</td></tr></tbody></table>
 

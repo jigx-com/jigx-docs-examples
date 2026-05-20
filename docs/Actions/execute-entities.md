@@ -15,6 +15,8 @@ An `execute-entities` action can be used in multiple areas:
 3. In onPress/onChange events (if the component has these options)
 4. In onRefresh/onFocus
 
+{% include "../../.gitbook/includes/common-action-properties.md" %}
+
 ## Reference data properties and values as a group
 
 With the `execute-entities` action, you can reference data properties and values as a group instead of listing them individually to be saved or created. See the data-grouped example below:
@@ -71,7 +73,7 @@ Dealing with offline remote data is fundamental to ensuring data synchronization
 {% endcolumn %}
 
 {% column %}
-**Example:** See the full example of execute-entities as an action in [GitHub](%22https:/github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-action.jigx).
+**Example:** See the full example of execute-entities as an action in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/execute-entities/execute-entities-action.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

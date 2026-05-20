@@ -4,7 +4,7 @@ The location component enables users to display a location on a map within a jig
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](location.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="272.02734375">Options</th><th></th></tr></thead><tbody><tr><td><code>address</code></td><td><p>The actual address of the location. Valid formats are:</p><ul><li><strong>address string - city, street</strong>, e.g. <code>address: 20 W 34th St., New York, NY 10001, USA</code> or in an expression calling a datasource <code>=@ctx.datasources.address.street &#x26; ',' &#x26; @ctx.datasources.address.city &#x26; ',' &#x26; @ctx.datasources.address.country</code></li><li><strong>latitude and longitude</strong>, e.g. <code>address: 40.759412, -73.912306</code></li></ul></td></tr><tr><td><code>is AnimationDisabled</code></td><td><code>true</code> or <code>false</code> to determine if map animation is disabled.</td></tr><tr><td><code>isFollowUserLocationEnabled</code></td><td>When enabled, the <code>viewPoint</code> will be centred on the user’s real-time location.</td></tr><tr><td><code>markers</code></td><td>Multiple markers can be configured to display on the map. There is a 10K limit for markers showing on the map. See <em>multi-markers</em> code example below. You can use an expression to provide the latitude and longitude points from a datasource. See <em>multi-datasource</em> code example below.</td></tr><tr><td><code>marker-item</code></td><td><ul><li><code>anchorTo:</code> - Anchor the marker to a specific point, either <code>bottom-center</code> or <code>center</code>.</li><li><code>radius</code> - Display a circle around the marker. In the radius you can configure the <code>color</code>, <code>unit</code> (Default is kilometres).</li><li><code>icon</code> - Choose an icon for the markers. You can style the icon <code>color</code>, <code>emphasis</code>, <code>type</code>, <code>shape</code> and <code>size</code>.</li></ul></td></tr><tr><td><code>paths</code></td><td>Create one path from many points. The first point is the start destination, and the last is the end destination. There is a 10K limit for paths showing on the map. See <em>path-multi-points</em> code example below.</td></tr><tr><td><code>viewPoint</code></td><td>Controls the visible area of the map, defining what the user sees. It allows control over position, zoom and orientation. Options include: <code>centerPosition:</code> <code>middle</code> or <code>top</code></td></tr><tr><td><code>zoomLevel</code></td><td>Defines the initial zoom level of the map. Zooming in enlarges the view, revealing finer details, improving readability, and enhancing location precision.</td></tr></tbody></table>
 
@@ -57,6 +57,8 @@ markers:
 
 * Test the layout of the location component when combining it with other components, as it can cause spacing issues.
 * To display a location as a full screen, use the [jig.fullscreen](<../Jig Types/jig_fullscreen.md>) type with the `component.location`. See the [Fullscreen location](https://docs.jigx.com/examples/readme/jig-types/jig_fullscreen#full-screen-of-a-map) example down below.
+* Using the location component in the header can significantly increase memory usage and impact performance, particularly on Android devices.
+* If the address used in a location component is incorrect or incomplete, it may return the nearest estimated location instead of the intended one. This can mislead users and direct them to the wrong address.
 
 ## Examples and code snippets
 
@@ -530,6 +532,10 @@ datasources:
 The location component can be used as a `small` or `medium` size header in a jig. In the screenshot the difference between the set heights is shown.
 
 **Examples:** See the code samples using static data in GitHub for [small](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-small.jigx) and [medium](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-medium.jigx) headers.
+
+{% hint style="warning" %}
+Using the location component in the header can significantly increase memory usage and impact performance, particularly on Android devices.
+{% endhint %}
 {% endcolumn %}
 {% endcolumns %}
 

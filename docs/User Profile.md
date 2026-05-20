@@ -1,8 +1,15 @@
+---
+description: >-
+  Learn how the Jigx user profile screen works, how to update profile details
+  with action.update-profile, and how to customize the Profile screen using
+  index.jigx and components.
+---
+
 # User Profile
 
 {% columns %}
 {% column %}
-By default, the user profile in Jigx includes various menu options, such as Personal Information, Notifications, Settings, and more. Certain user information and UI elements can be customized to fit specific needs.
+The Jigx **User Profile** is the in-app **Profile screen** for each logged-in user. It includes menu items like Personal information, Notifications, and Settings. You can customize what users see and add your own profile content.
 {% endcolumn %}
 
 {% column %}
@@ -10,13 +17,25 @@ By default, the user profile in Jigx includes various menu options, such as Pers
 {% endcolumn %}
 {% endcolumns %}
 
-## Default profile setup
+**On this page**
 
-<table data-header-hidden><thead><tr><th width="202.0546875"></th><th></th></tr></thead><tbody><tr><td>Personal information</td><td>Includes the logged-in user's name, email, avatar, and the option to delete the user account.</td></tr><tr><td>Notifications</td><td>Displays all notifications sent to the user, with options to mark all as read and filter by All, Read, or Unread.</td></tr><tr><td>Secondary identities</td><td>Refers to additional authentication methods required beyond primary login credentials, such as OAuth. Users can connect, refresh, or remove an identity.</td></tr><tr><td>Settings</td><td>Includes app settings such as color theme (light/dark mode), language selection, and region changes, if applicable.</td></tr><tr><td>Troubleshooting</td><td>Provides logging settings to help debug and troubleshoot app issues.</td></tr><tr><td>Support</td><td>Allows users to ask support a question. This setting can be hidden via a flag in the build configuration.</td></tr><tr><td>Logout</td><td>Allows the currently logged-in user to log out of the app.</td></tr></tbody></table>
+* Default Profile screen menu options
+* Update profile details with [`action.update-profile`](Actions/update-profile.md)
+* Customize the Profile screen using `index.jigx` (`profile` property)
 
-## Allowing users to update their profile
+### Default Jigx Profile screen menu options
 
-You can allow users to update specific information in their profile using the [action.update-profile](Actions/update-profile.md). This action can be configured within a jig in various ways, such as: An action button A header action link or icon In an event, e.g., `onPress`
+<table data-header-hidden><thead><tr><th width="202.0546875"></th><th></th></tr></thead><tbody><tr><td>Personal information</td><td>Includes the logged-in user's name, email, avatar, and the option to delete the user account.</td></tr><tr><td>Notifications</td><td>Displays all notifications sent to the user, with options to mark all as read and filter by All, Read, or Unread.</td></tr><tr><td>Secondary identities</td><td>Refers to additional authentication methods required beyond primary login credentials, such as OAuth. Users can connect, refresh, or remove an identity.</td></tr><tr><td>Settings</td><td>Includes app settings such as color theme (light/dark mode), language selection, and region changes, if applicable.</td></tr><tr><td>Troubleshooting</td><td>Provides logging settings to help debug and troubleshoot app issues.</td></tr><tr><td>Support</td><td>Lets users contact support with a question. This setting can be hidden via a flag in the build configuration.</td></tr><tr><td>Logout</td><td>Allows the currently logged-in user to log out of the app.</td></tr></tbody></table>
+
+### Update profile details with action.update-profile
+
+You can allow users to update specific profile information using [action.update-profile](Actions/update-profile.md).
+
+You can configure this action in a jig in a few ways:
+
+* An action button
+* A header action link or icon
+* An event handler, for example `onPress`
 
 The following information can be updated when using the action:
 
@@ -95,29 +114,31 @@ children:
 {% endtab %}
 {% endtabs %}
 
-## Customize or extend the Profile screen
+### Customize and extend the Jigx Profile screen
 
-The Profile screen can be extended by adding [Components](/broken/pages/mJEc9sheEFdlhwV1hrF4) that allow additional user information to be displayed. This can be achieved through the following steps:
+You can extend the Profile screen by adding [components](components/) that display additional user information.
+
+You do this by referencing one or more jigs in `index.jigx` under the `profile` property:
 
 1. Define a jig containing the components you want to display on the Profile screen.
 2. Set the `jigId` in the `profile` property within the index.jigx file.
 
 {% hint style="info" %}
-You can create a jig as the first screen a new user sees when they log into the app to capture their details. This updates the Profile screen. Once updated, the screen can be configured with conditions to prevent it from appearing again.
+You can create a jig as the first screen a new user sees when they log in to the app. Use it to capture their details. This updates the Profile screen. You can then add conditions so it does not appear again.
 {% endhint %}
 
 This is especially useful in scenarios where devices are shared among multiple employees, such as contractors or engineers.
 
-<table><thead><tr><th width="279.625">Properties</th><th>Description</th></tr></thead><tbody><tr><td><code>Profile</code></td><td>Adding the property with it's values to the index.jigx file will insert the referenced jigs into the header section of the Profile screen.</td></tr><tr><td><code>isPersonalInfoMenuItemVisible</code></td><td>Determine whether the Personal Information menu should be hidden (<code>false</code>) or visible (<code>true</code>). The default setting is <code>true</code>. This menu opens a screen displaying the user's name, email, and avatar, and provides an option to delete the account. Customizing the Profile screen allows this information to be integrated directly, eliminating the need for a menu option.</td></tr><tr><td><code>jigId</code></td><td>Provide the <code>jigId</code> for the jigs that will be displayed in the Profile screen.</td></tr></tbody></table>
+<table><thead><tr><th width="279.625">Properties</th><th>Description</th></tr></thead><tbody><tr><td><code>Profile</code></td><td>Adding this property (and its values) to the <code>index.jigx</code> file inserts the referenced jigs into the header section of the Profile screen.</td></tr><tr><td><code>isPersonalInfoMenuItemVisible</code></td><td>Determines whether the Personal Information menu is hidden (<code>false</code>) or visible (<code>true</code>). The default is <code>true</code>. This menu opens a screen showing the user's name, email, and avatar. It also provides an option to delete the account. When you customize the Profile screen, you can integrate this information directly. This removes the need for a separate menu option.</td></tr><tr><td><code>jigId</code></td><td>Provides the <code>jigId</code> for the jigs displayed on the Profile screen.</td></tr></tbody></table>
 
-## Considerations
+### Considerations
 
-* No additional padding is added to the jigs, which may affect the screen's UI. You can use properties such as `background` or `padding` to ensure proper content alignment. This issue is particularly noticeable when using `list-items` versus custom components or other components.
-* When combining or using custom components, it is recommended to manually add `padding` and `margins` for consistent spacing and layout.
+* No additional padding is added to the jigs. This may affect the screen UI. Use properties like `background` or `padding` to keep content aligned. This is most noticeable with `list-item` components versus custom components.
+* When combining custom and standard components, add `padding` and `margins` manually for consistent spacing and layout.
 
-## Examples and code snippets
+### Examples and code snippets
 
-## Extended Profile screen with hidden personal information menu
+#### Extended Profile screen with hidden personal information menu
 
 {% columns %}
 {% column %}
@@ -208,7 +229,7 @@ profile:
 {% endtab %}
 {% endtabs %}
 
-## Extended Profile screen with list
+#### Extended Profile screen with list
 
 {% columns %}
 {% column %}
@@ -301,7 +322,7 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-## Extended Profile screen using custom components (alpha)
+#### Extended Profile screen using custom components (alpha)
 
 {% columns %}
 {% column %}

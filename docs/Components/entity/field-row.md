@@ -5,9 +5,11 @@ createdAt: Thu Jun 09 2022 19:32:19 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jul 24 2024 09:33:13 GMT+0000 (Coordinated Universal Time)
 ---
 
-# field-row
+# field-row (entity)
 
-The field-row component contains other components and displays them on the same row. This component does not indicate a new row; all components are automatically placed in a new row. Instead, this component ensures that items are placed next to instead of underneath each other.
+The field-row component contains other [entity](entity.md) components and displays them on the same row. This component does not indicate a new row; all components are automatically placed in a new row. Instead, this component ensures that items are placed next to instead of underneath each other.
+
+{% include "../../../.gitbook/includes/field-rows-can-be-used-in-t....md" %}
 
 ## Considerations
 
@@ -17,7 +19,7 @@ The field-row component contains other components and displays them on the same 
   * Nested under [section](../../../readme/components/section.md) components
 * A maximum of three components can be displayed per row.
 
-Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 ## Examples and code snippets
 

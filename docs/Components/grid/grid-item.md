@@ -4,7 +4,7 @@ The grid-item component serves as the child component whenever any grid componen
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](grid-item.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="160.73046875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>size</code></td><td>Select the size that the grid-item will be displayed in, the options are <code>1x1</code>,<code>2x2</code>, <code>2x4</code>, <code>4x2</code>, <code>4x4</code>.</td></tr><tr><td><code>children</code></td><td>The following components can be used in the grid-item: <a href="../image.md">image</a> <a href="https://docs.jigx.com/examples/readme/widgets">widgets</a></td></tr></tbody></table>
 

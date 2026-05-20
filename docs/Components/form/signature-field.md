@@ -16,7 +16,7 @@ The `signature-field` component can be used independently or within a `form` com
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](signature-field.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="163.26171875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>instanceId</code></td><td>The unique identifier for the signature-field component.</td></tr><tr><td><code>label</code></td><td>Provide a label/name for the signature field. 'Label' is displayed as a placeholder when no value is specified.</td></tr></tbody></table>
 

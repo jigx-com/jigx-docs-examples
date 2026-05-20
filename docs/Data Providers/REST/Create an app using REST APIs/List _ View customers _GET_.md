@@ -20,7 +20,9 @@ This code sample builds upon the previous [List customers (GET)](<List customers
 
 ## Function
 
-Specify the REST API url and operation (method), parameters to include authentication in the header and in the `outputTransform` define the data properties to be returned. Add a `continuation` and `record` cofiguartion to return all records from the customers table.
+Specify the REST API url and operation (method), parameters to include authentication in the header and in the `outputTransform` define the data properties to be returned. Add a `continuation` and `record` configuration to return all records from the customers table.
+
+{% include "../../../../.gitbook/includes/rest-error-examples.md" %}
 
 {% code title="rest-get-customer-cont.jigx" %}
 ```yaml
@@ -246,8 +248,8 @@ datasources:
           json_extract(cus.data, '$.logo') AS logo
         FROM 
           [customers] AS cus
-        -- ORDER BY 
-        --  json_extract(cus.data, '$.companyName')
+        ORDER BY 
+          json_extract(cus.data, '$.companyName')
 
 data: =@ctx.datasources.customers
 item:
@@ -266,6 +268,8 @@ item:
           color: color3
         - when: =@ctx.current.item.customerType = 'Silver'
           color: color14
+        - when: =@ctx.current.item.customerType = 'new'
+          color: color2  
     onPress: 
       type: action.go-to
       options:

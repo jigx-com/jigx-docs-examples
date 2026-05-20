@@ -12,7 +12,7 @@ The countdown component functionality counts down from a date, date/time, and ti
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](countdown.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="149.64453125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>expiresAt</code></td><td><p>Add a date, date/time or time when the countdown must expire/stop, either using:</p><ul><li>datasource, e.g. <code>=@ctx.datasources.events.date</code></li><li>expression, e.g. <code>=$fromMillis($toMillis($now()) + 50000)</code></li><li>string, e.g. <code>"2025-09-20 18:00"</code>, or <code>"2025-07-25T17:30:00+02:00"</code></li></ul></td></tr></tbody></table>
 
@@ -41,7 +41,7 @@ Some properties are common to all components, see [Common component properties](
 {% column %}
 This example shows the `expiresAt` property value set using a static value, an expression, a static datasource, and a dynamic datasource.
 
-**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-input.jigx%22).
+**Example:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/countdown/countdown-input.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

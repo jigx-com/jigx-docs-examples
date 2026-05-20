@@ -114,7 +114,8 @@ children:
                       options:
                         label: Department
                     - type: component.date-picker
-                      # The name in the instanceId becomes the column name and the value entered in the field becomes the column data value
+                      # The name in the instanceId becomes the column name and the value entered
+                      # in the field becomes the column data value.
                       instanceId: start_date
                       options:
                         label: Start Date
@@ -123,13 +124,20 @@ actions:
       # use the submit form action to execute the create/save method of the Dynamic Data provider.
       - type: action.submit-form
         options:
-          # The formId is used to get the context to the fields and values that specify the columns and data
+          # The formId is used to get the context to the fields and values that specify the columns
+          # and data.
           formId: form-employee
-          # specify the Dynamic Data provider to store the employees data record
+          # specify the Dynamic Data provider to store the employees data record.
           provider: DATA_PROVIDER_DYNAMIC
           title: Create Record
           entity: default/employee
-          method: save # use the create or save method, the first exection will create columns and records, the second will create data records as the columns already exist.
+          # use the create or save method, the first exection will create columns and records,
+          # the second will create data records as the columns already exist.
+          method: save 
+          # Cater for offline data handling to add the save command to the queue. 
+          # Once the device is back online the queue is cleared and the save command executes.
+          # By default the command is added to the queue if queueOperations is ommitted.
+          queueOperation: add
           onSuccess:
             type: action.go-back
 ```

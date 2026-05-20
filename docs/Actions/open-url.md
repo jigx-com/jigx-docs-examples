@@ -11,6 +11,8 @@ An open-url action can be set up in various ways:
 3. As `rightElement` in the list.
 4. As an associated action in the action list.
 
+{% include "../../.gitbook/includes/common-action-properties.md" %}
+
 <table><thead><tr><th width="147.0703125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Provide a title for opening the URL, you can use expressions in the title field.</td></tr><tr><td><code>url</code></td><td><p>Specify the URL you want opened. The following formats are supported:</p><p>https://</p><p><a href="open-url.md">www</a>. sitename.com external app link (See the deep link to an external app example)</p></td></tr></tbody></table>
 
 ## Examples and code snippets

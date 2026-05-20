@@ -12,7 +12,7 @@ The count-up component is a display-only component that continuously updates in 
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](count-up.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="154.5">Core structure</th><th></th></tr></thead><tbody><tr><td><code>startTimestamp</code></td><td><p>Add a start date, date/time or time, in milliseconds either using:</p><ul><li>datasource, e.g. <code>=@ctx.datasources.events[1].date</code></li><li>expression, e.g. <code>=$toMillis('2025-05-19T10:43:04.377Z')</code> If <code>startTimestamp</code> is omitted or set to null, the component remains static and does not count up.</li></ul></td></tr></tbody></table>
 

@@ -12,7 +12,7 @@ The open map action lets you tap the on-screen button to open your device's defa
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](open-map.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-action-properties.md" %}
 
 <table><thead><tr><th width="151.94140625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Provide the action with a title, for example, Navigate.</td></tr><tr><td><code>address</code></td><td><p>Address of location - geocode string address to location. Valid formats are:</p><ul><li><strong>address string - city, street</strong>, e.g. `address: 20 W 34th St., New York, NY 10001, USA or in an expression calling a datasource <code>=@ctx.datasources.address</code></li><li><strong>latitude and longitude</strong>, e.g. address: 40.759412, -73.912306`</li><li>DMS format</li><li><strong>latitude and longitude</strong>, e.g. address: latitude: 40.74860 longitude: "-73.98566"</li></ul></td></tr></tbody></table>
 

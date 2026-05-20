@@ -4,7 +4,7 @@ Entity fields display data such as text, numbers, dates, and currency from a dat
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](entity-field.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="138.65625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>label</code></td><td>Add a label for the entity-field, you can add text or an expression.</td></tr><tr><td><code>value</code></td><td>Add a value to display in the entity-field, you can add text or an expression.</td></tr></tbody></table>
 

@@ -1,6 +1,6 @@
 # sync-entities
 
-This action can be used to sync your local database with your live database on the server. There are multiple ways to set up a `sync-entities` action within a jig:
+This action can be used to sync your local database with your remote database on the server. There are multiple ways to set up a `sync-entities` action within a jig:
 
 1. Under action button
 2. In action list
@@ -24,7 +24,7 @@ In this example, when tapping the Sync entities button the `action.sync-entities
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../.gitbook/assets/ac-sync-entity1.png" alt="Sync-entities action"><figcaption><p>Sync-entities action</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ac-sync-entity1.png" alt="Sync-entities action"><figcaption><p>Sync-entities action</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -45,7 +45,7 @@ actions:
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/ac-sync-Entity-action.png" alt="sync-entities action" width="188"><figcaption><p>sync-entities action</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ac-sync-Entity-action.png" alt="sync-entities action" width="188"><figcaption><p>sync-entities action</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -86,7 +86,7 @@ The full example of sync-entities in onChange you can find in [GitHub](https://g
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../.gitbook/assets/ac-sync-entity-onpress.png" alt="Sync-entities action with onPress" width="188"><figcaption><p>Sync-entities action with onPress</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ac-sync-entity-onpress.png" alt="Sync-entities action with onPress" width="188"><figcaption><p>Sync-entities action with onPress</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -164,7 +164,7 @@ item:
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/ac-sync-entity-onchange.png" alt="sync-entities action with onRefresh" width="188"><figcaption><p>sync-entities action with onRefresh</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ac-sync-entity-onchange.png" alt="sync-entities action with onRefresh" width="188"><figcaption><p>sync-entities action with onRefresh</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -247,7 +247,7 @@ actions:
 
 To return all records from the input source use `$item.id`. In this example, a jig has two lists; the first list shows all the user's calendars, and the second list uses the `ids` from the first list to return all the events for all the calendars. A summary component shows a count of the number of events.
 
-<figure><img src="../../.gitbook/assets/ac-sync-entity-calendar1.png" alt="Sync calendars and events" width="375"><figcaption><p>Sync calendars and events</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ac-sync-entity-calendar1.png" alt="Sync calendars and events" width="375"><figcaption><p>Sync calendars and events</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="full-calendar-list" %}
@@ -396,7 +396,7 @@ useLocalCall: true
 
 To return all records for a selected calendar use `=$map(@ctx.action.parameters.selected, function($item)` in the global action. In this example, a jig has a dropdown to select the calendar and a _Show events_ button syncs the entries in the selected calendar. A summary component shows a count of the number of events in the selected calendar.
 
-<figure><img src="../../.gitbook/assets/ac-sync-entity-calendar2.png" alt="Sync events for the birthday calendar" width="375"><figcaption><p>Sync events for the birthday calendar</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ac-sync-entity-calendar2.png" alt="Sync events for the birthday calendar" width="375"><figcaption><p>Sync events for the birthday calendar</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="my-events.jigx" %}

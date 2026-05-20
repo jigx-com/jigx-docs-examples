@@ -12,7 +12,7 @@ You can send Notifications using Jigx Management or programmatically in your sol
 
 ## Configuration options
 
-<table><thead><tr><th width="147.6875">Core structure</th><th></th></tr></thead><tbody><tr><td>function</td><td>Define a function in the <em>Functions</em> folder of your solution. The function has input parameters such as the notification <code>title</code>, the notification <code>text</code> and requires a Jigx <code>accessToken</code> or <a href="https://docs.jigx.com/my-profile#personal-access-tokens-pat">personal access token (PAT)</a> .</td></tr><tr><td>jig</td><td>jigs will invoke the function for sending notifications either via submitting form values to the function or by using an <a href="../Actions/execute-entity.md">execute-entity</a> action for invoking the function.</td></tr></tbody></table>
+<table><thead><tr><th width="147.6875">Core structure</th><th></th></tr></thead><tbody><tr><td>function</td><td>Define a function in the <em>Functions</em> folder of your solution. The function has input parameters such as the notification <code>title</code>, the notification <code>text,</code> and requires a Jigx <code>accessToken</code> or <a href="https://docs.jigx.com/administration/my-profile#personal-access-tokens-pat">personal access token (PAT)</a>.</td></tr><tr><td>jig</td><td>jigs will invoke the function for sending notifications either via submitting form values to the function or by using an <a href="../Actions/execute-entity.md">execute-entity</a> action for invoking the function.</td></tr></tbody></table>
 
 ## Notification URL per region
 

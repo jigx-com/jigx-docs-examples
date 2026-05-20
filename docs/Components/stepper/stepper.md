@@ -12,7 +12,7 @@ This component displays the progress status of a task. Useful when tracking deli
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](stepper.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="214.08984375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>data</code></td><td>Define the data to be used in the step items, you can use expressions to reference a datasource.</td></tr><tr><td><code>item</code></td><td>There is only one available option, which is . The <code>item</code> property is core for the stepper component, so even if you are creating a non-expandable stepper you must configure the step component's <code>title</code> and <code>value</code> properties with an empty string: ""</td></tr><tr><td><code>completedPercentage</code></td><td>Define the percentage to be displayed on the chart. Example "0.24" => 24 %. 1 represents 100% complete.</td></tr></tbody></table>
 

@@ -25,7 +25,7 @@ A `component.form` acts as a **wrapper/container** for your app’s fields and U
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](form.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="266.83984375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td>Define the content of the form by adding any components applicable to <code>jig.default</code>. See the <a href="../../components/">list of available components</a>. </td></tr><tr><td><code>instanceId</code></td><td>The unique identifier for the form.<br>The <code>instanceId</code> is a unique identifier assigned to the form component. It allows other parts of the app—such as functions, actions, or conditional logic—to reference this specific form. By using the <code>instanceId</code>, you can programmatically control when the form is shown or hidden, update its content dynamically, or trigger interactions tied to that particular instance. </td></tr></tbody></table>
 

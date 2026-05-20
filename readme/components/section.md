@@ -20,8 +20,6 @@ A `component.section` can be set up with the following combinations:
 4. A form component containing sections and children components for display/capturing purposes.
 5. Horizontal lists cannot be used with the [section](https://docs.jigx.com/examples/section) components as an empty white jig will be displayed.
 
-Some properties are common to all components, see [Common component properties](docId:LLnTD-rxe8FmH7WpC5cZb) for a list and their configuration options.
-
 ## Configuration options
 
 Some properties are common to all components, see [Common component properties](https://docs.jigx.com/examples/readme/components/avatar-field) for a list and their configuration options.
@@ -33,6 +31,8 @@ Some properties are common to all components, see [Common component properties](
 <table><thead><tr><th width="135.9296875">Actions</th><th></th></tr></thead><tbody><tr><td><code>actions</code></td><td>The <code>action</code> property defines what happens when the section’s action button is tapped. You can configure it to trigger any supported app <a href="../../docs/Actions/">action</a>, such as navigating to another screen, opening a URL/map, or updating data. Use IntelliSense to explore the full list of available actions.  </td></tr></tbody></table>
 
 <table><thead><tr><th width="317.00390625">State</th><th width="104.6796875"></th><th></th></tr></thead><tbody><tr><td>=@ctx.solution.state.</td><td>status</td><td>Global state variable that can be used throughout the solution.</td></tr><tr><td>=@ctx.jigs.state.</td><td>filter<br>searchtext</td><td>Jig-level state that applies to the specific jig (screen) context, with available keys depending on the jig type (e.g., for list jigs: activeItem, filter, searchText, etc.)</td></tr><tr><td><p></p><p>=@ctx.jig.components.instanceId.state.</p></td><td>value</td><td> State variable of a specific component in the jig.</td></tr></tbody></table>
+
+{% include "../../.gitbook/includes/common-component-properties.md" %}
 
 ## Considerations
 

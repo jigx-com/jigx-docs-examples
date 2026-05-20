@@ -12,7 +12,7 @@ The composite jig is a jig made up of several parts or elements. In this case, a
 
 ## Configuration options
 
-Some properties are common to all jig types, see [Common jig type properties](jig_composite.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-jig-type-properties.md" %}
 
 <table><thead><tr><th width="148.98828125">Core Structure</th><th></th></tr></thead><tbody><tr><td><code>jigId</code></td><td>The core structure includes two <code>jigId</code> or more (depends on how many jigs you are connecting).</td></tr></tbody></table>
 
@@ -94,7 +94,7 @@ This example shows the simplest way in which a `Composite Jig` can be set up - r
 
 **Examples:**
 
-See the composite jig code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/jig-composite.jigx%22). See the [location](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/location/static-data/location-with-address.jigx) code and [country list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/country-list-sd.jigx) code examples in GitHub. See the static country datasource code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/country-data-static.jigx). See the index.jigx code below to add the jig to the Home Hub.
+See the composite jig code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-composite/jig-composite.jigx). See the [location](../Widgets/location.md) code and [country list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/simple-lists/static-data/country-list-sd.jigx) code examples in GitHub. See the static country datasource code example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/examples/country-data-static.jigx). See the index.jigx code below to add the jig to the Home Hub.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -514,5 +514,5 @@ tabs:
 
 ## See also
 
-* [Jigs (screens)](jig_composite.md)
+* [Jigs (screens)](https://docs.jigx.com/building-apps-with-jigx/ui/jigs-_screens_)
 * [Related examples (Github)](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/jig-types/jig-composite)

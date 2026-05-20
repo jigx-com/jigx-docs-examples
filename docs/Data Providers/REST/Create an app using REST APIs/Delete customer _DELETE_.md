@@ -125,8 +125,8 @@ datasources:
           json_extract(cus.data, '$.logo') AS logo
         FROM 
           [customers] AS cus
-        -- ORDER BY 
-        --  json_extract(cus.data, '$.companyName')
+        ORDER BY 
+          json_extract(cus.data, '$.companyName')
 
 data: =@ctx.datasources.customers
 item:
@@ -145,6 +145,8 @@ item:
           color: color3
         - when: =@ctx.current.item.customerType = 'Silver'
           color: color14
+        - when: =@ctx.current.item.customerType = 'new'
+          color: color2  
     # Add the swipeable event to the customer - list to include 
     # the delete button.         
     swipeable:

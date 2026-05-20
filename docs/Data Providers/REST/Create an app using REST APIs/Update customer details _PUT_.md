@@ -28,6 +28,8 @@ This code sample builds upon the previous [List customers (GET)](<List customers
 
 The REST APIs PUT operator is used in a Jigx function with body parameters to specify the exact columns to be updated for the record. The `inputTransform` specifies how the data should be structured or formatted when being sent to the REST service. This transformation process ensures that the data adheres to the expected schema or format required by the REST service for processing the request.
 
+{% include "../../../../.gitbook/includes/rest-error-examples.md" %}
+
 {% code title="rest-update-customer.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
@@ -196,7 +198,7 @@ datasources:
       data:
         - id: 1
           type: New
-          value:
+          value: new
         - id: 2
           type: Gold
           value: Gold

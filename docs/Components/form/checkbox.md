@@ -18,7 +18,7 @@ The `checkbox` component can be used independently or within a `form` component,
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](checkbox.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="199.234375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>instanceId</code></td><td>The unique identifier for the checkbox component.</td></tr><tr><td><code>label</code></td><td>Provide a label/name for the checkbox. 'Label' is displayed as a placeholder when no value is specified.</td></tr></tbody></table>
 

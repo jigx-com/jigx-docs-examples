@@ -18,7 +18,7 @@ The `duration-picker` component can be used independently or within a `form` com
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](duration-picker.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="202.42578125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>instanceId</code></td><td>The unique identifier for the duration-picker, and can be used in inputs in other properties or jigs, or to set a component's state.</td></tr><tr><td><code>label</code></td><td>Provide a label/name for the duration-picker. 'Label' is displayed as a placeholder when no value is specified. is supported.</td></tr></tbody></table>
 

@@ -4,7 +4,7 @@ The interactive-image-item is used in the `item` property of the [interactive-im
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](interactive-image-item.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="214.78515625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>id</code></td><td>Provide an id for the item that is used for filtering and as a key</td></tr><tr><td><code>percentageCoordinates</code></td><td>Percentage <code>x</code> and <code>y</code> coordinates are required. Coordinates are represented as absolute percentage numbers between 0-100.</td></tr><tr><td><code>title</code></td><td>Give a name/title for the point, for example, Table 1.</td></tr></tbody></table>
 

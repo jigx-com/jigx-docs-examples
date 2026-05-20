@@ -24,6 +24,8 @@ The REST APIs POST operator is used in a Jigx function with body parameters to s
 
 Making the form completion easier the REST API GET opertaion is used on the us\_states table to return the state name, region and abbreviation in the dropdown field.
 
+{% include "../../../../.gitbook/includes/rest-error-examples.md" %}
+
 {% tabs %}
 {% tab title="rest-create-customer.jigx" %}
 ```yaml

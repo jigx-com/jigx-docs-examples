@@ -17,7 +17,7 @@ The entity component is a container for the following components:
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](entity.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="138.28515625">Other options</th><th></th></tr></thead><tbody><tr><td><code>isCompact</code></td><td>When this property is set to <code>true</code> the entity-field will cover the entire row. This compact variant does not allow usage of field-row components. By default, a label is at the top and the value below. <code>isCompact</code> will place the label on the left and the value on the right. Columns are not supported.</td></tr></tbody></table>
 

@@ -16,7 +16,7 @@ We are currently experiencing issues with the legend of the Pie Chart component.
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](pie-chart.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="162.8046875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>chart</code></td><td><code>title</code>- Its <code>text</code> and <code>verticalAlign</code>.</td></tr><tr><td><code>series</code></td><td><ul><li><code>data</code> - values to be used in the chart.</li><li><code>layout</code> - <code>Pie</code> or <code>Arch</code> - the availabe types of chart.</li></ul></td></tr></tbody></table>
 

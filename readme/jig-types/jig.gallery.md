@@ -23,7 +23,9 @@ Use the `gallery` component when you need to:
 
 ## Configuration options
 
-The `jig.gallery` creates a gallery layout from a datasource. The YAML structure is similar in configuration to the [jig.list](<../../docs/Jig Types/jig_list.md>) or jig.grid where a single `gallery-item` is configured and iterates through the datasource. Some properties are common to all jig types, see [Common jig type properties](<../../docs/Jig Types/Common jig type properties.md>) for a list and their configuration options.
+The `jig.gallery` creates a gallery layout from a datasource. The YAML structure is similar in configuration to the [jig.list](<../../docs/Jig Types/jig_list.md>) or jig.grid where a single `gallery-item` is configured and iterates through the datasource.&#x20;
+
+{% include "../../.gitbook/includes/common-jig-type-properties.md" %}
 
 <table><thead><tr><th width="153.12890625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Give the jig a title that is displayed at the top of the screen. If you do not want to show a title in a jig use <code>title: ' '</code>.</td></tr><tr><td><code>type</code></td><td>Specifies the control type. Here, it is set to <code>jig.gallery</code> for a gallery view.</td></tr><tr><td><code>item</code></td><td>Within a gallery jig type, the <code>gallery-item</code> component is used to define each of the elements in the layout, configured under the <code>imageUri</code> property.</td></tr><tr><td><code>datasources</code></td><td>Configure a datasource to call the image data to display in the gallery. The datasource property is required. Depending on the datasource, conversions might be required.</td></tr><tr><td><code>data</code></td><td>Binds the gallery data to the results from the <code>datasource</code>.</td></tr></tbody></table>
 
@@ -948,74 +950,82 @@ item:
 
 {% tab title="timelogs.jigx" %}
 ```yaml
-type: jig.tabs
-title: My work dashboard
-areTabsScrollable: false
+title: Time logging
+description: Log the time taken to complete the job
+type: jig.default
 
-# Specify the jigs that will open in each tab.
+header:
+  type: component.jig-header
+  options:
+    height: medium
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://images.unsplash.com/photo-1456574808786-d2ba7a6aa654?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dGltZSUyMGxvZ3xlbnwwfHwwfHx8Mg%3D%3D
+
+onRefresh:
+  type: action.reset-state
+  options:
+    state: =@ctx.components.shift-form.state.data
+
 children:
-  - jigId: appointments
-    instanceId: appointments
-    tab:
-      type: component.tab-button
-      options:
-        title: Today
-        # Add an icon to the tab. The title is diplayed below the icon.
-        # When active the icon uses the primary color.
-        icon: calendar-3
-  - jigId: inventory
-    instanceId: inventory
-    tab:
-      type: component.tab-button
-      options:
-        title: Stock
-        # Add an icon to the tab. The title is diplayed below the icon.
-        icon: supply-chain-shipping-fee-included-truck
-  - jigId: gallery-onsharepress
-    instanceId: task-photos
-    tab:
-      type: component.tab-button
-      options:
-        title: Photo Gallery
-        # Add an icon to the tab. The title is diplayed below the icon.
-        icon: gallery
-  - jigId: timelogs
-    instanceId: timelogs
-    tab:
-      type: component.tab-button
-      options:
-        title: Logs
-        # Add an icon to the tab. The title is diplayed below the icon.
-        icon: time-clock-circle-1-alternate
+  - type: component.form
+    instanceId: shift-form
+    options:
+      children:
+        - type: component.number-field
+          instanceId: employee-number
+          options:
+            label: Employee number
+        - type: component.field-row
+          options:
+            children:
+              - type: component.text-field
+                instanceId: firstName
+                options:
+                  label: Name
+              - type: component.text-field
+                instanceId: lastName
+                options:
+                  label: Last Name
+        - type: component.email-field
+          instanceId: email
+          options:
+            label: Email
+        - type: component.text-field
+          instanceId: contact
+          options:
+            textContentType: telephoneNumber
+            label: Contact number
+        - type: component.field-row
+          options:
+            children:
+              - type: component.date-picker
+                instanceId: shift-date
+                options:
+                  label: Select shift date
+              - type: component.duration-picker
+                instanceId: shift-duration
+                options:
+                  label: Log your shift duration
+                  initialValue: 14400
+                  helperText: Standard shift is 4 hours
+                  errorText: =@ctx.component.state.value > 14400 ? 'Shift time needs approval':''
+                  hours:
+                    step: 4
+                  minutes:
+                    step: 2
 
 actions:
-  - numberOfVisibleActions: 1
-    children:
-      - type: action.action-list
+  - children:
+      # Go back to the first tab to select the next appointment.
+      - type: action.go-to
         options:
-          isHidden: =@ctx.jig.state.activeTabId ="inventory"
-          title: Continue
-          isSequential: false
-          actions:
-            - type: action.info-modal
-              when: =@ctx.jig.state.activeTabId ="timelogs"
-              options:
-                modal:
-                  title: Successfully submitted
-                  buttonText: Exit
-                  element:
-                    type: icon
-                    icon: check-2
-                    color: positive
-            - type: action.open-map
-              when: =@ctx.jig.state.activeTabId ="appointments"
-              options:
-                title: Directions
-                address: 105 Othello Dr, Woodstock, GA 30189, United States
-            - type: action.open-url
-              when: =@ctx.jig.state.activeTabId ="manuals"
-              options:
-                url: https://www.manualslib.com/
+          title: Next appointment
+          linkTo: jig-gallery-tab
+          instanceId: appointments
+
 ```
 {% endtab %}
 {% endtabs %}

@@ -18,7 +18,7 @@ The `email-field` component can be used independently or within a `form` compone
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](email-field.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="190.49609375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>instanceId</code></td><td>The unique identifier for the email-field.</td></tr><tr><td><code>label</code></td><td>Provide a label/name for the email-field. <em>Label</em> is displayed as a placeholder when no value is specified.</td></tr></tbody></table>
 

@@ -6,7 +6,7 @@ The open-settings action makes this process easier and more intuitive. The actio
 
 ## Configuration options
 
-Some properties are common to all actions, see [Common action properties](open-app-settings.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-action-properties.md" %}
 
 <table><thead><tr><th width="149.59765625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Provide the action button with a title, for example, Go to settings.</td></tr></tbody></table>
 

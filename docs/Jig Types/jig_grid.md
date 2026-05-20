@@ -17,7 +17,9 @@ The `jig.grid` enables you to create grid layouts in your app, organizing conten
 The `jig.grid` has two available configuration options:
 
 1. **Auto Grid** - used to create a grid layout from a datasource. This is similar in configuration to a [jig.list](jig_list.md) where a single `grid-item` is configured and iterates through the datasource.
-2. **Custom Grid** - used to create a custom grid layout using widgets, images, or custom components in various sizes. Some properties are common to all jig types, see [Common jig type properties](jig_grid.md) for a list and their configuration options.
+2. **Custom Grid** - used to create a custom grid layout using widgets, images, or custom components in various sizes.&#x20;
+
+{% include "../../.gitbook/includes/common-jig-type-properties.md" %}
 
 <table><thead><tr><th width="148.84765625">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Give the jig a title that is displayed at the top of the screen. If you do not want to show a title in a jig use <code>title: ' '</code>.</td></tr><tr><td><code>type</code></td><td>Select <code>jig.grid</code> for a grid layout configuration.</td></tr><tr><td><code>component</code></td><td>Within a grid jig type, the component is used to define each of the elements in the grid layout. Within the <code>grid-item</code> a select set of components can be configured.</td></tr><tr><td><code>datasources</code></td><td>Configure a datasource to call the data to display in the grid layout. The datasource property is required for the Auto Grid, but is optional for the Custom Grid selection.</td></tr></tbody></table>
 
@@ -321,7 +323,9 @@ actions:
   - children:
       - type: action.execute-entity
         options:
-          title: submit
+          # Configure the action to display when a choice is made.
+          isHidden: =@ctx.components.customer-survey.state.isDirty = false
+          title: Submit
           provider: DATA_PROVIDER_DYNAMIC
           entity: default/customer
           method: create
@@ -342,7 +346,6 @@ actions:
 {% tab title="fuel-log.jigx" %}
 ```yaml
 title: Fuel log
-description: Description of your Jig
 type: jig.default
 icon: fuel-pump-reload
 
@@ -530,7 +533,6 @@ children:
 {% tab title="fuel-log.jigx" %}
 ```yaml
 title: Fuel log
-description: Description of your Jig
 type: jig.default
 
 header:
@@ -747,7 +749,9 @@ actions:
   - children:
       - type: action.execute-entity
         options:
-          title: submit
+          # Configure the action to display when a choice is made.
+          isHidden: =@ctx.components.customer-survey.state.isDirty = false
+          title: Submit
           provider: DATA_PROVIDER_DYNAMIC
           entity: default/customer
           method: create
@@ -830,7 +834,6 @@ children:
 {% tab title="fuel-log.jigx" %}
 ```yaml
 title: Fuel log
-description: Description of your Jig
 type: jig.default
 # Configure the icon to display on the widget.
 icon: fuel-pump-reload
@@ -1057,7 +1060,9 @@ actions:
   - children:
       - type: action.execute-entity
         options:
-          title: submit
+          # Configure the action to display when a choice is made.
+          isHidden: =@ctx.components.customer-survey.state.isDirty = false
+          title: Submit
           provider: DATA_PROVIDER_DYNAMIC
           entity: default/customer
           method: create
@@ -1150,7 +1155,6 @@ children:
 {% tab title="fuel-log.jigx" %}
 ```python
 title: Fuel log
-description: Description of your Jig
 type: jig.default
 # This icon is overridden by the icon configured in the grid jig.
 icon: fuel-pump-reload
@@ -1377,7 +1381,9 @@ actions:
   - children:
       - type: action.execute-entity
         options:
-          title: submit
+          # Configure the action to display when a choice is made.
+          isHidden: =@ctx.components.customer-survey.state.isDirty = false 
+          title: Submit
           provider: DATA_PROVIDER_DYNAMIC
           entity: default/customer
           method: create
@@ -1486,7 +1492,6 @@ children:
 {% tab title="fuel-log.jigx" %}
 ```yaml
 title: Fuel log
-description: Description of your Jig
 type: jig.default
 
 header:
@@ -1703,7 +1708,9 @@ actions:
   - children:
       - type: action.execute-entity
         options:
-          title: submit
+          # Configure the action to display when a choice is made.
+          isHidden: =@ctx.components.customer-survey.state.isDirty = false
+          title: Submit
           provider: DATA_PROVIDER_DYNAMIC
           entity: default/customer
           method: create
@@ -2037,7 +2044,9 @@ actions:
   - children:
       - type: action.execute-entity
         options:
-          title: submit
+          # Configure the action to display when a choice is made.
+          isHidden: =@ctx.components.customer-survey.state.isDirty = false 
+          title: Submit
           provider: DATA_PROVIDER_DYNAMIC
           entity: default/customer
           method: create

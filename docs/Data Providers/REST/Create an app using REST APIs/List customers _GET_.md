@@ -24,6 +24,8 @@ The REST APIs GET operator is used in a Jigx function with an `outputTransform` 
 
 Specify the REST API url and operation (method), parameters to include authentication in the header and in the `outputTransform` define the data properties to be returned. The customer logo is stored in the REST service in base64, Jigx requires the logo in local-uri format for display. A `conversion` is configured in the function to change the base64 to local-uri.
 
+{% include "../../../../.gitbook/includes/rest-error-examples.md" %}
+
 {% code title="rest-get-customer.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
@@ -142,8 +144,8 @@ datasources:
           json_extract(cus.data, '$.logo') AS logo
         FROM 
           [customers] AS cus
-        -- ORDER BY 
-        --  json_extract(cus.data, '$.companyName')
+        ORDER BY 
+          json_extract(cus.data, '$.companyName')
 
 data: =@ctx.datasources.customers
 item:
@@ -162,6 +164,8 @@ item:
           color: color3
         - when: =@ctx.current.item.customerType = 'Silver'
           color: color14
+        - when: =@ctx.current.item.customerType = 'new'
+          color: color2  
 ```
 {% endcode %}
 

@@ -6,7 +6,7 @@ The expander component is a collapsible element that initially displays a small 
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](expander.md) for a list and their configuration options.
+{% include "../../../.gitbook/includes/common-component-properties.md" %}
 
 <table><thead><tr><th width="196.203125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td><p>Define the content of the expander. The following components can be used in the expander:</p><ul><li><a href="../charts/bar-chart.md">bar-chart</a></li><li><a href="../entity/entity.md">entity</a></li><li><a href="../form/form.md">form</a></li><li><a href="../interactive-image/interactive-image.md">interactive-image</a></li><li><a href="../charts/line-chart.md">line-chart</a></li><li><a href="../list/list.md">list</a></li><li><a href="../location.md">location</a></li><li><a href="../charts/pie-chart.md">pie-chart</a></li><li><a href="../stepper/stepper.md">stepper</a></li><li><a href="../video-player.md">video-player</a></li><li><a href="../web-view.md">web-view</a></li></ul></td></tr><tr><td><code>header</code></td><td><p><code>centerElement</code> - what is initially visible in your jig. The following options are available in <code>header</code>:</p><ul><li><a href="../../Custom components _Alpha_/Custom components _Alpha_.md">Custom components (Alpha)</a></li><li><a href="https://docs.jigx.com/examples/readme/components/expander/titles">titles</a></li><li><a href="stage.md">stage</a></li></ul></td></tr></tbody></table>
 

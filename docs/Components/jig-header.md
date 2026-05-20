@@ -8,19 +8,30 @@ The images can be preloaded and cached using the asset folder's images file. The
 
 ## Configuration options
 
-Some properties are common to all components, see [Common component properties](jig-header.md) for a list and their configuration options.
+{% include "../../.gitbook/includes/common-component-properties.md" %}
 
-<table><thead><tr><th width="154.484375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td><p>Specifies which component will be used inside the jig-header. There are three options:</p><ul><li><a href="location.md">component.location</a></li><li><a href="video-player.md">component.video player</a></li></ul></td></tr><tr><td><code>height</code></td><td><p>Specifies the height of the header.</p><ul><li><code>small</code></li><li><code>medium</code></li></ul></td></tr><tr><td><code>actions</code></td><td>Choose an action from the available list, such as <code>go-to</code> to open a different jig or <code>open-url</code> to navigate to a website. The selected action appears as a link in the top right corner of the header. Set the <code>icon</code> property in the action to display the action link as an icon instead of text. Styles of actions are inherited, for example, disabling the link. You can add multiple action links in the header, but ensure they accommodate the jig title and overall screen design. To prevent the jig <code>title</code> and header action links from overlapping while scrolling, use either one text action or up to three icon actions.</td></tr></tbody></table>
+<table><thead><tr><th width="154.484375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td><p>Specifies which component will be used inside the jig-header. There are three options:</p><ul><li><a href="location.md">component.location</a></li><li><a href="video-player.md">component.video player</a></li></ul></td></tr><tr><td><code>height</code></td><td><p>Specifies the height of the header.</p><ul><li><code>small</code></li><li><code>medium</code></li><li><code>tiny</code></li></ul></td></tr><tr><td><code>actions</code></td><td>Choose an action from the available list, such as <code>go-to</code> to open a different jig or <code>open-url</code> to navigate to a website. The selected action appears as a link in the top right corner of the header. Set the <code>icon</code> property in the action to display the action link as an icon instead of text. Styles of actions are inherited, for example, disabling the link. You can add multiple action links in the header, but ensure they accommodate the jig title and overall screen design. To prevent the jig <code>title</code> and header action links from overlapping while scrolling, use either one text action or up to three icon actions.</td></tr></tbody></table>
 
 {% hint style="warning" %}
 Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K.
 {% endhint %}
+
+## Considerations
+
+* Using the location component in the header can significantly increase memory usage and impact performance, particularly on Android devices.
+* If the address used in a location component is incorrect or incomplete, it may return the nearest estimated location instead of the intended one. This can mislead users and direct them to the wrong address.
+* You can display a hero-style header even when no child components are present, simply assign a `height` value to the header. If no `height` is provided, the header defaults to a compact size.
+* By default, the `title` is left-aligned. When no children are present and a header `height` is defined, the `title` shifts to center alignment.
 
 ## Examples and code snippets
 
 ### Jig-header with image
 
 {% columns %}
+{% column %}
+<figure><img src="../../.gitbook/assets/CC-header-tiny (1).png" alt="Header with image - tiny " width="178"><figcaption><p>Header with image - tiny</p></figcaption></figure>
+{% endcolumn %}
+
 {% column %}
 <figure><img src="../../.gitbook/assets/jig-header-small.png" alt="Header with image - small" width="178"><figcaption><p>Header with image - small</p></figcaption></figure>
 {% endcolumn %}
@@ -33,7 +44,7 @@ Jigx does not recommend storing images in Dynamic Data (via any conversion), as 
 This example shows a `component.jig-header` with property `children: component.image` and the difference between the set heights.
 
 **Examples**:\
-See the code samples using static data in GitHub for [small](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-image/jig-header-image-small.jigx) and [medium](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-image/jig-header-image-medium.jigx) headers.
+See the code samples using static data in GitHub for tiny,  [small](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-image/jig-header-image-small.jigx) and [medium](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-image/jig-header-image-medium.jigx) headers.
 
 {% tabs %}
 {% tab title="small" %}
@@ -63,7 +74,81 @@ header:
           uri: https://builder.jigx.com/assets/images/header.jpg
 ```
 {% endtab %}
+
+{% tab title="tiny" %}
+```yaml
+header:
+  type: component.jig-header
+  options:
+    height: tiny
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://builder.jigx.com/assets/images/header.jpg
+```
+{% endtab %}
 {% endtabs %}
+
+### Jig-header with height only (no children)
+
+{% columns %}
+{% column %}
+
+{% endcolumn %}
+
+{% column %}
+
+{% endcolumn %}
+{% endcolumns %}
+
+```yaml
+title: Phi Phi
+type: jig.default
+# Add a header with no children. Specify the 
+header:
+  type: component.jig-header
+  options:
+    height: tiny
+    
+children:
+  - type: component.image
+    options:
+      title: Thailand
+      subtitle: Phi Phi Islands
+      height: 250
+      source:
+        uri: https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80
+  - type: component.entity
+    options:
+      children:
+        - type: component.section
+          options:
+            title: Details of the island
+            children:
+              - type: component.entity-field
+                options:
+                  label: Description
+                  value:
+                    The Phi Phi Islands are an island group in Thailand between the
+                    large island of Phuket and the Straits of Malacca coast of Thailand.
+                    The islands are reachable by speedboats or long-tail boats most often
+                    from Krabi town or from piers in Phuket Province.
+                  isMultiline: true
+              - type: component.entity-field
+                options:
+                  label: Total area
+                  value: 12.25 km2 (4.73 sq mi)
+              - type: component.entity-field
+                options:
+                  label: Total population
+                  value: "2,500"
+              - type: component.entity-field
+                options:
+                  label: Time zone
+                  value: UTC+7 (ICT)
+
+```
 
 ### Jig-header with location
 
@@ -76,7 +161,11 @@ header:
 This example shows a `component.jig-header` with property `children: component.location` and the difference between the set heights. Refer to the [location](location.md) component for additional location setup options.
 
 **Examples**:\
-See the code samples using static data in GitHub for [small](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/components/jig-header/static-data/jig-header-location/jig-header-location-small.jigx) and [medium](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-medium.jigx) headers.
+See the code samples using static data in GitHub for [small](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-small.jigx) and [medium](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-location/jig-header-location-medium.jigx) headers.
+
+{% hint style="warning" %}
+Using the location component in the header can significantly increase memory usage and impact performance, particularly on Android devices.
+{% endhint %}
 {% endcolumn %}
 {% endcolumns %}
 
