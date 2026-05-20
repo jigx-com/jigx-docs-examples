@@ -19,7 +19,7 @@ layout:
 
 # Cross solution datasource access
 
-Jigx solutions are self-contained by default, but there are scenarios where one solution needs to read data from, or trigger actions in, another installed solution. Cross-package support makes this possible without duplicating data or creating custom sync pipelines. See <mark style="background-color:$warning;">Cross-solution datasource access</mark> to learn more about the configuration options.
+Jigx solutions are self-contained by default, but there are scenarios where one solution needs to read data from, or trigger actions in, another installed solution. Cross-package support makes this possible without duplicating data or creating custom sync pipelines. See [Cross-solution datasource access](https://docs.jigx.com/building-apps-with-jigx/data/datasources/cross-solution-data-access) to learn more about the configuration options.
 
 ## Examples and code snippets
 
