@@ -10,6 +10,10 @@ updatedAt: Wed Mar 05 2025 15:06:18 GMT+0000 (Coordinated Universal Time)
 With SQLite, you can write your datasources as SQL queries. You can use the queries in datasources to create a select statement and get the data from the tables you need to use in your jig file. You can use it directly in the jig file, where the UI component configuration is or you can use it as a global datasource.\
 For more information see:
 
+{% hint style="info" %}
+If you are not familiar with datasources yet, see the [data](https://docs.jigx.com/building-apps-with-jigx/data/datasources) section and [SQLite](https://app.gitbook.com/u/A4YcAWqqLWQIAnfb34ybu13tcL62).
+{% endhint %}
+
 1. [Datasources](https://docs.jigx.com/building-apps-with-jigx/data/datasources)
 2. [Datasource SQLite](https://docs.jigx.com/building-apps-with-jigx/data/datasources/sqlite)
 3. [SQLite cheatsheet](https://docs.jigx.com/building-apps-with-jigx/data/datasources/sqlite/sqlite-cheatsheet)
