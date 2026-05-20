@@ -23,6 +23,7 @@ A go-to action can be set up in various ways:
       * On an iPad in landscape mode:
         1. When the drawer is open, it will only open in the jig panel.
         2. When the drawer is closed, it will cover the entire screen, but it will not display as a modal.
+* Setting the `isKeyboardDismissEnabled` property to `true` ensures the keyboard is automatically dismissed when the action is triggered, preventing the keyboard from staying open and obscuring features such as the `bottomSheet` when a field is focused. The property's default setting is `true`.
 
 ## Examples and code snippets
 
