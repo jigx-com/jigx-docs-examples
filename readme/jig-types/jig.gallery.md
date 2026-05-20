@@ -710,7 +710,7 @@ children:
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/gallery-tabs.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/gallery-tabs.png" alt="Gallery in tab jig" width="188"><figcaption><p>Gallery in tab jig</p></figcaption></figure>
 
 
 {% endcolumn %}
@@ -719,7 +719,7 @@ children:
 In this example, `jig.gallery` is used as a tab within a `jig.tabs` screen. The tab, labeled Task Photos, displays a gallery of images related to appointments. Tapping an image opens it in fullscreen, where you can access the share and delete action icons at the bottom. The fullscreen view also supports pinch-and-zoom to explore image details.
 
 **Example:** \
-The full example is available on [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-gallery/jig-gallery-tab.jigx).&#x20;
+The full example is available on GitHub.&#x20;
 {% endcolumn %}
 {% endcolumns %}
 
