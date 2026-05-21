@@ -41,6 +41,10 @@ Some properties are common to all components, see [Common component properties](
 {% column %}
 Basic example to rate the safety of a building site using `component.rating` in a `default` jig. The rating value is stored in component state:\
 `=@ctx.components.rating.state.value`
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/rating/rating-basic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -112,6 +116,10 @@ children:
 {% columns %}
 {% column %}
 In this example the rating component is used in a hotel feedback form to score guests overall experience. The `icon`, `color` and `maximum` number of icons are defined.&#x20;
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/rating/rating-form.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -259,6 +267,10 @@ datasources:
 In this example, books are reviewed by selecting a book from the list. Selecting a book opens a modal containing a rating component configured with a custom icon, color, and number of icons. An input is used to pass the book title to the modal and display it as the title of the rating component.
 
 When a rating is submitted, the selected value is saved to the corresponding book record in the database. The BookId is passed to the modal as an input and used by the action to identify which book record to update. Once the modal closes, the saved rating value is retrieved from the database and displayed using the list-item’s rating property.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/rating/rating-custom-icon.jigx).
 
 {% hint style="info" %}
 Note: This example highlights the difference between the rating component, which captures a rating, and the list-item’s rating property, which is used only to display a rating on a list item.
@@ -424,6 +436,10 @@ datasources:
 {% columns %}
 {% column %}
 In this example, the rating component is configured with custom `icons` that are left-`aligned`, along with a custom `color`, `title`, and `helperText` displayed beneath the icons.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/rating/rating-options.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -495,6 +511,10 @@ children:
 
 {% column %}
 In this example, the rating component is configured with custom right-`aligned` `icons`, a custom `color` and `title`, and an `initialValue` that is set when the screen opens. The rating can be updated by tapping the icons.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/rating/rating-options.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -568,6 +588,10 @@ This example demonstrates an advanced rating component that dynamically changes 
    * Low ratings (1-2): Red confused emoji
    * Medium rating (3): Yellow/orange confused emoji
    * High ratings (4-6): Green happy emoji
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/rating/rating-options.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -636,6 +660,10 @@ children:
 
 {% column %}
 In this example, a wilderness experience is scored using the rating component, which is configured inside a `card` component with custom `icons` and a `title`.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/rating/rating-options.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

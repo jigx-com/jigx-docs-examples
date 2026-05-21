@@ -35,6 +35,10 @@ A menu-item is a lightweight list-item designed for quick selection and navigati
 {% columns %}
 {% column %}
 This example displays a weekly schedule using a `menu-item` list of weekdays. When you select a day, the jig saves that selection in the `dayFilter` state and immediately loads the list of employees rostered for that day. The top list shows the days of the week as selectable menu-items, and the second list, visible only after a day is chosen, shows the filtered roster with each employee’s name, role, and avatar. This allows you to quickly tap a day and view who is on duty.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/menu-item/menu-item-basic.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -247,6 +251,10 @@ datasources:
 
 {% column %}
 This example displays a list of company report categories using `menu-items`. Each menu-item represents a report type, such as Financial, Employees, Customers, or Sales and includes an `icon`, a bold `title`, and a short descriptive `subtitle`. The list is shown in two columns (numberOfColumns) for a compact, visual layout. When you taps a menu-item, the app navigates to the corresponding report jig defined by the `myjig` value in the datasource. This layout offers users a simple, intuitive way to browse and open different business reports.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/menu-item/menu-item-list.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -1883,6 +1891,10 @@ source:
 {% endcolumns %}
 
 This example displays online-shop categories using `menu-items`. The number of columns (`numberOfColumns`) adjusts dynamically depending on the device type, showing three columns on mobile and 5 on tablets, to optimise space and readability. Each menu-item includes an `icon` and category `title` pulled from the datasource, and tapping a category navigates the user to the relevant shop section.&#x20;
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/menu-item/menu-item-by-device.jigx).
 
 {% tabs %}
 {% tab title="menu-item-columns.jigx" %}

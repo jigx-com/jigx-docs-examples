@@ -201,7 +201,7 @@ If your HTML content does not render as expected e.g. font too small, embed this
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/document-content-html.png" alt="Document jig with HTML content" width="188"><figcaption><p>Document jig with HTML content</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/document-content-html (1).png" alt="Document jig with HTML content" width="188"><figcaption><p>Document jig with HTML content</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -221,15 +221,15 @@ type: jig.document
 source:
   documentType: HTML
   content: |
-      <html>
-        <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-        </head>
-        <body style="margin: 0;text-align: center;">
-         <img src="https://www.jigx.com/wp-content/uploads/2023/05/MSGraph01.png" alt="Jigx website screenshot"
-        style="max-width: 100vw; height: 100vh; ">
-        </body>
-      </html>
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      </head>
+      <body style="margin: 0;text-align: center;">
+      <h1>Hello, World!</h1>
+      <p>This is a simple HTML test page demonstrating common elements.</p>
+      </body>
+    </html>
 ```
 {% endtab %}
 

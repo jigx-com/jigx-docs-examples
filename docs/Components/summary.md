@@ -703,6 +703,10 @@ options:
 
 {% column %}
 This example defines a **summary component** that visually tracks a user's progress through a **3-step purchase order form**. It acts as a progress indicator, giving users real-time feedback on how far along they are in completing the order process. The component monitors three separate forms (`form1`, `form2`, `form3`) and evaluates whether each one has been successfully validated. Based on this, it calculates a current progress score between **0 and 3**, which is then displayed as a progress bar.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-progress.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -976,6 +980,10 @@ datasources:
 {% columns %}
 {% column %}
 This example defines a **summary component** that visually tracks a user's progress through a 4-step tab-based purchase order workflow. It provides users with a real-time `progress` indicator, clearly showing how far along they are in completing the purchase order process. The component monitors the active tab within the jig (screen) and maps each tab to a corresponding step number.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/summary/summary-progress-tabs.jigx).
 {% endcolumn %}
 
 {% column %}

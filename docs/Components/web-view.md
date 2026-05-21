@@ -49,6 +49,7 @@ children:
     options:
       uri: =@ctx.datasources.web-view.url
       isTrackingTransparencyRequired: true
+      height: 1000
 ```
 {% endtab %}
 
@@ -56,7 +57,6 @@ children:
 ```yaml
 type: jig.default
 title: Web view
-isScrollable: false
 
 children:
   - type: component.web-view
@@ -74,7 +74,7 @@ datasources:
     type: datasource.static
     options:
       data:
-        - url: https://www.jigx.com
+        - url: https://jigx.com
 ```
 {% endtab %}
 

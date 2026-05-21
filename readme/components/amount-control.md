@@ -37,6 +37,10 @@ The amount-control provides a simple and intuitive way to adjust numeric values 
 
 {% column %}
 This example shows a basic amount-control inside a card layout. The `card` contains a centered `image` and an `amount-control` component that lets the user adjust a quantity using plus and minus buttons. The control is configured with an i`nitialValue` of 1, a `minimum` of 0, a `maximum` of 5, and a `step` of 1 for each increment or decrement. This setup is ideal for simple quantity selection, such as choosing how many items to add to a cart.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/amount-control/basic-amount-control.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -75,6 +79,10 @@ children:
 {% columns %}
 {% column %}
 In this example the `amount-control` is configured with an `onChange` and `OnDelete` event to record the order in the product-orders database. Each event triggers an `execute-entity` action with the corresponding `method`.&#x20;
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/amount-control/amount-control-onchange-ondelete.jigx).
 
 {% hint style="info" %}
 * Tapping the plus or minus button is considered an `onChange` event.&#x20;
@@ -237,6 +245,10 @@ datasources:
 
 {% column %}
 This example shows a standalone `amount-control` component used to adjust product quantities in an e-commerce interface. It allows you to increase or decrease the selected amount using simple plus and minus controls, making it ideal for shopping cart or product detail screens.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/amount-control/amount-control-standalone.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

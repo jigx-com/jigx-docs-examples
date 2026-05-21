@@ -38,6 +38,10 @@ The **Banner component** provides a flexible way to deliver important messages d
 
 {% column %}
 This example demonstrates the simplest use of the banner component, using only the core properties—`title` and `subtitle`, to display an HR message at the top of the screen welcoming a new staff member.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/banner/banner-basic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -118,6 +122,10 @@ datasources:
 
 {% column %}
 In this example, the banner’s title and subtitle are customized by adjusting the `fontSize`, applying `color`, and enabling `isBold` styling.&#x20;
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/banner/banner-text-styling.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -213,6 +221,10 @@ datasources:
 {% columns %}
 {% column %}
 This example shows a banner using a `title` and `actions` to notify the user of a failed payment.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/banner/banner-actions.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -328,6 +340,10 @@ datasources:
 
 {% column %}
 In this example, a banner notifies you that new jobs have been assigned to you. It displays a colored `icon` and uses a contained `style` with rounded corners.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/banner/banner-icon.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -451,6 +467,10 @@ children:
 {% columns %}
 {% column %}
 This example shows a maintenance announcement banner placed at the top of the Global Inc Workday screen. The banner clearly informs frontline users about scheduled downtime. It is styled with a warning border to enhance visibility and includes an action button that engages the user by allowing them to acknowledge the message.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/banner/banner-action-icon-style.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -555,6 +575,10 @@ children:
 {% columns %}
 {% column %}
 This example demonstrates a banner styled to grab the user’s attention, with an action button designed to encourage engagement.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/banner/banner-styling.jigx).
 {% endcolumn %}
 
 {% column %}

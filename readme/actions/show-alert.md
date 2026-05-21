@@ -43,6 +43,10 @@ The alert may not always be triggered directly by the user. Instead, it can be t
 
 {% column %}
 This example demonstrates an alert configured to display as a `toast`. It uses a negative `style` and a custom `icon` that supports the context of the message. The toast shows the `title`, `subtitle`, `icon`, and available `actions` at a glance. When the user taps on the `toast`, the full alert is revealed, including the `description` field, which can be configured as either static text or dynamically populated using an expression.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/show-alert/action-show-alert-toast.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -176,6 +180,10 @@ actions:
 
 {% column %}
 This example demonstrates an alert configured to display as a `modal`. It uses a positive `style` and a custom `icon` that supports the context of the message. The modal shows the `title`, `subtitle`, `description`,  `icon`, and available `actions` at a glance. The `description` field can be configured as either static text or dynamically populated using an expression.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/show-alert/action-show-alert-modal.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -360,6 +368,10 @@ actions:
 {% columns %}
 {% column %}
 This example uses the `onFocus` event to notify (alert) the salesperson that the sales order requires the customer’s signature. The alert can be displayed as either a `toast` or a `modal` and is styled positively, as it serves as an informative reminder rather than an error.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/show-alert/action-show-alert-styling.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -522,6 +534,10 @@ datasources:
 
 This example uses the `onChange` event to alert the worker that the selected tool is unavailable. The alert can be displayed as a toast or a modal and is styled negatively, with a clear icon to reinforce that the selection is not allowed. When shown as a toast, the worker can tap it to view additional details.
 
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/show-alert/action-show-alert-icon-styling.jigx).
+
 {% columns %}
 {% column width="41.66666666666667%" %}
 <figure><img src="../../.gitbook/assets/ac-show-alert-style-icon-modal.png" alt="Alert shown as a modal" width="188"><figcaption><p>Alert shown as a modal</p></figcaption></figure>
@@ -628,6 +644,10 @@ datasources:
 ### Show-alert with automatic dismissal
 
 This example illustrates how to display a warning alert to workers when specific jobs require PPE (Personal Protective Equipment). Each job is listed with an icon and a "Select" button. Upon selection, if the job necessitates PPE, a non-blocking toast alert appears detailing the required PPE items, reinforcing the importance of safety compliance. The alert is styled with a warning indication and is configured to automatically dismiss after three seconds, ensuring that the alert is noticeable without interrupting the workflow.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/show-alert/action-show-alert-dismissal.jigx).
 
 {% columns %}
 {% column %}
@@ -842,6 +862,10 @@ This example demonstrates how to `group` multiple alerts under a shared identifi
 When a team member taps _Start_ on a work item that is not assigned to them, an _Access denied_ alert is displayed. If the user taps multiple unassigned work items (for example, four in a row), only a single alert message appears because all alerts share the same group identifier.
 
 The alert is presented as a warning `toast`, making it clearly noticeable while still allowing the user to continue working without interrupting their workflow.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/show-alert/action-show-alert-groupid.jigx).
 {% endcolumn %}
 
 {% column %}

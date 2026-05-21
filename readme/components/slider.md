@@ -43,6 +43,10 @@ Some properties are common to all components, see [Common component properties](
 
 {% column %}
 Basic example of a slider configured with a numeric range from 0 to 1000. The selected value is shown as a formatted currency amount in the value overlay.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/slider/slider-basic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -130,6 +134,10 @@ datasources:
 {% columns %}
 {% column %}
 In this example, the slider is used in a form to capture budget values. The display values are formatted as currency so the selected amount is easy to read while dragging. Each slider is configured with an `initialvalue`.
+
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/slider/slider-form.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -225,7 +233,11 @@ children:
 
 {% columns %}
 {% column %}
-This example uses color conditions to visually indicate low and high temperature values on the slider. The value is written to the&#x20;
+This example uses color conditions to visually indicate low and high temperature values on the slider. The value is written to the entity field.\
+\
+**Examples:**
+
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/slider/slider-conditional.jigx).
 {% endcolumn %}
 
 {% column %}

@@ -334,7 +334,7 @@ datasources:
 This example demonstrates how to use `sections` with styled `icons`, formatted `titles`, and multi-line `subtitles` to create a clear and visually engaging layout. Each section represents a project team, displaying their key details and task summaries in an organized structure.
 
 **Examples:**\
-See the full example in GitHub.
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-icon-subtitle.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -660,6 +660,10 @@ datasources:
 {% columns %}
 {% column %}
 This example demonstrates how `component.section` can be used in a form to organize related information into clear, structured groups. Each section has been configured with properties such as `title`, `subtitle`, `icons`, and `actions` to improve usability for frontline workers in the field.
+
+**Examples:**  See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-icon-action-styling.jigx).
+
+
 {% endcolumn %}
 
 {% column %}
