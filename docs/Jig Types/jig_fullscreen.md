@@ -12,20 +12,11 @@ The `jig.full-screen` allows you to configure a component that covers the entire
 
 ## Considerations
 
-* This jig type does not allow for a `description` or `header` properties.
-* The [location](../Components/location.md) component can be used in the `jig.full-screen`.
-* When using an action within the jig, check that the action button does not overlap the fullscreen functionality. The best practice is not to use an action with the full-screen jig, as the action button covers elements shown in the full-screen.
-* Avoid using the [home button](<Common jig type properties.md#home-button-visibility>) with a web-view. This ensures that the web-view can make full use of the available screen space.
-* It is not recommended to use a full-screen jig in a [composite](jig_composite.md) jig, combining the fullscreen with another jig will not provide the optimal layout for the jig.
-* If the address used in a location component is incorrect or incomplete, it may return the nearest estimated location instead of the intended one. This can mislead users and direct them to the wrong address.
-
 ## Configuration options
 
 {% include "../../.gitbook/includes/common-jig-type-properties.md" %}
 
 The `jig.full-screen` can be configured in the following way in Jigx Builder.
-
-<table><thead><tr><th width="135.89453125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>component</code></td><td><p>Select the component to display as a full-screen, the available components are:</p><ul><li><code>component.chat</code></li><li><code>component.custom-component</code></li><li><code>component.location</code></li><li><code>component.web-view</code></li></ul></td></tr><tr><td><code>title</code></td><td>Give the jig a title that is displayed at the top of the screen. If you do not want to show a title in a jig use <code>title: ' '</code>.</td></tr><tr><td><code>type</code></td><td>Select <code>jig.full-screen</code></td></tr></tbody></table>
 
 ## Examples and code snippets
 

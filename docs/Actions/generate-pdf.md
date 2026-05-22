@@ -4,7 +4,7 @@
 {% column %}
 The generate-pdf action allows you to quickly create a PDF file version of HTML content, whether a receipt, report, form, or other document.
 
-The URI of the generated file is returned and is available as part of the action instance output. When you tap the button, the app compiles the necessary information and generates a file you can save, or share instantly.
+The URI of the generated file is returned and is available as part of the action instance output. When you tap the button, the app compiles the necessary information and generates a file you can save or share instantly.
 {% endcolumn %}
 
 {% column %}
@@ -18,13 +18,112 @@ The URI of the generated file is returned and is available as part of the action
 
 <table><thead><tr><th width="140.71875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>html</code></td><td>Use standard HTML elements to ensure optimal formatting and compatibility when rendering content in the PDF file, for example, &#x3C;html>&#x3C;body>Invoices are provided monthly.&#x3C;/body&#x3C;/html>. The HTML can be built up using JSONata or JavaScript.</td></tr><tr><td><code>fileName</code></td><td>Give the PDF a name, this name is used as the local file name, and is referenced as part of the uri, which can be accessed via the action's instance output (<code>=@ctx.actions.generatePDF.outputs.uri</code>). The .pdf extension is automatically added to the <code>fileName</code>.</td></tr><tr><td><code>title</code></td><td>Provide the action button with a title, for example, Invoice.</td></tr></tbody></table>
 
-<table><thead><tr><th width="149.015625">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>Select a icon to display when the action is configured as the secondary button or in a <a href="../Components/jig-header.md">jig-header</a>.</td></tr><tr><td><code>isHidden</code></td><td><code>true</code> hides the action button, <code>false</code> shows the action button. Default setting is <code>false</code>.</td></tr><tr><td><code>styles</code></td><td><ul><li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li><li><code>isDisabled</code> - Displays the action button as greyed out.</li><li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li><li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li></ul></td></tr></tbody></table>
+<table><thead><tr><th width="149.015625">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>Select an icon to display when the action is configured as the secondary button or in a <a href="../Components/jig-header.md">jig-header</a>.</td></tr><tr><td><code>isHidden</code></td><td><code>true</code> hides the action button. <code>false</code> shows the action button. The default is <code>false</code>.</td></tr><tr><td><code>page</code></td><td>Controls the PDF page size, orientation, custom dimensions, and margins. See <a data-mention href="generate-pdf.md#page-options">#page-options</a> for more information.</td></tr><tr><td><code>styles</code></td><td><ul><li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li><li><code>isDisabled</code> - Displays the action button as greyed out.</li><li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li><li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li></ul></td></tr></tbody></table>
+
+## Page options
+
+Use `page` to control the physical PDF page layout.
+
+```yaml
+actions:
+  - children:
+      - type: action.generate-pdf
+        options:
+          html: =@ctx.datasources.template.html
+          fileName: report
+          page:
+            size: letter
+            orientation: portrait
+            margin: none
+```
+
+Supported `page` fields:
+
+* `size` — `letter`, `legal`, `tabloid`, `a4`, or `a3`
+* `orientation` — `portrait` or `landscape`
+* `width` and `height` — custom page size in PDF points
+* `margin` — `none`, a single number, or an object with `top`, `right`, `bottom`, and `left`
+
+Named page sizes use PDF points. `72pt = 1in`.
+
+* `letter` — `612 × 792`
+* `legal` — `612 × 1008`
+* `tabloid` — `792 × 1224`
+* `a4` — `595 × 842`
+* `a3` — `842 × 1191`
+
+If you do not set `page`, the PDF uses `letter` and `portrait` by default.
+
+{% hint style="info" %}
+If you set both `width` and `height`, they take priority over `size` and `orientation`.
+{% endhint %}
+
+### Margin options
+
+`margin` supports three formats:
+
+* `none` — no margin
+* number — the same margin on all sides
+* object — a different margin for each side, specified separately
+
+{% hint style="info" %}
+Omitted margin sides default to `0`.
+{% endhint %}
+
+Examples:
+
+{% tabs %}
+{% tab title="margin-number" %}
+```yaml
+page:
+  size: a4
+  margin: 36
+```
+{% endtab %}
+
+{% tab title="margin-object" %}
+```yaml
+page:
+  size: letter
+  orientation: landscape
+  margin:
+    top: 36
+    right: 48
+    bottom: 36
+    left: 48
+```
+{% endtab %}
+{% endtabs %}
+
+### Page size and HTML layout
+
+The YAML `page` configuration sets the physical PDF page size.
+
+CSS `@page` size rules do not change the PDF page size. They affect only the layout inside the fixed page.
+
+To avoid overflow or extra whitespace, keep your HTML and CSS aligned with the YAML page settings.
+
+```css
+@page { size: letter landscape; margin: 0; }
+body  { width: 792pt; height: 612pt; }
+```
+
+If the YAML and CSS sizes do not match, the PDF still uses the YAML size.
+
+### Multi-page rendering
+
+Multi-page HTML paginates correctly on iOS.
+
+Page breaks in your HTML and CSS are honored across physical PDF pages. For example, CSS `break-after: page` now places content on separate PDF pages.
 
 ## Considerations
 
-* You can reference the local PDF file using the action's output uri in other actions or components, `=@ctx.actions.generatePDF.outputs.uri`. For example, generate the PDF file then [share](share.md) the file.
+* You can reference the local PDF file using the action's output uri in other actions or components, `=@ctx.actions.generatePDF.outputs.uri`. For example, generate the PDF file, then [share](share.md) the file.
 * Depending on where you save and use the saved PDF, you might need to use [conversions](https://docs.jigx.com/building-apps-with-jigx/data/file-handling).
 * The .pdf extension is automatically added to the `fileName`.
+* The `page` margin is applied by the PDF generator. It is not injected into the HTML as CSS.
+* Do not also set `@page { margin: ... }` in your HTML when you use the YAML `page.margin` field. This avoids double spacing.
+* When you use custom dimensions, both `width` and `height` must be greater than `0`.
 
 ## Examples and code snippets
 
@@ -145,6 +244,119 @@ datasources:
 ```
 {% endtab %}
 {% endtabs %}
+
+### Control page size, orientation, and margins
+
+Use `page` when the PDF must match a specific paper size or layout.
+
+{% tabs %}
+{% tab title="letter-landscape" %}
+```yaml
+actions:
+  - children:
+      - type: action.generate-pdf
+        options:
+          title: Export report
+          html: =@ctx.datasources.report.html
+          fileName: operations-report
+          page:
+            size: letter
+            orientation: landscape
+            margin: none
+```
+{% endtab %}
+
+{% tab title="a4-with-margin" %}
+```yaml
+actions:
+  - children:
+      - type: action.generate-pdf
+        options:
+          title: Export report
+          html: =@ctx.datasources.report.html
+          fileName: operations-report
+          page:
+            size: a4
+            orientation: portrait
+            margin: 36
+```
+{% endtab %}
+
+{% tab title="custom-page-size" %}
+```yaml
+actions:
+  - children:
+      - type: action.generate-pdf
+        options:
+          title: Export card
+          html: =@ctx.datasources.card.html
+          fileName: summary-card
+          page:
+            width: 360
+            height: 504
+```
+{% endtab %}
+
+{% tab title="per-side-margins" %}
+```yaml
+actions:
+  - children:
+      - type: action.generate-pdf
+        options:
+          title: Export report
+          html: =@ctx.datasources.report.html
+          fileName: operations-report
+          page:
+            size: letter
+            orientation: landscape
+            margin:
+              top: 36
+              right: 48
+              bottom: 36
+              left: 48
+```
+{% endtab %}
+{% endtabs %}
+
+### Multi-page HTML example
+
+Use HTML page breaks when the PDF should span multiple pages.
+
+{% code title="generate-pdf-multi-page.jigx" %}
+```yaml
+actions:
+  - children:
+      - type: action.generate-pdf
+        options:
+          title: Export slides
+          fileName: presentation
+          page:
+            size: a4
+            orientation: portrait
+            margin: none
+          html: |
+            <!DOCTYPE html>
+            <html lang="en">
+              <head>
+                <meta charset="UTF-8">
+                <style>
+                  @page { size: a4 portrait; margin: 0; }
+                  body { margin: 0; }
+                  .slide {
+                    width: 595pt;
+                    height: 842pt;
+                    break-after: page;
+                  }
+                </style>
+              </head>
+              <body>
+                <section class="slide">Page 1</section>
+                <section class="slide">Page 2</section>
+                <section class="slide">Page 3</section>
+              </body>
+            </html>
+```
+{% endcode %}
 
 ### Generate a pdf, save and share
 

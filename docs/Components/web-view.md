@@ -1,9 +1,9 @@
 # web-view
 
-This component displays a webpage from a specified URL, content from a datasource, or custom HTML.
+This component displays a web page from a URL, content from a datasource, or custom HTML.
 
 {% hint style="info" %}
-You can also use the [jig.document](<../Jig Types/jig_document.md>) type to display web pages in full-screen mode or pass messages from your HTML content via JavaScript to the Jigx App.
+Use [jig.document](<../Jig Types/jig_document.md>) when you need a full-screen web page or message passing from HTML content.
 {% endhint %}
 
 ## Configuration options
@@ -12,11 +12,28 @@ You can also use the [jig.document](<../Jig Types/jig_document.md>) type to disp
 
 <table><thead><tr><th width="278.1953125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>uri</code></td><td>The source to be displayed in the web-view, for example, a URL.</td></tr></tbody></table>
 
-<table><thead><tr><th width="281.4453125">Other options</th><th></th></tr></thead><tbody><tr><td><code>content</code></td><td>HTML to render in the web-view.</td></tr><tr><td><code>height</code></td><td>The height of the web-view.</td></tr><tr><td><code>isEditable</code></td><td>A very basic implementation, if set to <code>true</code>, the web-view <code>content</code> becomes editable. This works only with <code>content</code>, not with a <code>uri</code>. The <code>isEditable</code> property is only available when using the web-view in a .</td></tr><tr><td><code>isTrackingTransparencyRequired</code></td><td>If set to <code>true</code> tracking transparency permission modal is shown before opening the URL. The default setting is <code>true</code>.</td></tr></tbody></table>
+<table><thead><tr><th width="281.4453125">Other options</th><th></th></tr></thead><tbody><tr><td><code>content</code></td><td>HTML to render in the web-view.</td></tr><tr><td><code>height</code></td><td>The height of the web-view.</td></tr><tr><td><code>isEditable</code></td><td>If set to <code>true</code>, the web-view <code>content</code> becomes editable. This works only with <code>content</code>, not with a <code>uri</code>. Use it in a [jig.fullscreen](/spaces/HcPzbms3kZejTmFd500V/pages/pJexnDt2gmKLRExld1M7).</td></tr><tr><td><code>isTrackingTransparencyRequired</code></td><td>If set to <code>true</code>, Jigx shows the tracking transparency permission modal before opening the URL. The default is <code>true</code>.</td></tr><tr><td><code>allowInAppRedirect</code></td><td>If set to <code>true</code>, Jigx intercepts links tapped inside the web-view and handles them in-app. The default is <code>false</code>.</td></tr></tbody></table>
 
-## Consideration
+## Link handling
 
-* The `component.web-view` can be used in [jig.fullscreen](<../Jig Types/jig_fullscreen.md>), if the content needs to fill the screen.
+By default, links keep the existing web-view behavior and load inside the web-view.
+
+Set `allowInAppRedirect: true` to intercept link taps and handle them outside the embedded page.
+
+* Jigx [deeplinks](https://docs.jigx.com/building-apps-with-jigx/additional-functionality/deep-links) open inside the app. This includes `app.jigx.com/...` links and supported custom-scheme links.
+* Cross-solution Jigx [deeplinks](https://docs.jigx.com/building-apps-with-jigx/additional-functionality/deep-links) switch to the target solution, then open the target jig.
+* `http` and `https` links open in the in-app browser.
+* `mailto:`, `tel:`, and similar schemes open in the system app.
+* If the target solution is not assigned to the user, Jigx shows _Solution is not available_ and keeps the current web-view open.
+
+{% hint style="info" %}
+`allowInAppRedirect` is off by default. Set it only when you want Jigx to handle links outside the embedded page.
+{% endhint %}
+
+## Considerations
+
+* Use `component.web-view` in [jig.fullscreen](<../Jig Types/jig_fullscreen.md>) when the content should fill the screen.
+* `isEditable` works with `content` only. It does not work with `uri`.
 
 ## Examples and code snippets
 
@@ -96,6 +113,63 @@ datasources:
 ```
 {% endtab %}
 {% endtabs %}
+
+### Web-view example (In-app redirects)
+
+Enable `allowInAppRedirect` when links inside the web-view should open in Jigx, in the in-app browser, or in the system app instead of replacing the current page in the web-view.
+
+{% code title="web-view-in-app-redirect.jigx" %}
+```yaml
+title: WebView Link Navigation
+type: jig.full-screen
+
+component:
+  type: component.web-view
+  options:
+    allowInAppRedirect: true
+    height: 900
+    isEditable: false
+    content: |
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Link navigation test</title>
+        </head>
+        <body>
+          <h1>Link navigation test</h1>
+          <p>
+            <a href="https://app.jigx.com/app/solution/44b928dd-7fb8-457b-a5de-e6f990e3dd3b/jig/tags-dynamic?title=TestTitle">
+              Open a jig
+            </a>
+          </p>
+          <p>
+            <a href="https://app.jigx.com/app/solution/9d9a9ff6-6430-453c-89b0-871f41f6054a">
+              Open a solution
+            </a>
+          </p>
+          <p>
+            <a href="https://www.jigx.com">Open a website</a>
+          </p>
+          <p>
+            <a href="mailto:support@example.com">Send an email</a>
+          </p>
+          <p>
+            <a href="tel:+1234567890">Call support</a>
+          </p>
+        </body>
+      </html>
+```
+{% endcode %}
+
+Expected behavior:
+
+* Jigx deeplinks open inside the app.
+* Cross-solution links switch solution first when the user has access.
+* Web links open in the in-app browser.
+* Email and phone links open the system app.
+* Unassigned solution links show `Solution is not available`.
 
 ### Web-view example (HTML Content)
 

@@ -185,6 +185,7 @@
       * [sync-entities](readme/actions/sync-actions/sync-entities.md)
     * [update-profile](docs/Actions/update-profile.md)
   * [Events](docs/Events/Events.md)
+    * [onAppActivated](readme/events/onappactivated.md)
     * [onTableChanged](docs/Events/onTableChange.md)
       * [Acumatica Push Notifications](<docs/Events/onTableChange/Acumatica Push Notifications.md>)
   * [Preview (iOS feature)](docs/Preview/Preview.md)
