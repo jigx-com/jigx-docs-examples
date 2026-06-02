@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Expressions
 
 An overview and explanation of using expressions in Jigx is provided in the [Expressions](https://docs.jigx.com/building-apps-with-jigx/logic/expressions) and [Advanced Expressions](https://docs.jigx.com/building-apps-with-jigx/logic/expressions#advanced-expressions) section in the Guide tab.

@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # product-item
 
 {% columns %}
@@ -38,7 +59,7 @@ The **product-item** component is a versatile display element designed to render
 {% column %}
 In this example, a list containing the `default` product-item component is shown. Each product contains a `title`, `tags`, `image`, and `price`. The `discount` property calculates the price after the discount.
 
-**Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/dynamic-data/product-item-tags-dynamic.jigx).
+**Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/product-item-card/card-product-item-tags.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -129,9 +150,7 @@ datasources:
 {% column %}
 In this example, a list containing the `default` product-item component is shown. Each product contains a `title`, `tags`, `image`, `amountControl`, and `price`. The added advantage is that you can search the list making it suitable for a larger number of products. The `discount` property calculates the price after the discount.
 
-**Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/dynamic-data/product-item-example/product-item-example-dynamic.jigx).
-
-**Datasource:** See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/dynamic-data/product-item-example/product-item-example-dynamic.jigx).
+**Examples:** See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/product-item-default/dynamic-data/product-item-example/product-item-example-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -227,13 +246,13 @@ datasources:
 ### Default product-item with summary
 
 {% columns %}
-{% column %}
+{% column width="50%" %}
 In this example, a list containing the `default` product-item component is shown. Each product contains a `title`, `image`, and `price`. The `discount` property calculates the price after the discount. The `summary` component at the bottom shows the total of items selected in the `amountControl`.
 
-**Examples:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/static-data/product-item-summary-static.jigx).
+**Examples:** See the full example in [GitHub](product-item.md#product-item-summary-static.jigx).
 {% endcolumn %}
 
-{% column %}
+{% column width="50%" %}
 <figure><img src="../../../.gitbook/assets/CC-productItemSummary.PNG" alt="Product-item with summary" width="188"><figcaption><p>Product-item with summary</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
@@ -331,6 +350,8 @@ datasources:
 
 {% column %}
 In this example, a list containing the `default` product-item component is shown in a 2-column (`numberOfColumns`) layout. Each product contains a `title`, `tags`, `image`, and `price`.  The `discount` property calculates the price after the discount.
+
+**Examples:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/product-item-default/dynamic-data/product-item-columns.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -399,11 +420,13 @@ datasources:
 ### Card product-item with tags
 
 {% columns %}
-{% column %}
+{% column width="50%" %}
 In this example, a list containing the `card`  product-item component is shown. Each product contains a `title`, `tags`, `image`, and `price`.  The `discount` property calculates the price after the discount.
+
+**Examples:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/product-item-card/card-product-item-tags.jigx).
 {% endcolumn %}
 
-{% column %}
+{% column width="50%" %}
 <figure><img src="../../../.gitbook/assets/card-product-item-tags.gif" alt="Product-item card layout with tags" width="166"><figcaption><p>Product-item card layout with tags</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
@@ -488,6 +511,8 @@ datasources:
 
 {% column %}
 In this example, a list containing the `card`  product-item component is shown in a 2-column (`numberOfColumns`) layout. Each product contains a `title`, `tag`, `image`, and `price`.  The `discount` property calculates the price after the discount.
+
+
 {% endcolumn %}
 {% endcolumns %}
 
@@ -565,6 +590,8 @@ datasources:
 {% columns %}
 {% column %}
 In this example, a list containing the `card`  product-item component is shown in a 2-column (`numberOfColumns`) layout. Each product contains a `title`, `tag`, `image`, and `price`.  The `discount` property calculates the price after the discount. An `amountControl` allows the selection of items and adds them to the cart (`summary`)  at the bottom of the screen.
+
+**Examples:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/product-item-card/card-product-item-columns-summary.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -666,6 +693,8 @@ datasources:
 
 {% column %}
 In this example, a list containing the `card`  product-item component is shown in a 2-column (`numberOfColumns`) layout. The list is referenced in a `jig.tab` and uses `inputs` to display each category in each tab. Each product contains a `title`, `tag`, `image`, and `price`.  The `discount` property calculates the price after the discount. An `amountControl` allows the selection of items and adds them to the cart (`summary`)  at the bottom of the screen.
+
+**Examples:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/product-item-card/card-product-item-columns-tabs.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -826,6 +855,8 @@ summary:
 {% columns %}
 {% column %}
 In this example, a list uses the `menu-item` component to show categories in a store. The category state is set with an `onPress` event. The state is used in the second list's `when` property to display the corresponding category's  `card`  product-item component shown in a 2-column (`numberOfColumns`) layout. The list  uses `inputs` to display each category in each tab. Each product contains a `title`, `tag`, `image`, and `price`.  The `discount` property calculates the price after the discount. An `amountControl` allows the selection of items and adds them to the cart (`summary`)  at the bottom of the screen.
+
+**Examples:** See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/product-item-card/card-product-item-columns-menu-item.jigx).
 {% endcolumn %}
 
 {% column %}

@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Jigx Variables
 
 ## Jigx Variables
@@ -45,7 +66,7 @@ The system variable in an expression is used to get information about devices, f
 
 The supported variables for the system variable are:
 
-<table><thead><tr><th width="146.71875">Variable</th><th width="261.40234375">Expression</th><th>Results</th></tr></thead><tbody><tr><td>appVersion</td><td><code>=@ctx.system.appVersion</code></td><td>This variable returns the current version of the installed app, which is useful for troubleshooting, crash tracing, and debugging issues. E.g. 1.110.7</td></tr><tr><td>deviceType</td><td><code>=@ctx.system.deviceType</code></td><td>The variable returns the current user's device type, such as tablet or handset.</td></tr><tr><td>geocodes</td><td><code>=@ctx.system.geocodes</code></td><td></td></tr><tr><td>isOffline</td><td><code>=@ctx.system.isOffline</code></td><td>Boolean</td></tr><tr><td>isOnline</td><td><code>=@ctx.system.isOnline</code></td><td>Boolean</td></tr><tr><td>isPortrait</td><td><code>=@ctx.system.isPortrait</code></td><td>The variable is set with a boolean and is used to configure the behavior of components in either portrait or landscape mode.</td></tr><tr><td>locale</td><td><code>=@ctx.system.locale</code></td><td></td></tr><tr><td>user</td><td><code>=@ctx.user.email</code> or <code>=@ctx.user.id</code></td><td>or XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</td></tr><tr><td>isLocationSharingEnabled</td><td><code>=@ctx.system.isLocationSharingEnabled</code></td><td>Boolean</td></tr><tr><td>solution</td><td><code>=@ctx.solution.id</code></td><td>XXXXXXXX-XXX-XXXX-XXXX-XXXXXXXXXXXX</td></tr><tr><td>timezone</td><td><code>=@ctx.system.timezone.offset</code></td><td>Get the information about the device's timezone, it can be: -<code>name</code>: e.g. Europe/Prague -<code>offset</code>: e.g. +200</td></tr><tr><td>geolocation</td><td></td><td><p><strong>Accuracy:</strong> <code>=@ctx.system.geolocation.coords.accuracy</code></p><p><strong>Altitude:</strong> <code>=@ctx.system.geolocation.coords.altitude</code></p><p><strong>Altitude Accuracy:</strong> <code>=@ctx.system.geolocation.coords.altitudeAccuracy</code></p><p><strong>Location - Heading:</strong> <code>=@ctx.system.geolocation.coords.heading</code></p><p><strong>Location - Latitude:</strong> <code>=@ctx.system.geolocation.coords.latitude</code></p><p><strong>Location - Longitude:</strong> <code>=@ctx.system.geolocation.coords.longitude</code></p><p><strong>Location - Speed:</strong> <code>=@ctx.system.geolocation.coords.speed</code></p><p><strong>Location - Timestamp:</strong> <code>=@ctx.system.geolocation.timestamp</code></p><p><strong>Location - Entire array (All details):</strong> <code>=$string(@ctx.system.geolocation)</code></p></td></tr></tbody></table>
+<table><thead><tr><th width="146.71875">Variable</th><th width="261.40234375">Expression</th><th>Results</th></tr></thead><tbody><tr><td>appVersion</td><td><code>=@ctx.system.appVersion</code></td><td>This variable returns the current version of the installed app, which is useful for troubleshooting, crash tracing, and debugging issues. E.g. 1.110.7</td></tr><tr><td>deviceType</td><td><code>=@ctx.system.deviceType</code></td><td>The variable returns the current user's device type, such as tablet or handset.</td></tr><tr><td>geocodes</td><td><code>=@ctx.system.geocodes</code></td><td></td></tr><tr><td>isOffline</td><td><code>=@ctx.system.isOffline</code></td><td>Boolean</td></tr><tr><td>isOnline</td><td><code>=@ctx.system.isOnline</code></td><td>Boolean</td></tr><tr><td>isPortrait</td><td><code>=@ctx.system.isPortrait</code></td><td>The variable is set with a boolean and is used to configure the behavior of components in either portrait or landscape mode.</td></tr><tr><td>locale</td><td><code>=@ctx.system.locale</code></td><td></td></tr><tr><td>user</td><td><code>=@ctx.user.email</code> or <code>=@ctx.user.id</code></td><td>or XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</td></tr><tr><td>isLocationSharingEnabled</td><td><code>=@ctx.system.isLocationSharingEnabled</code></td><td>Boolean</td></tr><tr><td>solution</td><td><code>=@ctx.solution.id</code><br><code>=@ctx.solution.name</code><br><code>=@ctx.solution.title</code></td><td>id= XXXXXXXX-XXX-XXXX-XXXX-XXXXXXXXXXXX<br>name = solution's name from <code>index.jigx</code><br>title = solution's title from <code>index.jigx</code></td></tr><tr><td>timezone</td><td><code>=@ctx.system.timezone.offset</code></td><td>Get the information about the device's timezone, it can be: -<code>name</code>: e.g. Europe/Prague -<code>offset</code>: e.g. +200</td></tr><tr><td>geolocation</td><td></td><td><p><strong>Accuracy:</strong> <code>=@ctx.system.geolocation.coords.accuracy</code></p><p><strong>Altitude:</strong> <code>=@ctx.system.geolocation.coords.altitude</code></p><p><strong>Altitude Accuracy:</strong> <code>=@ctx.system.geolocation.coords.altitudeAccuracy</code></p><p><strong>Location - Heading:</strong> <code>=@ctx.system.geolocation.coords.heading</code></p><p><strong>Location - Latitude:</strong> <code>=@ctx.system.geolocation.coords.latitude</code></p><p><strong>Location - Longitude:</strong> <code>=@ctx.system.geolocation.coords.longitude</code></p><p><strong>Location - Speed:</strong> <code>=@ctx.system.geolocation.coords.speed</code></p><p><strong>Location - Timestamp:</strong> <code>=@ctx.system.geolocation.timestamp</code></p><p><strong>Location - Entire array (All details):</strong> <code>=$string(@ctx.system.geolocation)</code></p></td></tr></tbody></table>
 
 ## Examples and code snippets
 

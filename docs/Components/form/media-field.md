@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # media-field
 
 The `media-field` component allows users to upload images, videos, or files, either standalone or within a form. It supports:

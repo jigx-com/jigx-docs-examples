@@ -3,6 +3,24 @@ title: Predicate Queries
 slug: ELoX-pre
 createdAt: Thu Jul 27 2023 13:16:54 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jul 31 2023 09:13:59 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Predicate Queries

@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # sync-entities
 
 This action can be used to sync your local database with your remote database on the server. There are multiple ways to set up a `sync-entities` action within a jig:

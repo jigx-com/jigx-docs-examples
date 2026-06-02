@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # card
 
 The card is a versatile and visually appealing UI element that encapsulates and presents information or interactive content in a structured, consistent, and user-friendly manner. It enhances the app's usability by organizing content into manageable, self-contained units that are easy to navigate and interact with. Each card typically includes a mix of text, images, and interactive elements, creating a self-contained unit of content.
@@ -111,9 +132,6 @@ actions:
 
 {% column %}
 In this example the carousel uses a `card` component with a color property, within the card, there is an `image` component used to display the images, an `entity-field` component to describe the product. The card component creates a visually appealing container for the images. The `pagination` is configured `outside` of the carousel.
-
-**Example:**\
-See the example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/carousel/carousel-card.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

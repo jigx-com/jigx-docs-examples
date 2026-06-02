@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # jig.list
 
 {% columns %}
@@ -34,7 +55,7 @@ The `jig.list` can be configured in the following ways within the Jigx Builder:
 
 {% include "../../.gitbook/includes/common-jig-type-properties.md" %}
 
-<table data-header-hidden><thead><tr><th width="168.94921875">Other options</th><th></th></tr></thead><tbody><tr><td><code>badge</code></td><td><p>Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:</p><ul><li>To display as a red dot using the <code>empty</code> value.</li><li>A red dot with a number using an expression to perform a count. For example, counting the number of tasks in the list.</li></ul></td></tr><tr><td><code>filter</code></td><td><code>initialValue</code> - Predefine the default selected tab for a filter on the list, so that when opening the default filter tab, it is displayed. <br><code>data</code> - define the filter tabs using: <code>title</code> - Give the filter a name. The text that will be displayed in the tab, for example, in stock. <br><code>value</code> - The value that the list filter returns. Use the following expressions to return this value:<br><code>=@ctx.components.my-list.state.filter</code> (for a list in a default jig) <code>=@ctx.jig.state.filter</code>(for a list jig) <br>For <code>true/false</code> values that are saved as a <strong>boolean</strong> ensure the filter has a <strong>boolean</strong> value. <br>For <code>true/false</code> values that are saved as <strong>strings</strong> ensure the filter has a <strong>string</strong> value. When using the <code>value</code> property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). <br>Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data, such as date ranges elsewhere, based on the selected value. See the <a data-mention href="jig_list.md#when-using-a-filter">#when-using-a-filter</a> best practice.</td></tr><tr><td><code>hasActiveItem</code></td><td>When set to <code>true</code> the list has an active item state.</td></tr><tr><td><code>initialItemCount</code></td><td>Number of items to render on the first frame before the list becomes scrollable. Lower values speed up initial display but may show blank space while scrolling. Higher values render more content upfront at the cost of slower initial load.</td></tr><tr><td><code>isHorizontal</code></td><td>Set to <code>true</code> displays the list horizontally, while <code>false</code> displays the list vertically. The default list is displayed vertically.</td></tr><tr><td><code>isContained</code></td><td>Used to style the list item, <code>true</code> wraps the list item in a card, while <code>false</code> displays the item with no styling. This property can be used with vertical and horizontal lists and <code>component.list-item</code>.</td></tr><tr><td><code>isSearchable</code></td><td>Set to <code>true</code> adds a search field to the list. The default list is displayed without a search field.</td></tr><tr><td><code>isSelectable</code></td><td>When set to <code>true</code> the ability to select individual and multiple items in the list is available. Click the <em>Select</em> link in the top right of the screen. The default list is displayed without selection options.</td></tr><tr><td><code>leftElement</code></td><td><p>Set an element to the left of the list. The following elements are available:</p><ul><li><code>avatar</code> - configure the <code>color</code>, <code>size</code>, <code>text</code>, <code>uri</code>, and <code>onPress</code> event.</li><li><code>checkbox</code></li><li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li><li><code>image</code> - the image <code>size</code>, <code>shape</code>, <code>resizeMode</code>, and <code>onPress</code> event is configurable.</li><li><code>progress</code></li></ul></td></tr><tr><td><code>numberOfColumns</code></td><td><p>Sets the number of columns used to display items in a multi-column layout. This property applies only to vertical lists and is ignored when <code>isHorizontal</code> is <code>true</code>.</p><p>The <code>numberOfColumns</code> property is only supported when item.type is <a href="../Components/list/product-item.md">component.product-item</a> or <a href="../../readme/components/list/menu-item.md">component.menu-item</a>; it is not allowed for any other item types.</p></td></tr><tr><td><code>rating</code></td><td>Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the <code>ratingIcon</code>, <code>color</code>, and accompanying descriptive <code>text</code>. By default, the rating property has only one icon showing a rating-star in the primary color. <code>value</code>- Rating with numerical value. The value of the rating, which can be a simple number. The number of icons is calculated based on this value unless overridden in the icon configuration. Configuring the <code>current</code> and <code>maximum</code> values, shows the value as a fraction, for example 7/10. <code>percentage</code> - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%. <code>ratingIcon</code> - By default the <em>rating-star</em> icon in the <em>primary</em> color is displayed. <code>icon</code> - Add an icon to represent the rating. A list of icons is available. See for more information. <code>color</code>- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in . <code>current</code> and <code>maximum</code> values - Where maximum is the number of icons to display and current the number of icons to color. <code>text</code> - add descriptive text that displays next to rating. Ratings can set up in the following ways: 1) Example of <code>value</code> for a product rating. 2) Example of a user rating shown in a <code>percentage</code> 3) Example of <code>value</code> rating showing 2.5/5 as a rating with single star icon.</td></tr><tr><td><code>rightElement</code></td><td><p>Set an element to the right of the list. The following elements are available:</p><ul><li><code>amountControl</code></li><li><code>badge</code> - can be a solid colored badge or a badge with a number in it. Badges always use the primary color.</li><li><code>button</code></li><li><code>checkbox</code></li><li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li><li><code>switch</code></li><li><code>value</code> - When using <code>text</code>, the option to change its <code>color</code> is available.</li><li><code>text</code> - define up to three lines of text with styling (color, bold, font size) applied to each line of text.</li></ul></td></tr><tr><td><code>scrollRenderBuffer</code></td><td>How many viewports of content to keep rendered off-screen while scrolling (multiplier). Lower values use less memory but may show blank areas during fast scrolling. Higher values keep more content ready at the cost of memory.</td></tr><tr><td><code>sections</code></td><td>Used for styling a list, when set to <code>true</code> each item in the list displays in its own section, divided by a line. The default is <code>false</code>.</td></tr><tr><td><code>tags</code></td><td><p>A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.</p><ul><li><code>text</code> - The text content displayed within the tag.</li><li><code>color</code> - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in . Tags can be set up in three ways: 1) Using a dynamic expression from a datasource: <code>tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}</code> 2) Using a dynamic expression from a list item: <code>tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}</code> 3) Using static, predefined tags <code>tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'</code></li></ul></td></tr><tr><td><code>title</code></td><td>Add a <code>title</code> for the list-item. You can use an expression and datasource to set the title. Select <em>Line Options</em> (<code>text</code>), allowing configuration of individual parts of the central element in a list-item. You can set properties such as <code>color</code>, <code>fontSize</code>, <code>bold</code>, <code>format</code>, <code>isSubtle</code> (low opacity), and <code>numberOfLines</code>, rather than applying them globally via the root.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="168.94921875">Other options</th><th></th></tr></thead><tbody><tr><td><code>badge</code></td><td><p>Add a badge to the list that displays on the widget to highlight critical information and capture the user's attention, ensuring key updates or notifications are easily noticeable within the app. The badge can be configured at the root level of the jig file:</p><ul><li>To display as a red dot using the <code>empty</code> value.</li><li>A red dot with a number using an expression to perform a count. For example, counting the number of tasks in the list.</li></ul></td></tr><tr><td><code>filter</code></td><td><code>initialValue</code> - Predefine the default selected tab for a filter on the list, so that when opening the default filter tab, it is displayed. <br><code>data</code> - define the filter tabs using: <code>title</code> - Give the filter a name. The text that will be displayed in the tab, for example, in stock. <br><code>value</code> - The value that the list filter returns. Use the following expressions to return this value:<br><code>=@ctx.components.my-list.state.filter</code> (for a list in a default jig) <code>=@ctx.jig.state.filter</code>(for a list jig) <br>For <code>true/false</code> values that are saved as a <strong>boolean</strong> ensure the filter has a <strong>boolean</strong> value. <br>For <code>true/false</code> values that are saved as <strong>strings</strong> ensure the filter has a <strong>string</strong> value. When using the <code>value</code> property for filtering, it's recommended to use simple values such as strings or numbers (e.g., 'today', '7d', '14d'). <br>Avoid using objects, as the filter logic is designed for strict equality checks. Instead, derive complex data, such as date ranges elsewhere, based on the selected value. See the <a data-mention href="jig_list.md#when-using-a-filter">#when-using-a-filter</a> best practice.</td></tr><tr><td><code>hasActiveItem</code></td><td>When set to <code>true</code> the list has an active item state.</td></tr><tr><td><code>initialItemCount</code></td><td>Number of items to render on the first frame before the list becomes scrollable. Lower values speed up initial display but may show blank space while scrolling. Higher values render more content upfront at the cost of slower initial load.</td></tr><tr><td><code>isHorizontal</code></td><td>Set to <code>true</code> displays the list horizontally, while <code>false</code> displays the list vertically. The default list is displayed vertically.</td></tr><tr><td><code>isContained</code></td><td>Used to style the list item, <code>true</code> wraps the list item in a card, while <code>false</code> displays the item with no styling. This property can be used with vertical and horizontal lists and <code>component.list-item</code>.</td></tr><tr><td><code>isSearchable</code></td><td>Set to <code>true</code> adds a search field to the list. The default list is displayed without a search field.</td></tr><tr><td><code>isSelectable</code></td><td>When set to <code>true</code> the ability to select individual and multiple items in the list is available. Click the <em>Select</em> link in the top right of the screen. The default list is displayed without selection options.</td></tr><tr><td><code>leftElement</code></td><td><p>Set an element to the left of the list. The following elements are available:</p><ul><li><code>avatar</code> - configure the <code>color</code>, <code>size</code>, <code>text</code>, <code>uri</code>, and <code>onPress</code> event.</li><li><code>checkbox</code></li><li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li><li><code>image</code> - the image <code>size</code>, <code>shape</code>, <code>resizeMode</code>, and <code>onPress</code> event is configurable.</li><li><code>progress</code></li></ul></td></tr><tr><td><code>listHeader</code></td><td>Configure additional components displayed at the top of a <code>jig.list</code>. The <code>listHeader</code> property supports a single <code>children</code> component, allowing you to add configurable UI elements such as banners, summaries, ratings, sliders, or informational content above list items. Unlike using <code>jig.default</code> with <code>component.list</code>, <code>listHeader</code> preserves the optimized performance and rendering benefits of <code>jig.list</code> while enabling greater layout flexibility.<br>Content renders above the list items and scrolls as part of the list experience. Existing <code>jig-header</code> remains reserved for configuring the hero header; <code>listHeader</code> is specifically for custom components within the list area.</td></tr><tr><td><code>numberOfColumns</code></td><td><p>Sets the number of columns used to display items in a multi-column layout. This property applies only to vertical lists and is ignored when <code>isHorizontal</code> is <code>true</code>.</p><p>The <code>numberOfColumns</code> property is only supported when item.type is <a href="../Components/list/product-item.md">component.product-item</a> or <a href="../../readme/components/list/menu-item.md">component.menu-item</a>; it is not allowed for any other item types.</p></td></tr><tr><td><code>rating</code></td><td>Displays a rating as either a numerical value or a percentage. This property is highly flexible, with options to configure the <code>ratingIcon</code>, <code>color</code>, and accompanying descriptive <code>text</code>. By default, the rating property has only one icon showing a rating-star in the primary color. <code>value</code>- Rating with numerical value. The value of the rating, which can be a simple number. The number of icons is calculated based on this value unless overridden in the icon configuration. Configuring the <code>current</code> and <code>maximum</code> values, shows the value as a fraction, for example 7/10. <code>percentage</code> - Rating with a percentage. The percentage value for the rating, where the value ranges between 0 and 1, for example 0.75 is 75%. <code>ratingIcon</code> - By default the <em>rating-star</em> icon in the <em>primary</em> color is displayed. <code>icon</code> - Add an icon to represent the rating. A list of icons is available. See for more information. <code>color</code>- Sets the color of the icon, choose a color from the provided color palette. Default color is primary if the property is not specified in the YAML. See the list of available colors in . <code>current</code> and <code>maximum</code> values - Where maximum is the number of icons to display and current the number of icons to color. <code>text</code> - add descriptive text that displays next to rating. Ratings can set up in the following ways: 1) Example of <code>value</code> for a product rating. 2) Example of a user rating shown in a <code>percentage</code> 3) Example of <code>value</code> rating showing 2.5/5 as a rating with single star icon.</td></tr><tr><td><code>rightElement</code></td><td><p>Set an element to the right of the list. The following elements are available:</p><ul><li><code>amountControl</code></li><li><code>badge</code> - can be a solid colored badge or a badge with a number in it. Badges always use the primary color.</li><li><code>button</code></li><li><code>checkbox</code></li><li><code>icon</code> - the icon <code>size</code>, <code>color</code>,<code>shape</code>, <code>type</code>, <code>isSubtle</code> (low opacity), and <code>onPress</code> event is configurable.</li><li><code>switch</code></li><li><code>value</code> - When using <code>text</code>, the option to change its <code>color</code> is available.</li><li><code>text</code> - define up to three lines of text with styling (color, bold, font size) applied to each line of text.</li></ul></td></tr><tr><td><code>scrollRenderBuffer</code></td><td>How many viewports of content to keep rendered off-screen while scrolling (multiplier). Lower values use less memory but may show blank areas during fast scrolling. Higher values keep more content ready at the cost of memory.</td></tr><tr><td><code>sections</code></td><td>Used for styling a list, when set to <code>true</code> each item in the list displays in its own section, divided by a line. The default is <code>false</code>.</td></tr><tr><td><code>tags</code></td><td><p>A set of descriptive keywords appear at the bottom of each list item, helping to categorize and provide context. Unlike labels, multiple tags can be shown. Tags support up to two lines; if the tags exceed this space, a +1 indicator is added to represent the number of hidden tags. For example, if two tags are hidden, +2 will display at the end of the list.</p><ul><li><code>text</code> - The text content displayed within the tag.</li><li><code>color</code> - Sets the color of the tags, choose a color from the provided color palette. The default is primary. See the list of available colors in . Tags can be set up in three ways: 1) Using a dynamic expression from a datasource: <code>tags: =@ctx.datasources.product-tags[product = @ctx.current.item.id].{"text":tags, "color":color}</code> 2) Using a dynamic expression from a list item: <code>tags: =@ctx.current.item.tags.{"text":$, "color":"primary"}</code> 3) Using static, predefined tags <code>tags: - text: =@ctx.current.item.rating > 0.75 ? 'Great'</code></li></ul></td></tr><tr><td><code>title</code></td><td>Add a <code>title</code> for the list-item. You can use an expression and datasource to set the title. Select <em>Line Options</em> (<code>text</code>), allowing configuration of individual parts of the central element in a list-item. You can set properties such as <code>color</code>, <code>fontSize</code>, <code>bold</code>, <code>format</code>, <code>isSubtle</code> (low opacity), and <code>numberOfLines</code>, rather than applying them globally via the root.</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="product-rating-value" %}
@@ -2736,6 +2757,253 @@ options:
       '$.quantity',
       '$.rating'
     FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
+```
+{% endtab %}
+{% endtabs %}
+
+### List with listHeader
+
+{% columns %}
+{% column %}
+This example shows how to configure a `listHeader` in a `jig.list` to display a summary of the list data using multiple components. This example does not have a `jig-header`. You can configure any Jigx component inside the `listHeader`, which will always display above the list and below the `jig-header` when one is present. `listHeader` preserves the optimized performance and rendering benefits of `jig.list` while enabling greater layout flexibility.
+
+In this example the `listHeader` uses a `component.card` containing a `component.section` to visually separate the summary area from the list rows below.&#x20;
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/listheader-basic.png" alt="List with listHeader" width="188"><figcaption><p>List with listHeader</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="list-with-listheader.jigx" %}
+```yaml
+title: Sales Orders
+type: jig.list
+# Show a sales summary at the top of the list by using additional components in the listHeader.
+listHeader:
+  children:
+    - type: component.card
+      options:
+        color: color14
+        children:
+          - type: component.section
+            options:
+              title:
+                text: Sales Overview
+                fontSize: medium
+                color: color1
+                isBold: true
+                isSubtle: false
+              children:
+                - type: component.entity
+                  options:
+                    children:
+                      # Row 1 Primary KPIs the two numbers a sales manager checks first
+                      - type: component.field-row
+                        options:
+                          children:
+                            - type: component.entity-field
+                              options:
+                                label: Total Orders
+                                # Bold so it reads as the headline figure
+                                value: =$count(@ctx.datasources.orders)
+
+                            - type: component.entity-field
+                              options:
+                                label: Total Value
+                                # Sum all order amounts and format as currency
+                                value: ='$ ' & $sum(@ctx.datasources.orders.totalAmount)
+
+                      # Row 2 Status breakdown color-coded for instant triage
+                      - type: component.field-row
+                        options:
+                          children:
+                            - type: component.entity-field
+                              options:
+                                label: Open
+                                value: =$count(@ctx.datasources.orders[status = 'Open'])
+                                # Green tint signals healthy/active pipeline
+                                style:
+                                  isWarning: true
+                            - type: component.entity-field
+                              options:
+                                label: Overdue
+                                value: =$count(@ctx.datasources.orders[status = 'Overdue'])
+                                # Red tint makes overdue count impossible to ignore
+                                style:
+                                  isNegative: true
+                            - type: component.entity-field
+                              options:
+                                label: Closed
+                                value: =$count(@ctx.datasources.orders[status = 'Closed'])
+                                # Subtle positive — done is good, but not the focus
+                                style:
+                                  isPositive: true
+
+data: =@ctx.datasources.orders
+item:
+  type: component.list-item
+  options:
+    title: =@ctx.current.item.customer
+    # Combine order number + due date so the user never has to tap in to know urgency
+    subtitle: ='#' & @ctx.current.item.orderNumber & '   ·   Due ' & @ctx.current.item.dueDate
+
+    rightElement:
+      element: value
+      # Currency prefix makes the amount scannable without opening the order
+      text: ='$ ' & $string(@ctx.current.item.totalAmount)
+
+    # Avatar color reflects overdue status visual encoding before the user reads a word
+    leftElement:
+      element: avatar
+      text: =@ctx.current.item.customer
+      color: =@ctx.current.item.status = 'Overdue' ? 'color4' :'color1'
+```
+{% endtab %}
+
+{% tab title="datasource" %}
+```yaml
+datasources:
+  orders:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+      entities:
+        - default/orders
+      query: |
+        SELECT 
+          id,
+          '$.customer', 
+          '$.orderNumber',
+          '$.totalAmount', 
+          '$.status',  
+          '$.dueDate' 
+        FROM [default/orders]
+```
+{% endtab %}
+{% endtabs %}
+
+### List with jig-header and listHeader
+
+{% columns %}
+{% column %}
+<figure><img src="../../.gitbook/assets/list-jigheader-listheader.png" alt="List with jigHeader and listHeader" width="188"><figcaption><p>List with jigHeader and listHeader</p></figcaption></figure>
+{% endcolumn %}
+
+{% column %}
+This list displays a global online store product catalog. A small hero banner image sits at the top via `jig-header`, followed by a promotional sale banner in `listHeader` highlighting a 20% discount on headphones. Each list item shows a product thumbnail, name, and price.
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="list-jigheader-listheader.jigx" %}
+```yaml
+title: Global online store
+type: jig.list
+
+# Hero header displaying a store image at the top of the screen.
+# Kept at 'small' height to leave more visible space for the product list.
+header:
+  type: component.jig-header
+  options:
+    height: small
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://images.unsplash.com/photo-1763872038252-e6c4e0a11067?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+
+# Custom content rendered in a listHeader below the hero header and above the list items.
+# Used here to display a promotional banner without leaving jig.list for jig.default.
+listHeader:
+  children:
+    - type: component.banner
+      options:
+        title:
+          text: Sale
+          fontSize: medium
+          # Renders the title in the theme's negative/alert color (e.g. red).
+          color: negative     
+          isSubtle: false
+          isBold: true
+          numberOfLines: 1
+          transform: uppercase
+        subtitle: Save 20% on all headphones. Offer ends Sunday.
+        style:
+          # Applies the negative/alert background style to the full banner.
+          isNegative: true    
+        leftElement:
+          element: icon
+          icon: headphones-1
+          color: negative
+          type: contained
+          # Displays a rounded contained icon to reinforce the promotion context.
+          shape: rounded      
+
+# Binds the list to the products datasource.
+data: =@ctx.datasources.products-items
+item:
+  type: component.list-item
+  options:
+    # Wraps each item in a card-style container for a clean product list look.
+    isContained: true         
+    leftElement:
+      element: image
+      text: ""
+      size: small
+      # Product thumbnail pulled from the datasource.
+      uri: =@ctx.current.item.image    
+    rightElement:
+      element: value
+      # Product price aligned to the right of the list item.
+      text: =@ctx.current.item.price   
+    title:
+      # Product name; allows up to 2 lines to accommodate longer titles.
+      text: =@ctx.current.item.name  
+      fontSize: regular
+      isSubtle: false
+      isBold: false
+      numberOfLines: 2
+      transform: none
+
+```
+{% endtab %}
+
+{% tab title="datasource" %}
+```yaml
+type: datasource.static
+options:
+  data:
+    - id: 1
+      name: Brass WH-1000XM4 Wireless Noise-Canceling Headphones
+      image: https://images.unsplash.com/photo-1484704849700-f032a568e944?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+      price: $275
+    - id: 2
+      name: iphone 14
+      image: https://images.unsplash.com/photo-1609692814988-576d087865ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80
+      price: $900
+    - id: 3
+      name: M1 Bluetooth Wireless Mouse
+      image: https://images.unsplash.com/photo-1611850698562-ae3d28934080?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80
+      price: $250
+    - id: 4
+      name: Headphones WH-1000XM4
+      image: https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80
+      price: $176
+    - id: 5
+      name: Macbook Pro
+      image: https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80
+      price: $1750
+    - id: 6
+      name: Apple AirPods Max Wireless Headphones
+      image: https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D
+      price: $780
+    - id: 7
+      name: Pure Bass Bluetooth Wireless Headphones
+      image: https://images.unsplash.com/photo-1545127398-14699f92334b?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+      price: $170
+
 ```
 {% endtab %}
 {% endtabs %}

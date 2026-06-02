@@ -1,6 +1,6 @@
 # execute-action
 
-Using the `execute-action` action provides greater control and enables reuse when the same logic needs to be performed in multiple places. For example, `action.sync-entities` might be called during app initialization, again when data changes, or when only a specific subset of data needs to be synced. By using `execute-action`, you can easily reuse the granular actions that handle the actual work, reducing duplication and improving maintainability.  For more information, see [Global Actions](https://docs.jigx.com/building-apps-with-jigx/ui/actions#global-actions).
+Using `execute-action` gives you a reusable way to run global actions from jigs, events, and other actions. Use it when the same logic must run in multiple places, or when you need to call an action from another installed solution. For more information, see [Global Actions](https://docs.jigx.com/building-apps-with-jigx/ui/actions#global-actions).
 
 ***
 
@@ -28,11 +28,17 @@ Use IntelliSense to list the available actions and select the **Execute Action**
 {% endstep %}
 
 {% step %}
-Configure the action property by selecting the global action file from the list of available global action files. The `when:` property can be used to determine when the global action must execute in a jig.
+Configure the `action` property by selecting the global action file from the list of available global action files. The `when:` property can be used to determine when the global action must execute in a jig. Add `package` to call a global action from another installed solution. Both `action` and `package` accept fixed values or expressions.
 {% endstep %}
 {% endstepper %}
 
 {% include "../../.gitbook/includes/common-action-properties.md" %}
+
+## Cross-solution action access
+
+Use the `package` property to run a global action from another installed solution. This follows the same cross-solution pattern used for datasources. See [Cross solution datasource access](../datasource/cross-solution-datasource-access.md).
+
+Both `action` and `package` accept expressions. This lets you resolve the target solution and global action at runtime.
 
 ## Examples and code snippets
 
@@ -55,6 +61,22 @@ onLoad:
   type: action.execute-action
   options:
     action: load-data
+```
+{% endtab %}
+
+{% tab title="cross-solution-action.jigx" %}
+```yaml
+actions:
+  - children:
+      - type: action.execute-action
+        options:
+          title: Assign employee
+          # Provide the name of the other solution where the action is located. 
+          package: human-resources
+          action: assign
+          parameters:
+            employee_id: =@ctx.components.employee-select.state.selected.id
+            project_name: =@ctx.components.project-select.state.selected.project_name
 ```
 {% endtab %}
 

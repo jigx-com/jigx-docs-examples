@@ -7,6 +7,24 @@ description: >-
   Learn how to navigate and access specific elements or properties within a data
   set using JSONata path operators. Discover the powerful capabilities of
   operators like Map, Filter, Order-by, Reduce, Wil
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Path Operators

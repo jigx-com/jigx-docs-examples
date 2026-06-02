@@ -3,6 +3,24 @@ title: Send notification to the organization (ORG)
 slug: Sily-send-notification-to-the-organization-org
 createdAt: Fri Apr 04 2025 11:32:21 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Apr 04 2025 11:35:21 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Send notification to the organization (ORG)

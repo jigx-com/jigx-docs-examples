@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # OpenAI integration
 
 Integrating OpenAI into your Jigx App offers tremendous potential to enhance functionality, improve user experiences, and drive innovation. By leveraging the power of advanced AI models, you can create smarter, more responsive, and engaging apps that meet users' evolving needs. Whether building a new app or enhancing an existing one, OpenAI provides the tools and capabilities to transform your vision into reality.

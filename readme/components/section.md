@@ -6,6 +6,24 @@ updatedAt: Wed Jul 24 2024 09:33:04 GMT+0000 (Coordinated Universal Time)
 description: >-
   Learn how to use the section component in your user interface to group related
   items together.
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # section

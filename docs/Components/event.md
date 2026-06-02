@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # event
 
 The component can only be used in the [jig.calendar](<../Jig Types/jig_calendar.md>) to display events related to data records. All events have a start and end date. Additional elements can be added, such as people attending the event or where the event will take place.
@@ -20,15 +41,13 @@ Certain actions can be executed on the event; for example, when pressing on the 
 
 {% columns %}
 {% column %}
-<figure><img src="../../.gitbook/assets/cc-entity-section.png" alt="Meeting event" width="188"><figcaption><p>Meeting event</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CalendarEventDetail.png" alt="Meeting event" width="188"><figcaption><p>Meeting event</p></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
 The jig displays the event on the calendar. We immediately see what time the meeting will take place, where it will take place and which people will attend.
 
 **Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/static-data/event-of-meeting/event-of-meeting.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/event-of-meeting/event-of-meeting-dynamic.jigx).
-
-**Datasources**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-training.jigx) See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-training-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -143,8 +162,6 @@ options:
 The jig displays a multi-day event on the calendar.
 
 **Examples**: See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/static-data/multi-day-event/multi-day-event.jigx). See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/event/dynamic-data/multi-day-event/multi-day-event-dynamic.jigx).
-
-**Datasources**: See the full datasource for static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-vacation.jigx). See the full datasource for dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/datasources/events-and-calendars/event-vacation-dynamic.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

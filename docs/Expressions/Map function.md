@@ -3,6 +3,24 @@ title: Map function
 slug: '-6Vy-ma'
 createdAt: Thu Jun 13 2024 08:00:48 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Jul 10 2024 08:58:09 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Map function

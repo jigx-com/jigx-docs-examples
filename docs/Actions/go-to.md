@@ -1,6 +1,27 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # go-to
 
-This action redirects you to another jig. The `go-to` action can be used with elements like `swipeable` and `rightElement` or combined with another action. When paired with another action, it is triggered after the main action to navigate to a specified screen, for example, saving a date in a form and then opening a list of customers. `go-to` helps configure navigation, ensuring a seamless app flow. See [Navigation](https://docs.jigx.com/building-apps-with-jigx/logic/navigation) for more information.
+This action redirects you to another jig in the current or different solution. The `go-to` action can be used with elements like `swipeable` and `rightElement` or combined with another action. When paired with another action, it is triggered after the main action to navigate to a specified screen, for example, saving a date in a form and then opening a list of customers. `go-to` helps configure navigation, ensuring a seamless app flow. See [Navigation](https://docs.jigx.com/building-apps-with-jigx/logic/navigation) for more information.
 
 ## Configuration option
 
@@ -13,6 +34,7 @@ A go-to action can be set up in various ways:
 5. Use the `go-to` to open a jig as a modal using the `isModal` property set to `true`. Set to `false` opens navigates to the specified jig.
 6. Use the `behaviour` property to determine if you want to push the jig into the history of navigation, by using the `new` value, or reuse the one you already have in history by using the `existing` value.
 7. When you navigate to a jig using the `action.go-to`  or open it as a bottom modal (by setting `isModal: true`), you can access the outputs from that jig by referencing its `instanceId` in your context expressions. In the originating jig, use the syntax `=@ctx.jigs.[isntance-id-of-the-jig].outputs.[key-of-output]` to retrieve specific output values. See the [#accessing-jig-outputs-from-a-modal](go-to.md#accessing-jig-outputs-from-a-modal "mention") example.
+8. Use the `package` property on the `go-to` action to navigate to a jig that exists in a different solution. Set the `package` value to the solution's package name, the same identifier used when referencing cross-solution entities in datasources, and pair it with the `linkTo` property specifying the target jig's name within that solution. Both `package` and `linkTo` accept expressions, allowing the target solution and jig to be determined dynamically at runtime, for example, routing to different solutions based on a user's role or the record being acted on.
 
 ## Considerations
 
@@ -665,6 +687,63 @@ children:
 outputs:
   phone: =@ctx.components.myNumber.state.value
   DOB: =@ctx.components.myBirth.state.value
+```
+{% endtab %}
+{% endtabs %}
+
+### Accessing a jig in another solution
+
+{% columns %}
+{% column %}
+<figure><img src="../../.gitbook/assets/cross-package-go-to.gif" alt="Go-to another solutions jig" width="264"><figcaption><p>Go-to another solutions jig</p></figcaption></figure>
+{% endcolumn %}
+
+{% column %}
+In this example, the project assignments list in `projects-solution` uses the `go-to` action to navigate to an employee list in a completely separate solution. The `package` property is set to `hr-solution` , the package name of the target solution, and the `linkTo` property is set to `employee-list`, the name of the jig to open within that solution. An `employeeId` parameter is passed along so the target jig knows which employee record to display in the list. When the user taps a project in `projects-solution`, the `employee-list` jig from `hr-solution` opens seamlessly within the same app experience, with no need to duplicate the employee screens or data across solutions.
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="projects-assignments.jigx (projects-solution)" %}
+```yaml
+onPress:
+      type: action.go-to
+      options:
+        # Navigate to the employee list jig in hr-solution (package)
+        package: hr-solution
+        linkTo: employee-list
+```
+{% endtab %}
+
+{% tab title="employee-list.jigx (hr-solution)" %}
+```yaml
+# This jig is in the hr-solution and will open in projects-solution
+# when the go-to action is executed.
+title: Employees
+type: jig.list
+icon: contact
+
+header:
+  type: component.jig-header
+  options:
+    height: small
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+
+data: =@ctx.datasources.employees
+item:
+  type: component.list-item
+  options:
+    title: =@ctx.current.item.full_name
+    subtitle: =@ctx.current.item.job_title
+    isContained: true
+    leftElement:
+      element: avatar
+      text: =@ctx.current.item.full_name
+      uri: =@ctx.current.item.full_name
 ```
 {% endtab %}
 {% endtabs %}

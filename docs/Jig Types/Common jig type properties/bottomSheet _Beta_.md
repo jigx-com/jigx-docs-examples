@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # bottomSheet
 
 The bottomSheet element slides up from the bottom of the screen to present additional content, actions, or contextual information. It enhances user interaction by providing a seamless display of information without navigating away from the current screen. Perfect for menus, filters, forms, or quick actions, the bottomSheet can be customized to suit various use cases while maintaining a smooth and intuitive user experience.

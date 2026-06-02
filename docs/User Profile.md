@@ -3,6 +3,24 @@ description: >-
   Learn how the Jigx user profile screen works, how to update profile details
   with action.update-profile, and how to customize the Profile screen using
   index.jigx and components.
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # User Profile

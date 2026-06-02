@@ -3,6 +3,24 @@ title: List records in objects
 slug: Cg0q-list
 createdAt: Wed Jul 19 2023 12:39:56 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Mar 05 2025 15:03:54 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # List records in objects

@@ -3,6 +3,24 @@ title: Target a specific jig with inputs
 slug: f4Ei-target-a-specific-jig-with-inputs
 createdAt: Fri Apr 04 2025 11:35:22 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu May 01 2025 08:11:49 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Target a specific jig with inputs

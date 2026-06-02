@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Jigx Examples
 
 Welcome to the reference documentation for Jigx. This guide provides detailed information on the properties, actions, and states with practical code examples to help you effectively utilize our schema. This reference content is designed to be a comprehensive resource for all your needs, covering:
@@ -16,4 +37,4 @@ We have included practical code examples to help you implement and integrate the
 
 The code examples are downloadable to guide your development process. The **jigx-samples** solution includes most examples featured in this documentation, offering a hands-on experience to understand how each feature and functionality works.
 
-We provide three convenient options for accessing these resources, ensuring you have the flexibility to choose the method that best suits your needs. See [Setting up your solution](<docs/Overview/Setting up your solution.md>) for more information.
+We provide three convenient options for accessing these resources, ensuring you have the flexibility to choose the method that best suits your needs. See [access-sample-solutions.md](readme/access-sample-solutions.md "mention") & [Setting up your solution](<docs/Overview/Setting up your solution.md>) for more information.

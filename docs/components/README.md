@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Components
 
 Refer to the [Components (controls)](https://docs.jigx.com/building-apps-with-jigx/ui/components-_controls_) topic to understand concepts, how to configure components in the different jig types, add data, and actions to components. The topics in this section provide code examples for each component.

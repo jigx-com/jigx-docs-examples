@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # field-row
 
 The field-row component contains other input components and displays them on the same row. This component does not indicate a new row; all components are automatically placed in a new row. Instead, this component ensures that items are placed next to instead of underneath each other.

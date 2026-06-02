@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # entity
 
 The entity component is a container for the following components:
@@ -35,9 +56,8 @@ The entity component is a container for the following components:
 
 ### Entity example
 
-**Compact**
-
-**Examples**: **Basic** - See the full example using static data in [GitHub](entity.md). **Compact** - See the full example using dynamic data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-entity-field-dd-compact.jigx).
+**Examples**: \
+**Basic** - See the full example using static data in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/section/dynamic-data/section-row-entity-field-dd.jigx).&#x20;
 
 {% tabs %}
 {% tab title="Basic-entity-section-row-entity-field" %}

@@ -3,6 +3,24 @@ title: Graph User Profile
 slug: dyos-graph-user-profile
 createdAt: Fri Nov 25 2022 19:05:17 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri May 03 2024 09:31:22 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Graph User Profile

@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Preview (iOS feature)
 
 {% hint style="danger" %}
@@ -33,7 +54,7 @@ Long-pressing a control (for example, a web-view or entity-field) opens a lightw
 
 ## Configuration options
 
-<table><thead><tr><th width="130.8828125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>actions</code></td><td><p>These can be added to the preview:</p><ul><li><a href="../Actions/action-list.md">action-list</a> </li><li><a href="../Actions/execute-entities.md">execute-entities</a> </li><li><a href="https://docs.jigx.com/examples/execute-entity">execute-entity</a> </li><li><a href="../Actions/go-to.md">go-to</a> </li><li><a href="../Actions/open-url.md">open-url</a> </li><li><a href="../../readme/actions/state-actions/reset-state.md">reset-state</a></li><li> <a href="../../readme/actions/state-actions/set-state.md">set-state</a></li><li> <a href="../../readme/actions/sync-actions/sync-entities.md">sync-entities</a> </li><li><a href="../Actions/confirm.md">confirm</a></li></ul></td></tr><tr><td><code>children</code></td><td>Two components available to use in a preview mode:</td></tr><tr><td><code>header</code></td><td>The is can be part of the displayed preview.</td></tr><tr><td><code>isCompact</code></td><td>When set to <code>true</code> the size of the preview will be adjusted to its content.</td></tr></tbody></table>
+<table><thead><tr><th width="130.8828125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>actions</code></td><td><p>These can be added to the preview:</p><ul><li><a href="../Actions/action-list.md">action-list</a> </li><li><a href="../Actions/execute-entities.md">execute-entities</a> </li><li><a href="https://docs.jigx.com/examples/readme/actions/execute-entity">execute-entity</a> </li><li><a href="../Actions/go-to.md">go-to</a> </li><li><a href="../Actions/open-url.md">open-url</a> </li><li><a href="../../readme/actions/state-actions/reset-state.md">reset-state</a></li><li> <a href="../../readme/actions/state-actions/set-state.md">set-state</a></li><li> <a href="../../readme/actions/sync-actions/sync-entities.md">sync-entities</a> </li><li><a href="../Actions/confirm.md">confirm</a></li></ul></td></tr><tr><td><code>children</code></td><td>Two components available to use in a preview mode:</td></tr><tr><td><code>header</code></td><td>The is can be part of the displayed preview.</td></tr><tr><td><code>isCompact</code></td><td>When set to <code>true</code> the size of the preview will be adjusted to its content.</td></tr></tbody></table>
 
 {% hint style="warning" %}
 1. Currently issues could be experienced when displaying the header's `title` and `subtitle` in the preview.
