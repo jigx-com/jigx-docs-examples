@@ -3,6 +3,24 @@ title: Setting up your solution
 slug: 1gfe-setting-up-your-solution
 createdAt: Mon Jun 13 2022 19:39:00 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Jan 18 2024 14:09:17 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Setting up your solution
@@ -37,7 +55,7 @@ If at any time you don't want the sample solution visible in the application, yo
 
 Dynamic Data tables require data to be populated, as your new solution will not have any data stored. Follow the steps below to add data:
 
-1. Be sure to access the relevant data table extracts. For the jigx-samples solution, you can download all [CSV files](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/csv) for the tables from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/csv).
+1. Be sure to access the relevant data table extracts. For the jigx-samples solution, you can download all [JSON](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/json/jigx-samples) files for the tables from [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/json/jigx-samples).
 2. Navigate to the relevant Dynamic Data tables in the data section of your solution in Jigx Management.
 3. Now upload the extracts as detailed in the [Data](https://docs.jigx.com/administration/solutions/data) section.
 

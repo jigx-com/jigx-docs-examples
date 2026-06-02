@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Jigx Examples](README.md)
+  * [Access sample solutions](readme/access-sample-solutions.md)
   * [Setting up your solution](<docs/Overview/Setting up your solution.md>)
   * [Data Providers](<docs/Data Providers/Data Providers.md>)
     * [Dynamic Data](<docs/Data Providers/Dynamic Data/Dynamic Data.md>)
