@@ -2768,6 +2768,9 @@ options:
 This example shows how to configure a `listHeader` in a `jig.list` to display a summary of the list data using multiple components. This example does not have a `jig-header`. You can configure any Jigx component inside the `listHeader`, which will always display above the list and below the `jig-header` when one is present. `listHeader` preserves the optimized performance and rendering benefits of `jig.list` while enabling greater layout flexibility.
 
 In this example the `listHeader` uses a `component.card` containing a `component.section` to visually separate the summary area from the list rows below.&#x20;
+
+**Examples:**\
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-with-listheader.jigx).
 {% endcolumn %}
 
 {% column %}
@@ -2893,6 +2896,9 @@ datasources:
 
 {% column %}
 This list displays a global online store product catalog. A small hero banner image sits at the top via `jig-header`, followed by a promotional sale banner in `listHeader` highlighting a 20% discount on headphones. Each list item shows a product thumbnail, name, and price.
+
+**Examples:**\
+See the full example in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-listheader-jigheader.jigx).
 {% endcolumn %}
 {% endcolumns %}
 
