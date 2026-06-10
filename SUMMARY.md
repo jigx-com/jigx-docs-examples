@@ -168,6 +168,7 @@
     * [open-media-picker](docs/Actions/open-media-picker.md)
     * [open-scanner](docs/Actions/open-scanner.md)
     * [open-url](docs/Actions/open-url.md)
+    * [Copy of open-url](readme/actions/open-url-1.md)
     * [print](docs/Actions/print.md)
     * [State actions](readme/actions/state-actions/README.md)
       * [solution-state (set & reset)](readme/actions/state-actions/solution-state-set-and-reset.md)

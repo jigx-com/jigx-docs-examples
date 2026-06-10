@@ -63,6 +63,8 @@ Key factors to keep in mind when using this event.
 * When the app is in the background, and changes occur in backend remote data tables, the `onTableChanged` event executes once when the app opens to apply the data changes. This ensures optimal app performance and prevents multiple redundant executions.
 * When the app is open and data changes are made, the event executes individually for each detected change.
 * Avoid creating a loop in `onTableChanged` by checking a table for changes and then modifying the same table.
+* &#x20;`onTableChanged` event handling for the Dynamic Data provider respects Row-Level Security (RLS) when enabled.  `onTableChanged` events are triggered only for data changes that the current user is permitted to see under RLS rules.
+* When no actual data change has occurred the `onTableChanged` events does not fire.
 
 ## Examples and code snippets
 

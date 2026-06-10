@@ -2,6 +2,7 @@
 description: >-
   Open a web page or deep link to an external app from an action, list item, or
   follow-up action.
+hidden: true
 layout:
   width: wide
   title:
@@ -22,9 +23,11 @@ layout:
     visible: true
 ---
 
-# open-url
+# Copy of open-url
 
 This action opens a web page or [deep link](https://docs.jigx.com/building-apps-with-jigx/additional-functionality/deep-links) to an external app. Use `open-url` in an action list, as `swipeable`, as `rightElement`, or after another action completes.
+
+Use the `headers` option to send custom HTTP request headers with the URL request. This is useful for authenticated reports, internal tools, and other protected resources that require headers such as `Authorization` or `x-api-key`.
 
 ## Configuration options
 
@@ -37,7 +40,18 @@ An open-url action can be set up in various ways:
 
 {% include "../../.gitbook/includes/common-action-properties.md" %}
 
-<table><thead><tr><th width="147.0703125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Provide a title for opening the URL, you can use expressions in the title field.</td></tr><tr><td><code>url</code></td><td><p>Specify the URL you want opened. The following formats are supported:</p><p>https://</p><p><a href="open-url.md">www</a>. sitename.com external app link (See the deep link to an external app example)</p></td></tr></tbody></table>
+<table><thead><tr><th width="147.0703125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>title</code></td><td>Provide a title for opening the URL, you can use expressions in the title field.</td></tr><tr><td><code>url</code></td><td><p>Specify the URL you want opened. The following formats are supported:</p><p>https://</p><p><a href="../../docs/Actions/open-url.md">www</a>. sitename.com external app link (See the deep link to an external app example)</p></td></tr></tbody></table>
+
+<table><thead><tr><th width="143.73828125">Core structure</th><th></th></tr></thead><tbody><tr><td><code>headers</code></td><td><p>Optional key/value map of HTTP request headers sent with the request.</p><p>You can define headers in three ways:</p><ul><li>Literal values, for example <code>x-api-key: test-key-123</code></li><li>Per-key expressions, for example <code>Authorization: ='Bearer ' &#x26; @ctx.solution.state.accessToken</code></li><li>A top-level expression that returns an object, for example <code>headers: =@ctx.datasources.config.authHeaders</code></li></ul><p>When <code>headers</code> are present, HTTP and HTTPS URLs open in an in-app browser presented as a full-screen bottom sheet on both iOS and Android.</p></td></tr></tbody></table>
+
+## Considerations
+
+* When `headers` are not provided, `open-url` keeps the existing platform behavior.
+* When `headers` are provided, HTTP and HTTPS URLs open in an in-app WebView browser on both iOS and Android.
+* The in-app browser follows the active app theme, including light and dark mode.
+* Deep links such as `tel:`, `mailto:`, and app-specific schemes are not affected and continue to open normally.
+* HTTP headers can propagate through server-side redirects. Only send secrets to URLs you trust not to redirect to untrusted hosts.
+* On iOS, the App Tracking Transparency prompt applies to the standard in-app browser flow. It is skipped when `headers` are present.
 
 ## Examples and code snippets
 
@@ -64,7 +78,72 @@ actions:
           url: https://docs.jigx.com/examples/readme/actions/open-url
 ```
 
-###
+### open-url with custom headers
+
+Use `https://httpbingo.org/headers` to verify which headers are sent. The page echoes the received headers as JSON. In the in-app browser, enable **Pretty-print** to make the JSON easier to read.
+
+{% tabs %}
+{% tab title="Literal headers" %}
+```yaml
+actions:
+  - children:
+      - type: action.open-url
+        options:
+          title: Open protected page
+          url: https://httpbingo.org/headers
+          headers:
+            x-api-key: test-key-123
+            x-tenant: acme
+```
+{% endtab %}
+
+{% tab title="Per-key expression" %}
+```yaml
+actions:
+  - children:
+      - type: action.open-url
+        options:
+          title: Open report
+          url: https://httpbingo.org/headers
+          headers:
+            Authorization: ='Bearer ' & @ctx.solution.state.accessToken
+```
+{% endtab %}
+
+{% tab title="Top-level expression" %}
+```yaml
+datasources:
+  apiHeaders:
+    type: datasource.static
+    options:
+      data:
+        - x-api-key: test-key-123
+
+actions:
+  - children:
+      - type: action.open-url
+        options:
+          title: Open protected page
+          url: https://httpbingo.org/headers
+          headers: =@ctx.datasources.apiHeaders[0]
+```
+{% endtab %}
+{% endtabs %}
+
+### open-url with headers and a redirect
+
+When a URL redirects on the server, the in-app browser follows the redirect without hanging. Headers continue through the redirect chain as part of the platform networking behavior.
+
+```yaml
+actions:
+  - children:
+      - type: action.open-url
+        options:
+          title: Open redirected page
+          url: https://httpbingo.org/redirect-to?url=https%3A%2F%2Fhttpbingo.org%2Fheaders
+          headers:
+            x-api-key: test-key-123
+```
 
 ### open-url swipeable left/right
 

@@ -23,11 +23,13 @@ layout:
 
 {% columns %}
 {% column %}
-You can send Notifications using Jigx Management or programmatically in your solutions, see [Notifications](https://docs.jigx.com/administration/notifications). Notifications can be configured to be sent to a single user, the entire organization, users of a specific solution, and even users of a specific jig in a specific solution.
+You can send Notifications using Jigx Management or programmatically in your solutions, see [Notifications](https://docs.jigx.com/administration/notifications). Notifications can be configured to be sent to a single user, the entire organization, users of a specific solution, and even users of a specific jig in a specific solution.\
+\
+Manage notifications in the app using filters, the _Mark All as Read_ icon, and the _Trash_ icon to delete read or all notifications.
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../.gitbook/assets/jm-notifications.PNG" alt="In-app &#x26; push notifications"><figcaption><p>In-app &#x26; push notifications</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/JM-Notifications.PNG" alt="In-app &#x26; push notifications"><figcaption><p>In-app &#x26; push notifications</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

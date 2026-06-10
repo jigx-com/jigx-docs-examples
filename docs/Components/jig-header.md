@@ -31,7 +31,7 @@ The images can be preloaded and cached using the asset folder's images file. The
 
 {% include "../../.gitbook/includes/common-component-properties.md" %}
 
-<table><thead><tr><th width="154.484375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td><p>Specifies which component will be used inside the jig-header. There are three options:</p><ul><li><a href="location.md">component.location</a></li><li><a href="video-player.md">component.video player</a></li></ul></td></tr><tr><td><code>height</code></td><td><p>Specifies the height of the header.</p><ul><li><code>small</code></li><li><code>medium</code></li><li><code>tiny</code></li></ul></td></tr><tr><td><code>actions</code></td><td>Choose an action from the available list, such as <code>go-to</code> to open a different jig or <code>open-url</code> to navigate to a website. The selected action appears as a link in the top right corner of the header. Set the <code>icon</code> property in the action to display the action link as an icon instead of text. Styles of actions are inherited, for example, disabling the link. You can add multiple action links in the header, but ensure they accommodate the jig title and overall screen design. To prevent the jig <code>title</code> and header action links from overlapping while scrolling, use either one text action or up to three icon actions.</td></tr></tbody></table>
+<table><thead><tr><th width="154.484375">Core structure</th><th></th></tr></thead><tbody><tr><td><code>children</code></td><td><p>Specifies which component will be used inside the jig-header. There are several options:</p><ul><li><a href="image.md">component.image</a></li><li><a href="location.md">component.location</a></li><li><a href="video-player.md">component.video player</a></li></ul></td></tr><tr><td><code>height</code></td><td><p>Specifies the height of the header.</p><ul><li><code>small</code></li><li><code>medium</code></li><li><code>tiny</code></li></ul></td></tr><tr><td><code>isTitleVisible</code></td><td>Setting it to <code>true</code> hides the jig title. The default setting is <code>true</code>.</td></tr><tr><td><code>logo</code></td><td>Defines a custom logo image for the <code>jig-header</code> navigation bar. The image source <code>uri</code> of the logo can be either a remote URL or a local file resource. The currently supported formats are PNG, JPG, JPEG, BMP, GIF, WebP (Android only), and PSD (iOS only).</td></tr><tr><td><code>actions</code></td><td>Choose an action from the available list, such as <code>go-to</code> to open a different jig or <code>open-url</code> to navigate to a website. The selected action appears as a link in the top right corner of the header. Set the <code>icon</code> property in the action to display the action link as an icon instead of text. Styles of actions are inherited, for example, disabling the link. You can add multiple action links in the header, but ensure they accommodate the jig title and overall screen design. To prevent the jig <code>title</code> and header action links from overlapping while scrolling, use either one text action or up to three icon actions.</td></tr></tbody></table>
 
 {% hint style="warning" %}
 Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K.
@@ -748,6 +748,232 @@ options:
             </div>
           </body>
           </html>
+```
+{% endtab %}
+{% endtabs %}
+
+### Jig-header with logo
+
+{% columns %}
+{% column %}
+<figure><img src="../../.gitbook/assets/jig-header-logo.png" alt="Logo in jig-header" width="188"><figcaption><p>Company Logo in jig-header</p></figcaption></figure>
+{% endcolumn %}
+
+{% column %}
+In this example only the company logo is visible in the header of the jig. The `logo` property is configured in the `jig-header` and the jig `title` is hidden.&#x20;
+
+**Examples**:\
+See the code samples in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-logo/jig-header-logo.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="jig-header-logo.jigx" %}
+```yaml
+# The display title of the jig (hidden in this case via isTitleVisible: false).
+title: Logo in header
+type: jig.default
+# Brand the jig by adding a logo in the header.
+header:
+  type: component.jig-header
+  options:
+    # Set the title to be hidden so only the logo is displayed in the header.
+    isTitleVisible: false
+    # Defines the logo to display in the header in place of the title.
+    logo:
+     # The publicly accessible URL pointing to the logo image asset.
+      source:
+        uri: https://s3.us-east-1.amazonaws.com/docs.jigx.com/general-images/AiGawLogo.png
+
+placeholders:
+  - title: Placeholder
+    icon: hourglass-1-alternate
+    when: true
+children:
+  - type: component.entity
+    options:
+      children:
+        - type: component.entity-field
+          options:
+            label: No data available at this time
+            value: No data available at this time
+
+```
+{% endtab %}
+{% endtabs %}
+
+### Jig-header with logo and title
+
+{% columns %}
+{% column %}
+In this example the company logo and title are visible in the header of the jig. The `logo` property is configured in the `jig-header` and the jig `title` is visible.
+
+**Examples**:\
+See the code samples in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-logo/jig-header-logo-title.jigx).&#x20;
+
+{% hint style="info" %}
+For the `title` to be visible with the `logo` ensure the `height` property is set to `tiny`.
+{% endhint %}
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/jig-header-logo-title.png" alt="Jig-header with logo and title" width="188"><figcaption><p>Jig-header with logo and title</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="jig-header-logo-title.jigx" %}
+```yaml
+# The display title of the jig (Visible in this case via isTitleVisible: true).
+title: Logo with title in header
+type: jig.default
+
+header:
+  type: component.jig-header
+  options:
+    # height of tiny is required for the title to be visible.
+    height: tiny
+    # Set the title to be visible so the logo and title are displayed in the header.
+    isTitleVisible: true
+    # Defines the logo to display in the header in place of the title.
+    logo:
+      # The publicly accessible URL pointing to the logo image asset.
+      source:
+        uri: https://s3.us-east-1.amazonaws.com/docs.jigx.com/general-images/AiGawLogo.png
+
+placeholders:
+  - title: Placeholder
+    icon: hourglass-1-alternate
+    when: true
+children:
+  - type: component.entity
+    options:
+      children:
+        - type: component.entity-field
+          options:
+            label: No data available at this time
+            value: No data available at this time
+
+```
+{% endtab %}
+{% endtabs %}
+
+### Jig-header with logo, title and children (image)
+
+{% columns %}
+{% column %}
+<figure><img src="../../.gitbook/assets/jig-header-logo-image-title.png" alt="Logo with title and background image in jig-header" width="188"><figcaption><p>Logo, title &#x26; background image in jig-header</p></figcaption></figure>
+{% endcolumn %}
+
+{% column %}
+In this example the company logo is visible in the header of the jig with a background image, and the title is visible.&#x20;
+
+**Examples**:\
+See the code samples in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-logo/jig-header-logo-title-children.jigx).&#x20;
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="jig-header-logo-title-children.jigx" %}
+```yaml
+# The display title of the jig (hidden in this case via isTitleVisible: true).
+title: Logo, title and image in header
+type: jig.default
+
+header:
+  type: component.jig-header
+  options:
+    # Configure the size of the background image.
+    height: small
+    # Set the title to be visible so the logo and title are displayed in the header.
+    isTitleVisible: true
+    # Defines the logo to display in the header in place of the title.
+    logo:
+      # The publicly accessible URL pointing to the logo image asset.
+      source:
+        uri: https://s3.us-east-1.amazonaws.com/docs.jigx.com/general-images/AiGawLogo.png
+    # Configure an image that will be display behind the logo 
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://images.unsplash.com/photo-1640102371408-5fc0c42a8792?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEwfHxiYWNrZ3JvdW5kJTIwc2ltcGxlJTIwY29sb3J8ZW58MHx8MHx8fDA%3D
+
+placeholders:
+  - title: Placeholder
+    icon: hourglass-1-alternate
+    when: true
+children:
+  - type: component.entity
+    options:
+      children:
+        - type: component.entity-field
+          options:
+            label: No data available at this time
+            value: No data available at this time
+
+```
+{% endtab %}
+{% endtabs %}
+
+### Jig-header with logo and an action&#x20;
+
+{% columns %}
+{% column %}
+In this example the company logo is visible in the header of the jig and an `action` button is configured to open an `info-modal`. The jig `title` is hidden.
+
+**Examples**:\
+See the code samples in [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/jig-header/static-data/jig-header-logo/jig-header-logo-action.jigx).&#x20;
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/jig-header-logo-action.png" alt="Logo and action button in jig-header" width="188"><figcaption><p>Logo &#x26; action button in jig-header</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
+
+{% tabs %}
+{% tab title="jig-header-logo-action.jigx" %}
+```yaml
+# The display title of the jig (hidden in this case via isTitleVisible: false).
+title: Logo with action in header
+type: jig.default
+
+header:
+  type: component.jig-header
+  options:
+    height: medium
+    # Set the title to be hidden so only the logo is displayed in the header.
+    isTitleVisible: false
+    # Configure an action button to display on the right of the logo.
+    actions:
+      - type: action.info-modal
+        options:
+          title: Action info
+          modal:
+            title: Action done!
+            buttonText: Close
+            element:
+              type: icon
+              icon: check
+    # Defines the logo to display in the header in place of the title.        
+    logo:
+     # The publicly accessible URL pointing to the logo image asset.
+      source:
+        uri: https://s3.us-east-1.amazonaws.com/docs.jigx.com/general-images/AiGawLogo.png
+
+placeholders:
+  - title: Placeholder
+    icon: hourglass-1-alternate
+    when: true
+children:
+  - type: component.entity
+    options:
+      children:
+        - type: component.entity-field
+          options:
+            label: No data available at this time
+            value: No data available at this time
+
 ```
 {% endtab %}
 {% endtabs %}
