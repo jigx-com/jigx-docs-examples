@@ -34,6 +34,7 @@ An `action list` can be set up in various ways:
 1. As a primary action button.
 2. In onPress/onChange events - usually triggered by [list](../Widgets/list.md) or [jig.list](<../Jig Types/jig_list.md>) related items.
 3. In onRefresh/onFocus events on any type of jig.
+4. `isSequential` property can be a static value or it can accept expressions.
 
 {% include "../../.gitbook/includes/common-action-properties.md" %}
 
