@@ -58,6 +58,7 @@ The `jig.grid` has two available configuration options:
   * If an `icon` is configured in the linked jig, that icon is used.
   * If an `icon` is specified in the `component.widget` of the `grid-item`, it overrides all other icon settings.
 * A jig with inputs in it's `title` will display without a title (blank) as the jig would not have received those inputs.
+* Conditional visibility and disabled state of a grid-item in the grid. Use `when` on `component.grid-item` to conditionally show an item. Place it between `type` and `options`. The expression must evaluate to a boolean. Use the syntax `when: =<boolean expression>`. A `false` value removes the item from the grid. To disable an item omit the `onPress` event.
 
 ## Examples and code snippets
 
