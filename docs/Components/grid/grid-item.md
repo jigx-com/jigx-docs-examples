@@ -31,6 +31,26 @@ The grid-item component serves as the child component whenever any grid componen
 
 <table><thead><tr><th width="170.640625">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>The icon will be displayed on the of the jig. Start typing the name of the icon to invoke the available list in IntelliSense. See <a href="https://docs.jigx.com/understanding-the-basics/jigx-icons">Jigx icons</a> for information on working with icons. The <code>icon</code> property applies to <code>component.jig-widget</code> without a <code>widgetId</code>. See the considerations below for the rules governing icon behavior.</td></tr><tr><td><code>title</code></td><td>By default, the jig's title is displayed. You can override it by adding the <code>title</code> property to the <code>grid-item</code>, either with a custom <code>title</code> or with <code>''</code> (a blank space) to remove the title entirely.</td></tr></tbody></table>
 
+## Conditional visibility and disabled state
+
+Use `when` on `component.grid-item` to conditionally show an item. Place it between `type` and `options`.
+
+The expression must evaluate to a boolean. Use the syntax `when: =<boolean expression>`. A `false` value removes the item from the grid.
+
+```yaml
+- type: component.grid-item
+  when: =@ctx.user.role = 'manager'
+  options:
+    size: 1x1
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://images.unsplash.com/photo-1488509082528-cefbba5ad692?w=800
+```
+
+To keep a `component.grid-item`  visible but disabled omit the `onPress` event.&#x20;
+
 ## Considerations
 
 * When using the `grid-item` with a `component.jig-widget`, note the following:
