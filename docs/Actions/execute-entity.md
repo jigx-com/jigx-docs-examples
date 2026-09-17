@@ -21,6 +21,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # execute-entity
@@ -50,7 +52,59 @@ The execute-entity has a `go-back` option, which is set to on by default. That m
 
 ## Offline remote data handling
 
-Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](https://docs.jigx.com/building-apps-with-jigx/data/offline-remote-data-handling) explains how to configure solutions to deal with data when the device is offline using the `queueOperations` property available in execute-entities and provides examples and code samples.
+Dealing with offline remote data ensures consistent synchronization with the remote data source. It also lets users continue working without a connection. [Offline remote data handling](https://docs.jigx.com/building-apps-with-jigx/data/offline-remote-data-handling) explains the `queueOperation` property and provides examples.
+
+### Group queued commands
+
+Use `batchId` to group related queued writes. Group commands in the offline command queue. Commands sharing a `batchId` are processed top-to-bottom; if one fails, the remaining members of the batch are paused until the failed command is retried or deleted.
+
+If a `sync` or `parallel` command fails, later commands in that batch pause. Retry or delete the failed command before continuing the batch. Failed `async` commands do not pause their batch.
+
+Use `processingType` to control how the command is processed in the queue.&#x20;
+
+<table><thead><tr><th width="117.2734375">Value</th><th>Behavior</th></tr></thead><tbody><tr><td><code>sync</code></td><td>Runs one command at a time. This is the default.</td></tr><tr><td><code>parallel</code></td><td>Starts with adjacent parallel commands. The next sync command waits for all of them.</td></tr><tr><td><code>async</code></td><td>Starts without waiting. Later commands can run immediately.</td></tr></tbody></table>
+
+Omit both properties to retain the existing serial queue behavior.
+
+`retry-queue-command` and `delete-queue-command` accept `batchId` as well as `id`, to act on a whole batch at once, plus an optional `force` (default `false`) needed to touch in-flight (`starting`/`processing`) rows, otherwise those are skipped.
+
+The example groups related updates under `employee-update-41`. It sends two file updates concurrently. It then waits before updating the employee record.
+
+```yaml
+actions:
+  - children:
+      - type: action.action-list
+        options:
+          isSequential: true
+          title: Update employee file and record
+          actions:
+            - type: action.execute-entity
+              options:
+                provider: DATA_PROVIDER_REST
+                entity: employee-files
+                method: update
+                function: update-file
+                queueOperation: add
+                batchId: employee-update-42
+                processingType: parallel
+                parameters:
+                  id: =@ctx.datasources.pending-file.id
+                data:
+                  id: =@ctx.datasources.pending-file.id
+            - type: action.execute-entity
+              options:
+                provider: DATA_PROVIDER_REST
+                entity: employees
+                method: update
+                function: update-employee
+                queueOperation: add
+                batchId: employee-update-42
+                processingType: sync
+                parameters:
+                  id: =@ctx.datasources.employee.id
+                data:
+                  id: =@ctx.datasources.employee.id
+```
 
 ## Examples and code snippets
 
