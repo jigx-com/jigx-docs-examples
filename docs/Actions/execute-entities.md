@@ -92,11 +92,19 @@ Use `batchId` to group related queued writes. Group commands in the offline comm
 
 If a `sync` or `parallel` command fails, later commands in that batch pause. Retry or delete the failed command before continuing the batch. Failed `async` commands do not pause their batch.
 
-Use `processingType` to control how the command is processed in the queue.&#x20;
+### Processing type
+
+Use `processingType` to control how each command is processed in the queue.
 
 <table><thead><tr><th width="136.6328125">Value</th><th>Behavior</th></tr></thead><tbody><tr><td><code>sync</code></td><td>Runs one command at a time. This is the default.</td></tr><tr><td><code>parallel</code></td><td>Starts with adjacent parallel commands. The next sync command waits for all of them.</td></tr><tr><td><code>async</code></td><td>Starts without waiting. Later commands can run immediately.</td></tr></tbody></table>
 
 Omit both properties to retain the existing serial queue behavior.
+
+### File uploads use async processing
+
+For Dynamic Data `create`, `save`, and `update` commands with a file, `processingType` defaults to `async`. The queue starts the upload and continues with later commands.
+
+Set `processingType` to `sync` or `parallel` when your workflow requires ordering. An explicit value always overrides the file-upload default.
 
 `retry-queue-command` and `delete-queue-command` accept `batchId` as well as `id`, to act on a whole batch at once, plus an optional `force` (default `false`) needed to touch in-flight (`starting`/`processing`) rows, otherwise those are skipped.
 

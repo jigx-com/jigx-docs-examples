@@ -66,6 +66,12 @@ Use `processingType` to control how the command is processed in the queue.&#x20;
 
 Omit both properties to retain the existing serial queue behavior.
 
+### File uploads use async processing
+
+For Dynamic Data `create`, `save`, and `update` commands with a file, `processingType` defaults to `async`. The queue starts the upload and continues with later commands.
+
+Set `processingType` to `sync` or `parallel` when your workflow requires ordering. An explicit value always overrides the file-upload default.
+
 `retry-queue-command` and `delete-queue-command` accept `batchId` as well as `id`, to act on a whole batch at once, plus an optional `force` (default `false`) needed to touch in-flight (`starting`/`processing`) rows, otherwise those are skipped.
 
 The example groups related updates under `employee-update-41`. It sends two file updates concurrently. It then waits before updating the employee record.
