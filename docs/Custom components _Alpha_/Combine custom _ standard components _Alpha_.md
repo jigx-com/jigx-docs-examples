@@ -17,6 +17,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Combine custom & standard components (Alpha)
@@ -30,7 +32,7 @@ This feature is currently in its **Alpha** stage of development.
 * We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
 {% endhint %}
 
-Combining [Custom components (Alpha)](<Custom components _Alpha_.md>) with [Standard components](../Custom%20components%20_Alpha_/broken-reference/) enables the creation of advanced functionality and rich user interfaces. Standard components, such as [stepper](../Components/stepper/stepper.md) , [progress-bar](../Components/progress-bar.md) , and [countdown](../Components/countdown.md) , provide a reliable foundation for common interactions, ensuring consistency and usability. By integrating custom components and tailored elements designed to meet specific requirements, you can extend this functionality to create dynamic features like interactive menus, tabbed navigation, and toggles with unique behaviors. This blend allows for a balance between efficiency and creativity, enabling apps to stand out with innovative designs while maintaining intuitive user experiences.
+Combining [Custom components (Alpha)](<Custom components _Alpha_.md>) with [Standard components](https://github.com/jigx-com/jigx-docs-examples/blob/main/docs/Custom%20components%20_Alpha_/broken-reference/README.md) enables the creation of advanced functionality and rich user interfaces. Standard components, such as [stepper](../Components/stepper/stepper.md) , [progress-bar](../Components/progress-bar.md) , and [countdown](../Components/countdown.md) , provide a reliable foundation for common interactions, ensuring consistency and usability. By integrating custom components and tailored elements designed to meet specific requirements, you can extend this functionality to create dynamic features like interactive menus, tabbed navigation, and toggles with unique behaviors. This blend allows for a balance between efficiency and creativity, enabling apps to stand out with innovative designs while maintaining intuitive user experiences.
 
 This approach encourages modular development, fostering scalability and adaptability, whether for small projects or enterprise-grade applications.
 

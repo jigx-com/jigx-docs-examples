@@ -17,6 +17,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # generate-pdf
@@ -39,7 +41,57 @@ The URI of the generated file is returned and is available as part of the action
 
 <table><thead><tr><th width="140.71875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>html</code></td><td>Use standard HTML elements to ensure optimal formatting and compatibility when rendering content in the PDF file, for example, &#x3C;html>&#x3C;body>Invoices are provided monthly.&#x3C;/body&#x3C;/html>. The HTML can be built up using JSONata or JavaScript.</td></tr><tr><td><code>fileName</code></td><td>Give the PDF a name, this name is used as the local file name, and is referenced as part of the uri, which can be accessed via the action's instance output (<code>=@ctx.actions.generatePDF.outputs.uri</code>). The .pdf extension is automatically added to the <code>fileName</code>.</td></tr><tr><td><code>title</code></td><td>Provide the action button with a title, for example, Invoice.</td></tr></tbody></table>
 
-<table><thead><tr><th width="149.015625">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>Select an icon to display when the action is configured as the secondary button or in a <a href="../Components/jig-header.md">jig-header</a>.</td></tr><tr><td><code>isHidden</code></td><td><code>true</code> hides the action button. <code>false</code> shows the action button. The default is <code>false</code>.</td></tr><tr><td><code>page</code></td><td>Controls the PDF page size, orientation, custom dimensions, and margins. See <a data-mention href="generate-pdf.md#page-options">#page-options</a> for more information.</td></tr><tr><td><code>styles</code></td><td><ul><li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li><li><code>isDisabled</code> - Displays the action button as greyed out.</li><li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li><li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li></ul></td></tr></tbody></table>
+<table><thead><tr><th width="149.015625">Other options</th><th></th></tr></thead><tbody><tr><td><code>icon</code></td><td>Select an icon to display when the action is configured as the secondary button or in a <a href="../Components/jig-header.md">jig-header</a>.</td></tr><tr><td><code>isHidden</code></td><td><code>true</code> hides the action button. <code>false</code> shows the action button. The default is <code>false</code>.</td></tr><tr><td><code>header</code></td><td>Repeats a text band at the top of each PDF page. See <a data-mention href="generate-pdf.md#header-and-footer-options">#header-and-footer-options</a>.</td></tr><tr><td><code>footer</code></td><td>Repeats a text band at the bottom of each PDF page. See <a data-mention href="generate-pdf.md#header-and-footer-options">#header-and-footer-options</a>.</td></tr><tr><td><code>page</code></td><td>Controls the PDF page <code>size</code>, <code>orientation</code>, custom dimensions, and <code>margins</code>. See <a data-mention href="generate-pdf.md#page-options">#page-options</a> for more information.</td></tr><tr><td><code>styles</code></td><td><ul><li><code>isDanger</code> - Styles the action button in red or your brand's designated danger color.</li><li><code>isDisabled</code> - Displays the action button as greyed out.</li><li><code>isPrimary</code> - Styles the action button in blue or your brand's designated primary color.</li><li><code>isSecondary</code> - Sets the action as a secondary button, accessible via the ellipsis. The <code>icon</code> property can be used when the action button is displayed as a secondary button.</li></ul></td></tr></tbody></table>
+
+## Header and footer options
+
+Use `header` and `footer` to repeat text on every PDF page. Each band reserves its own space, so page content does not overlap it. Bands render consistently on iOS, Android, and web.
+
+Each band supports these fields:
+
+* `height` — band height in PDF points.
+* `style` — CSS text styles. The band uses the form body font by default.
+* `left`, `center`, and `right` — text slots within the band.
+* `skipFirstPage` — set to `true` to omit the band on the first page.
+
+Use `{pageNumber}` and `{pageCount}` to insert the current page and total pages, must be inside an expression's string literal, or they do not parse.  `right: ="Page {pageNumber} of {pageCount}"`.
+
+```yaml
+actions:
+  - children:
+      - type: action.generate-pdf
+        options:
+          title: Download report
+          html: =@ctx.datasources.report.html
+          fileName: site-inspection
+          page:
+            size: a4
+            margin:
+              top: 48
+              right: 36
+              bottom: 48
+              left: 36
+          header:
+            height: 24
+            left: Acme Inspections
+            right: "Page {pageNumber} of {pageCount}"
+          footer:
+            height: 24
+            style: "font-size: 9pt; color: #666;"
+            left: Site inspection report
+            right: ="Inspected " & $fromMillis($toMillis($now()), '[D] [MN] [Y]')
+```
+
+All slot values and band options can be expressions. Expressions are evaluated once per PDF. Keep page tokens inside an expression's string literal:
+
+```yaml
+right: ="Created by " & @ctx.user.displayName & ", page {pageNumber} of {pageCount}"
+```
+
+{% hint style="warning" %}
+* Use `page.margin` for side spacing. Do not add side margins in the HTML body, or the band can reach the paper edge.
+* Use `band styles` for text. Borders and other box properties can render differently by platform. Invalid bands are skipped and logged, but the PDF still generates.
+{% endhint %}
 
 ## Page options
 
@@ -83,9 +135,9 @@ If you set both `width` and `height`, they take priority over `size` and `orient
 
 `margin` supports three formats:
 
-* `none` — no margin
-* number — the same margin on all sides
-* object — a different margin for each side, specified separately
+* `none` - no margin
+* number -the same margin on all sides
+* object - a different margin for each side, specified separately
 
 {% hint style="info" %}
 Omitted margin sides default to `0`.
@@ -145,6 +197,7 @@ Page breaks in your HTML and CSS are honored across physical PDF pages. For exam
 * The `page` margin is applied by the PDF generator. It is not injected into the HTML as CSS.
 * Do not also set `@page { margin: ... }` in your HTML when you use the YAML `page.margin` field. This avoids double spacing.
 * When you use custom dimensions, both `width` and `height` must be greater than `0`.
+* PDFs without a `header` or `footer` print as before.
 
 ## Examples and code snippets
 

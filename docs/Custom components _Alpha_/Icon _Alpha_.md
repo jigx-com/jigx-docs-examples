@@ -17,6 +17,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Icon (Alpha)
@@ -285,7 +287,7 @@ children:
 
 {% columns %}
 {% column %}
-Create an icon bar within in a `component.card` by configuring multiple `component.icon`. Add an `onPress` event to each icon that opens its associated URL. You can configure the `onPress` event to call various available [actions](../Custom%20components%20_Alpha_/broken-reference/).
+Create an icon bar within in a `component.card` by configuring multiple `component.icon`. Add an `onPress` event to each icon that opens its associated URL. You can configure the `onPress` event to call various available [actions](https://github.com/jigx-com/jigx-docs-examples/blob/main/docs/Custom%20components%20_Alpha_/broken-reference/README.md).
 
 **Example:**
 

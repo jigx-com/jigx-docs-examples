@@ -21,6 +21,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Web-view
@@ -35,7 +37,7 @@ The web-view component allows the user to use an URL or pass raw HTML as the pre
 {% column %}
 This example displays a preview after long-pressing the widget.
 
-See the full example on [GitHub](%22https:/github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/web-view/web-longpress-widget.jigx).
+See the full example on [GitHub](https://github.com/jigx-com/jigx-docs-examples/blob/main/docs/Preview/%22https:/github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/preview/web-view/web-longpress-widget.jigx).
 {% endcolumn %}
 
 {% column %}

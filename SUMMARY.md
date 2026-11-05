@@ -126,6 +126,7 @@
     * [number-field](docs/Components/form/number-field.md)
     * [progress-bar](docs/Components/progress-bar.md)
     * [rating](readme/components/rating.md)
+    * [scanner-field](readme/components/scanner-field.md)
     * [section](readme/components/section.md)
     * [segmented-control](docs/Components/segmented-control.md)
     * [signature-field](docs/Components/form/signature-field.md)

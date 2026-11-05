@@ -25,6 +25,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Path Operators
@@ -63,7 +65,7 @@ Be careful when using complex expressions, such as expressions that iterate one 
 {% endcolumn %}
 
 {% column %}
-In this example the `Filter` path operator is used to create a filter for data records marked as Active or Inactive. **Example**: See the full code sample in [GitHub](%22https:/github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/filter.jigx).
+In this example the `Filter` path operator is used to create a filter for data records marked as Active or Inactive. **Example**: See the full code sample in [GitHub](https://github.com/jigx-com/jigx-docs-examples/blob/main/docs/Expressions/%22https:/github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/guide-expressions/static-data/filter.jigx).
 {% endcolumn %}
 {% endcolumns %}
 

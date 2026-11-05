@@ -17,6 +17,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Cards & Charts (Alpha)
@@ -46,7 +48,7 @@ Get the template on GitHub:
 
 **Cashback card sample** Get the template on GitHub:
 
-* [component](../../Custom%20components%20_Alpha_/Templates%20_Alpha_/%22https:/github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cashback-card.jigx)
+* [component](https://github.com/jigx-com/jigx-docs-examples/blob/main/docs/Custom%20components%20_Alpha_/Templates%20_Alpha_/%22https:/github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/components/templates/cards/cashback-card.jigx)
 * [jig](https://github.com/jigx-com/jigx-samples/blob/d5eb38a64423482ed10703b0b2889709beee309c/quickstart/jigx-samples/jigs/custom-components/templates/cards/cashback-card.jigx)
 {% endcolumn %}
 {% endcolumns %}
