@@ -114,6 +114,7 @@
     * [image](docs/Components/image.md)
     * [interactive-image](docs/Components/interactive-image/interactive-image.md)
       * [interactive-image-item](docs/Components/interactive-image/interactive-image-item.md)
+      * [interactive image field](readme/components/interactive-image/interactive-image-field.md)
     * [jig-header](docs/Components/jig-header.md)
     * [list](docs/Components/list/list.md)
       * [list-item](docs/Components/list/list-item.md)
