@@ -17,19 +17,21 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Jigx Examples
 
 Welcome to the reference documentation for Jigx. This guide provides detailed information on the properties, actions, and states with practical code examples to help you effectively utilize our schema. This reference content is designed to be a comprehensive resource for all your needs, covering:
 
-| ​[Data Providers](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/data-providers)​                       | ​[Jig Types](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/jig-types)​                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ​[Components](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/components)​                               | ​[Actions](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/actions)​                                              |
-| ​[Custom components (Alpha)](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/custom-components-_alpha_)​ | ​[Custom templates](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/custom-components-_alpha_/templates-_alpha_)​ |
-| ​[widgets](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/widgets)​                                     | ​[Preview](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/preview)​                                              |
-| ​[Expressions](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/expressions)​                             | ​[Notifications](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/notifications)​                                  |
-| ​[OpenAI integration](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/openai-integration)​               | ​[Localization (Translation)](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/localization-_translation_)         |
+| ​[Data Providers](<docs/Data Providers/Data Providers.md>)​                                  | ​[Jig Types](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/jig-types)​                                          |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ​[Components](docs/components/)​                                                             | ​[Actions](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/actions)​                                              |
+| ​[Custom components (Alpha)](<docs/Custom components _Alpha_/Custom components _Alpha_.md>)​ | ​[Custom templates](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/custom-components-_alpha_/templates-_alpha_)​ |
+| ​[Widgets​](docs/Widgets/Widgets.md)                                                         | ​[Preview](https://app.gitbook.com/o/iuPogxUCxU6FVwO9sO1B/s/HcPzbms3kZejTmFd500V/~/diff/~/changes/116/readme/preview)​                                              |
+| [Expression](docs/Expressions/Expressions.md)                                                | [Notifications](docs/Notifications/Notifications.md)                                                                                                                |
+| ​[OpenAI integration​](<docs/OpenAI integration.md>)                                         | ​[Localization (Translation)](<docs/Localization _Translation_.md>)                                                                                                 |
 
 Our schema includes various properties that define the structure and characteristics of data entities. Each property is documented with its name, type, allowable values, and detailed description. This section ensures you have a clear understanding of how to use each property to successfully create a Jigx App.
 
