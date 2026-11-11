@@ -17,13 +17,11 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Custom components (Alpha)
-
-## Custom components (Alpha)
-
-## Custom components (Alpha)
 
 {% hint style="danger" %}
 This feature is currently in its **Alpha** stage of development.
@@ -52,7 +50,7 @@ Custom components extend the standard set of components in Jigx to provide addit
 1. In Jigx Builder in the components folder, create a new jigx file, e.g., custom-button.jigx.
 2. Select the `type: component.default`. All custom components require this type.
 3. Under the `children:` property, use IntelliSence (Ctrl+space) to see the list of available components. Select the components, e.g., `type: component.button`.
-4. Under the `options:` properties, create a space and use **ctrl+space** to open the IntelliSense popup\*\*.\*\*
+4. Under the `options:` properties, create a space and use **ctrl+space** to open the IntelliSense popup.
 5. You can select the styling properties from the list shown.
 6. Configure the other properties provided in the code snippet.
 7. Open the jig where you want to use the custom component and reference `component.custom-component`. Use the `componentId` property to reference the name of the custom component file, e.g., `componentId: custom-button`.
